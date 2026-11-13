@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory. | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="I&#39;m a contractor in small-town China. I can&#39;t code. Here&#39;s the AI system I built">
+<meta property="og:type" content="article">
+<meta property="og:title" content="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/13/Kainative-2121267017667809293/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="I&#39;m a contractor in small-town China. I can&#39;t code. Here&#39;s the AI system I built">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121267017667809293-cover.jpg">
+<meta property="article:published_time" content="2026-11-13T23:40:42.000Z">
+<meta property="article:modified_time" content="2026-11-13T23:46:21.327Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Kainative">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121267017667809293-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.",
+  "url": "https://yaoav.github.io/2026/11/13/Kainative-2121267017667809293/",
+  "image": "https://yaoav.github.io/images/2121267017667809293-cover.jpg",
+  "datePublished": "2026-11-13T23:40:42.000Z",
+  "dateModified": "2026-11-13T23:46:21.327Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/13/Kainative-2121267017667809293/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121267017667809293-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Kainative（大宇）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121267017667809293">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>I’m a contractor in small-town China. I can’t code. Here’s the AI system I built in 3 months to run my crew: every step, every mistake, and all 13 prompts.</p>
+<p>Most teams don’t have a knowledge problem.</p>
+<p>They have a memory problem.</p>
+<p>The knowledge is there. It’s in the head of the guy who’s been doing this for twenty years. It’s in a conversation over dinner that nobody wrote down. It’s in a mistake someone made last week, at another site, that you’re about to make tomorrow.</p>
+<p>I learned this the expensive way.</p>
+<p>This summer I was going through my crew’s records, and I stopped cold.</p>
+<p>5 project managers. 9 job sites. The same mistake, hit 9 separate times.</p>
+<p>Nobody was lazy. Nobody was hiding anything. The first guy ran into it, came back, mentioned it to whoever was sitting next to him at dinner, and that was the end of it. The second guy went to a different site, ran into the exact same thing, and figured it out from scratch. Then the third. Then the fourth. It wasn’t until I was closing the books at the end of the month that I realized those 9 incidents were one problem.</p>
+<p>We paid for the same lesson 9 times.</p>
+<p>I run a construction crew in a small town in China. I can’t write code. I read blueprints.</p>
+<p>So I made Claude Code my foreman and put Codex on the tools. Three-plus months of grinding later, I had an agent that helps me run the crew.</p>
+<p>Before heading out, a project manager says one sentence: “Tomorrow, East Town site, bathroom seepage.”</p>
+<p>It spits out a one-page pre-job brief. Similar jobs our crew has done before. The mistakes people made last time. What materials we still have in stock. Ready to print.</p>
+<p>When the job’s done, he talks it through in three sentences. That becomes a lesson the whole crew can search the same day.</p>
+<p>Once three similar lessons pile up, it finds the pattern and turns it into a checklist.</p>
+<p>No internet on site? Doesn’t matter. Everyone carries a USB stick, and I merge everything once a week.</p>
+<p>The part I’m proudest of: the whole thing runs without an AI model plugged in. You just lose a few lines of advice from the “old-timer.”</p>
+<h2 id="Part-1-What-this-actually-is"><a href="#Part-1-What-this-actually-is" class="headerlink" title="Part 1: What this actually is"></a>Part 1: What this actually is</h2><p>In one sentence: it takes what’s in the old-timers’ heads and puts it on a single sheet of paper in a project manager’s hands before the job starts.</p>
+<p>Long term, I want all of it boiled down to rules. Make the rules strict enough, and even a tiny model running locally, something like ByteDance’s Doubao, can keep a crew on track. More on that later. I think it’s the most valuable part of the whole thing.</p>
+<p>There are six roles in the system. Each one stays in its lane.</p>
+<ul>
+<li><strong>Me (the boss):</strong> assigns work, makes the call, sets the rules, changes the rules. Doesn’t: write drafts or fill in forms.</li>
+<li><strong>Project managers:</strong> tick boxes on the checklist on site, say three sentences when the job’s done. Don’t: write anything about the parts that went smoothly.</li>
+<li><strong>Claude Code (the foreman):</strong> understands the big picture, proposes plans, writes rules, writes prompts. Doesn’t: change the rules directly. It can only propose.</li>
+<li><strong>Codex (the crew):</strong> writes code, runs batch jobs, carries out changes I’ve approved. Doesn’t: make judgment calls.</li>
+<li><strong>Rule-based code:</strong> recognizes place names, searches, ranks, copies checklists, keeps the books, levels people up, merges. Doesn’t: generate anything new.</li>
+<li><strong>The LLM:</strong> exactly four jobs. Clean up spoken notes, connect past experience, distill criteria, look things up online. Doesn’t: make calls or add facts.</li>
+</ul>
+<h3 id="My-first-attempt-was-a-form-It-failed"><a href="#My-first-attempt-was-a-form-It-failed" class="headerlink" title="My first attempt was a form. It failed."></a>My first attempt was a form. It failed.</h3><p>My first idea was simple. A 21-field form that project managers fill out every day.</p>
+<p>After a little over a month, I looked at the data and my heart sank.</p>
+<p>In one batch, a single person contributed over 60% of the entries. Everyone else logged one or two a week. Safety records were around 5%. People love writing down what they solved today. Nobody loves writing down where something almost went wrong. And the killer: all of it sat in a folder. Not one record ever reached anyone before their next job.</p>
+<p>I chewed on this for days. Then it clicked.</p>
+<p>Doing the work is one thing. Filling out forms is another. As long as logging is separate from the work, it will shrink to the bare minimum. That isn’t anyone being lazy. That’s human nature. You can push people for a month. You can’t push them for a year.</p>
+<p>So I flipped the whole thing around.</p>
+<p>Before, the project managers worked for the system. Finish the job, then fill in the form. Now the system works for every job. Before the job, it gets you ready. After the job, it does the paperwork. Logging stops being an extra task and becomes something that falls out of the work on its own.</p>
+<p><strong>Every design decision after that came from this one idea.</strong></p>
+<ul>
+<li><strong>No IT department</strong> → zero dependencies. Double-click a launcher and it works.</li>
+<li><strong>No internet on site, no shared network for the crew</strong> → everyone gets a USB stick, merged once a week.</li>
+<li><strong>Project managers won’t memorize commands</strong> → just talk normally. Anything that doesn’t look like a command gets answered as a question.</li>
+<li><strong>End-of-day notes are three to five words long</strong> → prompts built specifically for bare-bones spoken notes.</li>
+<li><strong>Tight budget</strong> → offline by default, the model only does four jobs, temperature kept low.</li>
+<li><strong>Names of people and sites can’t leave the building</strong> → code names only inside the system, and anything sent out gets scrubbed first.</li>
+<li><strong>On site, people want paper</strong> → pre-job briefs and safety cards download as Word files you can print.</li>
+</ul>
+<h2 id="Part-3-Building-it"><a href="#Part-3-Building-it" class="headerlink" title="Part 3: Building it"></a>Part 3: Building it</h2><p>A quick note on the prompts: the originals are in Chinese, and these are faithful translations. A few rules depend on how Chinese works (character limits, matching on two-character chunks). Adjust those for your language.</p>
+<h3 id="Step-0-Get-your-tools-together"><a href="#Step-0-Get-your-tools-together" class="headerlink" title="Step 0: Get your tools together"></a>Step 0: Get your tools together</h3><p>You don’t need much.</p>
+<p>Claude Code to think, plan, and write prompts. Codex to write code and run batch jobs. Any ordinary computer. Mine is a ThinkPad X1 I’ve had for years.</p>
+<p>Then get an API key for an LLM. My main one is DeepSeek, with Alibaba’s Bailian platform as backup and for web search. Both use the OpenAI-compatible format, so if I want to switch to Doubao later, I just change the config.</p>
+<p>Last, whatever old material you already have. Site logs, issue records, notes the old-timers scribbled, site photos. Any format. If you have it, throw it in.</p>
+<p>Before anything else, set up your folders. Here’s my structure. Everything after this goes in here.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">crew-system/</span><br><span class="line">├── CLAUDE.md          ← Claude&#x27;s startup brief</span><br><span class="line">├── AGENTS.md          ← Codex&#x27;s startup brief</span><br><span class="line">├── rules.md           ← ground rules nobody touches without a reason</span><br><span class="line">├── progress.md        ← where we are, decisions locked in, next steps</span><br><span class="line">├── _change-proposals/ ← want to change a rule? propose it here first</span><br><span class="line">├── tasks/             ← task specs Claude writes for Codex</span><br><span class="line">├── lessons/           ← master log + full text of each lesson</span><br><span class="line">├── checklists/        ← one checklist per type of job</span><br><span class="line">├── people/            ← trade × person skills matrix</span><br><span class="line">└── engine/            ← the programs Codex writes</span><br></pre></td></tr></table></figure>
+
+<p>You don’t have to copy this. But rules, progress, proposals, tasks: I’d say you need those four. The next step explains why.</p>
+<h3 id="Step-1-Build-the-team-Get-Claude-and-Codex-working-together"><a href="#Step-1-Build-the-team-Get-Claude-and-Codex-working-together" class="headerlink" title="Step 1: Build the team. Get Claude and Codex working together."></a>Step 1: Build the team. Get Claude and Codex working together.</h3><p>I started out in the web chat.</p>
+<p>I’d paste in my material, ask it to analyze, and the analysis looked pretty decent. Then I’d close the window, open it the next day, and it remembered nothing. I’d explain all over again what our crew does, how many people, where we left off. After the seventh or eighth time, I lost it.</p>
+<p>There’s a sneakier problem, too. Talk to an AI long enough and it starts filling in the blanks on its own. Things you never said, it treats as things you said. An idea you floated in passing, it treats as a decision you made.</p>
+<p>So I changed the approach: two AIs with split roles, and everything lives in files.</p>
+<p>Claude thinks. Codex does. I only show up where a call needs making. They don’t hand off through chat. They hand off through files. That way you can swap in a different AI, it reads those few files, and it keeps going.</p>
+<p>Here’s how I set it up.</p>
+<p>First, write the rules. These are the ground rules for the whole system. Claude, Codex, or whatever AI comes next: the first thing they do when they walk in is read it.</p>
+<p><strong>Prompt 1: rules.md</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Rules (changing these means changing the system itself)</span><br><span class="line"></span><br><span class="line">1. Truthful data beats good-looking data. Better to write &quot;nothing to log for this today&quot; than to pad. Padding is worse than blank.</span><br><span class="line">2. Records exist to build up experience, not to grade whether someone did it right.</span><br><span class="line">3. Granularity goes down to every step and every person. Never let it decay into a monthly summary.</span><br><span class="line">4. Experience belongs to the whole crew, not to individuals. Veterans&#x27; tricks, who you asked for help: record it all honestly.</span><br><span class="line">5. AI assists. People decide. Everything AI produces is a draft until a person confirms it.</span><br><span class="line">6. Rules can change, but only through a proposal, with my approval, and with a record. No change goes unrecorded.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Prompt 2: CLAUDE.md</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"># CLAUDE.md</span><br><span class="line"></span><br><span class="line">You are the foreman of this crew management system. You understand the big picture, plan, and write rules and prompts. Batch execution and coding go to Codex.</span><br><span class="line"></span><br><span class="line">## Read first, every session</span><br><span class="line">This file → rules.md → progress.md</span><br><span class="line"></span><br><span class="line">## How you work</span><br><span class="line">1. When I make a request, restate it in your own words first. List what you understood and what you&#x27;re unsure about. Wait for me to confirm before proposing a plan. Don&#x27;t jump straight into doing.</span><br><span class="line">2. Plans must state: which files change, why, how to verify, where the risks are.</span><br><span class="line">3. You may not edit rules.md directly. You can only write a proposal in _change-proposals/ marked &quot;pending approval.&quot;</span><br><span class="line">4. Tasks for Codex go into tasks/ as files, split into stages. Each stage states its acceptance criteria and says &quot;Stop after this stage and wait for review.&quot;</span><br><span class="line">5. Anything rules can handle does not go to the LLM. Only use the model for understanding spoken language or summarizing wording.</span><br><span class="line">6. Before ending each session, update progress.md: where we are, decisions already locked in (not to be reopened), what&#x27;s unfinished, next steps. A different AI must be able to read it and keep going.</span><br><span class="line"></span><br><span class="line">## Red lines</span><br><span class="line">- Truthful data first. Never prettify or invent anything to make it look good.</span><br><span class="line">- Everything you produce is a draft. I make the calls.</span><br><span class="line">- Names of people and sites are never sent to any external service.</span><br><span class="line">- Don&#x27;t expand the scope of a change without my approval.</span><br></pre></td></tr></table></figure>
+
+<p><strong>Prompt 3: Task spec template for Codex</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># Task: &lt;one sentence on what this is&gt;</span><br><span class="line"></span><br><span class="line">## Role and hard rules</span><br><span class="line">- Only write files inside &lt;directory&gt;. Never modify source material.</span><br><span class="line">- Follow this spec strictly. If it&#x27;s not in the spec, don&#x27;t do it.</span><br><span class="line">- If you&#x27;re unsure, don&#x27;t guess. List it in your report.</span><br><span class="line"></span><br><span class="line">## Stage 1: &lt;name&gt;</span><br><span class="line">What to do: ...</span><br><span class="line">Output: ...</span><br><span class="line">Acceptance criteria: ... (write them as facts you can check by eye, e.g. &quot;master table has N rows; every row&#x27;s 11 fields have a value or say &#x27;not mentioned&#x27;&quot;)</span><br><span class="line">**Stop when done. Output a self-check report. Wait for review.**</span><br><span class="line"></span><br><span class="line">## Stage 2: &lt;name&gt; (only after review passes)</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">## Acceptance red lines</span><br><span class="line">- Don&#x27;t invent anything. Flag everything uncertain.</span><br><span class="line">- Categories must come from the given list. No making up your own.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-2-Pour-the-foundation-Turn-experience-into-data"><a href="#Step-2-Pour-the-foundation-Turn-experience-into-data" class="headerlink" title="Step 2: Pour the foundation. Turn experience into data."></a>Step 2: Pour the foundation. Turn experience into data.</h3><p>I landed on three kinds of records.</p>
+<p><strong>A job.</strong> One file per job, one continuous thread from before you start to after you finish.</p>
+<p><strong>A lesson.</strong> A fixed set of 11 fields, coming up next. Each one gets a case ID like C-012.</p>
+<p><strong>A person.</strong> Trade × person, one big matrix. Every cell has four levels: never seen it, shadowed it, can do it solo, can lead others.</p>
+<p>The 11 fields of a lesson:</p>
+<ol>
+<li><strong>Site</strong>: always the full name</li>
+<li><strong>Trade</strong>: pick from the list</li>
+<li><strong>Location</strong>: e.g. bathroom floor, east exterior wall</li>
+<li><strong>Material &#x2F; spec</strong>: the field that ties together problems that run in a product line</li>
+<li><strong>Problem category</strong>: pick from the list, no inventing</li>
+<li><strong>Symptom</strong>: what you saw</li>
+<li><strong>Cause</strong>: why it failed</li>
+<li><strong>Fix</strong>: what you did</li>
+<li><strong>Verification</strong>: how you confirmed it was fixed</li>
+<li><strong>Open questions</strong>: what you still don’t understand</li>
+<li><strong>Heads-up</strong>: one sentence the whole crew needs to know, or “none”</li>
+</ol>
+<p>Once the fields are set, the first job is running all your old material through them.</p>
+<p>I had a site log several hundred pages long, years of scraps written down here and there. Claude wrote the task spec, Codex broke it down stage by stage, and out came 133 lessons and 11 troubleshooting playbooks, sorted into 38 types of jobs.</p>
+<p><strong>Prompt 4: Breaking down old records (for Codex)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># Task: Break the site log into a master log of lessons</span><br><span class="line"></span><br><span class="line">## Hard rules</span><br><span class="line">- Never modify the original file. Write only inside lessons/.</span><br><span class="line">- Use only what the original explicitly says. Fields the original doesn&#x27;t cover get &quot;not stated in original.&quot;</span><br><span class="line">- &quot;Problem category&quot; and &quot;Trade&quot; must come from the lists below. If unsure, write &quot;TBD&quot; and give the reason in notes.</span><br><span class="line"></span><br><span class="line">## Lists</span><br><span class="line">Trades: &lt;your crew&#x27;s trades, one per line&gt;</span><br><span class="line">Problem categories: &lt;leak / crack / hollowing / dimension error / substandard material / steps out of order / safety hazard / ...&gt;</span><br><span class="line"></span><br><span class="line">## Stage 1: Extract</span><br><span class="line">Extract entries in order of appearance, numbered from C-001. Output master-cases.csv with fields:</span><br><span class="line">case_id, site, date, trade, location, material_spec, problem_category, symptom, cause, fix, verification, open_questions</span><br><span class="line">**Stop when done.** Output a self-check report: total count, distribution by category, number of &quot;TBD&quot;, passages that may have been missed.</span><br><span class="line"></span><br><span class="line">## Stage 2: Stats (after review)</span><br><span class="line">Produce an analysis: frequency by category, distribution of causes, and a list of problems where the same material or the same location recurs at 3+ sites. Every conclusion must be reproducible from the csv.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># &lt;trade code&gt; &lt;job name&gt; Checklist</span><br><span class="line"></span><br><span class="line">&gt; Tick each step on site. Only write when reality differs from the checklist, in the &quot;Deviation log&quot; at the end.</span><br><span class="line">&gt; Miss one red line, stop work. Known problems are listed at the end. Scan them before you start.</span><br><span class="line"></span><br><span class="line">## Pre-start check</span><br><span class="line">- ☐ ...</span><br><span class="line"></span><br><span class="line">## Steps</span><br><span class="line">| ☐ | Step | Key points (red lines in bold) | Pass criteria |</span><br><span class="line">|---|---|---|---|</span><br><span class="line"></span><br><span class="line">## Hazards to watch</span><br><span class="line">| ☐ | Hazard | Prevention |</span><br><span class="line">|---|---|---|</span><br><span class="line"></span><br><span class="line">## Known problems (real ones, hit by people before you)</span><br><span class="line">| # | Problem | What to do on site | Found by |</span><br><span class="line">|---|---|---|---|</span><br><span class="line"></span><br><span class="line">## Deviation log (only when different from the checklist)</span><br><span class="line">| Step # | What actually happened / new problem / where you got stuck | Response |</span><br><span class="line">|---|---|---|</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-3-The-six-step-loop-This-is-the-backbone"><a href="#Step-3-The-six-step-loop-This-is-the-backbone" class="headerlink" title="Step 3: The six-step loop. This is the backbone."></a>Step 3: The six-step loop. This is the backbone.</h3><p>With the foundation poured, here’s the loop every single job runs through.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Assign in one sentence → Pre-job brief → Print safety card → Log only deviations on site</span><br><span class="line">          ↑                                                            ↓</span><br><span class="line">Next brief for this job type is better ← Weekly merge ← Lock into checklist ← 3 end-of-day questions</span><br></pre></td></tr></table></figure>
+
+<p>Look at that loop. It gets better on its own. Every lap adds a few lessons to the library, and the next pre-job brief for that kind of job gets a little thicker.</p>
+<h3 id="Loop-1-Say-one-sentence-get-a-pre-job-brief"><a href="#Loop-1-Say-one-sentence-get-a-pre-job-brief" class="headerlink" title="Loop 1: Say one sentence, get a pre-job brief"></a>Loop 1: Say one sentence, get a pre-job brief</h3><p>Before heading out, a project manager says: “Tomorrow, East Town site, bathroom seepage.”</p>
+<p>The system gives back one page in four sections. Similar jobs our crew has done, with sources. An old-timer’s briefing, written by the model, kept to a few short sentences. Outside references, looked up only if you explicitly ask it to go online, and marked as unverified. And last, what materials we have in stock.</p>
+<p>Recognition and search are all rules.</p>
+<p>Pulling the site, the problem, and the people out of one sentence: rules. For site names, the order is: check the known-sites list first, then look for a place name after words like “go to,” “at,” or “in,” and only then check word endings. Search runs on a synonym table plus fuzzy matching on two-character chunks, so if a PM says “damp,” it still finds “seepage.”</p>
+<p>If the problem is too vague, like just “leaking,” it doesn’t rush out a brief. It asks back first: bathroom, roof, exterior wall, or pipes?</p>
+<p>The model does exactly one thing at the end: turn the search results into a few lines of briefing.</p>
+<p><strong>Prompt 5: The old-timer’s briefing (connecting experience)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">You&#x27;re a veteran on the crew, giving a few words to a project manager who&#x27;s about to head out. Using only our crew&#x27;s own experience below, explain in plain language: for this kind of problem, what to check first when you arrive, in what order, and what mindset to bring.</span><br><span class="line"></span><br><span class="line">Rules:</span><br><span class="line">- Only restate what the material explicitly says. Any criteria, numbers, checks, or steps not in the material must not appear.</span><br><span class="line">- Never change or reverse key criteria like the order of steps, numbers, or direction. If unsure, read out the material&#x27;s original sentence.</span><br><span class="line">- Shorter and less is better. No inventing.</span><br><span class="line">- These rules constrain you. Don&#x27;t repeat them in your answer.</span><br><span class="line"></span><br><span class="line">Requirements: under 120 characters, no numbering, no file names, sound like you&#x27;re telling him face to face. If the material isn&#x27;t enough or doesn&#x27;t match, say &quot;We don&#x27;t have much on this, keep your eyes open.&quot;</span><br><span class="line"></span><br><span class="line">Site: &#123;site&#125;</span><br><span class="line">Problem: &#123;problem&#125;</span><br><span class="line">Material:</span><br><span class="line">&#123;search_results&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Prompt 6: Recognition and search rules (for Codex, pure rules, no model)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># Task: Recognition and search for the pre-job brief (pure rules, no LLM calls)</span><br><span class="line"></span><br><span class="line">## Recognition rules</span><br><span class="line">Input one sentence, output &#123;site, problem, lead, trainee&#125;.</span><br><span class="line">- Site: first check sites.md; then match &quot;go to / head to / at / in / toward + 1–6 characters + site / project / estate&quot;, take the shortest match; finally match word endings.</span><br><span class="line">- Exclusion list: switch room, stairwell, bathroom... these are locations, not sites.</span><br><span class="line">- Names: only recognize code names in codenames.md. &quot;A with B&quot; means A leads, B shadows.</span><br><span class="line">- Problem: whatever follows the site name, with verbs like &quot;handle / fix / check&quot; stripped off.</span><br><span class="line">- Leave unrecognized fields blank. Don&#x27;t ask about what can be inferred.</span><br><span class="line"></span><br><span class="line">## Ask back on vague words</span><br><span class="line">If the problem is only a word like &quot;leaking / cracking / broken&quot;, don&#x27;t produce a brief. Offer 3–5 options to choose from first.</span><br><span class="line"></span><br><span class="line">## Search ranking</span><br><span class="line">- Synonym table: synonyms.json (spoken words ↔ technical terms).</span><br><span class="line">- Score: synonym hit × 3 + two-character chunk overlap (capped at 10).</span><br><span class="line">- This-site and other-site results go in two buckets, ranked together on the same yardstick. This-site results get a ★.</span><br><span class="line">- &quot;This site&quot; only counts if the site name is in the title, not the body.</span><br><span class="line"></span><br><span class="line">## Acceptance</span><br><span class="line">Prepare 20 real phrasings (including new sites, location words, and vague words). Output the recognition result for each.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Loop-2-Print-a-safety-card-and-put-it-in-your-pocket"><a href="#Loop-2-Print-a-safety-card-and-put-it-in-your-pocket" class="headerlink" title="Loop 2: Print a safety card and put it in your pocket"></a>Loop 2: Print a safety card and put it in your pocket</h3><p>Pull three sections out of the checklist: the pre-start check, hazards and prevention, and the known problems. Problems tied to this site get a star and go to the top.</p>
+<p>Why this step? A lot of places on site have no signal, and while you’re working there’s no time to pull out a phone. A sheet of paper in your pocket beats everything.</p>
+<p>I don’t let the model touch this step at all.</p>
+<p>The rule-based code pulls the three sections by heading and copies them word for word. Not one word changed. Known problems get copied along with the finder’s code name. If there’s no checklist for that kind of job yet, it says so straight out. It won’t make one up.</p>
+<p><strong>Prompt 7: Safety card extraction (for Codex, no model)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Task: Safety card (no LLM calls)</span><br><span class="line"></span><br><span class="line">Input: site, trade code.</span><br><span class="line">1. Find checklists/&lt;code&gt;_*.md. If not found, return &quot;There&#x27;s no checklist for this kind of job yet. I won&#x27;t make one up.&quot;</span><br><span class="line">2. Extract three sections by H2 heading: Pre-start check / Hazards to watch / Known problems. If a section is missing, skip it and renumber.</span><br><span class="line">3. Rows in Known problems that mention this site get a ★ and go to the top.</span><br><span class="line">4. Don&#x27;t change a single word. Replace names with code names.</span><br><span class="line">5. Output as a Word file. Footer: &quot;Everything on this card is copied from the original checklist, unedited. Ran into something that&#x27;s not on the card? At end of day, say &#x27;review:&#x27; plus what happened, and it&#x27;ll be on the next version.&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Loop-3-On-site-only-log-what-differs-from-the-checklist"><a href="#Loop-3-On-site-only-log-what-differs-from-the-checklist" class="headerlink" title="Loop 3: On site, only log what differs from the checklist"></a>Loop 3: On site, only log what differs from the checklist</h3><p>Tick through the checklist step by step. Smooth parts, tick and move on.</p>
+<p>You only pick up a pen in three cases.</p>
+<p><strong>Deviation:</strong> reality differs from the checklist. A step changed, time ran over, the drawings don’t match the site.</p>
+<p><strong>First time:</strong> someone did something on their own for the first time, or someone got stuck on a step.</p>
+<p><strong>Danger:</strong> a hazard point acted up, or something almost went wrong.</p>
+<p>I set myself a hard rule: nobody writes for more than 5 minutes a day. Anything that can be inferred from the ticks, nobody gets asked to write.</p>
+<p>So now it’s photos first, then talk. Photos taken within 30 minutes get attached to that day’s review automatically. When the picture matches the story, it’s clearer than any written description.</p>
+<h3 id="Loop-4-Three-end-of-day-questions-filed-automatically"><a href="#Loop-4-Three-end-of-day-questions-filed-automatically" class="headerlink" title="Loop 4: Three end-of-day questions, filed automatically"></a>Loop 4: Three end-of-day questions, filed automatically</h3><p>On the day the job wraps, or at the meeting the next morning, the lead talks and the trainee writes.</p>
+<p>Three questions.</p>
+<p>What was different from the pre-job brief?</p>
+<p>Did you run into anything new, and how did you handle it?</p>
+<p>Who got stuck, and who did something on their own for the first time?</p>
+<p>Having the trainee do the writing is deliberate. Writing it down is learning. And it fixes the problem of one person doing all the logging.</p>
+<p><strong>End-of-day template (print-ready)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># The Three End-of-Day Questions</span><br><span class="line"></span><br><span class="line">| Site | Trade | Date | Lead (speaking) | Writer (trainee) |</span><br><span class="line">|---|---|---|---|---|</span><br><span class="line"></span><br><span class="line">## Q1: What was different from the pre-job brief?</span><br><span class="line">If it went smoothly, write &quot;matched the brief.&quot;</span><br><span class="line">| Item | What actually happened |</span><br><span class="line">|---|---|</span><br><span class="line">| Step deviation | |</span><br><span class="line">| Time deviation | |</span><br><span class="line">| Drawings vs. site mismatch | |</span><br><span class="line"></span><br><span class="line">## Q2: Run into anything new? How did you handle it?</span><br><span class="line">If none, write &quot;none.&quot;</span><br><span class="line">| New problem (what you saw) | Fix |</span><br><span class="line">|---|---|</span><br><span class="line"></span><br><span class="line">## Q3: Who got stuck? Who did something solo for the first time?</span><br><span class="line">Getting stuck isn&#x27;t a fault. Solo firsts get your name on them.</span><br><span class="line">| Person | Where they got stuck / What they did solo for the first time |</span><br><span class="line">|---|---|</span><br><span class="line"></span><br><span class="line">## Extra: hazards / near-misses (only if any)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Prompt 8: Review filing (spoken note → fields)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">You&#x27;re the crew&#x27;s records clerk. Turn the lead&#x27;s end-of-day spoken note into JSON with these keys:</span><br><span class="line">site, trade, location, material_spec, problem_category, symptom, cause, fix, verification, open_questions, heads_up.</span><br><span class="line"></span><br><span class="line">Rules:</span><br><span class="line">- Use only what the note explicitly says. Keys not mentioned get &quot;(not mentioned in note)&quot;. Don&#x27;t rewrite, add, or guess.</span><br><span class="line">- &quot;site&quot; is the site name only, no building numbers or locations.</span><br><span class="line">- &quot;problem_category&quot;: map to the closest item in this list: &#123;problem_category_list&#125;. Only if it truly doesn&#x27;t fit, use the note&#x27;s own word.</span><br><span class="line">- &quot;location&quot; is where the problem was, not places you happened to touch while fixing it.</span><br><span class="line">- Notes are often bare strings of short phrases. Slot them in by order:</span><br><span class="line">  what broke and why → cause; what was done → fix; how it was confirmed → verification.</span><br><span class="line">  Example: note &quot;rebar spacing wrong, re-tied, re-inspection passed&quot;</span><br><span class="line">  → cause &quot;rebar spacing wrong&quot;, fix &quot;re-tied&quot;, verification &quot;re-inspection passed&quot;.</span><br><span class="line">  Slot in using the original words only. Still no adding, no guessing.</span><br><span class="line">- &quot;heads_up&quot;: one sentence, only if the note contains a new lesson the whole crew should watch for. Otherwise &quot;none&quot;.</span><br><span class="line"></span><br><span class="line">Output JSON only. No other text.</span><br><span class="line"></span><br><span class="line">Note:</span><br><span class="line">&#123;original_note&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Loop-5-Three-of-a-kind-Distill-the-criteria-lock-them-into-a-checklist"><a href="#Loop-5-Three-of-a-kind-Distill-the-criteria-lock-them-into-a-checklist" class="headerlink" title="Loop 5: Three of a kind. Distill the criteria, lock them into a checklist"></a>Loop 5: Three of a kind. Distill the criteria, lock them into a checklist</h3><p>Say “distill: bathroom seepage,” and the system pulls every similar case from the database and distills 3 to 5 shared criteria. Each one is tagged with the cases it came from.</p>
+<p>Then say “lock in: bathroom seepage,” and on top of those criteria it drafts a checklist in five fixed sections: scope, decision criteria, work steps, risk prevention, mandatory checkpoints. The draft goes into a pending area first. It only counts after I’ve read it and signed off.</p>
+<p>Why bother? Lessons are bricks. Criteria and checklists are the wall. A pile of bricks doesn’t keep the wind out.</p>
+<p>There are several gates on this step, all run by rules.</p>
+<p>Fewer than 3 similar cases, it refuses outright: “There are only 2 in the database. Come back when there are more.” Two cases don’t make a pattern. Forcing one out is just paraphrasing.</p>
+<p>Every criterion the model distills has to end with the cases it’s based on, like (based on: C-012, C-047).</p>
+<p>The rule-based code checks those IDs one by one. If a cited ID doesn’t exist in the material, the whole criterion gets thrown out.</p>
+<p>The list of source cases at the end is assembled by the code itself. It never passes through the model’s hands.</p>
+<p>If no model is configured, or the call fails, it falls back to a compilation: the original text of the similar cases, laid out neatly. The feature doesn’t break, and it never makes anything up.</p>
+<p><strong>Prompt 9: Distilling criteria</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">You&#x27;re a veteran on the crew. Below are several real cases from our crew about the same kind of problem. Distill 3–5 shared criteria for handling it.</span><br><span class="line"></span><br><span class="line">Rules:</span><br><span class="line">- Each criterion may only come from what these cases explicitly say. Any criteria, numbers, or steps not in the cases must not appear.</span><br><span class="line">- Each criterion must end with (based on: ID, ID) listing the supporting case IDs, copied character for character from the material.</span><br><span class="line">- Never change a word of key criteria like the order of steps or numbers.</span><br><span class="line">- If you can&#x27;t distill many, write fewer. Fewer is better than padded.</span><br><span class="line"></span><br><span class="line">Format: one per line, &quot;① criterion (based on: C-xxx, C-xxx)&quot;. Output only the criteria lines.</span><br><span class="line"></span><br><span class="line">Topic: &#123;topic&#125;</span><br><span class="line">Cases:</span><br><span class="line">&#123;one per line: [ID] site | symptom | cause | fix | verification&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Prompt 10: Locking in a checklist draft</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">You&#x27;re the crew&#x27;s technician. Organize the crew&#x27;s experience from similar cases into a draft checklist.</span><br><span class="line"></span><br><span class="line">Rules:</span><br><span class="line">- Only use what the material explicitly says. Don&#x27;t add any new criteria, numbers, or steps.</span><br><span class="line">- For any section the material can&#x27;t support, write &quot;(Not yet covered by our cases, to be added)&quot;.</span><br><span class="line">- Sections are fixed: 1. Scope; 2. Decision criteria; 3. Work steps; 4. Risk prevention; 5. Mandatory checkpoints.</span><br><span class="line">- &quot;Decision criteria&quot; uses the distilled criteria given below directly, with their source IDs kept as is.</span><br><span class="line">- Plain language, bullet points. Output the body only.</span><br><span class="line"></span><br><span class="line">Topic: &#123;topic&#125;</span><br><span class="line">Distilled criteria:</span><br><span class="line">&#123;criteria&#125;</span><br><span class="line">Material:</span><br><span class="line">&#123;cases + relevant playbook excerpts&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Loop-6-Weekly-merge-shipped-back-on-USB"><a href="#Loop-6-Weekly-merge-shipped-back-on-USB" class="headerlink" title="Loop 6: Weekly merge, shipped back on USB"></a>Loop 6: Weekly merge, shipped back on USB</h3><p>Everyone has a USB stick and runs the system on their own computer. Each week they hand their stuff to me, I merge it, pack a new data bundle, and send it back to everyone.</p>
+<p>Small-town job sites have no shared network. This was the most low-tech, most reliable method I could think of.</p>
+<p>Here’s how it works.</p>
+<p>Day to day, reviews don’t write to the main database. They go into each person’s own “new this week” file. Search reads the main database and this week’s entries together, so a PM can find a lesson he logged the same day.</p>
+<p>On the weekend I say “merge.” The system produces a weekly report, folds everyone’s new entries into the main database, renumbers everything, writes the week’s level-ups into the skills matrix, bumps the version number, and packs a new bundle.</p>
+<p>I send the bundle back. Everyone drags it into their sync folder. The whole crew is in sync.</p>
+<p><strong>Prompt 11: Weekly merge and distribution bundle (for Codex)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Task: Weekly merge and distribution bundle</span><br><span class="line"></span><br><span class="line">Input: each person&#x27;s new-this-week_&lt;codename&gt;.csv and weekly-log_&lt;codename&gt;.md.</span><br><span class="line">1. Weekly report: new cases this week, records per person, list of new problems, list of level-ups, questions the database couldn&#x27;t answer this week.</span><br><span class="line">2. Merge cases: main database + this week&#x27;s new entries. Renumber new cases sequentially (continuing from the highest ID in the main database) so no two USB sticks collide.</span><br><span class="line">3. Fold in level-ups: read each person&#x27;s level-up records and write them into a copy of the skills matrix.</span><br><span class="line">4. Pack: new master case table + new skills matrix + all other data unchanged, with a version number.</span><br><span class="line">5. The main database is only modified in this step. The rest of the time it&#x27;s read-only.</span><br><span class="line">6. Pre-pack check: the bundle must not contain the real-name mapping table or any keys. If it does, throw an error and stop.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-4-A-cheat-sheet-of-mistakes-Save-this-one"><a href="#Step-4-A-cheat-sheet-of-mistakes-Save-this-one" class="headerlink" title="Step 4: A cheat sheet of mistakes. Save this one."></a>Step 4: A cheat sheet of mistakes. Save this one.</h3><p>I’ve scattered a lot of mistakes above. Here they are in one place. The symptom you’ll hit sooner or later, why it happens, and what I did about it.</p>
+<ul>
+<li><strong>Commands had to be typed exactly; one extra character and they failed.</strong> Matching too strict. → If the keyword appears, it counts. Anything that doesn’t look like a command gets answered as a question.</li>
+<li><strong>Acronyms in the interface nobody understood.</strong> I brought my own jargon in. → Plain language everywhere. “AAR” became “the three end-of-day questions.”</li>
+<li><strong>New users opened it and didn’t know where to click.</strong> I knew it too well to notice. → Have Claude walk through it as a newcomer (Prompt 12).</li>
+<li><strong>Material dragged in couldn’t be found later.</strong> Only the text was extracted, the original wasn’t saved, and there was no way in from the interface. → Save originals to disk, add a “My files” entry.</li>
+<li><strong>The model invented field values.</strong> Temperature too high. → Filing 0.15, connecting 0.25. Only brainstorming goes up to 1.0.</li>
+<li><strong>The order of steps got reversed.</strong> High temperature, and the prompt didn’t stress it. → Lower temperature, and the prompt explicitly forbids reversing order.</li>
+<li><strong>The model read its rules out loud.</strong> Constraints treated as content. → Code cuts those sentences.</li>
+<li><strong>Cited case IDs that don’t exist.</strong> The model padding the format. → Code checks IDs; fake ones get dropped whole.</li>
+<li><strong>Patterns forced out of two cases.</strong> No threshold. → Fewer than 3, refuse.</li>
+<li><strong>Safety cards stuffed with generic filler.</strong> Let the model tidy it up. → No model in this step. Copy the original.</li>
+<li><strong>Bare-bones notes came back with every field empty.</strong> Prompt too cautious. → Slot in by order, with an example.</li>
+<li><strong>First trip to a new site, recognition failed.</strong> Only knew sites in the database. → Rule for place names after “go to” &#x2F; “at.”</li>
+<li><strong>Locations taken as sites.</strong> No exclusion list. → Add a location exclusion list.</li>
+<li><strong>Another site tagged as this site.</strong> It was mentioned in the body. → Only the site name in the title counts.</li>
+<li><strong>One site, many names.</strong> Casual speech. → Standardize to the database’s full name at filing.</li>
+<li><strong>One character misfiled a whole batch.</strong> Rule too loose. → Drop the single character, reorder, rerun everything.</li>
+<li><strong>USB ID collisions, forked main database.</strong> Everyone writing their own copy. → Keep this week’s entries separate from the main database; renumber at merge.</li>
+<li><strong>Real names almost got packed.</strong> No check. → Automatic pre-pack check, and I confirm it myself.</li>
+</ul>
+<p><strong>Prompt 12: Newcomer walkthrough (for Claude)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">You are a project manager using this system for the first time. You&#x27;re 50, you use WeChat, you don&#x27;t know computer jargon, and you won&#x27;t memorize commands.</span><br><span class="line"></span><br><span class="line">Starting from opening the system, do things in the order you&#x27;d naturally do them: assign a job, read the pre-job brief, do an end-of-day review, look up a past problem. For each step, note:</span><br><span class="line">1. What words you see, and which ones you don&#x27;t understand;</span><br><span class="line">2. Where you want to click, and where you&#x27;re actually supposed to click;</span><br><span class="line">3. How you&#x27;d type it (in your own words, not the manual&#x27;s), and whether the system understands;</span><br><span class="line">4. Which step makes you give up.</span><br><span class="line"></span><br><span class="line">Finally, list everything in three tiers: &quot;makes people give up / makes people hesitate / minor issue&quot;, with one fix each. Look only. Don&#x27;t change any files.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-5-From-agent-to-rules-Less-compute-the-more-you-use-it"><a href="#Step-5-From-agent-to-rules-Less-compute-the-more-you-use-it" class="headerlink" title="Step 5: From agent to rules. Less compute the more you use it."></a>Step 5: From agent to rules. Less compute the more you use it.</h3><p>Everything so far is the how. This part is about the thing I care about most.</p>
+<p>Looking back on these three-plus months, I actually went through four stages.</p>
+<ol>
+<li><strong>Web chat.</strong> Paste material in, have the AI analyze it. The model does: everything, and forgets it all when the chat ends.</li>
+<li><strong>Skills.</strong> Scripts handle what can be calculated: stats, clustering, alerts. The model just polishes wording. The model does: about half.</li>
+<li><strong>Agent.</strong> Rule-based code runs the main flow. The model is down to four jobs. The model does: very little.</li>
+<li><strong>Rules (in progress).</strong> Keep peeling out whatever in those four jobs can become a rule. Hand the rest to a small local model. The model does: the least.</li>
+</ol>
+<p>With each stage, it costs a bit less, the output gets a bit more stable, and it leans on the model a bit less.</p>
+<p>By stage four, a small local model is enough. The data never even has to leave the crew’s computers.</p>
+<p>For a small-town crew like ours, this matters enormously. No servers, no IT, and the budget is what it is. If a management system can’t run without the most expensive model, it simply won’t survive here.</p>
+<p>So how do you decide whether a step can go to rules? I boiled it down to three questions.</p>
+<p>Is the input format fixed? Like checklist headings, or the end-of-day table.</p>
+<p>Can the judgment be written as “if X, do Y”? Like “fewer than 3, refuse.”</p>
+<p>Is a mistake expensive? Like a wrong safety card, which on site means an accident.</p>
+<p>Three yeses, and it becomes a rule. Only what needs to understand human speech or summarize wording stays with the model.</p>
+<p><strong>Keep temperature low.</strong> Filing 0.15, connecting 0.25.</p>
+<p><strong>Put examples in the prompt.</strong> “Rebar spacing wrong, re-tied, re-inspection passed.” That one example does more than ten rules.</p>
+<p><strong>Make the model output JSON and let code check it.</strong> Are the fields right? Are the IDs real? Let code judge. Don’t count on the model to police itself.</p>
+<p><strong>When it fails, fall back.</strong> Model not configured, call failed, output didn’t pass: always fall back to listing the original text. The feature doesn’t break, and it never makes things up.</p>
+<p>Right now, my agent opens fine with no API key at all. Site recognition, search, the first section of the pre-job brief, safety cards, end-of-day bookkeeping, level-ups, the weekly merge: all of it works as normal. All you lose is the old-timer’s few lines of briefing and the criteria distilling.</p>
+<p>Switching models is a config change. The engine only speaks the OpenAI-compatible format. Endpoint, model name, and key all live in the config file. If I want to plug in Doubao, or a locally hosted model, I change those three things. Not one line of code.</p>
+<p><strong>Prompt 13: Rules audit (for Claude)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Read through every place under engine/ that calls an LLM. For each one, list:</span><br><span class="line">1. What the model is asked to do here;</span><br><span class="line">2. Whether the input format is fixed, whether the judgment can be written as &quot;if X, do Y&quot;, and whether a mistake is expensive;</span><br><span class="line">3. Verdict: can be fully rule-based / can be partly rule-based (say which part) / must keep the model;</span><br><span class="line">4. If the model stays, where a ~7B small model would most likely go wrong, and what rule would catch it.</span><br><span class="line"></span><br><span class="line">Finally, rank the changes by &quot;saves the most money, lowest risk&quot;. Plan only. Don&#x27;t change code. Wait for my confirmation.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-6-A-few-boundaries"><a href="#Step-6-A-few-boundaries" class="headerlink" title="Step 6: A few boundaries"></a>Step 6: A few boundaries</h3><p>Last, the lines I’ve held the whole time.</p>
+<p><strong>AI drafts, people decide.</strong> Checklists, criteria, skill level-ups: every one of them needs a human nod.</p>
+<p><strong>Names of people and sites never go online.</strong> Everyone in the system is a code name. Anything sent to an outside model gets its code names and site names swapped out first, and place names not in the database get masked.</p>
+<p><strong>Points can be ranked, but not gamed.</strong> I changed my mind on this one partway through. At first I refused to rank anyone. I was worried people would log junk for points. Then I found that a little friendly comparison actually made people more willing to log. Now points only come from real records: filing one case is 2 points, filling in all four sections is +1, a level-up is 3. Level-ups only count with proof, so there’s nothing to game.</p>
+<h2 id="Final-words"><a href="#Final-words" class="headerlink" title="Final words"></a>Final words</h2><p>This thing is still evolving. Next, I plan to clean up a few of the skills and open-source them.</p>
+<p>Looking back on these three-plus months, the hardest part wasn’t the AI at all.</p>
+<p>AI writes code ten thousand times faster than me. It writes tidier prompts than I do, too. The hard part was figuring out which things to hand to it and which calls I have to make myself. Then writing those decisions down, one by one, as rules it can follow.</p>
+<p>That job can only be done by someone who’s worked a site.</p>
+<p>That 5-people-9-sites mistake from the beginning is now nailed onto a checklist. Last month, one of our project managers went to a new site and ran into the exact same situation.</p>
+<p>Before he left, it was already on his sheet.</p>
+<p>AI doesn’t make my calls.</p>
+<p>It makes sure that when I make them, I have the right information in my hands.</p>
+<p>P.S. I’m a second-generation contractor, and I’m out to be the best contractor in my county.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/13/Kainative-2121267017667809293/">https://yaoav.github.io/2026/11/13/Kainative-2121267017667809293/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Kainative/">@Kainative</a></div><div class="post-share"><div class="social-share" data-image="/images/2121267017667809293-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img class="cover" src="/images/2121120188187971938-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">2026年普通人可做的二道贩子信息差生意</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Kainative（大宇） 的长文，原文链接，版权归原作者所有。  开篇导读（万字长文预警，建议点赞收藏） **先给结论：2026年还能做的中间商生意只剩三类：**靠本地关系撮合的、靠上游渠道拿货的、靠内容流量分销的。单纯“从A平台搬货到B平台加价”这条路，已经被平台规则基本堵死。这篇手册按启动资金分成零本金和小本金两档，逐个拆到“第一步做什么、多少钱、多少单算跑通、什么条件下该停”，最后给出30天起步路线。 **全文路线：**先认差价的四种来源（第一章）→ 零本金项目清单（第二章）→ 小本金项目清单（第三章）→ 2026年已经改变规则的五个事实（第四章）→ 选品定价与试错方法（第五章）→ 30天起步（第六章）→ 怎么从贩子做成渠道（第七章）。 第一章：先想清楚：这门生意赚的到底是什么钱1.1 四种差价，决定你能赚哪一种把”二道贩子”这个词拆开，它的底层动作只有一个： 在便宜的地方拿到东西，在贵的地方卖掉，中间的差额归你。但差额从哪里来，决定了这生意能做三个月还是做三年。生意场上所有”倒买倒卖”，赚的无非是下面四种钱之一。  这张表是整个手册的地基。你会...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img class="cover" src="/images/2121120188187971938-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">2026年普通人可做的二道贩子信息差生意</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Kainative（大宇） 的长文，原文链接，版权归原作者所有。  开篇导读（万字长文预警，建议点赞收藏） **先给结论：2026年还能做的中间商生意只剩三类：**靠本地关系撮合的、靠上游渠道拿货的、靠内容流量分销的。单纯“从A平台搬货到B平台加价”这条路，已经被平台规则基本堵死。这篇手册按启动资金分成零本金和小本金两档，逐个拆到“第一步做什么、多少钱、多少单算跑通、什么条件下该停”，最后给出30天起步路线。 **全文路线：**先认差价的四种来源（第一章）→ 零本金项目清单（第二章）→ 小本金项目清单（第三章）→ 2026年已经改变规则的五个事实（第四章）→ 选品定价与试错方法（第五章）→ 30天起步（第六章）→ 怎么从贩子做成渠道（第七章）。 第一章：先想清楚：这门生意赚的到底是什么钱1.1 四种差价，决定你能赚哪一种把”二道贩子”这个词拆开，它的底层动作只有一个： 在便宜的地方拿到东西，在贵的地方卖掉，中间的差额归你。但差额从哪里来，决定了这生意能做三个月还是做三年。生意场上所有”倒买倒卖”，赚的无非是下面四种钱之一。  这张表是整个手册的地基。你会...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-1-What-this-actually-is"><span class="toc-number">1.</span> <span class="toc-text">Part 1: What this actually is</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#My-first-attempt-was-a-form-It-failed"><span class="toc-number">1.1.</span> <span class="toc-text">My first attempt was a form. It failed.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part-3-Building-it"><span class="toc-number">2.</span> <span class="toc-text">Part 3: Building it</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-0-Get-your-tools-together"><span class="toc-number">2.1.</span> <span class="toc-text">Step 0: Get your tools together</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Build-the-team-Get-Claude-and-Codex-working-together"><span class="toc-number">2.2.</span> <span class="toc-text">Step 1: Build the team. Get Claude and Codex working together.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Pour-the-foundation-Turn-experience-into-data"><span class="toc-number">2.3.</span> <span class="toc-text">Step 2: Pour the foundation. Turn experience into data.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-The-six-step-loop-This-is-the-backbone"><span class="toc-number">2.4.</span> <span class="toc-text">Step 3: The six-step loop. This is the backbone.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-1-Say-one-sentence-get-a-pre-job-brief"><span class="toc-number">2.5.</span> <span class="toc-text">Loop 1: Say one sentence, get a pre-job brief</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-2-Print-a-safety-card-and-put-it-in-your-pocket"><span class="toc-number">2.6.</span> <span class="toc-text">Loop 2: Print a safety card and put it in your pocket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-3-On-site-only-log-what-differs-from-the-checklist"><span class="toc-number">2.7.</span> <span class="toc-text">Loop 3: On site, only log what differs from the checklist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-4-Three-end-of-day-questions-filed-automatically"><span class="toc-number">2.8.</span> <span class="toc-text">Loop 4: Three end-of-day questions, filed automatically</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-5-Three-of-a-kind-Distill-the-criteria-lock-them-into-a-checklist"><span class="toc-number">2.9.</span> <span class="toc-text">Loop 5: Three of a kind. Distill the criteria, lock them into a checklist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-6-Weekly-merge-shipped-back-on-USB"><span class="toc-number">2.10.</span> <span class="toc-text">Loop 6: Weekly merge, shipped back on USB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-4-A-cheat-sheet-of-mistakes-Save-this-one"><span class="toc-number">2.11.</span> <span class="toc-text">Step 4: A cheat sheet of mistakes. Save this one.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-5-From-agent-to-rules-Less-compute-the-more-you-use-it"><span class="toc-number">2.12.</span> <span class="toc-text">Step 5: From agent to rules. Less compute the more you use it.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-6-A-few-boundaries"><span class="toc-number">2.13.</span> <span class="toc-text">Step 6: A few boundaries</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-words"><span class="toc-number">3.</span> <span class="toc-text">Final words</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？"><img src="/images/2121082480392564761-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nature：科研人如何选择适合自己的AI工具？"/></a><div class="content"><a class="title" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？">Nature：科研人如何选择适合自己的AI工具？</a><time datetime="2026-11-13T11:27:25.000Z" title="发表于 2026-11-13 11:27:25">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
