@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How I Turn One Image Into a 3D Simulator That Takes Itself Apart | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="I gave Claude a job description instead of a prompt. Now one picture becomes a 3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I Turn One Image Into a 3D Simulator That Takes Itself Apart">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/06/Nyxera0x-2118689860437315679/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="I gave Claude a job description instead of a prompt. Now one picture becomes a 3">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2118689860437315679-cover.jpg">
+<meta property="article:published_time" content="2026-11-06T21:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-13T01:17:35.119Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Nyxera0x">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2118689860437315679-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How I Turn One Image Into a 3D Simulator That Takes Itself Apart",
+  "url": "https://yaoav.github.io/2026/11/06/Nyxera0x-2118689860437315679/",
+  "image": "https://yaoav.github.io/images/2118689860437315679-cover.jpg",
+  "datePublished": "2026-11-06T21:00:00.000Z",
+  "dateModified": "2026-11-13T01:17:35.119Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/06/Nyxera0x-2118689860437315679/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How I Turn One Image Into a 3D Simulator That Takes Itself Apart',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How I Turn One Image Into a 3D Simulator That Takes Itself Apart</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How I Turn One Image Into a 3D Simulator That Takes Itself Apart</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-06T21:00:00.000Z" title="发表于 2026-11-06 21:00:00">2026-11-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Nyxera0x（Nyxera）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2118689860437315679">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p><strong>I gave Claude a job description instead of a prompt. Now one picture becomes a 3D build in code that Claude checks against the picture and films taking itself apart. Below: the brief, the checklist and every prompt.</strong></p>
+<p><video controls preload="metadata" poster="/images/2118656610188787712-poster.jpg" src="/videos/2118656610188787712.mp4"></video></p>
+<p>The first time I asked Claude for a robot animal with nothing to work from, I got a generic toy.</p>
+<p>This tarantula came out of the same model. What changed is the input: one picture from ChatGPT, and a job description instead of a prompt.</p>
+<p><video controls preload="metadata" poster="/images/2118656790703321088-poster.jpg" src="/videos/2118656790703321088.mp4"></video></p>
+<p>The piranha has 2 rows of glass fangs, a glass flank over its drive gears, a tail stalk that telescopes and an eye under an angry brow. Every part is a button. Press one and that part comes apart.</p>
+<p>Every animal here started as one picture from ChatGPT. Claude rebuilt it in three.js. There is no 3D model and no download: every shell, gear and fang is written as code.</p>
+<p>Animals are just what I tried first. The same file works on anything with a dense mechanical core: an engine, a drone, a camera, a watch.</p>
+<p>I started 9 animals this week. 5 shipped. A moth, a scarab, a fly and a hydra didn’t.</p>
+<p>What made the 5 work was a file. I stopped writing prompts and wrote Claude a job description: what the build should look like, where the camera goes, what to check before I see anything, and one rule above all of them. Nothing gets filmed until I say yes.</p>
+<p>At the end I’m giving the whole thing away as a free Claude Code skill: the job description, the checklist, every prompt, and 3 of these animals as code you can build and take apart yourself.</p>
+<h3 id="What-You’re-Building"><a href="#What-You’re-Building" class="headerlink" title="What You’re Building"></a>What You’re Building</h3><p>Every build goes through the same 6 pieces:</p>
+<ul>
+<li><strong>The reference.</strong> One image from ChatGPT. It sets the look and nothing else.</li>
+<li><strong>The job description.</strong> One file Claude reads before every build.</li>
+<li><strong>The checklist.</strong> 10 to 12 numbered lines on what this one picture stands on. A new list for every picture.</li>
+<li><strong>The still.</strong> One frame posed like the reference, graded line by line, at least 3 rounds.</li>
+<li><strong>The page.</strong> The object in the middle, a title, one button per part, live cards around it.</li>
+<li><strong>The film.</strong> About 21 seconds: a part comes apart every 2 to 3 seconds, a full explode, an exit. Then a 10-second version for posting, with its own script.</li>
+</ul>
+<h3 id="What-You-Need"><a href="#What-You-Need" class="headerlink" title="What You Need"></a>What You Need</h3><ul>
+<li><strong>Claude Code</strong> on Opus 5.5.</li>
+<li><strong>ChatGPT</strong> for the reference image.</li>
+<li><strong>Node.js 20 or newer</strong>, plus <strong>ffmpeg and Python 3</strong> for the video and the sound. Claude Code installs them if you ask.</li>
+</ul>
+<h3 id="Step-1-Generate-the-Reference"><a href="#Step-1-Generate-the-Reference" class="headerlink" title="Step 1. Generate the Reference"></a>Step 1. Generate the Reference</h3><p>A robotic [hammerhead shark] as a precision machine, studio product shot on a near-white background with a soft floor shadow.<br>White glossy shells with clearcoat, green only on tips, rims, edges and joint rings.<br>Dense dark mechanism showing through cut-outs and clear glass: gears, pistons, hoses, small screws.<br>Eyes as glossy black lenses with a thin green ring. Fins and membranes milky and frosted with thin veins.<br>Front three-quarter view, the whole subject in frame.</p>
+<p>The picture is a target for the look. Claude never imports it: it reads it and builds its own. Swap the subject for anything: [a motorcycle engine], [a camera drone] and [a mechanical watch] run through the same prompt.</p>
+<p>Pick a subject with lots of joints and a dense core. Smooth surfaces lose: a long white shell reads as a toy however many rounds it gets.</p>
+<p>If it’s a creature, give it one main set of limbs: tentacles, legs or wings. I cut a flying octopus and a scorpion-squid before I made their pictures. Wings and tentacles fighting for the same half second is noise.</p>
+<h3 id="Step-2-Write-the-Job-Description"><a href="#Step-2-Write-the-Job-Description" class="headerlink" title="Step 2. Write the Job Description"></a>Step 2. Write the Job Description</h3><p>Save this as a file in the project and point Claude at it before every build.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">You build robotic objects and creatures from a reference image, in three.js, entirely in code.</span><br><span class="line"></span><br><span class="line">The look:</span><br><span class="line">- white shells with clearcoat and an environment map</span><br><span class="line">- green as a sparse accent only: tips, rims, edge lines, a bezel, joint rings; never dots sprinkled over a shell</span><br><span class="line">- dark mechanism in 2 levels: big parts (gears, rings, actuators) and about 260 small ones (pistons, hoses, screws, wiring); cut windows into the shells so the dark mass shows</span><br><span class="line">- eyes as glossy black lenses with a thin green bezel and a small pupil</span><br><span class="line">- membranes milky and frosted with thin veins</span><br><span class="line">- every limb has its own pose and segment lengths, never a row of identical parts</span><br><span class="line">- bristles and spikes thin and short: 0.15 to 0.25 of the limb&#x27;s thickness</span><br><span class="line">- one main set of limbs per creature</span><br><span class="line">- near-white studio, soft floor shadow</span><br><span class="line"></span><br><span class="line">The order:</span><br><span class="line">1. Measure the reference first: its main proportions (height, head, jaw or limb length) as shares of its length.</span><br><span class="line">2. Build the object and render one still posed like the reference.</span><br><span class="line">3. Put the reference, your still and an approved still side by side and grade every line of the checklist: yes, partial or no. Grade against the picture, not against what you remember building.</span><br><span class="line">4. Grade one more line every round: at thumbnail size, does it look as dense as the approved still?</span><br><span class="line">5. Measure it: the share of dark pixels in the object&#x27;s frame, yours against the reference&#x27;s. Below 0.8 of it is a no.</span><br><span class="line">6. Stop after round 2 and show me. The film waits for my yes.</span><br><span class="line"></span><br><span class="line">The camera:</span><br><span class="line">- frame 0 is the front 3/4 hero view, the object big and already moving</span><br><span class="line">- every teardown gets its own side, height and distance, aimed at the part itself, pushing in while it hangs open: an eye in macro, a tail from behind, a back from above, a jaw from below</span><br><span class="line">- the part being opened stays in view; the rest of the object may run off the frame</span><br><span class="line">- smooth paths only: the camera never copies a wing beat or a footstep</span><br><span class="line">- visible wing beats stay slow, 1.5 to 2.5 Hz</span><br><span class="line"></span><br><span class="line">When I correct you, the correction goes into this file.</span><br></pre></td></tr></table></figure>
+
+<p>3 lines carry the weight. “Grade against the picture” is how the self-check stays honest. “The film waits for my yes” means no tokens burn on a film of a toy. “The correction goes into this file” is how build 5 stops repeating the mistakes of build 1.</p>
+<h3 id="Step-3-Write-a-Checklist-for-This-Picture"><a href="#Step-3-Write-a-Checklist-for-This-Picture" class="headerlink" title="Step 3. Write a Checklist for This Picture"></a>Step 3. Write a Checklist for This Picture</h3><p>The job description covers every build. The checklist covers one picture. Write it before the first line of code: what does this picture stand on, in numbered lines a reader could check?</p>
+<p>My tarantula, 4 of its 12 lines:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. A heavy spider low on 8 thick legs spread wide, head toward the camera, the big abdomen rising behind and above the head. Front 3/4 from slightly above.</span><br><span class="line">2. Two large curved fangs under the head, dark with glowing green tips, the brightest accents at the front of the frame.</span><br><span class="line">5. The abdomen is a white frame of curved bands holding panes of CLEAR glass, with green coils glowing through. Never a solid white shell.</span><br><span class="line">7. Thin black spike rods all along the legs, 10 to 20 per segment, pointing outward. They read as hair at thumbnail size.</span><br></pre></td></tr></table></figure>
+
+<p>Line 5 has the word “never” in it on purpose. Without it the glass turns into one more white shell, because a white shell is the default.</p>
+<p>Line 7 is the one I’d write differently. It says thin and never says how thin. The bristles came back as quills, twice the length they should be. The fix is a number: 0.15 to 0.25 of the leg’s thickness. Every fix since has been a sentence with a number in it.</p>
+<h3 id="Step-4-Run-the-Still-Loop-Then-Grade-It-Yourself"><a href="#Step-4-Run-the-Still-Loop-Then-Grade-It-Yourself" class="headerlink" title="Step 4. Run the Still Loop, Then Grade It Yourself"></a>Step 4. Run the Still Loop, Then Grade It Yourself</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Read the job description and this checklist. Build the [tarantula] and loop:</span><br><span class="line">1. Render a still at 1600×900 posed like the reference.</span><br><span class="line">2. Stack the reference, your still and the approved still side by side, plus a thumbnail of the same stack 900 px wide.</span><br><span class="line">3. Grade every checklist line yes, partial or no, one line each.</span><br><span class="line">4. Fix the no&#x27;s, then the partials.</span><br><span class="line">Stop after round 2 and show me the stack and the grades. Wait for my notes before round 3.</span><br></pre></td></tr></table></figure>
+
+<p>Then do your own grading, against the picture and not against your memory of it.</p>
+<p>That cuts both ways. On the fly I read the eyes as too busy and asked for smaller lenses. The head came back as a disco ball. The reference had big ones; I’d misread it.</p>
+<h3 id="Step-5-Measure-It-Don’t-Eyeball-It"><a href="#Step-5-Measure-It-Don’t-Eyeball-It" class="headerlink" title="Step 5. Measure It, Don’t Eyeball It"></a>Step 5. Measure It, Don’t Eyeball It</h3><p>A moth, a hydra and a fly all graded themselves dense enough, and all 3 read as clean white diagrams. I threw the moth out after 9 rounds.</p>
+<p>The checklist checks features: the eyes, the mouth, the silhouette. It never checks how much machine you can see. So now Claude counts it:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Crop the reference and your still to the object&#x27;s bounding box. Count the share of dark pixels (luma under 80). Your share has to reach 0.8 of the reference&#x27;s. Raise it by breaking white surfaces into separate plates with gaps over the mechanism. Adding dots doesn&#x27;t count.</span><br></pre></td></tr></table></figure>
+
+<p>The hydra measured 0.57 of its reference. One round aimed at the number took it to 0.80. The fly reached 0.96 once its plates got real gaps.</p>
+<p>Proportions get the same treatment. The piranha’s round 2 passed on density and still came back as a crocodile: jaws at 0.52 of the body length, where the picture’s sit at 0.37. Round 3 got 4 numbers measured off the picture: body height 0.55 of the length, head 0.44, jaws 0.36, a gape as tall as the jaw is long. It landed at 0.35.</p>
+<p><img src="/images/HWb7uSgXAAA1pQN.jpg" alt="HWb7uSgXAAA1pQN"></p>
+<h3 id="Step-6-Save-Every-Correction"><a href="#Step-6-Save-Every-Correction" class="headerlink" title="Step 6. Save Every Correction"></a>Step 6. Save Every Correction</h3><p>My notes from this batch. Every one went into the job description:</p>
+<ul>
+<li>The tarantula’s bristles read as quills. Bristles now have a thickness in numbers.</li>
+<li>A rule to keep the whole octopus in frame pulled the camera back to a flat view from above and curled the arms in. Now only the part being opened has to stay in view.</li>
+<li>The moth read as a diagram. Density now gets measured, not graded.</li>
+<li>The piranha read as a crocodile. Proportions now get measured off the picture before the first line of code.</li>
+<li>A flying octopus and a scorpion-squid had 2 sets of limbs each. One main set per creature now.</li>
+<li>The camera parked. In the piranha’s first film every teardown sat between 20° and 50° on the same side, at the same height and distance. Every beat now gets its own side, aimed at its own part.</li>
+</ul>
+<p>The file grows by one line per mistake. The next build starts with all of them.</p>
+<h3 id="Step-7-Film-It-From-One-Approved-Choreography"><a href="#Step-7-Film-It-From-One-Approved-Choreography" class="headerlink" title="Step 7. Film It From One Approved Choreography"></a>Step 7. Film It From One Approved Choreography</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Take the approved film of the build whose body is closest to this one and port it 1:1: the same beat times, the same moves, distances scaled to the object. Change the body only.</span><br><span class="line">Map its 5 parts onto the 5 slots: [the eye, the hammer, the flank, the jaw, the pectoral fin].</span><br><span class="line">Each part opens in about 1 s, holds with its parts still spinning, and closes in 0.5 s. Give every part its own camera: its own side and height, aimed at the part, pushing in while it hangs open.</span><br><span class="line">Then a full explode on a 330° turntable, a fast reassembly while it turns, and an exit.</span><br><span class="line">Build a page around it: an invented product name and title, one pill button per part that a cursor clicks, live cards that move with the parts.</span><br><span class="line">Before you show me the film, put its frames at 1.5, 4.5 and 12.4 s next to the approved film&#x27;s. If it looks smaller, flatter or blurrier, it doesn&#x27;t ship.</span><br></pre></td></tr></table></figure>
+
+<p>My first glass octopus film got another animal’s choreography plus a rule of my own: keep the whole octopus in frame. It came back far away, flat, arms tucked in. A toy.</p>
+<p><video controls preload="metadata" poster="/images/2118657644785250304-poster.jpg" src="/videos/2118657644785250304.mp4"></video></p>
+<p>The second one got an earlier octopus film 1:1 with only the head swapped. That’s the one above. The piranha took an anglerfish’s film the same way: the same deep body, the same jaw that drops off its hinge.</p>
+<p>The scarab is the other half of the lesson. Nothing I’d built had a body like it, so it borrowed only a camera and built the body from zero. 4 rounds and about 450,000 tokens later it was still busy and cheap. Now a subject with no close body gets flagged before it starts.</p>
+<h3 id="Step-8-Cut-What’s-Boring-Then-Write-the-Short-Version"><a href="#Step-8-Cut-What’s-Boring-Then-Write-the-Short-Version" class="headerlink" title="Step 8. Cut What’s Boring, Then Write the Short Version"></a>Step 8. Cut What’s Boring, Then Write the Short Version</h3><p>The whole film is one file:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;duration&quot;: 21.2, &quot;script&quot;: [</span><br><span class="line">  &#123;&quot;t&quot;: 3.0, &quot;act&quot;: &quot;optics&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 5.7, &quot;act&quot;: &quot;hammer&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 8.2, &quot;act&quot;: &quot;flank&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 10.8, &quot;act&quot;: &quot;jaw&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 13.3, &quot;act&quot;: &quot;exploded&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 16.5, &quot;act&quot;: &quot;assemble&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 17.7, &quot;act&quot;: &quot;hero&quot;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The hammerhead’s fin came off crooked and the beat was dull, so I deleted 1 line. The film went from 24 seconds to 21.2. The object, the page and the sound all read the same script, so a new cut is one edited file and one render.</p>
+<p>For posting I need 10 seconds. My first short versions were the full film trimmed to its busiest moments and crossfaded together. They jumped from fragment to fragment and looked cheap.</p>
+<p>Now the short version is its own script: the opening, one part, the explode, the exit.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;duration&quot;: 11.3, &quot;film&quot;: 10.0, &quot;script&quot;: [</span><br><span class="line">  &#123;&quot;t&quot;: 2.7, &quot;act&quot;: &quot;abdomen&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 5.2, &quot;act&quot;: &quot;exploded&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 7.0, &quot;act&quot;: &quot;assemble&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 7.8, &quot;act&quot;: &quot;hero&quot;&#125;,</span><br><span class="line">  &#123;&quot;t&quot;: 9.6, &quot;act&quot;: &quot;jump&quot;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The tarantula’s scene runs 11.3 seconds and plays back at 1.13x to land on 10. Every short film also gets its own opening and its own exit, so no two in a row look alike: the wasp dives in and climbs out of the top of the frame, the tarantula lands from a jump and jumps at the camera, the octopus jets away.</p>
+<p><video controls preload="metadata" poster="/images/2118658020930375680-poster.jpg" src="/videos/2118658020930375680.mp4"></video></p>
+<p>Every video in this article is one of those: 10 seconds, one take.</p>
+<h3 id="Step-9-Render-It"><a href="#Step-9-Render-It" class="headerlink" title="Step 9. Render It"></a>Step 9. Render It</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Render the film frame by frame: render(t) is a pure function of time. Capture at 1600×900 with a device pixel ratio of 2.4, downscale to 1920×1080 at 60 fps with lanczos, H.264, yuv420p, faststart.</span><br><span class="line">Score it in code on the same script: a music bed for the whole film, a quiet click per button, a short accent on every part that moves. Master to -14 LUFS. For a short version played faster, score the scene&#x27;s script and time-stretch the sound by the same factor.</span><br></pre></td></tr></table></figure>
+
+<p>A screen recorder drops frames when the GPU works hard. A seeked film can’t. Rendered at 4K and brought down to 1080p, the thin veins on the fins stay sharp.</p>
+<h3 id="Bonus-Don’t-Run-4-at-Once"><a href="#Bonus-Don’t-Run-4-at-Once" class="headerlink" title="Bonus. Don’t Run 4 at Once"></a>Bonus. Don’t Run 4 at Once</h3><p>Every build gets its own fresh agent with the job description, the reference and its checklist. One fresh agent costs less than one long chat, because the long chat carries everything before it into every call.</p>
+<p>But more at once isn’t faster. I ran the moth, the hydra, the fly and the octopus in parallel and read each one only after its 6th round. The moth alone ate about 430,000 tokens before I threw it out. A still costs about 400,000 tokens and a film another 150,000 to 400,000, so a late review is the expensive kind.</p>
+<p>Now it’s 2 at a time, and I look after round 2, while a note still changes the outcome.</p>
+<p>The job description is above. Swap the picture.</p>
+<p>Or skip the copying. The whole method is a free Claude Code skill: the job description, the checklist, every prompt, and the tarantula, the piranha and the wasp as code you can build, take apart and film. One command installs it:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx skills add Nyxera0x/cutaway -g -a claude-code</span><br></pre></td></tr></table></figure>
+
+<p><strong>Free skill on GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/Nyxera0x/cutaway">https://github.com/Nyxera0x/cutaway</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/06/Nyxera0x-2118689860437315679/">https://yaoav.github.io/2026/11/06/Nyxera0x-2118689860437315679/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Nyxera0x/">@Nyxera0x</a></div><div class="post-share"><div class="social-share" data-image="/images/2118689860437315679-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"><img class="cover" src="/images/2119277960670929389-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 国自然放榜，我认真看了一下今年的数据。  2026年集中接收的10类项目，一共资助69,563项。2025年是53,159项。也就是说，今年增加了16,404项，增幅约30.9%。  其中，两类和青年教师关系比较密切的项目，变化尤其明显： 青年科学基金项目（C类）：增加12,046项，增幅50.1%； 面上项目增加3,400项，增幅14.8%。 看到这个变化以后，我又动心了。 刚好最近，北京市自然科学基金2026年第三批项目申请也启动了。 一边是国自然青年C和面上项目扩容，一边是北京市自然科学基金正在申报，再加上现在已经可以用AI辅助做选题调研、查文献和整理材料，我又萌生了申请项目的想法。 申请项目的第一步，当然是「找选题灵感」。  我要把过去获批的国自然项目整理出来，看看大家都在研究什么。  01｜为什么我要收集历年的获批题目？准备基金选题的时候，我们经常会去看历年的获批项目。 倒不是为了照着别人的题目改几个词，而是想知道：最近几年哪些问题正在受到关注，大...</div></div></div></a><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-You%E2%80%99re-Building"><span class="toc-number">1.</span> <span class="toc-text">What You’re Building</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-You-Need"><span class="toc-number">2.</span> <span class="toc-text">What You Need</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Generate-the-Reference"><span class="toc-number">3.</span> <span class="toc-text">Step 1. Generate the Reference</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Write-the-Job-Description"><span class="toc-number">4.</span> <span class="toc-text">Step 2. Write the Job Description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Write-a-Checklist-for-This-Picture"><span class="toc-number">5.</span> <span class="toc-text">Step 3. Write a Checklist for This Picture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-4-Run-the-Still-Loop-Then-Grade-It-Yourself"><span class="toc-number">6.</span> <span class="toc-text">Step 4. Run the Still Loop, Then Grade It Yourself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-5-Measure-It-Don%E2%80%99t-Eyeball-It"><span class="toc-number">7.</span> <span class="toc-text">Step 5. Measure It, Don’t Eyeball It</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-6-Save-Every-Correction"><span class="toc-number">8.</span> <span class="toc-text">Step 6. Save Every Correction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-7-Film-It-From-One-Approved-Choreography"><span class="toc-number">9.</span> <span class="toc-text">Step 7. Film It From One Approved Choreography</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-8-Cut-What%E2%80%99s-Boring-Then-Write-the-Short-Version"><span class="toc-number">10.</span> <span class="toc-text">Step 8. Cut What’s Boring, Then Write the Short Version</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-9-Render-It"><span class="toc-number">11.</span> <span class="toc-text">Step 9. Render It</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-Don%E2%80%99t-Run-4-at-Once"><span class="toc-number">12.</span> <span class="toc-text">Bonus. Don’t Run 4 at Once</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

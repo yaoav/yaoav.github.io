@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>币海拾遗 · 爆款提纯 - 五位 X 博主的爆款内容提纯站</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="提炼加密、AI、资本市场博主的爆款观点，注明出处">
+<meta property="og:type" content="website">
+<meta property="og:title" content="币海拾遗 · 爆款提纯">
+<meta property="og:url" content="https://yaoav.github.io/page/2/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="提炼加密、AI、资本市场博主的爆款观点，注明出处">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="Yaoav">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '币海拾遗 · 爆款提纯',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">币海拾遗 · 爆款提纯</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/09/qingj1314-2119547952872243494/" title="AI泡沫，要被黄仁勋的鸡巴戳爆了！"><img class="post-bg" src="/images/2119547952872243494-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI泡沫，要被黄仁勋的鸡巴戳爆了！"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/09/qingj1314-2119547952872243494/" title="AI泡沫，要被黄仁勋的鸡巴戳爆了！">AI泡沫，要被黄仁勋的鸡巴戳爆了！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-09T05:49:45.000Z" title="发表于 2026-11-09 05:49:45">2026-11-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @qingj1314（情酱） 的长文，原文链接，版权归原作者所有。  美国东部时间11月8日周日，黄仁勋给英伟达全体员工发了一封内部信承认出轨：  老黄公开表示欠家人一个道歉，他的孩子伤害了妻子和孩子。 同一天，英伟达董事会发了一份声明：由独立董事组成一个委员会，请外部律师协助，调查黄仁勋是不是成了外国情报行动的目标。  早在十月底，纽约时报就报道了黄仁勋中了美人计的消息。 不过这也正常，长期生活在水深火热的美帝的老黄，哪里受得了我们考验干部的手段？ 11月4日，三位共和党众议院委员会主席，外交委员会的 Brian Mast、中国问题特别委员会的 John Moolenaar、情报委员会的 Rick Crawford，联名写信，要求黄仁勋在11月18日参加一场闭门简报，回答他和 Alice Huang 的接触，以及英伟达防范外国间谍的内部措施，11月11日前要给答复。 虽然民主党中期大选胜利了，但是他们的议员需要明年1月份才会上任。 目前众议院还是共和党掌控，在事情败露之前最好还是自己人结案。 可能正是这个原因，需要在中期大选共和党丢失了参众两院之后，民主...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/08/qingj1314-2119430655390122208/" title="小红书起号保姆级教程｜从0开始找对标，坚持出摊、商业化"><img class="post-bg" src="/images/2119430655390122208-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小红书起号保姆级教程｜从0开始找对标，坚持出摊、商业化"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/08/qingj1314-2119430655390122208/" title="小红书起号保姆级教程｜从0开始找对标，坚持出摊、商业化">小红书起号保姆级教程｜从0开始找对标，坚持出摊、商业化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-08T22:03:39.000Z" title="发表于 2026-11-08 22:03:39">2026-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @qingj1314（情酱） 的长文，原文链接，版权归原作者所有。  我相信，哪怕再过三年，依然会有小白睁着无辜的大眼睛问我： “小晚老师，自媒体到底怎么开始做啊？” 合着网上那么多教程，你是一篇都不看吗！！！ 但这也合理吧。 因为一个完全没有做过内容的人，可能根本看不懂那些教程到底在教什么。 什么定位、对标、选题、钩子、完播率…… 你连一条好的内容究竟好在哪里都不知道，又怎么知道自己该学什么？ 有些朋友在 X 上已经有几千甚至几万粉丝，内容能力也不错，到了小红书、抖音却依然找不到头绪。 发工具、发资讯、发教程，积累了很多粉丝，换个平台生态之后也会不知道怎么更好地做下去。 我自己今年6月开始更新个人账号，一条Codex超小白教程带来了1万多粉丝，后来累计获得20万左右的赞藏。 从去年5月开始陆续帮助身边朋友做过内容策划，有朋友一条笔记从100涨粉到8000，一跃成为AI博主签约MCN，一些群友也一个月涨粉近一万。 所以今天，我想以一个有8年品牌内容营销、IP策划经验的内容人视角，跟大家分享一套比较简单、可以直接对照操作的小红书起号方法。 不管你是0粉，还是...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"><img class="post-bg" src="/images/2119277960670929389-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目">国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-08T11:56:54.000Z" title="发表于 2026-11-08 11:56:54">2026-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 国自然放榜，我认真看了一下今年的数据。  2026年集中接收的10类项目，一共资助69,563项。2025年是53,159项。也就是说，今年增加了16,404项，增幅约30.9%。  其中，两类和青年教师关系比较密切的项目，变化尤其明显： 青年科学基金项目（C类）：增加12,046项，增幅50.1%； 面上项目增加3,400项，增幅14.8%。 看到这个变化以后，我又动心了。 刚好最近，北京市自然科学基金2026年第三批项目申请也启动了。 一边是国自然青年C和面上项目扩容，一边是北京市自然科学基金正在申报，再加上现在已经可以用AI辅助做选题调研、查文献和整理材料，我又萌生了申请项目的想法。 申请项目的第一步，当然是「找选题灵感」。  我要把过去获批的国自然项目整理出来，看看大家都在研究什么。  01｜为什么我要收集历年的获批题目？准备基金选题的时候，我们经常会去看历年的获批项目。 倒不是为了照着别人的题目改几个词，而是想知道：最近几年哪些问题正在受到关注，大...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/06/Nyxera0x-2118689860437315679/" title="How I Turn One Image Into a 3D Simulator That Takes Itself Apart"><img class="post-bg" src="/images/2118689860437315679-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How I Turn One Image Into a 3D Simulator That Takes Itself Apart"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/06/Nyxera0x-2118689860437315679/" title="How I Turn One Image Into a 3D Simulator That Takes Itself Apart">How I Turn One Image Into a 3D Simulator That Takes Itself Apart</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-06T21:00:00.000Z" title="发表于 2026-11-06 21:00:00">2026-11-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @Nyxera0x（Nyxera） 的长文，原文链接，版权归原作者所有。  I gave Claude a job description instead of a prompt. Now one picture becomes a 3D build in code that Claude checks against the picture and films taking itself apart. Below: the brief, the checklist and every prompt.  The first time I asked Claude for a robot animal with nothing to work from, I got a generic toy. This tarantula came out of the same model. What changed is the input: one picture from ChatGPT, and a job description instead of a pr...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="post-bg" src="/images/2118622976379928604-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教师们的教学科研AI搭子（第二期）"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）">教师们的教学科研AI搭子（第二期）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-06T16:34:14.000Z" title="发表于 2026-11-06 16:34:14">2026-11-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/05/DrRabbitAI-2118196625906811366/" title="教师们的教学科研AI搭子（第一期）"><img class="post-bg" src="/images/2118196625906811366-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="教师们的教学科研AI搭子（第一期）"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/05/DrRabbitAI-2118196625906811366/" title="教师们的教学科研AI搭子（第一期）">教师们的教学科研AI搭子（第一期）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-05T12:20:04.000Z" title="发表于 2026-11-05 12:20:04">2026-11-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 最近，经常有同事问我：“你现在都在用哪些 AI 工具？”“有没有比较适合新手使用的？”“我不懂编程，也不想配置一堆东西，应该从哪一款开始？” “有没有Agent的学习课程，不知道怎么用”。 回头看了一下，我今年使用 AI 的方式确实发生了一个比较明显的变化。前两年，我主要是在使用聊天式的 AI；今年，我开始越来越多地使用 Agent。 我目前主要使用的 Agent 包括 Codex、Claude 和 YILA。三款工具我都在用，只是承担的工作不同。这一期，我先从使用相对简单的 YILA 开始，分享几个它在教师教学科研中的真实使用场景。后面我还会继续写 Codex、Claude 和 WorkBuddy。 另外，如果一个Agent需要你学习课程后，才能使用。那这个Agent不是一个好的产品。相信你看完我的使用案例，你会理解，现在使用Agent不需要复杂的提示词，「说人话」就可以。 01｜普通 AI 和 Agent，到底有什么区别？在我以前的使用方式里，GPT、豆...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/05/chenke20266-2118011377998835792/" title="Polymarket 自动交易机器人创建方法"><img class="post-bg" src="/images/2118011377998835792-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Polymarket 自动交易机器人创建方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/05/chenke20266-2118011377998835792/" title="Polymarket 自动交易机器人创建方法">Polymarket 自动交易机器人创建方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-05T00:03:57.000Z" title="发表于 2026-11-05 00:03:57">2026-11-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  一个可插拔策略、带完整风控、默认纸面模拟的Polymarket交易机器人。 先纸面&#x2F;回测跑通，再手动开实盘。默认状态下它不会动你一分钱。 0. 先说清楚风险（真的请读完）预测市场是 0&#x2F;1 结算：仓位不是”浮亏”，而是可能直接归零。自动交易程序能做的只是 “按规则执行 + 限制损失规模”，不能保证盈利，也不能避免亏损。 2026 年Polymarket的真实成本结构（实测自 API）：  实测结论（2026-11-04，扫描前 80 个市场）：二元Yes+No套利在扣手续费后全部为负 （约 -10bps）。也就是说：网上教程里”买Yes+买 No稳赚”的说法在当前费率下基本不成立。 negRisk 篮子套利偶尔有空间，但深度很小、且必须拿到事件的全部腿。  1. 它能做什么12345678910111213              ┌──────────────┐Gamma API ───▶│ 市场发现/筛选 │──┐CLOB REST ───▶│ 订单簿...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/04/DrRabbitAI-2117952642593017862/" title="AI如何赋能科研完整工作流（第一期）"><img class="post-bg" src="/images/2117952642593017862-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI如何赋能科研完整工作流（第一期）"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/04/DrRabbitAI-2117952642593017862/" title="AI如何赋能科研完整工作流（第一期）">AI如何赋能科研完整工作流（第一期）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-04T20:10:34.000Z" title="发表于 2026-11-04 20:10:34">2026-11-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 昨天，我在学校给研究生上的课终于结课了。 这门课叫“大数据和人工智能”。整个课程里，我有一半的内容在讲 AI 如何赋能科研。因为我理解，这门课的意义，是给研究生做科研提供工具上的支撑。 趁着刚结课，我想把这部分内容系统地梳理一遍。内容比较多，会分几期来讲。 今天是第一期，主题是文献检索。 内容由易到难，涉及的工具包括 YILA、Grok Bot、Codex 和 WorkBuddy。我自己不是 WorkBuddy 的用户，但课上很多研究生在用，所以这一期也会讲讲在 WorkBuddy 里怎么操作。大家可以根据自己的习惯，挑需要的部分读。 01｜先说一个常见的坑：只靠开源检索 Skill现在网上开源的论文检索 Skill 非常多，装起来也很方便。 但很多检索 Skill 有一个问题：它们只连了少数几个免费来源，比如 arXiv 这样的开放获取平台，或者用不带 key 的免费接口，搜几次就被限流。 结果就是，你用它搜一个方向，只出来十几篇论文。 最危险的不是搜得少...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/04/waveking1314-2118014699606585780/" title="用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）"><img class="post-bg" src="/images/2118014699606585780-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/04/waveking1314-2118014699606585780/" title="用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）">用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-04T16:17:09.000Z" title="发表于 2026-11-04 16:17:09">2026-11-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/AI-%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%AE%9E%E8%B7%B5/">AI 工具与实践</a></span></div><div class="content"> 本文转载自 X 博主 @waveking1314（断浪 WaveKing） 的长文，原文链接，版权归原作者所有。  我会把用 Grok Bot 搭一支 24 小时 AI 交易团队的完整框架拆开讲：它自己研究市场、找策略、回测，最后自己下单。 直接开始。  先收藏。 文里提示词很多，搭的时候要翻回来对着做。  我自己盯链上新币和聪明钱用的是 GMGN 和 Fomo，从我的链接注册，手续费有返佣。 时间线上正在发生一件事，大部分交易者还没反应过来。  有人已经用 Grok Bot 管起了自己的整个生活：邮箱、日程、调研、销售，全交给它。 还有人拿它跑整个公司。上面一个人，下面一排 Bot 干活。 每个 Bot 都有一台自己的云端电脑。它登录你平时用的工具，从不下线。 它记得你的规矩，按时间表干活，会跟别的 Bot 互相发消息，只有需要你点头的时候才回来找你。 现在把这支团队从邮箱挪到市场上。 一支 AI 团队全天候盯盘，发现定价错了的地方，把它变成策略，拿几年的数据回测，再把执行的交易机器人搭出来。你睡觉的时候，这些事都在跑。 到这一步，它已经不是聊天机器人了。 它是一张接进你 T...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/03/Seramikimiki-2117319245180829775/" title="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）"><img class="post-bg" src="/images/2117319245180829775-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/03/Seramikimiki-2117319245180829775/" title="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）">2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-03T02:13:40.000Z" title="发表于 2026-11-03 02:13:40">2026-11-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  如果你高考英语并不优秀、四六级擦边过，已工作多年未碰英语的成年人，还是想在高中就拿到雅思成绩的初中生，那你学雅思的第一步，都应该看这篇。从怎么制定学习计划，到听阅口写四科的详细技巧，手把手教你怎么速通8分。 先来介绍一下自己，我是sera，雅思8.0，雅思工作室创始人，带过上百个同学成功顺利出分。 自己的英语几乎是自学起来的，小镇做题家，语言教育资源贫瘠，自己摸索了很久，走了很多弯路，所以今天想把我用时间、血泪换来的经验，毫无保留地分享给你们。不要钱，如果你觉得有用，麻烦点个关注点个赞就行，这也是我写这篇文章最最真诚的初心。 一、怎么定目标？1、最牛逼的分数配置表 作为久经沙场的8分雅思老师，我敢这么说：你的目标分数定的有多好，你出分就有多快。  很多人不理解，为什么计划的制定会这么重要。 有人说，老师我想拿7分，那我就四科都考7分不就行了吗？我想拿6.5分，我就四科都拿6.5分不就行了吗。有什么好讲究的呢？有什么好纠结的呢？ 那么现在我告诉你，你所制定的目标将直接影响到你出分...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI-%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%AE%9E%E8%B7%B5/"><span class="card-category-list-name">AI 工具与实践</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/"><span class="card-category-list-name">交易策略</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"><span class="card-category-list-name">行业观察</span><span class="card-category-list-count">19</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/xueyu1125/" style="font-size: 1.3em; color: #99a1ac">@xueyu1125</a> <a href="/tags/Nyxera0x/" style="font-size: 1.1em; color: #999">@Nyxera0x</a> <a href="/tags/qingj1314/" style="font-size: 1.2em; color: #999da3">@qingj1314</a> <a href="/tags/Seramikimiki/" style="font-size: 1.2em; color: #999da3">@Seramikimiki</a> <a href="/tags/waveking1314/" style="font-size: 1.2em; color: #999da3">@waveking1314</a> <a href="/tags/CatalystMkts/" style="font-size: 1.1em; color: #999">@CatalystMkts_</a> <a href="/tags/DrRabbitAI/" style="font-size: 1.5em; color: #99a9bf">@DrRabbitAI</a> <a href="/tags/chenke20266/" style="font-size: 1.4em; color: #99a5b6">@chenke20266</a> <a href="/tags/Mikocrypto11/" style="font-size: 1.1em; color: #999">@Mikocrypto11</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/11/">
+            <span class="card-archive-list-date">
+              十一月 2026
+            </span>
+            <span class="card-archive-list-count">22</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/10/">
+            <span class="card-archive-list-date">
+              十月 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              九月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-13T01:34:42.924Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

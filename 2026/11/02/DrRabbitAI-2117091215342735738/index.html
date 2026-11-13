@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Most researchers use AI for writing with a single prompt: &quot;Polish this paragraph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/02/DrRabbitAI-2117091215342735738/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Most researchers use AI for writing with a single prompt: &quot;Polish this paragraph">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117091215342735738-cover.jpg">
+<meta property="article:published_time" content="2026-11-02T11:07:34.000Z">
+<meta property="article:modified_time" content="2026-11-12T10:55:14.541Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@DrRabbitAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117091215342735738-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Nature Journal: Stop Asking AI to \"Polish\" Your Paper. Use These 5 Levels and 7 Prompts Instead",
+  "url": "https://yaoav.github.io/2026/11/02/DrRabbitAI-2117091215342735738/",
+  "image": "https://yaoav.github.io/images/2117091215342735738-cover.jpg",
+  "datePublished": "2026-11-02T11:07:34.000Z",
+  "dateModified": "2026-11-12T10:55:14.541Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/02/DrRabbitAI-2117091215342735738/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Nature Journal: Stop Asking AI to "Polish" Your Paper. Use These 5 Levels and 7 Prompts Instead',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-02T11:07:34.000Z" title="发表于 2026-11-02 11:07:34">2026-11-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@DrRabbitAI（Roxy）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117091215342735738">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Most researchers use AI for writing with a single prompt: “Polish this paragraph.”</p>
+<p>That’s the least useful thing you can ask.</p>
+<p>You get back smoother text in seconds. But what did it actually change? Did it shift your meaning? Turn a correlation into a cause? Slip in a claim you never made?</p>
+<p>Now you’re the one checking, line by line.</p>
+<p>There’s a better way. I teach graduate students and review their drafts every term, and this is the workflow I now give them, with all 7 prompts.</p>
+<p>Hi, I’m Roxy. I teach and research AI in higher education, and I build research AI tools. Over a recent holiday I read a commentary in Nature Biomedical Engineering that lays out a much better way to work:</p>
+<p><strong>Zhicheng Lin, “Techniques for supercharging academic writing with generative AI,” Nature Biomedical Engineering 9, 426–431 (2025).</strong> <a target="_blank" rel="noopener" href="https://doi.org/10.1038/s41551-024-01185-8">https://doi.org/10.1038/s41551-024-01185-8</a></p>
+<p>In this piece I’ll do two things: walk you through the paper’s framework, and give you a set of ready-to-use prompts built on it.</p>
+<p>A quick note: the framework comes from the paper. The prompts are my own adaptations, based on its ideas and my day-to-day use. Copy them, then tune them for your field and your stage of writing.</p>
+<h3 id="01-Don’t-let-AI-start-with-the-body-text"><a href="#01-Don’t-let-AI-start-with-the-body-text" class="headerlink" title="01 | Don’t let AI start with the body text"></a>01 | Don’t let AI start with the body text</h3><p>Ask AI to “write a paper on generative AI and higher education” and you’ll get something complete and fluent in seconds.</p>
+<p>Read it closely, though, and it’s hollow. No clear research question. Paragraphs that connect on the surface only. Lots of points, little evidence.</p>
+<p>A better approach splits writing into three stages you loop through again and again. For each one, here’s what AI can help with, and what only you can judge.</p>
+<p><strong>Outlining</strong> - AI helps: brainstorming, organizing points, checking structure, offering alternative frameworks - You judge: the research question, the core argument, why the paper matters</p>
+<p><strong>Drafting</strong> - AI helps: rewriting, summarizing, filling gaps, transitions, alternative phrasings - You judge: whether the content is true, the argument holds, the evidence is enough</p>
+<p><strong>Editing</strong> - AI helps: grammar, structure, logic checks, mock review - You judge: which changes to accept, and you own the final text</p>
+<p>This isn’t a straight line. Find a flaw in the outline while drafting? Go back. Find thin evidence while editing? Go back and add it.</p>
+<p>The real lesson isn’t any magic prompt. It’s the workflow: <strong>break the paper into small, checkable tasks, and bring AI into each one.</strong></p>
+<h3 id="02-Stage-one-Outlining"><a href="#02-Stage-one-Outlining" class="headerlink" title="02 | Stage one: Outlining"></a>02 | Stage one: Outlining</h3><p>Use AI two ways here.</p>
+<p>To <strong>generate</strong>: brainstorm what a topic could cover, extend an idea, find different angles on its value.</p>
+<p>To <strong>evaluate</strong>: check whether the outline is complete, whether the parts connect, whether it actually supports your argument.</p>
+<p>My take: AI can build the skeleton, but it can’t pick your research question. Give it your question, your argument, your audience and your materials first. Then let it help with structure.</p>
+<p><strong>Prompt: Build an outline</strong></p>
+<blockquote>
+<p>I’m writing a paper on [TOPIC].<br>Research question: [RESEARCH QUESTION]<br>Core argument: [CORE ARGUMENT]<br>Target audience &#x2F; journal: [AUDIENCE OR JOURNAL]<br>Materials I have: [LITERATURE, DATA, OR CASES]</p>
+</blockquote>
+<p>Do not write any body text yet. Help me draft an outline.</p>
+<ol>
+<li>Propose section and subsection headings.</li>
+<li>For each section, state what question it must answer.</li>
+<li>Explain how the sections connect logically.</li>
+<li>Check whether the outline can support the core argument.</li>
+<li>Flag gaps in evidence, logical leaps, or points I need to confirm.</li>
+</ol>
+<p>Do not add results, references, or data I haven’t provided.</p>
+<p>Don’t jump into drafting yet. Switch the AI’s role and have it review the outline:</p>
+<p><strong>Prompt: Editor review of the outline</strong></p>
+<blockquote>
+<p>Act as an academic journal editor and review the outline below.</p>
+</blockquote>
+<p>Focus on:</p>
+<ol>
+<li>Is the research question clear?</li>
+<li>Does every section serve the research question?</li>
+<li>Is there repetition, a logical leap, or something important missing?</li>
+<li>Will readers clearly see the novelty and value?</li>
+<li>Which sections need more literature, data, or cases?</li>
+</ol>
+<p>List the problems first, then suggest fixes.<br>Do not rewrite the whole outline.</p>
+<p>Outline: [PASTE OUTLINE]</p>
+<p>One principle I use constantly: <strong>if you can’t yet judge whether a rewrite is good, ask for suggestions, not rewrites.</strong></p>
+<h3 id="03-Stage-two-Drafting"><a href="#03-Stage-two-Drafting" class="headerlink" title="03 | Stage two: Drafting"></a>03 | Stage two: Drafting</h3><p>The paper lists the uses: rewriting, summarizing, filling in content, continuing paragraphs, drafting topic sentences, writing transitions, titles and abstracts.</p>
+<p>It also suggests asking for <strong>several versions at once</strong>. You stop accepting the single answer you’re handed, and start comparing, then picking the one closest to what you meant.</p>
+<p>My take: this is where AI does the most quiet damage. It doesn’t just fix language. It can add ideas, inflate conclusions, even insert a plausible-looking citation that doesn’t exist.</p>
+<p>So write the content yourself first. You supply the research, evidence and argument. AI handles organization and expression.</p>
+<p><strong>Prompt: Three versions, no new content</strong></p>
+<blockquote>
+<p>Rewrite the paragraph below in 3 versions:<br>Version 1: Only necessary grammar and wording fixes.<br>Version 2: Improve logical clarity and flow.<br>Version 3: Make it more concise without changing the meaning.</p>
+</blockquote>
+<p>Rules:</p>
+<ol>
+<li>Add no new ideas, facts, data, or citations.</li>
+<li>Do not change the strength of any claim.</li>
+<li>Keep all technical terms, numbers, and citation markers.</li>
+<li>After each version, explain what you changed.</li>
+<li>If the original meaning is unclear, flag it. Don’t guess.</li>
+</ol>
+<p>Original: [PASTE TEXT]</p>
+<p>If two paragraphs connect awkwardly, don’t ask for a rewritten chapter. Shrink the task to the transition only:</p>
+<p><strong>Prompt: Transition sentences only</strong></p>
+<blockquote>
+<p>Read the two paragraphs below. First explain what logical<br>relationship should link them, then offer 3 alternative<br>transition sentences.</p>
+</blockquote>
+<p>Do not edit either paragraph. Do not add new findings.</p>
+<p>Paragraph 1: [PASTE]<br>Paragraph 2: [PASTE]</p>
+<p>The key skill here: <strong>the smaller and better-bounded the task, the easier the output is to check.</strong></p>
+<h3 id="04-Stage-three-Editing-the-draft"><a href="#04-Stage-three-Editing-the-draft" class="headerlink" title="04 | Stage three: Editing the draft"></a>04 | Stage three: Editing the draft</h3><p>The paper splits editing into two levels.</p>
+<p><strong>Basic editing:</strong> spelling, grammar, repeated words, sentence flow.</p>
+<p><strong>Advanced editing:</strong> each paragraph’s point, the order of the argument, whether the introduction targets the research aim, whether the conclusion actually answers the question.</p>
+<p>It also suggests having AI play an editor, a professor, or a reviewer to get feedback from different angles.</p>
+<p>Most people focus on grammar and word choice. But fancy sentences matter far less than whether the argument holds up.</p>
+<p>So before submitting, run a stress test:</p>
+<p><strong>Prompt: Mock reviewer</strong></p>
+<blockquote>
+<p>Act as a strict but constructive reviewer for [TARGET JOURNAL].<br>Evaluate the paper below and answer separately:</p>
+</blockquote>
+<ol>
+<li>Is the research question important?</li>
+<li>Where is the novelty compared with existing work?</li>
+<li>What evidence supports the core conclusions?</li>
+<li>Which conclusions go beyond the evidence?</li>
+<li>What are the three issues most likely to get it rejected?</li>
+<li>How should each issue be fixed or strengthened?</li>
+<li>What must the author verify that AI cannot judge?</li>
+</ol>
+<p>Do not invent data, experiments, or references not in the paper.</p>
+<p>Paper: [PASTE PAPER OR SECTION]</p>
+<p>A mock review is not peer review. It can catch obvious structural problems, but it may miss the debates that really matter in your field. Use it to find problems early, not to predict acceptance.</p>
+<h3 id="05-The-five-levels-of-AI-writing-assistance"><a href="#05-The-five-levels-of-AI-writing-assistance" class="headerlink" title="05 | The five levels of AI writing assistance"></a>05 | The five levels of AI writing assistance</h3><p>The paper also gives a clear five-level framework. Each level hands more to the AI:</p>
+<ol>
+<li><strong>Basic editing:</strong> spelling, grammar, synonyms. Risk: low</li>
+<li><strong>Structural editing:</strong> rewriting, translation, flow. Risk: low to moderate</li>
+<li><strong>Derivative content:</strong> abstracts, titles, analogies, summaries. Risk: moderate</li>
+<li><strong>New content:</strong> filling in, continuing, expanding, brainstorming. Risk: higher</li>
+<li><strong>Evaluation and feedback:</strong> finding holes, assessing quality, mock review. Risk: depends on how you use it</li>
+</ol>
+<p>Most people are excited about level 4: let the AI write.</p>
+<p>From my experience, level 5 is the one researchers should use most.</p>
+<p><strong>If you’re worried AI will wreck your paper, have it write less and find problems more.</strong></p>
+<p>The paper also separates <strong>direct</strong> from <strong>indirect</strong> assistance.</p>
+<p>Direct: the AI rewrites your text. Indirect: the AI only suggests, and you make the changes.</p>
+<p>You can switch between them anytime. Add one line to any rewriting prompt:</p>
+<blockquote>
+<p>Do not edit or rewrite the original. Only point out problems<br>and suggest revisions; the author will make the changes.</p>
+</blockquote>
+<p>Your “direct rewrite” instantly becomes lower-risk “indirect assistance.”</p>
+<h3 id="06-Four-rules-I’d-add"><a href="#06-Four-rules-I’d-add" class="headerlink" title="06 | Four rules I’d add"></a>06 | Four rules I’d add</h3><p>Whatever agent you use, whether that’s Codex, Claude Code, Yila or something else, I’d add these four rules.</p>
+<p><strong>1. Never write references from the model’s memory.</strong></p>
+<p>For any literature review, background section or citation, supply papers you’ve already verified, or let the AI search real papers first. To avoid hallucinated references, I recommend two strategies:</p>
+<p><strong>Strategy 1: Connect your agent to a paper-search API.</strong> Give Codex or Claude Code access to a scholarly search API, so it looks papers up instead of recalling them from memory.</p>
+<p><strong>Strategy 2 (the easier one): Use an agent that’s already connected to paper databases.</strong> For example, Yila , which is the tool I use myself. It searches sources like Google Scholar, OpenAlex and Chinese journal databases, which makes it a great fit for researchers.</p>
+<p><img src="/images/HWFm9PmXgAEMxd0.jpg" alt="HWFm9PmXgAEMxd0"></p>
+<p><strong>2. Don’t let AI add academic content silently.</strong></p>
+<p>New ideas, data, mechanisms or citations should be clearly marked and confirmed by you. Polishing language must never turn into an invisible rewrite of content.</p>
+<p><strong>3. Protect the strength of your claims.</strong></p>
+<p>“Associated with” must not become “causes.” “Suggests” must not become “proves.” “May” must not become “will.”</p>
+<p>AI sometimes makes sentences punchier by making your paper more certain than your evidence.</p>
+<p><strong>4. Keep a change log.</strong></p>
+<p>Have the AI output three things together: the revised text, a summary of changes, and risks to review. Never accept smoother text without knowing what it touched.</p>
+<p>Here’s a constraint block you can paste at the end of almost any revision prompt:</p>
+<blockquote>
+<p>Preserve all facts, numbers, citations, technical terms,<br>and the strength of every claim in the original.<br>Do not add ideas, mechanisms, results, or references<br>the author did not provide.<br>Output: (1) the revised version, (2) a summary of the main<br>changes, (3) risks the author needs to confirm.</p>
+</blockquote>
+<h3 id="Closing"><a href="#Closing" class="headerlink" title="Closing"></a>Closing</h3><p>AI still has real problems in academic writing, and hallucinated references are the big one.</p>
+<p>But from searching the literature to reviewing it to drafting, it saves a huge amount of repetitive work. The goal isn’t to avoid AI. It’s to learn to steer it: humans judge, AI executes.</p>
+<p><strong>Your turn: which stage do you trust AI with least right now, outlining, drafting or editing? And what went wrong the last time you let it?</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/02/DrRabbitAI-2117091215342735738/">https://yaoav.github.io/2026/11/02/DrRabbitAI-2117091215342735738/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DrRabbitAI/">@DrRabbitAI</a></div><div class="post-share"><div class="social-share" data-image="/images/2117091215342735738-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/03/Seramikimiki-2117319245180829775/" title="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）"><img class="cover" src="/images/2117319245180829775-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  如果你高考英语并不优秀、四六级擦边过，已工作多年未碰英语的成年人，还是想在高中就拿到雅思成绩的初中生，那你学雅思的第一步，都应该看这篇。从怎么制定学习计划，到听阅口写四科的详细技巧，手把手教你怎么速通8分。 先来介绍一下自己，我是sera，雅思8.0，雅思工作室创始人，带过上百个同学成功顺利出分。 自己的英语几乎是自学起来的，小镇做题家，语言教育资源贫瘠，自己摸索了很久，走了很多弯路，所以今天想把我用时间、血泪换来的经验，毫无保留地分享给你们。不要钱，如果你觉得有用，麻烦点个关注点个赞就行，这也是我写这篇文章最最真诚的初心。 一、怎么定目标？1、最牛逼的分数配置表 作为久经沙场的8分雅思老师，我敢这么说：你的目标分数定的有多好，你出分就有多快。  很多人不理解，为什么计划的制定会这么重要。 有人说，老师我想拿7分，那我就四科都考7分不就行了吗？我想拿6.5分，我就四科都拿6.5分不就行了吗。有什么好讲究的呢？有什么好纠结的呢？ 那么现在我告诉你，你所制定的目标将直接影响到你出分...</div></div></div></a><a class="pagination-related" href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction"><img class="cover" src="/images/2116867574059397464-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How to Write a Research Paper Introduction</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  A method drawn from the classic literature, plus the AI prompts I use Lately I keep hearing students at my university talk about the same thing: how do you actually write the introduction of a research paper? So I went back to the sources: John Swales’ CARS model, the classic framework behind almost every introduction template; “Ten simple rules for structuring papers” in PLOS Computational Biology; and the author guidelines from Springer Natu...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-06</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a><a class="pagination-related" href="/2026/10/28/DrRabbitAI-2115435495920681097/" title="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)"><img class="cover" src="/images/2115435495920681097-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-28</div><div class="info-item-2">How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Run the same prompt 10 times and you get 10 different figures. Arrows point the wrong way, labels come and go, and none of them is quite usable. There’s a deeper problem too. Most of us can tell our figures look like PowerPoint clip art next to the ones in Nature or Cell, but we can’t say exactly why. And if you can’t name the difference, you can’t fix it in a prompt. Today I want to share an open-source repo that solves both: free prompt temp...</div></div></div></a><a class="pagination-related" href="/2026/11/04/DrRabbitAI-2117952642593017862/" title="AI如何赋能科研完整工作流（第一期）"><img class="cover" src="/images/2117952642593017862-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-04</div><div class="info-item-2">AI如何赋能科研完整工作流（第一期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 昨天，我在学校给研究生上的课终于结课了。 这门课叫“大数据和人工智能”。整个课程里，我有一半的内容在讲 AI 如何赋能科研。因为我理解，这门课的意义，是给研究生做科研提供工具上的支撑。 趁着刚结课，我想把这部分内容系统地梳理一遍。内容比较多，会分几期来讲。 今天是第一期，主题是文献检索。 内容由易到难，涉及的工具包括 YILA、Grok Bot、Codex 和 WorkBuddy。我自己不是 WorkBuddy 的用户，但课上很多研究生在用，所以这一期也会讲讲在 WorkBuddy 里怎么操作。大家可以根据自己的习惯，挑需要的部分读。 01｜先说一个常见的坑：只靠开源检索 Skill现在网上开源的论文检索 Skill 非常多，装起来也很方便。 但很多检索 Skill 有一个问题：它们只连了少数几个免费来源，比如 arXiv 这样的开放获取平台，或者用不带 key 的免费接口，搜几次就被限流。 结果就是，你用它搜一个方向，只出来十几篇论文。 最危险的不是搜得少...</div></div></div></a><a class="pagination-related" href="/2026/11/05/DrRabbitAI-2118196625906811366/" title="教师们的教学科研AI搭子（第一期）"><img class="cover" src="/images/2118196625906811366-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-05</div><div class="info-item-2">教师们的教学科研AI搭子（第一期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 最近，经常有同事问我：“你现在都在用哪些 AI 工具？”“有没有比较适合新手使用的？”“我不懂编程，也不想配置一堆东西，应该从哪一款开始？” “有没有Agent的学习课程，不知道怎么用”。 回头看了一下，我今年使用 AI 的方式确实发生了一个比较明显的变化。前两年，我主要是在使用聊天式的 AI；今年，我开始越来越多地使用 Agent。 我目前主要使用的 Agent 包括 Codex、Claude 和 YILA。三款工具我都在用，只是承担的工作不同。这一期，我先从使用相对简单的 YILA 开始，分享几个它在教师教学科研中的真实使用场景。后面我还会继续写 Codex、Claude 和 WorkBuddy。 另外，如果一个Agent需要你学习课程后，才能使用。那这个Agent不是一个好的产品。相信你看完我的使用案例，你会理解，现在使用Agent不需要复杂的提示词，「说人话」就可以。 01｜普通 AI 和 Agent，到底有什么区别？在我以前的使用方式里，GPT、豆...</div></div></div></a><a class="pagination-related" href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"><img class="cover" src="/images/2119277960670929389-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-08</div><div class="info-item-2">国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 国自然放榜，我认真看了一下今年的数据。  2026年集中接收的10类项目，一共资助69,563项。2025年是53,159项。也就是说，今年增加了16,404项，增幅约30.9%。  其中，两类和青年教师关系比较密切的项目，变化尤其明显： 青年科学基金项目（C类）：增加12,046项，增幅50.1%； 面上项目增加3,400项，增幅14.8%。 看到这个变化以后，我又动心了。 刚好最近，北京市自然科学基金2026年第三批项目申请也启动了。 一边是国自然青年C和面上项目扩容，一边是北京市自然科学基金正在申报，再加上现在已经可以用AI辅助做选题调研、查文献和整理材料，我又萌生了申请项目的想法。 申请项目的第一步，当然是「找选题灵感」。  我要把过去获批的国自然项目整理出来，看看大家都在研究什么。  01｜为什么我要收集历年的获批题目？准备基金选题的时候，我们经常会去看历年的获批项目。 倒不是为了照着别人的题目改几个词，而是想知道：最近几年哪些问题正在受到关注，大...</div></div></div></a><a class="pagination-related" href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction"><img class="cover" src="/images/2116867574059397464-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-01</div><div class="info-item-2">How to Write a Research Paper Introduction</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  A method drawn from the classic literature, plus the AI prompts I use Lately I keep hearing students at my university talk about the same thing: how do you actually write the introduction of a research paper? So I went back to the sources: John Swales’ CARS model, the classic framework behind almost every introduction template; “Ten simple rules for structuring papers” in PLOS Computational Biology; and the author guidelines from Springer Natu...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-Don%E2%80%99t-let-AI-start-with-the-body-text"><span class="toc-number">1.</span> <span class="toc-text">01 | Don’t let AI start with the body text</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-Stage-one-Outlining"><span class="toc-number">2.</span> <span class="toc-text">02 | Stage one: Outlining</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-Stage-two-Drafting"><span class="toc-number">3.</span> <span class="toc-text">03 | Stage two: Drafting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-Stage-three-Editing-the-draft"><span class="toc-number">4.</span> <span class="toc-text">04 | Stage three: Editing the draft</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05-The-five-levels-of-AI-writing-assistance"><span class="toc-number">5.</span> <span class="toc-text">05 | The five levels of AI writing assistance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-Four-rules-I%E2%80%99d-add"><span class="toc-number">6.</span> <span class="toc-text">06 | Four rules I’d add</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Closing"><span class="toc-number">7.</span> <span class="toc-text">Closing</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！ | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/12/xueyu1125-2120865290703552993/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120865290703552993-cover.jpg">
+<meta property="article:published_time" content="2026-11-12T21:04:23.000Z">
+<meta property="article:modified_time" content="2026-11-12T16:23:05.333Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@xueyu1125">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120865290703552993-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！",
+  "url": "https://yaoav.github.io/2026/11/12/xueyu1125-2120865290703552993/",
+  "image": "https://yaoav.github.io/images/2120865290703552993-cover.jpg",
+  "datePublished": "2026-11-12T21:04:23.000Z",
+  "dateModified": "2026-11-12T16:23:05.333Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/12/xueyu1125-2120865290703552993/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@xueyu1125（雪瑜）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120865290703552993">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前 100 个几乎没赚到钱。小游戏想赚钱，靠的是能一直试下去，而每试一次都要付一次模型账单。</p>
+<p>这次我一行游戏代码没写，用新加坡 FUMO Lab 的融合模型 Fusion Max 2.0，做出了一款能玩的** 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》**。</p>
+<p>先看成品，让人惊喜的是，这个视频也是Fusion Max 纯代码做的：</p>
+<p>**从写设计、写代码到连改四轮，只花了 $5.77。**同样的用量按官方公开价测算，换成 Claude Fable 5.1 或 GPT-6 Astra 要约 $14.92，是它的 2.6 倍；做 100 个原型，差出 900 多美元。</p>
+<p>这篇把整个过程摊开：两段提示词原文、四轮修改各改了什么、17 次调用的成本明细、接入的 4 步，还有上 CrazyGames 和微信小游戏各要过哪些关。</p>
+<p>想自己试的话，FUMO 新用户注册就送试用额度，按输入价换算，约等于 <strong>167 万 token 的 Fusion Max 2.0</strong>，或 250 万 token 的 Fusion Code 1.0。注册入口在这里：<a target="_blank" rel="noopener" href="https://fumolab.ai/en?utm_source=9dta63zy4y">https://fumolab.ai/en?utm_source=9dta63zy4y</a> 。</p>
+<p>这篇我们聊：</p>
+<p>▸ 试错成本 · 120 多个原型，前 100 个几乎没赚到钱<br>▸ 选型 · 为什么用 Fusion Max 2.0：单次能输出 128K，内部协作的 token 不计费<br>▸ 先看成品 · 从 2.7 万字设计文档，到 130KB 的首版代码<br>▸ 连改四轮 · 20 项要求确认了 16 项，代码一行没手改<br>▸ 换上 Blender 胖橘猫和 24 层毛发<br>▸ 成本账 · 做到能玩 $5.77，换别家约 $14.92，100 个原型差 900 多美元<br>▸ 自己上手 · 领试用额度，4 步接入，两段提示词原文直接抄<br>▸ 上架 · CrazyGames 的三条考核线，微信小游戏要备的四样材料，和一盆冷水</p>
+<h3 id="一、试错成本-·-120-多个原型，前-100-个几乎没赚到钱"><a href="#一、试错成本-·-120-多个原型，前-100-个几乎没赚到钱" class="headerlink" title="一、试错成本 · 120 多个原型，前 100 个几乎没赚到钱"></a>一、试错成本 · 120 多个原型，前 100 个几乎没赚到钱</h3><p>开头说的那款合成大西瓜变体，是 anul agarwal 2023 年用 ChatGPT 写代码、DALL-E 画图做的，他今年 5 月写过这件事。他另一篇里说得更直白：做游戏大约 6 年，前后 120 多个原型，前 100 个几乎没赚到钱，后面大约 20 个才比较接近六位数。</p>
+<p>我从这里读到的是，小游戏想赚钱，得能低成本地一直试下去。每做一个原型都要付一次模型账单，账单越低，能试的次数就越多。所以这次我想测的就一件事：用 Fusion Max 2.0 从零做一款能玩的游戏，效果怎么样，要花多少钱。</p>
+<h3 id="二、选型-·-为什么用-Fusion-Max-2-0：单次能输出-128K，内部协作的-token-不计费"><a href="#二、选型-·-为什么用-Fusion-Max-2-0：单次能输出-128K，内部协作的-token-不计费" class="headerlink" title="二、选型 · 为什么用 Fusion Max 2.0：单次能输出 128K，内部协作的 token 不计费"></a>二、选型 · 为什么用 Fusion Max 2.0：单次能输出 128K，内部协作的 token 不计费</h3><p>Fusion 用一个自研的路由模型，在任务的每一步挑合适的模型来做；到了关键步骤，会让多个模型从不同角度分析，再把结论合成一个答案。传统路由一般只在请求入口选一个模型，这是两者最大的区别。</p>
+<p>放到这次的游戏上，有三点正好对得上：</p>
+<ul>
+<li><strong>一次要吐出一整个游戏文件。</strong> 我要的是单文件 index.html，每次修改都要完整重写一遍，这次每轮输出在 4.5 万到 6.4 万 token 之间。Max 2.0 的上下文是 1M token，单次最多输出 128K token，装得下整个文件再加一份修改说明。</li>
+<li><strong>既要想清楚，又要写得多。</strong> 先写 2.7 万字的玩法和数值设计，再按设计写代码、按 bug 改代码，正好是 Max 2.0 主打的网页编程和多轮 Agent 任务。</li>
+<li><strong>改得越多，账单越要压得住。</strong> 官方写明，内部多模型协作产生的 token 不计费，账单只按接口返回的用量算。</li>
+</ul>
+<p>能力上到底行不行，得看它实际写出来的东西。</p>
+<h3 id="三、先看成品-·-从-2-7-万字设计文档，到-130KB-的首版代码"><a href="#三、先看成品-·-从-2-7-万字设计文档，到-130KB-的首版代码" class="headerlink" title="三、先看成品 · 从 2.7 万字设计文档，到 130KB 的首版代码"></a>三、先看成品 · 从 2.7 万字设计文档，到 130KB 的首版代码</h3><p>先放一段最终游戏的实机演示，</p>
+<p>这就是我用 Fusion Max 2.0 做出来的《猫咪拆家：从出租屋拆到博物馆》。玩家控制一只橘猫，在 90 秒内尽可能搞破坏，推倒家具、打碎物品、赚猫罐头，再用罐头升级属性、解锁新场景。整个游戏有 3D 场景、角色控制、破坏计分、升级系统和存档，电脑和手机都能玩。</p>
+<p>不过，视频里的效果不是第一次生成就有的。在我看来，不管用哪家模型，想靠一次生成就拿到完全满意的成品，都不太现实。这个效果是经过四轮修改和多次试玩，一点点打磨出来的。</p>
+<p>先说最开始是怎么做的。我给 Fusion Max 2.0 的要求是：单文件 index.html，Three.js 走 CDN，不用任何外部图片和 3D 模型，房间和橘猫全用代码生成低多边形，电脑和手机都能玩，带 90 秒倒计时、破坏计分、猫罐头升级和 4 个解锁场景。</p>
+<p>第一步，我把玩法要求交给 Fusion Max 2.0，推理强度设成 high，拿到一份 2.7 万字的设计文档，数值公式、四个场景的道具清单、手感参数、存档结构都写进去了。</p>
+<p>第二步，我把设计文档原样交回去，让它按文档写出完整代码，拿到一个 130KB 的 index.html。</p>
+<p>打开第一版，开始界面已经比较完整，倒计时、每日任务栏也都有了。实际进游戏后，还有几个地方需要继续打磨：</p>
+<ol>
+<li><strong>场景渲染</strong>：点开始后约 1 到 2 秒，3D 场景会消失，画面只剩背景色；</li>
+<li><strong>交互细节</strong>：点开始的那一下同时被识别成了挥爪，一开局就多了 18 分拆家值；</li>
+<li><strong>角色造型</strong>：初版橘猫是比较简化的低多边形，轮廓和比例还不够理想，挡住了一部分视野。</li>
+</ol>
+<p>第一版已经把游戏的基本框架搭起来了，场景稳定性、操作交互和角色表现，交给后面几轮来打磨。</p>
+<p>下面两张是第一版点开始后的画面，以及第一轮修好渲染之后的初版橘猫。</p>
+<p><img src="/images/HW7GH5HWgAEWcbT.jpg" alt="HW7GH5HWgAEWcbT"></p>
+<p><img src="/images/HW7GJATXUAAYZVA.jpg" alt="HW7GJATXUAAYZVA"></p>
+<h3 id="四、连改四轮-·-20-项要求确认了-16-项，代码一行没手改"><a href="#四、连改四轮-·-20-项要求确认了-16-项，代码一行没手改" class="headerlink" title="四、连改四轮 · 20 项要求确认了 16 项，代码一行没手改"></a>四、连改四轮 · 20 项要求确认了 16 项，代码一行没手改</h3><p>修改的方式很简单：我在无头 Chrome 里试玩，把看到的问题写成一段话，连同当前整份代码一起交回去，要一个完整的新文件。<strong>四轮下来，游戏代码我一行没手改</strong>，人做的只有试玩、描述问题和截图。</p>
+<p><strong>第一轮</strong>：场景消失和误触挥爪，一轮就修好了。我只描述了现象，原因是它自己定位到的。猫的造型这一轮还没调到位，留到下一轮继续改。</p>
+<p><strong>第二轮</strong>：初版造型换成了一只有耳朵、条纹、四条腿和尾巴的低多边形橘猫，主菜单、升级、场景图鉴、中断对局折算罐头都跑通了，控制台没有报错，稳定 60 帧。镜头这边还要微调：上一轮给镜头加了边界，避免拍到房间外面，猫走到边上时会出画面。</p>
+<p><strong>第三轮</strong>：镜头能稳稳跟住猫了。我用脚本完整打了一局 90 秒，结算评级 Furniture Assassin，拆家值 394，拿到 55 罐，解锁 6 个新图鉴，升级、场景、每日任务、存档都能用。剩下要优化的是镜头距离：手机上猫显得偏大，靠墙时视野会被墙挡住一部分。</p>
+<p>这是那一局的结算卡。</p>
+<p><img src="/images/HW7GKI_W0AAaVbk.jpg" alt="HW7GKI_W0AAaVbk"></p>
+<p><strong>第四轮</strong>：镜头拉远，大半个房间都能看见；靠镜头一侧的墙会自动藏起来；手机上的操作提示也改成了按住挥爪按钮。到这里，我事先列的 20 项要求里，脚本能直接确认的有 16 项，粒子、震屏、慢动作和音效这几项要靠人眼和耳朵来看。</p>
+<p>后面换上 Blender 做的猫之后，同一间出租屋的桌面和手机是这样。</p>
+<p><img src="/images/HW7GL_9WEAA5ZpU.jpg" alt="HW7GL_9WEAA5ZpU"></p>
+<p><img src="/images/HW7GOZRWoAAsAD1.jpg" alt="HW7GOZRWoAAsAD1"></p>
+<p>整体用下来，Fusion Max 2.0 对用大白话描述的 bug 理解得不错，大部分问题一轮就能改对。四轮里每次都要整篇重写约 130KB 的代码，我每轮都回归试玩，原有功能一直保持稳定，没有出现功能丢失。</p>
+<p>当然，做一个完整的游戏本来就要一边测一边改，个别调整会带出新的细节问题，所以每轮改完都值得再试玩一遍。从反馈问题到改好代码，这套来回迭代 Fusion Max 2.0 撑得住。</p>
+<h3 id="五、换上-Blender-胖橘猫和-24-层毛发"><a href="#五、换上-Blender-胖橘猫和-24-层毛发" class="headerlink" title="五、换上 Blender 胖橘猫和 24 层毛发"></a>五、换上 Blender 胖橘猫和 24 层毛发</h3><p>低多边形的猫有点硬。我没用第三方建模平台，而是让 Fusion Max 2.0 写 Blender 5.2 的 Python 脚本，在本机无界面运行，导出带骨骼动画的 GLB 模型。</p>
+<p>第一版脚本放进 Blender 直接跑通，没有报错，就是猫偏瘦、颜色发灰。又改了四轮，加上了半阖的眼睛、圆滚滚的脸颊、白色的嘴套和胸口毛簇。</p>
+<p>浏览器里跑毛发是另一道难题。它写了一个单独的预览页，用 24 层壳层毛发（Shell Fur），60 帧下近看已经有毛绒玩具的感觉。</p>
+<p>下面三张分别是 Blender 里的胖橘猫、24 层毛发预览，以及放进游戏后的近景。</p>
+<p><img src="/images/HW7GP0RWAAATviX.jpg" alt="HW7GP0RWAAATviX"></p>
+<p><img src="/images/HW7GR5iWYAAc8RD.jpg" alt="HW7GR5iWYAAc8RD"></p>
+<p><img src="/images/HW7HqV0WsAAwzIF.jpg" alt="HW7HqV0WsAAwzIF"></p>
+<p>把猫合回游戏时，有个细节让我印象挺深：游戏里的毛发效果和预览页有些差异，我让它继续优化，它没有直接动代码，而是先提出需要补充毛发预览页的代码和对比截图，好更准确地定位问题。<strong>缺上下文时，它会先指出信息缺口，而不是盲目修改。</strong></p>
+<p>补齐信息后，近景效果又进了一步，脸部轮廓、白色嘴套和条纹都能看清。在正常游玩的镜头距离下，毛发的蓬松感和预览页还有些差距，但整个角色已经完整多了。网页游戏要同时兼顾实时渲染和 60 帧流畅，精细毛发本身就是个难活，后面还有继续优化的空间。</p>
+<h3 id="六、成本账-·-做到能玩-5-77，换别家约-14-92，100-个原型差-900-多美元"><a href="#六、成本账-·-做到能玩-5-77，换别家约-14-92，100-个原型差-900-多美元" class="headerlink" title="六、成本账 · 做到能玩 $5.77，换别家约 $14.92，100 个原型差 900 多美元"></a>六、成本账 · 做到能玩 $5.77，换别家约 $14.92，100 个原型差 900 多美元</h3><p>先说单价。在输入不超过 20 万 token 的标准档，Fusion Max 2.0 是输入每百万 token $3、缓存输入 $0.30、输出 $20。Claude Fable 5.1 和 GPT-6 Astra 都是输入 $10、输出 $50。写代码这种输出远多于输入的任务，输出单价决定了账单厚度，$20 对 $50，这一项就差 2.5 倍。</p>
+<p><img src="/images/HW7GSz2WsAA6nS9.jpg" alt="HW7GSz2WsAA6nS9"></p>
+<ul>
+<li>| 阶段 | 成功调用 | 输入 &#x2F; 输出 token | FUMO（公开价） | Fable 5.1 测算 | Astra 测算 |</li>
+<li>| :— | :— | :— | :— | :— | :— |</li>
+<li>| 设计 + 首版 | 2 次 | 1.8 万 &#x2F; 6.7 万 | $1.38 | $3.51 | $3.51 |</li>
+<li>| 四轮修改 | 4 次 | 17.5 万 &#x2F; 19.3 万 | $4.39 | $11.41 | $11.41 |</li>
+<li>| <strong>做到能玩</strong> | <strong>6 次</strong> | <strong>19.3 万 &#x2F; 26.0 万</strong> | <strong>$5.77</strong> | <strong>$14.92</strong> | <strong>$14.92</strong> |</li>
+<li>| Blender 建猫 | 5 次 | 9.7 万 &#x2F; 15.3 万 | $3.31 | $8.46 | $8.47 |</li>
+<li>| 毛发预览页 | 2 次 | 1.4 万 &#x2F; 5.0 万 | $1.04 | $2.64 | $2.64 |</li>
+<li>| 合进游戏与近景 | 4 次 | 25.9 万 &#x2F; 18.7 万 | $4.36 | $11.38 | $11.42 |</li>
+<li>| <strong>全流程</strong> | <strong>17 次</strong> | <strong>56.3 万 &#x2F; 65.0 万</strong> | <strong>$14.48</strong> | <strong>$37.40</strong> | <strong>$37.45</strong> |</li>
+</ul>
+<p>FUMO 一栏是接口返回的用量乘官方公开价。另外两家我手头没有 Key，没有实际跑，是同一份用量乘它们的官方公开价，属于测算；它们真跑起来如果推理更长、或者要多改几轮，只会更贵。另有 3 次调用没有返回用量，不计入表内。</p>
+<p>换算成原型：按这次做到能玩的用量，100 个原型在 FUMO 上大约 $577，按 Fable 5.1 或 Astra 的单价测算大约 $1,492。对独立开发者来说，这近千美元的差价，可能就是能不能撑到下一个爆款的那段路费。</p>
+<h3 id="七、自己上手-·-领试用额度，4-步接入，两段提示词原文直接抄"><a href="#七、自己上手-·-领试用额度，4-步接入，两段提示词原文直接抄" class="headerlink" title="七、自己上手 · 领试用额度，4 步接入，两段提示词原文直接抄"></a>七、自己上手 · 领试用额度，4 步接入，两段提示词原文直接抄</h3><p>有兴趣的朋友，建议先把 FUMO 这波新用户福利领了：按输入价换算，约等于 167 万 token 的 Fusion Max 2.0，或 250 万 token 的 Fusion Code 1.0。拿来做小游戏，或者测自己的 AI 编程项目，都值得试试。注册入口：<a target="_blank" rel="noopener" href="https://fumolab.ai/en?utm_source=9dta63zy4y">https://fumolab.ai/en?utm_source=9dta63zy4y</a></p>
+<p>接入按官方入门文档来：</p>
+<ol>
+<li>注册并登录 FUMO 控制台；</li>
+<li>打开 API Keys，点 Create New Key，新建一把 Key；</li>
+<li>Base URL 填 <a target="_blank" rel="noopener" href="https://capi.fumolab.ai/api/fusion/v1%EF%BC%8C%E6%A8%A1%E5%9E%8B%E5%90%8D%E7%A7%B0%E5%A1%AB">https://capi.fumolab.ai/api/fusion/v1，模型名称填</a> fusion-max-2.0；</li>
+<li>用一条命令验证接口是否畅通：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> FUMO_API_KEY=<span class="string">&quot;你的_API_KEY&quot;</span></span><br><span class="line">curl https://capi.fumolab.ai/api/fusion/v1/chat/completions \</span><br><span class="line">  -H <span class="string">&quot;Authorization: Bearer <span class="variable">$FUMO_API_KEY</span>&quot;</span> \</span><br><span class="line">  -H <span class="string">&quot;Content-Type: application/json&quot;</span> \</span><br><span class="line">  -d <span class="string">&#x27;&#123;&quot;model&quot;:&quot;fusion-max-2.0&quot;,&quot;messages&quot;:[&#123;&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Hello&quot;&#125;]&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>它兼容 OpenAI 的 Chat Completions 接口，Cursor、Codex 这类工具填上 Base URL 和 Key 就能用。记账只认返回里的用量；回复如果中途被截断，别拿它覆盖上一版还能跑的文件。</p>
+<p>这次用到的两段提示词，原文如下：</p>
+<p><strong>第一段｜玩法与数值设计：</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">我要做一款能直接在海外游戏平台（如 CrazyGames）上架并变现的 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》，请你先写一份完整的游戏设计文档（Markdown）。</span><br><span class="line"></span><br><span class="line">## 核心定位与变现目标</span><br><span class="line">这款游戏不仅要好玩、好看，还要专门针对网页游戏平台（CrazyGames）的核心考核指标进行逆向设计：</span><br><span class="line">1. **单次游玩时长 ≥ 10 分钟**：不能是一次性通关，必须有强烈的「90秒短局 + 拆家值换猫罐头 + 属性升级 + 解锁更豪华场景」正反馈循环</span><br><span class="line">2. **次日留存 10% ~ 15%**：必须有 LocalStorage 自动存档机制、未解锁豪宅/博物馆图鉴展示、以及每日破坏任务目标</span><br><span class="line">3. **1分钟转化率 ≥ 80%**：纯代码程序化生成（零外部模型/贴图下载，秒开加载）、砍掉冗长开场、首局 3 秒内直接上手；支持 PC 键鼠 + 移动端触屏双操作</span><br><span class="line"></span><br><span class="line">## 一句话玩法与升级路线</span><br><span class="line">你是一只橘猫，趁主人出门上班在屋内大搞破坏。</span><br><span class="line">- **单局规则**：每局限时 90 秒，在主人开门回家前推倒、打碎越多物品越好</span><br><span class="line">- **经济系统**：拆家值实时兑换成「小鱼干/猫罐头」，用于升级猫咪：</span><br><span class="line">  - 爪力（推力更大，能推倒更重的大件）</span><br><span class="line">  - 敏捷/冲刺速度（移动更快、连击不中断）</span><br><span class="line">  - 体型/跳跃高度（能跳上更高处、推翻吊灯和书架顶层）</span><br><span class="line">- **场景晋升（爽感与笑点升级）**：</span><br><span class="line">  - Stage 1【廉价出租屋】：推杯子、打翻泡面、撕卷纸、推倒小书桌</span><br><span class="line">  - Stage 2【精装小资公寓】：打碎昂贵花瓶、抓烂真皮沙发、推倒大电视</span><br><span class="line">  - Stage 3【奢华独栋别墅】：打碎名贵红酒柜、推倒巨型水晶吊灯、掀翻钢琴</span><br><span class="line">  - Stage 4【市中心国家博物馆】：推倒名画展架、打翻古代青花瓷、最后掀翻镇馆之宝「巨型霸王龙骨架」！</span><br><span class="line"></span><br><span class="line">## 硬性技术约束</span><br><span class="line">- **纯单文件实现**：仅输出一个 `index.html`，Three.js / 简易物理 / 字体均通过 CDN importmap 引入</span><br><span class="line">- **零外部资产依赖**：不引用任何外部 3D 模型 (.gltf/.obj)、外部图片贴图、外部音频 mp3；所有场景、家具、展品、猫咪均用 Three.js Procedural Geometry（低多边形 Low-Poly 卡通风）代码生成；音效用 Web Audio API 合成</span><br><span class="line">- **双端操作支持**：</span><br><span class="line">  - PC：WASD 移动，空格跳跃，鼠标左键或 J 挥爪，Shift 冲刺</span><br><span class="line">  - 移动端：左下角虚拟摇杆移动，右下角「跳跃」「挥爪」「冲刺」三个大按钮</span><br><span class="line">- **视觉风格**：低多边形卡通风、午后阳光/射灯光影、物品碎裂粒子飞溅、大件倒塌时 0.5 秒微慢动作震屏</span><br><span class="line">- **录屏与变现接口**：</span><br><span class="line">  - 导演模式：按 H 键隐藏所有 UI，按 C 键切换电影感环绕镜头（方便录制宣传片与平台封面视频）</span><br><span class="line">  - 广告位预留：在结算面板预留「看广告双倍罐头」「看广告直接体验博物馆」的前端触发逻辑钩子</span><br><span class="line"></span><br><span class="line">## 请在设计文档中详细写明：</span><br><span class="line">1. 核心循环与数值体系（单局时长、罐头产出公式、升级消耗曲线）</span><br><span class="line">2. 4 个场景的坐标尺寸、布局草图、各场景特色可破坏道具清单（道具重量、分值、破坏特效）</span><br><span class="line">3. 猫咪的物理控制与手感参数（移动/冲刺速度、跳跃重力、挥爪判定球半径与击退力度）</span><br><span class="line">4. 视觉与光影规范（各场景色系调色板、光照布置、碎裂粒子参数）</span><br><span class="line">5. UI / UX 流程（加载 → 选关/升级界面 → 战斗 HUD → 结算表情评分与看广告双倍按钮）</span><br><span class="line">6. 存档数据结构（LocalStorage JSON schema）</span><br><span class="line">7. 单文件模块架构设计与实现优先级</span><br><span class="line"></span><br><span class="line">只输出这份 Markdown 文档本身。</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二段｜按设计写代码：</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">下面附上的是《猫咪拆家：从出租屋拆到博物馆》的游戏设计文档。请严格按照文档，写出完整可运行的 index.html。</span><br><span class="line"></span><br><span class="line">硬性要求：</span><br><span class="line">- 单文件，Three.js 通过 CDN importmap 引入，不引用任何外部模型、贴图、音频、字体文件</span><br><span class="line">- 完整实现文档中的核心循环：90 秒短局、拆家计分与连击、猫罐头经济、三项升级、4 个场景的解锁与切换、LocalStorage 自动存档、每日任务、结算表情评分</span><br><span class="line">- 双端操作：键盘鼠标，以及移动端虚拟摇杆和跳跃、挥爪、冲刺按钮</span><br><span class="line">- 特效：碎片粒子、震屏、大件倒塌慢动作、Web Audio 合成音效</span><br><span class="line">- 导演模式：H 键隐藏全部界面，C 键切换电影感环绕镜头</span><br><span class="line">- 结算面板预留&quot;看广告双倍罐头&quot;等广告触发接口，当前用空函数占位，不接任何外部广告</span><br><span class="line">- 画面要好看：低多边形卡通风、暖色光照与柔和阴影，家具、展品和猫的造型要可爱、有辨识度，不要用纯方块糊弄</span><br><span class="line">- 打开 3 秒内能直接开始玩，中端笔记本保持流畅</span><br><span class="line">- 代码按模块分区注释，不写占位符，不省略任何部分</span><br><span class="line"></span><br><span class="line">只输出完整的 index.html，放在一个代码块里。</span><br></pre></td></tr></table></figure>
+
+<p>后面四轮修改没有通用模板，每一轮都是当时看到的问题，加上当前整份代码。</p>
+<h3 id="八、上架-·-CrazyGames-的三条考核线，微信小游戏要备的四样材料，和一盆冷水"><a href="#八、上架-·-CrazyGames-的三条考核线，微信小游戏要备的四样材料，和一盆冷水" class="headerlink" title="八、上架 · CrazyGames 的三条考核线，微信小游戏要备的四样材料，和一盆冷水"></a>八、上架 · CrazyGames 的三条考核线，微信小游戏要备的四样材料，和一盆冷水</h3><p>代码写完了，想在海外平台赚到钱，还得先过平台的测试期。</p>
+<p>以 CrazyGames 为例，新游戏先进入 Basic Launch 基础测试期。按官方文档，要同时满足<strong>上线满 7 天、游玩满 500 次</strong>，测试期才结束；500 次一直不到，21 天后自动结束。这段时间广告是关的，没有广告收入。</p>
+<p>官方看三个指标，下面是官方指南里表现好的游戏常见的水平，不是公开的及格线：</p>
+<ul>
+<li>平均游玩时长 10 分钟以上，对应设计里的 90 秒短局加多轮升级；</li>
+<li>次日留存 10% 到 15%，对应自动存档和每日任务；</li>
+<li>开始后玩满 1 分钟的玩家在 80% 以上，同时建议加载少于 10 秒、包体小于 20MB。</li>
+</ul>
+<p>指标比平台上其他游戏好，才会进入 Full Launch 正式发布，接 SDK 拿广告分成。另一条路是把授权卖给别的平台，但各家的独家条款可能互相冲突，签之前要看清合同。</p>
+<p>想上微信小游戏的话</p>
+<p>最近中推很多人在传「微信小游戏单机不用备案就能上架」，我翻了微信官方文档，口径没变：版本审核通过后，要完成小程序备案才能发布。实际情况是这样的：</p>
+<ul>
+<li>个人做免费的单机小游戏、只靠广告赚钱（IAA），不需要版号；</li>
+<li>但软著、游戏自审自查报告、小游戏备案、小程序备案一样都不能少，管局审核要 10 到 20 个工作日；</li>
+<li>单机的意思是断网也能玩。这份代码里的 Three.js 是从 CDN 加载的，想上微信得先把它打包进项目，再改成小游戏的工程结构；</li>
+<li>社区里有开发者反馈，签了单机承诺书、审核通过后，备案还没走完就能点发布了。但官方没有发公告，备案最后没过的话，照样会被下架。</li>
+</ul>
+<p>所以别冲着「免备案」去，按流程把材料备齐，备案期间把游戏先打磨好，时间一点都不浪费。</p>
+<p>这款猫咪拆家目前还在我本地，没有提交。老实讲，哪怕模型把开发成本压到几美元，大部分小游戏还是很难一击即中。但当做一个原型的账单从十几美元降到几美元，<strong>做原型—看数据—再改</strong>这件事，普通创作者终于试得起了。</p>
+<p>想自己试一遍的话，新用户试用额度在这里领：<a target="_blank" rel="noopener" href="https://fumolab.ai/en?utm_source=9dta63zy4y">https://fumolab.ai/en?utm_source=9dta63zy4y</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/12/xueyu1125-2120865290703552993/">https://yaoav.github.io/2026/11/12/xueyu1125-2120865290703552993/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/xueyu1125/">@xueyu1125</a></div><div class="post-share"><div class="social-share" data-image="/images/2120865290703552993-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img class="cover" src="/images/2120893892396716506-cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @waveking1314（断浪 WaveKing） 的长文，原文链接，版权归原作者所有。  Fable 5.2 出来三天，时间线上都在比跑分。 我更关心另一件事：它能不能整晚不掉线，把我回测里那些「看起来很赚」的策略一个个证伪。 试下来，能。这篇把我的整套做法拆开讲：怎么让它在 Claude Code 里调开源 Python 库跑回测，怎么用 4 道关筛掉运气，怎么让它每晚自己干活，早上交一份报告。  先收藏。后面提示词有 4 段，搭的时候要翻回来对着贴。  先说清楚立场：这套东西只研究，不下单。它最多跑纸面交易，真钱上不上、上多少，永远是你自己拍板。 为什么是现在做过回测的人都知道一个尴尬的事实。 你把一个均线策略的参数从 10 试到 100，总能试出一组曲线很漂亮的。拿去实盘，两周就露馅。 原因很简单：试的次数够多，噪音里也能挑出「好策略」。 以前的 AI 帮不上这个忙。你问它「给我一个赚钱的策略」，它会很自信地给你一个，背后什么都没有。它也没耐心陪你跑几百次检验。 Fable 5.2 不一样的地方在于长任务。Anthropic 11 月 9 日发的...</div></div></div></a><a class="pagination-related" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img class="cover" src="/images/2120821145335447881-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不一样的美感。 这几年的 AI 产品大多离不开宏大的科技感的设计，从名字来看就很直观。GPT是Generative Pre-trained Transformer的缩写，直译是生成式预训练变换器，名字就是一份直观的技术说明书，带着OpenAI早期浓厚的工程师气质；Gemini取自拉丁语的双子，这个名字对应Google Brain和DeepMind两支团队的合并，同时也呼应了NASA当年为登月铺路的双子座计划；Grok来自海因莱因1961年的科幻小说《异乡异客》，火星人用这个词表示彻底、深入骨髓地理解某样东西，马斯克借它来表达模型要真正读懂世界，也蕴含了他本人对于火星，对于宇宙的无限畅想。 Claude是向信息论之父克劳德·香农致敬，Anthropic本身这个有些生僻的单词是”与人类有关”的意思，模型的命名来自诗歌体裁：Ha...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img class="cover" src="/images/2120769549679386878-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个开关，就能让 R1 把一道难题拆开来想。到了同年 12 月，DeepSeek-V3.2 又多了一项本领：它可以一边推理，一边调用工具，拿到结果再决定下一步。 模型能判断「我得先看一眼文件」，可谁来把文件打开，把内容交给它？这就是 DeepSeek Harness 的用处。2026 年，深度求索先把这套连接模型和工具的工作环境开放给开发者试用，后来又推出了 Mac 和 Windows 桌面端。现在，打开桌面应用就能选文件夹、看模型做了哪些修改，也能给它装插件，添上自己常用的功能。 01｜先分清：模型、Harness、工作区平时我把一段话贴到 DeepSeek 聊天网页里，让它改个标题。换成这次的任务，我想说的是：「原稿在这个文件夹里，读一下。结果另存一份，原稿别动。」 这里分了三件事：模型读懂材料，决定怎么改；Harness 提供读...</div></div></div></a><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-10</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img class="cover" src="/images/2120729388140695705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  假设你刚开完一场活动筹备会，你把讨论记录交给 AI，希望它整理出一份会后行动清单：谁负责什么？什么时候交付？还有哪些事没定。这件事看起来只是做个表格真正需要判断的却是：“报名表我来做”算明确承诺、“要不做张海报”仍然只是建议；缺少会议日期时也不能把“周五”擅自换成某月某日。 这些判断如果经常用到，就值得整理成一份方法交给 AI 反复使用。下面先用“菜谱”说明 Skill 是什么，再拆解 Matt Pocock 的三个代表案例，理解方法怎样影响产物。最后一起写出“会议记录转行动清单”的 Skill，并用实际输出检查它是否有用。 **通过我的判断：Matt 最值得学的，是把做事顺序、判断条件和验收标准写成可复用的方法。Skill不是万能的，核心还是对于标准工作方法的高度抽象成一个长期复用的内容。**所以后面我把热度、方法和结果分别讲清楚，你也可以据此判断自己的经验值不值得写成 Skill。 一、先把 Skill 想成一份菜谱模型像厨师、工具像灶具、输入材料像食材、**Skill 则像菜谱。*...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%95%E9%94%99%E6%88%90%E6%9C%AC-%C2%B7-120-%E5%A4%9A%E4%B8%AA%E5%8E%9F%E5%9E%8B%EF%BC%8C%E5%89%8D-100-%E4%B8%AA%E5%87%A0%E4%B9%8E%E6%B2%A1%E8%B5%9A%E5%88%B0%E9%92%B1"><span class="toc-number">1.</span> <span class="toc-text">一、试错成本 · 120 多个原型，前 100 个几乎没赚到钱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%80%89%E5%9E%8B-%C2%B7-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-Fusion-Max-2-0%EF%BC%9A%E5%8D%95%E6%AC%A1%E8%83%BD%E8%BE%93%E5%87%BA-128K%EF%BC%8C%E5%86%85%E9%83%A8%E5%8D%8F%E4%BD%9C%E7%9A%84-token-%E4%B8%8D%E8%AE%A1%E8%B4%B9"><span class="toc-number">2.</span> <span class="toc-text">二、选型 · 为什么用 Fusion Max 2.0：单次能输出 128K，内部协作的 token 不计费</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%85%88%E7%9C%8B%E6%88%90%E5%93%81-%C2%B7-%E4%BB%8E-2-7-%E4%B8%87%E5%AD%97%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3%EF%BC%8C%E5%88%B0-130KB-%E7%9A%84%E9%A6%96%E7%89%88%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">三、先看成品 · 从 2.7 万字设计文档，到 130KB 的首版代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%BF%9E%E6%94%B9%E5%9B%9B%E8%BD%AE-%C2%B7-20-%E9%A1%B9%E8%A6%81%E6%B1%82%E7%A1%AE%E8%AE%A4%E4%BA%86-16-%E9%A1%B9%EF%BC%8C%E4%BB%A3%E7%A0%81%E4%B8%80%E8%A1%8C%E6%B2%A1%E6%89%8B%E6%94%B9"><span class="toc-number">4.</span> <span class="toc-text">四、连改四轮 · 20 项要求确认了 16 项，代码一行没手改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%8D%A2%E4%B8%8A-Blender-%E8%83%96%E6%A9%98%E7%8C%AB%E5%92%8C-24-%E5%B1%82%E6%AF%9B%E5%8F%91"><span class="toc-number">5.</span> <span class="toc-text">五、换上 Blender 胖橘猫和 24 层毛发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%88%90%E6%9C%AC%E8%B4%A6-%C2%B7-%E5%81%9A%E5%88%B0%E8%83%BD%E7%8E%A9-5-77%EF%BC%8C%E6%8D%A2%E5%88%AB%E5%AE%B6%E7%BA%A6-14-92%EF%BC%8C100-%E4%B8%AA%E5%8E%9F%E5%9E%8B%E5%B7%AE-900-%E5%A4%9A%E7%BE%8E%E5%85%83"><span class="toc-number">6.</span> <span class="toc-text">六、成本账 · 做到能玩 $5.77，换别家约 $14.92，100 个原型差 900 多美元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%87%AA%E5%B7%B1%E4%B8%8A%E6%89%8B-%C2%B7-%E9%A2%86%E8%AF%95%E7%94%A8%E9%A2%9D%E5%BA%A6%EF%BC%8C4-%E6%AD%A5%E6%8E%A5%E5%85%A5%EF%BC%8C%E4%B8%A4%E6%AE%B5%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%8E%9F%E6%96%87%E7%9B%B4%E6%8E%A5%E6%8A%84"><span class="toc-number">7.</span> <span class="toc-text">七、自己上手 · 领试用额度，4 步接入，两段提示词原文直接抄</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8A%E6%9E%B6-%C2%B7-CrazyGames-%E7%9A%84%E4%B8%89%E6%9D%A1%E8%80%83%E6%A0%B8%E7%BA%BF%EF%BC%8C%E5%BE%AE%E4%BF%A1%E5%B0%8F%E6%B8%B8%E6%88%8F%E8%A6%81%E5%A4%87%E7%9A%84%E5%9B%9B%E6%A0%B7%E6%9D%90%E6%96%99%EF%BC%8C%E5%92%8C%E4%B8%80%E7%9B%86%E5%86%B7%E6%B0%B4"><span class="toc-number">8.</span> <span class="toc-text">八、上架 · CrazyGames 的三条考核线，微信小游戏要备的四样材料，和一盆冷水</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

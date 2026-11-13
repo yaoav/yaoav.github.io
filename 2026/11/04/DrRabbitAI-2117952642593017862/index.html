@@ -1,0 +1,392 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI如何赋能科研完整工作流（第一期） | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大家好啊，我是兔老师。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI如何赋能科研完整工作流（第一期）">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/04/DrRabbitAI-2117952642593017862/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="大家好啊，我是兔老师。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117952642593017862-cover.jpg">
+<meta property="article:published_time" content="2026-11-04T20:10:34.000Z">
+<meta property="article:modified_time" content="2026-11-12T10:55:05.747Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@DrRabbitAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117952642593017862-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI如何赋能科研完整工作流（第一期）",
+  "url": "https://yaoav.github.io/2026/11/04/DrRabbitAI-2117952642593017862/",
+  "image": "https://yaoav.github.io/images/2117952642593017862-cover.jpg",
+  "datePublished": "2026-11-04T20:10:34.000Z",
+  "dateModified": "2026-11-12T10:55:05.747Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/04/DrRabbitAI-2117952642593017862/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI如何赋能科研完整工作流（第一期）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">AI如何赋能科研完整工作流（第一期）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AI如何赋能科研完整工作流（第一期）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-04T20:10:34.000Z" title="发表于 2026-11-04 20:10:34">2026-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@DrRabbitAI（Roxy）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117952642593017862">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>大家好啊，我是兔老师。</p>
+<p>昨天，我在学校给研究生上的课终于结课了。</p>
+<p>这门课叫“大数据和人工智能”。整个课程里，我有一半的内容在讲 <strong>AI 如何赋能科研</strong>。因为我理解，这门课的意义，是给研究生做科研提供工具上的支撑。</p>
+<p>趁着刚结课，我想把这部分内容系统地梳理一遍。内容比较多，会分几期来讲。</p>
+<p>今天是第一期，主题是<strong>文献检索</strong>。</p>
+<p>内容由易到难，涉及的工具包括 YILA、Grok Bot、Codex 和 WorkBuddy。我自己不是 WorkBuddy 的用户，但课上很多研究生在用，所以这一期也会讲讲在 WorkBuddy 里怎么操作。大家可以根据自己的习惯，挑需要的部分读。</p>
+<h2 id="01｜先说一个常见的坑：只靠开源检索-Skill"><a href="#01｜先说一个常见的坑：只靠开源检索-Skill" class="headerlink" title="01｜先说一个常见的坑：只靠开源检索 Skill"></a>01｜先说一个常见的坑：只靠开源检索 Skill</h2><p>现在网上开源的论文检索 Skill 非常多，装起来也很方便。</p>
+<p>但很多检索 Skill 有一个问题：<strong>它们只连了少数几个免费来源</strong>，比如 arXiv 这样的开放获取平台，或者用不带 key 的免费接口，搜几次就被限流。</p>
+<p>结果就是，你用它搜一个方向，只出来十几篇论文。</p>
+<p><strong>最危险的不是搜得少，而是它会给你一个错觉：这个方向的论文就这么几篇。</strong></p>
+<p>其实不是这个方向没人做，而是你的工具没有搜到。很多人因此误判了研究空白，开题时才被导师一句话问住：“这篇你怎么没看？”</p>
+<p>所以，如果想让 AI 帮我们检索到权威、高质量的论文，不建议只靠一个 Skill。</p>
+<h2 id="02｜一句话总结：两种更靠谱的方式"><a href="#02｜一句话总结：两种更靠谱的方式" class="headerlink" title="02｜一句话总结：两种更靠谱的方式"></a>02｜一句话总结：两种更靠谱的方式</h2><p>在文献检索这个环节，AI 辅助有两种更靠谱的方式：</p>
+<ol>
+<li>**直接用接入了论文数据库的 Agent。**不用配置，打开就能搜，适合大多数同学。</li>
+<li>**自己给 Agent 接入论文 API。**相当于给 Agent 装上手和脚，让它能查到更多论文。适合动手能力比较强、想自己掌控检索过程的同学。</li>
+</ol>
+<p>按我自己用下来的难易程度，从易到难排一下：</p>
+<ul>
+<li>| 难度 | 方式 | 工具 | 适合谁 |</li>
+<li>| — | — | — | — |</li>
+<li>| ★ | 直接用接入论文库的 Agent | YILA | 不想折腾配置，想马上开始搜 |</li>
+<li>| ★★ | 给 Agent 接入 API | Grok Bot | 第一次自己接 API |</li>
+<li>| ★★★ | 给 Agent 接入 API | Codex、WorkBuddy | 习惯用本地 Agent 做科研 |</li>
+</ul>
+<p>工具这件事，没有标准答案。选自己用着顺手的就好。</p>
+<h2 id="03｜方式一：直接用接入论文库的-Agent"><a href="#03｜方式一：直接用接入论文库的-Agent" class="headerlink" title="03｜方式一：直接用接入论文库的 Agent"></a>03｜方式一：直接用接入论文库的 Agent</h2><p>最简单的方式，是用已经接入论文数据库的 Agent。打开就能搜，不需要自己配置任何东西。</p>
+<p>我平时用 YILA 做文献检索，它接入了 Google Scholar、Semantic Scholar、arXiv 和 Google 专利等数据库，论文和专利都能直接搜。</p>
+<p>下面是我最常用的几个场景，提示词可以直接抄走。</p>
+<h3 id="场景一：写申报书或开题报告，找立项依据"><a href="#场景一：写申报书或开题报告，找立项依据" class="headerlink" title="场景一：写申报书或开题报告，找立项依据"></a>场景一：写申报书或开题报告，找立项依据</h3><blockquote>
+<p>我在申报一个省社科课题，题目是”人工智能赋能高校思政课实践教学的机制研究”。请按”现状、影响机制、实践路径”三个研究内容，分别检索近 5 年中英文代表性文献，用来写立项依据。</p>
+</blockquote>
+<p><img src="/images/HWRaFbrbQAEHK8h.jpg" alt="HWRaFbrbQAEHK8h"></p>
+<p><img src="/images/HWRaK5xagAAI944.jpg" alt="HWRaK5xagAAI944"></p>
+<p>YILA 同时检索了万方、OpenAlex 和 Google Scholar，去重后留下 57 篇，按”现状、影响机制、实践路径”三块各挑出代表文献，还附了一份 Excel 候选文献池。它也老实告诉我：英文文献里直接研究中国思政课的很少，适合当作”国际参照”来引用。这种提醒，比硬塞给你几篇不相关的英文文献有用多了。</p>
+<h3 id="场景二：中英文文献一次搜齐"><a href="#场景二：中英文文献一次搜齐" class="headerlink" title="场景二：中英文文献一次搜齐"></a>场景二：中英文文献一次搜齐</h3><blockquote>
+<p>帮我检索近 5 年关于”短视频使用与大学生睡眠质量”的中英文实证研究，中文和英文各列出代表性文献，优先高质量期刊。</p>
+</blockquote>
+<p><img src="/images/HWRaQojaoAAHWbY.jpg" alt="HWRaQojaoAAHWbY"></p>
+<p><img src="/images/HWRaVymaYAAnSn0.jpg" alt="HWRaVymaYAAnSn0"></p>
+<p>结果分成中文、英文两张表，每篇都标了样本量和期刊信息，比如 Frontiers in Psychology（JCR Q1）、Acta Psychologica（JCR Q2）。它还提醒：现有研究大多讲的是”成瘾或问题性使用”，而不是普通的刷视频时长。</p>
+<h3 id="场景三：临床或药物方向的研究进展"><a href="#场景三：临床或药物方向的研究进展" class="headerlink" title="场景三：临床或药物方向的研究进展"></a>场景三：临床或药物方向的研究进展</h3><blockquote>
+<p>查找近 5 年 SGLT2 抑制剂治疗心力衰竭的研究进展，优先随机对照试验、系统综述和指南，按”疗效、安全性、适用人群”分类整理。</p>
+</blockquote>
+<p><img src="/images/HWRabMPacAEpT0u.jpg" alt="HWRabMPacAEpT0u"></p>
+<p><img src="/images/HWRahpkbEAARKwS.jpg" alt="HWRahpkbEAARKwS"></p>
+<p>这次它检索了 PubMed，挑出来的是 DELIVER（NEJM 2022）、EMPULSE（Nature Medicine 2022）、2023 年 ESC 指南更新这些硬核证据。它还主动提醒：DAPA-HF、EMPEROR 这类奠基性试验在 5 年时间窗之外，需要的话要单独补。</p>
+<h3 id="场景四：刚进入一个新方向，先补经典文献"><a href="#场景四：刚进入一个新方向，先补经典文献" class="headerlink" title="场景四：刚进入一个新方向，先补经典文献"></a>场景四：刚进入一个新方向，先补经典文献</h3><blockquote>
+<p>我是刚转到公共管理方向的研究生，想了解”社区韧性”这个概念。请先给我奠基性的经典文献，再补近几年的代表性研究，帮我建立这个领域的基本脉络。</p>
+</blockquote>
+<p><img src="/images/HWRankYaoAA6KiO.jpg" alt="HWRankYaoAA6KiO"></p>
+<p><img src="/images/HWRas1bbIAABatP.jpg" alt="HWRas1bbIAABatP"></p>
+<p>它没有直接甩给我一堆论文，而是先给了一条阅读路径：概念奠基、社会资本与协同治理、中国情境下的应用。经典部分从 Norris 等人（2007）、Aldrich &amp; Meyer（2014）读起，每篇都写了”为什么读”，最后还建议”如果只读三篇，就读这三篇”。对刚转方向的同学来说，这比一份长长的书单友好得多。</p>
+<h3 id="场景五：查某项技术的相关专利"><a href="#场景五：查某项技术的相关专利" class="headerlink" title="场景五：查某项技术的相关专利"></a>场景五：查某项技术的相关专利</h3><blockquote>
+<p>我在做钙钛矿太阳能电池封装方向的研究，想了解这项技术的专利布局。请检索近 5 年中国和全球的相关专利，按技术路线分类整理，列出主要申请人，并说明每类专利主要解决什么问题。</p>
+</blockquote>
+<p><img src="/images/HWRayvkbAAAHZka.jpg" alt="HWRayvkbAAAHZka"></p>
+<p><img src="/images/HWRa4IXbMAA00MR.jpg" alt="HWRa4IXbMAA00MR"></p>
+<p>这次我用的是 YILA 的专利助手。它同时检索了万方专利和 Google Patents，把结果分成了 9 条技术路线：有机&#x2F;无机交替薄膜阻隔、专用封装胶膜、低温与光固化工艺、边缘密封、柔性超薄封装、封装设备等，每一类都写清楚了主要解决什么问题，比如水氧渗透、层压损伤、边缘渗漏。申请人这块，国内有极电光能、天合光能、南开大学、华中科技大学等，国外有宁德时代、韩华、Jusung 等。</p>
+<p>更难得的是，它很清楚自己的边界：这里列出的是”值得跟踪的申请人”，不是按专利数量做的排名；海外专利的同族关系也没有核实完整；而且这不能当作侵权风险判断（FTO）来用。</p>
+<p>不管用哪个工具，拿到结果以后都要做两件事：随机抽几篇，回到数据库核对论文是否真实存在；再看看有没有漏掉你知道的重要论文。</p>
+<h2 id="04｜方式二：给-Agent-接入论文-API"><a href="#04｜方式二：给-Agent-接入论文-API" class="headerlink" title="04｜方式二：给 Agent 接入论文 API"></a>04｜方式二：给 Agent 接入论文 API</h2><p>如果你动手能力比较强，也可以给自己的 Agent 接入论文 API。</p>
+<p>这些是我用过、觉得比较好用的三个：</p>
+<ul>
+<li>| API | 收费方式 | 能搜到什么 |</li>
+<li>| — | — | — |</li>
+<li>| OpenAlex | 免费，申请 key 后每天有 1 美元的免费额度 | 3.2 亿多篇学术作品的信息：题目、摘要、作者、机构、被引次数、开放获取链接 |</li>
+<li>| Semantic Scholar | 免费（申请 key 后限速更稳） | 2.14 亿篇论文信息、24.9 亿条引用关系，还有 AI 生成的一句话摘要（TLDR） |</li>
+<li>| SerpApi | 每月 250 次免费，入门档 25 美元一个月 | Google Scholar 的检索结果 |</li>
+</ul>
+<p>下面一个个说清楚：它们到底收录了哪些论文。</p>
+<h3 id="一、OpenAlex：覆盖面最广的“学术总目录”"><a href="#一、OpenAlex：覆盖面最广的“学术总目录”" class="headerlink" title="一、OpenAlex：覆盖面最广的“学术总目录”"></a>一、OpenAlex：覆盖面最广的“学术总目录”</h3><p>**收录多少：**官方说法是 3.2 亿多篇作品，每天新增几万篇。“作品”不只是期刊论文，还包括会议论文、书和章节、数据集、学位论文、预印本等。</p>
+<p>**数据从哪来：**最早是接手了微软学术（Microsoft Academic Graph，2021 年停止）的数据，另一大来源是 Crossref（管 DOI 注册的机构）。另外还汇集了 PubMed、DataCite、HAL，以及各个大学和学科的知识库。</p>
+<p>同一篇论文的 arXiv 预印本、正式发表版、学校知识库里的版本，它会尽量合并成一条，不用自己去重。</p>
+<p>**能拿到什么：**题目、摘要、作者、机构、期刊、被引次数、参考文献、是否开放获取。按我这次查的数字，有摘要的大约 1.7 亿篇，开放获取的大约 1.3 亿篇。</p>
+<p>还有一个很多人不知道的：对 6000 多万篇开放获取论文，OpenAlex 自己缓存了全文 PDF，能直接下载（下载按次计费，每天免费额度大约够下 100 篇）。</p>
+<p>**中文论文：**按语言字段筛，中文作品大约 590 万篇。相对它的总量，这个比例很小。中文核心期刊、国内学位论文，还是要去知网、万方查。</p>
+<p>**使用建议：**做综述、摸清一个方向的整体情况时首选它。按年份、期刊、机构筛选很便宜，适合让 Agent 做“某方向近 5 年发文趋势”这类统计。</p>
+<h3 id="OpenAlex-每天-1-美元，能搜多少次？"><a href="#OpenAlex-每天-1-美元，能搜多少次？" class="headerlink" title="OpenAlex 每天 1 美元，能搜多少次？"></a>OpenAlex 每天 1 美元，能搜多少次？</h3><p>很多同学看到“1 美元”会担心不够用。按 OpenAlex 官方给的标准：</p>
+<ul>
+<li>**关键词检索：**每天大约 1000 次。每次最多返回 100 条结果，一天就是 10 万条；</li>
+<li>**按条件筛选（比如按年份、期刊筛）：**每天大约 1 万次；</li>
+<li>**用 DOI 查单篇论文：**不限次数，免费。</li>
+</ul>
+<p>**官方还给了一个参考：**一天做 20 次检索、200 次筛选、50 次单篇查询，大约只花 0.04 美元。所以对一般的文献检索来说，完全不用付费。</p>
+<p>额度每天北京时间早上 8 点（UTC 零点）刷新。另外要注意，它对调用频率有限制：用免费 key 每秒最多 30 次请求，不带 key 只有每秒 10 次，而且每天的额度只有十分之一。新注册的账号，第一笔 1 美元的额度还会限速使用，大约 50 分钟后才解除。如果 Agent 提示“请求太多”（429 错误），等一会儿再试就好，不会额外扣费。</p>
+<h3 id="二、Semantic-Scholar：查引用关系最顺手"><a href="#二、Semantic-Scholar：查引用关系最顺手" class="headerlink" title="二、Semantic Scholar：查引用关系最顺手"></a>二、Semantic Scholar：查引用关系最顺手</h3><p>**收录多少：**官方页面写的是 2.14 亿篇论文、24.9 亿条引用关系、7900 万位作者，数据持续更新。</p>
+<p>**覆盖哪些学科：**所有学科都有，每篇论文会标学科领域，可以按领域筛。</p>
+<p><strong>它的特色：</strong></p>
+<ul>
+<li>**引用网络。**一篇论文引用了谁、被谁引用，都能直接拿到。顺着引用链往前、往后找文献，很方便。</li>
+<li>**TLDR。**很多论文有一句话 AI 摘要，扫一遍就知道这篇在讲什么。</li>
+<li>**相似论文推荐。**给它一篇论文，它能推荐一批相近的。</li>
+<li>**开放获取 PDF 链接。**有免费版本的论文，会给出 PDF 地址。</li>
+</ul>
+<p>**要注意两点：**一是摘要可能缺失，官方说明因为版权原因，有些网页上能看到的摘要，API 里不返回；二是关键词检索最多只返回 1000 条按相关度排序的结果，要更多得用它的批量检索接口。</p>
+<p>不申请 key 也能用，但所有没 key 的用户共享一个限速池，高峰期容易被拒；申请 key 后起步是每秒 1 次请求。</p>
+<p>**使用建议：**已经有几篇核心论文，想“滚雪球”找相关文献时用它。</p>
+<h3 id="三、SerpApi：间接用上-Google-Scholar"><a href="#三、SerpApi：间接用上-Google-Scholar" class="headerlink" title="三、SerpApi：间接用上 Google Scholar"></a>三、SerpApi：间接用上 Google Scholar</h3><p>Google Scholar 本身没有官方 API，官方帮助页也明确说不提供批量获取。SerpApi 是第三方服务，帮你抓取 Google Scholar 的搜索结果页，整理成结构化数据。</p>
+<p>所以它能搜到什么，基本就等于 Google Scholar 能搜到什么：期刊文章、学位论文、书、摘要、法院判例，来源包括出版社、学会、在线知识库、大学网站等。</p>
+<p>**能拿到什么：**标题、作者、来源、片段（不是完整摘要）、被引次数、“被谁引用”和“所有版本”的链接，可以按年份筛。拿不到全文，Google Scholar 自己也说，多数文章摘要免费，但全文可能需要订阅。</p>
+<p>每次请求最多返回 20 条结果，按成功的检索次数计费，返回多少条都算 1 次。</p>
+<h3 id="SerpApi：用量大再考虑"><a href="#SerpApi：用量大再考虑" class="headerlink" title="SerpApi：用量大再考虑"></a>SerpApi：用量大再考虑</h3><p>SerpApi 每月有 250 次免费检索，入门档是 25 美元一个月、1000 次。它是订阅制，当月没用完的次数，下个月就清零了。</p>
+<p>**使用建议：**OpenAlex 和 Semantic Scholar 搜不到的东西（比如某些书、学位论文、小众会议），再用它补漏。</p>
+<h3 id="另外两个免费的，按需取用"><a href="#另外两个免费的，按需取用" class="headerlink" title="另外两个免费的，按需取用"></a>另外两个免费的，按需取用</h3><ul>
+<li>**PubMed（E-utilities）：**生物医学方向必备，收录 4000 多万条文献题录和摘要。</li>
+<li>**arXiv API：**物理、数学、计算机等方向的预印本，能直接拿到全文 PDF。官方要求每 3 秒最多请求 1 次，让 Agent 写代码时记得加等待。</li>
+</ul>
+<h3 id="怎么选？"><a href="#怎么选？" class="headerlink" title="怎么选？"></a>怎么选？</h3><ul>
+<li>| 你的需求 | 用哪个 |</li>
+<li>| — | — |</li>
+<li>| 摸清一个方向的整体情况、做统计 | OpenAlex |</li>
+<li>| 从几篇核心论文出发找相关文献 | Semantic Scholar |</li>
+<li>| 想要 Google Scholar 那样的结果，补漏 | SerpApi |</li>
+<li>| 生物医学 | 再加 PubMed |</li>
+<li>| 计算机、物理等看最新预印本 | 再加 arXiv |</li>
+<li>| 中文文献 | 这几个都不够，还是知网、万方 |</li>
+</ul>
+<p>我的习惯是：OpenAlex 打底，Semantic Scholar 顺引用链补充，SerpApi 留着补漏。</p>
+<h3 id="有一点要说清楚：API-搜到的主要是论文信息，不是全文"><a href="#有一点要说清楚：API-搜到的主要是论文信息，不是全文" class="headerlink" title="有一点要说清楚：API 搜到的主要是论文信息，不是全文"></a>有一点要说清楚：API 搜到的主要是论文信息，不是全文</h3><p>题目、摘要、作者、DOI 都能拿到。开放获取的论文，OpenAlex、Semantic Scholar、arXiv 能给出全文链接；但付费论文的全文，还是要通过学校图书馆的权限下载。</p>
+<h3 id="怎么接入？"><a href="#怎么接入？" class="headerlink" title="怎么接入？"></a>怎么接入？</h3><p>接入其实不麻烦：找到 API 的官方文档，直接交给 Agent，让它自己写调用代码。</p>
+<ul>
+<li>OpenAlex：<a target="_blank" rel="noopener" href="https://developers.openalex.org/">https://developers.openalex.org</a></li>
+<li>Semantic Scholar：<a target="_blank" rel="noopener" href="https://api.semanticscholar.org/">https://api.semanticscholar.org</a></li>
+<li>SerpApi：<a target="_blank" rel="noopener" href="https://serpapi.com/google-scholar-api">https://serpapi.com/google-scholar-api</a></li>
+<li>PubMed：<a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/books/NBK25497/">https://www.ncbi.nlm.nih.gov/books/NBK25497/</a></li>
+<li>arXiv：<a target="_blank" rel="noopener" href="https://info.arxiv.org/help/api/">https://info.arxiv.org/help/api/</a></li>
+</ul>
+<h3 id="注意：不要把-API-key-直接发给-Agent"><a href="#注意：不要把-API-key-直接发给-Agent" class="headerlink" title="注意：不要把 API key 直接发给 Agent"></a>注意：不要把 API key 直接发给 Agent</h3><p>API key 相当于你的账户密码。别人拿到你的 key，就能用你的额度。直接粘贴在对话框里，它会留在聊天记录里，不太安全。</p>
+<p>更稳妥的做法是：</p>
+<ul>
+<li>如果工具提供了专门填 key 的输入框，就填在输入框里；</li>
+<li>如果没有，就把 key 写进项目文件夹里的 .env 文件，让 Agent 写的程序从这个文件里读取，并告诉它不要打开、不要显示这个文件。</li>
+</ul>
+<p>可以直接用下面这段提示词：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">我想让你通过 OpenAlex API 帮我检索论文。</span><br><span class="line">API 文档：https://developers.openalex.org</span><br><span class="line">我的 API key 已经放在当前文件夹的 .env 文件里，变量名是 OPENALEX_API_KEY。</span><br><span class="line">请写一个检索脚本，从环境变量读取 key。不要打开、打印或在回复中显示这个 key。</span><br><span class="line">写好后，用“【你的关键词】”测试一次，返回前 20 篇论文的：</span><br><span class="line">标题、作者、年份、期刊、被引次数和 DOI。</span><br></pre></td></tr></table></figure>
+
+<h2 id="05｜三个工具，分别怎么配置"><a href="#05｜三个工具，分别怎么配置" class="headerlink" title="05｜三个工具，分别怎么配置"></a>05｜三个工具，分别怎么配置</h2><h3 id="Grok-Bot：我觉得最丝滑的方式"><a href="#Grok-Bot：我觉得最丝滑的方式" class="headerlink" title="Grok Bot：我觉得最丝滑的方式"></a>Grok Bot：我觉得最丝滑的方式</h3><p>整体用下来，我觉得用 Grok Bot 接入 API 是最快的。整个过程只要三步。</p>
+<p>**第一步，新建一个专门搜论文的 Bot。**我给它起名叫“论文搜索助理”，以后搜论文都在这个 Bot 里进行。</p>
+<p><img src="/images/HWRbIbLbwAAafxu.png" alt="HWRbIbLbwAAafxu"></p>
+<p>**第二步，直接告诉它你要做什么。**我只说了一句：“我想通过 API key，然后搜索 OpenAlex 的论文。帮我去设置一下。”</p>
+<p>它会直接弹出一个填 key 的输入框，并且提示 key 会被安全保存，Bot 本身看不到。这正是前面说的“专门填 key 的输入框”，不用自己处理文件，也不用把 key 发进对话里。</p>
+<p><img src="/images/HWRbN5PacAAmTjd.jpg" alt="HWRbN5PacAAmTjd"></p>
+<p>**第三步，保存后直接开始搜。**保存好 key，它会自动测试一次：用“large language models peer review”检索，返回了排在前面的论文和被引次数，还告诉我这次查询花费 0.001 美元。</p>
+<p>按这个价格，每天 1 美元的免费额度，差不多就是前面说的约 1000 次检索。</p>
+<p>之后我接着问：“帮我搜索一下人工智能在媒体中相关应用比较火的论文。”它按被引次数排序，列出了 2018 年以来这个方向引用最高的论文，每篇都附了年份、被引次数和一句话说明。</p>
+<p><img src="/images/HWRbTHRaMAAE4XV.jpg" alt="HWRbTHRaMAAE4XV"></p>
+<h3 id="Codex：还能顺手做一个检索网页"><a href="#Codex：还能顺手做一个检索网页" class="headerlink" title="Codex：还能顺手做一个检索网页"></a>Codex：还能顺手做一个检索网页</h3><p>在 Codex 里，我先说了需求：“我要搜索 OpenAlex 的论文，然后我一会可以给你一个 API key，帮我接入以后帮我去搜论文。”</p>
+<p>它先提醒了一点：OpenAlex 的 key 也是登录凭证，不要写进代码或公开文件里，会优先放进本地环境变量。然后列出需要我准备的内容：API key、检索主题、筛选条件（年份、期刊、引用量等）和结果格式。</p>
+<p>这里注意，Codex 说的是“你发来后”。按前面说的原则，key 最好不要直接粘贴进对话，而是自己写进 .env 文件，再告诉它从环境变量读取。</p>
+<p><img src="/images/HWRbYgwaMAApsHM.jpg" alt="HWRbYgwaMAApsHM"></p>
+<p>接着我又提了一个需求：“帮我做一个网页，然后每次我可以在本地自己通过这个 key 搜索论文。”</p>
+<p>大约 4 分钟，Codex 做好了一个本地检索网页：输入关键词就能搜，可以按年份、开放获取和文献类型筛选，结果能导出成 CSV 或 BibTeX，key 在网页的“API 设置”里填写。以后搜论文，打开这个网页就行，不用每次都和 Agent 对话。</p>
+<p><img src="/images/HWRbkPKaIAAfct8.jpg" alt="HWRbkPKaIAAfct8"></p>
+<h3 id="WorkBuddy"><a href="#WorkBuddy" class="headerlink" title="WorkBuddy"></a>WorkBuddy</h3><p>WorkBuddy 的用法和 Codex 基本一样：把 API 文档交给它，key 放进 .env 文件，再让它写检索脚本。所以这里就不重复截图了。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>文献检索是整个科研流程的第一步，也是最容易被 AI “带偏”的一步。</p>
+<p>工具搜不到，不代表论文不存在。用 AI 检索文献，最重要的不是找到一个“最强的工具”，而是知道你的工具能搜到哪里、搜不到哪里。</p>
+<p>我会持续分享 AI 在教育科研中的应用，欢迎关注～</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/04/DrRabbitAI-2117952642593017862/">https://yaoav.github.io/2026/11/04/DrRabbitAI-2117952642593017862/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DrRabbitAI/">@DrRabbitAI</a></div><div class="post-share"><div class="social-share" data-image="/images/2117952642593017862-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/05/chenke20266-2118011377998835792/" title="Polymarket 自动交易机器人创建方法"><img class="cover" src="/images/2118011377998835792-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Polymarket 自动交易机器人创建方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  一个可插拔策略、带完整风控、默认纸面模拟的Polymarket交易机器人。 先纸面&#x2F;回测跑通，再手动开实盘。默认状态下它不会动你一分钱。 0. 先说清楚风险（真的请读完）预测市场是 0&#x2F;1 结算：仓位不是”浮亏”，而是可能直接归零。自动交易程序能做的只是 “按规则执行 + 限制损失规模”，不能保证盈利，也不能避免亏损。 2026 年Polymarket的真实成本结构（实测自 API）：  实测结论（2026-11-04，扫描前 80 个市场）：二元Yes+No套利在扣手续费后全部为负 （约 -10bps）。也就是说：网上教程里”买Yes+买 No稳赚”的说法在当前费率下基本不成立。 negRisk 篮子套利偶尔有空间，但深度很小、且必须拿到事件的全部腿。  1. 它能做什么12345678910111213              ┌──────────────┐Gamma API ───▶│ 市场发现/筛选 │──┐CLOB REST ───▶│ 订单簿...</div></div></div></a><a class="pagination-related" href="/2026/11/04/waveking1314-2118014699606585780/" title="用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）"><img class="cover" src="/images/2118014699606585780-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @waveking1314（断浪 WaveKing） 的长文，原文链接，版权归原作者所有。  我会把用 Grok Bot 搭一支 24 小时 AI 交易团队的完整框架拆开讲：它自己研究市场、找策略、回测，最后自己下单。 直接开始。  先收藏。 文里提示词很多，搭的时候要翻回来对着做。  我自己盯链上新币和聪明钱用的是 GMGN 和 Fomo，从我的链接注册，手续费有返佣。 时间线上正在发生一件事，大部分交易者还没反应过来。  有人已经用 Grok Bot 管起了自己的整个生活：邮箱、日程、调研、销售，全交给它。 还有人拿它跑整个公司。上面一个人，下面一排 Bot 干活。 每个 Bot 都有一台自己的云端电脑。它登录你平时用的工具，从不下线。 它记得你的规矩，按时间表干活，会跟别的 Bot 互相发消息，只有需要你点头的时候才回来找你。 现在把这支团队从邮箱挪到市场上。 一支 AI 团队全天候盯盘，发现定价错了的地方，把它变成策略，拿几年的数据回测，再把执行的交易机器人搭出来。你睡觉的时候，这些事都在跑。 到这一步，它已经不是聊天机器人了。 它是一张接进你 T...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction"><img class="cover" src="/images/2116867574059397464-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-01</div><div class="info-item-2">How to Write a Research Paper Introduction</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  A method drawn from the classic literature, plus the AI prompts I use Lately I keep hearing students at my university talk about the same thing: how do you actually write the introduction of a research paper? So I went back to the sources: John Swales’ CARS model, the classic framework behind almost every introduction template; “Ten simple rules for structuring papers” in PLOS Computational Biology; and the author guidelines from Springer Natu...</div></div></div></a><a class="pagination-related" href="/2026/11/02/DrRabbitAI-2117091215342735738/" title="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead"><img class="cover" src="/images/2117091215342735738-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Most researchers use AI for writing with a single prompt: “Polish this paragraph.” That’s the least useful thing you can ask. You get back smoother text in seconds. But what did it actually change? Did it shift your meaning? Turn a correlation into a cause? Slip in a claim you never made? Now you’re the one checking, line by line. There’s a better way. I teach graduate students and review their drafts every term, and this is the workflow I now...</div></div></div></a><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-06</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a><a class="pagination-related" href="/2026/11/12/DrRabbitAI-2120717083151585317/" title="Science编辑：如何提高论文接收率？10条建议"><img class="cover" src="/images/2120717083151585317-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Science编辑：如何提高论文接收率？10条建议</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  今天读到《Science Advances》高级副主编、杜克大学教授 Warren S. Warren 的一篇短文，题目是《Beating the odds for journal acceptance》，可以翻译为《如何提高论文被期刊接收的胜算》。文章只有两页，但信息密度很高。 作者提到，《Science Advances》每年大约收到 20,000 篇投稿，最终约 90% 会被拒稿，而且其中大多数甚至没有进入外审。 但他也坦言，期刊可能拒绝过一些真正具有科学意义和影响力的论文。并不一定是研究本身没有价值，而是作者在标题、摘要、投稿附信、图片或者投稿策略上出了问题，让编辑和审稿人没有及时看见它的价值。 以下 10 条建议都来自原文。感兴趣的老师同学也可以直接读英文原版。 01｜论文为什么还没外审，就被拒了？在看具体建议之前，先看编辑是怎样处理论文的。 《Science Advances》的副主编和副编辑，并不是全职坐在编辑部里处理稿件。他们本身也是仍然在一线做科研的科学家。以物理...</div></div></div></a><a class="pagination-related" href="/2026/11/09/DrRabbitAI-2119632921900495057/" title="科研人：如何用AI采集任何互联网数据"><img class="cover" src="/images/2119632921900495057-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-09</div><div class="info-item-2">科研人：如何用AI采集任何互联网数据</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 这学期给研究生上人工智能课时，我问大家：“你们最想学什么？” 没想到，很多学生都提到了同一个主题：数据采集。  所以，第二节课我就给大家安排了这个主题。 准备课程时，我也去B站看了一下现有的爬虫教程。很多教程还在教大家安装八爪鱼，或者先学习Python，再根据网页结构一点点修改代码。  这些方法不是没有用。但是现在有更好的方式。不需要为了爬取数据，去学习一门编程语言。我之前的研究生课里有一部分，讲了很多年，用python爬取数据。最近几年直接抛弃了。 所以，如果你是数据抓取小白，我的建议是：  可以先不学八爪鱼，也不用从一年以前的B站爬虫教程开始。直接使用本教程的方法。  我自己平时主要使用Codex。（上课时发现，一些学生暂时无法使用Codex，他们使用的是WorkBuddy。我后来也用WorkBuddy测试了一下，很多类似的任务同样可以完成。） 目前，我常用的数据采集方法只有两种，基本满足了所有数据采集的需求。之前一期受大家关注的国自然数据是采用第一种方...</div></div></div></a><a class="pagination-related" href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"><img class="cover" src="/images/2119277960670929389-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-08</div><div class="info-item-2">国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 国自然放榜，我认真看了一下今年的数据。  2026年集中接收的10类项目，一共资助69,563项。2025年是53,159项。也就是说，今年增加了16,404项，增幅约30.9%。  其中，两类和青年教师关系比较密切的项目，变化尤其明显： 青年科学基金项目（C类）：增加12,046项，增幅50.1%； 面上项目增加3,400项，增幅14.8%。 看到这个变化以后，我又动心了。 刚好最近，北京市自然科学基金2026年第三批项目申请也启动了。 一边是国自然青年C和面上项目扩容，一边是北京市自然科学基金正在申报，再加上现在已经可以用AI辅助做选题调研、查文献和整理材料，我又萌生了申请项目的想法。 申请项目的第一步，当然是「找选题灵感」。  我要把过去获批的国自然项目整理出来，看看大家都在研究什么。  01｜为什么我要收集历年的获批题目？准备基金选题的时候，我们经常会去看历年的获批项目。 倒不是为了照着别人的题目改几个词，而是想知道：最近几年哪些问题正在受到关注，大...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#01%EF%BD%9C%E5%85%88%E8%AF%B4%E4%B8%80%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9D%91%EF%BC%9A%E5%8F%AA%E9%9D%A0%E5%BC%80%E6%BA%90%E6%A3%80%E7%B4%A2-Skill"><span class="toc-number">1.</span> <span class="toc-text">01｜先说一个常见的坑：只靠开源检索 Skill</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02%EF%BD%9C%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93%EF%BC%9A%E4%B8%A4%E7%A7%8D%E6%9B%B4%E9%9D%A0%E8%B0%B1%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">02｜一句话总结：两种更靠谱的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03%EF%BD%9C%E6%96%B9%E5%BC%8F%E4%B8%80%EF%BC%9A%E7%9B%B4%E6%8E%A5%E7%94%A8%E6%8E%A5%E5%85%A5%E8%AE%BA%E6%96%87%E5%BA%93%E7%9A%84-Agent"><span class="toc-number">3.</span> <span class="toc-text">03｜方式一：直接用接入论文库的 Agent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%80%EF%BC%9A%E5%86%99%E7%94%B3%E6%8A%A5%E4%B9%A6%E6%88%96%E5%BC%80%E9%A2%98%E6%8A%A5%E5%91%8A%EF%BC%8C%E6%89%BE%E7%AB%8B%E9%A1%B9%E4%BE%9D%E6%8D%AE"><span class="toc-number">3.1.</span> <span class="toc-text">场景一：写申报书或开题报告，找立项依据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%BA%8C%EF%BC%9A%E4%B8%AD%E8%8B%B1%E6%96%87%E6%96%87%E7%8C%AE%E4%B8%80%E6%AC%A1%E6%90%9C%E9%BD%90"><span class="toc-number">3.2.</span> <span class="toc-text">场景二：中英文文献一次搜齐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%B8%89%EF%BC%9A%E4%B8%B4%E5%BA%8A%E6%88%96%E8%8D%AF%E7%89%A9%E6%96%B9%E5%90%91%E7%9A%84%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95"><span class="toc-number">3.3.</span> <span class="toc-text">场景三：临床或药物方向的研究进展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%9B%9B%EF%BC%9A%E5%88%9A%E8%BF%9B%E5%85%A5%E4%B8%80%E4%B8%AA%E6%96%B0%E6%96%B9%E5%90%91%EF%BC%8C%E5%85%88%E8%A1%A5%E7%BB%8F%E5%85%B8%E6%96%87%E7%8C%AE"><span class="toc-number">3.4.</span> <span class="toc-text">场景四：刚进入一个新方向，先补经典文献</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E4%BA%94%EF%BC%9A%E6%9F%A5%E6%9F%90%E9%A1%B9%E6%8A%80%E6%9C%AF%E7%9A%84%E7%9B%B8%E5%85%B3%E4%B8%93%E5%88%A9"><span class="toc-number">3.5.</span> <span class="toc-text">场景五：查某项技术的相关专利</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04%EF%BD%9C%E6%96%B9%E5%BC%8F%E4%BA%8C%EF%BC%9A%E7%BB%99-Agent-%E6%8E%A5%E5%85%A5%E8%AE%BA%E6%96%87-API"><span class="toc-number">4.</span> <span class="toc-text">04｜方式二：给 Agent 接入论文 API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81OpenAlex%EF%BC%9A%E8%A6%86%E7%9B%96%E9%9D%A2%E6%9C%80%E5%B9%BF%E7%9A%84%E2%80%9C%E5%AD%A6%E6%9C%AF%E6%80%BB%E7%9B%AE%E5%BD%95%E2%80%9D"><span class="toc-number">4.1.</span> <span class="toc-text">一、OpenAlex：覆盖面最广的“学术总目录”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OpenAlex-%E6%AF%8F%E5%A4%A9-1-%E7%BE%8E%E5%85%83%EF%BC%8C%E8%83%BD%E6%90%9C%E5%A4%9A%E5%B0%91%E6%AC%A1%EF%BC%9F"><span class="toc-number">4.2.</span> <span class="toc-text">OpenAlex 每天 1 美元，能搜多少次？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Semantic-Scholar%EF%BC%9A%E6%9F%A5%E5%BC%95%E7%94%A8%E5%85%B3%E7%B3%BB%E6%9C%80%E9%A1%BA%E6%89%8B"><span class="toc-number">4.3.</span> <span class="toc-text">二、Semantic Scholar：查引用关系最顺手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81SerpApi%EF%BC%9A%E9%97%B4%E6%8E%A5%E7%94%A8%E4%B8%8A-Google-Scholar"><span class="toc-number">4.4.</span> <span class="toc-text">三、SerpApi：间接用上 Google Scholar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SerpApi%EF%BC%9A%E7%94%A8%E9%87%8F%E5%A4%A7%E5%86%8D%E8%80%83%E8%99%91"><span class="toc-number">4.5.</span> <span class="toc-text">SerpApi：用量大再考虑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%A6%E5%A4%96%E4%B8%A4%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%EF%BC%8C%E6%8C%89%E9%9C%80%E5%8F%96%E7%94%A8"><span class="toc-number">4.6.</span> <span class="toc-text">另外两个免费的，按需取用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-number">4.7.</span> <span class="toc-text">怎么选？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E4%B8%80%E7%82%B9%E8%A6%81%E8%AF%B4%E6%B8%85%E6%A5%9A%EF%BC%9AAPI-%E6%90%9C%E5%88%B0%E7%9A%84%E4%B8%BB%E8%A6%81%E6%98%AF%E8%AE%BA%E6%96%87%E4%BF%A1%E6%81%AF%EF%BC%8C%E4%B8%8D%E6%98%AF%E5%85%A8%E6%96%87"><span class="toc-number">4.8.</span> <span class="toc-text">有一点要说清楚：API 搜到的主要是论文信息，不是全文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E6%8E%A5%E5%85%A5%EF%BC%9F"><span class="toc-number">4.9.</span> <span class="toc-text">怎么接入？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A%E4%B8%8D%E8%A6%81%E6%8A%8A-API-key-%E7%9B%B4%E6%8E%A5%E5%8F%91%E7%BB%99-Agent"><span class="toc-number">4.10.</span> <span class="toc-text">注意：不要把 API key 直接发给 Agent</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05%EF%BD%9C%E4%B8%89%E4%B8%AA%E5%B7%A5%E5%85%B7%EF%BC%8C%E5%88%86%E5%88%AB%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">05｜三个工具，分别怎么配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Grok-Bot%EF%BC%9A%E6%88%91%E8%A7%89%E5%BE%97%E6%9C%80%E4%B8%9D%E6%BB%91%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-number">5.1.</span> <span class="toc-text">Grok Bot：我觉得最丝滑的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Codex%EF%BC%9A%E8%BF%98%E8%83%BD%E9%A1%BA%E6%89%8B%E5%81%9A%E4%B8%80%E4%B8%AA%E6%A3%80%E7%B4%A2%E7%BD%91%E9%A1%B5"><span class="toc-number">5.2.</span> <span class="toc-text">Codex：还能顺手做一个检索网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WorkBuddy"><span class="toc-number">5.3.</span> <span class="toc-text">WorkBuddy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">6.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>币海拾遗 · 爆款提纯 - 五位 X 博主的爆款内容提纯站</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="提炼加密、AI、资本市场博主的爆款观点，注明出处">
+<meta property="og:type" content="website">
+<meta property="og:title" content="币海拾遗 · 爆款提纯">
+<meta property="og:url" content="https://yaoav.github.io/page/3/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="提炼加密、AI、资本市场博主的爆款观点，注明出处">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="Yaoav">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '币海拾遗 · 爆款提纯',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">币海拾遗 · 爆款提纯</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2026/11/02/DrRabbitAI-2117091215342735738/" title="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead"><img class="post-bg" src="/images/2117091215342735738-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/02/DrRabbitAI-2117091215342735738/" title="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead">Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-02T11:07:34.000Z" title="发表于 2026-11-02 11:07:34">2026-11-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Most researchers use AI for writing with a single prompt: “Polish this paragraph.” That’s the least useful thing you can ask. You get back smoother text in seconds. But what did it actually change? Did it shift your meaning? Turn a correlation into a cause? Slip in a claim you never made? Now you’re the one checking, line by line. There’s a better way. I teach graduate students and review their drafts every term, and this is the workflow I now...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction"><img class="post-bg" src="/images/2116867574059397464-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to Write a Research Paper Introduction"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction">How to Write a Research Paper Introduction</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-11-01T20:18:53.000Z" title="发表于 2026-11-01 20:18:53">2026-11-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  A method drawn from the classic literature, plus the AI prompts I use Lately I keep hearing students at my university talk about the same thing: how do you actually write the introduction of a research paper? So I went back to the sources: John Swales’ CARS model, the classic framework behind almost every introduction template; “Ten simple rules for structuring papers” in PLOS Computational Biology; and the author guidelines from Springer Natu...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/10/28/DrRabbitAI-2115435495920681097/" title="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)"><img class="post-bg" src="/images/2115435495920681097-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/10/28/DrRabbitAI-2115435495920681097/" title="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)">How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-10-28T21:28:19.000Z" title="发表于 2026-10-28 21:28:19">2026-10-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Run the same prompt 10 times and you get 10 different figures. Arrows point the wrong way, labels come and go, and none of them is quite usable. There’s a deeper problem too. Most of us can tell our figures look like PowerPoint clip art next to the ones in Nature or Cell, but we can’t say exactly why. And if you can’t name the difference, you can’t fix it in a prompt. Today I want to share an open-source repo that solves both: free prompt temp...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/10/26/chenke20266-2114632753954099609/" title="Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering "><img class="post-bg" src="/images/2114632753954099609-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering "></a></div><div class="recent-post-info"><a class="article-title" href="/2026/10/26/chenke20266-2114632753954099609/" title="Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering ">Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering </a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-10-26T16:18:31.000Z" title="发表于 2026-10-26 16:18:31">2026-10-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Most people give their Grok bot one job: everything Research. Ideas. Code. Launch copy Then the bot fails So they rewrite the prompt They add rules in CAPS LOCK They paste a 3,000-word “master instruction” The bot still invents numbers It still skips the tests It still says DONE when nothing is done The problem is not Grok The problem is everything around Grok That layer has a name: the harness And on Grok Bot, you build it yourself  The pro...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/10/25/chenke20266-2114382637884379179/" title="Polymarket 量化交易全过程：从公开成交到无人值守"><img class="post-bg" src="/images/2114382637884379179-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Polymarket 量化交易全过程：从公开成交到无人值守"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/10/25/chenke20266-2114382637884379179/" title="Polymarket 量化交易全过程：从公开成交到无人值守">Polymarket 量化交易全过程：从公开成交到无人值守</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-10-25T23:44:38.000Z" title="发表于 2026-10-25 23:44:38">2026-10-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  这篇写给想用数据和 AI 在预测市场上做系统性交易的人。它不走”某人是天才”的叙事，只讲一条可以复制的路径：从公开成交里提出假设，用统计检验把它杀死或留下，最后交给一个设好额度、不需要你逐笔确认的程序去跑。 先讲清它和永续合约那套的区别——直接照抄指标公式，会亏钱。 0 · 三条铁律一、事实是代码算的，不是模型说的。 概率、流动性、结算规则，必须来自可复现的计算。LLM 可以给建议，不能给数字。 二、缺数据就跳过。 字段缺失、规则读不懂、结算源不明——不猜，直接排除。 三、跳过是终局。 同一个样本反复调参直到”通过”，等于自己给自己发奖。  1 · 预测市场的数学：价格就是概率一个二元市场有 YES 和 NO 两种份额，价格在 0 到 1 之间，价格约等于市场隐含概率。以 c 买入 1 份 YES，结算为 YES 得 1 美元，否则得 0。 所以收益是非对称的：买在 0.30，赢了是 +233%，输了是 −100%。没有杠杆、没有强平、没有资金费——但也没有”下一根 K 线”给...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/10/22/chenke20266-2113293947422544121/" title="扫描 验证 执行 退出 构建一个GROK机器人交易平台"><img class="post-bg" src="/images/2113293947422544121-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="扫描 验证 执行 退出 构建一个GROK机器人交易平台"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/10/22/chenke20266-2113293947422544121/" title="扫描 验证 执行 退出 构建一个GROK机器人交易平台">扫描 验证 执行 退出 构建一个GROK机器人交易平台</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-10-22T23:38:34.000Z" title="发表于 2026-10-22 23:38:34">2026-10-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  交易台上最好的BOT，从来不下单。它的唯一工作是说“不”。 大多数人第一次做交易机器人时，都会把所有事塞进一个提示词：找币、检查、买入、卖在高点。前几天可能有点效果，但很快就会买入一个已经死掉的币，然后你完全分不清是提示词哪一步出了问题。 真正的解决办法不是换更聪明的模型，而是把交易拆成一个“交易台”。每笔交易都必须走完四个固定步骤：SCAN（扫描）→ VERIFY（验证）→ EXECUTE（执行）→ EXIT（退出）。每个步骤由不同的角色负责，没有人能跳过，也没有“就这一次”的例外。 在一个正常运转的交易台上，绝大多数任务最终都会以“跳过”结束。扫描器每天能找到几百个交易对，验证环节会免费淘汰掉绝大部分，真正留下来的少数币再根据当前余额决定仓位大小。小交易始终保持小规模，赢的才会复利。 截图里那几笔交易只是结果。真正重要的是背后那套让大部分交易保持小规模、甚至直接跳过的系统。 怎么使用这套框架 打开你的 Grok Bot，把整篇文章贴进去，然后说：  在 &#x2F;work...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/09/28/CatalystMkts_-2104570589184770089/" title="man made fire"><img class="post-bg" src="/images/2104570589184770089-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="man made fire"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/09/28/CatalystMkts_-2104570589184770089/" title="man made fire">man made fire</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-09-28T21:55:04.000Z" title="发表于 2026-09-28 21:55:04">2026-09-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="content"> 本文转载自 X 博主 @CatalystMkts_（catalyst） 的长文，原文链接，版权归原作者所有。  were you paying attention? did you catch it? last friday, we announced our launch on Robinhood Chain via X.attached to the post was a video of a lit match.a subtle clue for what was about to happen. 57 seconds later, @RobinhoodCrypto reposted it. 1.3 seconds after the repost, a market on catalyst had drained its fuse pool and converted its liquidity to $CATALYST in a single transaction. 17 traders benefited from the catalyst and were im...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/08/20/chenke20266-2090130749768786050/" title="Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)"><img class="post-bg" src="/images/2090130749768786050-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/08/20/chenke20266-2090130749768786050/" title="Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)">Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-08-20T01:36:18.000Z" title="发表于 2026-08-20 01:36:18">2026-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="content"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Are you unsure whether to read this article? Well, take a look below: **I don’t think you have any more questions XD**@bot  is something that will literally change your life, and this step-by-step guide will show you exactly how to do it! **before the alpha -  subscribe to my substack for more fresh alpha - **https://substack.com/@0xcodila According to the official Grok Bot page, Bots can operate from their own computers, sign in to your too...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/05/25/Mikocrypto11-2058857976786764062/" title="Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略"><img class="post-bg" src="/images/2058857976786764062-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/05/25/Mikocrypto11-2058857976786764062/" title="Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略">Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-05-25T10:29:27.000Z" title="发表于 2026-05-25 10:29:27">2026-05-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/AI-%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%AE%9E%E8%B7%B5/">AI 工具与实践</a></span></div><div class="content"> 本文转载自 X 博主 @Mikocrypto11（0x_Miko） 的长文，原文链接，版权归原作者所有。  2025–2026 年，Polymarket 上的交易 bot 已经创造了超过 6000 万美元利润。 其中 77%，来自同一个市场： Crypto UP&#x2F;DOWN 更具体一点，是 BTC Up&#x2F;Down 这类短周期加密市场。  这篇文章讲的不是简单的“AI 自动交易”概念，也不是让你盲目跟单某个 bot。  它真正想拆的是：  为什么 BTC 5 分钟 Up&#x2F;Down 市场会长期存在结构性低效？ 这些 bot 到底在吃什么 edge？ 以及如何用 Hermes + Atomic + Claude Opus + Polymarket CLOB v2，搭建一个可以持续复盘、持续调整参数、具备自学习能力的 BTC 交易代理。   01｜机会在哪里？为什么是 BTC Up&#x2F;Down 市场？Polymarket 上的 BTC 5 分钟 Up&#x2F;Down 市场，是预测市场里结构性低效最明显的板块之一，大多数人交易这类市场，依靠的是情绪...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI-%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%AE%9E%E8%B7%B5/"><span class="card-category-list-name">AI 工具与实践</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/"><span class="card-category-list-name">交易策略</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"><span class="card-category-list-name">行业观察</span><span class="card-category-list-count">19</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/xueyu1125/" style="font-size: 1.3em; color: #99a1ac">@xueyu1125</a> <a href="/tags/Nyxera0x/" style="font-size: 1.1em; color: #999">@Nyxera0x</a> <a href="/tags/qingj1314/" style="font-size: 1.2em; color: #999da3">@qingj1314</a> <a href="/tags/Seramikimiki/" style="font-size: 1.2em; color: #999da3">@Seramikimiki</a> <a href="/tags/waveking1314/" style="font-size: 1.2em; color: #999da3">@waveking1314</a> <a href="/tags/CatalystMkts/" style="font-size: 1.1em; color: #999">@CatalystMkts_</a> <a href="/tags/DrRabbitAI/" style="font-size: 1.5em; color: #99a9bf">@DrRabbitAI</a> <a href="/tags/chenke20266/" style="font-size: 1.4em; color: #99a5b6">@chenke20266</a> <a href="/tags/Mikocrypto11/" style="font-size: 1.1em; color: #999">@Mikocrypto11</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/11/">
+            <span class="card-archive-list-date">
+              十一月 2026
+            </span>
+            <span class="card-archive-list-count">22</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/10/">
+            <span class="card-archive-list-date">
+              十月 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/09/">
+            <span class="card-archive-list-date">
+              九月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/08/">
+            <span class="card-archive-list-date">
+              八月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/05/">
+            <span class="card-archive-list-date">
+              五月 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-13T01:34:42.924Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

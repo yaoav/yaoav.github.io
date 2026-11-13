@@ -1,0 +1,134 @@
+/* ===== 阅读排版优化 ===== */
+
+/* 正文容器宽度与行距 */
+#article-container {
+  font-size: 16.5px;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+  color: #2c2f35;
+}
+
+[data-theme="dark"] #article-container {
+  color: #d6d8dd;
+}
+
+/* 段落间距 */
+#article-container p {
+  margin: 1.15em 0;
+  text-align: justify;
+}
+
+/* 二级标题：左侧色条 */
+#article-container h2 {
+  font-size: 1.32em;
+  margin: 2.2em 0 1em;
+  padding: 0.25em 0 0.25em 0.65em;
+  border-left: 4px solid #4a90d9;
+  border-bottom: none;
+  background: linear-gradient(90deg, rgba(74, 144, 217, 0.07), transparent 70%);
+  border-radius: 2px;
+}
+
+#article-container h3 {
+  font-size: 1.13em;
+  margin: 1.8em 0 0.8em;
+  color: #1f6fb2;
+}
+
+[data-theme="dark"] #article-container h3 {
+  color: #7cb3e0;
+}
+
+/* 引用块 */
+#article-container blockquote {
+  border-left: 4px solid #4a90d9;
+  border-radius: 0 6px 6px 0;
+  background: rgba(74, 144, 217, 0.06);
+  padding: 1em 1.2em;
+  margin: 1.4em 0;
+  color: #4a5560;
+}
+
+[data-theme="dark"] #article-container blockquote {
+  color: #b8bcc4;
+  background: rgba(124, 179, 224, 0.08);
+}
+
+/* 图片：圆角 + 阴影 */
+#article-container img {
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+  margin: 1.6em auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* 表格 */
+#article-container table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+#article-container table th {
+  background: rgba(74, 144, 217, 0.12);
+  font-weight: 600;
+}
+
+/* 行内代码 */
+#article-container p code {
+  background: rgba(74, 144, 217, 0.10);
+  color: #1f6fb2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+[data-theme="dark"] #article-container p code {
+  color: #8ec2ea;
+  background: rgba(124, 179, 224, 0.14);
+}
+
+/* 分隔线 */
+#article-container hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(74, 144, 217, 0.35), transparent);
+  margin: 2.2em 0;
+}
+
+/* 列表间距 */
+#article-container ul,
+#article-container ol {
+  padding-left: 1.6em;
+}
+
+#article-container li {
+  margin: 0.45em 0;
+}
+
+/* 文章标题字体 */
+#page-header.post-bg #post-info .post-title {
+  font-size: 1.85em;
+  line-height: 1.45;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* 首页卡片轻微悬浮 */
+.recent-post-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.recent-post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.10);
+}
+
+/* 桌面端正文区略宽，阅读更舒展 */
+@media (min-width: 1200px) {
+  #content-inner.layout #article-container,
+  #content-inner.layout.post {
+    max-width: 100%;
+  }
+}

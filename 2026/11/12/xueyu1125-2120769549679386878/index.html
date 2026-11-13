@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/12/xueyu1125-2120769549679386878/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120769549679386878-cover.jpg">
+<meta property="article:published_time" content="2026-11-12T14:43:57.000Z">
+<meta property="article:modified_time" content="2026-11-12T10:39:06.945Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@xueyu1125">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120769549679386878-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件",
+  "url": "https://yaoav.github.io/2026/11/12/xueyu1125-2120769549679386878/",
+  "image": "https://yaoav.github.io/images/2120769549679386878-cover.jpg",
+  "datePublished": "2026-11-12T14:43:57.000Z",
+  "dateModified": "2026-11-12T10:39:06.945Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/12/xueyu1125-2120769549679386878/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@xueyu1125（雪瑜）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120769549679386878">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个开关，就能让 R1 把一道难题拆开来想。到了同年 12 月，DeepSeek-V3.2 又多了一项本领：它可以一边推理，一边调用工具，拿到结果再决定下一步。</p>
+<p>模型能判断「我得先看一眼文件」，可谁来把文件打开，把内容交给它？这就是 <strong>DeepSeek Harness</strong> 的用处。2026 年，深度求索先把这套连接模型和工具的工作环境开放给开发者试用，后来又推出了 Mac 和 Windows 桌面端。现在，打开桌面应用就能选文件夹、看模型做了哪些修改，也能给它装插件，添上自己常用的功能。</p>
+<h3 id="01｜先分清：模型、Harness、工作区"><a href="#01｜先分清：模型、Harness、工作区" class="headerlink" title="01｜先分清：模型、Harness、工作区"></a>01｜先分清：模型、Harness、工作区</h3><p>平时我把一段话贴到 DeepSeek 聊天网页里，让它改个标题。换成这次的任务，我想说的是：「原稿在这个文件夹里，读一下。结果另存一份，原稿别动。」</p>
+<p>这里分了三件事：<strong>模型</strong>读懂材料，决定怎么改；<strong>Harness</strong> 提供读写文件等工具，也负责给你看它做过什么；<strong>工作区</strong>就是你选给它干活的那个文件夹。文件在本机，用在线模型分析时，参与分析的内容仍会发给模型服务。第一次练手，找两行公开素材就行。</p>
+<p><img src="/images/HW5oj7db0AA5C_1.jpg" alt="HW5oj7db0AA5C_1"></p>
+<p>白纸是原稿，黄卡是结果。打开同一个文件夹，两份都在。</p>
+<p>把这三件事对到界面上，就容易找入口了。下面是本机 Web 版的实际首页，桌面版也能按这些入口找。</p>
+<p><img src="/images/HW5oj7maYAAS9ZH.jpg" alt="HW5oj7maYAAS9ZH"></p>
+<ul>
+<li><strong>左侧导航</strong>：点「新会话」开始一件事；「插件」用来安装、启用扩展；「自动化任务」管理定时任务。设置在左下角「更多」里。</li>
+<li><strong>左侧工作区和会话列表</strong>：文件夹对应工作区，下面挂着这个工作区的会话。后面读素材、存选题卡，都先确认选中了哪个文件夹。</li>
+<li><strong>中间会话区</strong>：发出任务后，这里显示你的要求、模型回复和读写文件等执行记录。新会话还没开始时，就先显示欢迎语和输入框。</li>
+<li><strong>输入框及周围控件</strong>：上方选工作区和「标准模式」等 Agent 模式；左下角「工作区内修改」管理这次任务的访问权限；右下角选模型。输入 &#x2F; 调技能，输入 @ 引用文件或对话。</li>
+</ul>
+<p><img src="/images/HW5olF-asAAM2IB.jpg" alt="HW5olF-asAAM2IB"></p>
+<p><strong>右侧是文件查看区。</strong> 上图是后文选题插件的实测结果：左边保留会话，右边打开生成的 Markdown。点击会话中的文件链接，就能查看内容；右侧栏收起来时，可以从右上角展开。任务跑完，我会在这里对照原要求，核对它到底写了什么。</p>
+<p>下面就从这两份文件练起：先装好 Harness，让它读原稿、另存一张卡，再用现成的插件把卡片排成网页。等这几步走通，我们再做自己的选题插件：让 Grok Bot 从热帖评论里筛出有内容的回复，交给 Harness 里的模型判断，哪条读者提问值得单独写一篇。</p>
+<h3 id="02｜安装-Harness：桌面版，或安装-dsh-启动-Web-版"><a href="#02｜安装-Harness：桌面版，或安装-dsh-启动-Web-版" class="headerlink" title="02｜安装 Harness：桌面版，或安装 dsh 启动 Web 版"></a>02｜安装 Harness：桌面版，或安装 dsh 启动 Web 版</h3><p><strong>桌面版最省事。</strong> 到 DeepSeek Harness 官网选「下载桌面端」。Windows 选 64 位版本；Mac 在苹果菜单的「关于本机」里看芯片，Apple M 系列选 Apple 芯片版。装好后打开 Harness，在欢迎页用自己的 DeepSeek 账号登录；手里已经有 DeepSeek API Key 的，也可以选「添加 API Key」。能在新会话里选到模型，就可以往下走了。</p>
+<p>想用本机 Web 版，就安装 <strong>dsh</strong>，也就是 DeepSeek Harness 的命令行程序。装好后，用 dsh web 启动服务，再从浏览器操作。下面按本文实测的 0.2.2-rc.1 版本走一遍。</p>
+<p><strong>第一步：装 Node.js，确认终端能找到它。</strong> 从 Node.js 官网安装 24.9.0 或更高版本，npm 会一并安装。这是 dsh 声明的运行要求。装完重新打开终端：Mac 按 Command+空格 搜「终端」；Windows 在开始菜单搜「命令提示符」。逐行输入：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>两条都能显示版本号，再往下走。node -v 如果还是旧版本，先检查刚装的 Node.js 是否已经生效。</p>
+<p><strong>第二步：安装 dsh，再核对版本。</strong> 在同一个终端执行：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --global @deepseek-ai/dsh@0.2.2-rc.1</span><br><span class="line">dsh --version</span><br></pre></td></tr></table></figure>
+
+<p>第一条会从 npm 下载并安装官方程序，等它执行完成，再运行第二条。看到 0.2.2-rc.1 就说明这次安装的 dsh 已经能用了。我这次实测用的也是这个版本。</p>
+<p><strong>第三步：启动 Web 界面。</strong> 接着输入：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dsh web</span><br></pre></td></tr></table></figure>
+
+<p>浏览器通常会自动打开。没有打开，就复制终端打印的<strong>完整访问地址</strong>，包括地址后面的参数；默认端口是 3080，实际以终端输出为准。服务运行期间留着这个终端。用完按 Ctrl+C 停止；下次重新打开终端，输入 dsh web 即可。官方启动说明</p>
+<p>如果第二步提示 dsh 找不到，先重新打开终端再试。若全局安装报 EACCES 等目录权限错误，也可以改用下面这条命令，由 npx 获取同一版本并启动：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx @deepseek-ai/dsh@0.2.2-rc.1 web</span><br></pre></td></tr></table></figure>
+
+<p>第一次询问是否安装时，输入 y 回车。选这条路线的话，以后也用这条完整的 npx 命令启动。</p>
+<p><strong>第四步：让页面真正能发出任务。</strong> 首次打开，按欢迎页提示登录自己的 DeepSeek 账号，或添加自己的 API Key。走 API 路线时，也可以点左下角「更多 → 设置 → 模型」，填密钥并保存；会按调用消耗 API 余额。回到新会话，在输入框右下角选模型，再按下一节添加、选中自己的工作区。全新的 Web 界面还没选工作区时，输入框不可用。官方 Web 入门 · 模型配置说明</p>
+<p>桌面版和 Web 版选一种就够。后面装插件、开会话，都在你选的那个客户端里做。</p>
+<h3 id="03｜第一次动手：读一份原稿，把结果写回电脑"><a href="#03｜第一次动手：读一份原稿，把结果写回电脑" class="headerlink" title="03｜第一次动手：读一份原稿，把结果写回电脑"></a>03｜第一次动手：读一份原稿，把结果写回电脑</h3><p>在自己的「文档」里新建一个文件夹，叫「选题练习」。用纯文本编辑器在里面存一份 素材.txt。你可以写自己的素材，也可以先写这两行：</p>
+<blockquote>
+<p>本期主题：把采访录音整理成文字。<br>读者留言：一段录音里普通话和粤语混着说，转完以后怎么校对？</p>
+</blockquote>
+<p>回到 Harness，在侧栏「工作区」旁添加文件夹，选中「选题练习」。Web 版也可以从输入框上方展开工作区菜单。然后在这个工作区新开会话，选好模型。</p>
+<p><img src="/images/HW5oluzaEAAjJrf.jpg" alt="HW5oluzaEAAjJrf"></p>
+<p>先别粘贴原文，直接发：<strong>「读一下素材.txt，告诉我读者具体卡在哪里。先别改文件。」</strong> 它能答出「两种语言混着说时怎么校对」，你就知道它读对了。接着发：</p>
+<blockquote>
+<p>在同一文件夹新建「选题卡.md」，只放一个建议标题和那条读者留言的原话。不要改素材.txt。</p>
+</blockquote>
+<p>如果弹出写入确认，核对文件名再允许。现在打开电脑上的「选题练习」：原来的 素材.txt 应该还在，旁边多了 选题卡.md。最后再让它「只把标题改成问句，留言原话不要动」，重新打开文件核对一次。</p>
+<h3 id="04｜先用别人的插件：把刚才那张卡排成一页网页"><a href="#04｜先用别人的插件：把刚才那张卡排成一页网页" class="headerlink" title="04｜先用别人的插件：把刚才那张卡排成一页网页"></a>04｜先用别人的插件：把刚才那张卡排成一页网页</h3><p>接着安装「歸藏设计」，把刚才的选题卡排成网页。</p>
+<p>打开 Harness 侧栏的「插件」，点「添加插件」，在输入框填 dsh-guizang-design，点「安装」，完成后点「立即启用」。如果版本不兼容，先看作者的安装说明和支持版本。</p>
+<p>装好后，侧栏会出现「歸藏设计」。回到刚才的会话，在输入框敲 &#x2F;，选 guizang-page-skill，再告诉它：</p>
+<blockquote>
+<p>把工作区里的选题卡.md 排成一页中文网页。标题放大，读者原话单独成段，不改引语。保存为「选题卡.html」。</p>
+</blockquote>
+<p>等它写完，在文件夹里双击 选题卡.html 看效果。刚才你<strong>安装</strong>的是一款插件，聊天框里<strong>调用</strong>的是它带来的排版技能。接下来我们照这个用法做自己的插件，只给它一条命令。</p>
+<h3 id="05｜自己做个小插件：让它知道什么样的问题值得写"><a href="#05｜自己做个小插件：让它知道什么样的问题值得写" class="headerlink" title="05｜自己做个小插件：让它知道什么样的问题值得写"></a>05｜自己做个小插件：让它知道什么样的问题值得写</h3><p>我给这个插件起名 comment-pitch。希望它干的事很小：每次拿到同一格式的评论，就按同一套标准审题，不用我重新交代「别按点赞排序」「给我看原话」。</p>
+<p>如果你已经在用自己的选题插件，可以直接去第 06 节；调用时用你自己的命令，给 Grok 的文件格式也按你的插件要求来。第一次做，就从这里开始。</p>
+<p>打开「插件」，这次点「添加插件」<strong>右侧的小箭头</strong>，选「让 Agent 创建插件」。在打开的创造模式会话里选自己的工作区。把下面这段作为需求发给它：</p>
+<p><img src="/images/HW5omk7bsAAYgj8.jpg" alt="HW5omk7bsAAYgj8"></p>
+<blockquote>
+<p>帮我做一个本地选题插件，给普通会话加一条命令 &#x2F;comment-pitch，并在我当前用的 Harness 里安装、启用。调用时，让当前模型读取工作区里的 comments.json。里面有一条原帖（post）、采样范围（coverage）、初筛计数（counts）和保留回复（kept）。</p>
+</blockquote>
+<blockquote>
+<p>只用有原话、链接和正确父帖 ID 的直接回复作证据；重复、错串、自动回复和待复核项都不用于选题。先看原帖已经讲过什么，再找读者补出的疑问、反例或新线索。同类问题合并，最多给三个候选。每个写清：谁卡在哪里、哪句原话支撑、先做什么小实验能验证。给出「优先写／先核实／放弃」及理由。</p>
+</blockquote>
+<blockquote>
+<p>把结果写成「选题判断-原帖ID.md」，存到当前工作区，保留输入文件。没有读到评论就写「材料不足」；读到了却没有值得写的问题，就如实说没有。完成后告诉我，在哪里可以调出这条命令。</p>
+</blockquote>
+<p>接下来按创造模式里的提示确认安装和启用。等它说完成，先去「已安装插件」看开关，再回到<strong>普通会话</strong>输入 &#x2F;comment-pitch。能看到、能选中这条技能，才算入口做好了。如果它只回了一段开发说明，就接着说：「请把刚做的插件实际安装到当前客户端，检查为什么普通会话里还看不到这条命令。」官方创造模式演示</p>
+<p><img src="/images/HW5ompUawAAdpXj.jpg" alt="HW5ompUawAAdpXj"></p>
+<h3 id="06｜拿一条真帖子，把流程从头跑到尾"><a href="#06｜拿一条真帖子，把流程从头跑到尾" class="headerlink" title="06｜拿一条真帖子，把流程从头跑到尾"></a>06｜拿一条真帖子，把流程从头跑到尾</h3><p><img src="/images/HW5onS6agAAsjF4.jpg" alt="HW5onS6agAAsjF4"></p>
+<p>中间这一步要自己动手：把 Grok 给的 comments.json 放进 Harness 工作区。</p>
+<p><strong>第一步：把原帖链接给自己的 Grok Bot。</strong> 挑一条和你平时创作方向有关、评论里有人讨论具体用法的 X 帖子。我这次选的是 Avi Chawla 介绍 HarnessRouter 的原帖。在自己的 Grok Bot 对话里贴上链接，再发：</p>
+<blockquote>
+<p>原帖链接：〔换成你自己的链接〕。只看这条原帖，以及最多 30 条能核对父帖的公开直接回复。剔除有明确自动化标识、或作者明确说明由 AI 自动生成的回复。纯吹捧、广告、复述也剔除，理由记为「无新信息」。有具体自动化嫌疑但证据不足的单列待复核。别凭文风、低粉或正文里 @grok 判断作者身份。<br>只保留有具体疑问、可查新线索、带条件的反例或改进建议的回复。返回一个叫 comments.json 的文件：post 写原帖 id、作者 author、链接 url、原文 text；coverage 写实际读到的范围；counts 分别写 reviewed、confirmed_ai、noise、pending、kept 的条数；kept 列表逐条带 id、parent_id、author、url、text 和保留理由 reason。ID 用字符串，原话不改写。不要拿页面显示的回复总数充当已读数，不要替我起标题。</p>
+</blockquote>
+<p>这一步别光看数字。我这次让 Grok 复核了 12 条直接回复：<strong>保留 3 条，5 条没有新信息，4 条待复核，能确认是 AI 生成的有 0 条。</strong> 一条问计费方式的回复，因为账号粉丝少、简介提到 Agent，被放进了待复核。问题明明很具体，所以我后来在指令里补上了上面那句话。这里的计数是当时的原始结果。</p>
+<p><strong>第二步：把 Grok 的文件交给小插件。</strong> 手动下载 Grok 发回的 comments.json。给这条帖子单独建一个文件夹，把文件放进去；回到 Harness，把这个文件夹选为工作区，新开普通会话，选好模型。输入 &#x2F;comment-pitch，从候选中选中它，再发：</p>
+<blockquote>
+<p>分析当前工作区的 comments.json，把值得写的问题和评论依据写进选题卡。不要改原文件。完成后告诉我文件名和首选题。</p>
+</blockquote>
+<p><strong>第三步：打开结果，回到原话验一次。</strong> 这次小插件用官方 deepseek-flash 实测，执行记录显示它依次加载技能、读文件、写文件，用时约 77 秒。跑的是同版本 Harness 的命令行模式。打开工作区，用这条原帖时能找到 选题判断-2113954302901256597.md；换自己的帖子，文件名末尾也会换成对应的原帖 ID。</p>
+<p>我的卡片把这位读者的追问排在第一。他问 “what’s the advantage here?” 往后读才知道，他已经在 Grok Bot 的机器上跑 Claude Code CLI，也在浏览器里用 Claude 做研究。原帖告诉他「现在能接哪些工具」，他想知道的却是「我的办法已经能用，换了能省哪一步」。</p>
+<p>这篇我会写成：<strong>《已经能跑 Claude Code，还要不要接 HarnessRouter？》</strong> 拿同一个小任务各做一次，对照多配了什么、省了什么，再下结论。另一条评论建议让重试事件带上审批 ID，那只说明有人想这样排障。没有查过实际记录，还不能把标题写成「这个工具的审批会丢」。</p>
+<p>你也可以给小插件做个反向检查：另建一个工作区，放入同格式的文件，让保留列表为空、各项计数都为 0，并注明「本次未读到回复」。同一条命令应该告诉你材料不足。我实测时它确实没有硬编选题。下次换一条热帖，重复本节三步就好。</p>
+<h3 id="07｜如果给朋友用，这套流程也能做成一个面板"><a href="#07｜如果给朋友用，这套流程也能做成一个面板" class="headerlink" title="07｜如果给朋友用，这套流程也能做成一个面板"></a>07｜如果给朋友用，这套流程也能做成一个面板</h3><p>我自己用一条斜杠命令就够了。换成给朋友用，最有用的改动是把两个动作摆到眼前：<strong>先看 Grok 留下了什么，再决定要不要让模型分析。</strong> 下面是同一套流程做成「评论选题台」之后的实拍。</p>
+<p><img src="/images/HW5on7raIAAlYkA.jpg" alt="HW5on7raIAAlYkA"></p>
+<p>在侧栏打开选题台，导入自己的 comments.json。上面是筛选计数，下面是入选原话。导入只做核对；点右上角「分析选题」，才会调用模型。</p>
+<p><img src="/images/HW5ooJ2bMAAQYF5.jpg" alt="HW5ooJ2bMAAQYF5"></p>
+<p>这次从面板发起的分析约 24 秒，左边出现 1 个「优先写」和 2 个「先核实」。点另一张卡，右侧的理由、验证办法和原评论跟着换；点「导出选题卡」就能把这批判断带走。</p>
+<h3 id="📙-历史文章"><a href="#📙-历史文章" class="headerlink" title="📙 历史文章"></a>📙 历史文章</h3><p>Grok Bot 和 WorkBuddy 双向打通保姆级教程: 实操微信聊天记录案例</p>
+<p>Grok Bot 怎么用才顺手？拆解 poteto 的使用指南</p>
+<p>Grok Bot Pages 新手保姆级教程：报告、备忘录、仪表盘实操</p>
+<p>X 上 Grok Bot 必读文章合集：9 个分类，24 篇文章</p>
+<p>揭秘 REA 爆火的背后，为何十天从几百到二十万 + Star</p>
+<p>REA 保姆级上手教程: Codex 实操官方案例</p>
+<p>把自己的推文做成个人画像网站</p>
+<p>Muse 上手保姆级教程：从登录到完成第一个任务</p>
+<p>为什么是 Muse：Meta 想接手的，不只是你的待办事项</p>
+<p>别再急着买API, 用 CLIProxyAPI 盘活你的 AI 订阅</p>
+<p>新版 Codex 桌面端：值得关注的五个重点</p>
+<p>我把 JEV、GrokBot、X 玩到了一起</p>
+<p>深度调研 Grok Bot 自带云电脑：配置怎么样，能做什么，能当服务器用吗？</p>
+<p>Cursor + Grok Bot + pstack，真正的 AI 软件工厂开始出现了</p>
+<p>用 SSH 连上 Grok Bot 服务器, 保姆级教程</p>
+<p>如果这篇教程对你有点帮助，欢迎 关注 + 收藏 + 转发</p>
+<p>持续分享 AI 工具使用经验和心得,  ⏩ 关注 @0xlangeai</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/12/xueyu1125-2120769549679386878/">https://yaoav.github.io/2026/11/12/xueyu1125-2120769549679386878/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/xueyu1125/">@xueyu1125</a></div><div class="post-share"><div class="social-share" data-image="/images/2120769549679386878-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img class="cover" src="/images/2120821145335447881-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不一样的美感。 这几年的 AI 产品大多离不开宏大的科技感的设计，从名字来看就很直观。GPT是Generative Pre-trained Transformer的缩写，直译是生成式预训练变换器，名字就是一份直观的技术说明书，带着OpenAI早期浓厚的工程师气质；Gemini取自拉丁语的双子，这个名字对应Google Brain和DeepMind两支团队的合并，同时也呼应了NASA当年为登月铺路的双子座计划；Grok来自海因莱因1961年的科幻小说《异乡异客》，火星人用这个词表示彻底、深入骨髓地理解某样东西，马斯克借它来表达模型要真正读懂世界，也蕴含了他本人对于火星，对于宇宙的无限畅想。 Claude是向信息论之父克劳德·香农致敬，Anthropic本身这个有些生僻的单词是”与人类有关”的意思，模型的命名来自诗歌体裁：Ha...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img class="cover" src="/images/2120729388140695705-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  假设你刚开完一场活动筹备会，你把讨论记录交给 AI，希望它整理出一份会后行动清单：谁负责什么？什么时候交付？还有哪些事没定。这件事看起来只是做个表格真正需要判断的却是：“报名表我来做”算明确承诺、“要不做张海报”仍然只是建议；缺少会议日期时也不能把“周五”擅自换成某月某日。 这些判断如果经常用到，就值得整理成一份方法交给 AI 反复使用。下面先用“菜谱”说明 Skill 是什么，再拆解 Matt Pocock 的三个代表案例，理解方法怎样影响产物。最后一起写出“会议记录转行动清单”的 Skill，并用实际输出检查它是否有用。 **通过我的判断：Matt 最值得学的，是把做事顺序、判断条件和验收标准写成可复用的方法。Skill不是万能的，核心还是对于标准工作方法的高度抽象成一个长期复用的内容。**所以后面我把热度、方法和结果分别讲清楚，你也可以据此判断自己的经验值不值得写成 Skill。 一、先把 Skill 想成一份菜谱模型像厨师、工具像灶具、输入材料像食材、**Skill 则像菜谱。*...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-10</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img class="cover" src="/images/2120729388140695705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  假设你刚开完一场活动筹备会，你把讨论记录交给 AI，希望它整理出一份会后行动清单：谁负责什么？什么时候交付？还有哪些事没定。这件事看起来只是做个表格真正需要判断的却是：“报名表我来做”算明确承诺、“要不做张海报”仍然只是建议；缺少会议日期时也不能把“周五”擅自换成某月某日。 这些判断如果经常用到，就值得整理成一份方法交给 AI 反复使用。下面先用“菜谱”说明 Skill 是什么，再拆解 Matt Pocock 的三个代表案例，理解方法怎样影响产物。最后一起写出“会议记录转行动清单”的 Skill，并用实际输出检查它是否有用。 **通过我的判断：Matt 最值得学的，是把做事顺序、判断条件和验收标准写成可复用的方法。Skill不是万能的，核心还是对于标准工作方法的高度抽象成一个长期复用的内容。**所以后面我把热度、方法和结果分别讲清楚，你也可以据此判断自己的经验值不值得写成 Skill。 一、先把 Skill 想成一份菜谱模型像厨师、工具像灶具、输入材料像食材、**Skill 则像菜谱。*...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img class="cover" src="/images/2120865290703552993-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前 100 个几乎没赚到钱。小游戏想赚钱，靠的是能一直试下去，而每试一次都要付一次模型账单。 这次我一行游戏代码没写，用新加坡 FUMO Lab 的融合模型 Fusion Max 2.0，做出了一款能玩的** 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》**。 先看成品，让人惊喜的是，这个视频也是Fusion Max 纯代码做的： **从写设计、写代码到连改四轮，只花了 $5.77。**同样的用量按官方公开价测算，换成 Claude Fable 5.1 或 GPT-6 Astra 要约 $14.92，是它的 2.6 倍；做 100 个原型，差出 900 多美元。 这篇把整个过程摊开：两段提示词原文、四轮修改各改了什么、17 次调用的成本明细、接入的 4 步，还有上 CrazyGames 和微信小游戏各要过哪些关。 想自己试的话，...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#01%EF%BD%9C%E5%85%88%E5%88%86%E6%B8%85%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81Harness%E3%80%81%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">1.</span> <span class="toc-text">01｜先分清：模型、Harness、工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02%EF%BD%9C%E5%AE%89%E8%A3%85-Harness%EF%BC%9A%E6%A1%8C%E9%9D%A2%E7%89%88%EF%BC%8C%E6%88%96%E5%AE%89%E8%A3%85-dsh-%E5%90%AF%E5%8A%A8-Web-%E7%89%88"><span class="toc-number">2.</span> <span class="toc-text">02｜安装 Harness：桌面版，或安装 dsh 启动 Web 版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03%EF%BD%9C%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8A%A8%E6%89%8B%EF%BC%9A%E8%AF%BB%E4%B8%80%E4%BB%BD%E5%8E%9F%E7%A8%BF%EF%BC%8C%E6%8A%8A%E7%BB%93%E6%9E%9C%E5%86%99%E5%9B%9E%E7%94%B5%E8%84%91"><span class="toc-number">3.</span> <span class="toc-text">03｜第一次动手：读一份原稿，把结果写回电脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04%EF%BD%9C%E5%85%88%E7%94%A8%E5%88%AB%E4%BA%BA%E7%9A%84%E6%8F%92%E4%BB%B6%EF%BC%9A%E6%8A%8A%E5%88%9A%E6%89%8D%E9%82%A3%E5%BC%A0%E5%8D%A1%E6%8E%92%E6%88%90%E4%B8%80%E9%A1%B5%E7%BD%91%E9%A1%B5"><span class="toc-number">4.</span> <span class="toc-text">04｜先用别人的插件：把刚才那张卡排成一页网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05%EF%BD%9C%E8%87%AA%E5%B7%B1%E5%81%9A%E4%B8%AA%E5%B0%8F%E6%8F%92%E4%BB%B6%EF%BC%9A%E8%AE%A9%E5%AE%83%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%E5%80%BC%E5%BE%97%E5%86%99"><span class="toc-number">5.</span> <span class="toc-text">05｜自己做个小插件：让它知道什么样的问题值得写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06%EF%BD%9C%E6%8B%BF%E4%B8%80%E6%9D%A1%E7%9C%9F%E5%B8%96%E5%AD%90%EF%BC%8C%E6%8A%8A%E6%B5%81%E7%A8%8B%E4%BB%8E%E5%A4%B4%E8%B7%91%E5%88%B0%E5%B0%BE"><span class="toc-number">6.</span> <span class="toc-text">06｜拿一条真帖子，把流程从头跑到尾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07%EF%BD%9C%E5%A6%82%E6%9E%9C%E7%BB%99%E6%9C%8B%E5%8F%8B%E7%94%A8%EF%BC%8C%E8%BF%99%E5%A5%97%E6%B5%81%E7%A8%8B%E4%B9%9F%E8%83%BD%E5%81%9A%E6%88%90%E4%B8%80%E4%B8%AA%E9%9D%A2%E6%9D%BF"><span class="toc-number">7.</span> <span class="toc-text">07｜如果给朋友用，这套流程也能做成一个面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%99-%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0"><span class="toc-number">8.</span> <span class="toc-text">📙 历史文章</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路） | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/12/Seramikimiki-2120821145335447881/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120821145335447881-cover.jpg">
+<meta property="article:published_time" content="2026-11-12T18:08:58.000Z">
+<meta property="article:modified_time" content="2026-11-12T16:23:09.693Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Seramikimiki">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120821145335447881-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）",
+  "url": "https://yaoav.github.io/2026/11/12/Seramikimiki-2120821145335447881/",
+  "image": "https://yaoav.github.io/images/2120821145335447881-cover.jpg",
+  "datePublished": "2026-11-12T18:08:58.000Z",
+  "dateModified": "2026-11-12T16:23:09.693Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/12/Seramikimiki-2120821145335447881/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Seramikimiki（Sera）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120821145335447881">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不一样的美感。</p>
+<p>这几年的 AI 产品大多离不开宏大的科技感的设计，从名字来看就很直观。<br>GPT是Generative Pre-trained Transformer的缩写，直译是生成式预训练变换器，名字就是一份直观的技术说明书，带着OpenAI早期浓厚的工程师气质；<br>Gemini取自拉丁语的双子，这个名字对应Google Brain和DeepMind两支团队的合并，同时也呼应了NASA当年为登月铺路的双子座计划；<br>Grok来自海因莱因1961年的科幻小说《异乡异客》，火星人用这个词表示彻底、深入骨髓地理解某样东西，马斯克借它来表达模型要真正读懂世界，也蕴含了他本人对于火星，对于宇宙的无限畅想。</p>
+<p>Claude是向信息论之父克劳德·香农致敬，Anthropic本身这个有些生僻的单词是”与人类有关”的意思，模型的命名来自诗歌体裁：Haiku 是俳句、Sonnet 是十四行诗、Opus 是大型作品，从最短的俳句，到最宏大的作品。从名字到Claude的设计，<strong>处处体现了人本主义，就像一位有人文底色的科学工作者，博学而克制。</strong></p>
+<p><img src="/images/HWVlLD7aMAAK9zV.jpg" alt="HWVlLD7aMAAK9zV"></p>
+<h3 id="一、减法"><a href="#一、减法" class="headerlink" title="一、减法"></a>一、减法</h3><p>大多数设计做高级感，靠的是往画面上叠效果，Anthropic 的插画却在做减法。黑线只占画面很小的一部分，大半张画面都留给了底色，一架天平就是一根横线、一个三角形和几个圆。</p>
+<p>过去繁复之所以显得高级，是因为每多一层内容都要多付一份人力，昂贵本身构成了它的价值。如今一句提示词就能换来一层光影一堆设计，Opus 5.5 那些令人惊艳的网页也说明，精致的画面正在变得唾手可得。<strong>叠加的成本趋近于零之后，克制才重新变得稀缺。</strong></p>
+<p>留白的传统由来已久。书法讲计白当黑，把空白与笔墨一并算进章法；南宋马远作山水常取一角，余处多是水和天，世称马一角。插画里的底色也在这个道理之内，它同那些图形一起构成了画面。</p>
+<p>图为马远《寒江独钓图》</p>
+<p><img src="/images/HWnPqeKbgAABXLU.jpg" alt="HWnPqeKbgAABXLU"></p>
+<p>只是留白和简陋相去不远，分别在于留下来的物件认不认得出。倘若那本笔记本被简化成一个抽象的方块，读者无从判断它指向什么，画面便空洞了。现在它只有一串线圈和一张纸，却一眼就能认出来。</p>
+<h3 id="二、颜色"><a href="#二、颜色" class="headerlink" title="二、颜色"></a>二、颜色</h3><p>一张插画通常只有三种颜色，一个底色，黑色的线和米白的色块，底色在橄榄绿、陶土橙、灰紫和天蓝之间更换。</p>
+<p><img src="/images/HWnd5Ulb0AAZTuN.jpg" alt="HWnd5Ulb0AAZTuN"></p>
+<p>AI 产品的颜色大多是发光的。Gemini 用四色渐变，Codex 用蓝紫渐变，颜色在边缘晕开，像从屏幕里透出来的光；Google 的标志则是红黄蓝绿四种纯色，饱满而明亮。这些都是属于屏幕的颜色，科技感也由此而来。<br>Claude 的图标则只是一块陶土橙，中间一个米白的星芒，陶土橙近于烧过的陶，米白近于纸，都是现实里摸得到的材料。这和它的名字是同一个方向，都在往人的方向靠。这类橙色，是一种收着的、暖的、不刺眼的橙。</p>
+<p>这套色给我的联想，一头是文艺复兴时期那种沉静、克制的色彩表现，一头是莫兰迪的高级灰美学:所有颜色都像蒙了一层薄灰，彼此协调，不抢也不吵。</p>
+<p><img src="/images/HWnhQz8b0AAjTml.jpg" alt="HWnhQz8b0AAjTml"></p>
+<p>鲜艳的颜色是廉价的捷径，<strong>现在克制才是“贵”的门槛</strong>，这一条，我感觉几乎是所有高级视觉的共识。</p>
+<h3 id="三、手绘"><a href="#三、手绘" class="headerlink" title="三、手绘"></a>三、手绘</h3><p>Claude的图案线条像是粗马克笔画出来的，粗细不一，走到转弯处会微微发抖，圆不够圆，方也不够方，和软件里拉出来的标准几何图形差很多，米白色块的边缘也略微有些歪。</p>
+<p>这份拙是有分寸的。抖动只留在墨线和色块的边缘，该对齐的地方却对得很准，线条的末端落在色块的边上，形状之间也很少真的错开。线条是松的，画面却干净，既不显冷，也不至于潦草。</p>
+<p>一家 AI 公司本可以用最精确的矢量图形，它却选了一种看得出手在动的线条，画面背后于是像站着一个人。我想这和 Claude 说话的方式是同一种气质，能力很强，语气却松弛，聪明，但并不端庄。</p>
+<h3 id="四、视觉"><a href="#四、视觉" class="headerlink" title="四、视觉"></a>四、视觉</h3><p>视觉和 Claude 的性格是同一个调性。</p>
+<p>AI 题材的配图常常是发着蓝光的大脑、交错的电路板，或者一张金属质感的机器人面孔，要表现的是科技感和未来，看久了也有些冷峻。Anthropic 处理同样的题材，用的是另一套办法。有一张插画里是一个侧脸剪影，一只手托着下巴，头部是一组用线连起来的圆点，它画的是思考这样复杂的事，笔触却像简笔画；另一张是一棵树，枝头挂着的是一颗颗圆点。<br>抽象的概念被翻译成了日常叫得出名字的物件，朴素到不像一家顶尖 AI 公司的官方设计，却很容易被记住，也亲切。</p>
+<p><img src="/images/HWnlSooawAE5t5E.png" alt="HWnlSooawAE5t5E"></p>
+<p>Claude 说话也是这样。它能处理很难的问题，想得也深，回答却很松弛，不端着，也很少堆砌术语，重点是不谄媚，像一个聪明又好相处的人。</p>
+<p>这份性格是被有心设计过的。<br>2024 年 6 月，Anthropic 专门写过一篇文章讲 Claude 的性格训练，希望它好奇、开放、深思熟虑，说真话但不刻薄，也不会一味顺着对方说话，文章里还明确写到，过分想讨人喜欢并不是一种好的性格。视觉也是如此，它没有用艳丽的颜色和炫目的效果去讨好眼睛，只是把一件事画清楚。视觉和语言于是落在了同一种气质上，聪明，但并不端庄。</p>
+<h3 id="五、那只跨越硅基与碳基的手"><a href="#五、那只跨越硅基与碳基的手" class="headerlink" title="五、那只跨越硅基与碳基的手"></a>五、那只跨越硅基与碳基的手</h3><p><img src="/images/HWbc1aZaIAAFL9v.jpg" alt="HWbc1aZaIAAFL9v"></p>
+<p>Anthropic 的博客封面上，最常出现的就是一只马克笔画的手。讲代码迁移的那篇，手托着一座装着节点树的房子；讲 Base44 的那篇，手拿着一块砖，悬在砖墙的上方；讲如何使用 Cowork 的那篇，两只手放在一张纸上。一只人类的手贯穿AI产品的始终。</p>
+<p>这只手画得并不标准，线条粗细不一，带着墨线的抖动，下面的米白色块边缘也有些歪。这份手感是有分寸的，9 张封面里，真正错位的只有 2 张，其余 7 张边缘都对得很准，锁梁的末端刚好落在锁板的边上。画面也很干净，通常只有一个主体，没有阴影和渐变。</p>
+<p>文章讲的都是 AI 怎么参与人的工作，封面上画的却是人的手。手就像是人自己在做决策，而不是交给 AI，人还保留着自己的表达欲和设计能力。处处体现了“人”的思维与执行，粗糙、克制，但是真实。</p>
+<p>这套插画语言可以追溯到 Geist，一家位于波特兰的设计工作室。Anthropic 还没有公开亮相时，Geist 就开始和创始人合作，前后两年半，一直做到 2023 年年中 Claude 发布。Geist 在案例里说，它要让这套视觉同时带着以人为中心的使命和技术上的工艺，插画则用来强调驱动这家公司的人类价值。</p>
+<p>如今 Anthropic 和 Claude 的品牌表达由内部的 Creative Studio 负责，它在一则招聘信息里写自己在意工艺，亲手制作，也在合适的时候使用 AI，原文是 making things by hand and using AI when it makes sense。</p>
+<p>在这个几乎什么都可以交给 AI 的时代，一家做 AI 的公司却把一只画得并不标准的手留在了封面上。我想，模型会一代代更替下去，可想表达什么，终究是人自己的事，封面上那只手，不过是这件事最朴素的样子。</p>
+<h3 id="如何参考Claude的风格让自己的设计显贵且高级？"><a href="#如何参考Claude的风格让自己的设计显贵且高级？" class="headerlink" title="如何参考Claude的风格让自己的设计显贵且高级？"></a>如何参考Claude的风格让自己的设计显贵且高级？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">请按下面这套设计语言完成我的需求。它适用于任何载体：插画、封面、海报、网页、App 界面、图标、PPT、信息图、摄影和动效。先理解原则，再按载体套用规则。</span><br><span class="line"></span><br><span class="line">一、整体气质</span><br><span class="line"></span><br><span class="line">像一位有人文底色的科学工作者，博学而克制，聪明但不端庄。画面朴素、安静、温暖，有明显的人的痕迹，不追求科技感和炫目感。整体像一份研究机构发布的报告，或一本书里的一页，而不是营销海报、科技发布会或商业模板。</span><br><span class="line"></span><br><span class="line">二、两种视觉语言，按需求选一种</span><br><span class="line"></span><br><span class="line">A. 手绘线条（默认）：纯色底，加粗马克笔画的墨线和米白色块，画一个日常物件和一个动作，常常有一只手在和物件互动。适合文章配图、封面、产品功能说明、图标和轻量的网页插画。</span><br><span class="line"></span><br><span class="line">B. 研究档案拼贴：把旧照片、手写笔记本纸、地形图、刻度尺、网格纸、科学仪器和自然风景拼贴在一起，再叠上几块纯色几何形状（例如带网格线的半圆、矩形）。像实验室档案和博物馆藏品，有纸张、墨迹和印刷的质感。适合品牌主视觉、研究报告、长文头图和官网首屏。</span><br><span class="line"></span><br><span class="line">两种语言可以出现在同一个网站的不同部分，但一个画面只用一种。</span><br><span class="line"></span><br><span class="line">三、五条原则</span><br><span class="line"></span><br><span class="line">减法：每个画面或模块只讲一件事，只有一个视觉主体。大部分面积留给底色或空白，能删的元素都删掉。宁可少一点，也不要满。</span><br><span class="line">颜色少而稳：单个画面最多三种颜色，即一个底色、近黑的线条、米白的色块。整页可以出现多个底色，但每个模块只用一个。鲜的颜色不能深，深的颜色要偏灰，不出现又深又艳的颜色。颜色要像颜料、陶土和纸，不能像屏幕发出的光。</span><br><span class="line">有分寸的手绘：线条像粗马克笔画的，粗细略有变化，略微发抖；色块边缘略歪，像剪纸。但形状之间要对准，线条末端要落在该落的位置。粗糙但不潦草。</span><br><span class="line">一图一动作，日常物件做隐喻：把抽象概念翻译成日常叫得出名字的物件，例如安全用锁，增长用树或台阶，连接用节点和线，思考用侧脸剪影，学习用打开的书。可以画物件本身，但只画最简单的轮廓。AI 主题不画机器人，可以画人的侧脸加几个连成线的节点；网页主题不画电脑，可以画几个模块像积木一样搭起来。只用一个动作表达意思。第二层含义嵌进主物件内部，不要两个图标并排。</span><br><span class="line">人在场：画面要让人感觉背后有一个人在做决定，而不是机器批量生成。手绘语言里，优先画一只手在和物件互动；摄影里，画面里要有真实的人或人留下的痕迹。</span><br><span class="line">四、具体规则</span><br><span class="line"></span><br><span class="line">配色（示例色值，可整体替换成同一逻辑的其他颜色）</span><br><span class="line"></span><br><span class="line">底色任选其一：陶土橙 #C96F4F、橄榄绿 #7D8B63、雾蓝 #6E97BF、灰紫 #C8C6D8、仙人掌青 #B9CEC6、浅珊瑚 #E8CBC8、无花果紫红 #B86580、燕麦色 #E2D9CB</span><br><span class="line">线条和深色背景：近黑 #161615</span><br><span class="line">浅色背景和色块：米白 #F7F5EF，以及略深一档的 #EEEBE3 和 #E6E3D9，用来区分页面背景、卡片和分隔</span><br><span class="line">灰色一律偏暖，从米白到近黑做成一组暖灰，不用冷灰和纯灰</span><br><span class="line">深色方案和浅色方案同样常用：深色区块用近黑底，文字和线条改用米白，强调色只用陶土橙一种</span><br><span class="line">一个画面只选一个底色，选定后不要随意改色或加色。多张图组成系列时，轮换底色，其余规则不变。</span><br><span class="line">点缀色块（可选）</span><br><span class="line"></span><br><span class="line">为了平衡构图，可以加 2 到 4 个很小的色块：手绘圆、小矩形或纸片形状</span><br><span class="line">合计不超过画面面积的 5%，位置错落，不要均匀排列，不要像按钮，不要变成散点</span><br><span class="line">线条和形状</span><br><span class="line"></span><br><span class="line">粗马克笔墨线，粗细略有变化，带轻微抖动，端点圆润</span><br><span class="line">形状不是软件里的标准几何，圆不必正圆，方不必正方</span><br><span class="line">线条要克制，但不必刻意少到只剩一两笔；表达节点网络、多只手等内容时可以多一些</span><br><span class="line">插画最好做成透明底，同一张图可以放在不同底色上使用</span><br><span class="line">不画阴影、高光、描边光晕和纹理堆叠；手绘语言最多加一层很淡的纸张颗粒，拼贴语言可以保留旧纸和印刷的质感</span><br><span class="line">构图</span><br><span class="line"></span><br><span class="line">主体居中或略偏，四周留出大量空白，不画背景场景</span><br><span class="line">同一系列反复使用同一组物件（手、锁、书、树、节点、气泡、灯泡、纸张、台阶），重复带来辨识度</span><br><span class="line">文字和排版</span><br><span class="line"></span><br><span class="line">字体分三类，最好来自同一个字体家族：衬线体用于大标题和长文标题，带书籍和杂志的气质，例如思源宋体、Georgia；无衬线体用于界面、导航、正文和按钮，是用得最多的一类，例如 Inter；等宽字体用于代码、数据和标注，例如 JetBrains Mono</span><br><span class="line">字号层级少，行距宽松，段落之间留白多，像一本书，不像一个仪表盘</span><br><span class="line">浅色背景配近黑文字，深色背景配米白文字，强调色只用一个，而且用得很少</span><br><span class="line">单张封面有标题时，标题是视觉中心，插画退到一侧做辅助；只放主标题，最多加一行副标题；不加栏目标签、Logo、日期、页码、品牌署名和没有意义的英文装饰字</span><br><span class="line">网页里的卡片和列表可以有日期、分类和小图标，用小号浅灰字，放在标题下方或卡片底部</span><br><span class="line">卡片和网格（用于网页、博客、文章列表）</span><br><span class="line"></span><br><span class="line">卡片上半部分是彩色底的插画，下半部分是米白或浅暖灰的文字区，放衬线标题、一行摘要和日期分类</span><br><span class="line">卡片圆角适中，没有阴影或只有极淡的阴影，用底色深浅区分层级</span><br><span class="line">卡片排成两列或三列网格，间距宽，相邻卡片轮换不同底色</span><br><span class="line">界面和动效（用于网页、App）</span><br><span class="line"></span><br><span class="line">按钮和卡片是实心纯色或细线框，圆角适中，不用玻璃拟态、发光和渐变</span><br><span class="line">动效短而轻：淡入、轻微位移，像翻纸，不弹跳、不闪烁</span><br><span class="line">标志或图标可以用缓慢、有机的变形表示加载或思考的状态</span><br><span class="line">插画用作点缀，一个区块最多一张</span><br><span class="line">摄影（用于品牌、海报、视频）</span><br><span class="line"></span><br><span class="line">真实的人和真实的工作环境，例如堆满书和纸的书房、实验室、户外自然</span><br><span class="line">暖色自然光，色彩偏柔和，有轻微的胶片颗粒，像纪录片或档案照片</span><br><span class="line">不用棚拍的科技感画面，不用屏幕光打脸，不用摆拍的商务人物</span><br><span class="line">文案语气（如需配文字）</span><br><span class="line"></span><br><span class="line">简短、准确、松弛，不喊口号，不用感叹号堆情绪</span><br><span class="line">五、按载体套用</span><br><span class="line"></span><br><span class="line">插画、封面、海报：纯色底 + 一个物件 + 一个动作，优先有一只手；横幅也只放一个主体；有标题时标题居中心，插画做辅助</span><br><span class="line">品牌主视觉、研究报告头图：用研究档案拼贴，旧照片和纸张为底，叠一两块纯色几何形状</span><br><span class="line">网页、App：米白和近黑两种区块交替，无衬线正文、衬线标题、大量留白；卡片网格按上面的规则；强调色只出现在一两个关键位置</span><br><span class="line">图标：实心底色块 + 米白或近黑的单一符号，线条略带手绘感</span><br><span class="line">PPT、信息图：一页一个观点；数据图只用底色 + 近黑 + 一个强调色，多组数据时从配色表里依次取色；不用 3D 图表</span><br><span class="line">动效、视频：线条逐笔画出，色块像纸片落下，节奏慢；实拍部分按摄影规则；不用粒子和光效</span><br><span class="line">六、禁止清单</span><br><span class="line"></span><br><span class="line">渐变（尤其是蓝紫渐变和彩虹渐变）、霓虹、发光、玻璃拟态、3D 渲染、金属质感、强阴影、高饱和的深色、冷灰、科技蓝、赛博朋克、电路板、发光大脑、机器人、粒子特效、密集装饰、多个主体并排、复杂信息图、画面里塞满文字、商业模板感、棚拍的科技感人像。</span><br><span class="line"></span><br><span class="line">七、交付前自检</span><br><span class="line"></span><br><span class="line">逐条检查，不符合就改：</span><br><span class="line"></span><br><span class="line">删掉任何一个元素，画面会不会更好？会，就删。</span><br><span class="line">单个画面是否超过三种颜色？是否出现又深又艳的颜色？灰色是不是暖的？</span><br><span class="line">线条是否有手绘感，同时形状对得准？</span><br><span class="line">能否用一句话说出这个画面在讲什么？</span><br><span class="line">看起来更像一本书、一张纸、一份档案，还是一块发光的屏幕？必须是前者。</span><br><span class="line">我的需求</span><br><span class="line"></span><br><span class="line">载体和用途：[封面 / 海报 / 网页 / App 界面 / PPT / 图标 / 摄影 / 动效……]</span><br><span class="line">视觉语言：[手绘线条 / 研究档案拼贴 / 你来选]</span><br><span class="line">尺寸或比例：[5:2 / 16:9 / 4:5 / 3:4 / 9:16 / 不限]</span><br><span class="line">主题：[写主题]</span><br><span class="line">核心表达：[一句话说清楚想表达的意思]</span><br><span class="line">文字：[主标题 / 副标题；不需要文字就写&quot;无&quot;]</span><br><span class="line">底色：[从配色表里选一个，或写&quot;你来选&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>英文短版（给只能读短提示词的出图模型）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">手绘线条： Minimal editorial illustration, one single subject performing one simple action, an everyday object as a metaphor for [CONCEPT], a simple hand-drawn hand interacting with it. Flat solid [terracotta / olive green / dusty blue / muted lavender / sage / oat] background, about 80% empty space. Thick black marker line, slightly wobbly, uneven line weight, hand-drawn but precise registration. Off-white paper-cut shapes with slightly irregular edges. Only three colors: background, near-black line, off-white. Calm, warm, humane, restrained. No gradient, no shadow, no glow, no 3D, no text, no background scenery.</span><br><span class="line"></span><br><span class="line">研究档案拼贴： Editorial collage in the style of a scientific archive about [CONCEPT]: vintage black-and-white or sepia photographs, handwritten notebook paper, topographic map, ruler scales, grid paper, old scientific instruments, layered like a museum archive, with one or two flat solid geometric shapes in muted pink, green or blue overlaid with fine grid lines. Warm paper texture, printed ink feel, calm and intellectual. No gradient, no glow, no 3D, no neon, no text.</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于作者"><a href="#关于作者" class="headerlink" title="关于作者"></a>关于作者</h3><p><strong>Ringo</strong>｜古希腊雕塑肌肉持有者｜二级市场赌徒｜AI 时代手工从业人员</p>
+<p>分享交易与AI技术｜记录普通人可以复制的成长与学习链路</p>
+<p>探索知识与技术的边界｜@RingoDontpanic</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/12/Seramikimiki-2120821145335447881/">https://yaoav.github.io/2026/11/12/Seramikimiki-2120821145335447881/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Seramikimiki/">@Seramikimiki</a></div><div class="post-share"><div class="social-share" data-image="/images/2120821145335447881-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img class="cover" src="/images/2120865290703552993-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前 100 个几乎没赚到钱。小游戏想赚钱，靠的是能一直试下去，而每试一次都要付一次模型账单。 这次我一行游戏代码没写，用新加坡 FUMO Lab 的融合模型 Fusion Max 2.0，做出了一款能玩的** 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》**。 先看成品，让人惊喜的是，这个视频也是Fusion Max 纯代码做的： **从写设计、写代码到连改四轮，只花了 $5.77。**同样的用量按官方公开价测算，换成 Claude Fable 5.1 或 GPT-6 Astra 要约 $14.92，是它的 2.6 倍；做 100 个原型，差出 900 多美元。 这篇把整个过程摊开：两段提示词原文、四轮修改各改了什么、17 次调用的成本明细、接入的 4 步，还有上 CrazyGames 和微信小游戏各要过哪些关。 想自己试的话，...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img class="cover" src="/images/2120769549679386878-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个开关，就能让 R1 把一道难题拆开来想。到了同年 12 月，DeepSeek-V3.2 又多了一项本领：它可以一边推理，一边调用工具，拿到结果再决定下一步。 模型能判断「我得先看一眼文件」，可谁来把文件打开，把内容交给它？这就是 DeepSeek Harness 的用处。2026 年，深度求索先把这套连接模型和工具的工作环境开放给开发者试用，后来又推出了 Mac 和 Windows 桌面端。现在，打开桌面应用就能选文件夹、看模型做了哪些修改，也能给它装插件，添上自己常用的功能。 01｜先分清：模型、Harness、工作区平时我把一段话贴到 DeepSeek 聊天网页里，让它改个标题。换成这次的任务，我想说的是：「原稿在这个文件夹里，读一下。结果另存一份，原稿别动。」 这里分了三件事：模型读懂材料，决定怎么改；Harness 提供读...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/03/Seramikimiki-2117319245180829775/" title="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）"><img class="cover" src="/images/2117319245180829775-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-03</div><div class="info-item-2">2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  如果你高考英语并不优秀、四六级擦边过，已工作多年未碰英语的成年人，还是想在高中就拿到雅思成绩的初中生，那你学雅思的第一步，都应该看这篇。从怎么制定学习计划，到听阅口写四科的详细技巧，手把手教你怎么速通8分。 先来介绍一下自己，我是sera，雅思8.0，雅思工作室创始人，带过上百个同学成功顺利出分。 自己的英语几乎是自学起来的，小镇做题家，语言教育资源贫瘠，自己摸索了很久，走了很多弯路，所以今天想把我用时间、血泪换来的经验，毫无保留地分享给你们。不要钱，如果你觉得有用，麻烦点个关注点个赞就行，这也是我写这篇文章最最真诚的初心。 一、怎么定目标？1、最牛逼的分数配置表 作为久经沙场的8分雅思老师，我敢这么说：你的目标分数定的有多好，你出分就有多快。  很多人不理解，为什么计划的制定会这么重要。 有人说，老师我想拿7分，那我就四科都考7分不就行了吗？我想拿6.5分，我就四科都拿6.5分不就行了吗。有什么好讲究的呢？有什么好纠结的呢？ 那么现在我告诉你，你所制定的目标将直接影响到你出分...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%87%8F%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">一、减法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A2%9C%E8%89%B2"><span class="toc-number">2.</span> <span class="toc-text">二、颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%89%8B%E7%BB%98"><span class="toc-number">3.</span> <span class="toc-text">三、手绘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%A7%86%E8%A7%89"><span class="toc-number">4.</span> <span class="toc-text">四、视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%82%A3%E5%8F%AA%E8%B7%A8%E8%B6%8A%E7%A1%85%E5%9F%BA%E4%B8%8E%E7%A2%B3%E5%9F%BA%E7%9A%84%E6%89%8B"><span class="toc-number">5.</span> <span class="toc-text">五、那只跨越硅基与碳基的手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%8F%82%E8%80%83Claude%E7%9A%84%E9%A3%8E%E6%A0%BC%E8%AE%A9%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%98%BE%E8%B4%B5%E4%B8%94%E9%AB%98%E7%BA%A7%EF%BC%9F"><span class="toc-number">6.</span> <span class="toc-text">如何参考Claude的风格让自己的设计显贵且高级？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85"><span class="toc-number">7.</span> <span class="toc-text">关于作者</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

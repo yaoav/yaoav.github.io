@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>科研人：如何用AI采集任何互联网数据 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大家好啊，我是兔老师。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科研人：如何用AI采集任何互联网数据">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/09/DrRabbitAI-2119632921900495057/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="大家好啊，我是兔老师。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2119632921900495057-cover.jpg">
+<meta property="article:published_time" content="2026-11-09T11:27:24.000Z">
+<meta property="article:modified_time" content="2026-11-12T10:40:52.586Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@DrRabbitAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2119632921900495057-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "科研人：如何用AI采集任何互联网数据",
+  "url": "https://yaoav.github.io/2026/11/09/DrRabbitAI-2119632921900495057/",
+  "image": "https://yaoav.github.io/images/2119632921900495057-cover.jpg",
+  "datePublished": "2026-11-09T11:27:24.000Z",
+  "dateModified": "2026-11-12T10:40:52.586Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/09/DrRabbitAI-2119632921900495057/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '科研人：如何用AI采集任何互联网数据',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">科研人：如何用AI采集任何互联网数据</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">科研人：如何用AI采集任何互联网数据</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-09T11:27:24.000Z" title="发表于 2026-11-09 11:27:24">2026-11-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@DrRabbitAI（Roxy）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2119632921900495057">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>大家好啊，我是兔老师。</p>
+<p>这学期给研究生上人工智能课时，我问大家：“你们最想学什么？”</p>
+<p>没想到，很多学生都提到了同一个主题：<strong>数据采集。</strong></p>
+<p><img src="/images/HWpo1SuWYAAas5F.jpg" alt="HWpo1SuWYAAas5F"></p>
+<p>所以，第二节课我就给大家安排了这个主题。</p>
+<p>准备课程时，我也去B站看了一下现有的爬虫教程。很多教程还在教大家安装八爪鱼，或者先学习Python，再根据网页结构一点点修改代码。</p>
+<p><img src="/images/HWpo_llXEAA1g0x.jpg" alt="HWpo_llXEAA1g0x"></p>
+<p>这些方法不是没有用。但是现在有更好的方式。不需要为了爬取数据，去学习一门编程语言。我之前的研究生课里有一部分，讲了很多年，用python爬取数据。最近几年直接抛弃了。</p>
+<p>所以，如果你是数据抓取小白，我的建议是：</p>
+<blockquote>
+<p>可以先不学八爪鱼，也不用从一年以前的B站爬虫教程开始。直接使用本教程的方法。</p>
+</blockquote>
+<p>我自己平时主要使用Codex。（上课时发现，一些学生暂时无法使用Codex，他们使用的是WorkBuddy。我后来也用WorkBuddy测试了一下，很多类似的任务同样可以完成。）</p>
+<p>目前，我常用的数据采集方法只有两种，基本满足了所有数据采集的需求。之前一期受大家关注的国自然数据是采用第一种方法完成的。</p>
+<p>国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</p>
+<h3 id="01｜第一种方法：使用ChatGPT插件"><a href="#01｜第一种方法：使用ChatGPT插件" class="headerlink" title="01｜第一种方法：使用ChatGPT插件"></a>01｜第一种方法：使用ChatGPT插件</h3><p>第一种方法最容易上手。我感觉大部分研究生和老师的科研任务都可以用这个方式。</p>
+<p>我们可以使用ChatGPT里的浏览器插件。（也可以使用Codex的Computer Use功能）让Agent像人一样打开网页、滚动页面、展开评论，再把看到的信息整理成Excel。</p>
+<p><img src="/images/HWppaSQWcAArEOP.jpg" alt="HWppaSQWcAArEOP"></p>
+<p>这种方法的原则就是：<strong>所见即所得。你能在网页上看到什么，Agent就可以尝试帮你采集什么。</strong></p>
+<p>课堂上，学生给了我两个非常具体的任务。</p>
+<p>◈案例一：采集小红书评论有学生想研究某个话题下的用户态度，需要采集小红书笔记下面的评论。</p>
+<p>我们先登录小红书，打开目标笔记，再告诉Agent需要哪些字段。提示词不用写得很复杂，直接说人话就可以。</p>
+<p><strong>提示词（可直接复制）：</strong></p>
+<blockquote>
+<p>采集当前小红书笔记下面公开可见的评论，保留评论内容、发布时间、点赞数和回复数，整理成Excel表格。请分批保存，并删除重复数据。</p>
+</blockquote>
+<p>Agent会自动滚动页面、展开评论，再把结果整理成表格。</p>
+<p><img src="/images/HWpp7QRWIAALbzt.jpg" alt="HWpp7QRWIAALbzt"></p>
+<p><img src="/images/HWpp7Q6WQAA6gOG.jpg" alt="HWpp7Q6WQAA6gOG"></p>
+<p>【这种方式有一个小坑。有些网站会监测到你在爬取数据。解决的方式就是，你告诉Agent：控制爬取速度。模拟人看信息的行为】</p>
+<p>◈案例二：采集B站评论第二个任务是采集B站某个视频下面的评论。</p>
+<p>操作方式基本一样。打开目标视频以后，直接告诉Agent：</p>
+<p><strong>提示词（可直接复制）：</strong></p>
+<blockquote>
+<p>采集当前B站视频下面公开可见的评论，保留评论内容、发布时间、点赞数和回复数，区分一级评论与回复评论，并整理成Excel表格。</p>
+</blockquote>
+<p>这类任务不需要我们研究网页代码，也不需要自己写爬虫。Agent看到页面以后，就可以替我们完成翻页、复制和整理表格的工作。</p>
+<h3 id="02｜第二种方法：让Agent调用API"><a href="#02｜第二种方法：让Agent调用API" class="headerlink" title="02｜第二种方法：让Agent调用API"></a>02｜第二种方法：让Agent调用API</h3><p>如果需要采集几万条数据，再让Agent一页一页翻，效率就比较低了。</p>
+<p>这个时候，可以使用第二种方法：<strong>调用API。</strong></p>
+<p><strong>如果觉得复杂，没有关系。相信我，你的Agent知道如何</strong>调用API。<strong>你只需要按照他的要求，提供key就行了。</strong></p>
+<p>大家可以把API理解成一个专门的数据入口。操作网页相当于让Agent一页一页地抄数据；调用API，则是按照规定的格式，直接把数据取回来。</p>
+<p>它需要注册账号、申请API Key，配置过程会稍微复杂一点，但是采集速度快得多，也更适合大规模、需要重复更新的数据采集任务。</p>
+<p>课堂上，我给大家演示了两个不同的API案例。</p>
+<p>◈案例一：调用OpenAlex采集论文数据OpenAlex是一个开放的学术文献数据库，可以查询论文、作者、期刊、研究机构、研究主题和引用信息。</p>
+<p>例如，我们想了解近几年“生成式AI教育”方向发表了哪些论文，就可以让Agent调用OpenAlex接口进行查询。</p>
+<p><strong>提示词（可直接复制）：</strong></p>
+<blockquote>
+<p>调用OpenAlex API，采集2020年至今与“generative AI education”和“ChatGPT education”相关的论文。保留标题、作者、发表时间、期刊、DOI、被引次数和原始链接，按照DOI去重，并整理成Excel表格。</p>
+</blockquote>
+<p>以前做这类工作，我们需要不断更换关键词、切换数据库、翻页和复制论文信息。现在，Agent可以直接调用接口，把数据采集、去重并整理成表格。</p>
+<p><img src="/images/HWpqbSwWwAAqVgc.jpg" alt="HWpqbSwWwAAqVgc"></p>
+<p><img src="/images/HWpqiCrWcAETEER.jpg" alt="HWpqiCrWcAETEER"></p>
+<p>拿到数据以后，还可以继续让Agent分析：近几年发文量有什么变化？哪些期刊发得最多？哪些论文被引用得比较多？目前有哪些热门研究主题？这样，数据采集和后续分析就连起来了。</p>
+<p>◈案例二：调用Apify采集社交媒体数据如果想采集社交媒体信息，可以使用Apify。</p>
+<p>Apify里面有很多已经做好的数据采集工具，可以处理部分社交媒体、视频网站、搜索引擎和电商平台的公开数据。注册账号、获取API Token以后，可以让Codex或WorkBuddy调用对应的工具。</p>
+<p>例如，我之前做过一个任务：采集马斯克过去一周在X平台发布的公开内容。</p>
+<p><strong>提示词（可直接复制）：</strong></p>
+<blockquote>
+<p>调用Apify中合适的工具，采集Elon Musk账号过去7天发布的公开内容。保留发布时间、正文、点赞数、转发数、回复数和原始链接，删除重复数据，并整理成Excel表格。</p>
+</blockquote>
+<p>如果不会配置，也不用自己从头学习API。可以把官方文档交给Agent，让它阅读文档、完成配置，再执行采集任务。</p>
+<p><img src="/images/HWpqt_bXMAApcyG.jpg" alt="HWpqt_bXMAApcyG"></p>
+<h3 id="03｜两种方法怎么选？"><a href="#03｜两种方法怎么选？" class="headerlink" title="03｜两种方法怎么选？"></a>03｜两种方法怎么选？</h3><p>我的选择标准非常简单：</p>
+<blockquote>
+<p>先尝试让Agent操作网页。如果数据量太大、采集速度太慢，或者后面还需要反复更新，再去寻找API。</p>
+</blockquote>
+<p>没有必要一上来就使用最复杂的方法。能用简单方式解决的问题，就先简单解决。</p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>过去，想采集互联网数据，往往要先学习Python、研究网页结构，再花几天时间修改代码。网站一旦改版，代码可能又要重新调整。</p>
+<p>现在，这个流程已经发生了变化。</p>
+<p>小规模数据，可以让ChatGPT插件或者Codex的Computer Use功能直接操作网页；大规模数据，可以让Agent调用OpenAlex或Apify等API。</p>
+<p>所以，Agent时代真正重要的，已经不只是会不会写爬虫，而是：</p>
+<blockquote>
+<p>你知道数据在哪儿，你打开网页，剩下的让Agent来整理。</p>
+</blockquote>
+<p>教师们的教学科研AI搭子（第一期）</p>
+<p>如何使用AI完成教学科研20倍提效？</p>
+<p>论文写完了，发现参考文献不够怎么办？</p>
+<p>国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</p>
+<p>如何使用AI一键生成教育部要求的「课程能力图谱」</p>
+<p><strong>我的公众号：兔叫兽是我</strong></p>
+<p><strong>感谢关注！</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/09/DrRabbitAI-2119632921900495057/">https://yaoav.github.io/2026/11/09/DrRabbitAI-2119632921900495057/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/DrRabbitAI/">@DrRabbitAI</a></div><div class="post-share"><div class="social-share" data-image="/images/2119632921900495057-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a><a class="pagination-related" href="/2026/11/09/qingj1314-2119547952872243494/" title="AI泡沫，要被黄仁勋的鸡巴戳爆了！"><img class="cover" src="/images/2119547952872243494-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI泡沫，要被黄仁勋的鸡巴戳爆了！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @qingj1314（情酱） 的长文，原文链接，版权归原作者所有。  美国东部时间11月8日周日，黄仁勋给英伟达全体员工发了一封内部信承认出轨：  老黄公开表示欠家人一个道歉，他的孩子伤害了妻子和孩子。 同一天，英伟达董事会发了一份声明：由独立董事组成一个委员会，请外部律师协助，调查黄仁勋是不是成了外国情报行动的目标。  早在十月底，纽约时报就报道了黄仁勋中了美人计的消息。 不过这也正常，长期生活在水深火热的美帝的老黄，哪里受得了我们考验干部的手段？ 11月4日，三位共和党众议院委员会主席，外交委员会的 Brian Mast、中国问题特别委员会的 John Moolenaar、情报委员会的 Rick Crawford，联名写信，要求黄仁勋在11月18日参加一场闭门简报，回答他和 Alice Huang 的接触，以及英伟达防范外国间谍的内部措施，11月11日前要给答复。 虽然民主党中期大选胜利了，但是他们的议员需要明年1月份才会上任。 目前众议院还是共和党掌控，在事情败露之前最好还是自己人结案。 可能正是这个原因，需要在中期大选共和党丢失了参众两院之后，民主...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/02/DrRabbitAI-2117091215342735738/" title="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead"><img class="cover" src="/images/2117091215342735738-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Most researchers use AI for writing with a single prompt: “Polish this paragraph.” That’s the least useful thing you can ask. You get back smoother text in seconds. But what did it actually change? Did it shift your meaning? Turn a correlation into a cause? Slip in a claim you never made? Now you’re the one checking, line by line. There’s a better way. I teach graduate students and review their drafts every term, and this is the workflow I now...</div></div></div></a><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-06</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a><a class="pagination-related" href="/2026/11/05/DrRabbitAI-2118196625906811366/" title="教师们的教学科研AI搭子（第一期）"><img class="cover" src="/images/2118196625906811366-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-05</div><div class="info-item-2">教师们的教学科研AI搭子（第一期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 最近，经常有同事问我：“你现在都在用哪些 AI 工具？”“有没有比较适合新手使用的？”“我不懂编程，也不想配置一堆东西，应该从哪一款开始？” “有没有Agent的学习课程，不知道怎么用”。 回头看了一下，我今年使用 AI 的方式确实发生了一个比较明显的变化。前两年，我主要是在使用聊天式的 AI；今年，我开始越来越多地使用 Agent。 我目前主要使用的 Agent 包括 Codex、Claude 和 YILA。三款工具我都在用，只是承担的工作不同。这一期，我先从使用相对简单的 YILA 开始，分享几个它在教师教学科研中的真实使用场景。后面我还会继续写 Codex、Claude 和 WorkBuddy。 另外，如果一个Agent需要你学习课程后，才能使用。那这个Agent不是一个好的产品。相信你看完我的使用案例，你会理解，现在使用Agent不需要复杂的提示词，「说人话」就可以。 01｜普通 AI 和 Agent，到底有什么区别？在我以前的使用方式里，GPT、豆...</div></div></div></a><a class="pagination-related" href="/2026/11/12/DrRabbitAI-2120717083151585317/" title="Science编辑：如何提高论文接收率？10条建议"><img class="cover" src="/images/2120717083151585317-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Science编辑：如何提高论文接收率？10条建议</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  今天读到《Science Advances》高级副主编、杜克大学教授 Warren S. Warren 的一篇短文，题目是《Beating the odds for journal acceptance》，可以翻译为《如何提高论文被期刊接收的胜算》。文章只有两页，但信息密度很高。 作者提到，《Science Advances》每年大约收到 20,000 篇投稿，最终约 90% 会被拒稿，而且其中大多数甚至没有进入外审。 但他也坦言，期刊可能拒绝过一些真正具有科学意义和影响力的论文。并不一定是研究本身没有价值，而是作者在标题、摘要、投稿附信、图片或者投稿策略上出了问题，让编辑和审稿人没有及时看见它的价值。 以下 10 条建议都来自原文。感兴趣的老师同学也可以直接读英文原版。 01｜论文为什么还没外审，就被拒了？在看具体建议之前，先看编辑是怎样处理论文的。 《Science Advances》的副主编和副编辑，并不是全职坐在编辑部里处理稿件。他们本身也是仍然在一线做科研的科学家。以物理...</div></div></div></a><a class="pagination-related" href="/2026/11/01/DrRabbitAI-2116867574059397464/" title="How to Write a Research Paper Introduction"><img class="cover" src="/images/2116867574059397464-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-01</div><div class="info-item-2">How to Write a Research Paper Introduction</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  A method drawn from the classic literature, plus the AI prompts I use Lately I keep hearing students at my university talk about the same thing: how do you actually write the introduction of a research paper? So I went back to the sources: John Swales’ CARS model, the classic framework behind almost every introduction template; “Ten simple rules for structuring papers” in PLOS Computational Biology; and the author guidelines from Springer Natu...</div></div></div></a><a class="pagination-related" href="/2026/10/28/DrRabbitAI-2115435495920681097/" title="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)"><img class="cover" src="/images/2115435495920681097-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-28</div><div class="info-item-2">How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Run the same prompt 10 times and you get 10 different figures. Arrows point the wrong way, labels come and go, and none of them is quite usable. There’s a deeper problem too. Most of us can tell our figures look like PowerPoint clip art next to the ones in Nature or Cell, but we can’t say exactly why. And if you can’t name the difference, you can’t fix it in a prompt. Today I want to share an open-source repo that solves both: free prompt temp...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#01%EF%BD%9C%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9A%E4%BD%BF%E7%94%A8ChatGPT%E6%8F%92%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text">01｜第一种方法：使用ChatGPT插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02%EF%BD%9C%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9A%E8%AE%A9Agent%E8%B0%83%E7%94%A8API"><span class="toc-number">2.</span> <span class="toc-text">02｜第二种方法：让Agent调用API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03%EF%BD%9C%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">03｜两种方法怎么选？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">4.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"><img src="/images/2120893892396716506-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）"/></a><div class="content"><a class="title" href="/2026/11/12/waveking1314-2120893892396716506/" title="如何用 Fable 5.2 全天候开发交易策略（附整套提示词）">如何用 Fable 5.2 全天候开发交易策略（附整套提示词）</a><time datetime="2026-11-12T22:58:02.000Z" title="发表于 2026-11-12 22:58:02">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img src="/images/2120865290703552993-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</a><time datetime="2026-11-12T21:04:23.000Z" title="发表于 2026-11-12 21:04:23">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img src="/images/2120821145335447881-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"/></a><div class="content"><a class="title" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</a><time datetime="2026-11-12T18:08:58.000Z" title="发表于 2026-11-12 18:08:58">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img src="/images/2120769549679386878-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</a><time datetime="2026-11-12T14:43:57.000Z" title="发表于 2026-11-12 14:43:57">2026-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img src="/images/2120729388140695705-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"/></a><div class="content"><a class="title" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</a><time datetime="2026-11-12T12:04:21.000Z" title="发表于 2026-11-12 12:04:21">2026-11-12</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
