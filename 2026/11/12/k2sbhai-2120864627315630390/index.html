@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How to turn Grok Bot into your app's social media manager (Full Setup) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="X just put out a full guide telling creators to let Grok Bot handle all their bu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to turn Grok Bot into your app&#39;s social media manager (Full Setup)">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/12/k2sbhai-2120864627315630390/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="X just put out a full guide telling creators to let Grok Bot handle all their bu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120864627315630390-cover.jpg">
+<meta property="article:published_time" content="2026-11-12T21:01:45.000Z">
+<meta property="article:modified_time" content="2026-11-14T11:27:39.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@k2sbhai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120864627315630390-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to turn Grok Bot into your app's social media manager (Full Setup)",
+  "url": "https://yaoav.github.io/2026/11/12/k2sbhai-2120864627315630390/",
+  "image": "https://yaoav.github.io/images/2120864627315630390-cover.jpg",
+  "datePublished": "2026-11-12T21:01:45.000Z",
+  "dateModified": "2026-11-14T11:27:39.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/12/k2sbhai-2120864627315630390/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to turn Grok Bot into your app\'s social media manager (Full Setup)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2120864627315630390-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How to turn Grok Bot into your app's social media manager (Full Setup)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How to turn Grok Bot into your app's social media manager (Full Setup)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-12T21:01:45.000Z" title="发表于 2026-11-12 21:01:45">2026-11-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@k2sbhai（K2S）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120864627315630390">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>X just put out a full guide telling creators to let Grok Bot handle all their busywork.</p>
+<p>But I think founders are about to use it wrong and miss out on 90% of what it’s capable of doing for you and your business.</p>
+<p><img src="/images/HW7NE7NXoAErIaS.png" alt="HW7NE7NXoAErIaS"></p>
+<p>(FYI I’m giving away all 7 prompts in this article AND the full setup doc I’d paste into my bot on day one, all you need to do is comment “BOT” and follow me so I can send it to you).</p>
+<p><img src="/images/HW7QKqDXUAAv7j1.jpg" alt="HW7QKqDXUAAv7j1"></p>
+<p>**Here’s what I mean: **</p>
+<p>Making content for marketing is basically free now.</p>
+<p>AI UGC, slideshows, animated reels, all of it costs pennies and takes minutes.</p>
+<p>The tricky part is now everything that happens after you hit post.</p>
+<ul>
+<li>A post goes viral and there’s no link anywhere near it</li>
+<li>A winner gets posted once on one platform and never again</li>
+<li>Your content keeps flopping because nobody looked at the numbers</li>
+</ul>
+<p>Every post that pops without a way to find your app is giving those downloads away.</p>
+<p><strong>So this setup does two things:</strong></p>
+<p>Grok Bot finds what’s going viral on X, TikTok, and Instagram today and turns it into posts about your app.</p>
+<p>Postiz gets those posts onto every platform, then runs the automations that keep a viral post earning long after you’ve moved on.</p>
+<p>Here’s everything I’m going to walk you through:</p>
+<ul>
+<li>Why Grok Bot, and why right now</li>
+<li>Building a bot that actually knows your app</li>
+<li>Connecting Postiz (about 2 minutes)</li>
+<li>The daily trend loop</li>
+<li>Scheduling a week in one message</li>
+<li>The 5 automations that plug the leaks</li>
+<li>The Monday read</li>
+<li>Where you still need a human</li>
+</ul>
+<p>All you need is a Grok Bot, a Postiz account and a free Apify account.</p>
+<p>Let’s get into it.</p>
+<p><img src="/images/HW7NTSyWsAEClZg.jpg" alt="HW7NTSyWsAEClZg"></p>
+<h3 id="1-Why-Grok-Bot-and-why-right-now"><a href="#1-Why-Grok-Bot-and-why-right-now" class="headerlink" title="1. Why Grok Bot, and why right now"></a>1. Why Grok Bot, and why right now</h3><p><strong>Three reasons:</strong></p>
+<p>First, it lives on X and has direct access to the X API.</p>
+<p>Every other agent has to go looking for what’s trending.</p>
+<p>Grok Bot is sitting inside the place where trends start, so the trend scan is the easiest part of this whole system.</p>
+<p>Second, it has its own cloud computer and runs routines on a schedule, even when your laptop is closed.</p>
+<p>You set a job once (scan trends every morning, check analytics every hour, write the Monday report) and it keeps running while you sleep.</p>
+<p>Third, X is pushing it hard.</p>
+<p>Their creator guide did 481K views in four days.</p>
+<p>When a platform is promoting a new feature, the people who build on it early get the attention.</p>
+<p>Grok Bot can post for you out of the box.</p>
+<p>What Postiz adds is the system around the posting: a real calendar, drafts you approve, 30+ platforms from one place, analytics your bots can read, and automations that fire after the post goes live.</p>
+<p><img src="/images/HW7QzE3XQAAulYE.png" alt="HW7QzE3XQAAulYE"></p>
+<h3 id="2-Build-a-bot-that-actually-knows-your-app"><a href="#2-Build-a-bot-that-actually-knows-your-app" class="headerlink" title="2. Build a bot that actually knows your app"></a>2. Build a bot that actually knows your app</h3><p>Your bot is only as good as the context you give it.</p>
+<p>X’s own guide says the same thing, and they’re right.</p>
+<p>So use voice dictation and just brain dump everything about your app and build an app brain.</p>
+<p>What your app does, who it’s for, the one moment where a user goes “oh, that’s cool,” what your users complain about, and your 10 best-performing posts ever.</p>
+<p><strong>PROMPT 1: Build the app brain</strong></p>
+<p><img src="/images/HW7NfJlXgAAU_zZ.png" alt="HW7NfJlXgAAU_zZ"></p>
+<p>‼️ If you want the full Grok Bot setup doc, just comment “BOT” and I’ll send it right over ‼️</p>
+<p>In Grok Bot, open the Connected apps section and search for <strong>Postiz.</strong></p>
+<p>Click add, then sign in to your **Postiz **account when it asks.</p>
+<p>Then ask it to list your connected accounts.</p>
+<p>If it comes back with your channels, you’re live.</p>
+<p><img src="/images/HW7OMcbXEAAbSCl.jpg" alt="HW7OMcbXEAAbSCl"></p>
+<p>Before you let it touch anything, give it house rules.</p>
+<p>This is the most important prompt in the article.</p>
+<p><strong>PROMPT 2: House rules</strong></p>
+<p><img src="/images/HW7OSe7XcAAGqst.png" alt="HW7OSe7XcAAGqst"></p>
+<h3 id="4-The-daily-trend-loop"><a href="#4-The-daily-trend-loop" class="headerlink" title="4. The daily trend loop"></a>4. The daily trend loop</h3><p>Every morning, the bot looks at what’s moving on X, TikTok, and Instagram and asks one question: is there an honest way to connect this to my app?</p>
+<p>Most trends won’t pass, and that’s fine.</p>
+<p>A forced trend tie-in is worse than no post at all.</p>
+<p>X is the easy part, because Grok Bot can search it on its own.</p>
+<p>TikTok and Instagram are where most consumer apps actually grow, and the bot can’t see either one without help.</p>
+<p>That’s what the Apify plugin is for.</p>
+<p>In Grok Bot, open Settings, then Plugins, and search for Apify.</p>
+<p><img src="/images/HW7OksEWoAA1j94.jpg" alt="HW7OksEWoAA1j94"></p>
+<p>Click add and sign in to your Apify account (the free plan is enough to test this).</p>
+<p>Then type @apify in any chat, and the bot can run TikTok and Instagram scrapers for you.</p>
+<p>Have it rank what it finds by save rate.</p>
+<p>People save the posts they want to come back to, so a save tells you more than a like.</p>
+<p>Apify charges per result, so start with 5 hashtags or search terms and add more once you see the bill.</p>
+<p><img src="/images/HW7OrjnWIAAsbj5.png" alt="HW7OrjnWIAAsbj5"></p>
+<p>Once you pick the trends worth riding, the bot writes the set.</p>
+<p>One idea, adapted to every platform you’re on.</p>
+<p><strong>PROMPT 4: Write the set</strong></p>
+<p><img src="/images/HW7OwaSWIAEDdyL.png" alt="HW7OwaSWIAEDdyL"></p>
+<h3 id="5-Schedule-the-week-in-one-message"><a href="#5-Schedule-the-week-in-one-message" class="headerlink" title="5. Schedule the week in one message"></a>5. Schedule the week in one message</h3><p>Once you’ve approved the drafts, you don’t need to drag anything around a calendar.</p>
+<p>Tell the bot when your audience is most active and let it fill the slots.</p>
+<p><strong>PROMPT 5: Fill the week</strong></p>
+<p><img src="/images/HW7O2F5WwAAvfSW.png" alt="HW7O2F5WwAAvfSW"></p>
+<h3 id="6-The-5-automations-that-plug-the-leaks"><a href="#6-The-5-automations-that-plug-the-leaks" class="headerlink" title="6. The 5 automations that plug the leaks"></a>6. The 5 automations that plug the leaks</h3><p>These are the most common leaks in your marketing strategy that this setup can address:</p>
+<p><strong>Leak 1: Nobody can find your app.</strong></p>
+<p>Every post gets an automatic first comment with your link.</p>
+<p>I do this on every LinkedIn post I publish.</p>
+<p>Postiz drops a comment pointing to my newsletter 15 minutes after the post goes live, and I never type it by hand.</p>
+<p><img src="/images/HW7O8EkWoAAdIPb.png" alt="HW7O8EkWoAAdIPb"></p>
+<p>For your app, the comment is one line and the App Store link.</p>
+<p><strong>Leak 2: Your winner only lives on one platform.</strong></p>
+<p>A post that pops on X has already passed the hardest test there is.</p>
+<p>Within 24 hours, it should be on every other platform you’re on, adapted for each one and Postiz helps you make that happen in less time with the AI agent you have at your disposal.</p>
+<p><strong>Leak 3: You only post your winners once.</strong></p>
+<p>Your followers saw it.</p>
+<p>The other 99% of the platform didn’t.</p>
+<p>Set your best evergreen posts to repeat every 30 days and let them keep working.</p>
+<p><strong>Leak 4: Your other accounts are sitting idle.</strong></p>
+<p>If you have a founder account and a brand account (you should), one should repost the other’s best work automatically.</p>
+<p><strong>Leak 5: Nobody’s watching when something takes off.</strong></p>
+<p>This is the one I’d set up first…</p>
+<p><strong>PROMPT 6: Viral alert (set as an hourly routine)</strong></p>
+<p><img src="/images/HW7PF-xX0AA4Y1A.png" alt="HW7PF-xX0AA4Y1A"></p>
+<p>When a post takes off, the first few hours decide how much you get out of it.</p>
+<p>This routine makes sure you’re there for them.</p>
+<h3 id="7-The-Monday-read"><a href="#7-The-Monday-read" class="headerlink" title="7. The Monday read"></a>7. The Monday read</h3><p>The true scoreboard is downloads, views are nice but only if they drive conversions.</p>
+<p>A post that does 400K views and sends you 40 downloads is worse than one that does 60K and sends you 60.</p>
+<p>Every Monday, the bot sorts last week’s posts into four buckets.</p>
+<p><strong>PROMPT 7: Monday report (set as a weekly routine)</strong></p>
+<p><img src="/images/HW7PKvnWgAALhiD.png" alt="HW7PKvnWgAALhiD"></p>
+<p>The failure log is the most valuable file in the whole system.</p>
+<p>Every flop becomes more data to iterate off of, and the bot takes that info into consideration before your next batch of content.</p>
+<p>If you’re getting downloads but nobody’s paying, stop posting.</p>
+<p>That’s an onboarding or paywall problem, and no amount of content will fix it.</p>
+<h3 id="8-Where-you-still-need-a-human"><a href="#8-Where-you-still-need-a-human" class="headerlink" title="8. Where you still need a human"></a>8. Where you still need a human</h3><p>You can hand most of this to the bot</p>
+<p>These parts stay yours:</p>
+<ul>
+<li>The app brief. Nobody knows your magic moment better than you.</li>
+<li>Approving trends. The bot will happily tie your app to something it shouldn’t. You’re the brand safety check.</li>
+<li>Approving every batch. Nothing goes live without a yes from you.</li>
+<li>Replying to comments. Real replies to real people.</li>
+<li>The kill and scale calls. The bot sorts the buckets, you make the decision.</li>
+</ul>
+<p>Grok Bot makes the content machine easy to start, and it’s still up to you to do the unsexy simple things longer and faster than everyone else.</p>
+<p>Thanks to Postiz for sponsoring this post, you can check them out at <a target="_blank" rel="noopener" href="https://postiz.com/">https://postiz.com/</a></p>
+<p>(I actually use it for all my content and it’s great)</p>
+<p><img src="/images/HW7PSjTWsAAl0dj.jpg" alt="HW7PSjTWsAAl0dj"></p>
+<ul>
+<li>Jake</li>
+</ul>
+<p>P.S. If you enjoyed this breakdown, you’ll love my free newsletter.</p>
+<p>Join 2,600+ weekly readers of the Operator’s Notebook where I go deep on building and scaling consumer apps.</p>
+<p><a target="_blank" rel="noopener" href="https://operatorsnotebook.beehiiv.com/">https://operatorsnotebook.beehiiv.com/</a></p>
+<p>P.P.S. Want the full Grok Bot setup doc? Comment “BOT” and follow me so I can send it over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/12/k2sbhai-2120864627315630390/">https://yaoav.github.io/2026/11/12/k2sbhai-2120864627315630390/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/k2sbhai/">@k2sbhai</a></div><div class="post-share"><div class="social-share" data-image="/images/2120864627315630390-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img class="cover" src="/images/2120865290703552993-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前 100 个几乎没赚到钱。小游戏想赚钱，靠的是能一直试下去，而每试一次都要付一次模型账单。 这次我一行游戏代码没写，用新加坡 FUMO Lab 的融合模型 Fusion Max 2.0，做出了一款能玩的** 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》**。 先看成品，让人惊喜的是，这个视频也是Fusion Max 纯代码做的： **从写设计、写代码到连改四轮，只花了 $5.77。**同样的用量按官方公开价测算，换成 Claude Fable 5.1 或 GPT-6 Astra 要约 $14.92，是它的 2.6 倍；做 100 个原型，差出 900 多美元。 这篇把整个过程摊开：两段提示词原文、四轮修改各改了什么、17 次调用的成本明细、接入的 4 步，还有上 CrazyGames 和微信小游戏各要过哪些关。 想自己试的话，...</div></div></div></a><a class="pagination-related" href="/2026/11/12/Seramikimiki-2120821145335447881/" title="万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）"><img class="cover" src="/images/2120821145335447881-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">万字拆解Claude美学，做出自己的高级感设计（内附提示词+思维链路）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  最近大家都被 Opus 5.5 和 Fable 6.2 的前端审美惊艳了，无论是视频还是网页设计。但是回到 Claude 本身，它的设计就有一种和别的 AI 不一样的美感。 这几年的 AI 产品大多离不开宏大的科技感的设计，从名字来看就很直观。GPT是Generative Pre-trained Transformer的缩写，直译是生成式预训练变换器，名字就是一份直观的技术说明书，带着OpenAI早期浓厚的工程师气质；Gemini取自拉丁语的双子，这个名字对应Google Brain和DeepMind两支团队的合并，同时也呼应了NASA当年为登月铺路的双子座计划；Grok来自海因莱因1961年的科幻小说《异乡异客》，火星人用这个词表示彻底、深入骨髓地理解某样东西，马斯克借它来表达模型要真正读懂世界，也蕴含了他本人对于火星，对于宇宙的无限畅想。 Claude是向信息论之父克劳德·香农致敬，Anthropic本身这个有些生僻的单词是”与人类有关”的意思，模型的命名来自诗歌体裁：Ha...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Why-Grok-Bot-and-why-right-now"><span class="toc-number">1.</span> <span class="toc-text">1. Why Grok Bot, and why right now</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Build-a-bot-that-actually-knows-your-app"><span class="toc-number">2.</span> <span class="toc-text">2. Build a bot that actually knows your app</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-The-daily-trend-loop"><span class="toc-number">3.</span> <span class="toc-text">4. The daily trend loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Schedule-the-week-in-one-message"><span class="toc-number">4.</span> <span class="toc-text">5. Schedule the week in one message</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-The-5-automations-that-plug-the-leaks"><span class="toc-number">5.</span> <span class="toc-text">6. The 5 automations that plug the leaks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-The-Monday-read"><span class="toc-number">6.</span> <span class="toc-text">7. The Monday read</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Where-you-still-need-a-human"><span class="toc-number">7.</span> <span class="toc-text">8. Where you still need a human</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

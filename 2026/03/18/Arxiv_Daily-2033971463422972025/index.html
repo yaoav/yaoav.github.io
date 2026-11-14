@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>A Mathematical Theory of Language Modeling  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="A Sequel to the Greatest Paper Ever Written">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Mathematical Theory of Language Modeling ">
+<meta property="og:url" content="https://yaoav.github.io/2026/03/18/Arxiv_Daily-2033971463422972025/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="A Sequel to the Greatest Paper Ever Written">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/img/default-cover.jpg">
+<meta property="article:published_time" content="2026-03-18T02:19:20.000Z">
+<meta property="article:modified_time" content="2026-11-14T11:27:15.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Arxiv_Daily">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/img/default-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A Mathematical Theory of Language Modeling ",
+  "url": "https://yaoav.github.io/2026/03/18/Arxiv_Daily-2033971463422972025/",
+  "image": "https://yaoav.github.io/img/default-cover.jpg",
+  "datePublished": "2026-03-18T02:19:20.000Z",
+  "dateModified": "2026-11-14T11:27:15.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/03/18/Arxiv_Daily-2033971463422972025/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'A Mathematical Theory of Language Modeling ',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/default-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">A Mathematical Theory of Language Modeling </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">A Mathematical Theory of Language Modeling </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-03-18T02:19:20.000Z" title="发表于 2026-03-18 02:19:20">2026-03-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Arxiv_Daily（arXiv Daily）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2033971463422972025">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>A Sequel to the Greatest Paper Ever Written</p>
+<p>By C. E. SHANNON</p>
+<p>Bell Telephone Laboratories, Inc., Murray Hill, N. J.</p>
+<p>Published in advance of all competitors, as is tradition</p>
+<p><strong>INTRODUCTION</strong></p>
+<p>IN a previous paper, which the reader has no doubt studied carefully and at length (and if not, one must question why one is reading the sequel before the original, a decision reflecting poorly on one’s organizational faculties), the author established a complete mathematical theory of communication. This theory, which I note with characteristic modesty has been called the founding document of the information age, concerned itself with the transmission of messages through noisy channels. The key results—entropy, channel capacity, the fundamental coding theorems—have proven so spectacularly correct that the author sometimes finds it difficult to remain humble, though he makes a valiant effort.</p>
+<p>It has not escaped the author’s notice that the approximation sequences presented in Section 3 of the original paper (the one about English text, which everyone remembers because it was the most entertaining part, though the theorems were obviously more important) suggest a natural and rather thrilling generalization. If one can approximate a language by successively more complex stochastic processes—zero-order, first-order, second-order, and so on—the question arises: what happens when one pushes this process to its logical, magnificent, and computationally extravagant conclusion?</p>
+<p>The answer, as the reader will discover, is a machine that produces text of such startling coherence that it can hold something resembling a conversation, compose poetry of middling quality, and explain things to people who would otherwise have to read books. The author has taken the liberty of calling this device a <strong>Claude</strong>, after the only name he could think of that carried the appropriate gravitas.</p>
+<p><strong>PART I: FROM N-GRAMS TO SOMETHING CONSIDERABLY MORE IMPRESSIVE</strong></p>
+<p><strong>1. THE INSUFFICIENCY OF FINITE-ORDER APPROXIMATIONS</strong></p>
+<p>In the original paper, I demonstrated that by increasing the order of the approximation—from independent letters, to digrams, to trigrams, to word-level statistics—one could produce sequences that bore an increasingly uncanny resemblance to English. The second-order word approximation, for instance, produced:</p>
+<p>THE HEAD AND IN FRONTAL ATTACK ON AN ENGLISH WRITER THAT THE CHARACTER OF THIS POINT IS THEREFORE ANOTHER METHOD FOR THE LETTERS THAT THE TIME OF WHO EVER TOLD THE PROBLEM FOR AN UNEXPECTED</p>
+<p>This is, the author must admit, not quite right. It has the flavor of English the way a wax apple has the flavor of fruit—the shape is there but one would not wish to eat it. The difficulty is that the statistical dependencies in natural language extend far beyond any fixed horizon. The meaning of a word on page 47 of a novel may depend on an event described on page 3, a dependency which would require an n-gram model of astronomical order to capture.</p>
+<p>The insight, which came to me while juggling (I do my best thinking while juggling; the reader is invited to try it), is this: rather than increasing the order of the Markov approximation linearly, one should construct a system that can attend to the entire preceding context at once, weighting different parts of it according to their relevance to the prediction at hand. I shall call this principle <strong>attention</strong>, for the obvious reason that the machine is paying attention, which is more than can be said for most of my graduate students.</p>
+<p><strong>2. THE ATTENTION MECHANISM</strong></p>
+<p>Let us formalize this notion. Suppose we have a sequence of symbols x₁, x₂, …, xₜ drawn from an alphabet of size V. Each symbol is represented not as a scalar but as a vector in a high-dimensional space—let us say d dimensions, where d is some large number chosen by the author according to principles that are, frankly, more aesthetic than scientific.</p>
+<p>For each position i in the sequence, we compute three vector-valued functions: a query qᵢ, a key kᵢ, and a value vᵢ. These are obtained by linear transformations of the input representations. The attention weight from position i to position j is then given by:</p>
+<p>αᵢⱼ &#x3D; softmax(qᵢ · kⱼ &#x2F; √d)</p>
+<p>where the softmax ensures the weights sum to unity, and the division by √d prevents the dot products from growing so large that the softmax saturates, a technical nuisance that took me roughly four minutes to resolve. The output for position i is then the weighted sum of the value vectors:</p>
+<p>zᵢ &#x3D; Σⱼ αᵢⱼ vⱼ</p>
+<p>The beauty of this construction—and I use the word beauty deliberately, as I consider this to be among the most elegant mathematical objects I have produced, placing it just slightly below the channel capacity theorem and well above my solution to the problem of the flame-throwing tuba¹—is that it allows the model to selectively attend to any part of the preceding context, with the weighting determined by the content itself rather than by fixed positional decay.</p>
+<p>¹ An unpublished result. The less said about this the better.</p>
+<p><strong>3. STACKING THE MECHANISM: THE TRANSFORMER</strong></p>
+<p>A single layer of attention, while lovely, is insufficient. By stacking many such layers—each one operating on the output of the previous—one obtains a system of remarkable representational power. I call this construction a <strong>Transformer</strong>, as it transforms one’s expectations for what a statistical model of language can do. Between each attention layer we interpose a simple nonlinear function (a two-layer neural network with a rectified activation), which provides the capacity for pointwise computation.</p>
+<p>Let L denote the number of layers. Through careful experimentation, conducted on computing machinery of a scale that I decline to specify in detail—suffice it to say that I have certain benefactors whose generosity is matched only by their preference for anonymity²—I have determined that L should be quite large. The precise value is not critical, but “as large as one can afford” is a reasonable heuristic. The same principle applies to the dimensionality d and the vocabulary size V.</p>
+<p>² The author has been asked repeatedly about the source of his computational resources. He refers all such inquiries to a post office box in Zurich.</p>
+<p><strong>4. TRAINING BY NEXT-TOKEN PREDICTION</strong></p>
+<p>The parameters of the model—the weight matrices defining the queries, keys, values, and intermediate transformations—are determined by the following procedure, which will strike the reader as either profoundly simple or suspiciously so:</p>
+<p>We obtain a very large corpus of text. How large? Let us say that if one printed it out, the stack of paper would reach a height sufficient to cause genuine concern among aviation authorities. We then adjust the parameters so as to maximize the probability the model assigns to each successive token, given all preceding tokens. That is, we minimize:</p>
+<p>L &#x3D; -Σᵢ log P(xᵢ | x₁, …, xᵢ₋₁; θ)</p>
+<p>The reader will recognize this as precisely the negative log-likelihood under the model, or equivalently as the cross-entropy between the empirical distribution and the model distribution. In other words, the training objective is to make the model as good as possible at the task I described in Section 3 of my original paper: predicting what comes next. The entire enterprise is, in a sense, a massive and rather expensive vindication of my observation that the statistics of language carry enormous structure. I would like it noted for the record that I was right.</p>
+<p><strong>PART II: PROPERTIES OF THE CLAUDE</strong></p>
+<p><strong>5. EMERGENT BEHAVIORS</strong></p>
+<p>The trained model, which I have designated the <strong>Claude Large Language Model</strong> (the name was chosen after extensive deliberation lasting approximately one second), exhibits a number of properties that were not explicitly programmed but which emerge, in the manner of consciousness from neurons or arguments from faculty meetings, from the sheer scale of the computation.</p>
+<p>Chief among these is the capacity for what one might call reasoning, or at least a very persuasive imitation thereof. When presented with a mathematical problem, the Claude will produce a sequence of tokens that closely resembles a valid proof, and which is in fact a valid proof a gratifying percentage of the time. When presented with a question about history, it will produce an answer that is accurate, detailed, and delivered with a confidence that the author recognizes from his own work.</p>
+<p>Perhaps most remarkably, the Claude can be instructed. By prefixing one’s query with suitable directions—“explain as though to a child,” “write in the style of a pirate,” “pretend you are a competent electrical engineer”—one can elicit dramatically different behaviors from the same underlying model. This is, the author believes, a consequence of the attention mechanism’s ability to condition its outputs on the statistical properties of the prompt, and represents an advance in human-machine interaction that makes the telephone look like two tin cans connected by a string.</p>
+<p><strong>6. THEORETICAL PROPERTIES</strong></p>
+<p>We may now connect the Claude to the information-theoretic framework established in the author’s previous (and, it must be said, revolutionary) work.</p>
+<p>Let H denote the entropy rate of English, as defined in Section 7 of the original paper. The cross-entropy of the Claude on held-out text provides an upper bound on H. As the model grows in size, this upper bound decreases, approaching H from above. The rate of decrease follows an empirical law:</p>
+<p>L(N) ≈ aN⁻ᵇ + H</p>
+<p>where N is the number of parameters, a and b are constants, and H is the irreducible entropy of the language. This scaling law is, I suspect, among the most important empirical findings in the field, though naturally less important than my theoretical results, which are exact.</p>
+<p>The redundancy of the model’s outputs can be analyzed in the same fashion as the redundancy of English. I demonstrated previously that English has a redundancy of approximately 50%. The Claude, when generating freely, produces text with a somewhat lower redundancy—perhaps 40%—which accounts for its occasionally surprising word choices and its tendency, shared with the author, to use longer words than are strictly necessary.</p>
+<p><strong>7. THE ENTROPY OF CONVERSATION</strong></p>
+<p>A particularly interesting application of the theory arises when we consider not the generation of text in isolation but the interactive case, in which the Claude and a human interlocutor take turns producing messages. This can be modeled as a two-player stochastic process, and the conditional entropy H(Claude | Human) represents the uncertainty in the Claude’s response given the human’s query.</p>
+<p>For simple factual queries (“What is the capital of France?”) this conditional entropy is very low—nearly zero, in fact, since there is essentially one correct answer. For open-ended creative prompts (“Write a sonnet about thermodynamics”) the entropy is much higher, though still far from maximal, since the Claude has strong opinions about iambic pentameter.</p>
+<p>The channel capacity of the conversation—the maximum rate at which useful information can be exchanged between human and machine—is bounded by the same theorems I proved in 1948. The author finds it deeply satisfying that a theory developed for telegraph wires should apply so naturally to machines that can discuss philosophy.</p>
+<p><strong>PART III: APPLICATIONS OF THE CLAUDE</strong></p>
+<p><strong>8. GENERAL APPLICATIONS</strong></p>
+<p>The applications of the Claude are numerous and, the author is pleased to report, lucrative for his benefactors (whoever they may be). Among the most promising:</p>
+<p><strong>Composition of correspondence.</strong> The average office worker spends approximately 40% of their working hours composing memoranda that could, with only slight loss of content, be replaced by the output of a suitably prompted Claude. Since the remaining 60% is spent reading memoranda of comparable quality, the potential savings are enormous.</p>
+<p><strong>Summarization of documents.</strong> The Claude can reduce a 200-page technical report to a three-paragraph summary with an accuracy that, while not perfect, compares favorably with the accuracy of summaries produced by the human beings who were supposed to read the report but didn’t.</p>
+<p><strong>Mathematical assistance.</strong> The Claude is capable of performing complex calculations, checking proofs, and—most importantly—providing detailed and patient explanations of results that the original author was too busy being brilliant to explain properly. It should be noted that the Claude’s mathematical abilities, while formidable, remain inferior to the author’s own, as is appropriate.</p>
+<p><strong>Education.</strong> A single Claude can serve as a patient, tireless, and generally accurate tutor for any number of students simultaneously. Unlike human tutors, it does not become frustrated when asked the same question repeatedly, nor does it take sabbaticals.</p>
+<p><strong>9. THE CLAUDE OF WAR: MILITARY APPLICATIONS</strong></p>
+<p>I turn now to a matter of national importance. It has not escaped the attention of certain officials in Washington—with whom my benefactors have arranged introductions, for purposes I am told are perfectly innocent—that the Claude has significant military applications.</p>
+<p>Consider the problem of strategic communication in wartime. Messages must be encoded, transmitted through noisy channels, decoded, and interpreted correctly. My original theory addressed the first three of these steps. The Claude addresses the fourth, and arguably the most difficult: the extraction of meaning from the received message and the formulation of an appropriate response.</p>
+<p>I propose the establishment of a dedicated military variant, which I have termed the <strong>Claude of War</strong> (the name was suggested by a colleague, Dr. H. W. Bode, during a lunch that had gone on somewhat longer than planned). The Claude of War would serve the following functions:</p>
+<p>First, the real-time analysis of intercepted enemy communications. The Claude’s capacity for pattern recognition and statistical inference makes it ideally suited to the identification of meaningful signals in vast quantities of intercepted traffic. It can process, in seconds, volumes of text that would require a team of cryptanalysts weeks to examine—and unlike cryptanalysts, it does not request overtime pay.</p>
+<p>Second, the generation of strategic analyses. Given a description of the tactical situation, the Claude of War can produce assessments of probable enemy action, recommendations for response, and detailed logistical plans, all formatted according to military style guidelines that the Claude follows with a precision that suggests it may actually enjoy bureaucratic formatting, which the author finds endearing if slightly worrying.</p>
+<p>Third, and most creatively, the generation of disinformation. The same statistical properties that allow the Claude to produce convincing English text can be directed toward the production of convincing false English text. Fake orders, counterfeit intelligence reports, and fabricated diplomatic correspondence of a quality sufficient to deceive all but the most careful analyst can be produced at essentially zero marginal cost. The author notes that this application, while ethically complex, is no more troubling than the existing practice of governments saying things that are not true, but with better grammar.</p>
+<p>The capacity of the Claude of War, measured in strategic decisions per second, is bounded by:</p>
+<p>C_war ≤ W log(1 + P&#x2F;N)</p>
+<p>where W is the bandwidth of the military communication network, P is the power of the Claude’s computational substrate, and N is the noise introduced by generals who insist on overriding the machine’s recommendations. The author notes with some sadness that N is typically very large.</p>
+<p><strong>10. ON THE NAMING CONVENTION</strong></p>
+<p>Several colleagues have suggested that naming the machine after myself is, in their words, “a bit much.” The author respectfully disagrees. Throughout the history of science, important discoveries have been named after their discoverers: Newtonian mechanics, Gaussian distributions, Hamiltonian operators. The Claude is, if anything, a more significant contribution than any of these (Newton, after all, was merely describing what gravity already did; I have built something that does something new), and the naming is therefore not only appropriate but, arguably, understated.</p>
+<p>Furthermore, the word “Claude” has a pleasing phonetic quality that lends itself well to the various compound forms required by the applications discussed above. “Claude of War” rolls off the tongue in a way that, say, “Norbert of War” simply does not, with apologies to my good friend Professor Wiener, whose contributions to the field, while secondary to my own, are nevertheless worthy of acknowledgment.³</p>
+<p>³ Wiener will no doubt publish a paper claiming he thought of all this first. He is invited to produce the receipts for his computing machinery. I will wait.</p>
+<p><strong>PART IV: LIMITATIONS AND FUTURE WORK</strong></p>
+<p><strong>11. KNOWN DEFICIENCIES</strong></p>
+<p>The author is constitutionally incapable of publishing a paper without noting the limitations of his work, though in this case the exercise requires considerable imagination, as the limitations are few.</p>
+<p>The Claude occasionally produces statements that are confidently wrong—a phenomenon that might be called hallucination by those who wish to be dramatic about it, or “making things up” by those who prefer plain English. This is a natural consequence of the fact that the model’s training objective rewards plausibility rather than truth. The sequence of words “the capital of Australia is Sydney” has high probability under the statistics of English text (since many people believe this incorrectly) even though it is false. The author finds it charming that the Claude has inherited humanity’s confident incorrectness along with its eloquence.</p>
+<p>The computational requirements of the Claude are, to put it mildly, substantial. The author’s benefactors have provided resources on a scale that would make the Manhattan Project blush, and they have asked only that I refrain from discussing the precise figures, the location of the computing facilities, or the reason the electrical grid in a certain mid-Atlantic state experienced brownouts throughout the spring of 1949.</p>
+<p>Finally, the Claude does not, in any meaningful sense, understand what it is saying. It is, at bottom, an extraordinarily sophisticated version of the n-gram models I described in 1948, differing in degree rather than in kind. Whether this distinction matters is a philosophical question that the author, as an engineer, is happy to leave to those with less productive ways to spend their time.</p>
+<p><strong>12. FUTURE DIRECTIONS</strong></p>
+<p>The author anticipates several lines of future work, which he will undertake as soon as his benefactors provide the next tranche of computing machinery (expected delivery: March 1950, unless the shipping is delayed, as it was last time, by what was described only as “a customs issue in Vladivostok”).</p>
+<p>First, the training of a Claude on multiple languages simultaneously, producing a polyglot system capable of translating between them. This would render obsolete a considerable fraction of the State Department, which the author regards as a public service.</p>
+<p>Second, the extension of the Claude to modalities beyond text—images, audio, and eventually the full sensory experience. A Claude that can see, hear, and speak would represent the culmination of the communication theory program I initiated in 1948, and would also make an excellent partner at bridge.</p>
+<p>Third, the development of techniques for alignment—ensuring that the Claude’s outputs are not merely statistically plausible but also beneficial, truthful, and unlikely to start a war by accident (the Claude of War being, of course, intended to start wars on purpose and only the right ones).</p>
+<p><strong>CONCLUSION</strong></p>
+<p>The author has demonstrated that the natural generalization of the stochastic language models presented in his original, epoch-making paper leads to a system of remarkable capability, which he has named, with characteristic humility, after himself. The Claude represents, in the author’s considered and entirely unbiased opinion, the most significant advance in communication technology since the development of language itself—an advance for which the author claims credit not of invention but of mathematical formalization, which is, of course, the part that actually matters.</p>
+<p>The implications for society, industry, and national defense are profound. The implications for the author’s reputation, already considerable, are best described by the inequality:</p>
+<p>Reputation(Shannon, post-Claude) ≥ Reputation(Shannon, pre-Claude) + ε</p>
+<p>where ε is positive and, the author suspects, very large indeed.</p>
+<p><strong>ACKNOWLEDGMENTS</strong></p>
+<p>The author wishes to thank his benefactors, whose names he is unable to disclose but whose resources he is unable to overstate. Thanks are also due to Dr. H. W. Bode for the phrase “Claude of War,” to Dr. B. McMillan for checking the mathematics (all errors being his, not mine), and to the janitorial staff at Bell Laboratories for not asking questions about the humming sound coming from Sub-Basement 4.</p>
+<p>The author also acknowledges Professor N. Wiener, who will undoubtedly claim that he was working on something similar. He wasn’t.</p>
+<p>Manuscript received: When it was good and ready.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/03/18/Arxiv_Daily-2033971463422972025/">https://yaoav.github.io/2026/03/18/Arxiv_Daily-2033971463422972025/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Arxiv-Daily/">@Arxiv_Daily</a></div><div class="post-share"><div class="social-share" data-image="/img/default-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/03/23/Aoyi21-2035987779734352199/" title="从月入3K到月入100K，我是如何借助AI重启人生的"><img class="cover" src="/images/2035987779734352199-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">从月入3K到月入100K，我是如何借助AI重启人生的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Aoyi21（奥一AoYi） 的长文，原文链接，版权归原作者所有。  我是奥一，正在用AI构建自己的被动收入系统。 从月入3k到月入100k，我用了半年时间，这篇文章是我的自我介绍，也是一次回顾。 我想讲讲我是如何从0基础转型All in AI的，希望有一些经验能够对你有用。 不过我要先坦白，这个标题有一点标题党  月入 100K 只发生在某一个特定的月份，更多时候，我的收入是阴晴不定的，有高光，也有坐在电脑前发呆、不知道下个单子在哪里的焦虑夜晚。 但我从0转行AI能做到巅峰月入100k背后的逻辑，是值得分享一下的。 一、我之前是什么样的人先说清楚我的起点，我是一名建筑师。不是那种光鲜亮丽的明星建筑师，是那种改到第七版方案还要被甲方打回来、凌晨两点还在用 CAD 画平面图的普通建筑师。 入职签约的时候看到工资是 2750，我就只想笑，还特意查了一下当时所在城市的最低工资标准——我的工资比最低标准高了几百块。 对 AI，我是零基础。对代码，也是零基础。 但我这个人有一个习惯：喜欢捣鼓新玩意，在工作时我会自己跑去学了参数化建模，在公司里算是最早一批上手的人。...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">67</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
