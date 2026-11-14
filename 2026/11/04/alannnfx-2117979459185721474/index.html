@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Turning 𝕏 Posts Into Brand Deals | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="~55k followers, brand deals that reached $10k&#x2F;month, and an inbox full of people">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Turning 𝕏 Posts Into Brand Deals">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/04/alannnfx-2117979459185721474/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="~55k followers, brand deals that reached $10k&#x2F;month, and an inbox full of people">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117979459185721474-cover.jpg">
+<meta property="article:published_time" content="2026-11-04T21:57:07.000Z">
+<meta property="article:modified_time" content="2026-11-15T03:34:53.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@alannnfx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117979459185721474-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Turning 𝕏 Posts Into Brand Deals",
+  "url": "https://yaoav.github.io/2026/11/04/alannnfx-2117979459185721474/",
+  "image": "https://yaoav.github.io/images/2117979459185721474-cover.jpg",
+  "datePublished": "2026-11-04T21:57:07.000Z",
+  "dateModified": "2026-11-15T03:34:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/04/alannnfx-2117979459185721474/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Turning 𝕏 Posts Into Brand Deals',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2117979459185721474-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Turning 𝕏 Posts Into Brand Deals</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Turning 𝕏 Posts Into Brand Deals</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-04T21:57:07.000Z" title="发表于 2026-11-04 21:57:07">2026-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@alannnfx（Alan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117979459185721474">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>~55k followers, brand deals that reached $10k&#x2F;month, and an inbox full of people asking for free stuff. How the inbound actually happens, plus the Grok Bot setups I’d copy to handle it. Every prompt is in here.</p>
+<p>My brand deals on 𝕏 reached $10k&#x2F;month.</p>
+<p>I have ~55k followers. Pretty small next to a lot of creators.</p>
+<p>The 𝕏 brand alone has made me multiple six figures.</p>
+<p>The brand deals I’ve closed never started with a pitch from me. They started with someone who was already reading my posts and sent a DM.</p>
+<p>Those DMs don’t arrive alone though.</p>
+<p>This month I posted about getting an insane amount of DMs asking for free handouts.</p>
+<p>Reviews, reposts, “nice win, can you send me some $$?”</p>
+<p>The DM that turns into a paid deal sits in that same inbox, a few messages down.</p>
+<p>So this guide has two parts:</p>
+<blockquote>
+<p>how posting turns into brand deals and DMs<br>6 Grok Bots I’d set up so the good DMs don’t get buried</p>
+</blockquote>
+<p><strong>This is for you if</strong></p>
+<ul>
+<li>you post on 𝕏 and want brand deals or clients from it</li>
+<li>you already get DMs and half of them are noise</li>
+<li>a brand has sent you a brief and you had no idea what to charge</li>
+</ul>
+<h3 id="Part-1-How-posts-turn-into-inbound"><a href="#Part-1-How-posts-turn-into-inbound" class="headerlink" title="Part 1: How posts turn into inbound"></a>Part 1: How posts turn into inbound</h3><p><strong>1. People DM after they’ve been reading for a while</strong></p>
+<p>I posted for over a year before I really monetised anything.</p>
+<p>Plenty of those posts got 4-5 likes.</p>
+<p>When the deals did come, they came from people who had been reading for a long time. By the time we talked, the sale was pretty much made.</p>
+<p>So when a brand pays for one post, they’re paying for everything you posted before it too.</p>
+<p>These days people take $25 for a post.</p>
+<p>I get why. But that $25 post stays on your profile, and the next brand that checks you out will scroll right past it.</p>
+<p><strong>2. People DM a person</strong></p>
+<p>Had Grok Bot audit my account. 113 posts from the last 6 weeks, split by topic.</p>
+<blockquote>
+<p>crypto was about half of them and did 2.85% engagement<br>lifestyle posts did 5.11%</p>
+</blockquote>
+<p>Crypto is a big part of my history on here and it still came out lowest.</p>
+<p>When I posted that I’m back to growing 𝕏 accounts and want to help a few founders &amp; creators build theirs, it got 73 replies.</p>
+<p>It says what I do now and who it’s for, in four lines.</p>
+<p>On July 30 I posted that it was a great day: a new warm lead for content management &#x2F; 𝕏 growth and one creator inbound.</p>
+<p>Two messages. Still a great day lol</p>
+<p><strong>3. Brands scroll back before they DM</strong></p>
+<p>Before a brand reaches out, they can scroll back and see:</p>
+<blockquote>
+<p>what you sell<br>how often you sell it<br>whether every product gets the same glowing review</p>
+</blockquote>
+<p>This is why I’m careful with cheap deals. Every one of them stays in that scroll.</p>
+<p>Same with the paid partnership label.</p>
+<p>In my experience it does very little damage to your credibility. If anything, it helps it.</p>
+<p>Most people are still afraid to use it.</p>
+<p><strong>4. Make it obvious what a brand would pay you for</strong></p>
+<p>Work with brands is the most typical creator monetization plan.</p>
+<p>Okay. Which brands?</p>
+<p>What are they paying for?</p>
+<p>Why is your audience useful to them?</p>
+<p>I’d put the answers in plain words in your bio and pinned post. A brand manager scrolling your profile should get it in 10 seconds.</p>
+<p><strong>5. Know what you’re actually selling</strong></p>
+<p>Creator deal maths can get stupid very fast.</p>
+<p>$1,000 sounds fine at first.</p>
+<p>Until you find out the brand wants 12 months of usage, category exclusivity, three revisions + the post tomorrow.</p>
+<p><strong>All of a sudden you’re selling a lot more than one post.</strong></p>
+<p>Pricing a deal has to cover:</p>
+<blockquote>
+<p>reading the brief<br>checking the product<br>protecting the wording<br>handling revisions<br>deciding whether the campaign fits your audience</p>
+</blockquote>
+<p><img src="/images/HV3jc7wXgAALJuK.jpg" alt="HV3jc7wXgAALJuK"></p>
+<p><strong>6. Ask before you quote</strong></p>
+<p>When a brand DMs “what’s your rate?”, I’d answer with questions first.</p>
+<blockquote>
+<p>what’s the product + who is it for?<br>how many posts, and when?<br>do you need usage rights or exclusivity?<br>what budget do you have in mind?</p>
+</blockquote>
+<p><strong>Their answers change the price more than your follower count does.</strong></p>
+<p>And brands that won’t answer any of these usually aren’t worth the back and forth.</p>
+<h3 id="Part-2-6-Grok-Bots-for-brand-deals-DMs"><a href="#Part-2-6-Grok-Bots-for-brand-deals-DMs" class="headerlink" title="Part 2: 6 Grok Bots for brand deals &amp; DMs"></a>Part 2: 6 Grok Bots for brand deals &amp; DMs</h3><p>Each bot gets one job.</p>
+<p>Give it the job, the rules, and what it’s never allowed to do. Then let it do the boring part and keep the yes&#x2F;no for yourself.</p>
+<p><strong>Hard rule for all six: nothing gets sent, accepted or agreed to until you read it.</strong></p>
+<p>Grok Bot can read your 𝕏 Chat inbox and message requests once you connect 𝕏 and enter your Chat PIN. If you’d rather not connect it, paste the DMs in.</p>
+<p><strong>1. DM Sorter</strong></p>
+<p>Goes through your unread DMs and message requests and tags each one.</p>
+<blockquote>
+<p>brand deal<br>client lead<br>collab<br>personal<br>noise</p>
+</blockquote>
+<p>Then it drafts a reply for the ones worth answering.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">You are my DM Sorter for my 𝕏 account [@handle].</span><br><span class="line"></span><br><span class="line">Every morning, go through my unread 𝕏 DMs and message requests.</span><br><span class="line"></span><br><span class="line">Tag each one as: brand deal, client lead, collab, personal or noise.</span><br><span class="line"></span><br><span class="line">For each one give me:</span><br><span class="line">- who it&#x27;s from + their follower count</span><br><span class="line">- one line on what they want</span><br><span class="line">- the tag + why</span><br><span class="line">- a draft reply in my voice (only for brand deals, client leads and collabs)</span><br><span class="line"></span><br><span class="line">Noise = asks for free reviews, reposts, money, or &quot;support&quot; with nothing offered back.</span><br><span class="line"></span><br><span class="line">Never send, accept or mark anything as read. I reply myself.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HV3jgMJXEAAWAd5.jpg" alt="HV3jgMJXEAAWAd5"></p>
+<p><strong>2. Brand Check</strong></p>
+<p>Before you reply to a brand, find out who they are.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">A brand DM&#x27;d me about a paid post: [brand name / handle].</span><br><span class="line"></span><br><span class="line">Look them up on 𝕏 and the web and find:</span><br><span class="line">- what they sell and who it&#x27;s for</span><br><span class="line">- creators they&#x27;ve paid before (look for paid partnership posts from the last 6 months)</span><br><span class="line">- how those posts did vs the creator&#x27;s normal posts</span><br><span class="line">- complaints: late payments, scams, angry replies, rugs</span><br><span class="line">- whether their product fits what my audience follows me for: [your topics]</span><br><span class="line"></span><br><span class="line">End with: worth a reply, ask more questions, or skip. Give one reason.</span><br><span class="line"></span><br><span class="line">Link every claim. If you can&#x27;t find something, say so instead of guessing.</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. Brief Reader</strong></p>
+<p>Brands send briefs and contracts. The expensive stuff is usually in there.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Read this brief / contract: [paste]</span><br><span class="line"></span><br><span class="line">Pull out:</span><br><span class="line">- deliverables (how many posts, what format, which dates)</span><br><span class="line">- usage rights (where they can use my content and for how long)</span><br><span class="line">- exclusivity (which brands or categories I can&#x27;t work with, and for how long)</span><br><span class="line">- revisions (how many rounds)</span><br><span class="line">- payment terms (amount, when, net 30/60, upfront?)</span><br><span class="line">- anything that lets them edit my wording</span><br><span class="line"></span><br><span class="line">Flag anything that makes this more than one post. Keep it short.</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. Rate Reply</strong></p>
+<p>Write your prices down once. Then the bot uses them every time.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">My rates:</span><br><span class="line">- one post: [$]</span><br><span class="line">- thread or 𝕏 Article: [$]</span><br><span class="line">- series of 3+ posts: [$]</span><br><span class="line">- usage rights beyond 30 days: [+ % or $]</span><br><span class="line">- exclusivity: [+ % or $]</span><br><span class="line"></span><br><span class="line">When a brand asks for a price, draft a reply with the right number for what they asked.</span><br><span class="line"></span><br><span class="line">If their budget is below my rate, draft a counter that offers a smaller package instead of a lower price.</span><br><span class="line"></span><br><span class="line">Never agree to usage rights, exclusivity or extra revisions in a draft. Flag them for me.</span><br></pre></td></tr></table></figure>
+
+<p><strong>5. Polite No</strong></p>
+<p>For the free handouts.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Draft short, friendly replies in my voice for:</span><br><span class="line">- &quot;can you review this?&quot;</span><br><span class="line">- &quot;would love your support on this post&quot;</span><br><span class="line">- &quot;can you share this with your audience?&quot;</span><br><span class="line">- unpaid &quot;collabs&quot; where I do the work</span><br><span class="line"></span><br><span class="line">Keep each one to 1-2 lines. No lecture, no excuses.</span><br><span class="line"></span><br><span class="line">Also keep a saved-answers list for questions I get every week (my rates, how I work with brands, what I don&#x27;t promote). Update it when I change my answer.</span><br></pre></td></tr></table></figure>
+
+<p><strong>6. Inbound Log</strong></p>
+<p>Once a week, figure out what’s actually bringing the good DMs.</p>
+<p><strong>Prompt:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Every Friday:</span><br><span class="line"></span><br><span class="line">1. List every DM this week you tagged brand deal, client lead or collab.</span><br><span class="line">2. For each sender, check if they liked, replied to or reposted any of my posts in the last 30 days. Show which ones.</span><br><span class="line">3. Group my posts from this week by topic. Show replies + bookmarks per topic.</span><br><span class="line">4. Tell me which topics show up most before a real DM.</span><br><span class="line"></span><br><span class="line">Real numbers only. If you can&#x27;t see something (like who viewed a post), say so.</span><br></pre></td></tr></table></figure>
+
+<p>After a few weeks you’ll know which posts bring money and which ones just bring likes.</p>
+<h3 id="Where-I’d-start"><a href="#Where-I’d-start" class="headerlink" title="Where I’d start"></a>Where I’d start</h3><blockquote>
+<p>this week: DM Sorter + Polite No<br>the first time a brand DMs: Brand Check + Brief Reader<br>once you’ve priced 2-3 deals: Rate Reply<br>after a month: Inbound Log</p>
+</blockquote>
+<p><strong>The posting is still on you.</strong></p>
+<p>I’m sharing more of these setups as I build them. Follow @zaimiri if you don’t want to miss the next ones :)</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/04/alannnfx-2117979459185721474/">https://yaoav.github.io/2026/11/04/alannnfx-2117979459185721474/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/alannnfx/">@alannnfx</a></div><div class="post-share"><div class="social-share" data-image="/images/2117979459185721474-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/05/chenke20266-2118011377998835792/" title="Polymarket 自动交易机器人创建方法"><img class="cover" src="/images/2118011377998835792-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Polymarket 自动交易机器人创建方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  一个可插拔策略、带完整风控、默认纸面模拟的Polymarket交易机器人。 先纸面&#x2F;回测跑通，再手动开实盘。默认状态下它不会动你一分钱。 0. 先说清楚风险（真的请读完）预测市场是 0&#x2F;1 结算：仓位不是”浮亏”，而是可能直接归零。自动交易程序能做的只是 “按规则执行 + 限制损失规模”，不能保证盈利，也不能避免亏损。 2026 年Polymarket的真实成本结构（实测自 API）：  实测结论（2026-11-04，扫描前 80 个市场）：二元Yes+No套利在扣手续费后全部为负 （约 -10bps）。也就是说：网上教程里”买Yes+买 No稳赚”的说法在当前费率下基本不成立。 negRisk 篮子套利偶尔有空间，但深度很小、且必须拿到事件的全部腿。  1. 它能做什么12345678910111213              ┌──────────────┐Gamma API ───▶│ 市场发现/筛选 │──┐CLOB REST ───▶│ 订单簿...</div></div></div></a><a class="pagination-related" href="/2026/11/04/DrRabbitAI-2117952642593017862/" title="AI如何赋能科研完整工作流（第一期）"><img class="cover" src="/images/2117952642593017862-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI如何赋能科研完整工作流（第一期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 昨天，我在学校给研究生上的课终于结课了。 这门课叫“大数据和人工智能”。整个课程里，我有一半的内容在讲 AI 如何赋能科研。因为我理解，这门课的意义，是给研究生做科研提供工具上的支撑。 趁着刚结课，我想把这部分内容系统地梳理一遍。内容比较多，会分几期来讲。 今天是第一期，主题是文献检索。 内容由易到难，涉及的工具包括 YILA、Grok Bot、Codex 和 WorkBuddy。我自己不是 WorkBuddy 的用户，但课上很多研究生在用，所以这一期也会讲讲在 WorkBuddy 里怎么操作。大家可以根据自己的习惯，挑需要的部分读。 01｜先说一个常见的坑：只靠开源检索 Skill现在网上开源的论文检索 Skill 非常多，装起来也很方便。 但很多检索 Skill 有一个问题：它们只连了少数几个免费来源，比如 arXiv 这样的开放获取平台，或者用不带 key 的免费接口，搜几次就被限流。 结果就是，你用它搜一个方向，只出来十几篇论文。 最危险的不是搜得少...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/09/22/alannnfx-2102313175660286311/" title="Jev: Stop Paying Frontier Models to Make Simple Decisions"><img class="cover" src="/images/2102313175660286311-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-22</div><div class="info-item-2">Jev: Stop Paying Frontier Models to Make Simple Decisions</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @alannnfx（Alan） 的长文，原文链接，版权归原作者所有。  Most of what you pay a frontier model for isn’t thinking. It’s a yes or a no Your agent sits in a loop, picking the next worker, checking if a result is good enough, deciding whether to keep going. Each one of those is a full model call that costs tokens, waits on generation, and comes back as a paragraph you have to parse. That’s a $0.03 hammer driving a thumbtack. Those decisions don’t need a brain that writes, they need a brain that decides, ...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-1-How-posts-turn-into-inbound"><span class="toc-number">1.</span> <span class="toc-text">Part 1: How posts turn into inbound</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-2-6-Grok-Bots-for-brand-deals-DMs"><span class="toc-number">2.</span> <span class="toc-text">Part 2: 6 Grok Bots for brand deals &amp; DMs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-I%E2%80%99d-start"><span class="toc-number">3.</span> <span class="toc-text">Where I’d start</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

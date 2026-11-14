@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>One Gist Killed Manual Note-Linking | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Linking notes by hand was never building a second brain. It was killing one.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One Gist Killed Manual Note-Linking">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/29/garrytan-2115815018637770972/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Linking notes by hand was never building a second brain. It was killing one.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2115815018637770972-cover.jpg">
+<meta property="article:published_time" content="2026-10-29T22:36:25.000Z">
+<meta property="article:modified_time" content="2026-11-15T03:35:05.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@garrytan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2115815018637770972-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "One Gist Killed Manual Note-Linking",
+  "url": "https://yaoav.github.io/2026/10/29/garrytan-2115815018637770972/",
+  "image": "https://yaoav.github.io/images/2115815018637770972-cover.jpg",
+  "datePublished": "2026-10-29T22:36:25.000Z",
+  "dateModified": "2026-11-15T03:35:05.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/29/garrytan-2115815018637770972/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'One Gist Killed Manual Note-Linking',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2115815018637770972-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">One Gist Killed Manual Note-Linking</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">One Gist Killed Manual Note-Linking</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-29T22:36:25.000Z" title="发表于 2026-10-29 22:36:25">2026-10-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@garrytan（Garry Tan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2115815018637770972">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Linking notes by hand was never building a second brain.<br>It was killing one.</p>
+<p>Karpathy published one gist that puts the model in charge of every cross-reference, every summary, every contradiction check. Seven repos already run the pattern, with about 255,000 GitHub stars between them.</p>
+<p>What is inside:</p>
+<ul>
+<li>The gist and the shift it makes</li>
+<li>Three layers of a self-maintaining vault</li>
+<li>The three operations that drive the system</li>
+<li>Seven repos sorted by what they do</li>
+<li>A starter route based on where your knowledge lives</li>
+</ul>
+<h3 id="PATTERN-A-gist-that-made-the-model-the-operator"><a href="#PATTERN-A-gist-that-made-the-model-the-operator" class="headerlink" title="[PATTERN] A gist that made the model the operator"></a>[PATTERN] A gist that made the model the operator</h3><p><img src="/images/HVzhA5oXMAAM6xY.jpg" alt="HVzhA5oXMAAM6xY"></p>
+<p>llm-wiki.md lives under gist.github.com&#x2F;karpathy. One file, one revision, created April 4, 2026.</p>
+<p>It lays out an LLM that incrementally builds and maintains a persistent wiki of interlinked markdown files. Knowledge compiled once and kept current, not pulled from raw documents on every query.</p>
+<p>Obsidian is the viewer. The model does the programming. The wiki is a codebase it maintains. The gist also points to Obsidian graph view, Web Clipper, Marp and Dataview as companion tools.</p>
+<p>No plugin. No hosted service. One page of instructions that turns the model into a full-time vault caretaker.</p>
+<h3 id="LAYER-Three-layers-that-never-mix"><a href="#LAYER-Three-layers-that-never-mix" class="headerlink" title="[LAYER] Three layers that never mix"></a>[LAYER] Three layers that never mix</h3><p><img src="/images/HVzhIgdW0AAmQjq.jpg" alt="HVzhIgdW0AAmQjq"></p>
+<p>The gist splits a vault into three parts.</p>
+<ul>
+<li>Immutable raw sources. PDFs, clippings, highlights, bookmarks. Nothing gets edited after it lands.</li>
+<li>An LLM-owned wiki. Structured markdown notes the model writes, links and rewrites on its own. You read them. You do not maintain them.</li>
+<li>A schema file. CLAUDE.md in the gist’s example. It tells the model how the wiki is organized, what qualifies as a good page and when to update.</li>
+</ul>
+<p>Raw material enters at the bottom. Compiled knowledge lives in the middle. The schema sits on top and governs every move.</p>
+<h3 id="INGEST-Drop-a-source-the-vault-rewrites-itself"><a href="#INGEST-Drop-a-source-the-vault-rewrites-itself" class="headerlink" title="[INGEST] Drop a source, the vault rewrites itself"></a>[INGEST] Drop a source, the vault rewrites itself</h3><p><img src="/images/HVzhOeuXAAAdp1E.jpg" alt="HVzhOeuXAAAdp1E"></p>
+<p>Ingest is the first of three operations.</p>
+<ul>
+<li>Trigger: a new raw source enters the vault.</li>
+<li>Action: the model reads the source, writes a wiki summary, updates every related page.</li>
+<li>Result: new or revised notes with cross-references already in place.</li>
+<li>Record: index.md and an append-only log.md track what changed.</li>
+</ul>
+<p>One file dropped in triggers a cascade. The model traces connections back through the existing wiki and rewrites whatever shifted.</p>
+<h3 id="QUERY-Ask-the-wiki-file-the-answer-back"><a href="#QUERY-Ask-the-wiki-file-the-answer-back" class="headerlink" title="[QUERY] Ask the wiki, file the answer back"></a>[QUERY] Ask the wiki, file the answer back</h3><p><img src="/images/HVzha_fWQAAtUGi.jpg" alt="HVzha_fWQAAtUGi"></p>
+<p>Query is the second operation.</p>
+<ul>
+<li>Trigger: a question from the vault owner.</li>
+<li>Action: the model answers from compiled wiki pages, not from the raw layer.</li>
+<li>Result: the answer gets filed back as a new wiki page when it holds lasting value.</li>
+<li>Effect: the next question on the same topic finds a compiled page, not a re-derived answer.</li>
+</ul>
+<p>Answers that hold weight become pages. The vault compounds instead of repeating work.</p>
+<h3 id="LINT-Flag-what-drifted-before-it-spreads"><a href="#LINT-Flag-what-drifted-before-it-spreads" class="headerlink" title="[LINT] Flag what drifted before it spreads"></a>[LINT] Flag what drifted before it spreads</h3><p><img src="/images/HVzhgYSWUAA4Hps.jpg" alt="HVzhgYSWUAA4Hps"></p>
+<p>Lint is the third operation.</p>
+<ul>
+<li>Trigger: a periodic pass across the entire wiki.</li>
+<li>Action: the model checks for contradictions between pages, stale claims, orphan pages, missing cross-references.</li>
+<li>Result: flags on notes that conflict, gaps where links should exist, pages that nothing points to.</li>
+</ul>
+<p>Two notes that disagree get flagged. So does a page with zero inbound links, or a claim that aged past its source. You set the schedule.</p>
+<h3 id="STACK-Seven-repos-about-255-000-stars"><a href="#STACK-Seven-repos-about-255-000-stars" class="headerlink" title="[STACK] Seven repos, about 255,000 stars"></a>[STACK] Seven repos, about 255,000 stars</h3><p><img src="/images/HVzhlOBXwAAxUBd.jpg" alt="HVzhlOBXwAAxUBd"></p>
+<p>The gist defines the pattern. These repos turn it into running code.</p>
+<ul>
+<li>graphify. Parses codebases, docs, SQL schemas, configs and PDFs into a queryable knowledge graph. Runs as a skill in Claude Code, Cursor, Codex and Gemini CLI, all parsing local with tree-sitter. About 137.9k stars, Apache-2.0 and MIT.</li>
+<li>Understand-Anything. Turns your codebase into a browsable graph you can search and query directly. 88.8k stars, MIT.</li>
+<li>claude-obsidian. Keeps sources untouched, builds linked cited notes, answers from the vault, saves good answers back, runs health checks for broken links and orphan pages. 15.9k stars, MIT, 351 commits.</li>
+<li>obsidian-second-brain. Persistent memory for Claude Code, Codex and six other agents, stored as plain markdown in the vault. About 5.0k stars, MIT, 647 commits.</li>
+<li>mcp-obsidian. One MCP server with seven tools: list files in vault and in directory, get contents, search, patch content, append content, delete file. Needs the Obsidian Local REST API community plugin and its API key, defaults to 127.0.0.1:27124. 4.5k stars, MIT.</li>
+<li>claudesidian. A ready-made vault built for Claude Code, structured from the ground up. 2.6k stars, MIT.</li>
+<li>second-brain. An Obsidian wiki the model keeps current, built on the llm-wiki.md pattern. 764 stars.</li>
+</ul>
+<h3 id="ROUTE-Pick-one-repo-by-where-your-knowledge-lives"><a href="#ROUTE-Pick-one-repo-by-where-your-knowledge-lives" class="headerlink" title="[ROUTE] Pick one repo by where your knowledge lives"></a>[ROUTE] Pick one repo by where your knowledge lives</h3><p><img src="/images/HVzhp3MW8AA9o0y.jpg" alt="HVzhp3MW8AA9o0y"></p>
+<ul>
+<li>Your knowledge lives in code. Start with graphify. It turns your repo into a graph without leaving your editor.</li>
+<li>Your knowledge lives in Obsidian already. Start with claude-obsidian. It files sources into linked notes and answers from the vault.</li>
+<li>You want the model to remember across sessions. Start with obsidian-second-brain. Plain markdown, six agents can read it.</li>
+<li>You live in Claude Desktop. Start with mcp-obsidian. Seven tools wire one MCP server to the whole vault.</li>
+</ul>
+<p>One repo. One evening. The vault starts maintaining itself.</p>
+<h3 id="COMPILE-The-model-is-the-programmer-now"><a href="#COMPILE-The-model-is-the-programmer-now" class="headerlink" title="[COMPILE] The model is the programmer now"></a>[COMPILE] The model is the programmer now</h3><p><img src="/images/HVzhwHIX0AEb5lZ.jpg" alt="HVzhwHIX0AEb5lZ"></p>
+<p>The pattern is model-agnostic. The gist names Obsidian as the viewer and CLAUDE.md as one schema example. Whatever LLM you run fills the programmer slot.</p>
+<p>mcp-obsidian ships with delete_file and patch_content. Any agent with write access can damage a vault. Keep a git history or a backup before you wire anything in.</p>
+<p>Three operations handle the rest. Ingest files each source, query compounds every answer, lint catches what drifted.</p>
+<p>You stopped being the librarian. The vault is a codebase now.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/29/garrytan-2115815018637770972/">https://yaoav.github.io/2026/10/29/garrytan-2115815018637770972/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/garrytan/">@garrytan</a></div><div class="post-share"><div class="social-share" data-image="/images/2115815018637770972-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/30/zoink-2115894206409723946/" title="How we’re training a Figma-fluent editing model "><img class="cover" src="/images/2115894206409723946-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">How we’re training a Figma-fluent editing model </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @zoink（Dylan Field） 的长文，原文链接，版权归原作者所有。  We’ve increasingly seen that specialized post-training can compete with frontier models. Here, we’re sharing the research behind how we’re translating that to design editing workflows.Designers use Figma for a wide range of work, from exploring a new idea to building out an entire product. But a lot of the everyday work is smaller, more iterative, and often non-verifiable. Adjust the spacing. Change a color. Rework a layout after someone lea...</div></div></div></a><a class="pagination-related" href="/2026/10/28/DrRabbitAI-2115435495920681097/" title="How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)"><img class="cover" src="/images/2115435495920681097-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How to Make Nature- and Cell-Style Scientific Figures with AI (Free Templates, Growing to 1,000)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Run the same prompt 10 times and you get 10 different figures. Arrows point the wrong way, labels come and go, and none of them is quite usable. There’s a deeper problem too. Most of us can tell our figures look like PowerPoint clip art next to the ones in Nature or Cell, but we can’t say exactly why. And if you can’t name the difference, you can’t fix it in a prompt. Today I want to share an open-source repo that solves both: free prompt temp...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/13/garrytan-2120964041145516058/" title="Saving 80+% on code reviews using AgentRun"><img class="cover" src="/images/2120964041145516058-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">Saving 80+% on code reviews using AgentRun</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @garrytan（Garry Tan） 的长文，原文链接，版权归原作者所有。  Our code review bill went up 36x this year. So we tuned an agent on our own pull requests, running on a model that costs almost nothing, until it caught more bugs than the reviewer we were paying for. It’s open source, and you can use it today. Last week I sat down with our Greptile invoices. A year ago we paid $180 a month. In October we paid $6,451. This month we’re at $7,018 with a week to go, on pace for about $9K.  Two things happened....</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#PATTERN-A-gist-that-made-the-model-the-operator"><span class="toc-number">1.</span> <span class="toc-text">[PATTERN] A gist that made the model the operator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LAYER-Three-layers-that-never-mix"><span class="toc-number">2.</span> <span class="toc-text">[LAYER] Three layers that never mix</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#INGEST-Drop-a-source-the-vault-rewrites-itself"><span class="toc-number">3.</span> <span class="toc-text">[INGEST] Drop a source, the vault rewrites itself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QUERY-Ask-the-wiki-file-the-answer-back"><span class="toc-number">4.</span> <span class="toc-text">[QUERY] Ask the wiki, file the answer back</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LINT-Flag-what-drifted-before-it-spreads"><span class="toc-number">5.</span> <span class="toc-text">[LINT] Flag what drifted before it spreads</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STACK-Seven-repos-about-255-000-stars"><span class="toc-number">6.</span> <span class="toc-text">[STACK] Seven repos, about 255,000 stars</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ROUTE-Pick-one-repo-by-where-your-knowledge-lives"><span class="toc-number">7.</span> <span class="toc-text">[ROUTE] Pick one repo by where your knowledge lives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#COMPILE-The-model-is-the-programmer-now"><span class="toc-number">8.</span> <span class="toc-text">[COMPILE] The model is the programmer now</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

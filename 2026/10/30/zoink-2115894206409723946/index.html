@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How we’re training a Figma-fluent editing model  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="We’ve increasingly seen that specialized post-training can compete with frontier">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How we’re training a Figma-fluent editing model ">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/30/zoink-2115894206409723946/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="We’ve increasingly seen that specialized post-training can compete with frontier">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2115894206409723946-cover.jpg">
+<meta property="article:published_time" content="2026-10-30T03:51:04.000Z">
+<meta property="article:modified_time" content="2026-11-15T03:35:00.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@zoink">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2115894206409723946-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How we’re training a Figma-fluent editing model ",
+  "url": "https://yaoav.github.io/2026/10/30/zoink-2115894206409723946/",
+  "image": "https://yaoav.github.io/images/2115894206409723946-cover.jpg",
+  "datePublished": "2026-10-30T03:51:04.000Z",
+  "dateModified": "2026-11-15T03:35:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/30/zoink-2115894206409723946/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How we’re training a Figma-fluent editing model ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2115894206409723946-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How we’re training a Figma-fluent editing model </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How we’re training a Figma-fluent editing model </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-30T03:51:04.000Z" title="发表于 2026-10-30 03:51:04">2026-10-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@zoink（Dylan Field）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2115894206409723946">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<h3 id="We’ve-increasingly-seen-that-specialized-post-training-can-compete-with-frontier-models-Here-we’re-sharing-the-research-behind-how-we’re-translating-that-to-design-editing-workflows"><a href="#We’ve-increasingly-seen-that-specialized-post-training-can-compete-with-frontier-models-Here-we’re-sharing-the-research-behind-how-we’re-translating-that-to-design-editing-workflows" class="headerlink" title="We’ve increasingly seen that specialized post-training can compete with frontier models. Here, we’re sharing the research behind how we’re translating that to design editing workflows."></a>We’ve increasingly seen that specialized post-training can compete with frontier models. Here, we’re sharing the research behind how we’re translating that to design editing workflows.</h3><p>Designers use Figma for a wide range of work, from exploring a new idea to building out an entire product. But a lot of the everyday work is smaller, more iterative, and often non-verifiable. Adjust the spacing. Change a color. Rework a layout after someone leaves feedback. Each change builds on decisions made along the way. That’s why when we set out to build the Figma agent, we started with a focused task: help designers make edits to the work already on their canvas.</p>
+<p><img src="/images/HV0i9YUasAA4Tqo.png" alt="HV0i9YUasAA4Tqo"></p>
+<p><img src="/images/HV0jH9BaAAA58lC.png" alt="HV0jH9BaAAA58lC"></p>
+<p>We wanted our agent to be both better at design and faster at those edits. And because designers make them throughout the day, speed matters. An edit that takes too long can interrupt the very workflow it’s supposed to help.</p>
+<h3 id="Teaching-a-model-to-edit-in-Figma"><a href="#Teaching-a-model-to-edit-in-Figma" class="headerlink" title="Teaching a model to edit in Figma"></a>Teaching a model to edit in Figma</h3><p>When we started this work, frontier models couldn’t understand Figma syntax, and getting this to work would take a lot of system prompting that would be incredibly token-consumptive. Instead, we invested in supervised fine-tuning (SFT). Each training example paired a starting design with a generated synthetic edit request and a successful example of the change. We represented designs in Figma’s native file format, so the model learned to produce changes we could apply back to the canvas. When tasks required design system assets, we generated synthetic prompts covering changes to themes and components.</p>
+<p>We then used larger teacher models to attempt those edits, checking the candidates with deterministic validators and visual model judges, including checks for valid output and request fulfillment. The generation pipeline could self-heal and revise an edit using evaluator feedback.</p>
+<p>That approach got us surprisingly far. We were even able to get one of our earlier Llama 3.3 70B models, trained on more than 250,000 examples, to be competitive on editing tasks with top models at the time!</p>
+<p><img src="/images/HV0jcqebcAA9Bxl.jpg" alt="HV0jcqebcAA9Bxl"></p>
+<p>But since then, we’ve moved towards more capable base models including the newer Qwen models, Muse Spark Open, Inkling, and others. We also ran up against limits to using SFT alone for this particular objective. Imitation learning teaches the model to produce designs very similar to what it saw in training at the cost of loss of generalization. Plus, it was less sample efficient, which means training takes a lot of examples covering various facets of the task. So we’re also investing in Reinforcement Learning (RL) as part of our latest training recipe. Our focus is on better RL environments for the design domain, pushing on the overall diversity of examples we train on, shaping our reward models, and expanding our expert-written criteria so those rewards reflect what designers actually care about.</p>
+<h3 id="How-we-evaluate-design-edits"><a href="#How-we-evaluate-design-edits" class="headerlink" title="How we evaluate design edits"></a>How we evaluate design edits</h3><p>To determine whether a model is a good starting point, we run it through our internal evals. We care not only about how well it can work in Figma, follow instructions, and make useful changes to existing designs, but also the speed and cost of doing that work.</p>
+<p>Great design is often subjective, but that doesn’t mean we have to treat quality as one unmeasurable thing. A design can have good alignment and poor contrast. An edit can look polished and still miss the request. A button can look right while using the wrong component.</p>
+<p>The examples below show common errors with AI-generated designs:</p>
+<p><img src="/images/HV0jwuIbwAA6SfB.jpg" alt="HV0jwuIbwAA6SfB"></p>
+<p><img src="/images/HV0jy_9bAAAu1WS.jpg" alt="HV0jy_9bAAAu1WS"></p>
+<p><img src="/images/HV0j1OVaoAAaaHK.jpg" alt="HV0j1OVaoAAaaHK"></p>
+<p>We evaluate those dimensions separately. We combine checks on the design’s structure with visual judges, then use expert designers to calibrate and review the results. That helps us understand where a model succeeds and what it still needs to learn.</p>
+<p>For example, here are how several top models score on our internal Figma editing evals. Again, this is just one input among many we use to decide which models to consider using in our product.</p>
+<p><img src="/images/HV0kE6macAA72IM.png" alt="HV0kE6macAA72IM"></p>
+<h3 id="Where-this-model-fits-in-the-Figma-agent"><a href="#Where-this-model-fits-in-the-Figma-agent" class="headerlink" title="Where this model fits in the Figma agent"></a>Where this model fits in the Figma agent</h3><p>Earlier this month, we rolled out the Figma agent to all users, and it includes our first-party editing model. The agent runs both this specialized model and leading third-party models, using them for different parts of the work. For certain tasks like image generation, vectors, or brand new design explorations, we use the best third-party model available. For precise edits and iterations that our model handles well, we use our own.</p>
+<p>The surrounding canvas matters, too. The agent needs context from the canvas and the design system, along with tools that can make the requested changes. Post-training helps the model do its part of that work better.</p>
+<p><img src="/images/HV0mMH0bUAA8BBs.jpg" alt="HV0mMH0bUAA8BBs"></p>
+<p>Learn more about how product designers use the Figma agent for craft, speed, and creative expression.</p>
+<h3 id="Where-we-go-next"><a href="#Where-we-go-next" class="headerlink" title="Where we go next"></a>Where we go next</h3><p>This work has demonstrated that post-trained models can compete with frontier models on a specialized task like Figma editing. Starting with a focused problem allows us to turn progress into meaningful product updates for our users so they can spend less time managing individual edits and more time bringing their vision to life.</p>
+<p>If you’re interested in design and post-training models for non-verifiable domains, check out our open roles—we’re hiring.</p>
+<p>We train in a way that respects customer privacy and preferences. You can learn more about our approach here.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/30/zoink-2115894206409723946/">https://yaoav.github.io/2026/10/30/zoink-2115894206409723946/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/zoink/">@zoink</a></div><div class="post-share"><div class="social-share" data-image="/images/2115894206409723946-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/30/foundersfund-2115908010308735095/" title="Accepted"><img class="cover" src="/images/2115908010308735095-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Accepted</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @foundersfund（Founders Fund） 的长文，原文链接，版权归原作者所有。  The U.S. Nuclear Regulatory Commission has accepted General Matter’s first license application for review. Acceptance marks the beginning of our formal license application review, a major milestone on our mission of fueling American power. In its acceptance letter, the NRC noted “the quality and completeness of the application reflect the effectiveness of General Matter’s constructive pre-application engagement with the NRC staff,” ...</div></div></div></a><a class="pagination-related" href="/2026/10/29/garrytan-2115815018637770972/" title="One Gist Killed Manual Note-Linking"><img class="cover" src="/images/2115815018637770972-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">One Gist Killed Manual Note-Linking</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @garrytan（Garry Tan） 的长文，原文链接，版权归原作者所有。  Linking notes by hand was never building a second brain.It was killing one. Karpathy published one gist that puts the model in charge of every cross-reference, every summary, every contradiction check. Seven repos already run the pattern, with about 255,000 GitHub stars between them. What is inside:  The gist and the shift it makes Three layers of a self-maintaining vault The three operations that drive the system Seven repos sorted by what...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/10/22/zoink-2112953682392477783/" title="How Harvey is Building a Frontier Marketing Org"><img class="cover" src="/images/2112953682392477783-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-22</div><div class="info-item-2">How Harvey is Building a Frontier Marketing Org</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @zoink（Dylan Field） 的长文，原文链接，版权归原作者所有。  Recently, @figma asked us what Harvey was building with its MCP server. This is the long answer. Between the MCP and better frontier models, agents now run whole design projects end to end across our brand, product marketing, and design work. Here’s what that looks like, and the systems underneath it. Building a Launch Film With Agents We made this launch film for Harvey Artifacts entirely with agents, inside of Figma. The agent built every ...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">101</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">47</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#We%E2%80%99ve-increasingly-seen-that-specialized-post-training-can-compete-with-frontier-models-Here-we%E2%80%99re-sharing-the-research-behind-how-we%E2%80%99re-translating-that-to-design-editing-workflows"><span class="toc-number">1.</span> <span class="toc-text">We’ve increasingly seen that specialized post-training can compete with frontier models. Here, we’re sharing the research behind how we’re translating that to design editing workflows.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Teaching-a-model-to-edit-in-Figma"><span class="toc-number">2.</span> <span class="toc-text">Teaching a model to edit in Figma</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-we-evaluate-design-edits"><span class="toc-number">3.</span> <span class="toc-text">How we evaluate design edits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-this-model-fits-in-the-Figma-agent"><span class="toc-number">4.</span> <span class="toc-text">Where this model fits in the Figma agent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-we-go-next"><span class="toc-number">5.</span> <span class="toc-text">Where we go next</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
