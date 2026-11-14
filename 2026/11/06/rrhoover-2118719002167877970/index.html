@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The AI trade isn't the AI economy  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Yesterday, screens went red. The Nasdaq lost about $2.3 trillion. Nvidia fell mo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The AI trade isn&#39;t the AI economy ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/06/rrhoover-2118719002167877970/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Yesterday, screens went red. The Nasdaq lost about $2.3 trillion. Nvidia fell mo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2118719002167877970-cover.jpg">
+<meta property="article:published_time" content="2026-11-06T22:55:48.000Z">
+<meta property="article:modified_time" content="2026-11-14T12:44:46.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@rrhoover">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2118719002167877970-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The AI trade isn't the AI economy ",
+  "url": "https://yaoav.github.io/2026/11/06/rrhoover-2118719002167877970/",
+  "image": "https://yaoav.github.io/images/2118719002167877970-cover.jpg",
+  "datePublished": "2026-11-06T22:55:48.000Z",
+  "dateModified": "2026-11-14T12:44:46.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/06/rrhoover-2118719002167877970/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The AI trade isn\'t the AI economy ',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">72</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2118719002167877970-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The AI trade isn't the AI economy </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The AI trade isn't the AI economy </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-06T22:55:48.000Z" title="发表于 2026-11-06 22:55:48">2026-11-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@rrhoover（Ryan Hoover）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2118719002167877970">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Yesterday, screens went red.  The Nasdaq lost about $2.3 trillion. Nvidia fell more than 9% and chips lost about 12%. By evening, the headlines had named it the worst rout since 2020.</p>
+<p>There are two clocks in a week like this. One ticks by the second and resets every morning. The other moves slowly: one engineer, then a team, then an industry. The first clock is the AI trade. The second is the AI economy. They’re easy to confuse, because the first one is louder.</p>
+<p>The AI trade is a few companies pouring money into chips, data centers and power, and a crowd guessing whether demand will arrive in time to pay for it. Yesterday, the crowd decided the political winds had turned, and it moved all at once.</p>
+<p>The AI economy is quieter. It’s code getting written, support tickets answered, robots learning to move, drugs found a little faster. It doesn’t reprice daily. It accumulates. Today coding is the richest vein. It won’t stay the only one.</p>
+<p>We like to tell the hunter’s story about markets. The trader watches, waits and strikes: sells at the top, buys at the bottom, carries the kill home. It’s a good story, with a hero and a moment. Most of the time, it isn’t how anyone gets fed.</p>
+<p>The numbers bear that out. From 2005 to 2024, $10,000 left alone in the S&amp;P 500 grew to $71,750. A hunter who missed just the 10 best days, ten days out of twenty years, ended with $32,871: less than half. And the best days don’t come on calm mornings. Seven of the ten arrived within two weeks of the ten worst. The feast and the famine keep the same calendar.</p>
+<p>But there’s an older story with no single moment in it. Someone carries a bag. On good days she fills it, and on bad days she fills it. Nothing heroic happens. At the end of the season, the bag is full.</p>
+<p>I believe we’re early in a long season. Not certain. Believe. Every great building time overbuilds. The canal diggers dug too many canals. The railroads laid more track than there were trains to run. Fiber went into the ground years before anyone had much to send through it. Many of the people who paid for all that lost money, and that’s part of the story, not a footnote to it. Some people will lose money this time too. But the canals carried barges for a century, and the fiber is still under our feet, carrying this.</p>
+<p>The good news and the bad news are already in the price, the way weather is already in the air. You don’t argue with weather. You dress for it, and you keep walking.</p>
+<p>So I don’t try to call the turn. Nobody knows whether this was the start of a long winter or one storm in a long build. I’d rather keep filling the bag, season after season, than stand at the edge of the field waiting to strike.</p>
+<p>One thing would change my mind, and it isn’t red screens. It’s a data center humming in the dark, fully powered, with nothing to do: machines built for work that never came. If capacity keeps getting cheaper and still sits idle, the season is shorter than I think. I’m watching for that. I haven’t seen it. And don’t think I will.</p>
+<p>There may be more pain to come in the AI trade. I believe the AI economy underneath it is just getting started.</p>
+<p>Personal opinions only. Not investment advice.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/06/rrhoover-2118719002167877970/">https://yaoav.github.io/2026/11/06/rrhoover-2118719002167877970/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/rrhoover/">@rrhoover</a></div><div class="post-share"><div class="social-share" data-image="/images/2118719002167877970-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/07/X-2119050035363205408/" title="生于Ai的十万+自媒体知识付费之路"><img class="cover" src="/images/2119050035363205408-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">生于Ai的十万+自媒体知识付费之路</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我的十万+自媒体知识付费之路 我花了十万多，才学会判断一个项目值不值得付费。 有的钱交得很冤，有的钱交得很值。还有一些钱，只有亏完之后我才知道：这条路不适合自己。 很多人聊知识付费，喜欢直接站队——要么所有课程都是割韭菜，要么付费学习一定值得。我站不了队。因为这两种经历，我都有过。 早期的学费：交过冤枉钱，也买过地图大学第一笔付费：19800元。当时做拼多多店铺代运营，对方报价19800元。我缺结果，也缺判断力。对方有完整的话术：团队、方法、案例、收益截图，一样不少。钱交出去之后，结果却没有出现。 后来我才明白，很多项目赚的不是货，也不是项目本身，而是你的代运营费。你交钱之前是合作对象，交钱之后只是客户。那次之后，我没有把所有知识付费都骂成骗局。一次被骗，只能说明那一次不值，不能证明所有付费内容都没用。 19800元买来的，是我最早的辨别力。 生财有术：我买的是一张地图生财有术我也付过费。它对我最大的帮助，不是几句金句，而是把公众号、小红书、直播、带货等路径摆到了我面前。我第一次承认，自己缺的不是努力，而...</div></div></div></a><a class="pagination-related" href="/2026/11/06/Nyxera0x-2118689860437315679/" title="How I Turn One Image Into a 3D Simulator That Takes Itself Apart"><img class="cover" src="/images/2118689860437315679-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How I Turn One Image Into a 3D Simulator That Takes Itself Apart</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Nyxera0x（Nyxera） 的长文，原文链接，版权归原作者所有。  I gave Claude a job description instead of a prompt. Now one picture becomes a 3D build in code that Claude checks against the picture and films taking itself apart. Below: the brief, the checklist and every prompt.  The first time I asked Claude for a robot animal with nothing to work from, I got a generic toy. This tarantula came out of the same model. What changed is the input: one picture from ChatGPT, and a job description instead of a pr...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">72</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

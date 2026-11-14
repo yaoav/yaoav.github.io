@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="昨天 Codex 更新了 image2.6，核心是能直接生成 GIF 了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程 ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/06/harrisonitsme-2118589683819262346/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="昨天 Codex 更新了 image2.6，核心是能直接生成 GIF 了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2118589683819262346-cover.jpg">
+<meta property="article:published_time" content="2026-11-06T14:21:56.000Z">
+<meta property="article:modified_time" content="2026-11-14T12:44:50.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@harrisonitsme">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2118589683819262346-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程 ",
+  "url": "https://yaoav.github.io/2026/11/06/harrisonitsme-2118589683819262346/",
+  "image": "https://yaoav.github.io/images/2118589683819262346-cover.jpg",
+  "datePublished": "2026-11-06T14:21:56.000Z",
+  "dateModified": "2026-11-14T12:44:50.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/06/harrisonitsme-2118589683819262346/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程 ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">72</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2118589683819262346-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程 </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">巧用 Codex image2.6，0 成本 AI 视频生成：从隐喻到成片的全流程 </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-06T14:21:56.000Z" title="发表于 2026-11-06 14:21:56">2026-11-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@harrisonitsme（森叔）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2118589683819262346">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>昨天 Codex 更新了 image2.6，核心是能直接生成 GIF 了。</p>
+<p>我当晚就拿它跑了四条拼贴 B-roll，全程没碰视频模型。</p>
+<p><video controls preload="metadata" poster="/images/2118585531336642560-poster.jpg" src="/videos/2118585531336642560.mp4"></video></p>
+<p>说实话，这次给我的震撼比 Opus 5.5 写代码做视频那一波还大。</p>
+<p>原因就两个：成本，和能做出来的画面有多复杂。</p>
+<p>Opus 5.5 写代码做视频，本质上是 HTML 动画。数字跳动、卡片翻转、信息图，它做得又快又准。但一到「一只手拿剪刀，把月亮从纸上剪下来」这种画面，代码就画不出来了：纸的毛边、半调网点、手的形状，这些得靠图像模型。</p>
+<p>以前要做这种有手工质感的镜头，我得接视频模型的 API，按条付费。一条5秒的视频大概是1块钱。</p>
+<p>结果就是，我舍不得为一句口播单独做一个镜头。</p>
+<p>现在整条链路都在 Codex 里跑完，用的是本来就在付的订阅额度。不接 API，不配密钥，不再为每条单独付钱。</p>
+<p>对天天剪口播的人来说，这意味着一句话也配得起一个专门的镜头了。</p>
+<h2 id="我把自己的-skill-改了"><a href="#我把自己的-skill-改了" class="headerlink" title="我把自己的 skill 改了"></a>我把自己的 skill 改了</h2><p>我有个开源的 skill 叫 gbro-collage-broll，专门把一句 5 秒左右的口播，做成半调纸拼贴风的 B-roll。</p>
+<p>改之前的流程是这样的：</p>
+<ol>
+<li>先出视觉隐喻，等我确认</li>
+<li>再出静帧，再等我确认</li>
+<li>拿纯色空场当首帧、静帧当尾帧，调 Gemini Omni Flash 生成首尾帧视频（更早用的是 Veo）</li>
+<li>拿到视频去掉音轨</li>
+</ol>
+<p>改完变成：</p>
+<ol>
+<li>只确认一次隐喻</li>
+<li>image2.6 出静帧，AI 自己按清单检查、有问题自己重出</li>
+<li>以静帧为终点，image2.6 直接出循环 GIF</li>
+<li>GIF 转成 MP4，方便进剪辑软件</li>
+</ol>
+<p>具体改了三处：</p>
+<p><strong>视频模型整个拿掉了。</strong> 依赖从「Python + google-genai SDK + API 密钥」变成「Codex + ffmpeg」，装机门槛低了一大截。</p>
+<p><strong>两道确认砍成一道。</strong> 我发现真正需要人判断的只有隐喻这一步。静帧有没有假字、主体集不集中、纸片是不是太碎，这些都能写成清单让 AI 自己查。我盯着看反而是浪费时间。</p>
+<p><strong>交付从 MP4 变成 GIF + MP4 两份。</strong> GIF 发推、放笔记里直接动，MP4 拖进剪映用。</p>
+<p><img src="/images/HWa6i6na4AAlcQI.jpg" alt="HWa6i6na4AAlcQI"></p>
+<p>下面是我这几天跑下来的经验。如果你也想用 image2.6 低成本做 AI 视频，又想把质量做上去，可以按这四步走：</p>
+<p>隐喻 → 定风格出静帧 → 描述动作出 GIF → 转 MP4</p>
+<p><img src="/images/HWa6oiZaEAAInlV.jpg" alt="HWa6oiZaEAAInlV"></p>
+<h2 id="第一步：先确认隐喻"><a href="#第一步：先确认隐喻" class="headerlink" title="第一步：先确认隐喻"></a>第一步：先确认隐喻</h2><p>口播是抽象的。比如「经验每次都在重复消耗」，这句话你没法直接丢给模型出图，丢了也是随机抽卡。</p>
+<p>所以第一步要把它翻译成一个画面。我的 skill 会给出这样一张卡：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">核心意思：经验每次都在重复消耗</span><br><span class="line">视觉隐喻：熟练剪辑师围着巨大的胶片时钟逐帧裁切，时钟走完一圈，只得到一小段成片</span><br><span class="line">关键物件：胶片时钟、剪辑师、剪刀、短胶片</span><br><span class="line">色彩：焦橙底，奶油白与浅青点色</span><br><span class="line">组装顺序：时钟 → 人物与剪刀 → 胶片 → 最终短输出</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HWa6tCCbQAAdeIm.jpg" alt="HWa6tCCbQAAdeIm"></p>
+<p>为什么一定要在这里停下来确认？</p>
+<p>因为隐喻错了，后面每一步都白做。看一段文字只要十秒，重出一组图要几分钟，还要烧额度。</p>
+<p><strong>把人的判断放在最便宜的那一步，这是免抽卡的关键。</strong></p>
+<p>几条规则：</p>
+<ul>
+<li>一句话只做一个隐喻，别想一个画面讲三件事</li>
+<li>物件控制在 3–6 个，多了语义变弱，动起来还会互相遮挡</li>
+<li>不要把文稿的字放进画面，画面负责隐喻，字幕负责文字</li>
+<li>批量做的时候，让几条隐喻前后成叙事。比如先拍手工消耗、经验流失，再拍规范沉淀、人机分工</li>
+</ul>
+<h2 id="第二步：定风格，出静帧（最关键的一步）"><a href="#第二步：定风格，出静帧（最关键的一步）" class="headerlink" title="第二步：定风格，出静帧（最关键的一步）"></a>第二步：定风格，出静帧（最关键的一步）</h2><p>这一步最决定成片质量，篇幅我多花一点。</p>
+<h3 id="1-风格不能光靠形容词，一定要有案例"><a href="#1-风格不能光靠形容词，一定要有案例" class="headerlink" title="1. 风格不能光靠形容词，一定要有案例"></a>1. 风格不能光靠形容词，一定要有案例</h3><p>你跟模型说「高级的杂志拼贴风」，出十次能给你十种拼贴。</p>
+<p>形容词每个人理解都不一样，模型也一样。要让风格稳定，必须给它一个具体的案例。也就是你觉得满足这个你心中这个风格的图究竟是什么样的。</p>
+<p>有了案例之后，我的 skill 会做一件事：把案例拆成可执行的材料参数，写进一份 visual-spec.json。拼贴风拆出来是这样的：</p>
+<ul>
+<li><strong>平涂色场</strong>：背景是一整块强烈、均匀的纯色纸，没有渐变</li>
+<li><strong>黑白半调剪片</strong>：主体是黑白网点照片剪下来的纸片，看得见印刷网点</li>
+<li><strong>彩色卡纸点缀</strong>：关键物件（卡片、按钮、胶片）才用红、黄、青、橙、紫</li>
+<li><strong>机切边 + 奶油白描边</strong>：每块纸边缘干净利落，外圈一道细细的暖白边</li>
+<li><strong>柔和投影</strong>：低透明度的纸片阴影，让纸有一点厚度</li>
+<li><strong>纸纤维颗粒</strong>：未涂布纸的细纤维质感</li>
+</ul>
+<p>案例负责让你和模型看到同一个东西，参数负责每次都能复现它。两样缺一不可。</p>
+<p><img src="/images/HWa67KvboAAw4CE.jpg" alt="HWa67KvboAAw4CE"></p>
+<h3 id="2-颜色跟着语义走"><a href="#2-颜色跟着语义走" class="headerlink" title="2. 颜色跟着语义走"></a>2. 颜色跟着语义走</h3><p>我以前默认全用钴蓝底，一批看下来很单调。现在按意思挑底色：</p>
+<ul>
+<li>焦橙 &#x2F; 红：时间消耗、劳动、紧迫</li>
+<li>芥末黄：工具、警示、经验漏失</li>
+<li>墨绿：认知、审美、系统重置</li>
+<li>深紫：规范、沉淀、长期记忆</li>
+<li>青绿：判断、协作、自动执行</li>
+</ul>
+<p><img src="/images/HWa7BSSbMAAWhkR.jpg" alt="HWa7BSSbMAAWhkR"></p>
+<p>同一批作品，设计语言统一，底色各不相同。彩色纸片只用在需要强调的地方，不为了彩色而彩色。</p>
+<h3 id="3-构图要给动画留位置"><a href="#3-构图要给动画留位置" class="headerlink" title="3. 构图要给动画留位置"></a>3. 构图要给动画留位置</h3><p>静帧不是一张海报就完事了，它是 GIF 的最后一帧。所以出图时就要想好它怎么动起来：</p>
+<ul>
+<li>主体放在画面中间 70% 的区域</li>
+<li>留出大块干净的纯色空白，动画要从这块空场开始拼</li>
+<li>画面由 3–6 个能分开的大纸片组成，不要满屏碎片</li>
+</ul>
+<p>碎片太多，动起来就是一锅粥。</p>
+<h3 id="4-把模型的坏习惯提前禁掉"><a href="#4-把模型的坏习惯提前禁掉" class="headerlink" title="4. 把模型的坏习惯提前禁掉"></a>4. 把模型的坏习惯提前禁掉</h3><p>图像模型很爱在画面里塞假字、假 logo、假界面。拼贴风尤其容易冒出报纸上那种乱码小字。</p>
+<p>所以提示词里要明确写：无文字、无字母、无数字、无 logo、无水印、无 UI、无字幕、不要光滑 3D、不要写实场景。</p>
+<p>我的静帧提示词模板长这样，可以直接拿去改：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Use case: ads-marketing</span><br><span class="line">Asset type: final still frame for a 9:16 B-roll clip</span><br><span class="line">Primary request: Create a finished editorial paper-collage image expressing [一句话视觉命题].</span><br><span class="line">Scene/backdrop: perfectly flat [颜色] paper field [hex] with subtle uncoated paper fiber.</span><br><span class="line">Style/medium: premium editorial stop-motion paper collage; black-and-white halftone photographic cut-outs mixed with selective [点色] colored cardstock.</span><br><span class="line">Composition/framing: vertical 9:16 locked poster frame; central subject within the middle 70 percent; generous clean color-field negative space; 3–6 large separable paper groups for later assemble-from-empty animation.</span><br><span class="line">Materials/textures: visible printed halftone dots, crisp machine-cut edges, thin warm-cream paper keylines, soft low-opacity physical drop shadows.</span><br><span class="line">Constraints: [这条隐喻必须一眼看懂的关系].</span><br><span class="line">Avoid: no typography, no readable letters, no numerals, no logos, no watermark, no UI, no subtitles, no glossy 3D, no photoreal environment, no clutter.</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-为什么一定要先出静帧"><a href="#5-为什么一定要先出静帧" class="headerlink" title="5. 为什么一定要先出静帧"></a>5. 为什么一定要先出静帧</h3><p>这是我最想强调的一点：<strong>跳过静帧、直接让 image2.6 出 GIF，质量明显差一截。</strong></p>
+<p>道理也简单。一步出 GIF，模型要同时决定风格、构图、动作三件事，等于三件事一起抽卡。结果往往是画面发糊、纸片闪烁、假字乱冒。</p>
+<p>先把静帧定死，GIF 的任务就只剩一件事：把这张图从空场拼出来。终点已经确定，模型只管过程。</p>
+<h3 id="6-静帧出来先过一遍清单"><a href="#6-静帧出来先过一遍清单" class="headerlink" title="6. 静帧出来先过一遍清单"></a>6. 静帧出来先过一遍清单</h3><ul>
+<li>隐喻是不是一眼能看懂</li>
+<li>主体集不集中</li>
+<li>有没有假字、logo、水印、UI</li>
+<li>纯色空场留够了没有</li>
+<li>是 3–6 个大组，还是满屏碎片</li>
+<li>同一批是不是质感统一、底色有变化</li>
+</ul>
+<p>有一条不过就重出。这个清单我已经交给 AI 自己跑了，不用人盯。</p>
+<h2 id="第三步：怎么描述动作，让-AI-出-GIF"><a href="#第三步：怎么描述动作，让-AI-出-GIF" class="headerlink" title="第三步：怎么描述动作，让 AI 出 GIF"></a>第三步：怎么描述动作，让 AI 出 GIF</h2><p>静帧定好之后，动作描述的核心就一句话：<strong>从空场开始，把纸片一块块拼成这张静帧。</strong></p>
+<p>我管这个叫 assemble-from-empty。为什么不用「轻微漂移」「缓慢推镜」「呼吸感」这种描述？因为放在 GIF 里，这些小动作看起来就是画面在抖。拼贴风的魅力在定格动画那种一块纸「啪」地卡到位的感觉。</p>
+<p>我的 skill 描述动作有四个规矩。</p>
+<p><strong>一、顺序固定。</strong> 基础结构先进场，然后是人物或关键卡片，再是连接件，最后是动作和结果。拼完定格一会儿，再清场回到空场，正好接上下一轮循环。</p>
+<p><strong>二、每个物件写清四件事。</strong> 从哪进、做什么动作、停在哪、什么时候走。</p>
+<p><strong>三、用物理动词。</strong> 滑入、落下、卡位、翻面、剪开、装订、点亮。别写「出现」「浮现」，那是淡入淡出，不是拼贴。</p>
+<p><strong>四、镜头锁死。</strong> 不切镜、不缩放、不变形、不加静帧里没有的新物件、不出文字。</p>
+<p>拿我昨天做的「把月亮剪下来」举例，5 秒的动作是这样排的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0.2–0.9s  钴蓝空场，一张奶油黄圆纸从上方落下，卡到位</span><br><span class="line">1.2–1.9s  一只黑白半调的手握着剪刀，从右下方滑入</span><br><span class="line">2.1–2.5s  剪刀合拢，圆纸被剪成弯月，剪下的余纸翻面，露出蓝色背面和奶油白细边</span><br><span class="line">2.5–3.9s  定格在确认过的静帧</span><br><span class="line">3.9–4.8s  手和月亮各自退出画面，回到空场，接上下一轮</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HWa7PilaoAA0rbc.jpg" alt="HWa7PilaoAA0rbc"></p>
+<p>写成提示词，模板是这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Paper-collage stop-motion assembly. The attached image is the exact completed final frame.</span><br><span class="line">Open on the empty flat [颜色] paper field. Assemble the scene piece by piece with crisp physical stop-motion timing: [按顺序写每个物件：从哪进、做什么、停在哪].</span><br><span class="line">Hold the completed composition, then clear the pieces out back to the empty field so the loop is seamless.</span><br><span class="line">Keep the exact 9:16 framing, [hex] color field, halftone dots, cream keylines, crisp cut edges and soft shadows.</span><br><span class="line">No scene cuts, no camera movement, no zoom, no morphing, no new objects, no text, no letters, no numbers, no logos, no watermark, no UI.</span><br><span class="line">Output: looping GIF, 9:16, 5 seconds, about 20 fps, infinite loop.</span><br></pre></td></tr></table></figure>
+
+<p><video controls preload="metadata" poster="/images/2118586696552054784-poster.jpg" src="/videos/2118586696552054784.mp4"></video></p>
+<p>GIF 出来之后，别只看最后一帧。要逐段检查：入场有没有提前露出纸片、中段是不是真的一块块拼、定格是不是和静帧一致、循环接头会不会跳一下。</p>
+<h2 id="第四步：GIF-转-MP4"><a href="#第四步：GIF-转-MP4" class="headerlink" title="第四步：GIF 转 MP4"></a>第四步：GIF 转 MP4</h2><p>GIF 发推很方便，但剪映、PR 对 GIF 的支持一般，所以我最后都会转一份 MP4。</p>
+<p>一行 ffmpeg 就够：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -v error -n -ignore_loop 1 -i final.gif -map 0:v:0 -an -vf <span class="string">&quot;fps=24,scale=720:1280:force_original_aspect_ratio=decrease,pad=720:1280:(ow-iw)/2:(oh-ih)/2,setsar=1&quot;</span> -c:v libx264 -pix_fmt yuv420p -movflags +faststart final.mp4</span><br></pre></td></tr></table></figure>
+
+<p>几个参数解释一下：</p>
+<ul>
+<li>-ignore_loop 1：GIF 带着无限循环标记，这里显式让 ffmpeg 只读一遍。要是设成 0，它会按标记一直循环读下去</li>
+<li>fps&#x3D;24：我的 GIF 按 20fps 出，这里统一成剪辑软件习惯的 24fps</li>
+<li>scale + pad：缩放到 720×1280 竖屏，比例不对就补边，不拉伸</li>
+<li>-pix_fmt yuv420p：兼容性最好的像素格式，手机、剪映都能正常播</li>
+<li>-an：不要音轨，B-roll 的声音在剪辑里统一处理</li>
+</ul>
+<p>转完用 ffprobe 看一眼：5 秒左右、720×1280、24fps、H.264、没有音轨，就可以拖进时间线了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,pix_fmt,avg_frame_rate:format=duration -of json final.mp4</span><br></pre></td></tr></table></figure>
+
+<p>顺带说一句，拼贴风天生适合走 GIF：大面积平涂色块加黑白网点，用到的颜色本来就少，GIF 的 256 色基本够用，不太会出现色带。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>整个流程总结一下：</p>
+<ol>
+<li><strong>隐喻先确认</strong>：把人的判断放在最便宜的那一步，免抽卡</li>
+<li><strong>风格靠案例，静帧必须先出</strong>：案例让风格稳定，静帧给 GIF 定终点</li>
+<li><strong>动作从空场拼起</strong>：顺序固定、物理动词、镜头锁死</li>
+<li><strong>GIF 转 MP4</strong>：一行 ffmpeg，直接进剪辑</li>
+</ol>
+<p>这个 skill 我开源在 GitHub：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/pyang5166/gbro-collage-broll">https://github.com/pyang5166/gbro-collage-broll</a></p>
+<p>现在仓库里还是旧版（Gemini Omni Flash 方案）。image2.6 的新版我再调试两天，稳定了就推上去。</p>
+<p>想第一时间用的，可以先点个 star，更新了我会在这里说一声。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/06/harrisonitsme-2118589683819262346/">https://yaoav.github.io/2026/11/06/harrisonitsme-2118589683819262346/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/harrisonitsme/">@harrisonitsme</a></div><div class="post-share"><div class="social-share" data-image="/images/2118589683819262346-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a><a class="pagination-related" href="/2026/11/06/levie-2118429008711102831/" title="The future of Box in the agentic era"><img class="cover" src="/images/2118429008711102831-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">The future of Box in the agentic era</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @levie（Aaron Levie） 的长文，原文链接，版权归原作者所有。  In just the past few years, AI models have gotten unbelievably good at reasoning, logic, multimodal capabilities, tool use, computer use, and deeper domain expertise across nearly every high-value area of knowledge work. And inside the AI labs, there is now the view that we are reaching a form of recursive self-improvement, where AI itself is helping discover and drive research breakthroughs in model training, which means that you get faster...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">72</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E6%8A%8A%E8%87%AA%E5%B7%B1%E7%9A%84-skill-%E6%94%B9%E4%BA%86"><span class="toc-number">1.</span> <span class="toc-text">我把自己的 skill 改了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%85%88%E7%A1%AE%E8%AE%A4%E9%9A%90%E5%96%BB"><span class="toc-number">2.</span> <span class="toc-text">第一步：先确认隐喻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%9A%E9%A3%8E%E6%A0%BC%EF%BC%8C%E5%87%BA%E9%9D%99%E5%B8%A7%EF%BC%88%E6%9C%80%E5%85%B3%E9%94%AE%E7%9A%84%E4%B8%80%E6%AD%A5%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">第二步：定风格，出静帧（最关键的一步）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A3%8E%E6%A0%BC%E4%B8%8D%E8%83%BD%E5%85%89%E9%9D%A0%E5%BD%A2%E5%AE%B9%E8%AF%8D%EF%BC%8C%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%89%E6%A1%88%E4%BE%8B"><span class="toc-number">3.1.</span> <span class="toc-text">1. 风格不能光靠形容词，一定要有案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%A2%9C%E8%89%B2%E8%B7%9F%E7%9D%80%E8%AF%AD%E4%B9%89%E8%B5%B0"><span class="toc-number">3.2.</span> <span class="toc-text">2. 颜色跟着语义走</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9E%84%E5%9B%BE%E8%A6%81%E7%BB%99%E5%8A%A8%E7%94%BB%E7%95%99%E4%BD%8D%E7%BD%AE"><span class="toc-number">3.3.</span> <span class="toc-text">3. 构图要给动画留位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%8A%8A%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9D%8F%E4%B9%A0%E6%83%AF%E6%8F%90%E5%89%8D%E7%A6%81%E6%8E%89"><span class="toc-number">3.4.</span> <span class="toc-text">4. 把模型的坏习惯提前禁掉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E5%AE%9A%E8%A6%81%E5%85%88%E5%87%BA%E9%9D%99%E5%B8%A7"><span class="toc-number">3.5.</span> <span class="toc-text">5. 为什么一定要先出静帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E9%9D%99%E5%B8%A7%E5%87%BA%E6%9D%A5%E5%85%88%E8%BF%87%E4%B8%80%E9%81%8D%E6%B8%85%E5%8D%95"><span class="toc-number">3.6.</span> <span class="toc-text">6. 静帧出来先过一遍清单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E6%80%8E%E4%B9%88%E6%8F%8F%E8%BF%B0%E5%8A%A8%E4%BD%9C%EF%BC%8C%E8%AE%A9-AI-%E5%87%BA-GIF"><span class="toc-number">4.</span> <span class="toc-text">第三步：怎么描述动作，让 AI 出 GIF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9AGIF-%E8%BD%AC-MP4"><span class="toc-number">5.</span> <span class="toc-text">第四步：GIF 转 MP4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">6.</span> <span class="toc-text">最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
