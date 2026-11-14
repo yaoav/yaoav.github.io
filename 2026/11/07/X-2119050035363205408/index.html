@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>生于Ai的十万+自媒体知识付费之路 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我的十万+自媒体知识付费之路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生于Ai的十万+自媒体知识付费之路">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/07/X-2119050035363205408/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="我的十万+自媒体知识付费之路">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2119050035363205408-cover.jpg">
+<meta property="article:published_time" content="2026-11-07T20:51:13.000Z">
+<meta property="article:modified_time" content="2026-11-14T00:09:22.770Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2119050035363205408-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "生于Ai的十万+自媒体知识付费之路",
+  "url": "https://yaoav.github.io/2026/11/07/X-2119050035363205408/",
+  "image": "https://yaoav.github.io/images/2119050035363205408-cover.jpg",
+  "datePublished": "2026-11-07T20:51:13.000Z",
+  "dateModified": "2026-11-14T00:09:22.770Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/07/X-2119050035363205408/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '生于Ai的十万+自媒体知识付费之路',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2119050035363205408-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">生于Ai的十万+自媒体知识付费之路</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">生于Ai的十万+自媒体知识付费之路</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-07T20:51:13.000Z" title="发表于 2026-11-07 20:51:13">2026-11-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2119050035363205408">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p><strong>我的十万+自媒体知识付费之路</strong></p>
+<p>我花了十万多，才学会判断一个项目值不值得付费。</p>
+<p>有的钱交得很冤，有的钱交得很值。还有一些钱，只有亏完之后我才知道：这条路不适合自己。</p>
+<p><strong>很多人聊知识付费，喜欢直接站队——要么所有课程都是割韭菜，要么付费学习一定值得。我站不了队。因为这两种经历，我都有过。</strong></p>
+<h3 id="早期的学费：交过冤枉钱，也买过地图"><a href="#早期的学费：交过冤枉钱，也买过地图" class="headerlink" title="早期的学费：交过冤枉钱，也买过地图"></a>早期的学费：交过冤枉钱，也买过地图</h3><p>大学第一笔付费：19800元。当时做拼多多店铺代运营，对方报价19800元。我缺结果，也缺判断力。对方有完整的话术：团队、方法、案例、收益截图，一样不少。钱交出去之后，结果却没有出现。</p>
+<p>后来我才明白，很多项目赚的不是货，也不是项目本身，而是你的代运营费。你交钱之前是合作对象，交钱之后只是客户。那次之后，我没有把所有知识付费都骂成骗局。一次被骗，只能说明那一次不值，不能证明所有付费内容都没用。</p>
+<p><strong>19800元买来的，是我最早的辨别力。</strong></p>
+<h3 id="生财有术：我买的是一张地图"><a href="#生财有术：我买的是一张地图" class="headerlink" title="生财有术：我买的是一张地图"></a>生财有术：我买的是一张地图</h3><p>生财有术我也付过费。它对我最大的帮助，不是几句金句，而是把公众号、小红书、直播、带货等路径摆到了我面前。我第一次承认，自己缺的不是努力，而是一张地图。社群里的信息很多，噪音也很多。后来我判断一个项目值不值，会看三件事：听完能不能变成动作？跑一段时间之后有没有反馈？反馈看账户数据，还是只看听课时的情绪？</p>
+<p><img src="/images/HWhb-FGa8AASeUy.png" alt="HWhb-FGa8AASeUy"></p>
+<p><strong>公众号：不到1万元，换来一套系统</strong></p>
+<p><img src="/images/HWhcdwaaQAEF7HA.jpg" alt="HWhcdwaaQAEF7HA"></p>
+<p>我在公众号上付费过三个人，累计不到1万元。第一个主要教提示词，让我第一次直观看到信息差是可以被定价的。第二个教赛道，买到的是少走半年弯路的可能性。第三个教矩阵，这部分对我影响最大。我后来能做到最高峰同时运营2000个公众号，靠的是把这些事情做成了流程。</p>
+<p><strong>小红书和无人直播：亏了十万左右</strong></p>
+<p>这部分是我交过最贵的一次学费。选品、设备、直播、账号场景，前前后后亏了十万左右。亏完之后，我才承认：选品和直播，不是我的长板。但这些都是前期的探索。</p>
+<p><strong>真正让我确认”付费可以很值”的，是我在X上的这段经历。</strong></p>
+<h3 id="X上的付费：一次都没踩坑"><a href="#X上的付费：一次都没踩坑" class="headerlink" title="X上的付费：一次都没踩坑"></a>X上的付费：一次都没踩坑</h3><p>说实话，现如今我在X上的付费，就没有踩过坑。总体来说，X上的交付还是比较靠谱的。可能是因为这个平台的氛围，也可能是因为这里的创作者更注重长期口碑。我先后付费了四个人：**启航、AYI、季白羽、蜗牛。**每一笔钱，都物超所值。</p>
+<p><strong>1. 启航</strong></p>
+<p><img src="/images/HWhdpOvasAAWEhW.png" alt="HWhdpOvasAAWEhW"></p>
+<p>我从咨询项目到付费，前后不到十个字！</p>
+<p><img src="/images/HWhdyoibsAEybd8.png" alt="HWhdyoibsAEybd8"></p>
+<p>一星期速通2K粉丝。接近拿到创作者收益权限（虽然后期因为我个人原因号被封禁了）但足以看出，这种陪跑的重要性以及收获程度，我是一个IP小白，也学会了慢慢打造自己</p>
+<p>更重要的是，启航也是一个很好的督促者。对于那些行动力差、容易拖延的人来说，有人盯着你、推着你往前走，这个价值是无法用钱衡量的。如果你想运营X，找启航绝对是没有问题的。一周2K粉，不是因为有什么神秘技巧，而是因为有人帮你把每一步都做对了。</p>
+<p><img src="/images/HWhdQA0aMAAokIh.png" alt="HWhdQA0aMAAokIh"></p>
+<p><strong>2. AYI</strong></p>
+<p><img src="/images/HWhd5YKbkAA3uQp.png" alt="HWhd5YKbkAA3uQp"></p>
+<p><strong>几百块的社群，随便一个商单就回本</strong></p>
+<p><strong>AYI老师这边，我付费的是社群。在我个人认为来说，AYI老师的社群真的是太夯了。你能想象一个几百块的付费，不仅能共享AYI老师的知识库&#x2F;链接大佬！甚至群里还能介绍商单吗？随便一个商单就可以回本了。</strong></p>
+<p><img src="/images/HWhdXwkaIAAj43O.jpg" alt="HWhdXwkaIAAj43O"></p>
+<p>我看过群里的商单对接，硬核博主能微调模型、能飞、科研受众的那种商单，对接给真正合适的人。不是那种谁都能接的垃圾单，而是真正匹配博主属性的优质商单。</p>
+<p>AYI老师的社群的质量，已经涵盖了大半个高质量中推圈的博主。这意味着什么？意味着你不只是在学习，你还在建立连接。你看到的不只是知识，还有这些人是怎么做的，他们在讨论什么，他们在接什么样的商单。</p>
+<p><strong>如果你想马上打入中推圈，AYI老师你值得付费。</strong></p>
+<p><strong>3. 季白羽</strong></p>
+<p><img src="/images/HWheD5zawAEhzv5.png" alt="HWheD5zawAEhzv5"></p>
+<p><strong>年费365，这是值1万的课程</strong></p>
+<p><strong>我对季老师的看法是：他的付费太便宜了。年费365，一天一块钱。其中包括抖音、小红书、视频号、带货、AI教学，全是实战经验。季老师的微博就已经是近百万粉丝，这不是理论派，是真正跑出来的结果。</strong></p>
+<p>我觉得这是值1W甚至更高的一个课程。你想做自媒体，你不知道如何开始，你不知道各个平台的差异在哪里，你不知道带货要注意什么——无脑付费就对了。一年365，每天一块钱，比你点一杯奶茶还便宜。但你得到的，是一个已经在多个平台验证过的完整方法论。</p>
+<p><strong>4. 蜗牛king</strong></p>
+<p><img src="/images/HWheSOXbsAMpfJk.png" alt="HWheSOXbsAMpfJk"></p>
+<p><strong>公众号板块一线交付，0投入高回报</strong></p>
+<p><strong>我经常觉得，一个人想做自媒体，想做副业，完全可以从公众号入手。公众号绝对是一个低投入高回报的项目，甚至可以说是0投入。不需要设备，不需要露脸，不需要剪辑，只需要能写、能找内容、能坚持。</strong></p>
+<p><strong>蜗牛老师在公众号板块个人交付中，已经是一线的存在了。</strong></p>
+<p><img src="/images/HWhelHvbcAAOiFo.png" alt="HWhelHvbcAAOiFo"></p>
+<p>在X上，你也可以经常看到蜗牛老师学员的成绩分享。有人做到日入几百，有人矩阵做到月入过万，这些都是真实的案例。我自己就是从公众号起来的，所以我很清楚蜗牛老师交付的是什么——不只是方法，还有风控、选题、日更的节奏、矩阵的复制逻辑。这些东西，如果你自己摸索，可能要半年到一年。如果有人带，一个月就能上手，两个月就能看到收益。</p>
+<h3 id="为什么X上的付费体验这么好？"><a href="#为什么X上的付费体验这么好？" class="headerlink" title="为什么X上的付费体验这么好？"></a>为什么X上的付费体验这么好？</h3><p>回过头来想，X上的付费为什么体验这么好？我总结了几点：</p>
+<p><strong>第一，交付边界清晰。这几位老师在付费之前，都会把交付内容、陪跑时间、答疑方式说得很清楚。你知道自己买的是什么，也知道对方会提供什么。</strong></p>
+<p><strong>第二，结果导向。启航帮你看每一条内容，AYI帮你对接商单，季白羽给你全平台方法论，蜗牛带你从0到1跑通公众号。这些都是可以验证的结果，不是听完课就结束了。</strong></p>
+<p><strong>第三，长期口碑。X这个平台，你的每一条内容都是公开的，你的学员案例也是公开的。做得好不好，大家都看得见。所以这里的创作者更注重长期价值，而不是割一波就走。</strong></p>
+<p><strong>第四，门槛合理。几百到小几千的价格，不会让人觉得压力太大。但交付的内容和陪跑的质量，远超这个价格。</strong></p>
+<h3 id="现在我判断一个项目值不值得付费的标准"><a href="#现在我判断一个项目值不值得付费的标准" class="headerlink" title="现在我判断一个项目值不值得付费的标准"></a>现在我判断一个项目值不值得付费的标准</h3><p>经历了早期的坑和后来的值，我现在判断一个项目值不值得付费，标准很简单：</p>
+<p><strong>1. 先问：最后是谁在给钱？一个项目说自己能赚钱，必须能讲清楚钱从哪里来。是平台分成？是外部客户购买？是商单？是卖服务？还是主要靠继续招学员、收代理费和卖资格？</strong></p>
+<p><strong>2. 再问：交钱之后到底交付什么？课程有多少节？什么时候更新？有没有作业？谁负责答疑？会不会看账号、看数据、改内容？陪跑持续多久？每周能提供几次反馈？</strong></p>
+<p><strong>3. 把所有成本算一遍。课程价格只是第一笔钱。还要问清楚后面有没有工具订阅、设备、账号、投流、押金、软件、素材和其他服务费。</strong></p>
+<p><strong>4. 看完整案例，不只看最高收益。收益截图只能证明某个人在某个时间拿到过这个结果。我会继续问：这个账号做了多久？投入了多少钱？之前有没有团队和经验？</strong></p>
+<p><strong>5. 算一遍自己的回本账。假设项目收费5000元，我会先问自己：我需要多赚多少钱才能回本？需要投入多少时间？多久能验证一次？如果三个月没有结果，我能不能承受？</strong></p>
+<h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p><strong>我是生于，做了3年公众号矩阵，累计收益100W+。最高峰的时候，同时运营过2000个公众号。现在也在做MCN机构，帮更多人在自媒体这条路上少走弯路。</strong></p>
+<p>我不劝所有人都去报课。适合自学的时候就自己跑，遇到能节省时间、补上短板的内容，再认真付费。</p>
+<p><strong>我现在判断一个项目值不值得付费，标准很简单：它能不能让我少走弯路，并且最后变成自己的能力。</strong></p>
+<p>如果你也在做自媒体，也在考虑要不要付费学习，希望我的经历能给你一些参考。欢迎关注我，一起交流。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/07/X-2119050035363205408/">https://yaoav.github.io/2026/11/07/X-2119050035363205408/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2119050035363205408-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/08/DrRabbitAI-2119277960670929389/" title="国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目"><img class="cover" src="/images/2119277960670929389-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 国自然放榜，我认真看了一下今年的数据。  2026年集中接收的10类项目，一共资助69,563项。2025年是53,159项。也就是说，今年增加了16,404项，增幅约30.9%。  其中，两类和青年教师关系比较密切的项目，变化尤其明显： 青年科学基金项目（C类）：增加12,046项，增幅50.1%； 面上项目增加3,400项，增幅14.8%。 看到这个变化以后，我又动心了。 刚好最近，北京市自然科学基金2026年第三批项目申请也启动了。 一边是国自然青年C和面上项目扩容，一边是北京市自然科学基金正在申报，再加上现在已经可以用AI辅助做选题调研、查文献和整理材料，我又萌生了申请项目的想法。 申请项目的第一步，当然是「找选题灵感」。  我要把过去获批的国自然项目整理出来，看看大家都在研究什么。  01｜为什么我要收集历年的获批题目？准备基金选题的时候，我们经常会去看历年的获批项目。 倒不是为了照着别人的题目改几个词，而是想知道：最近几年哪些问题正在受到关注，大...</div></div></div></a><a class="pagination-related" href="/2026/11/06/Nyxera0x-2118689860437315679/" title="How I Turn One Image Into a 3D Simulator That Takes Itself Apart"><img class="cover" src="/images/2118689860437315679-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How I Turn One Image Into a 3D Simulator That Takes Itself Apart</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Nyxera0x（Nyxera） 的长文，原文链接，版权归原作者所有。  I gave Claude a job description instead of a prompt. Now one picture becomes a 3D build in code that Claude checks against the picture and films taking itself apart. Below: the brief, the checklist and every prompt.  The first time I asked Claude for a robot animal with nothing to work from, I got a generic toy. This tarantula came out of the same model. What changed is the input: one picture from ChatGPT, and a job description instead of a pr...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/11/X-2120480271195910591/" title="AI 时代，90% 的项目都可以批量"><img class="cover" src="/images/2120480271195910591-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-11</div><div class="info-item-2">AI 时代，90% 的项目都可以批量</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  AI 时代，90% 的项目都可以批量我从 1 个号做到 2000 个号：任何跑通的项目，都能矩阵化 先看结果。 下面是我抖音上自己的号。一个号，累计收益 481713.71 元。基础收益 200279.2，精选收益 53465.85，签约收益 227869.41。签约收益占了接近一半。  这不是孤例。另外两个号，一个累计 13376.19，一个累计 8636.7。三个号加起来，50 万出头。   再看公众号。下面是我随手截的 7 个号，都是我自己的。  7 个号，昨日阅读加起来 407280 次，昨日广告收入加起来 3702.27 元。  我把这 7 个号的数字列出来：  · 阅读 75142，昨日广告收入 807.09  · 阅读 120070，昨日广告收入 888.51  · 阅读 50971，昨日广告收入 409.36 · 阅读 48747，昨日广告收入 223.29 · 阅读 24671，昨日广告收入 430.47 · 阅读 70181，昨日广告收入 774.04 · 阅读 17498，昨日广告收...</div></div></div></a><a class="pagination-related" href="/2026/10/22/X-2113195080517562646/" title="Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱"><img class="cover" src="/images/2113195080517562646-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-22</div><div class="info-item-2">Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  Hello 大家好，我是lemomo。这次 Lemo-Opuscar 迎来了上线以来最大的一次更新，不光有新的风格，还有新的玩法，整个项目定位从【视频风格库】变成【搭建自己风格库的工具】。  **新增【剪辑与纪实】8 种风格，目前从最早的39种已经更新到了59种。**未来会继续更新，我的目标是99种。 新玩法：把风格改成你自己的。 新增的玩法，现在除了可以从库里选择风格开始创建影片外，库里任何一种风格都能改，也可以从空白开始。 预告： Lemo Studio 工作台 (Claude App 桌面版），还有下一批日系动漫风格预告。  已经装过的朋友，记得先更新。还没安装的朋友，请给我点点star，求转发！ 全新 8 种新风格：剪辑与纪实这次新增的 8 种风格有一个共同点：不在依赖代码作画，而是用真实素材剪出来的。 真实的影像、照片、文件、数据，按某一种剪辑和包装的语法排好，再配上声音。所以它们特别适合做自媒体、做新闻、做纪实的朋友。 而且这次的风格不光用opus可以做，sonnet 5.5 High档位的效...</div></div></div></a><a class="pagination-related" href="/2026/11/12/X-2120783846253719901/" title="两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操"><img class="cover" src="/images/2120783846253719901-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我做视频号两年多，粉丝近2000。 这个数字放进任何一篇起号教程，都算还没起来。可我靠视频号赚到的钱，比不少几万粉的账号要多。我做的是个人 IP 口播，对着手机讲装修科普、孩子上学要注意的事、公文写作里常见的问题，都是身边的日常小问题。没有团队，客户大部分在县城。 这两天我把自己在视频号上走过的路理了一遍。两个平台差别挺大，有些地方我的做法跟小红书刚好反着来，后面会讲到。 这篇写给想做个人 IP、还没开始的人。我的经验只来自县城客户和私域成交，做纯流量号或者带货号的朋友，看的时候要打个折，我没有这样的经验。 一、视频号怎么把你送到别人面前在小红书，陌生人靠兴趣推荐和搜索看到你。抖音主要靠算法。视频号也有算法推荐，但它多了一条路，就是你的微信好友。 视频号里那颗爱心是“推荐”。一个人点了它，他的好友就有机会刷到这条视频，还能看到是谁推荐的。视频也能一键转进群、发朋友圈、私聊给某个人。一条视频就这样顺着人和人的关系往外走。 社交推荐和算法推荐各占多少，网上说法很多，有说五五开的，也有说社交占六成以上的。我没找...</div></div></div></a><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A9%E6%9C%9F%E7%9A%84%E5%AD%A6%E8%B4%B9%EF%BC%9A%E4%BA%A4%E8%BF%87%E5%86%A4%E6%9E%89%E9%92%B1%EF%BC%8C%E4%B9%9F%E4%B9%B0%E8%BF%87%E5%9C%B0%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">早期的学费：交过冤枉钱，也买过地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E8%B4%A2%E6%9C%89%E6%9C%AF%EF%BC%9A%E6%88%91%E4%B9%B0%E7%9A%84%E6%98%AF%E4%B8%80%E5%BC%A0%E5%9C%B0%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">生财有术：我买的是一张地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#X%E4%B8%8A%E7%9A%84%E4%BB%98%E8%B4%B9%EF%BC%9A%E4%B8%80%E6%AC%A1%E9%83%BD%E6%B2%A1%E8%B8%A9%E5%9D%91"><span class="toc-number">3.</span> <span class="toc-text">X上的付费：一次都没踩坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88X%E4%B8%8A%E7%9A%84%E4%BB%98%E8%B4%B9%E4%BD%93%E9%AA%8C%E8%BF%99%E4%B9%88%E5%A5%BD%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">为什么X上的付费体验这么好？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E5%9C%A8%E6%88%91%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%80%BC%E4%B8%8D%E5%80%BC%E5%BE%97%E4%BB%98%E8%B4%B9%E7%9A%84%E6%A0%87%E5%87%86"><span class="toc-number">5.</span> <span class="toc-text">现在我判断一个项目值不值得付费的标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-number">6.</span> <span class="toc-text">关于我</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？"><img src="/images/2121082480392564761-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nature：科研人如何选择适合自己的AI工具？"/></a><div class="content"><a class="title" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？">Nature：科研人如何选择适合自己的AI工具？</a><time datetime="2026-11-13T11:27:25.000Z" title="发表于 2026-11-13 11:27:25">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
