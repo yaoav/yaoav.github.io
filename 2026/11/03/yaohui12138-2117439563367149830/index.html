@@ -1,0 +1,521 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南） | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="上个周六在「超进化个体」社群里做了一场 Claude 稳定使用的 0→1 环境搭建直播，手把手把每一步都整个过程每一步都讲清楚了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南）">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/03/yaohui12138-2117439563367149830/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="上个周六在「超进化个体」社群里做了一场 Claude 稳定使用的 0→1 环境搭建直播，手把手把每一步都整个过程每一步都讲清楚了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117439563367149830-cover.jpg">
+<meta property="article:published_time" content="2026-11-03T10:11:46.000Z">
+<meta property="article:modified_time" content="2026-11-15T02:00:15.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@yaohui12138">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117439563367149830-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南）",
+  "url": "https://yaoav.github.io/2026/11/03/yaohui12138-2117439563367149830/",
+  "image": "https://yaoav.github.io/images/2117439563367149830-cover.jpg",
+  "datePublished": "2026-11-03T10:11:46.000Z",
+  "dateModified": "2026-11-15T02:00:15.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/03/yaohui12138-2117439563367149830/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2117439563367149830-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">史上最全claude0-1稳定使用教程（含本人稳定使用2年踩坑教学，脱坑指南）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-03T10:11:46.000Z" title="发表于 2026-11-03 10:11:46">2026-11-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@yaohui12138（超级个体｜柿子）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117439563367149830">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>上个周六在「超进化个体」社群里做了一场 Claude 稳定使用的 0→1 环境搭建直播，手把手把每一步都整个过程每一步都讲清楚了</p>
+<p>群里几十个人跟着走完全流程，目前全部稳定运行中，没有一个翻车</p>
+<p>今天把整套方案的流程和踩坑经验公开出来，能写的全写了</p>
+<p><strong>但有几个涉及具体资源推荐的环节（节点服务商、礼品卡渠道等），因为资源太小众、怕被用崩，只在社群内部分享</strong>——文末有入口，感兴趣的可以先看完再决定</p>
+<h2 id="核心认知：为什么你的-Claude-会被封"><a href="#核心认知：为什么你的-Claude-会被封" class="headerlink" title="核心认知：为什么你的 Claude 会被封"></a>核心认知：为什么你的 Claude 会被封</h2><p>开始动手之前，先理解一件事：</p>
+<blockquote>
+<p>市面上目前没有绝对稳定的方案，所有经验均个人摸索和稳定使用经验</p>
+</blockquote>
+<p><strong>Claude 封号从来不是因为某一条单独的原因，而是多维度风控打分的结果</strong>。Anthropic 把你身上的各种信号加在一起——IP 纯净度、设备指纹、时区、支付方式、使用行为——累积到阈值，号就没了</p>
+<p>Anthropic 在用户条款里写得明明白白，封号理由就三条：</p>
+<ol>
+<li>你来自他们不支持的地区</li>
+<li>你拿账号搞蒸馏、高并发，或者接到不该接的第三方工具上</li>
+<li>你发了违规内容</li>
+</ol>
+<p>对大部分人来说，后两条不主动作死就不会死</p>
+<p>所以核心问题只有一个：<strong>注册、订阅、使用的时候，怎么让平台觉得你就是一个它支持地区的正常用户？</strong></p>
+<p>我们整套方案的底层逻辑：</p>
+<blockquote>
+<p><strong>稳定的美国节点 + 美区 Apple ID 下载 Claude App + 手机注册 Claude + Apple 美国礼品卡订阅</strong></p>
+</blockquote>
+<p><strong>每一步看似简单，但是实则真正实操的时候，有100个细节，你稍不注意就是直接被封下面一步一步来</strong></p>
+<h3 id="一、基础准备：网络环境搭建"><a href="#一、基础准备：网络环境搭建" class="headerlink" title="一、基础准备：网络环境搭建"></a>一、基础准备：网络环境搭建</h3><p>1.1 为什么不能用普通ip</p>
+<p>这是大家公认最关键的一步，没有之一</p>
+<p>普通的万人共用机场节点，你跟几千人挤同一个 IP，里面只要有人搞蒸馏、搞号池、搞 sub2api，整个 IP 段的风控分都被拉高</p>
+<p>用这种ip被封就是早晚的事</p>
+<p>1.2 获取一个干净的美国节点</p>
+<p>两条路线，按你的情况选一条：</p>
+<p><strong>路线一：自建 VPS（适合愿意动手的人）</strong></p>
+<p>买一台美国的 VPS（Virtual Private Server，虚拟专用服务器），自己搭节点，整条链路只有你一个人在用，干净、可控。服务商选 DMIT、搬瓦工这类经过社区长期验证的就行</p>
+<p>如果你想做到更稳，可以在 VPS 后面再套一层住宅 IP，这属于加分项。搭建完成后的具体配置可以丢给你的 Agent 来完成。</p>
+<p><strong>路线二：直接用住宅 IP 一体化服务（适合不想折腾的人）</strong></p>
+<p>市面上有一些把节点和美国住宅 IP 做成二合一的服务，买一次全都有，不用自己搭任何东西。出了问题有技术快速修复，不需要自己操心。如果不想麻烦地配置、就想快速用上 Claude，这条路最省事。</p>
+<blockquote>
+<p>具体用哪家、怎么挑，我在「超进化个体」社群里有整理过测评清单和避坑指南，这里不公开推荐是因为好的资源一旦被大量涌入就会变差——保护资源也是保护你自己的账号</p>
+</blockquote>
+<p><strong>选购要点（不管哪条路线）：</strong></p>
+<ul>
+<li><strong>地区选美国</strong>。后面浏览器，电脑的时区、语言都要跟它对上</li>
+<li><strong>选静态 IP，不选动态</strong>。静态 IP 的出口地址是固定的；动态 IP 会按时间或连接换出口，一个正常的美国用户不会每刷新一次页面就换个城市</li>
+<li><strong>价格不要太低</strong>。低于 60 元&#x2F;月的 IP，可能是已经被用烂的，非常不建议</li>
+</ul>
+<p>1.3 代理客户端配置：Shadowrocket</p>
+<p>推荐使用 Shadowrocket（即“小火箭”）作为代理客户端，Mac 和 iPhone 都安装，保证电脑和手机网络分流规则一致。</p>
+<p>1.4 分流规则配置（重中之重）</p>
+<p>选好节点之后，还有几件事必须做对。把下面这段话直接丢给你的 Agent（Codex 或其他 AI 编程工具）来操作：</p>
+<blockquote>
+<p>“请帮我配置 Shadowrocket，固定使用节点【你的节点名称】。将代理类型设为 None（TUN Mode），全局路由使用”配置“。为以下 4 个域名添加 DOMAIN-SUFFIX 规则，走指定节点：anthropic.com、claude.ai、claude.com、claudeusercontent.com。Claude 相关规则不使用直连备用或自动切换节点。同时检查旧代理配置是否冲突。”</p>
+</blockquote>
+<p><strong>三个绝对不能犯的错误：</strong></p>
+<p><strong>第一，必须开 TUN 模式，不要用系统代理。</strong> 普通的系统代理模式会在网络设置里留下 127.0.0.1:7890 之类的代理记录，Claude Code 一读就知道你挂着代理。TUN 模式是在系统底层创建虚拟网卡接管流量，系统代理设置保持全空，Claude 看到的就是一台直连美国互联网的普通电脑。</p>
+<p>配完在终端验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scutil --proxy   <span class="comment"># HTTPEnable 和 HTTPSEnable 都应该是 0</span></span><br><span class="line">curl ipinfo.io   <span class="comment"># 看出口是不是美国 IP</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>第二，把历史残留的代理配置清干净。</strong> 如果以前用过 Clash 等其他代理工具，部分程序可能还留着旧代理地址。把这段话丢给 Agent：</p>
+<blockquote>
+<p>“帮我全面检查这台电脑的代理残留，包括系统代理、环境变量里的 proxy、shell 启动文件（.zshrc&#x2F;.bashrc）、npm 和 git 的代理配置、claude 的 settings.json，以及所有 ANTHROPIC 开头的环境变量，把不干净的列出来给我。”</p>
+</blockquote>
+<p><strong>第三，线路断了就让 Claude 断网，绝不自动直连。</strong></p>
+<p>这一点极其重要。你平时走代理用 Claude，某天节点断了，代理客户端可能自动切到直连，Claude 那边看到的就是你的 IP 从美国瞬移回了国内——这直接触发风控</p>
+<p>正确的做法是给 Claude 的流量单独指定线路，这条线路失败时直接拒绝连接，不许自动换节点、更不许直连。确认你的分流规则中，claude.ai 和 api.anthropic.com 这些域名不会落到 DIRECT 上，兜底规则也不是直连</p>
+<p><strong>验证方法：</strong> 在代理客户端里把海外节点手动断掉，然后分别打开 Claude 网页版、桌面端——应该全部打不开。国内网站照常能上。两个都对了才说明配置正确</p>
+<h3 id="二、修改时区：改成美国时区"><a href="#二、修改时区：改成美国时区" class="headerlink" title="二、修改时区：改成美国时区"></a>二、修改时区：改成美国时区</h3><p>依稀记得有人反编译过 Claude Code 的客户端，发现确实会检测时区</p>
+<p>把时区改成美国对应的时区，可以让你的设备看起来更像一个正常的美国用户</p>
+<p><strong>关键原则：时区要跟你 IP 的地理位置对上。</strong> 如果你的 IP 在加州（Los Angeles），时区就选 America&#x2F;Los_Angeles；如果在纽约，就选 America&#x2F;New_York</p>
+<p>让你的ai去改就好了</p>
+<p>Mac 修改方法</p>
+<ol>
+<li>系统设置 → 通用 → 日期与时间 → 关掉“自动设定时区” → 手动搜索并选择对应的美国城市（如“洛杉矶”）</li>
+<li>系统设置 → 隐私与安全性 → 定位服务 → 系统服务 → 关掉“设定时区”</li>
+</ol>
+<p>iPhone 修改方法</p>
+<ol>
+<li>设置 → 通用 → 日期与时间 → 关掉“自动设置” → 时区选择对应的美国时区</li>
+<li>设置 → 隐私与安全性 → 定位服务 → 系统服务 → 关掉“设定时区”</li>
+</ol>
+<blockquote>
+<p><strong>Tips:</strong> 也有人建议改为台北时区（与北京时间一致，日常零感知），台北是 Claude 支持的地区，如果你不习惯美国时间的作息显示，这也是一个折中方案。但如果你的 IP 在美国，时区对上美国城市是最严谨的做法</p>
+</blockquote>
+<h3 id="三、注册-Claude-账号"><a href="#三、注册-Claude-账号" class="headerlink" title="三、注册 Claude 账号"></a>三、注册 Claude 账号</h3><p>3.1 注册一个干净的 Gmail</p>
+<p>在 iPhone 上下载 Chrome 浏览器，然后注册一个全新的 Gmail 账号：右上角头像 → 添加账号 → 创建账号</p>
+<p>手机端注册通常不需要手机号验证，但是电脑端有时候会弹验证</p>
+<p>如果你已经有没被封过号的老 Gmail 邮箱，直接用它更好——账号年限本身就是一个正面信号</p>
+<p>但绝对不要用买来的成品邮箱（卖家可能还保留恢复权限），也不要用那种临时邮箱或者野鸡outlook邮箱</p>
+<p>3.2 注册美区 Apple ID</p>
+<p>如果你在第一步买 Shadowrocket 时已经注册了美区 Apple ID，直接用它。如果还没有：</p>
+<ol>
+<li>访问 <a target="_blank" rel="noopener" href="https://account.apple.com/account">https://account.apple.com/account</a></li>
+<li>用中国手机号注册，地区选”United States”</li>
+<li>注册完成后在 iPhone 的 App Store 中登录这个美区 Apple ID（<strong>只在 App Store 登录，不要登录 iCloud，否则有锁机风险</strong>）</li>
+</ol>
+<p>3.3 从美区 App Store 下载 Claude</p>
+<p>用美区 Apple ID 登录 App Store 后，直接搜索”Claude”下载安装。<strong>只有美区商店才有 Claude App，国区搜不到</strong></p>
+<p>下载完成后先不要急着打开，确保你的 iPhone 已经：</p>
+<ul>
+<li>Shadowrocket 已连接美国节点</li>
+<li>时区已改为对应的美国城市</li>
+<li>定位服务中的”设定时区”已关闭</li>
+</ul>
+<p>3.4 在 Claude App 中注册账号</p>
+<p><strong>注意：不要在电脑上注册 Claude，全程在手机上完成。</strong></p>
+<p>打开刚下载的 Claude App：</p>
+<ol>
+<li>点击 “Continue with Google”，用你的 Gmail 登录</li>
+<li>按提示完成注册，选择免费版本先进入</li>
+<li>称呼随便写个英文名</li>
+<li>进入首页后，像个新用户一样随便聊几轮（中文英文都行，海外华人和留学生多的是）</li>
+<li><strong>不要急着订阅</strong>，先当几天免费用户，让账号有正常的使用记录</li>
+</ol>
+<h3 id="四、订阅付费（Apple-美区礼品卡方案）"><a href="#四、订阅付费（Apple-美区礼品卡方案）" class="headerlink" title="四、订阅付费（Apple 美区礼品卡方案）"></a>四、订阅付费（Apple 美区礼品卡方案）</h3><p>这是整个流程的核心支付环节。我们选择 <strong>Apple 美区礼品卡 + iPhone App Store 内购</strong> 这条路线，原因有两个：一是不需要海外银行卡，门槛最低；二是万一被封号，可以找苹果客服申请退款。</p>
+<p>4.1 购买并充值美区 Apple 礼品卡</p>
+<p>此处，由于资源良莠不齐，因此不在此做公开推荐</p>
+<blockquote>
+<p>礼品卡渠道是整个流程里水最深的一环——便宜的可能是黑卡，用了直接连 Apple ID 一起封；贵的可能就是二道贩子加价。</p>
+</blockquote>
+<p>4.2 先订阅 Pro，不要直接上 Max</p>
+<p><strong>千万不要注册完就直接冲 Max 20x！</strong></p>
+<p>这是无数人踩过的坑</p>
+<p>一个正常用户不会注册当天就掏 200 多美元买顶配套餐，而且200美刀直接封号的概率确实很大</p>
+<p>正确的节奏：</p>
+<ol>
+<li><strong>先用免费版聊几轮</strong>，像个正常新用户</li>
+<li><strong>充 20 美元，订阅 Pro</strong>（月付 20 美元，注意不要选成年付 200 美元那个）</li>
+<li><strong>Pro 用几天，等额度用完一轮</strong></li>
+<li>再充 250 美元的礼品卡</li>
+<li><strong>隔一两天后升级 Max 5x</strong></li>
+<li>如果需要 Max 20x，再稳定使用一段时间后升级，max5能确保你的日常使用</li>
+</ol>
+<blockquote>
+<p>此处需要注意：极有可能需要找apple支持去打电话验证，因为如果是新号可能出现被封控的问题，强烈建议养一段时间再订阅</p>
+</blockquote>
+<p>4.3 订阅时确保代理正常</p>
+<p>在 Claude App 里点订阅之前，再确认一次你的 iPhone 网络状态：</p>
+<ul>
+<li>Shadowrocket 已连接，出口是你一直用的那个美国节点</li>
+<li>打开 Safari 访问 ipinfo.io，确认 IP 地址跟注册时一致</li>
+</ul>
+<p><strong>从注册到订阅，全程走同一个节点，不要中途换线路。</strong> 如果注册时 IP 在加州，订阅时却跳到了纽约，这种不一致本身就是风控信号</p>
+<h3 id="五、订阅失败怎么处理"><a href="#五、订阅失败怎么处理" class="headerlink" title="五、订阅失败怎么处理"></a>五、订阅失败怎么处理</h3><p>5.1 苹果内购被拒：“无法完成购买”</p>
+<p>走 App Store 升级 Max 时，大概率会弹出一个“无法完成购买（This purchase couldn‘t be completed）”的提示，让你联系 Apple 支持</p>
+<p>这是苹果自己的风控，不是 Claude 的问题</p>
+<p><strong>处理步骤：</strong></p>
+<ol>
+<li><strong>别反复点购买</strong>。点多少次都没用，只会加重风控</li>
+<li><strong>不要点弹窗里或 App 里的 Apple 支持链接</strong>（因为你手机的 iCloud 登的是你自己的中国 Apple ID，那边显示的不是美区号）</li>
+<li><strong>在已配置代理的浏览器里打开苹果在线支持</strong>：getsupport.apple.com</li>
+<li>选择 “Apps &amp; Services” → “App Store” → “Subscriptions &amp; Purchases” → “Unable to purchase”</li>
+<li>点 “Get more help” → “Live Chat” 进入在线客服</li>
+<li>客服会要你的 Apple 账户邮箱和 Support PIN（在 account.apple.com 左侧导航最底下获取）</li>
+<li><strong>跟客服说</strong>：我就是正常买个订阅，不明白为什么被拒，一般能给解决</li>
+<li>客服通常会说“已提交审查，请等 72 小时”</li>
+<li><strong>一定要追问一句</strong>：“So after 72 hours I will definitely be able to complete this purchase, right?” 让他给你一个确定的答复</li>
+<li><strong>72 小时内什么都别碰</strong>，别反复尝试购买</li>
+<li>等满后再从 Claude App 里升级</li>
+</ol>
+<p>如果等完还是不行，继续找客服，不要在 App 里一遍遍点购买</p>
+<p>5.2 网页端支付</p>
+<p>资源太杂了，这里真不好给大家推荐，望大家谅解，有各种u卡，虚拟卡，其他博主推荐的挺多的，但是我没用过我不好说</p>
+<p>5.3 礼品卡充值后余额不够</p>
+<p>苹果内购 Max 20x 是 279.99 美元&#x2F;月（50的苹果税，应该还交了点增值税，其实max5x是很好的选择，如果大家量不大的话）</p>
+<p>苹果升级是<strong>先全额扣款，再按比例退还 Pro 未使用天数的费用</strong></p>
+<h3 id="六、日常使用注意事项"><a href="#六、日常使用注意事项" class="headerlink" title="六、日常使用注意事项"></a>六、日常使用注意事项</h3><p>6.1 遇到 API Error 立即停止</p>
+<p>如果你在使用 Claude（尤其是 Claude Code）时看到 <strong>API Error</strong> 的错误提示，<strong>必须第一时间停止操作</strong>。</p>
+<p>API Error 通常意味着你的请求在某个环节出了问题，可能的原因包括：</p>
+<ul>
+<li>节点掉线，流量走了直连</li>
+<li>代理配置被检测到异常</li>
+<li>账号被临时限流或风控</li>
+</ul>
+<p><strong>不要在报错后反复重试。</strong> 反复重试只会让异常行为被更多地记录下来。正确的做法是：</p>
+<ol>
+<li>立即停止当前操作</li>
+<li>检查你的代理连接状态——节点是否正常、IP 出口是否还在美国</li>
+<li>在终端跑 <strong>curl ipinfo.io</strong> 确认出口 IP</li>
+<li>确认一切正常后，等几分钟再恢复使用</li>
+<li>如果持续报错，当天就别用了，排查完再来</li>
+</ol>
+<p>6.2 对话自动压缩与常开节点</p>
+<p>Claude 现在有一个机制：<strong>当你停用对话一段时间后，系统会自动压缩对话历史</strong>（Auto Compaction）。这个压缩过程是后台自动进行的，会向 Anthropic 的服务器发送请求</p>
+<p>这意味着什么？<strong>即使你没有主动在用 Claude，后台的压缩请求也会暴露你的网络出口。</strong> 如果你用完 Claude 就关掉了代理，压缩请求走了直连，Anthropic 看到的就是你的 IP 从美国突然变成了中国——这跟正常使用时节点掉线是一样的风控风险。</p>
+<p><strong>所以，电脑上的代理节点要常开，不能用完 Claude 就关闭。</strong> 具体来说：</p>
+<ul>
+<li>代理客户端（Shadowrocket）保持常驻运行</li>
+<li>TUN 模式保持开启</li>
+<li>不要在用完 Claude 后就手动断开节点</li>
+<li>如果你需要关机或者切换网络，先在 Claude 里用 <strong>&#x2F;clear</strong> 清掉当前对话，或者等压缩完成后再关</li>
+<li>Claude Code 用户：如果你要暂时不用了，先退出 Claude Code 进程，再关代理</li>
+</ul>
+<p>6.3 额度用量控制</p>
+<p><strong>每周额度不要打满，留 10%–20% 的余量。</strong> 这是无数人踩过的坑。</p>
+<p>订阅比 API 亏，什么订阅最亏？Max 20x。怎么用的情况下更亏？每次都蹬满。Anthropic 在意蒸馏和滥用，如果你每周额度都是 100% 用完，系统很容易把你判定为在搞 sub2api（把订阅反代成 API 接口卖出去）。一旦被判定，必然是短期内直接封号。</p>
+<p>6.4 使用行为红线</p>
+<ul>
+<li><strong>不要反复让 Claude 处理已经明确拒绝的请求。</strong> 换个角色、编个场景继续要求它执行被拒绝的操作，这些行为 Claude 都有记录</li>
+<li><strong>不要把订阅反代成 API，不要接各种中转站</strong></li>
+<li><strong>不要开一堆会话高并发地跑</strong></li>
+<li><strong>不要骂 AI。</strong> 这听起来很荒唐，但 Anthropic 确实有团队研究模型的使用体验，有推友反馈因为骂 AI 被封号</li>
+<li><strong>不要长时间闲置账号。</strong> 有案例显示，注册了从来没登录过的账号，放一段时间直接被封。OpenAI 也有类似规矩</li>
+</ul>
+<h3 id="七、账号被封后怎么处理"><a href="#七、账号被封后怎么处理" class="headerlink" title="七、账号被封后怎么处理"></a>七、账号被封后怎么处理</h3><p>7.1 第一步：保持冷静，不要慌</p>
+<p>被封了不意味着世界末日。根据 Anthropic 2026 年上半年的透明度报告，他们封了 1140 万个账号，收到 39.8 万次申诉，其中 4.2 万次被推翻——<strong>申诉成功率约 10.6%，并非完全没用。</strong></p>
+<p>7.2 第二步：立即止血</p>
+<ol>
+<li><strong>停止在这台设备上登录任何 Claude 账号</strong></li>
+<li><strong>取消自动续费</strong>（App Store → 订阅管理 → 取消；或网页端 Billing 取消）</li>
+<li><strong>导出你需要的对话数据</strong>（如果还能登录的话）</li>
+<li>申诉和取消续费是两件分开的事，<strong>申诉交了不代表续费就停了</strong></li>
+</ol>
+<p>7.3 第三步：申诉</p>
+<p>Anthropic 帮助中心列出的封号理由有三种：多次违反使用政策、在不受支持的地区创建账号、违反服务条款。</p>
+<p>申诉方式：</p>
+<ul>
+<li>登录被封账号时看到的页面通常有申诉入口</li>
+<li>或直接发邮件到 Anthropic 的支持邮箱</li>
+<li>简短说明你的使用情况，语气诚恳，不要编造理由</li>
+</ul>
+<p>7.4 第四步：申请退款</p>
+<ul>
+<li><strong>苹果内购用户：</strong> 在已配置代理的浏览器里打开 getsupport.apple.com，走前面“订阅失败”那节一样的流程，找客服申请退款。第一次申请通常能通过，但不要频繁申请，有推友反馈多次退款后 Apple ID 本身也被封了</li>
+<li><strong>网页端海外卡用户：</strong> 通过 Claude 网页端的 Billing 页面或者发邮件联系 Anthropic</li>
+</ul>
+<p>7.5 第五步：清理设备，准备重新开始</p>
+<p>如果申诉没成功，打算重新注册，<strong>必须先把本地清理干净</strong>。Claude 会在你电脑里留下不少东西，如果直接注册新号，新号一出生就可能带着旧号的标签。</p>
+<blockquote>
+<p>⚠️ <strong>先备份再动手。</strong> 对话记录、Skills、MCP 配置先导出来，跑一次只读审计确认要清什么，再真正执行。全程只删到废纸篓，不永久删除。</p>
+</blockquote>
+<p><strong>完整清理清单（9 步）：</strong></p>
+<ol>
+<li>清 <strong>~&#x2F;.claude</strong> 目录里的缓存、遥测和用量数据，并<strong>换掉</strong> <strong><strong>~&#x2F;.claude.json</strong></strong> <strong>里的 userID 和 machineID</strong></li>
+<li>删钥匙串（Keychain）里的 Claude 凭据——CLI 版和桌面端各有 2 条，共 4 条，<strong>很多人只删了目录却漏掉钥匙串</strong></li>
+<li>清 <strong>~&#x2F;Library&#x2F;Application Support</strong>、<strong>~&#x2F;Library&#x2F;Caches</strong>、<strong>~&#x2F;Library&#x2F;Logs</strong> 里所有 Claude 相关文件</li>
+<li>清 Claude Desktop 的登录状态和缓存</li>
+<li>清所有 <strong>ANTHROPIC_</strong> 开头的环境变量</li>
+<li>清每个 Chrome 用户资料里 <strong>claude.ai</strong> 和 <strong>anthropic.com</strong> 的 Cookie（<strong>带分区的 Cookie 最容易漏</strong>），之后单独开一个英文（en-US）的专用 Chrome 配置</li>
+<li>检查终端、npm、git 里有没有残留的代理设置</li>
+<li>确认 WebRTC、DNS、IPv6 没有泄露真实 IP；时区固定为美国对应城市（或台北）</li>
+<li><strong>一台电脑只登一个号</strong></li>
+</ol>
+<blockquote>
+<p>⚡ <strong>额外踩坑提醒（来自 @leaf_sanren 汇总的 50+ 篇防封帖）：</strong> 用 Grok Bot 云电脑代注册的号会被秒封，申诉也会被拒。注册这一步必须自己动手，不要交给第三方代注册服务。</p>
+</blockquote>
+<p><strong>开源工具推荐（三选一）：</strong></p>
+<ul>
+<li>| 工具 | 作者 | 平台 | 特点 |</li>
+<li>| — | — | — | — |</li>
+<li>| <a target="_blank" rel="noopener" href="https://github.com/suyuan2022/suyuan-skill/blob/main/claude-cleanup/SKILL.md">claude-cleanup</a> | @suyuan1711 | macOS | 命令行脚本，先 <code>--audit</code> 只读审计，确认后输入 <code>CONFIRM</code> 执行；自动备份，删到废纸篓，项目和设置不动 |</li>
+<li>| <a target="_blank" rel="noopener" href="https://github.com/liseami/CCBaga">CCBaga</a> | liseami（@chunxiangai 推荐） | macOS (Apple Silicon) &#x2F; Linux &#x2F; Windows | 图形界面，可备份切换身份、换浏览器指纹、一键改时区语言、检测网络出口一致性。<strong>Intel Mac 不支持</strong> |</li>
+<li>| <a target="_blank" rel="noopener" href="https://github.com/nevertoday/xiaoxiaodong-vps">xiaoxiaodong-vps</a> | @xiaoxiaodong | 任意（远程服务器） | 不清理本机，让 AI 帮你把一台海外 VPS 配成独享网络出口。作者 12 个号全部存活，靠的就是独享出口 |</li>
+</ul>
+<p>7.6 第六步：全新注册</p>
+<p>清理完毕后，从头走一遍：</p>
+<ol>
+<li>新注册一个 Gmail</li>
+<li>用新邮箱注册 Claude</li>
+<li>走前面的订阅流程</li>
+<li>遵守日常使用规范</li>
+</ol>
+<p><strong>如果设备反复被封、清理也不管用：</strong> 有推友提到 Claude 可能会根据设备硬件算出 ID 做物理标记，重装系统也可能没用。这种情况确实比较极端，最终手段是换一台设备</p>
+<blockquote>
+<p>封号是最焦虑的时刻，一个人排查很容易走弯路。「超进化个体」社群里遇到封号的成员，一般我会帮助大家一起排查问题，并且给出我自己踩过的坑还有建议。</p>
+</blockquote>
+<h3 id="八、常见问题-FAQ"><a href="#八、常见问题-FAQ" class="headerlink" title="八、常见问题 FAQ"></a>八、常见问题 FAQ</h3><p><strong>Q：一定要用 iPhone 吗？安卓行不行？</strong> A：不推荐安卓。多位推友反馈，在安卓机和 Google Play 上订阅的号，很容易被封。安卓的 Google Play 风控比苹果严得多。</p>
+<p><strong>Q：一定要住宅 IP 吗？机房 IP 行不行？</strong> A：机房 IP 也有人用了两年没事，但住宅 IP 的风控分更低。如果你要追求稳定，住宅 IP 是更保险的选择。日常使用（注册和订阅完成后）走干净的机房 VPS 也是可以的，很多海外开发者本来就把 Claude Code 放在机房服务器上跑。</p>
+<p><strong>Q：邮箱一定要用 Gmail 吗？Outlook 行不行？</strong> A：强烈建议 Gmail。如果你没有老 Gmail，就新注册一个，也不要选择 Outlook 等其他邮箱。有条件的话用 Proton Mail 更好——Proton 会自动拦截邮件中的跟踪器，Anthropic 邮件里确实有来自 Sendgrid.com 的跟踪器。</p>
+<p><strong>Q：遇到 KYC 验证怎么办？</strong> A：如果你刚注册就被要求 KYC，说明注册环境不够干净，建议直接换号重来。如果是升级 Max 时被要求 KYC，可以使用中国护照通过验证。KYC 背后的验证公司 Persona 允许中国护照，已有大量用户验证成功后稳定使用。</p>
+<p><strong>Q：被封过的号有没有可能解封？</strong> A：有可能。申诉成功率大约 10.6%（Anthropic 官方数据）。但不要把希望全寄托在申诉上，做好重新注册的准备。</p>
+<p><strong>Q：Claude Code 要用 CLI 版还是桌面版？</strong> A：建议 CLI 版。桌面客户端权限更高，能拿到的本机信息更多。CLI 版在终端里跑，相对更可控。</p>
+<h3 id="写在最后：关于「超进化个体」"><a href="#写在最后：关于「超进化个体」" class="headerlink" title="写在最后：关于「超进化个体」"></a>写在最后：关于「超进化个体」</h3><p>这篇教程把能公开讲的全讲了，但用过 Claude 的人都知道——<strong>方法论只能让你上路，真正的坑都藏在执行细节里。</strong></p>
+<p>节点到底选哪家？礼品卡去哪买才不会翻车？订阅被拒怎么跟苹果客服说？被封了第一时间找谁？Anthropic 突然改了风控策略怎么跟进？</p>
+<p>这些问题的答案每周都在变，光靠一篇静态教程是不够的。</p>
+<p><strong>「超进化个体」是我运营了已经半年多的社群</strong>，里面聚集了一群认真用 AI 工具提升自己的人</p>
+<p>这个社群能给你的是什么：</p>
+<ul>
+<li><strong>我自己验证过的资源清单</strong>——礼品卡渠道、避坑操作，持续更新</li>
+<li><strong>每月一次的实操直播和录播——这次claude搭建属于10月份的直播</strong></li>
+<li><strong>→ 飞书知识库：包含我自用整理的提示词，coding流程（之后会升级为所有的AI配置和AI工作流的分享）</strong></li>
+<li><strong>→ 我本人在群里集中答疑，每1&#x2F;2天 定时半个小时-个小时，基本上在群里的问题，我看到就会回复</strong></li>
+<li><strong>→ 我的所有的核心项目：cx skill（claude code和codex协作skill），ai视频剪辑skill（目前迭代4个版本）…</strong></li>
+<li><strong>→ 每周分享我从我加入的各种付费社群中找到的一些ai落地机会，这些机会往往被真实验证过，而且有真实案例</strong></li>
+<li><strong>→ 群友共建，你的实战案例可以被收录进教程</strong></li>
+<li><strong>→ 你的好内容我会优先quote助推，2w粉的曝光直接给你</strong></li>
+</ul>
+<p><strong>目前社群仍然处于内测阶段，所以价格依旧是349元，因为是我长期要做的核心产品之一，所以预计明年我会开启公测到4位数</strong></p>
+<p>对于社群我的交付理念一直都是<strong>百倍交付，如果你感觉没有获得超过群费100倍的收益，随时欢迎无理由退款</strong></p>
+<p>其实坦白来讲，光是剪辑skill都已经足够值回票价，市面上免费的开源剪辑项目，往往没人维护，没人迭代更新，而我们的剪辑skill目前仍然保持半个月一次迭代，效果越来越好…</p>
+<p>如果大家对社群感兴趣，欢迎咨询，但是希望非诚勿扰，感谢大家！🙏</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/03/yaohui12138-2117439563367149830/">https://yaoav.github.io/2026/11/03/yaohui12138-2117439563367149830/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/yaohui12138/">@yaohui12138</a></div><div class="post-share"><div class="social-share" data-image="/images/2117439563367149830-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/03/sanyuanVC-2117632624651125019/" title="2026年10月30日币安安全事件：调查初步发现与应对进展更新 "><img class="cover" src="/images/2117632624651125019-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2026年10月30日币安安全事件：调查初步发现与应对进展更新 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @sanyuanVC（园长｜YuanMan） 的长文，原文链接，版权归原作者所有。  2026年10月30日（东八区时间），币安经历了一起严重且高度复杂的安全事件。这本不应该发生。对于此次事件给用户、合作伙伴及整个行业带来的担忧、干扰和不确定性，我们深表歉意。 保护用户是我们的首要责任。币安将承担此次被盗资金的全部损失，而非用户。我们已保留超过100%的资金，以覆盖此次事件造成的损失。截至2026年10月31日（东八区时间），98%的受影响代币资产已完成补足，用户可通过我们的储备金证明页面进行验证。我们正在购买剩余的流动性较低的资产。 此次事件涉及的数字资产价值约为63.4亿美元。截至本次更新，约有价值28.5亿美元的数字资产已被冻结或拦截，具体金额仍需进一步核对，且可能受到市场价格波动的影响。 我们已立即采取行动控制事件影响，并加强相关系统的安全防护。在本次攻击事件中被利用的入侵点均已封堵，攻击路径涉及的系统已完成重建或替换。此外，我们进一步加强了设备管控、钱包服务风险控制系统，并扩展了基于AI的行为异常检测能力。 这是我们的初步调查报告，其涵盖了截至目...</div></div></div></a><a class="pagination-related" href="/2026/11/03/Seramikimiki-2117319245180829775/" title="2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）"><img class="cover" src="/images/2117319245180829775-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">2个月速成8分雅思  万字手搓全流程保姆级学习+避坑指南（基础篇）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Seramikimiki（Sera） 的长文，原文链接，版权归原作者所有。  如果你高考英语并不优秀、四六级擦边过，已工作多年未碰英语的成年人，还是想在高中就拿到雅思成绩的初中生，那你学雅思的第一步，都应该看这篇。从怎么制定学习计划，到听阅口写四科的详细技巧，手把手教你怎么速通8分。 先来介绍一下自己，我是sera，雅思8.0，雅思工作室创始人，带过上百个同学成功顺利出分。 自己的英语几乎是自学起来的，小镇做题家，语言教育资源贫瘠，自己摸索了很久，走了很多弯路，所以今天想把我用时间、血泪换来的经验，毫无保留地分享给你们。不要钱，如果你觉得有用，麻烦点个关注点个赞就行，这也是我写这篇文章最最真诚的初心。 一、怎么定目标？1、最牛逼的分数配置表 作为久经沙场的8分雅思老师，我敢这么说：你的目标分数定的有多好，你出分就有多快。  很多人不理解，为什么计划的制定会这么重要。 有人说，老师我想拿7分，那我就四科都考7分不就行了吗？我想拿6.5分，我就四科都拿6.5分不就行了吗。有什么好讲究的呢？有什么好纠结的呢？ 那么现在我告诉你，你所制定的目标将直接影响到你出分...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">43</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E8%AE%A4%E7%9F%A5%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%A0%E7%9A%84-Claude-%E4%BC%9A%E8%A2%AB%E5%B0%81"><span class="toc-number">1.</span> <span class="toc-text">核心认知：为什么你的 Claude 会被封</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87%EF%BC%9A%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">一、基础准备：网络环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA%EF%BC%9A%E6%94%B9%E6%88%90%E7%BE%8E%E5%9B%BD%E6%97%B6%E5%8C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">二、修改时区：改成美国时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B3%A8%E5%86%8C-Claude-%E8%B4%A6%E5%8F%B7"><span class="toc-number">1.3.</span> <span class="toc-text">三、注册 Claude 账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AE%A2%E9%98%85%E4%BB%98%E8%B4%B9%EF%BC%88Apple-%E7%BE%8E%E5%8C%BA%E7%A4%BC%E5%93%81%E5%8D%A1%E6%96%B9%E6%A1%88%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">四、订阅付费（Apple 美区礼品卡方案）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%AE%A2%E9%98%85%E5%A4%B1%E8%B4%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">五、订阅失败怎么处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.6.</span> <span class="toc-text">六、日常使用注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%B4%A6%E5%8F%B7%E8%A2%AB%E5%B0%81%E5%90%8E%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86"><span class="toc-number">1.7.</span> <span class="toc-text">七、账号被封后怎么处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-FAQ"><span class="toc-number">1.8.</span> <span class="toc-text">八、常见问题 FAQ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E8%B6%85%E8%BF%9B%E5%8C%96%E4%B8%AA%E4%BD%93%E3%80%8D"><span class="toc-number">1.9.</span> <span class="toc-text">写在最后：关于「超进化个体」</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
