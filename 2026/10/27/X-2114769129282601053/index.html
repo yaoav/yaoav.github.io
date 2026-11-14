@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The Rise of the Self-Driving Company  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="In 1937, British Nobel Prize-winning economist Ronald Coase asked, &quot;Why do firms">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Rise of the Self-Driving Company ">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/27/X-2114769129282601053/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="In 1937, British Nobel Prize-winning economist Ronald Coase asked, &quot;Why do firms">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2114769129282601053-cover.jpg">
+<meta property="article:published_time" content="2026-10-27T01:20:25.000Z">
+<meta property="article:modified_time" content="2026-11-14T01:46:48.738Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2114769129282601053-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Rise of the Self-Driving Company ",
+  "url": "https://yaoav.github.io/2026/10/27/X-2114769129282601053/",
+  "image": "https://yaoav.github.io/images/2114769129282601053-cover.jpg",
+  "datePublished": "2026-10-27T01:20:25.000Z",
+  "dateModified": "2026-11-14T01:46:48.738Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/27/X-2114769129282601053/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The Rise of the Self-Driving Company ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2114769129282601053-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The Rise of the Self-Driving Company </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The Rise of the Self-Driving Company </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-27T01:20:25.000Z" title="发表于 2026-10-27 01:20:25">2026-10-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2114769129282601053">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>In 1937, British Nobel Prize-winning economist Ronald Coase asked, “Why do firms exist?” His answer was transaction costs. It’s often cheaper to organize economic activity inside a company than to coordinate it through markets.</p>
+<p>But companies have their own coordination costs: management, meetings, departments, reporting, and bureaucracy.</p>
+<p>For more than a century, we’ve accepted these costs as the price of doing business.</p>
+<p>In 2011, Marc Andreessen wrote that software was eating the world.</p>
+<p>In 2016, we built Replit around the belief that everyone should be able to create it.</p>
+<p>Software transformed entire industries, but companies still depend on people to operate that software and coordinate work across teams.</p>
+<p>AI promises an even bigger shift. As agents take on more of the execution and coordination, companies can work more efficiently, and their people can pursue more ambitious goals. Realizing that potential will require companies to rethink how they organize and make decisions.</p>
+<p>Companies built around this new way of working will be Self-Driving Companies. At Replit, that shift is already underway.</p>
+<p><strong>By the end of 2030, every company in the Fortune 500 will be a Self-Driving Company.</strong></p>
+<p><img src="/images/HVkqbSCacAA3jEq.jpg" alt="HVkqbSCacAA3jEq"></p>
+<h3 id="The-Rise-of-the-Self-Driving-Company"><a href="#The-Rise-of-the-Self-Driving-Company" class="headerlink" title="The Rise of the Self-Driving Company"></a>The Rise of the Self-Driving Company</h3><p>In Self-Driving Companies, people define the goals, exercise judgment and taste, and remain accountable. Agents use the company’s knowledge and systems to execute toward those goals, with clear boundaries for when to act and when to seek approval.</p>
+<p><strong>Companies that become self-driving will force an existential choice on their competition: change how you work or watch competitors do what you cannot.</strong></p>
+<h3 id="How-Work-is-Changing"><a href="#How-Work-is-Changing" class="headerlink" title="How Work is Changing"></a>How Work is Changing</h3><p>We’re seeing this shift at Replit.</p>
+<p>It started in engineering. Engineers nearly tripled their code output in the first half of 2026 while review times, reversions, and product incidents stayed flat.</p>
+<p><strong>Then people across the company began putting agents to work</strong>, building software and solutions that took repetitive work off their plates so they could spend more time on problems that needed their expertise. Designers turned ideas into working product changes, and support used agents to investigate customer issues.</p>
+<p>**The nature of work itself began to change. **People could act on problems they once had to hand off.  They could try an approach, share something tangible, and build it together. More ideas and feedback surfaced, and the people raising them were emboldened to help build the solution.</p>
+<p>People spent more time at whiteboards, deciding what to build. Engineers worked on hardening the systems agents depend on so they could delegate more work. Work became less repetitive, more creative, and more collaborative.</p>
+<p>Alongside the productivity gains, more people experienced the satisfaction of making something useful, solving difficult problems, and seeing their ideas become real. People had more freedom to shape their work and more confidence in what they could accomplish**. **They don’t feel like they’re being replaced. They feel like they’re being promoted.</p>
+<p><strong>Replit has become a Self-Driving Company.</strong></p>
+<h3 id="What-a-Self-Driving-Company-Requires"><a href="#What-a-Self-Driving-Company-Requires" class="headerlink" title="What a Self-Driving Company Requires"></a>What a Self-Driving Company Requires</h3><p>Today, many companies face a false choice.</p>
+<p>Keep AI in a cage, where its reach is limited but so is its usefulness. Or let it loose in the wild, where agents can go rogue: accessing sensitive data, changing production systems, or sending information outside the company without the right permissions or approvals. A mistake can become a security incident that reaches beyond the company itself, as the Hugging Face incident demonstrated.</p>
+<p>One path limits capability. The other sacrifices control. Neither enables a company to become self-driving.</p>
+<p>A Self-Driving Company will need a foundation that lets it embrace the power of AI without the risk.</p>
+<p>Self-Driving Companies will <strong>make agents useful to everyone</strong>. The people closest to the problem should be able to put them to work without becoming engineers. A company cannot become self-driving if only its technical teams can participate.</p>
+<p>Today, most agents live somewhere chaotic. They run in chat windows, personal accounts, and one-off scripts, holding whatever credentials and data someone handed them. Nobody decided what they could touch, and nobody can see what they did.</p>
+<p>As agents take on more work, they need an **Agent Habitat: **an environment where they can use the company’s knowledge and systems, coordinate with people and other agents, and act within the boundaries the company controls.</p>
+<p><strong>The habitat must control access</strong>, define when human approval is required, and limit the impact of mistakes. As AI makes it easier to discover and exploit vulnerabilities, companies will also need agents to find weaknesses and strengthen their defenses. <strong>Security must scale with autonomy.</strong></p>
+<p><strong>Governance of the habitat will also help the company become smarter.</strong> When someone corrects an agent, that correction should be reviewed and made available to improve future work. When one team develops a useful workflow, others should be able to build on it. The habitat becomes a shared body of knowledge, shaped by the people who work within it, helping agents act with more of the company’s expertise, taste, and judgment.</p>
+<p>Self-Driving Companies must also remain free to change their models while retaining control of their knowledge, systems, and decisions. As Satya Nadella puts it, <strong>“we need to separate the supply of intelligence from the authority over it.”</strong></p>
+<h3 id="Making-Every-Company-a-Self-Driving-Company"><a href="#Making-Every-Company-a-Self-Driving-Company" class="headerlink" title="Making Every Company a Self-Driving Company"></a>Making Every Company a Self-Driving Company</h3><p>With Replit for Business, we’re building the foundation to bring what we have learned inside our own company, and help every company become a Self-Driving one. The ambition is to enable everyone to turn their expertise into working software and completed work.</p>
+<p>We’re seeing large companies move faster with Replit. At <strong>Sumitomo Mitsui Finance and Leasing (SMFL)</strong>, “a development process that previously required six people working for six months was completed by just one person in one week,” says Yoshiyuki Fukuma, GM of Digital Transformation. “A project originally estimated at approximately JPY 3 billion for the full development lifecycle is now expected to be completed for less than JPY 1 billion,” says Takeshi Fujiwara, Corporate Officer and Head of Digital Lab.</p>
+<p>Ronald Coase explained the firm through the economics of organizing work. As AI changes those economics, we have an opportunity to rethink the organization itself: how much a small team can accomplish, how far an individual’s expertise can reach, and what a company can attempt.</p>
+<p>We believe the biggest economic impact of AI will come from this reinvention of the firm. Self-Driving Companies will organize around people setting direction and exercising judgment, with agents carrying more of that intent through to execution.</p>
+<p>Software ate the world. Now it’s learning to run it.</p>
+<p><a target="_blank" rel="noopener" href="https://replit.com/blog/rise-of-self-driving-company">https://replit.com/blog/rise-of-self-driving-company</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/27/X-2114769129282601053/">https://yaoav.github.io/2026/10/27/X-2114769129282601053/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2114769129282601053-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/27/X-2114973973503185354/" title="我是如何从好莱坞视效，开始转型做AIGC的"><img class="cover" src="/images/2114973973503185354-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">我是如何从好莱坞视效，开始转型做AIGC的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  做 AI 视频这几个月，我花钱最多、卡得最久的地方，跟我原来想的完全不一样。 先说结论： 当技术的门槛降到极低的时候，做 AIGC最难的已不是技术，而是怎么讲好一个故事，也就是内容。 我这么说可能挺反直觉的，按理说以我的行业经验，最拿手的应该是画面。当然，这跟我有合成和制片的底子有关，对没做过视频的朋友来说，技术和流程确实需要花时间去啃。 但自从我裸辞、All in AI 以来，技术层面的东西我花了一阵子就跑通了第一套制作流程，真正让我头大的，反而是「讲故事&#x2F;Story Telling」。 下面聊聊，我是怎么一路撞到这堵墙上的。希望可以给你们带来一点参考或启发。 01. 来时路-好莱坞我是做影视视效合成出身的。在好莱坞，我参与过《西部世界》《怪奇物语》《神盾局特工》和《哥谭市》等几十部科幻剧，当时所在的团队还凭借《哥谭市》的视效拿过艾美奖。  做视效有点像变魔法：演员对着空气演，我们负责把场景和画面一层层造出来，让观众信以为真。但合成对画面的要求是像素级的，边缘、颜色、运动模糊、景深、噪点，只要...</div></div></div></a><a class="pagination-related" href="/2026/10/26/X-2114669418433401152/" title="公众号新手保姆级0-1起号流程"><img class="cover" src="/images/2114669418433401152-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">公众号新手保姆级0-1起号流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  公众号新手保姆级起号流程从选赛道到流量主变现我是生于，我做公众号矩阵 3 年，最高月收益100W+。运营规模最大时，我同时运营过 2000 个公众号 单账号程序化广告累计收益最高达到 247,248.92 元。 这篇文章，我会按实际运营流程，把公众号从选赛道、定读者、起号，到内容创作、开通流量主和广告变现拆开讲。直发、垂直养号、AB 转类型、找对标、写文章和做排版，都会结合我的实操经验说明白。  单账号程序化广告累计收入截图 01  选赛道、定读者，做好账号包装先想清楚自己准备长期做什么，再去找对应的读者。你做读书内容，账号名称、头像和简介就围绕读书来设计；做楼市内容，主页也要让人一眼知道你关注房地产。读者点进主页，应该很快看懂这个账号在写什么。 赛道也要具体到人群。同样写职场，可以写给刚毕业的新人，也可以写给工作多年的管理者；他们关心的问题不一样，选题和表达也要跟着变。年龄段可以作为切入口，再继续细分生活阶段和实际需求。 公众号不要今天做读书，明天转楼市，后天又追情感热点。先选一个方向持续写，几篇数据不...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/11/X-2120480271195910591/" title="AI 时代，90% 的项目都可以批量"><img class="cover" src="/images/2120480271195910591-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-11</div><div class="info-item-2">AI 时代，90% 的项目都可以批量</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  AI 时代，90% 的项目都可以批量我从 1 个号做到 2000 个号：任何跑通的项目，都能矩阵化 先看结果。 下面是我抖音上自己的号。一个号，累计收益 481713.71 元。基础收益 200279.2，精选收益 53465.85，签约收益 227869.41。签约收益占了接近一半。  这不是孤例。另外两个号，一个累计 13376.19，一个累计 8636.7。三个号加起来，50 万出头。   再看公众号。下面是我随手截的 7 个号，都是我自己的。  7 个号，昨日阅读加起来 407280 次，昨日广告收入加起来 3702.27 元。  我把这 7 个号的数字列出来：  · 阅读 75142，昨日广告收入 807.09  · 阅读 120070，昨日广告收入 888.51  · 阅读 50971，昨日广告收入 409.36 · 阅读 48747，昨日广告收入 223.29 · 阅读 24671，昨日广告收入 430.47 · 阅读 70181，昨日广告收入 774.04 · 阅读 17498，昨日广告收...</div></div></div></a><a class="pagination-related" href="/2026/11/12/X-2120746927100715509/" title="Who Is Really Behind the Hunt for Jensen Huang?"><img class="cover" src="/images/2120746927100715509-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Who Is Really Behind the Hunt for Jensen Huang?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  “Doth our law judge any man, before it hear him, and know what he doeth?” (John 7:51, KJV) It is no secret that Jensen Huang and Anthropic CEO Dario Amodei are locked in an open clash over AI policy and chip exports, from heated disagreements in Washington to Huang publicly rejecting Amodei’s push for sweeping export bans. Yet look at who is suddenly piling on to drive Huang out. Anthropic’s people overlap with the think tanks, ex-officials and forums beh...</div></div></div></a><a class="pagination-related" href="/2026/11/07/X-2119050035363205408/" title="生于Ai的十万+自媒体知识付费之路"><img class="cover" src="/images/2119050035363205408-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-07</div><div class="info-item-2">生于Ai的十万+自媒体知识付费之路</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我的十万+自媒体知识付费之路 我花了十万多，才学会判断一个项目值不值得付费。 有的钱交得很冤，有的钱交得很值。还有一些钱，只有亏完之后我才知道：这条路不适合自己。 很多人聊知识付费，喜欢直接站队——要么所有课程都是割韭菜，要么付费学习一定值得。我站不了队。因为这两种经历，我都有过。 早期的学费：交过冤枉钱，也买过地图大学第一笔付费：19800元。当时做拼多多店铺代运营，对方报价19800元。我缺结果，也缺判断力。对方有完整的话术：团队、方法、案例、收益截图，一样不少。钱交出去之后，结果却没有出现。 后来我才明白，很多项目赚的不是货，也不是项目本身，而是你的代运营费。你交钱之前是合作对象，交钱之后只是客户。那次之后，我没有把所有知识付费都骂成骗局。一次被骗，只能说明那一次不值，不能证明所有付费内容都没用。 19800元买来的，是我最早的辨别力。 生财有术：我买的是一张地图生财有术我也付过费。它对我最大的帮助，不是几句金句，而是把公众号、小红书、直播、带货等路径摆到了我面前。我第一次承认，自己缺的不是努力，而...</div></div></div></a><a class="pagination-related" href="/2026/10/26/X-2114669418433401152/" title="公众号新手保姆级0-1起号流程"><img class="cover" src="/images/2114669418433401152-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-26</div><div class="info-item-2">公众号新手保姆级0-1起号流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  公众号新手保姆级起号流程从选赛道到流量主变现我是生于，我做公众号矩阵 3 年，最高月收益100W+。运营规模最大时，我同时运营过 2000 个公众号 单账号程序化广告累计收益最高达到 247,248.92 元。 这篇文章，我会按实际运营流程，把公众号从选赛道、定读者、起号，到内容创作、开通流量主和广告变现拆开讲。直发、垂直养号、AB 转类型、找对标、写文章和做排版，都会结合我的实操经验说明白。  单账号程序化广告累计收入截图 01  选赛道、定读者，做好账号包装先想清楚自己准备长期做什么，再去找对应的读者。你做读书内容，账号名称、头像和简介就围绕读书来设计；做楼市内容，主页也要让人一眼知道你关注房地产。读者点进主页，应该很快看懂这个账号在写什么。 赛道也要具体到人群。同样写职场，可以写给刚毕业的新人，也可以写给工作多年的管理者；他们关心的问题不一样，选题和表达也要跟着变。年龄段可以作为切入口，再继续细分生活阶段和实际需求。 公众号不要今天做读书，明天转楼市，后天又追情感热点。先选一个方向持续写，几篇数据不...</div></div></div></a><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a><a class="pagination-related" href="/2026/10/22/X-2113195080517562646/" title="Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱"><img class="cover" src="/images/2113195080517562646-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-22</div><div class="info-item-2">Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  Hello 大家好，我是lemomo。这次 Lemo-Opuscar 迎来了上线以来最大的一次更新，不光有新的风格，还有新的玩法，整个项目定位从【视频风格库】变成【搭建自己风格库的工具】。  **新增【剪辑与纪实】8 种风格，目前从最早的39种已经更新到了59种。**未来会继续更新，我的目标是99种。 新玩法：把风格改成你自己的。 新增的玩法，现在除了可以从库里选择风格开始创建影片外，库里任何一种风格都能改，也可以从空白开始。 预告： Lemo Studio 工作台 (Claude App 桌面版），还有下一批日系动漫风格预告。  已经装过的朋友，记得先更新。还没安装的朋友，请给我点点star，求转发！ 全新 8 种新风格：剪辑与纪实这次新增的 8 种风格有一个共同点：不在依赖代码作画，而是用真实素材剪出来的。 真实的影像、照片、文件、数据，按某一种剪辑和包装的语法排好，再配上声音。所以它们特别适合做自媒体、做新闻、做纪实的朋友。 而且这次的风格不光用opus可以做，sonnet 5.5 High档位的效...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Rise-of-the-Self-Driving-Company"><span class="toc-number">1.</span> <span class="toc-text">The Rise of the Self-Driving Company</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-Work-is-Changing"><span class="toc-number">2.</span> <span class="toc-text">How Work is Changing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-a-Self-Driving-Company-Requires"><span class="toc-number">3.</span> <span class="toc-text">What a Self-Driving Company Requires</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Making-Every-Company-a-Self-Driving-Company"><span class="toc-number">4.</span> <span class="toc-text">Making Every Company a Self-Driving Company</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
