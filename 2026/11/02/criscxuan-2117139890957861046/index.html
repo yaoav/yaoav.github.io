@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>通了个宵，终于把 Super-Agent 架构玩明白了  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通了个宵，终于把 Super-Agent 架构玩明白了 ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/02/criscxuan-2117139890957861046/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117139890957861046-cover.jpg">
+<meta property="article:published_time" content="2026-11-02T14:20:59.000Z">
+<meta property="article:modified_time" content="2026-11-15T02:24:08.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@criscxuan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117139890957861046-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "通了个宵，终于把 Super-Agent 架构玩明白了 ",
+  "url": "https://yaoav.github.io/2026/11/02/criscxuan-2117139890957861046/",
+  "image": "https://yaoav.github.io/images/2117139890957861046-cover.jpg",
+  "datePublished": "2026-11-02T14:20:59.000Z",
+  "dateModified": "2026-11-15T02:24:08.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/02/criscxuan-2117139890957861046/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '通了个宵，终于把 Super-Agent 架构玩明白了 ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2117139890957861046-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">通了个宵，终于把 Super-Agent 架构玩明白了 </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">通了个宵，终于把 Super-Agent 架构玩明白了 </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-02T14:20:59.000Z" title="发表于 2026-11-02 14:20:59">2026-11-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@criscxuan（cxuan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117139890957861046">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。</p>
+<p>现在跟大家聊聊，应该还不算晚吧？</p>
+<p>主要是我把这篇文章仔细读了一遍，时间理解消化输出都是成本，于是今天才写出来。</p>
+<p>而且我确实觉得此类文章要好好消化一下，不过我看到很多大号在官方发布之后半个小时甚至 1 个小时就把文章发出来了，emmm 这也许就是大佬吧 ：）</p>
+<p>DeepSeek Harness 团队（以下统称为 DSH 团队）首先解释了一下，这种解释和我们的预想是一样的：近一年里随着模型能力的增强，以及多 Agent 能力的提高，<strong>人类越来越少的参与底层中的执行，进而参与顶层的决策和验收工作了。</strong></p>
+<p>同样的随着模型能力的增强，今年早期的 OpenClaw 这类工具演变成了现在新的业态：Personal Agent。</p>
+<p>我看到 DeepSeek 团队一直没有做 dsh bot ，目前流传出来的 bot 都是社区开发的，比如这个。</p>
+<p><img src="/images/HWGV3oebIAAmx7v.jpg" alt="HWGV3oebIAAmx7v"></p>
+<p>Personal Agent 我之前也聊过，其实没有太多创新性的变革，无非是做的更好用了些，延迟低。</p>
+<p>而 DSH 团队的逻辑是，目前现有的主流 Agent 设计还难以在多任务和团队协作的规模上支撑 Personal Agent 这种模式，因为目前的 Agent 工作还是以单个 Session 的形式，彼此之间 Session 相互独立，手动切换 Session 的话，个人在注意力方面很难跟的上。他们观察，个人注意力只能放在大概 3 - 5 个 Session 上。</p>
+<p>我思考了一下自己平常猛蹬 token 的情况，也确实符合 3 - 5 个 Session 这么个逻辑，再多我真的记不住都有哪些东西了，而且效果会大打折扣。</p>
+<p><strong>单任务的上限取决于模型能力，多任务的上限取决于人的注意力</strong>。</p>
+<p>就算即便你通过 MCP 解决了扩展性，同样的你也受限于上下文混乱，单会话同步阻塞等问题。</p>
+<p>基于此类情况，DeepSeek Harness 团队提出了一种 <strong>Super-agent</strong> 架构。</p>
+<p>这个架构的核心是 <strong>打破单任务间的上下文，使 Agent 成为能跨会话保持上下文，同时能推动多项任务的 Super Agent</strong>。</p>
+<p>亲爱的读者朋友们，还记得我前两天跟大家聊的 Claude Code 目前架构的玩法吗？</p>
+<p>它们玩的是单 Agent + Main Loop ，把适合合并的 subagent 的业务流程提炼为 Skills，系统读写交给 Tools &#x2F; MCP。需要保留的 subagent，仍然可以通过工具由主 Agent 调用。</p>
+<p><img src="/images/HWGV9AkaYAAyZBm.jpg" alt="HWGV9AkaYAAyZBm"></p>
+<p>Claude 那篇主要讨论一项任务内部，多个专家 Agent 反复交接会不会丢失信息、增加延迟。DSH 这篇主要讨论<strong>一组任务如何长期并行推进，同时让人少操心</strong>。前者精简任务内部的推理结构，后者组织跨任务的执行。</p>
+<p>DSH 团队公布了一种架构方案，这种架构方案可以实现让开发者在 IM 终端与 GitHub 之间连续推进，并且还会观察群组中的反馈，遇到相关联性的问题，先评估定位原因再主动修复。</p>
+<p><img src="/images/HWGWDpbaYAA0qlS.png" alt="HWGWDpbaYAA0qlS"></p>
+<p>这种 Super-Agent 的架构具有<strong>连续、高效、主动、持久</strong>的特点。</p>
+<p>这让我想起来 Magpie 的作者 @yetone 此前也公布了一下自己的工作流。</p>
+<p>他的玩法就是三个 &#x2F;loop 循环，一个盯 Github 判断要不要修复、一个盯 x 有没有反馈、一个盯代码要不要铲屎。</p>
+<p><img src="/images/HWGWGn3aEAAGR2N.jpg" alt="HWGWGn3aEAAGR2N"></p>
+<p>原来 &#x2F;loop 还能这么玩，想到我此前用 &#x2F;loop 做迭代跑了 72 小时结果产出一坨 shit 是为啥了。</p>
+<p>但是对 DSH 团队说，单个 ReAct Loop 无法支持 Super-Agent 架构的四种特点，最终还要从计算机底层切入。</p>
+<p><strong>就玩到现在，你会发现，所有 Agent 架构，绕要绕去还是绕不开计算机底层的那些玩意。</strong></p>
+<p>比如 Session 共享，缓存，CPU 中的 fork 线程和子线程，Worktree ，Filesystem 。</p>
+<p>他们提出了一种架构模式。</p>
+<p><img src="/images/HWGWLIcbwAAyGQq.jpg" alt="HWGWLIcbwAAyGQq"></p>
+<p>这个架构主要分为五块内容。</p>
+<ul>
+<li>双层架构</li>
+<li>事件驱动</li>
+<li>多信道交互</li>
+<li>计算、状态与环境的分离</li>
+<li>Watchdog（看门狗）</li>
+</ul>
+<p>下面我们依次来聊一下。</p>
+<h3 id="双层架构"><a href="#双层架构" class="headerlink" title="双层架构"></a>双层架构</h3><p>如果要实现连续与多任务的高效并发，系统会在底层上面临吞吐和连续性的权衡问题。</p>
+<p>如果所有的工作都交给单个 Session 来处理，虽然任务连续性强，但会面临效率低下、执行速度、吞吐低的问题。</p>
+<p>但如果交给足够多的 Session ，虽然吞吐高，但又会面临连续性、Session 割裂、任务过于独立的问题。</p>
+<p>所以如何权衡非常关键。</p>
+<p>基于此，DSH 团队提出了 Router 和 Worker 层的机制，Router 层负责与人交互和协调工作，Worker 层负责执行具体的任务，这个架构图如下。</p>
+<p><img src="/images/HWGWOlMaIAAm5qb.jpg" alt="HWGWOlMaIAAm5qb"></p>
+<p>在 Router 和 Worker 的双层架构里，系统会<strong>在底层上接管上下文管理和并发</strong>，从而从用户侧淡化 Session ，让用户始终看到的是一个 Super-agen</p>
+<blockquote>
+<p>这让我想起来很多 multi-agent 的开源项目和产品，其实也是需要把用户当成项目经理，其实从用户侧这不是正确的路线。<strong>Session 不能成为用户负担</strong>。</p>
+</blockquote>
+<p>Router 层是常驻的全局路由层，所有跨任务信息和决策都在这一层汇总；这一层并不执行具体的任务。从<strong>用角色的角度来看相当于是秘书和大总管。</strong></p>
+<p>Router 虽然是做决策的，但它同时也是个多节点的结构，就跟 Agent Teams 似的。只不过 Agent Teams 中的 Team Lead 要管具体任务细节，而 Super-Agent 架构中的 Router 只负责做分发。从 DSH 团队给出的意见来看，这一层往往不需要极致的模型，<strong>使用轻量级模型就能兼顾速度和效果。</strong></p>
+<p>Worker 层负责执行具体的任务，各个 Worker 彼此上下文隔离，挂载完整的执行工具，在独立上下文中专注完成单一任务。因为涉及到具体的工作，所以这一层需要配置能力最强的模型。</p>
+<blockquote>
+<p>没办法， 一般具体干活的人能力是最强的。</p>
+</blockquote>
+<p>多任务同时干活时，各个 Worker 独立推进任务，Woker 之间不需要相互通信。</p>
+<p>跟 Router 的架构是一样的，Worker 也是多节点，并且一个 Worker 在执行复杂任务时，可以 fork subagent ，一个 Worker 本身可以成为一个 Agent Teams 。</p>
+<p>下面这幅图很形象的描述了 Router 和 Worker 的职责。</p>
+<p><img src="/images/HWGWTUkaYAA4R2p.jpg" alt="HWGWTUkaYAA4R2p"></p>
+<p>这个架构相当于是把 Session 这一侧淡化了，<strong>这个 Super-agent 侧既是用户侧的交互、又是底层侧的入口。</strong></p>
+<h3 id="事件驱动"><a href="#事件驱动" class="headerlink" title="事件驱动"></a>事件驱动</h3><p>我们知道，我们现在使用 LLM 日常的方式都是拉取式，即我们输入一条 prompt ，LLM 根据这条 prompt 进行响应。</p>
+<p>而 DSH 团队提出了 Trigger 的概念，在 Super-agent 中，群聊消息、邮件与日程提醒、代码审查评论、CI 运行结果等环境事件被称为 Trigger，相当于是触发器的角色。有了 Trigger ，Super-agent 可以根据 Trigger 主动发现任务并执行任务。</p>
+<p>围绕一条任务从发现到处理，会经过一条完整的生命周期流程。</p>
+<p>包括事件过滤、事件路由、上下文组织、提前行动。</p>
+<p>接入真实场景后，大多数问题是没有意义的，或者说不需要用 Agent 接入。如果一条消息需要 Agent 接入，那么第一步要做的事情就是过滤，这一步就是筛除噪音，DSH 团队的降噪机制有两层。</p>
+<p>第一层是<strong>程序层策略</strong> ，这也是 Fast Path，就是过滤噪音。</p>
+<p>第二层是<strong>语义层策略</strong>，这是 Slow Path，将程序层筛选出来的消息进入 LLM，由它根据用提示词编写的策略和上下文判断是否需要行动。</p>
+<p>过滤完了之后按理说就应该到我们上面讲到的 Router 层转发了，如果有大量的请求，会导致 Router 层负载很高，于是 DSH 团队在这块做了优化，将 Fast &#x2F; Slow Path 过滤之后的消息直接路由了，全局 Router 层仅负责新任务的冷启动与跨任务协调 ，而过滤之后的消息直接路由给 Worker 了，无需再经过 Router。</p>
+<p><img src="/images/HWGWWQdaoAAQGaL.png" alt="HWGWWQdaoAAQGaL"></p>
+<p>我把它做成了一个小动画。大部分消息其实在第一层就没了，根本轮不到模型去判断，剩下的才会进语义层。</p>
+<p>DSH 团队把具备连续&#x2F;完整上下文的 request 称为 <strong>Thread</strong>，比如 GitHub Pull Request，同一邮件下的往来记录，同一 IM 话题下的消息。</p>
+<p>一条 Trigger 是一个点，一串相关的 Trigger 连成一条线，这条线就是 Thread。</p>
+<p><img src="/images/HWGWlXqbwAArC4i.jpg" alt="HWGWlXqbwAArC4i"></p>
+<p>图里三个 Thread 分别来自 IM、PR 和邮件。它们可能是同一件事的不同侧面，也可能是三条并行的任务；关键不在于它们是不是一回事，而在于一个 Worker 可以同时订阅好几条。</p>
+<p>Thread 有了，接下来的问题是：后面再来消息，该发给谁。</p>
+<p><img src="/images/HWGWqyNagAArFEt.jpg" alt="HWGWqyNagAArFEt"></p>
+<p>这张图说的是两条路。</p>
+<p>第一条是 Slow Path：一个 Thread 刚出现，还没有 Worker 认领，Router 判断这件事归谁管，然后建一个 Worker，顺便让它订阅这个 Thread。</p>
+<p>第二条是 Fast Path ：Thread 已经有人订阅了，后面再来消息，程序直接投给订阅它的 Worker。</p>
+<p>当事件进入 Session 之后，考虑的问题是上下文注入问题，就是应该注入多少上下文信息更加合理，注入过多会挤占窗口、稀释模型注意力，注入过少又会使得模型反复调用工具读取，增加执行轮次。<strong>浪费上下文窗口是个大忌</strong>。</p>
+<p>这里，DSH 团队又借助了计算机系统中编译优化的概念（我们最开始说的绕不开底层那些玩意还在扮演重要的作用）。</p>
+<p>他们提出了 Inline 和 Spill 的概念。</p>
+<blockquote>
+<p><strong>Inline</strong> 是指将近期很可能用到的信息直接内联进当前上下文窗口，以省去额外的工具调用往返。<strong>Spill</strong> 则是指将超出窗口预算或低频使用的完整信息留在上下文窗口之外，仅在窗口内保留引用或摘要，供模型按需读取。</p>
+</blockquote>
+<p>我把它理解成一个工作台：手边放常用的，剩下的放档案柜。</p>
+<p><img src="/images/HWGWtbxaEAA0_cH.jpg" alt="HWGWtbxaEAA0_cH"></p>
+<p>看到 Inline &#x2F; Spill，我第一反应就是操作系统的内存页换入换出。</p>
+<p>像的地方是思路：窗口就那么大，常用内存页换进来，不常用的换出去，只在窗口里维护一个页码对照。</p>
+<p>不一样的地方在谁来换这件事。操作系统的缺页是硬件和内核自动处理的，程序根本不知道；LLM 没有这个机制。东西被 Spill 出去之后，模型得自己意识到“卧槽，我这儿还有一个引用呢”，然后主动调工具把它读回来。读不读、读多少，全靠它自己判断。</p>
+<p>所以这套东西对模型的要求其实更高：它得知道自己缺什么。这也解释了为什么同样一套 Inline &#x2F; Spill，换个模型，效果能差出来很多。</p>
+<p>上面这套 Inline &#x2F; Spill，还有一个挺有意思的东西，叫<strong>链式召回（Chain of Recall）。</strong></p>
+<p><img src="/images/HWGWv5nb0AAMJ1b.jpg" alt="HWGWv5nb0AAMJ1b"></p>
+<p>系统给 Trigger、Thread、Worker 这些对象都编了 ID，注入的时候顺手把下一跳的 ID 带上。于是这些对象在底层就连成了一张引用图。</p>
+<p>假设你在群里问一句：昨天那个问题修得怎么样了？Router 手上只有这条消息，但消息上挂着 Thread 的 ID。顺着 Thread 查，能找到正在处理它的 Worker；Worker 的状态里又挂着那个 PR 的 Thread ID；再查过去，就查到了修改记录。</p>
+<p>这个链式召回的玩法它靠的不是一个巨大的记忆库，而是一张能实时渲染的地图。</p>
+<p>借鉴计算机系统中的**投机执行（Speculative Execution）**思想，Agent 可以在还不确定结果是否会被采用时，根据环境信号在后台提前尝试，通过消耗额外的后台算力来减少人类的等待与介入成本。结果有价值就交付，没有价值就丢弃。</p>
+<p><img src="/images/HWGWzD-awAAAzZQ.jpg" alt="HWGWzD-awAAAzZQ"></p>
+<h3 id="多信道交互"><a href="#多信道交互" class="headerlink" title="多信道交互"></a>多信道交互</h3><p>上面讲了滤噪和路由，这里 DSH 又讲了与用户交互的细节。</p>
+<p>学过计算机网络的小伙伴们都知道<strong>全双工通信</strong> 这么个概念，就是信息交换是双向的，是非阻塞式的，DSH 团队这块用了<strong>异步 ReAct Loop</strong> 消除后台耗时操作对前台对话的阻塞，使会话无需等待上一个命令或任务完成即可随时接受新指令。</p>
+<p>这个估计最近蹬过细糠的小伙伴们都知道。</p>
+<p>传统的 ReAct 是一问一答，你问了一个问题只能等到回答完毕才能问一下一个，这种是阻塞式的。现在变成全双工了，是异步 ReAct Loop 了。</p>
+<p><img src="/images/HWGW2qzakAAGBxC.jpg" alt="HWGW2qzakAAGBxC"></p>
+<p>左边是老的 ReAct：一个 run() 发出去，整个循环就卡住等结果。你这时候再发消息，它也只能阻塞排队。</p>
+<p>右边是异步的：start() 立刻返回一个已启动，然后继续 loop ，调用工具，工具执行完之后把结果返回。</p>
+<p>ChatGPT 和 Claude Code 我特意去翻了一下，两家其实都已经有类似的能力，只是叫法和实现不一样。</p>
+<p>Claude Code 的 subagent 分前台和后台：后台的可以跟主对话并行跑，跑完通过通知把结果带回来；前台的还是会挡住主对话。</p>
+<p>ChatGPT 那边，长任务跑着的时候，你也可以继续补充要求、改约束。</p>
+<p>这一异步任务机制已经在 DeepSeek Harness 中实现，但尚未默认开启。</p>
+<h3 id="计算、状态与环境的分离"><a href="#计算、状态与环境的分离" class="headerlink" title="计算、状态与环境的分离"></a>计算、状态与环境的分离</h3><p>这部分内容 DSH 团队巧妙提出了一个<strong>存算分离（Compute-Storage Separation）</strong> 的概念。</p>
+<p>这一节我读了三遍才捋清楚。。。。</p>
+<p><strong>计算，是 Agent Loop 在跑的这个过程；状态，是留下来的会话记录、任务记录；环境，是真正干活的代码仓库、本地文件、工具链。</strong></p>
+<p>现在的问题是，这三样东西如果在一台电脑上。电脑一关机，Agent 就干不了活了；换一台电脑，本地的那些环境又没了。</p>
+<p>DSH 用了两部来解耦。</p>
+<p>第一步，计算和状态分开。Agent Loop 放进云端可替换的容器里，会话状态单独存数据库。容器挂了可以换一个，状态还在就能继续执行任务。</p>
+<p>第二步，计算和环境分开。很多人第一反应是把本地环境搬到云上，但真实环境里有没提交的改动、私有凭据、特定的硬件和工具链，如果全都搬到云上，最后跑出来的结果大概率不一样，还会遇到各种棘手的问题。所以他们的做法是反过来：本地环境不要动，可以端上装一个轻量 daemon，只负责执行命令、把结果送回去。</p>
+<p><strong>这就是 BYOM，Bring Your Own Machine</strong>，你的个人电脑、甚至一台时不时才上线的机器，都能用这种方式接入进来。</p>
+<p>不过这里也有个前提：云端和端侧得互相信任。云端一旦被攻破，它连着的所有设备都危险。</p>
+<p><img src="/images/HWGXAH3bwAAI5mB.jpg" alt="HWGXAH3bwAAI5mB"></p>
+<h3 id="Watchdog"><a href="#Watchdog" class="headerlink" title="Watchdog"></a>Watchdog</h3><p>要实现持久在线，除了上面聊到的存算分离，还要能从异常状态中恢复。</p>
+<p>持久在线的分布式系统很难只靠主系统内部逻辑保证长期可靠运行，需要在主系统之外引入独立的外部控制回路，即 <strong>Control Loop</strong>。</p>
+<p>很多 Agent 在设计保活的时候一般都是搞一堆保活、心跳脚本出来，但在 Agent 系统中仅靠传统的进程存活探测或监控脚本是不够的，很多时候不是进程丢失，而是 LLM 内部循环死锁或者偏离了执行目标。</p>
+<p>需要有一种机制来打破，DSH 团队是配置了 Watchdog（看门狗）Session 。</p>
+<p>Watchdog 是定时消息驱动的，它的作用就是及时介入发现异常，纠偏的故障恢复的能力。</p>
+<p>Watchdog 的定位也是一个 Agent Session，开发者可以向它询问错误原因、及时调整。</p>
+<p><img src="/images/HWGXCjJbQAAOWCZ.jpg" alt="HWGXCjJbQAAOWCZ"></p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>最后想说一下，我看到这块的时候其实非常激动。</p>
+<p>现在市面上很多大模型都在玩概念炒作，没两天熄火了，完事儿之后又炒下一轮。</p>
+<p>所以当一个正经搞过底层的人看到 DSH 团队说的这些话的时候，我觉得有一种相见恨晚的感觉。</p>
+<p><img src="/images/HWGXFP0bMAE5ygm.jpg" alt="HWGXFP0bMAE5ygm"></p>
+<p>终于有正经团队能够从底层动刀子了，而不是天天玩一堆 tools 和 skills ，再怎么优化拿到 Transformers 的注意力机制上也是抽卡。</p>
+<p>与其搞一堆华而不实的东西来博眼球，不如优化底层，我觉得这是 DeepSeek 实现 AGI 的路子。</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/vt2qgHGAmzpqY-CXBWAj0g">https://mp.weixin.qq.com/s/vt2qgHGAmzpqY-CXBWAj0g</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/02/criscxuan-2117139890957861046/">https://yaoav.github.io/2026/11/02/criscxuan-2117139890957861046/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/criscxuan/">@criscxuan</a></div><div class="post-share"><div class="social-share" data-image="/images/2117139890957861046-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/02/X-2117214577771311291/" title="中文推特值得关注的 100 人：从每个人的一篇作品读起"><img class="cover" src="/images/2117214577771311291-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">中文推特值得关注的 100 人：从每个人的一篇作品读起</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我想知道一个 AI 工具能不能进企业，最想看的是它第一次出错的地方。比如有人请 AI 统计一瓶精华的差评，帖子里恰好提到两瓶，挨骂的是另一瓶。也有人用 AI 接婚礼视频订单，最费时间的一步，竟是跟新人问清楚两个人当年到底怎么认识的。 这类细节让我决定关注一个人。等我自己也碰到类似的问题，还能翻回去找他，看他当时怎么做。 我从自己的中文 X 关注列表里挑了 100 位作者，每人留一篇入门作品。做企业项目的，可以从第一组读起；正在做账号的，直接翻到第四组；已经做出了产品却还没找到客户的，我会先看第五组。文中涉及收入和流量的数字均为作者自述。 这份清单受司徒 K 的文章启发。司徒 K 的原帖 一、企业 AI 落地与 Agent 交付01｜Smartpig Smartpig 写企业里的 AI 分工，擅长把一个岗位拆成助手能接手的具体任务。他翻了 Grok Bot 场景库里的 56 个角色。费用助手要把收据、表格和系统记录对在一起，发票协调员要找出哪张单据还没人处理。给企业讲 Agent 时，这些例子能把“数字员工...</div></div></div></a><a class="pagination-related" href="/2026/11/02/DrRabbitAI-2117091215342735738/" title="Nature Journal: Stop Asking AI to &quot;Polish&quot; Your Paper. Use These 5 Levels and 7 Prompts Instead"><img class="cover" src="/images/2117091215342735738-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Nature Journal: Stop Asking AI to "Polish" Your Paper. Use These 5 Levels and 7 Prompts Instead</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  Most researchers use AI for writing with a single prompt: “Polish this paragraph.” That’s the least useful thing you can ask. You get back smoother text in seconds. But what did it actually change? Did it shift your meaning? Turn a correlation into a cause? Slip in a claim you never made? Now you’re the one checking, line by line. There’s a better way. I teach graduate students and review their drafts every term, and this is the workflow I now...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/13/criscxuan-2121150349209948636/" title="讲真，智能路由这事儿，还得基元律动出手。"><img class="cover" src="/images/2121150349209948636-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">讲真，智能路由这事儿，还得基元律动出手。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 AI 这么久了，我突然意识到一个问题。 那就是 AI 厂商太多了，不管是大厂小厂都在发新模型，而且大多数模型发布都很集中，往往 DeepSeek 发完了，GLM 发，GLM 发了还没测，Qwen、Kimi 又杀出来了，几乎每个月都有新版本发布，每家都说自己代码能力又上了一个台阶。 但具体哪个模型干活好、哪个模型价格低，靠自己一个个去测的话根本测不过来。 最理想的状态当然是：简单的活交给便宜模型，难的活交给强模型，每个任务都用刚好够用的那个。但这个刚好够用如何判断、每个档位该配哪个模型，一般来说很难自己搞清楚。 我发现了一个 GitHub 项目，就专门干这事儿的。  这个 GitHub 的思路就是：不用你自己挑模型，他们每月把主流模型测一遍，把当月最合适的配置直接下发到你的客户端。 先简单说一下 OpenSquilla 是什么。它是基元律动开源的 Agent 框架，日常用起来和常见的 Agent 平台差不多：给它一个任务，它帮你拆解、调用工具、把活干完。 区别在背后的智能路由。一...</div></div></div></a><a class="pagination-related" href="/2026/11/13/criscxuan-2121167803885457546/" title="离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 "><img class="cover" src="/images/2121167803885457546-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  what ？？？ 某社交平台知名大佬 Andrej Karpathy 发帖称，由于他受不了 youtube 的推荐算法。 所以花了两个小时直接用 Opus 5.5 手搓了一个复刻版 youtube 出来。。。 名字叫 HackerTube 。  为了做这个 HackerTube ，Karpathy 从 20 年来 HN 的 4300 万条评论中筛选出了 6454 个持续被推荐的视频。 也就是说这个 HackerTube 都是精选中的精选，它过滤了很多带有噪声的视频。 但同时也可以说，由于它是被持续推荐的原因，所以大部分视频都已经很老旧了。  比如我随手刷新一下，几乎都是 10 几年前的，最近两年的都很少。 而且这个 HackerTube ，它是无需登录就能看。 在无论什么平台都需要登录的情况下，有一个无需登录就能看精选视频的平台简直就是赛博活菩萨了。 没错说的就是你，卡帕奇。  不过这些都是英文，为了表达我对卡帕奇老哥的尊敬和支持，我用 Opus5.5 和 Fable 5.2 一起...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">双层架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text">事件驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E4%BF%A1%E9%81%93%E4%BA%A4%E4%BA%92"><span class="toc-number">3.</span> <span class="toc-text">多信道交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E3%80%81%E7%8A%B6%E6%80%81%E4%B8%8E%E7%8E%AF%E5%A2%83%E7%9A%84%E5%88%86%E7%A6%BB"><span class="toc-number">4.</span> <span class="toc-text">计算、状态与环境的分离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Watchdog"><span class="toc-number">5.</span> <span class="toc-text">Watchdog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">6.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="what ？？？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/13/criscxuan-2121167803885457546/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="what ？？？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121167803885457546-cover.jpg">
+<meta property="article:published_time" content="2026-11-13T17:06:28.000Z">
+<meta property="article:modified_time" content="2026-11-15T02:24:24.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@criscxuan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121167803885457546-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 ",
+  "url": "https://yaoav.github.io/2026/11/13/criscxuan-2121167803885457546/",
+  "image": "https://yaoav.github.io/images/2121167803885457546-cover.jpg",
+  "datePublished": "2026-11-13T17:06:28.000Z",
+  "dateModified": "2026-11-15T02:24:24.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/13/criscxuan-2121167803885457546/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 ',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121167803885457546-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-13T17:06:28.000Z" title="发表于 2026-11-13 17:06:28">2026-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@criscxuan（cxuan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121167803885457546">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>what ？？？</p>
+<p>某社交平台知名大佬 Andrej Karpathy 发帖称，由于他受不了 youtube 的推荐算法。</p>
+<p>所以花了两个小时直接用 Opus 5.5 手搓了一个复刻版 youtube 出来。。。</p>
+<p>名字叫 <strong>HackerTube</strong> 。</p>
+<p><img src="/images/HW_iJsHaIAAtVaE.png" alt="HW_iJsHaIAAtVaE"></p>
+<p>为了做这个 HackerTube ，Karpathy 从 20 年来 HN 的 4300 万条评论中筛选出了 <strong>6454</strong> 个持续被推荐的视频。</p>
+<p>也就是说这个 HackerTube 都是<strong>精选中的精选，它过滤了很多带有噪声的视频。</strong></p>
+<p>但同时也可以说，由于它是被持续推荐的原因，所以大部分视频都已经很老旧了。</p>
+<p><img src="/images/HW_jad5bwAAJK4Q.jpg" alt="HW_jad5bwAAJK4Q"></p>
+<p>比如我随手刷新一下，几乎都是 10 几年前的，最近两年的都很少。</p>
+<p>而且这个 HackerTube ，它是无需登录就能看。</p>
+<p><strong>在无论什么平台都需要登录的情况下，有一个无需登录就能看精选视频的平台简直就是赛博活菩萨了。</strong></p>
+<p>没错说的就是你，卡帕奇。</p>
+<p><img src="/images/HW_jdOhagAAXC6m.jpg" alt="HW_jdOhagAAXC6m"></p>
+<p>不过这些都是英文，为了表达我对卡帕奇老哥的尊敬和支持，我用 Opus5.5 和 Fable 5.2 一起搓了个 HackerTube 的翻译插件</p>
+<p>直接在线在线翻译，我用起来挺顺手的，给大家看下效果。</p>
+<p><img src="/images/HW_jfpRaMAA2XON.jpg" alt="HW_jfpRaMAA2XON"></p>
+<p>基本上分类的很全乎，比如点开<strong>计算机历史与文化</strong>，它是这样的。</p>
+<p><img src="/images/HW_jzfJaQAAzWry.jpg" alt="HW_jzfJaQAAzWry"></p>
+<p>卧槽这个太绝了啊，这太尼玛硬核了。简直是经典中的经典，突然明白了卡帕奇老哥做这个视频站的意义。</p>
+<p>同样的也支持中文搜索，比如我搜索马斯克，出来的视频是这样的</p>
+<p><img src="/images/HW_j22wbkAA5aKY.jpg" alt="HW_j22wbkAA5aKY"></p>
+<p>不得不说 13 年前老马年轻的时候果然非常帅啊</p>
+<p>emmm ，在搜索某个 Java 之父的词条，果然没搜到，看来卡帕奇老哥也得敲打一下了，竟然不知道 Java 之父。</p>
+<p>不过这几个视频看起来很值得一看。</p>
+<p><img src="/images/HW_j56EaMAASWyS.jpg" alt="HW_j56EaMAASWyS"></p>
+<p>如果说文字对应的 Knowledge Base 叫知识库的话，那这个视频站的 Knowledge Base 简直可以称之为视频知识库了 ：）</p>
+<p><strong>所以后面要不要把所有视频的内容都撸出来整一个知识库给大家订阅下呢 ：）</strong></p>
+<p>emmm ，该说点正经事儿了，这个视频字幕翻译插件我直接放到了 npm 上，一行命令你就能安装，丝滑体验一下 HackerTube 中文插件的效果。</p>
+<p><strong>npx hackertube-zh</strong></p>
+<p><img src="/images/HW_kHWxbEAAN8Cn.jpg" alt="HW_kHWxbEAAN8Cn"></p>
+<p>不过这个插件还没上 Chrome 应用商店 ，目前安装插件之后，</p>
+<p>需要按照下面三个步骤来配置一下</p>
+<ol>
+<li><p>地址栏打开 chrome:&#x2F;&#x2F;extensions（安装器已把它复制到剪贴板，直接粘贴）</p>
+</li>
+<li><p>右上角打开「开发者模式」</p>
+</li>
+<li><p>点「加载已解压的扩展程序」，选择 hackertube-zh 的安装目录。</p>
+</li>
+</ol>
+<p><img src="/images/HW_kKmXa8AAQvrx.jpg" alt="HW_kKmXa8AAQvrx"></p>
+<p>最后本来想给大家推荐几个硬核频道来着</p>
+<p>但是我翻了一圈 。。。 这怎么推荐，每一个都很硬，看完纯纯学到东西的那种。</p>
+<p>（太坏了，今天怎么又让我学到东西了）</p>
+<p>比如这个 PS5 之路。</p>
+<p><img src="/images/HW_kYE8bkAAdgJO.jpg" alt="HW_kYE8bkAAdgJO"></p>
+<p>文章的最后，emm 遇事不决，我们还是量子力学把</p>
+<p><img src="/images/HW_kbsOa4AAOsbE.jpg" alt="HW_kbsOa4AAOsbE"></p>
+<p>OK ，今天文章就是这样，希望对大家有帮助。</p>
+<p>手搓翻译插件的 GitHub ： <a target="_blank" rel="noopener" href="https://github.com/crisxuan/hackertube-zh">https://github.com/crisxuan/hackertube-zh</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/13/criscxuan-2121167803885457546/">https://yaoav.github.io/2026/11/13/criscxuan-2121167803885457546/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/criscxuan/">@criscxuan</a></div><div class="post-share"><div class="social-share" data-image="/images/2121167803885457546-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a><a class="pagination-related" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img class="cover" src="/images/2121155117076349135-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Kainative（大宇） 的长文，原文链接，版权归原作者所有。  事情是这样的。 今年夏天我翻队里的记录，翻着翻着就愣住了。 同一个坑，我们队 5 个项目经理，在 9 个工地，各踩了一遍。 没人偷懒，也没人藏着掖着。第一个人踩完回来，在饭桌上跟旁边的人提了一嘴，这事就过去了。第二个人到了另一个工地，碰上一模一样的情况，又从头摸一遍。第三个，第四个。。。一直到月底我对账，才发现这 9 次其实是同一个坑。 9 次学费，交的是同一份。 我是县城一个施工队的包工头，不会写代码，只会看施工图。 但从那之后，我开始让 Claude Code 当总指挥，让 Codex 当施工员，前前后后磨了三个多月，磨出来一个管队伍的智能体。 现在我们队是这么干活的。 项目经理出门前跟它说一句，明天去城东工地处理卫生间渗水。它就吐出一页开工准备包，本队以前干过的同类活、前人踩过的坑、库里还有什么材料，全在上面，能直接打印。 收工了，对着它说三句话。这次的经过自动变成一条踩坑案例，全队当天就能搜到。 同类的坑攒够 3 条，它会把共性提炼出来，再固化成一张施工卡。 工地没网也没关系，每...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/02/criscxuan-2117139890957861046/" title="通了个宵，终于把 Super-Agent 架构玩明白了 "><img class="cover" src="/images/2117139890957861046-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">通了个宵，终于把 Super-Agent 架构玩明白了 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。 现在跟大家聊聊，应该还不算晚吧？ 主要是我把这篇文章仔细读了一遍，时间理解消化输出都是成本，于是今天才写出来。 而且我确实觉得此类文章要好好消化一下，不过我看到很多大号在官方发布之后半个小时甚至 1 个小时就把文章发出来了，emmm 这也许就是大佬吧 ：） DeepSeek Harness 团队（以下统称为 DSH 团队）首先解释了一下，这种解释和我们的预想是一样的：近一年里随着模型能力的增强，以及多 Agent 能力的提高，人类越来越少的参与底层中的执行，进而参与顶层的决策和验收工作了。 同样的随着模型能力的增强，今年早期的 OpenClaw 这类工具演变成了现在新的业态：Personal Agent。 我看到 DeepSeek 团队一直没有做 dsh bot ，目前流传出来的 bot 都是社区开发的，比如这个。  Personal Agent 我之...</div></div></div></a><a class="pagination-related" href="/2026/11/13/criscxuan-2121150349209948636/" title="讲真，智能路由这事儿，还得基元律动出手。"><img class="cover" src="/images/2121150349209948636-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">讲真，智能路由这事儿，还得基元律动出手。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 AI 这么久了，我突然意识到一个问题。 那就是 AI 厂商太多了，不管是大厂小厂都在发新模型，而且大多数模型发布都很集中，往往 DeepSeek 发完了，GLM 发，GLM 发了还没测，Qwen、Kimi 又杀出来了，几乎每个月都有新版本发布，每家都说自己代码能力又上了一个台阶。 但具体哪个模型干活好、哪个模型价格低，靠自己一个个去测的话根本测不过来。 最理想的状态当然是：简单的活交给便宜模型，难的活交给强模型，每个任务都用刚好够用的那个。但这个刚好够用如何判断、每个档位该配哪个模型，一般来说很难自己搞清楚。 我发现了一个 GitHub 项目，就专门干这事儿的。  这个 GitHub 的思路就是：不用你自己挑模型，他们每月把主流模型测一遍，把当月最合适的配置直接下发到你的客户端。 先简单说一下 OpenSquilla 是什么。它是基元律动开源的 Agent 框架，日常用起来和常见的 Agent 平台差不多：给它一个任务，它帮你拆解、调用工具、把活干完。 区别在背后的智能路由。一...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">90</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"><img src="/images/2121612249387171854-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法"/></a><div class="content"><a class="title" href="/2026/11/14/Kainative-2121612249387171854/" title="包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法">包工头二代，用 Claude 把高中看过的网文重读了一遍，拆出来一套看局的方法</a><time datetime="2026-11-14T22:32:32.000Z" title="发表于 2026-11-14 22:32:32">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"><img src="/images/2121590571689287967-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何用Codex辅助我们做科研：从文献搜索到答辩PPT"/></a><div class="content"><a class="title" href="/2026/11/14/DrRabbitAI-2121590571689287967/" title="如何用Codex辅助我们做科研：从文献搜索到答辩PPT">如何用Codex辅助我们做科研：从文献搜索到答辩PPT</a><time datetime="2026-11-14T21:06:24.000Z" title="发表于 2026-11-14 21:06:24">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img src="/images/2121464710088516066-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"/></a><div class="content"><a class="title" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</a><time datetime="2026-11-14T12:46:16.000Z" title="发表于 2026-11-14 12:46:16">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"><img src="/images/2121280624166363356-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》"/></a><div class="content"><a class="title" href="/2026/11/14/a1341180534-2121280624166363356/" title="《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》">《一天只评40+条，如何不当肝帝50天上岸X创作者双权益》</a><time datetime="2026-11-14T00:34:46.000Z" title="发表于 2026-11-14 00:34:46">2026-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
