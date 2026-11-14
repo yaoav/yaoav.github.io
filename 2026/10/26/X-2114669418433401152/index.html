@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>公众号新手保姆级0-1起号流程 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="公众号新手保姆级起号流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="公众号新手保姆级0-1起号流程">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/26/X-2114669418433401152/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="公众号新手保姆级起号流程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2114669418433401152-cover.jpg">
+<meta property="article:published_time" content="2026-10-26T18:44:12.000Z">
+<meta property="article:modified_time" content="2026-11-14T00:31:59.508Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2114669418433401152-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "公众号新手保姆级0-1起号流程",
+  "url": "https://yaoav.github.io/2026/10/26/X-2114669418433401152/",
+  "image": "https://yaoav.github.io/images/2114669418433401152-cover.jpg",
+  "datePublished": "2026-10-26T18:44:12.000Z",
+  "dateModified": "2026-11-14T00:31:59.508Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/26/X-2114669418433401152/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '公众号新手保姆级0-1起号流程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2114669418433401152-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">公众号新手保姆级0-1起号流程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">公众号新手保姆级0-1起号流程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-26T18:44:12.000Z" title="发表于 2026-10-26 18:44:12">2026-10-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2114669418433401152">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<h2 id="公众号新手保姆级起号流程"><a href="#公众号新手保姆级起号流程" class="headerlink" title="公众号新手保姆级起号流程"></a>公众号新手保姆级起号流程</h2><h3 id="从选赛道到流量主变现"><a href="#从选赛道到流量主变现" class="headerlink" title="从选赛道到流量主变现"></a>从选赛道到流量主变现</h3><p>我是生于，我做公众号矩阵 3 年，最高月收益100W+。运营规模最大时，我同时运营过 2000 个公众号</p>
+<p>单账号程序化广告累计收益最高达到 247,248.92 元。</p>
+<p>这篇文章，我会按实际运营流程，把公众号从选赛道、定读者、起号，到内容创作、开通流量主和广告变现拆开讲。直发、垂直养号、AB 转类型、找对标、写文章和做排版，都会结合我的实操经验说明白。</p>
+<p><img src="/images/HVjJV66bkAE_7iE.png" alt="HVjJV66bkAE_7iE"></p>
+<p>单账号程序化广告累计收入截图</p>
+<h2 id="01-选赛道、定读者，做好账号包装"><a href="#01-选赛道、定读者，做好账号包装" class="headerlink" title="01  选赛道、定读者，做好账号包装"></a>01  选赛道、定读者，做好账号包装</h2><p>先想清楚自己准备长期做什么，再去找对应的读者。你做读书内容，账号名称、头像和简介就围绕读书来设计；做楼市内容，主页也要让人一眼知道你关注房地产。读者点进主页，应该很快看懂这个账号在写什么。</p>
+<p>赛道也要具体到人群。同样写职场，可以写给刚毕业的新人，也可以写给工作多年的管理者；他们关心的问题不一样，选题和表达也要跟着变。年龄段可以作为切入口，再继续细分生活阶段和实际需求。</p>
+<p>公众号不要今天做读书，明天转楼市，后天又追情感热点。先选一个方向持续写，几篇数据不好先调整选题和表达，别急着换赛道。</p>
+<p><img src="/images/HVjJuQNaIAADIz2.png" alt="HVjJuQNaIAADIz2"></p>
+<pre><code>                                                 读书账号主页示例
+</code></pre>
+<p><img src="/images/HVjKAIJaoAA2e-Q.png" alt="HVjKAIJaoAA2e-Q"></p>
+<pre><code>                                            楼市账号主页示例
+</code></pre>
+<h3 id="账号包装要和内容方向对得上"><a href="#账号包装要和内容方向对得上" class="headerlink" title="账号包装要和内容方向对得上"></a>账号包装要和内容方向对得上</h3><p>**账号名字、头像、简介和文章内容要放在一起看。**名字写读书，简介就说清楚分享哪类阅读内容；账号做楼市，就把关注的区域或内容方向讲明白。不要让读者看完主页，还是不知道你会持续写什么。</p>
+<p>包装不需要复杂，重点是统一、清楚。你希望什么年龄段、什么阶段的人关注，就尽量用他们熟悉的说法介绍账号。</p>
+<h2 id="02-选择适合自己的起号方式"><a href="#02-选择适合自己的起号方式" class="headerlink" title="02  选择适合自己的起号方式"></a>02  选择适合自己的起号方式</h2><p>直发就是从第一篇开始，直接发布准备长期运营的赛道正文。另一种做法是先养号。我会把养号分成垂直养号和 AB 转类型两种。</p>
+<h3 id="垂直养号"><a href="#垂直养号" class="headerlink" title="垂直养号"></a>垂直养号</h3><p>比如准备做宠物内容，可以先发同一领域的猫咪贴图、知识图文。等这类内容有了持续的推荐流量，再逐步转成同领域正文。方向没变，变化的是内容形式。</p>
+<p><img src="/images/HVjKQ45bYAA05NZ.jpg" alt="HVjKQ45bYAA05NZ"></p>
+<p>猫咪贴图内容示例</p>
+<p><img src="/images/HVjKYDQbIAAM3ca.jpg" alt="HVjKYDQbIAAM3ca"></p>
+<p>同领域贴图推荐示例</p>
+<h3 id="AB-转类型养号"><a href="#AB-转类型养号" class="headerlink" title="AB 转类型养号"></a>AB 转类型养号</h3><p>AB 转的 A 和 B 可以完全不是一个赛道。前期先用贴图或正文做 A，A 可以是小众内容，也可以和准备长期运营的赛道不同；看到账号开始获得推荐后，再转到目标赛道 B，发布正式正文。</p>
+<p>这张图是 AB 转类型后的内容表现示例：同一页里有几百阅读，也有 2.2 万、4.3 万和 10 万+。转过去之后，文章表现会有差异，不能把某一篇的阅读量当成每篇的保证。确定要做的目标方向后，后续就围绕这个方向持续做。</p>
+<p><img src="/images/HVjKhSxaEAAw5oS.png" alt="HVjKhSxaEAAw5oS"></p>
+<p>AB 转类型后正文阅读表现示例</p>
+<h2 id="03-保持账号环境和更新时间稳定"><a href="#03-保持账号环境和更新时间稳定" class="headerlink" title="03  保持账号环境和更新时间稳定"></a>03  保持账号环境和更新时间稳定</h2><p>我会注意 IP 干净，也会尽量让常用的网络和设备环境保持稳定，少做没有必要的切换。做账号时，内容方向、账号使用和发布习惯尽量保持清楚一致。</p>
+<p>更新时间也可以固定在一个自己能长期执行的时间段。先根据目标读者的阅读习惯和自己的产能定下来，按计划持续发布，再结合账号实际表现调整。固定时间是方便自己运营和观察，不代表发在某个时间就一定有流量。</p>
+<h2 id="04-开通流量主，建立变现入口"><a href="#04-开通流量主，建立变现入口" class="headerlink" title="04  开通流量主，建立变现入口"></a>04  开通流量主，建立变现入口</h2><p>流量主是公众号文章广告变现的关键入口。按我目前采用的开通方法，账号达到 100 个粉丝后，就可以在公众号后台申请开通。后台进入“收入变现”，再点“广告收入”。</p>
+<p>开通后，文章里可以展示广告。用户正常阅读文章时，页面可能会出现平台匹配的广告；流量主收入按平台机制结算。红框里就是文章中的广告展示。</p>
+<p><img src="/images/HVjKryMakAAiSzI.png" alt="HVjKryMakAAiSzI"></p>
+<p>公众号后台广告收入入口</p>
+<p><img src="/images/HVjKvW5awAA-5xJ.jpg" alt="HVjKvW5awAA-5xJ"></p>
+<p>文章内的广告展示示例</p>
+<h2 id="05-优化完读率和停留时间"><a href="#05-优化完读率和停留时间" class="headerlink" title="05  优化完读率和停留时间"></a>05  优化完读率和停留时间</h2><p>想把流量主收入做起来，不能只看阅读量，还要关注完读率和文章停留时间。</p>
+<p><strong>完读率</strong>看读者能不能一路读到文末。读者读得越完整，就越有机会看到文章里的广告展示。开头尽快进入主题，正文层次清楚，重点及时讲出来，结尾也要让读者觉得看完整篇有收获。</p>
+<p><strong>停留时间</strong>看文章有没有内容让读者愿意多看一会儿。具体的观点、案例、实用步骤，以及值得参与的评论话题，都能让读者停下来。少用空话和重复段落凑篇幅。</p>
+<p>归根结底，先把内容写得值得读，读者愿意读完、愿意停留，广告才有更多展示机会，收入才有提升的空间。</p>
+<h2 id="06-刷对标，积累账号与选题"><a href="#06-刷对标，积累账号与选题" class="headerlink" title="06  刷对标，积累账号与选题"></a>06  刷对标，积累账号与选题</h2><p>刚开始不知道写什么，可以多刷公众号推荐流和看一看。刷到感兴趣的赛道，就点进主页看它在做什么。尤其留意近期起号、还在持续更新、文章推荐表现比较稳定的新账号。多看一段时间，别只凭一篇爆款判断一个赛道。</p>
+<p>刷到觉得不错的账号就记录下来；遇到好长文也收藏起来，之后可以研究它的选题、开头和文章结构。对标主要用来观察读者喜欢什么、文章怎样组织。写自己的文章时，观点、材料和表达要重新组织，别拿别人的正文改几个词就发布。</p>
+<p><img src="/images/HVjN0d7aYAAmULL.jpg" alt="HVjN0d7aYAAmULL"></p>
+<p>服务号贴图推荐流示例</p>
+<p><img src="/images/HVjLJfha8AExrhS.jpg" alt="HVjLJfha8AExrhS"></p>
+<p>公众号看一看内容示例</p>
+<p>我把近期看到的对标账号整理成了一份表格，也会继续更新。想要最近的对标文档，可以评论或私信我领取。</p>
+<p><img src="/images/HVjLE5maUAAhO-A.jpg" alt="HVjLE5maUAAhO-A"></p>
+<p>2026 年 9 月对标账号整理参考</p>
+<h2 id="07-写文章时用好素材和-AI"><a href="#07-写文章时用好素材和-AI" class="headerlink" title="07  写文章时用好素材和 AI"></a>07  写文章时用好素材和 AI</h2><p>写文章前，我会先找几篇同赛道、结构清楚的文章投喂给 AI，让它拆解文章是怎么开头的、正文分了几层、每一部分分别起什么作用，以及案例和观点是怎么衔接的。重点是学文章的组织框架，不是让 AI 改写原文。</p>
+<p>框架拆出来后，再补上自己的账号人设、目标读者、文章主题和真实素材，让 AI 根据这些信息帮忙优化提示词。提示词越具体，生成的提纲和初稿就越贴近账号定位。实际写作时，可以先让 AI 出提纲，检查思路后再写正文；事实、案例和观点都要以自己的素材为准。</p>
+<p><strong>同时做好去AI味我这边推荐可以用Humanizer插件融入进我们的提示词框架</strong></p>
+<p><strong>提示词示例：</strong></p>
+<blockquote>
+<p>请分析我提供的参考文章，只提炼它的开头方式、段落结构、各部分作用、观点衔接和结尾方法。不要复用原文的句子、案例和观点。帮我整理一份适合自己账号、可以反复使用的写作提示词。提示词要要求先列提纲，再写正文；不得编造事实或案例，缺少的信息标注“待补充”。</p>
+</blockquote>
+<p>提示词不是套一次就不变。看完提纲和初稿后，再根据账号语气、内容重点和素材情况继续调整，慢慢打磨出适合自己的写作流程。</p>
+<p><img src="/images/HVjM5QpbYAAHf7x.jpg" alt="HVjM5QpbYAAHf7x"></p>
+<h2 id="08-做好原创、润色和排版，再发布"><a href="#08-做好原创、润色和排版，再发布" class="headerlink" title="08  做好原创、润色和排版，再发布"></a>08  做好原创、润色和排版，再发布</h2><p>采集到的图片和图文素材先去重，别让同一批画面在多篇文章里反复出现。图片尽量和正在讲的内容对得上，也要留意来源和使用权限。简单裁图、加字，不等于自己的原创配图。</p>
+<p>文章也一样。过去那种把别人的文章换个标题、替换几句话就发布的做法，不要做。参考账号可以帮助找题、看结构，自己的观点、素材和写法要重新组织。内容写得扎实，读者才有理由继续看这个账号。</p>
+<p>排版，这边推一下我们团队的自用工具 <strong>YI TUO HUB STUDIO 公众号排版工坊</strong>。</p>
+<p><a target="_blank" rel="noopener" href="https://studio.yituohub.com/">https://studio.yituohub.com</a></p>
+<p>它把 Markdown 转成公众号 HTML，有多种主题，也可以复制到公众号后台或下载 HTML。你提到它可以免费试用、主题丰富、一键导入排版；需要时可以直接打开工具体验。</p>
+<p>YI TUO HUB STUDIO 公众号排版工坊</p>
+<p><img src="/images/HVjNjPhbcAAzauM.jpg" alt="HVjNjPhbcAAzauM"></p>
+<p><img src="/images/HVjNdZ8bcAAjLf6.png" alt="HVjNdZ8bcAAjLf6"></p>
+<p>写在最后</p>
+<p>我是生于，欢迎各位关注我~</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/26/X-2114669418433401152/">https://yaoav.github.io/2026/10/26/X-2114669418433401152/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2114669418433401152-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/27/X-2114973973503185354/" title="我是如何从好莱坞视效，开始转型做AIGC的"><img class="cover" src="/images/2114973973503185354-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">我是如何从好莱坞视效，开始转型做AIGC的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  做 AI 视频这几个月，我花钱最多、卡得最久的地方，跟我原来想的完全不一样。 先说结论： 当技术的门槛降到极低的时候，做 AIGC最难的已不是技术，而是怎么讲好一个故事，也就是内容。 我这么说可能挺反直觉的，按理说以我的行业经验，最拿手的应该是画面。当然，这跟我有合成和制片的底子有关，对没做过视频的朋友来说，技术和流程确实需要花时间去啃。 但自从我裸辞、All in AI 以来，技术层面的东西我花了一阵子就跑通了第一套制作流程，真正让我头大的，反而是「讲故事&#x2F;Story Telling」。 下面聊聊，我是怎么一路撞到这堵墙上的。希望可以给你们带来一点参考或启发。 01. 来时路-好莱坞我是做影视视效合成出身的。在好莱坞，我参与过《西部世界》《怪奇物语》《神盾局特工》和《哥谭市》等几十部科幻剧，当时所在的团队还凭借《哥谭市》的视效拿过艾美奖。  做视效有点像变魔法：演员对着空气演，我们负责把场景和画面一层层造出来，让观众信以为真。但合成对画面的要求是像素级的，边缘、颜色、运动模糊、景深、噪点，只要...</div></div></div></a><a class="pagination-related" href="/2026/10/26/chenke20266-2114632753954099609/" title="Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering "><img class="cover" src="/images/2114632753954099609-cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Your Grok Bot Isn't Dumb. It Has No Harness. Grok Bot harness engineering </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Most people give their Grok bot one job: everything Research. Ideas. Code. Launch copy Then the bot fails So they rewrite the prompt They add rules in CAPS LOCK They paste a 3,000-word “master instruction” The bot still invents numbers It still skips the tests It still says DONE when nothing is done The problem is not Grok The problem is everything around Grok That layer has a name: the harness And on Grok Bot, you build it yourself  The pro...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/10/27/X-2114973973503185354/" title="我是如何从好莱坞视效，开始转型做AIGC的"><img class="cover" src="/images/2114973973503185354-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-27</div><div class="info-item-2">我是如何从好莱坞视效，开始转型做AIGC的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  做 AI 视频这几个月，我花钱最多、卡得最久的地方，跟我原来想的完全不一样。 先说结论： 当技术的门槛降到极低的时候，做 AIGC最难的已不是技术，而是怎么讲好一个故事，也就是内容。 我这么说可能挺反直觉的，按理说以我的行业经验，最拿手的应该是画面。当然，这跟我有合成和制片的底子有关，对没做过视频的朋友来说，技术和流程确实需要花时间去啃。 但自从我裸辞、All in AI 以来，技术层面的东西我花了一阵子就跑通了第一套制作流程，真正让我头大的，反而是「讲故事&#x2F;Story Telling」。 下面聊聊，我是怎么一路撞到这堵墙上的。希望可以给你们带来一点参考或启发。 01. 来时路-好莱坞我是做影视视效合成出身的。在好莱坞，我参与过《西部世界》《怪奇物语》《神盾局特工》和《哥谭市》等几十部科幻剧，当时所在的团队还凭借《哥谭市》的视效拿过艾美奖。  做视效有点像变魔法：演员对着空气演，我们负责把场景和画面一层层造出来，让观众信以为真。但合成对画面的要求是像素级的，边缘、颜色、运动模糊、景深、噪点，只要...</div></div></div></a><a class="pagination-related" href="/2026/10/28/X-2115427239412351155/" title="别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！"><img class="cover" src="/images/2115427239412351155-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-28</div><div class="info-item-2">别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  你是否也因为影视会员费用越来越高，渐渐不怎么看电视了？ 想看内容时，常常只能用手机投屏，步骤多、体验也打折，电视的使用率越来越低。今天就手把手教你安装电视盒子，让电视不再只能靠手机投屏，重新回到开机就能直接使用的状态。  第一步：先选适配的电视端软件下载地址：https://zoo.ink/tvbox.html 准备个U盘：电视端应用有不同品牌、版本和遥控器适配情况。选择前先看它是否标注 TV 版&#x2F;盒子版，核对系统要求、开发者信息与下载来源；安装电视 APK。  第二步：确认电视系统与安装入口电视系统决定了能否直接安装 Android APK。Android TV&#x2F;安卓电视通常可从系统自带应用商店安装应用；Samsung Tizen、LG webOS 等系统不能直接运行 Android APK，可先查看电视自带商店，或用 HDMI 外接 Android 电视盒子。 下图整理了小米&#x2F;红米、海信&#x2F;VIDAA、TCL&#x2F;雷鸟的常见入口参考。  图 2｜小米 &#x...</div></div></div></a><a class="pagination-related" href="/2026/10/22/X-2113195080517562646/" title="Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱"><img class="cover" src="/images/2113195080517562646-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-22</div><div class="info-item-2">Lemo-Opuscar 史诗级更新：8种新风格+新改编玩法，我把风格库变成了风格制作工具箱</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  Hello 大家好，我是lemomo。这次 Lemo-Opuscar 迎来了上线以来最大的一次更新，不光有新的风格，还有新的玩法，整个项目定位从【视频风格库】变成【搭建自己风格库的工具】。  **新增【剪辑与纪实】8 种风格，目前从最早的39种已经更新到了59种。**未来会继续更新，我的目标是99种。 新玩法：把风格改成你自己的。 新增的玩法，现在除了可以从库里选择风格开始创建影片外，库里任何一种风格都能改，也可以从空白开始。 预告： Lemo Studio 工作台 (Claude App 桌面版），还有下一批日系动漫风格预告。  已经装过的朋友，记得先更新。还没安装的朋友，请给我点点star，求转发！ 全新 8 种新风格：剪辑与纪实这次新增的 8 种风格有一个共同点：不在依赖代码作画，而是用真实素材剪出来的。 真实的影像、照片、文件、数据，按某一种剪辑和包装的语法排好，再配上声音。所以它们特别适合做自媒体、做新闻、做纪实的朋友。 而且这次的风格不光用opus可以做，sonnet 5.5 High档位的效...</div></div></div></a><a class="pagination-related" href="/2026/11/07/X-2119050035363205408/" title="生于Ai的十万+自媒体知识付费之路"><img class="cover" src="/images/2119050035363205408-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-07</div><div class="info-item-2">生于Ai的十万+自媒体知识付费之路</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我的十万+自媒体知识付费之路 我花了十万多，才学会判断一个项目值不值得付费。 有的钱交得很冤，有的钱交得很值。还有一些钱，只有亏完之后我才知道：这条路不适合自己。 很多人聊知识付费，喜欢直接站队——要么所有课程都是割韭菜，要么付费学习一定值得。我站不了队。因为这两种经历，我都有过。 早期的学费：交过冤枉钱，也买过地图大学第一笔付费：19800元。当时做拼多多店铺代运营，对方报价19800元。我缺结果，也缺判断力。对方有完整的话术：团队、方法、案例、收益截图，一样不少。钱交出去之后，结果却没有出现。 后来我才明白，很多项目赚的不是货，也不是项目本身，而是你的代运营费。你交钱之前是合作对象，交钱之后只是客户。那次之后，我没有把所有知识付费都骂成骗局。一次被骗，只能说明那一次不值，不能证明所有付费内容都没用。 19800元买来的，是我最早的辨别力。 生财有术：我买的是一张地图生财有术我也付过费。它对我最大的帮助，不是几句金句，而是把公众号、小红书、直播、带货等路径摆到了我面前。我第一次承认，自己缺的不是努力，而...</div></div></div></a><a class="pagination-related" href="/2026/11/02/X-2117214577771311291/" title="中文推特值得关注的 100 人：从每个人的一篇作品读起"><img class="cover" src="/images/2117214577771311291-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">中文推特值得关注的 100 人：从每个人的一篇作品读起</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我想知道一个 AI 工具能不能进企业，最想看的是它第一次出错的地方。比如有人请 AI 统计一瓶精华的差评，帖子里恰好提到两瓶，挨骂的是另一瓶。也有人用 AI 接婚礼视频订单，最费时间的一步，竟是跟新人问清楚两个人当年到底怎么认识的。 这类细节让我决定关注一个人。等我自己也碰到类似的问题，还能翻回去找他，看他当时怎么做。 我从自己的中文 X 关注列表里挑了 100 位作者，每人留一篇入门作品。做企业项目的，可以从第一组读起；正在做账号的，直接翻到第四组；已经做出了产品却还没找到客户的，我会先看第五组。文中涉及收入和流量的数字均为作者自述。 这份清单受司徒 K 的文章启发。司徒 K 的原帖 一、企业 AI 落地与 Agent 交付01｜Smartpig Smartpig 写企业里的 AI 分工，擅长把一个岗位拆成助手能接手的具体任务。他翻了 Grok Bot 场景库里的 56 个角色。费用助手要把收据、表格和系统记录对在一起，发票协调员要找出哪张单据还没人处理。给企业讲 Agent 时，这些例子能把“数字员工...</div></div></div></a><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%B0%E6%89%8B%E4%BF%9D%E5%A7%86%E7%BA%A7%E8%B5%B7%E5%8F%B7%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">公众号新手保姆级起号流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E9%80%89%E8%B5%9B%E9%81%93%E5%88%B0%E6%B5%81%E9%87%8F%E4%B8%BB%E5%8F%98%E7%8E%B0"><span class="toc-number">1.1.</span> <span class="toc-text">从选赛道到流量主变现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#01-%E9%80%89%E8%B5%9B%E9%81%93%E3%80%81%E5%AE%9A%E8%AF%BB%E8%80%85%EF%BC%8C%E5%81%9A%E5%A5%BD%E8%B4%A6%E5%8F%B7%E5%8C%85%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">01  选赛道、定读者，做好账号包装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E5%8C%85%E8%A3%85%E8%A6%81%E5%92%8C%E5%86%85%E5%AE%B9%E6%96%B9%E5%90%91%E5%AF%B9%E5%BE%97%E4%B8%8A"><span class="toc-number">2.1.</span> <span class="toc-text">账号包装要和内容方向对得上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02-%E9%80%89%E6%8B%A9%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%9A%84%E8%B5%B7%E5%8F%B7%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">02  选择适合自己的起号方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%85%BB%E5%8F%B7"><span class="toc-number">3.1.</span> <span class="toc-text">垂直养号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AB-%E8%BD%AC%E7%B1%BB%E5%9E%8B%E5%85%BB%E5%8F%B7"><span class="toc-number">3.2.</span> <span class="toc-text">AB 转类型养号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#03-%E4%BF%9D%E6%8C%81%E8%B4%A6%E5%8F%B7%E7%8E%AF%E5%A2%83%E5%92%8C%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%E7%A8%B3%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">03  保持账号环境和更新时间稳定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#04-%E5%BC%80%E9%80%9A%E6%B5%81%E9%87%8F%E4%B8%BB%EF%BC%8C%E5%BB%BA%E7%AB%8B%E5%8F%98%E7%8E%B0%E5%85%A5%E5%8F%A3"><span class="toc-number">5.</span> <span class="toc-text">04  开通流量主，建立变现入口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#05-%E4%BC%98%E5%8C%96%E5%AE%8C%E8%AF%BB%E7%8E%87%E5%92%8C%E5%81%9C%E7%95%99%E6%97%B6%E9%97%B4"><span class="toc-number">6.</span> <span class="toc-text">05  优化完读率和停留时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#06-%E5%88%B7%E5%AF%B9%E6%A0%87%EF%BC%8C%E7%A7%AF%E7%B4%AF%E8%B4%A6%E5%8F%B7%E4%B8%8E%E9%80%89%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">06  刷对标，积累账号与选题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#07-%E5%86%99%E6%96%87%E7%AB%A0%E6%97%B6%E7%94%A8%E5%A5%BD%E7%B4%A0%E6%9D%90%E5%92%8C-AI"><span class="toc-number">8.</span> <span class="toc-text">07  写文章时用好素材和 AI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#08-%E5%81%9A%E5%A5%BD%E5%8E%9F%E5%88%9B%E3%80%81%E6%B6%A6%E8%89%B2%E5%92%8C%E6%8E%92%E7%89%88%EF%BC%8C%E5%86%8D%E5%8F%91%E5%B8%83"><span class="toc-number">9.</span> <span class="toc-text">08  做好原创、润色和排版，再发布</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？"><img src="/images/2121082480392564761-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nature：科研人如何选择适合自己的AI工具？"/></a><div class="content"><a class="title" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？">Nature：科研人如何选择适合自己的AI工具？</a><time datetime="2026-11-13T11:27:25.000Z" title="发表于 2026-11-13 11:27:25">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
