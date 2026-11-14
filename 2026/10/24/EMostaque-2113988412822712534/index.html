@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Chain Theory | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="I am excited to announce Chain Theory, a new research program of mine that seeks">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chain Theory">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/24/EMostaque-2113988412822712534/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="I am excited to announce Chain Theory, a new research program of mine that seeks">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2113988412822712534-cover.jpg">
+<meta property="article:published_time" content="2026-10-24T21:38:08.000Z">
+<meta property="article:modified_time" content="2026-11-14T01:21:52.121Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@EMostaque">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2113988412822712534-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Chain Theory",
+  "url": "https://yaoav.github.io/2026/10/24/EMostaque-2113988412822712534/",
+  "image": "https://yaoav.github.io/images/2113988412822712534-cover.jpg",
+  "datePublished": "2026-10-24T21:38:08.000Z",
+  "dateModified": "2026-11-14T01:21:52.121Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/24/EMostaque-2113988412822712534/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Chain Theory',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">49</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2113988412822712534-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Chain Theory</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Chain Theory</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-24T21:38:08.000Z" title="发表于 2026-10-24 21:38:08">2026-10-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@EMostaque（Emad）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2113988412822712534">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>I am excited to announce Chain Theory, a new research program of mine that seeks to rebuild fundamental physics from quantum information, and its first result: a parameter-free candidate for the fine-structure constant, derived from a single axiom, that matches its measured value to ten significant digits.</p>
+<p>In the first three decades of the twentieth century, fundamental physics was rebuilt from its foundations. Between Planck’s quantum of 1900 and Dirac’s equation of 1928 came special relativity, general relativity, the quantum theory of the atom, and quantum mechanics itself, each a new framework and most of them confirmed within a few years. The decades that followed turned those frameworks into the Standard Model, whose structure was considered complete by the middle of the 1970s.</p>
+<p>Since then, fundamental physics has been starved of new structure. The great experiments of the last fifty years, the W and Z bosons (1983), the top quark (1995), the Higgs boson (2012), and gravitational waves (2015), confirmed predictions made decades earlier. The genuine surprises of 1998, neutrino masses and the accelerating expansion of the universe, were found by experiment, explained by no theory, and added free parameters to a count that was meant to shrink. The drought is now longer than the golden age it followed. A drought that long is a sign that what is missing is not more data but a different starting point.</p>
+<p>However, the field of physics drew a different conclusion. For most of the twentieth century, the aim of fundamental physics was derivation, fewer inputs and more outputs, and the constants of nature were the outputs still owed. The Standard Model settled the structure but not the numbers. Its two dozen or so parameters are measured, not derived, and nothing within it explains their values. As the drought set in, the aim itself changed. One line of argument concluded that the constants are not derivable from law at all, that their observed values are environmental, selected by the condition that observers exist. Its one notable success was Weinberg’s anthropic bound (1987) on the cosmological constant, which pointed to a small nonzero value a decade before the accelerating expansion was measured.</p>
+<p>The string landscape then supplied a vast population of vacua to select from, and its predictions came to rest on the assumption that we are typical observers within it, a Copernican principle stretched across universes. What counts as typical depends on a measure over infinitely many regions, and no one has fixed that measure. A large part of the field moved from deriving the constants to explaining why they could not be derived. The swampland program is a partial return. It asks which effective theories are consistent with quantum gravity at all, but it asks largely from within string theory and leaves the constants where the landscape put them. In retreating, the field kept its foundations and gave up on derivation. The opposite course is to hold derivation as the goal and look for new foundations.</p>
+<p>The clues to those foundations may have been in plain sight all along. A derivation with no free parameters, and no appeal after the fact to the existence of observers, may need no new experiment to begin. Three clues in the existing body of physics already point the way. Each has been interpreted as something else: a bound as a fact about black holes, a gauge group as a blemish to be embedded, and a null result as a scale not yet reached.</p>
+<p>The first clue is that the information a bounded region of space can hold is finite. This bound was first derived by Jacob Bekenstein (1981) from black hole thermodynamics and is usually regarded as a fact about gravity, but it constrains whatever fills the region, elementary matter included. Gravitational dynamics has since been derived from the entanglement of such regions, beginning with Ted Jacobson (1995). The lesson for elementary matter is direct. A field has infinitely many degrees of freedom in every region, and a string has infinitely many modes of vibration. A finite bound says to look instead for finitely many degrees of freedom, carried by quantum systems of finite dimension.</p>
+<p>The second clue is the Standard Model gauge group, interpreted as a signature and not a blemish. Grand unification treated the product SU(3) × SU(2) × U(1) as an ugliness to be embedded in a simple group: SU(5) in the model of Georgi and Glashow in 1974, then SO(10), E₆, and supersymmetric versions of each. It paid for the embedding with predictions that have not appeared: no proton has been seen to decay, and no supersymmetric partner of any known particle has turned up at any collider. However, the same apparently ugly product can instead be understood as the symmetry of a single object of a different kind: a qutrit and a qubit sharing one entangled state. Changes of basis at the two ends contribute SU(3) and SU(2), and of their two phases only one survives, belonging to neither end but to the pair. These local transformations form the Standard Model gauge group, including the ℤ₆ quotient that its observed charges permit.</p>
+<p>The third clue is that the elementary particles of the Standard Model have shown no substructure. Over decades, every one of them has behaved as a point. Colliders have raised, by orders of magnitude, the energy up to which the electron and the quarks show no substructure, and searches for the excited states and contact interactions that constituents would produce in scattering have returned nothing. Yet the particle spectrum itself, three generations repeating one set of charges, is the kind of pattern that has always signaled constituents, from the periodic table to the hadrons, and compositeness has been set aside chiefly because no constituents appear. There is, however, another interpretation. Suppose nature is saying not that the substructure is hard to resolve but that it cannot be resolved at all. Quantum information knows one kind of correlation with exactly that property. A state of two systems can be entangled, certifiably so, and yet admit no procedure by local operations and classical communication that distills, from any number of its copies, a single maximally entangled pair, or anything close to one. Such entanglement was identified in 1998 by Michał, Paweł, and Ryszard Horodecki, who called it “bound.” It cannot be extracted or directly observed, but it can be detected indirectly. An entanglement witness, a measurement tailored to the state, can certify that it is there. If the constituents of an elementary particle were joined by entanglement that the available operations cannot extract, scattering, which looks for constituents by resolving them, would find nothing to resolve and would see a point, while a suitable witness could still show that the structure exists. The substructure of elementary matter, on this interpretation, would not be undetectable. It would be undistillable.</p>
+<p>Put together, the clues hint at a single new foundational theory. The first suggests that everything consists of finitely many quantum systems, each of finite dimension, so that every degree of freedom is discrete. The second suggests that these systems, or qudits, come in entangled pairs, and the first clue fixes how strongly: a pair entangled any less than maximally would carry continuous parameters, its Schmidt coefficients, that a theory without continuous degrees of freedom cannot afford. The third suggests that an elementary particle is built from many such pairs, and with nothing but pairs to build from, the only way to join them is for pairs to share a qudit, so the pairs form a network. Monogamy of entanglement forbids any one system from being maximally entangled with two partners, so a shared qudit cannot be a single system sitting in two pairs. It holds instead one copy of itself for each of its pairs, and each pair is maximally entangled with its own copy, much as a four-dimensional system, which has room for two qubits, can be maximally entangled with two separate qubits at once. The shared qudit is the join where those copies meet and their bases are matched, just as the bonds of a projected entangled pair state (PEPS), a standard kind of tensor network, meet at a site. The third clue also divides the network. The links we observe directly can each be fixed by a single distillation. The links inside an elementary particle are just as maximally entangled, but no single distillation fixes them, which is the theory’s analogue of bound entanglement and the reason every particle looks like a point. An elementary particle, in this picture, is a finite “chainmail” whose links are such pairs.</p>
+<p>Chain Theory is an emerging research program of mine that treats this chainmail as all there is. It takes literally John Wheeler’s 1989 proposal, “it from bit,” with finite quantum systems in place of bits, and its single axiom gathers the three clues into eighteen words: <strong>“Nothing exists but finitely many maximally entangled pairs of finite-dimensional systems, some shared, known only by distilling them.”</strong> To distill, in the axiom, means to join two systems into a perfectly entangled pair in a single step. It is the same move that passes entanglement along a quantum network, and it means there is no observer outside the network: to learn about a link is to link to it. In a laboratory this step succeeds only part of the time, but in the theory it is the only thing that ever happens.</p>
+<p>It already appears that many elements of fundamental physics, including parts of both the Standard Model and general relativity, follow from that axiom. The sharpest test is a number. The fine-structure constant in the Thomson limit, α(0), is one of the most precisely measured numbers in all of science, known to about one part in ten billion, yet the Standard Model takes it from experiment. Richard Feynman wrote that “all good theoretical physicists put this number up on their wall and worry about it,” and called it “a magic number that comes to us with no understanding by man.” It is also a number with no visible pattern. A simple value such as the 2&#x2F;3 of Koide’s relation among the lepton masses can be reached by many short formulas, but ten digits of a number like α(0) are far harder to match by accident. Because the Standard Model takes α(0) from experiment, a derivation of it would, almost by definition, draw on physics beyond the Standard Model, and ten measured digits could make α(0) an exquisite probe of that physics. Chain Theory yields an exact candidate for it, the algebraic number <strong>(79 + 48√2 + 42√3 + 3√6)&#x2F;31104</strong>, a weighted count over the 172 measurement records of a single entangled pair, small enough to check by hand. The pair is a qutrit maximally entangled with a qubit, the same object whose changes of basis give the Standard Model gauge group, and I conjecture that this pair is the link from which photons are built, which would make the number α(0). Its inverse is <strong>137.035 999 189 566….</strong> Read the preprint here.</p>
+<p>The standard reference value for α(0) comes from CODATA, the international committee that every four years combines the world’s most precise measurements into one recommended value for each fundamental constant. Its 2022 recommendation for the inverse is 137.035 999 177, with a standard deviation of 21 in the last two digits. The Chain Theory-derived number agrees with the CODATA recommendation in its first ten significant digits and lies 0.60 standard deviations from it, between the two most precise determinations. The experimental measurements still disagree with one another by more than their stated uncertainties, so this comparison is not yet decisive. But the number is now fixed, and new measurements of the electron’s magnetic moment at Northwestern University and of atomic recoil in Berkeley and Paris aim to be up to ten times more precise. If they agree with one another, they will either close in on the derived value or rule it out.</p>
+<p>Beyond α(0), preliminary Chain Theory results range from quantum foundations to cosmology: the Standard Model gauge group as a theorem, and the Born rule, the Lorentz group and the signature of spacetime, three generations of matter, confinement, curvature, and the cosmological term as derivations whose remaining conditions are named in each case. Read the working draft here. Other programs have derived parts of the Standard Model from finite or algebraic inputs, among them braided ribbons, an exceptional Lie group, the division algebras, and noncommutative geometry, but none supplies the value of a coupling constant to within experimental precision. Closed-form expressions for the fine-structure constant, meanwhile, have a long and mostly numerological history. Mine differs in the one respect that matters: the number is a theorem of a stated axiom, its definitions and a few stated readings of them, checked in Lean rather than fitted, and only its identification with α(0) is conjectured. See the Lean proof here and slides here.</p>
+<p>The Chain Theory axiom’s last clause also says which links can be observed directly, the question the third clue raised. The links of the chainmail network come in types labeled by the dimensions of their two ends, and the theory identifies each type with a sector of physics: (2,2) with spacetime, (3,2) with electromagnetism, (3,3) with the strong interaction, (4,2) with the weak interaction, (4,3) with the Yukawa sector, and (4,4) with the Higgs. Read at the level of these types, the axiom’s last clause says that two ends are known only when every consistent relation between them is one that distillation can carry. Classic theorems from the 1960s and 1970s by Størmer, Woronowicz, and Choi show that this holds exactly when the two dimensions multiply to at most six, the same threshold beyond which bound entanglement becomes possible. So only spacetime and electromagnetism can be observed directly by distillation. The other four types are “dark”: their links are just as maximally entangled, but their ends are related in ways no distillation carries, so they are observed only at second order, through two distillations, which the theory identifies at (3,3) with confinement.</p>
+<p>I call this theory “Chain Theory” for three reasons. The first is to draw a contrast with string theory: an elementary particle is a finite chainmail of discrete links, not a continuous string. The second is how the links join. Pairs meet at shared qudits, and each join carries a gauge freedom in how bases are matched across it, much as two links of a physical chain can turn against each other at their join without changing the chain. The third is direction. A distillation passes its basis outward along each link to the far end, so what is known accumulates in a fixed order, each distillation building on those before it, the way a chained ledger grows by linking each new entry to the last.</p>
+<p>The last golden age rebuilt physics from its foundations in three decades. I do not yet claim to have done the same. Chain Theory is new, much of it is still conditional or underdeveloped, and it will benefit from the contributions of many others. But if the clues have been interpreted correctly, the foundations for another golden age, built this time from quantum information, may already be in hand, and what remains is to find out how much of physics they can carry.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/24/EMostaque-2113988412822712534/">https://yaoav.github.io/2026/10/24/EMostaque-2113988412822712534/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/EMostaque/">@EMostaque</a></div><div class="post-share"><div class="social-share" data-image="/images/2113988412822712534-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/25/chenke20266-2114382637884379179/" title="Polymarket 量化交易全过程：从公开成交到无人值守"><img class="cover" src="/images/2114382637884379179-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Polymarket 量化交易全过程：从公开成交到无人值守</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  这篇写给想用数据和 AI 在预测市场上做系统性交易的人。它不走”某人是天才”的叙事，只讲一条可以复制的路径：从公开成交里提出假设，用统计检验把它杀死或留下，最后交给一个设好额度、不需要你逐笔确认的程序去跑。 先讲清它和永续合约那套的区别——直接照抄指标公式，会亏钱。 0 · 三条铁律一、事实是代码算的，不是模型说的。 概率、流动性、结算规则，必须来自可复现的计算。LLM 可以给建议，不能给数字。 二、缺数据就跳过。 字段缺失、规则读不懂、结算源不明——不猜，直接排除。 三、跳过是终局。 同一个样本反复调参直到”通过”，等于自己给自己发奖。  1 · 预测市场的数学：价格就是概率一个二元市场有 YES 和 NO 两种份额，价格在 0 到 1 之间，价格约等于市场隐含概率。以 c 买入 1 份 YES，结算为 YES 得 1 美元，否则得 0。 所以收益是非对称的：买在 0.30，赢了是 +233%，输了是 −100%。没有杠杆、没有强平、没有资金费——但也没有”下一根 K 线”给...</div></div></div></a><a class="pagination-related" href="/2026/10/22/chenke20266-2113293947422544121/" title="扫描 验证 执行 退出 构建一个GROK机器人交易平台"><img class="cover" src="/images/2113293947422544121-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">扫描 验证 执行 退出 构建一个GROK机器人交易平台</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  交易台上最好的BOT，从来不下单。它的唯一工作是说“不”。 大多数人第一次做交易机器人时，都会把所有事塞进一个提示词：找币、检查、买入、卖在高点。前几天可能有点效果，但很快就会买入一个已经死掉的币，然后你完全分不清是提示词哪一步出了问题。 真正的解决办法不是换更聪明的模型，而是把交易拆成一个“交易台”。每笔交易都必须走完四个固定步骤：SCAN（扫描）→ VERIFY（验证）→ EXECUTE（执行）→ EXIT（退出）。每个步骤由不同的角色负责，没有人能跳过，也没有“就这一次”的例外。 在一个正常运转的交易台上，绝大多数任务最终都会以“跳过”结束。扫描器每天能找到几百个交易对，验证环节会免费淘汰掉绝大部分，真正留下来的少数币再根据当前余额决定仓位大小。小交易始终保持小规模，赢的才会复利。 截图里那几笔交易只是结果。真正重要的是背后那套让大部分交易保持小规模、甚至直接跳过的系统。 怎么使用这套框架 打开你的 Grok Bot，把整篇文章贴进去，然后说：  在 &#x2F;work...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">49</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？"><img src="/images/2121082480392564761-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nature：科研人如何选择适合自己的AI工具？"/></a><div class="content"><a class="title" href="/2026/11/13/DrRabbitAI-2121082480392564761/" title="Nature：科研人如何选择适合自己的AI工具？">Nature：科研人如何选择适合自己的AI工具？</a><time datetime="2026-11-13T11:27:25.000Z" title="发表于 2026-11-13 11:27:25">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
