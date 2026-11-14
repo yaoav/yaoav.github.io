@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The future of Box in the agentic era | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="In just the past few years, AI models have gotten unbelievably good at reasoning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The future of Box in the agentic era">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/06/levie-2118429008711102831/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="In just the past few years, AI models have gotten unbelievably good at reasoning">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2118429008711102831-cover.jpg">
+<meta property="article:published_time" content="2026-11-06T03:43:28.000Z">
+<meta property="article:modified_time" content="2026-11-14T11:23:11.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@levie">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2118429008711102831-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The future of Box in the agentic era",
+  "url": "https://yaoav.github.io/2026/11/06/levie-2118429008711102831/",
+  "image": "https://yaoav.github.io/images/2118429008711102831-cover.jpg",
+  "datePublished": "2026-11-06T03:43:28.000Z",
+  "dateModified": "2026-11-14T11:23:11.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/06/levie-2118429008711102831/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The future of Box in the agentic era',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2118429008711102831-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The future of Box in the agentic era</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The future of Box in the agentic era</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-06T03:43:28.000Z" title="发表于 2026-11-06 03:43:28">2026-11-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@levie（Aaron Levie）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2118429008711102831">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>In just the past few years, AI models have gotten unbelievably good at reasoning, logic, multimodal capabilities, tool use, computer use, and deeper domain expertise across nearly every high-value area of knowledge work. And inside the AI labs, there is now the view that we are reaching a form of recursive self-improvement, where AI itself is helping discover and drive research breakthroughs in model training, which means that you get faster and faster progress with every generation.</p>
+<p>Combined, this means that we can finally deploy AI at some of the hardest problems in enterprises. We are no longer in a period where living at the frontier is just having a conversation with an AI assistant and getting a quick answer back, but instead being able to deploy AI agents across highly complex domains in an enterprise and letting the agents go off and work as long as they need to complete the task. As a result, AI agents will increasingly be deployed behind the scenes in nearly every workflow in an enterprise, including areas like automating client onboarding, accelerating drug discovery pipelines, reducing risk in an enterprise by reading every critical contract, analyzing research data to accelerate product development, and much more.</p>
+<p>Now, to do this, AI agents need to know everything about the business they’re being used in. They are inherently trained on either the public internet or privately acquired data sources. What they don’t know about are the unique aspects of your organization. A company’s unique product roadmap, financial decisions that were made in a planning process, contractual terms that they signed with clients, research breakthroughs that are happening somewhere in the organization, and all of the other elements that are living inside of our enterprise data. Critically, that information lives inside of our unstructured data, which represents 90% of the corporate information that companies create, store, and work with.</p>
+<p>For companies to stay competitive in the 21st century, they will need to figure out how they can uniquely apply this context, combined with their people and processes, with these new superintelligent AI systems. We are truly at the dawn of a new era of how industries will operate, and the way we manage and work with our information sits at the very center of this.</p>
+<p>Today, at BoxWorks, we’re making 4 major announcements around the Box platform to change how enterprises work with their unstructured data and AI:</p>
+<p><strong>1) Box Architect, a new way to autonomously build out workflows and management content</strong></p>
+<p>**2) Box Context Retrieval, a new platform capability designed in partnership with NVIDIA to give agents exactly the context they need to do important work</p>
+<ol start="3">
+<li>Box Mount, a new way to give agents a file system to securely work with, in addition to all new MCP capabilities to enable any AI agent to work with enterprise content**</li>
+</ol>
+<p><strong>4) All new threat detection and security capabilities to help protect the flow of data in the enterprise with agents</strong></p>
+<p>Starting with Box Architect. AI is not just about helping us be more productive as individuals, but it can truly change how we run and operate the ongoing workflows in our enterprises. Given the rate of improvements we are seeing with frontier AI, we are now confident that AI can help improve an organization’s processes and workflows far faster than was ever possible before. What if we could take the same frontier intelligence that AI labs are using to develop their own models, drive math and bio breakthroughs, or code the most advanced software in the world, and use this frontier AI to help improve our customers’ workflows in Box?</p>
+<p>Most businesses are held back by their access to the talent and resources to help automate and streamline their workflows. We have far more processes inside of companies than the people and time to help automate that work. And because AI is trained on the broadest sets of knowledge and domain expertise, what if you could actually use AI to not just automate your existing processes, but fundamentally redesign them and reinvent them in a way far better than how they are run today? And taking this even further, what if AI could actually help tune and optimize those workflows and processes over time, just as an industry or technical expert might within your organization?</p>
+<p>This is Box Architect. With Box Architect, enterprises get the full power of frontier AI to autonomously build, test, optimize, and run their content-centric processes. Box Architect effectively acts as an agentic operator of Box’s core content and workflow capabilities – like Box Apps, Automate, Forms, Doc Gen, Agents, and more – to help customers design any content agentic workflow in Box. Along with major updates to our Box Agent to handle much longer-running and more complex work, new Box Automate features for advanced workflows, new Extract optimization capabilities, and Box Apps components to power more comprehensive no-code apps in Box, Architect will help accelerate our customers’ transformation of their content workflows with AI.</p>
+<p>Next up, we’re announcing a new partnership with NVIDIA to help power advanced Context Retrieval in Box. Box’s new Context Retrieval platform capability delivers hybrid search functionality which combines keyword and semantic search to deliver better results for agents, and respects Box user permissions so agents only retrieve what the user is allowed to access. Internal testing shows our new Context Retrieval functionality delivers a 20% improvement in accuracy, a 90% increase in token efficiency, and 4X faster answers, giving customers a secure and governed way to connect AI (both Box Agents, as well as external agents via MCP, CLI, or our direct APIs) to enterprise content that is more accurate, faster, and more cost-effective.</p>
+<p>Coming soon, Box Mount will let AI agents work directly with Box folders in secure computing environments in their sandbox, without the need to manually download, move, or upload files. Agents will be able to read, edit, and create files while keeping Box permissions, security controls, and file syncing in place. Box Mount will also integrate with NVIDIA OpenShell for secure agent operations, DigitalOcean for managed agent sessions, as well as other leading sandbox providers like Daytona, E2B, AWS, Docker, and more. We’re also expanding our MCP capabilities and support within ChatGPT, Copilot, Claude, Grok, Slack, Atlassian, Gemini, Legora, Cursor, Harvey, and any other platform with Box MCP support.</p>
+<p>Finally, major hacks and rogue agents show the reason why enterprises must better protect their crown jewels. We’re doubling down on Box Shield to secure content against emerging cyber threats, AI-accelerated attacks, and agent sprawl. New Box Threat Detection and Box Agent Security enhancements will detect anomalous downloads, sessions, and agent activity; enable adaptive responses like download restrictions, step-up verification, and session termination; and introduce agent security controls including classification-based access, MCP guardrails, threshold-based alerts, and audit trails of agent activity.</p>
+<p>We’re just at the beginning of a new era of how we work with our information, and at Box, we are building the platform to help companies take full advantage of this moment.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/06/levie-2118429008711102831/">https://yaoav.github.io/2026/11/06/levie-2118429008711102831/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/levie/">@levie</a></div><div class="post-share"><div class="social-share" data-image="/images/2118429008711102831-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/06/DrRabbitAI-2118622976379928604/" title="教师们的教学科研AI搭子（第二期）"><img class="cover" src="/images/2118622976379928604-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">教师们的教学科研AI搭子（第二期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 9月份写完第一期以后，我一直在想：第二期写什么呢？ 教师们的教学科研AI搭子（第一期） 这个问题拖了挺久。直到前段时间，我发了一篇关于国自然项目数据的文章，阅读量接近10万。 国自然放榜后，我又动心了：我让Codex整理了25100个获批项目题目 于是，第二期的主题也有了：AI在课题申报中，能帮我们做些什么？ 先说说我自己的经历。过去十多年里，我只侥幸承担过一个教育部项目的一个课题负责人。但是多次申报过国社科和国自然败北。面对很低的中标概率，再想到每次准备申请都要花一两个月，后来就没有再继续申报。 直到今年国自然项目的一个比较大的变化：青年科学基金（C类）新增资助项目12046项，面上项目新增3400项。再加上现在有 AI，检索资料、整理文献、制作图表这些环节，能省下不少时间。我觉得可以再试试了。 今天就和大家分享几个我认为 AI 能帮课题申报提效的场景。 01｜确定选题：先看别人做过什么，再回到自己的研究基础选题这一步，我觉得可以从两个方向找启发。 第一个...</div></div></div></a><a class="pagination-related" href="/2026/11/05/DrRabbitAI-2118196625906811366/" title="教师们的教学科研AI搭子（第一期）"><img class="cover" src="/images/2118196625906811366-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">教师们的教学科研AI搭子（第一期）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家好啊，我是兔老师。 最近，经常有同事问我：“你现在都在用哪些 AI 工具？”“有没有比较适合新手使用的？”“我不懂编程，也不想配置一堆东西，应该从哪一款开始？” “有没有Agent的学习课程，不知道怎么用”。 回头看了一下，我今年使用 AI 的方式确实发生了一个比较明显的变化。前两年，我主要是在使用聊天式的 AI；今年，我开始越来越多地使用 Agent。 我目前主要使用的 Agent 包括 Codex、Claude 和 YILA。三款工具我都在用，只是承担的工作不同。这一期，我先从使用相对简单的 YILA 开始，分享几个它在教师教学科研中的真实使用场景。后面我还会继续写 Codex、Claude 和 WorkBuddy。 另外，如果一个Agent需要你学习课程后，才能使用。那这个Agent不是一个好的产品。相信你看完我的使用案例，你会理解，现在使用Agent不需要复杂的提示词，「说人话」就可以。 01｜普通 AI 和 Agent，到底有什么区别？在我以前的使用方式里，GPT、豆...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">62</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
