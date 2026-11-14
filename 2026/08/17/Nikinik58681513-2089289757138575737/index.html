@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>multiagent 协作问题的初步整理 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近在研究multiagent collaboration, 做了一些调查, 写一篇文章做一些总结, 这应该会是第一篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="multiagent 协作问题的初步整理">
+<meta property="og:url" content="https://yaoav.github.io/2026/08/17/Nikinik58681513-2089289757138575737/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="最近在研究multiagent collaboration, 做了一些调查, 写一篇文章做一些总结, 这应该会是第一篇">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2089289757138575737-cover.jpg">
+<meta property="article:published_time" content="2026-08-17T17:54:29.000Z">
+<meta property="article:modified_time" content="2026-11-14T02:10:02.360Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Nikinik58681513">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2089289757138575737-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "multiagent 协作问题的初步整理",
+  "url": "https://yaoav.github.io/2026/08/17/Nikinik58681513-2089289757138575737/",
+  "image": "https://yaoav.github.io/images/2089289757138575737-cover.jpg",
+  "datePublished": "2026-08-17T17:54:29.000Z",
+  "dateModified": "2026-11-14T02:10:02.360Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/08/17/Nikinik58681513-2089289757138575737/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'multiagent 协作问题的初步整理',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2089289757138575737-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">multiagent 协作问题的初步整理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">multiagent 协作问题的初步整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-08-17T17:54:29.000Z" title="发表于 2026-08-17 17:54:29">2026-08-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Nikinik58681513（Nikiniki）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2089289757138575737">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>最近在研究multiagent collaboration, 做了一些调查, 写一篇文章做一些总结, 这应该会是第一篇</p>
+<p>我们先来做一些定义方面的工作, 方便后续的讨论</p>
+<ul>
+<li>| 层级           | 描述                                  |</li>
+<li>| ———— | ———————————– |</li>
+<li>| 多提示词工作流      | 同一个模型分别扮演 planner, critic, reviewer |</li>
+<li>| 中央编排的专家集合    | 一个编排器动态选择模型, 工具或subagent            |</li>
+<li>| 分布式协作系统      | 各 agent 拥有不同信息, 状态, 工具或权限, 没有单一全知节点 |</li>
+<li>| 开放式 agent 生态 | 成员, 目标, 联盟, 角色和制度都可能动态变化            |</li>
+</ul>
+<p>表格中前两类问题更多的属于<strong>复合推理 &#x2F; 工作流优化</strong>, 2026 年的两篇论文讨论了这类问题.</p>
+<p>**OneFlow **发现, 在七个 benchmark 上, 使用同一基础模型构建的 multiagent workflow, 通常可以由一个 agent 通过多轮上下文模拟, 并且因为 KV cache 复用而成本更低[1].</p>
+<p>另一篇文章在匹配 thinking-token 上限后发现, 在两个 multi-hop reasoning benchmark, 三个模型家族和五种 MAS 架构上, 单 agent 能够匹配或超过多 agent. 这说明至少在这类文本推理任务中, 许多 multiagent 收益可能主要来自额外的推理计算量[2].</p>
+<p>所以我们大致能推导出一个结论, 一个multiagent workflow要成立, 至少得证明它利用了某种<strong>单 agent 没有的条件</strong>, 譬如: 不同模型, 工具或真实能力; 不同的私有信息或上下文; 不同的权限和信任域; 必须并行执行的环境动作; 不同所有者, 目标或激励; 超出单 agent 可承载范围的长期状态等等, 否则它大概率只是一个更昂贵的单 agent workflow.</p>
+<p>到了第三, 第四类问题, 我们就开始涉及不可消除的协调问题.</p>
+<p>ACL 2026 的** SILO-BENCH **刻意取消了预定义角色, 让 agent 在信息孤岛下自由协作, 每个 agent 只持有一部分真相, 要求他们通过沟通拼出完整信息, 结果是agent 的确在积极沟通, 但是沟通并没有真正把消息转化为正确的分布式推理, 而且随着任务和 agent 数量增加, 性能急剧下降, 在最复杂的一类任务中, agent 数量达到 50 及以上时, 成功率甚至降到了零, 他们把这种情况称作 Communication-Reasoning Gap[7].</p>
+<p>SIGDIAL 2026 的具身协作结果也很有意思, 在一个共享的环境中, 做了一组对比实验, 对照组agent之间静默协作, 实验组则可以互相对话, 结果是, 实验组的两个 agent 的动作冲突下降了约 40-90 个百分点, 但最终任务成功率反而低于静默协作[8]. 这里我举个例子你们大概就懂为什么任务完成率更低了😅:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a: 我要搬桌子.</span><br><span class="line">b: 收到.</span><br><span class="line">a: 你确定?</span><br><span class="line">b: 确定.</span><br><span class="line">a: 那我开始.</span><br><span class="line">b: 好的.</span><br></pre></td></tr></table></figure>
+
+<p>这两篇论文都主要让 agent 通过自然语言沟通, 但自然语言真的是最佳协议吗? 对于人类来说, 自然语言是必须的, 因为我们的大脑无法直接共享状态. (所以我现在越来越怀疑, <strong>很多论文其实是在研究”多个 ChatGPT 如何聊天”, 而不是”多个 agent 如何协作”</strong>).</p>
+<p>ICML 2026 的** Multi-Agent Teams Hold Experts Back** 研究的则是没有固定工作流的自由协作团队. 结果是即使明确告诉团队谁是真正的专家, 团队仍然常常无法正确利用专家, 团队倾向于综合所有人的意见, 对正确专家和错误成员给出的方案进行折中, agent 越多, 这种平均化越严重, 没错, 就像你想的那样, 无论你提出了一个多么愚蠢的想法, LLM大概率会先告诉你, 你说的对!</p>
+<p>有趣的一点是, 这种倾向也能降低恶意 agent 的影响, 因此存在”利用专家”与”抵抗恶意节点”之间的真实权衡[3].</p>
+<p>**Relational Priors as Convergence Pressure **也得出相似观察, 让 agent 彼此更加信任, 合作和友好, 会增加一致性, 但不一定增加客观正确性[4].</p>
+<p>当agent数量进一步增加, 连简单的一致性甚至都无法维持, **When 20 Agents Fail to Sort **在 MAS-BENCH 中让每个 agent 只看到数组的一部分, 大家协作完成全局排序, 这个任务对单机算法而言极其简单, 但 agent 数量增加后, 共享状态不一致, 通信约定不一致, 多个 agent 重复提交, 无法一致判断任务是否已经结束, 种种问题涌现出来[5], 他们还提出了一种叫 CAMOC 的轻量级协调机制, 尝试解决这类问题, 这里不再展开有兴趣的朋友可以简单了解一下.</p>
+<p>DPBench 还发现, 在顺序决策中表现正常的模型, 一旦进入同时竞争资源的场景, 默认设置下死锁率上限为 90%, 在特定 minimal-prompt 设置下则达到 100%. ok, 允许自然语言交流也不一定解决问题(我真的什么也没有影射).[6]</p>
+<p>这些结果意味着, 真正的 multiagent 运行时必须重新面对传统分布式系统中的协调问题. 在工程系统中, 这往往会具体表现为提交协议, 资源排序, 锁与租约, 状态版本, 幂等操作和终止检测等机制.</p>
+<p>这些问题不能靠 prompt 里泛泛地说一句”请避免重复工作”来解决. 无论规则最终被编码在运行时还是 prompt 中, 它都必须成为一套明确, 可执行, 可验证的协议, 而不是行为建议.</p>
+<p>并且最难绷的其实是在这个 multiagent 系统中, 我们甚至很难找出是谁导致了失败. fine, 幸好agent不需要在项目复盘会上互相甩锅😼（注：这个表情其实是在我测试nanobot的多session通信功能时发现的，nanobot拟补了橘猫里没有龙傲天的遗憾， 在x上这个表情并那么传神）.</p>
+<p><img src="/images/HP6lR_SbsAArNFM.png" alt="HP6lR_SbsAArNFM"></p>
+<p>好了, 看到这里我觉得你已经累了, 暂时先聊到这里, 我会尽快找时间更新🤔</p>
+<p>参考文献</p>
+<p>[1] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2601.12307">https://arxiv.org/abs/2601.12307</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.02460">https://arxiv.org/abs/2604.02460</a></p>
+<p>[3] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2602.01011">https://arxiv.org/abs/2602.01011</a></p>
+<p>[4] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.03239">https://arxiv.org/abs/2608.03239</a></p>
+<p>[5] <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-acl.1698">https://aclanthology.org/2026.findings-acl.1698</a></p>
+<p>[6] <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2602.13255">https://arxiv.org/abs/2602.13255</a></p>
+<p>[7] <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1354.pdf">https://aclanthology.org/2026.acl-long.1354.pdf</a></p>
+<p>[8] <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.sigdial-1.21">https://aclanthology.org/2026.sigdial-1.21</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/08/17/Nikinik58681513-2089289757138575737/">https://yaoav.github.io/2026/08/17/Nikinik58681513-2089289757138575737/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Nikinik58681513/">@Nikinik58681513</a></div><div class="post-share"><div class="social-share" data-image="/images/2089289757138575737-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/08/20/chenke20266-2090130749768786050/" title="Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)"><img class="cover" src="/images/2090130749768786050-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Are you unsure whether to read this article? Well, take a look below: **I don’t think you have any more questions XD**@bot  is something that will literally change your life, and this step-by-step guide will show you exactly how to do it! **before the alpha -  subscribe to my substack for more fresh alpha - **https://substack.com/@0xcodila According to the official Grok Bot page, Bots can operate from their own computers, sign in to your too...</div></div></div></a><a class="pagination-related" href="/2026/05/25/Mikocrypto11-2058857976786764062/" title="Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略"><img class="cover" src="/images/2058857976786764062-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Hermes + Polymarket：如何搭建一个能自学习的 BTC 交易代理，从 100 美元小资金开始跑自动化策略</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Mikocrypto11（0x_Miko） 的长文，原文链接，版权归原作者所有。  2025–2026 年，Polymarket 上的交易 bot 已经创造了超过 6000 万美元利润。 其中 77%，来自同一个市场： Crypto UP&#x2F;DOWN 更具体一点，是 BTC Up&#x2F;Down 这类短周期加密市场。  这篇文章讲的不是简单的“AI 自动交易”概念，也不是让你盲目跟单某个 bot。  它真正想拆的是：  为什么 BTC 5 分钟 Up&#x2F;Down 市场会长期存在结构性低效？ 这些 bot 到底在吃什么 edge？ 以及如何用 Hermes + Atomic + Claude Opus + Polymarket CLOB v2，搭建一个可以持续复盘、持续调整参数、具备自学习能力的 BTC 交易代理。   01｜机会在哪里？为什么是 BTC Up&#x2F;Down 市场？Polymarket 上的 BTC 5 分钟 Up&#x2F;Down 市场，是预测市场里结构性低效最明显的板块之一，大多数人交易这类市场，依靠的是情绪...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."><img src="/images/2121267017667809293-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory."/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121267017667809293/" title="We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.">We Paid for the Same Mistake 9 Times. So I Built My Construction Crew a Memory.</a><time datetime="2026-11-13T23:40:42.000Z" title="发表于 2026-11-13 23:40:42">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读"><img src="/images/2121244195075874835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="薄刃入林：黄仁勋八字解读"/></a><div class="content"><a class="title" href="/2026/11/13/lifesinger-2121244195075874835/" title="薄刃入林：黄仁勋八字解读">薄刃入林：黄仁勋八字解读</a><time datetime="2026-11-13T22:10:01.000Z" title="发表于 2026-11-13 22:10:01">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img src="/images/2121182184207700335-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="矩阵化运营公众号：0-1 全思路拆解"/></a><div class="content"><a class="title" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解">矩阵化运营公众号：0-1 全思路拆解</a><time datetime="2026-11-13T18:03:36.000Z" title="发表于 2026-11-13 18:03:36">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"><img src="/images/2121155117076349135-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="县城包工头用AI管工地的3个月实录，附带保姆级全流程。"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121155117076349135/" title="县城包工头用AI管工地的3个月实录，附带保姆级全流程。">县城包工头用AI管工地的3个月实录，附带保姆级全流程。</a><time datetime="2026-11-13T16:16:03.000Z" title="发表于 2026-11-13 16:16:03">2026-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意"><img src="/images/2121120188187971938-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年普通人可做的二道贩子信息差生意"/></a><div class="content"><a class="title" href="/2026/11/13/Kainative-2121120188187971938/" title="2026年普通人可做的二道贩子信息差生意">2026年普通人可做的二道贩子信息差生意</a><time datetime="2026-11-13T13:57:15.000Z" title="发表于 2026-11-13 13:57:15">2026-11-13</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
