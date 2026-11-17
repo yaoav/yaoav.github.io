@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Databricks &amp; the Future of the Firm  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="So many aspects of our lives are going to change over the next twenty years. And">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Databricks &amp; the Future of the Firm ">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/27/xparamt-2115083713512091917/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="So many aspects of our lives are going to change over the next twenty years. And">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2115083713512091917-cover.jpg">
+<meta property="article:published_time" content="2026-10-27T22:10:28.000Z">
+<meta property="article:modified_time" content="2026-11-18T04:41:38.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@xparamt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2115083713512091917-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Databricks & the Future of the Firm ",
+  "url": "https://yaoav.github.io/2026/10/27/xparamt-2115083713512091917/",
+  "image": "https://yaoav.github.io/images/2115083713512091917-cover.jpg",
+  "datePublished": "2026-10-27T22:10:28.000Z",
+  "dateModified": "2026-11-18T04:41:38.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/27/xparamt-2115083713512091917/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Databricks & the Future of the Firm ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">244</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">127</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2115083713512091917-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Databricks &amp; the Future of the Firm </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Databricks &amp; the Future of the Firm </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-27T22:10:28.000Z" title="发表于 2026-10-27 22:10:28">2026-10-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@xparamt（Param）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2115083713512091917">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>So many aspects of our lives are going to change over the next twenty years. And one that’s easily in the top five is the question: “What do you do at work all day?”</p>
+<p>Two massive breakthroughs are on the cusp of happening around this question. The first one is <strong>agentic automation</strong>: “describe a task that we currently do, and automate it.” The second one is <strong>employee empowerment to take initiative</strong>. People closest to the problem can increasingly investigate and take action on opportunities without waiting for information and authority to travel through layers of hierarchy.</p>
+<p>Both of these things are radical changes - for the better! - to what everyone does all day. IF, and this is a big if - organizations are actually able to evolve into this new way of working. A shockingly large component of <strong>“what is someone’s day to day job”</strong> is constrained by the <strong>system of record and decision-making used by their employer</strong>. And this in itself is constrained by <strong>the database technology they use, and what it makes possible</strong>. Not many people think about this second part.</p>
+<p>Enter Databricks. Outside of people in their sphere of influence (who know them very well), Databricks might be the most under the radar story in Silicon Valley, even though they’ve now surpassed a $7 billion run rate, growing 80% y&#x2F;y. You’ve certainly heard of them, but not that many people actually know what Databricks does, other than being 1) a data company, and 2) important for agents, although perhaps not sure why.</p>
+<p>The Databricks story is a wild sequence of events, and a serendipitous example of a product whose time has come. Three years ago, every interaction on Databricks involved a human. Today, the company is seeing more queries from agents than people, and more than 17 million databases are launched by agents every day. This trend will continue.</p>
+<p>There are four parts to this story:</p>
+<ol>
+<li><p>What does Databricks actually do? What is a “Lakehouse” and a “Lakebase”, those words you may have seen on billboards, and why are they an architectural breakthrough that arrived just in time?</p>
+</li>
+<li><p>What is a “system of record”, and why do agents need a new kind of SoR if they’re gonna work inside real companies, make real decisions, and contribute to the company’s knowledge base?</p>
+</li>
+<li><p>What is a firm in the first place? How does that change, if agents outnumber people 1000:1? How do firms differentiate themselves, and create value?</p>
+</li>
+<li><p>What are people’s jobs all day, in this new world? The promise of AI at work is often advertised as, “Ordinary people now have software engineer powers.” But the long-term impact isn’t necessarily “everyone is an engineer.” It might be closer to, “Everyone is a manager.”</p>
+</li>
+</ol>
+<p>This is, perhaps, the highest-stakes piece of all. We’re witnessing in real time the great undoing of the management style that built the 20th century, as chronicled in James Burnham’s famous work The Managerial Revolution. Eighty five years ago, Burnham described how information technology and organizational complexity was creating a corporate operating model, where a small class of professional managers centralized the decision-making inside of companies. Today, thanks to a new wave of technology, the craft practitioners at the front lines are regaining responsibility again - and we’re all better for it.</p>
+<p>This is Databricks, and why it will power the future of the firm.</p>
+<h2 id="From-Spark-to-Agents"><a href="#From-Spark-to-Agents" class="headerlink" title="From Spark to Agents"></a>From Spark to Agents</h2><p>Databricks has recently been described as “a data company that caught the AI wave.” But the company was built by AI researchers a decade before the wave arrived. The business is four technology S-curves stacked over nearly two decades – Spark, Lakehouse, Lakebase, and now agents – each of which created the innovation window for the next. To properly appreciate this sequence of unlocking potential, we have to take a minute and talk about database technology.</p>
+<p><img src="/images/HVpEd_8bEAMwb9l.jpg" alt="HVpEd_8bEAMwb9l"></p>
+<p>In 2009, Ali Ghodsi was a visiting researcher at UC Berkeley watching internet companies use enormous datasets to predict what people would click, buy, and watch. This was a time when people talked about “Big Data” a lot. The leading framework was Hadoop, which companies like Yahoo, Facebook, Twitter, and LinkedIn used to process data workloads in parallel across thousands of cheap, commodity servers. Before Hadoop, the standard way to process larger workloads was to buy a bigger machine from vendors like Oracle or IBM that cost millions of dollars each, so Hadoop was an attractive alternative.</p>
+<p>Hadoop’s critical flaw was that each round of a computation saved its results to disk before the next could begin. That made work easier to recover when one of the cluster’s cheap machines failed, which was a sensible choice. But it was painfully slow for iterative workloads like machine learning, where you make predictions, measure the error, update a model, and then repeat. Hadoop treated each round as a new job and reloaded the same data from disk every time, so the cluster spent minutes moving data for every few seconds of improving the model.</p>
+<p>This problem inspired Matei Zaharia, a PhD student at Berkeley, to write the first version of Apache Spark. Spark built on Hadoop’s innovation of spreading data processing work across cheap machines, but let applications keep frequently reused data in the servers’ much faster memory between rounds instead of loading it from disk each time – without giving up fault tolerance. That made these repetitive workloads up to ten times faster. The lab open-sourced it in 2010, and three years later, Ali, Matei, and five of their fellow researchers founded Databricks to abstract away the complexity of running the distributed infrastructure Spark required – the clusters, the scaling, the security – behind a single platform for the enterprise.</p>
+<p>Spark sped up data processing, but where that data lived was another problem. Enterprise data in that era occupied two separate worlds. Data warehouses held the structured, trustworthy records that let analysts ask questions of them in SQL and powered every dashboard and quarterly report. Data lakes provided cheap storage for everything else, like documents, images, recordings, and logs. Data lakes were cheap, so teams dumped everything into them; but nothing was checked or structured on the way in. Even though a vast ecosystem of AI open-source tools like TensorFlow and PyTorch grew around the data lake, it was hard to get value from a pile of data you couldn’t trust, which earned them the nickname “data swamps.”</p>
+<p>Both systems solved a problem, but they created a divide. Engineers and data scientists lived in the lake with Python while analysts lived in the warehouse with SQL. Whenever one side needed the other’s data, someone had to build a pipeline to move it. This left the company with lots of copies, pipelines, permissions, and conflicting definitions. But in the late 2010s, Databricks, Uber, and Netflix each landed on the same fix independently. Their projects (Delta Lake, Hudi, and Iceberg) added a table layer over the files in the lake, giving them warehouse-like guarantees such as all-or-nothing updates, schema management, and versioned history. Instead of moving the data into a separate warehouse for reliability and performance, a company could now run warehouse-style workloads on the same storage where the data already lived. It was the breakthrough that made a new architecture possible.</p>
+<p>In 2020, Databricks invented the “lakehouse” by merging the data lake and the data warehouse. It combined the cheap, flexible storage of the data lake with the strict reliability and fast query performance of a data warehouse, then made warehouse-grade SQL and machine learning first-class workloads on the same foundation. The cheap storage that held everything became trustworthy enough to serve as the data foundation that engineers, data scientists, and data analysts could finally share. “The best data warehouse is a lakehouse,” went the tagline, and customers seemed to agree. Today, Databricks’ Lakehouse runs at a more than $1.5 billion revenue run-rate, growing over 100% year over year.</p>
+<p>Amazon CTO Werner Vogels made the case from the customer’s side in a January 2020 blog post. “If you wanted to combine all of this data in a traditional data warehouse without a data lake, it would require a lot of data preparation and export, transform, and load (ETL),” he explains. “You would have to make trade-offs on what to lose and continually change the structure of a rigid system.” Data lakes let you import data in any format, eliminating these trade-offs. The lake was also a powerful foundation for machine learning and AI, which, Vogels wrote, “thrive on large, diverse datasets.”</p>
+<p><img src="/images/HVpEiL1boAEiGPx.jpg" alt="HVpEiL1boAEiGPx"></p>
+<p>One divide remained. The lakehouse unified the data a company analyzes, but not the data its applications run on. The operational database, which manages real-time transactions for day-to-day business operations, like processing payments or user logins, was still stitched to the lakehouse by a web of fragile pipelines. Compute and storage remained bundled in one monolithic box, and data was trapped in proprietary formats that made migrations one of the scariest technical projects in any organization.</p>
+<p>So in 2025, Databricks bought Neon, a serverless Postgres company whose databases were already being created mostly by AI agents, and which represented a new architectural category of databases, called lakebase (inspiring Databricks to call the resulting product that integrated Neon into Databricks “Lakebase”). Just as the lakehouse rebuilt the warehouse on top of the data lake, Lakebase applies the same idea to the operational database. It separates storage from compute so data can be stored cheaply in the data lake while compute scales up or down with demand. And because operational databases and the lakehouse share the same underlying storage, database changes automatically become available to analysts, engineers, and agents, without a web of pipelines to build and maintain. Databricks calls this unification of transactions and analytics LTAP, for Lake Transaction&#x2F;Analytical Processing.</p>
+<p><img src="/images/HVpEq3kbcAAPQb7.jpg" alt="HVpEq3kbcAAPQb7"></p>
+<p>This separation makes the database behave more like code. Even petabyte-scale databases can be duplicated in seconds because Lakebase only copies the changes. This lets an agent create an isolated branch, experiment on it, and throw it away when it’s done – a consideration even Databricks didn’t fully appreciate until recently. Lakebase launched last year and has already crossed a $100 million revenue run rate, and agents are its most prolific users. “We think that is probably going to be a bigger market in the long run than the existing database market,” Ali says.</p>
+<p>This technological unlock has come just in time. For decades, software in a company was built by a small group of engineers and used by everyone else. We are moving to a world where a person declares the outcome they want and the software figures out how to achieve it. Instead of thousands of employees reading and writing from a handful of databases managed by a central team, the company will have thousands of databases that millions of agents read and write to.</p>
+<h2 id="A-System-of-Record-for-Agents"><a href="#A-System-of-Record-for-Agents" class="headerlink" title="A System of Record for Agents"></a>A System of Record for Agents</h2><p><img src="/images/HVpE0KFbkAAz45s.jpg" alt="HVpE0KFbkAAz45s"></p>
+<p>In June, Ali stood in front of ~30,000 people at the company’s Data + AI Summit and asked the room to raise their hands if artificial general intelligence had arrived. He counted maybe ten percent.</p>
+<p>“We believe AGI is already here,” he told them, pointing out that today’s frontier models can already solve more than half the questions on Humanity’s Last Exam – 2,500 questions, written by experts in more than a hundred fields, believed to be too hard for any AI to answer.</p>
+<p>When ChatGPT came out in 2022, it could handle coding tasks that take a person about thirty seconds. Today’s frontier agents complete coding tasks that take a skilled engineer a full work day. Researchers at METR, an independent evaluation lab, have tracked the length of a task an agent can finish on its own across models going back to 2019, and it has doubled roughly every seven months. Recently, progress has been even faster, with similar trends beyond coding. If it holds through the early 2030s, agents will be capable of doing tasks that would take a human years.</p>
+<p><img src="/images/HVpE8lXbwAAGvxU.jpg" alt="HVpE8lXbwAAGvxU"></p>
+<p>Yet, inside most companies today, AI still isn’t trusted to reliably update records in Salesforce.</p>
+<p>“AI does not have an intelligence problem,” Ali explains. “It has a context problem.” Even the smartest human would be all but useless without access to the company’s data, permission to act, feedback, or the knowledge in other employees’ heads. Ali’s answer is what he calls a “system of record for agents.”</p>
+<p>Maybe you’ve seen a clip of Palantir CEO Alex Karp talking about ontology. “All of the value in the market is going to go to chips and what we call ontology,” he posits. “The ontology allows you to take an LLM, use it, refine it, and impose it on your enterprise.” What that means in practice is usually left as an exercise for the listener.</p>
+<p>Every company has an ontology – a working model of what exists, how those things relate, what its words mean, and which source governs when two disagree. Parts of it live in databases, dashboards, policies, and documents. But much of it lives only in the heads of experienced employees. It’s also never finished. Contracts change, workarounds become processes, exceptions become rules, and the official record drifts away from how the work is actually done. The same is true of who decides what and of remembering which decisions were right – authority and evaluation are just as unwritten as ontology. People compensate for all of it almost invisibly. It’s the job of the VP of Sales to know that the biggest committed deal has stalled because the champion is quietly interviewing elsewhere, that one rep’s “90%” really means 50% – and to cut the forecast before it reaches the CEO.</p>
+<p>For agents to act autonomously, much of the ontology, authority, and evaluation that currently lives in people’s heads will have to move into the firm’s system of record. Databricks is betting the lakehouse is the natural home for it because that’s where the rest of the company’s data is stored and governed. “The lakehouse has become the system of record nowadays,” Ali says. “I call it SORA – the System of Record for Agents.”</p>
+<p>Employees can interact with this system of record through Genie, the natural-language interface Databricks launched in 2024 that lets anyone in the company ask questions of its data and, increasingly, build agents on top of it. Underneath, the record has to span the whole firm and continuously answer four questions, each of which Databricks is working on:</p>
+<p>What is true? Lakehouse and Lakebase already hold the state.</p>
+<p>What does it mean? Instead of letting AI loop through all the data in a company hunting for answers every time someone asks a question, Databricks’ Genie Ontology continuously builds a graph of what the organization knows, like how revenue is calculated or what was discussed in the transcript of last week’s standup. An algorithm the engineers dubbed OntoRank (a nod to Google’s PageRank) ranks which knowledge is authoritative by weighing attributes like who created a definition, how widely it’s used, and how recently it changed. In Databricks’ testing, grounding an agent in the company’s ontology raised the accuracy of answers from about 50% to 84.5%.</p>
+<p>What is allowed? The old access model of a login for every employee held up when every worker was human, but it breaks when employees are spinning up hundreds of agents a day. “You can’t grant access to each proprietary, siloed database to your agents,” Ali explains. Databricks’ Unity Gateway gives every model, agent, and AI tool in the company an identity, a budget, and guardrails, and traces log every action so the company can see what its AI systems are doing, what data they access, and how much they cost.</p>
+<p>Did it work? Databricks gives companies two ways to build agents. Business teams build theirs in Genie, turning a prompt into a shareable agent that reasons over the company’s data and, increasingly, takes action in applications like Slack or Salesforce. Engineers build more customized agents in Agent Bricks, Databricks’ developer platform for production AI agents. Either way, Databricks lets teams write their own exams – the acceptable results and the mistakes that cannot be made – and gives them tools to optimize each agent against the company’s definition of good for a given task, which is how AI becomes a loop.</p>
+<p><img src="/images/HVpFAW9aIAAe1cx.jpg" alt="HVpFAW9aIAAe1cx"></p>
+<p>Every platform shift in enterprise computing has created a new fight over the system of record. IBM dominated the mainframe era. Oracle and SAP became foundations of the client-server enterprise, while Salesforce, Workday, and ServiceNow built the SaaS systems of record for sales, HR, and IT. Agents are the next shift.</p>
+<p>But which vendor wins is a smaller question than how agents will change the firm itself.</p>
+<h2 id="The-Nature-of-the-Firm"><a href="#The-Nature-of-the-Firm" class="headerlink" title="The Nature of the Firm"></a>The Nature of the Firm</h2><p>In his 1937 article “The Nature of the Firm,” economist Ronald Coase asked why firms exist at all. If markets can coordinate activity through prices and contracts, why bring people together inside companies and subject their work to managerial direction?</p>
+<p>His answer came down to transaction costs. Finding the right person, negotiating what needs to be done at what price, and monitoring it all take time and money. A firm replaces some of those repeated market transactions with a more open-ended arrangement in which managers direct resources within agreed limits. But organizing work inside a firm is not free either. As a company grows, more information has to travel through more people, and eventually, the cost of organizing the next transaction internally costs as much as buying it from the market. In Coase’s account, the firm expands until those two costs meet.</p>
+<p>Forty years later, Herbert Simon – one of the few people to win both the Nobel Prize and the Turing Award – observed that centralizing the memory of a business decentralized its decisions. A shared computer record, he wrote, “allows each of the decentralized decision points to take actions independently” because the system automatically reconciles those actions against the shared record.</p>
+<p>For an airline, a ticket agent in Boston didn’t have to call every other ticket agent before selling the last seat to Chicago. She consulted the record, and when she sold the seat, the record changed for everyone. Centralized state made decentralized action safer because people could coordinate with the record instead of with each other.</p>
+<p>The relational database extended this principle across the company. Work that once required reports, meetings, and managerial handoffs became a query against the shared record, which let the company coordinate more products, locations, people, and transactions without adding management at the same rate. By the 1990s, the internet let the outside world write to the firm’s record, and an online marketplace could coordinate buyers, sellers, inventory, and payments among millions of strangers.</p>
+<p>Because both external and internal transaction costs fell, the database era did not make firms uniformly larger or smaller. Instead, it allowed a wider range of firms to exist. Large firms became capable of managing far more complexity, while small firms could rent or buy capabilities that once required entire departments.</p>
+<p>The same is likely to be true of AI. Inside the firm, agents can reduce coordination costs by automating reporting, search, and routine tasks. Outside it, they can help find and evaluate vendors, negotiate routine terms, and monitor the results. Like the database before it, AI will raise the complexity ceiling of the businesses and markets that can exist. But its more consequential effect may be how it changes the shape of the firm.</p>
+<p>The typical firm of the twentieth century was pyramid-shaped because hierarchy was its information processing system. Facts moved up through reports and meetings, decisions moved back down, and the map of information flow mirrored the org chart. Management decided what data was worth gathering or sharing, which meant the company’s view of itself was only as good as what its managers had chosen to collect.</p>
+<p>Databases changed this structure, but only partially. A shared record allowed people to access information directly and act more independently, but usually within procedures that someone else had already designed. For much of the computer era, a relatively small group of managers, operations teams, and engineers defined the company’s schemas, metrics, applications, and workflows – and far more employees used those systems than helped design them.</p>
+<p>This constrained not only what people could do, but what the organization could know. For example, a support rep who hears the same complaint several times a week knows something the company doesn’t if her manager doesn’t write up a report that captures it. And fixing the problem is another thing entirely.</p>
+<p>The technical barriers to both – knowing and doing – are now falling at once.</p>
+<p>As Andrej Karpathy put it in 2023, “The hottest new programming language is English.” Natural-language interfaces allow more domain experts to interrogate a company’s data without waiting for people who know SQL or Python to anticipate or answer every question. At Novo Nordisk, a century-old global healthcare company, scientists used to wait on data engineers to write their queries. Now they ask Genie, “show me all of our obesity data,” and it pulls the relevant trials, insights, and visualizations instantly.</p>
+<p>And within defined permissions, employees are empowered to create solutions that save hours or even days of work. At the electric vehicle manufacturer Rivian, a finance analyst with no SQL experience used Genie to build a revenue dashboard for the CFO, and a supply chain analyst built an app to track inbound inventory shipments.</p>
+<p>This doesn’t mean everyone has access to all of the firm’s data or resources without approval. Shared ontology, permissions, and accountability become more important as work becomes more distributed. The system of record centralizes state and guardrails while decentralizing who can ask questions, design workflows, and act.</p>
+<p>In March, Jack Dorsey wrote a manifesto titled “From Hierarchy to Intelligence” describing how his company Block is beginning to test an extreme version of this idea. “For the first time,” he writes, “a system can maintain a continuously updated model of an entire business and use it to coordinate work in ways that previously required humans relaying information through layers of management.”</p>
+<p>Ali’s “system of record for agents” is similar to what Jack calls the “world model” of the company – a continuously updated representation of the organization’s operations, decisions, capabilities, and priorities. People at the edges of the company ground the model in reality, while the model supplies the shared context needed to act. “People reach into places the model can’t go yet.” Dorsey explains. “They sense things the model can’t perceive: intuition, opinionated direction, cultural context, trust dynamics, the feeling in a room. They make the calls the model shouldn’t make on its own, especially ethical decisions, novel situations, and high-stakes moments where the cost of being wrong is existential.” The result is a firm that needs fewer layers of management to coordinate it and gives leaders greater visibility into the work, even as it becomes more distributed.</p>
+<p>Databricks already provides some of the underlying infrastructure for Block. It manages and governs petabytes of Block’s data across Square, Cash App, and TIDAL, and Block used Databricks to ground its AI coding assistant, goose, in the company’s context.</p>
+<p>For Dorsey, the competitive case for this new architecture is speed. “Companies move fast or slow based on information flow,” he argues. “Hierarchy and middle management impede information flow.”</p>
+<p>Ali agrees with Dorsey directionally, but with one distinction. “I agree philosophically with Jack Dorsey,” he says. “The question is does that apply to the org chart of humans too?” People conflate two things, he argues: the org chart and the way information moves through the company. “Ten, twenty years ago, these were the same thing.” The only way to learn what was happening was to ask your people, who asked theirs, up and down the tree – but that’s no longer true. “Genie pretty much answers any question I have in any meeting about anything,” he adds. The firm will still need managers, just fewer information routers. Developing people, helping teams decide what’s important, and noticing when someone is unhappy still require human attention.</p>
+<p>So while the two disagree about how much hierarchy will disappear, both see AI taking over the information-routing work that gave managers immense power over the twentieth-century firm, as companies grew too complex to run without them.</p>
+<h2 id="The-Second-Managerial-Revolution"><a href="#The-Second-Managerial-Revolution" class="headerlink" title="The Second Managerial Revolution"></a>The Second Managerial Revolution</h2><p>Eighty five years ago, on the heels of the Great Depression, James Burnham wrote a book called The Managerial Revolution which foresaw a great change in how businesses worked, and even how capitalism itself worked. Coming out of the Depression, one of the prevailing trendy attitudes was that entrepreneurial capitalism had run its course as an economic trend, and some new system was bound to replace it. Socialist collectives were one trendy proposal at the time, nationalization was another.</p>
+<p>Burnham understood what was going on. He articulated a third kind of thing, not just a corporate structure but an entirely new kind of social order, called the “managerial society.” In this system, the decisive ruling class would be neither the traditional capitalist owners nor the workers, but professional managers, planners, bureaucrats, and executives who operate large corporations and states.</p>
+<p>Modern institutions, he believed, were too technically complex to be directed personally by individual capitalists. Since no CEO can know everything happening inside a company with a hundred thousand employees, control would gradually migrate from owners and domain experts to administrators.</p>
+<p>In the second half of the twentieth century, Managerialism scored a near-complete victory. “Most of the executives at Fortune 500 companies are not domain experts at whatever the company does, and they’re certainly not the founders of those companies,” Marc Andreessen comments. “They’re professional managers, and in fact, over the course of their careers, they’ll probably manage many different kinds of businesses – they might work in healthcare for a while, then financial services, and then they’ll work in something else.”</p>
+<p>But that victory is exhausting itself. The scalability and professional reliability of Burnham’s Managerial Class came at the expense of speed and adaptability, particularly in the face of changing technology.</p>
+<p>Maybe, Marc suggests, applying agents - on top of a rigorous foundation like Databricks - creates a third model that can offer the best of both worlds. It helps preserve the founder’s vitality and adaptability, while refactoring the managerial work required to scale. Agents will put this way of operating within reach of more founders by automating some of the information routing and coordination work that made the managerial layer necessary, while the firm’s system of record gives the people at the edges the context and authority to act.</p>
+<p>Elon Musk takes Marc’s idea a step further. Earlier this year, he predicted that companies with “humans in the loop” will lose. Keeping humans in the loop in the age of AI, he argues, will be like using a spreadsheet that requires a person to calculate some of its cells.</p>
+<p>Elon may be right about the eventual destination – nobody knows how far away the fully autonomous company is, and the forecasts range from years to never. But until then, the irony is that the decline of managerialism may look more like everyone becoming a manager. Not everyone will have direct reports, but more people will be specifying work, delegating execution, inspecting results, and updating the process. The second managerial revolution is not so much the death of management as it is the end of the professional managerial class’s monopoly on it.</p>
+<p>Software engineers are feeling this acutely today, as the job shifts from artisanally writing code to managing a team of coding agents. An engineer’s day increasingly looks like a manager’s: scope the problem, break it into tasks, delegate them to agents working in parallel, then review the pull requests that come back – approving some and sending others back with notes. As agents become capable across more domains, more knowledge workers will make a similar shift: from performing every step themselves to specifying, delegating, and judging the work. The Novo Nordisk scientists and Rivian supply chain analysts are already directing agents with Genie to do work that used to require a team of engineers or data scientists, freeing those teams to focus on their most strategic work.</p>
+<p>This is good news for human productivity and salaries because execution and judgment are economic complements: when AI reduces the cost of routine execution, demand rises for the judgment that directs it.</p>
+<p>The mathematician Alfred North Whitehead observed a century ago: “Civilization advances by extending the number of important operations which we can perform without thinking of them.” The firm advances the same way, becoming more autonomous one loop at a time. Every time a person corrects an agentic loop, the correction should improve the next execution. And as a loop proves it can perform a bounded job reliably, the human moves out of it and to the next unsolved problem, leaving what they have learned in the firm’s shared record.</p>
+<p>But, as Burnham probably would’ve noticed, for the firm to remain sovereign, it must own its model and everything the people at the edges teach it.</p>
+<h2 id="The-Sovereign-Firm"><a href="#The-Sovereign-Firm" class="headerlink" title="The Sovereign Firm"></a>The Sovereign Firm</h2><p>Great people will be more valuable than ever in the agentic firm. But great people also come and go. Meanwhile, models keep improving, and every competitor can rent the same ones. So how, exactly, does the firm build a sustainable competitive advantage in this new world?</p>
+<p>Consider two banks renting the same frontier model to help make credit decisions. The first sends the model a prompt, receives an answer, and records the final decision. The second records which facts produced the answer, any human override, which decisions performed well, which failed, and adjusts its policy throughout. A year later, when a better model arrives, only one of them has built a better bank. If you replace the AI model at your company and the new one inherits your definitions, permissions, evaluated cases, customer history, and hard-won exceptions, that is a foundation for a sustainable competitive advantage. If the new AI model starts from the same prompt as everybody else, that is not.</p>
+<p>The second bank is what people have started calling a “sovereign” firm. If a provider raises its prices, changes its terms, or retires a model, the firm can switch providers without losing what it has learned. As the models get smarter and companies grow more dependent on them, that independence only becomes more important.</p>
+<p>In a recent essay, Microsoft CEO Satya Nadella reached a similar conclusion for a different reason. AI models continuously absorb the expertise of humans and organizations and commoditize it, he argues, so “every company is going to have to build what I think of as human capital and token capital.” Human capital is the knowledge, judgment, relationships, and ingenuity of a company’s people, and token capital is the AI capability it builds and owns. The two compound in a learning loop, and “this loop becomes the new IP of the firm.”</p>
+<p>Data is the foundation of token capital. “Every company’s business data is their gold mine,” Nvidia CEO Jensen Huang told the audience at Databricks’ 2024 Data + AI Summit, explaining that nearly every process at Nvidia starts with a data flywheel, from chip design to supply chain. “It is making it possible for us to be one of the largest, small companies in the world,” he said. At the time, Nvidia was valued at more than $3 trillion with just 30,000 employees. “The reason for that, of course, is that we have so many AIs in the company helping us out, doing amazing things.” Jensen believes this will apply to every company. “It’s an extraordinary time,” he said, “and it starts with data.”</p>
+<p>Databricks is betting that data and the loops built on top of it should live in systems the firm controls. That even includes Databricks’ own specialized models, which it has spent years optimizing for enterprise workloads. The important thing is the loop, not just the data; which is where they’ve been focused since 2023, before it was obvious to everyone. Ownership alone is not a moat, but it prevents the firm’s memory from becoming trapped in some vendor’s stack. The moat emerges only when the data and AI that reasons over it help the firm improve its decisions and products faster than competitors can.</p>
+<p>Databricks built this muscle early on. Spark was open source, so customers could just download it and run it themselves. But eventually the founders learned that customers would pay for Databricks if they made Spark easier to run, faster, more secure, and more useful for the enterprise. To survive, they had to create value for their customers faster than the free alternative could catch up. And as agents lower the cost of finding and switching to alternatives, more companies will face a similar test.</p>
+<h2 id="The-Best-Idea-You’ll-Ever-Have"><a href="#The-Best-Idea-You’ll-Ever-Have" class="headerlink" title="The Best Idea You’ll Ever Have"></a>The Best Idea You’ll Ever Have</h2><p>About a decade ago, Ali called me for advice. One of the biggest companies in the world had offered to buy Databricks for about six times the valuation of its last funding round.</p>
+<p>It seemed like a dream outcome considering that just two years earlier the company had almost died and couldn’t find a lead for its Series C. We led the Series A in 2013, back when the company was seven Berkeley academics whose only recurring revenue was ticket sales to their own conference, and stepped in with NEA to lead the Series C nobody else would.</p>
+<p>Ali remembers the conversation better than I do:</p>
+<p>“Hey, you can do whatever you want. I’ll support you in either case. And actually, if you sell for this number, it’s really great for me: we make a lot of money at a16z, I’ll pay the investors back many times over. Honestly, for me personally, that’s probably the better option. But I’m just thinking back. I was CEO of Loudcloud and Opsware — the cards I was given at that company weren’t the company you have. And when I look back, how often in life do you have the chance to even have a company like Loudcloud or Opsware, let alone a Databricks? It’s just such a freaking big market. You can sell and make a lot of money, and you’ll be super successful in life. But if you’re like me, you’re going to look back the rest of your life thinking: ‘I missed that one shot. That was the one thing, and I should’ve taken it all the way. And now I’ll never know how far I could’ve taken it.’ So do you want to live with that, or do you want to just have the money? I’ll support whatever you want to do.”</p>
+<p>Ali said thanks and hung up. Then he said to himself: “We’re never doing this. It’s not happening.”</p>
+<p>You just don’t get this good of a market opportunity with this good of an entrepreneur. That’s the rarest of rare things. We see great entrepreneurs but their market opportunity is limited, and then we see companies that have a great market opportunity but the entrepreneur is not big enough to fulfill that. But this was a case where we had both.</p>
+<p>Last month, Databricks crossed a $7 billion revenue run rate, growing 80% year over year, and was valued at $190 billion. The entrepreneur, it turned out, is big enough.</p>
+<p>And the TAM is the foundation of the firm itself – a shared system of record that defines what is true, what the data means, who can do what, and what worked. With that foundation in place, people and agents can act autonomously without routing every decision through layers of management, while the results of their actions flow back into a record the firm owns.</p>
+<p>Coordination costs will fall, companies will get more done with the people they have, and new companies will get built that never made sense before, because ten people will be able to do what used to take thousands. And until AI can do everything a great person can do – which is a long way off – this will make great people more valuable, not less.</p>
+<p>Fewer people will be carrying out procedures someone else designed because agents will handle the work that’s already been figured out. More will work on problems that no one has solved yet – judging what’s good, noticing what’s changed, and deciding what should exist next.</p>
+<p>What will people do at work all day in the coming decades? The honest answer is: whatever hasn’t been figured out yet. As agents and the firm automate more of the work we already know how to do, people work with this new intelligence to build amazing new things and solve problems previously out of reach.</p>
+<p>Thanks to Mike McGuiness for coauthoring this piece with me.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/27/xparamt-2115083713512091917/">https://yaoav.github.io/2026/10/27/xparamt-2115083713512091917/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/xparamt/">@xparamt</a></div><div class="post-share"><div class="social-share" data-image="/images/2115083713512091917-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/28/X-2115427239412351155/" title="别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！"><img class="cover" src="/images/2115427239412351155-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  你是否也因为影视会员费用越来越高，渐渐不怎么看电视了？ 想看内容时，常常只能用手机投屏，步骤多、体验也打折，电视的使用率越来越低。今天就手把手教你安装电视盒子，让电视不再只能靠手机投屏，重新回到开机就能直接使用的状态。  第一步：先选适配的电视端软件下载地址：https://zoo.ink/tvbox.html 准备个U盘：电视端应用有不同品牌、版本和遥控器适配情况。选择前先看它是否标注 TV 版&#x2F;盒子版，核对系统要求、开发者信息与下载来源；安装电视 APK。  第二步：确认电视系统与安装入口电视系统决定了能否直接安装 Android APK。Android TV&#x2F;安卓电视通常可从系统自带应用商店安装应用；Samsung Tizen、LG webOS 等系统不能直接运行 Android APK，可先查看电视自带商店，或用 HDMI 外接 Android 电视盒子。 下图整理了小米&#x2F;红米、海信&#x2F;VIDAA、TCL&#x2F;雷鸟的常见入口参考。  图 2｜小米 &#x...</div></div></div></a><a class="pagination-related" href="/2026/10/27/X-2114973973503185354/" title="我是如何从好莱坞视效，开始转型做AIGC的"><img class="cover" src="/images/2114973973503185354-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">我是如何从好莱坞视效，开始转型做AIGC的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  做 AI 视频这几个月，我花钱最多、卡得最久的地方，跟我原来想的完全不一样。 先说结论： 当技术的门槛降到极低的时候，做 AIGC最难的已不是技术，而是怎么讲好一个故事，也就是内容。 我这么说可能挺反直觉的，按理说以我的行业经验，最拿手的应该是画面。当然，这跟我有合成和制片的底子有关，对没做过视频的朋友来说，技术和流程确实需要花时间去啃。 但自从我裸辞、All in AI 以来，技术层面的东西我花了一阵子就跑通了第一套制作流程，真正让我头大的，反而是「讲故事&#x2F;Story Telling」。 下面聊聊，我是怎么一路撞到这堵墙上的。希望可以给你们带来一点参考或启发。 01. 来时路-好莱坞我是做影视视效合成出身的。在好莱坞，我参与过《西部世界》《怪奇物语》《神盾局特工》和《哥谭市》等几十部科幻剧，当时所在的团队还凭借《哥谭市》的视效拿过艾美奖。  做视效有点像变魔法：演员对着空气演，我们负责把场景和画面一层层造出来，让观众信以为真。但合成对画面的要求是像素级的，边缘、颜色、运动模糊、景深、噪点，只要...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">244</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">127</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#From-Spark-to-Agents"><span class="toc-number">1.</span> <span class="toc-text">From Spark to Agents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-System-of-Record-for-Agents"><span class="toc-number">2.</span> <span class="toc-text">A System of Record for Agents</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Nature-of-the-Firm"><span class="toc-number">3.</span> <span class="toc-text">The Nature of the Firm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Second-Managerial-Revolution"><span class="toc-number">4.</span> <span class="toc-text">The Second Managerial Revolution</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Sovereign-Firm"><span class="toc-number">5.</span> <span class="toc-text">The Sovereign Firm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Best-Idea-You%E2%80%99ll-Ever-Have"><span class="toc-number">6.</span> <span class="toc-text">The Best Idea You’ll Ever Have</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img src="/img/default-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Why I hate GPT-6.2 Astra"/></a><div class="content"><a class="title" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra">Why I hate GPT-6.2 Astra</a><time datetime="2026-11-18T02:35:04.000Z" title="发表于 2026-11-18 02:35:04">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"><img src="/images/2122726493935612251-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</a><time datetime="2026-11-18T00:20:09.000Z" title="发表于 2026-11-18 00:20:09">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground"><img src="/images/2122715101300158735-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Boring Company &amp; the Future Underground"/></a><div class="content"><a class="title" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground">The Boring Company &amp; the Future Underground</a><time datetime="2026-11-17T23:34:52.000Z" title="发表于 2026-11-17 23:34:52">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure"><img src="/images/2122714711095468195-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Brand as Infrastructure"/></a><div class="content"><a class="title" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure">Brand as Infrastructure</a><time datetime="2026-11-17T23:33:19.000Z" title="发表于 2026-11-17 23:33:19">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img src="/images/2122708521959706960-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"/></a><div class="content"><a class="title" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</a><time datetime="2026-11-17T23:08:44.000Z" title="发表于 2026-11-17 23:08:44">2026-11-17</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
