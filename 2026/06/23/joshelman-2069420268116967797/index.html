@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The World-Building Doors Are Open, Again. | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Today I’m joining A16Z as a partner to help find and support the next generation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The World-Building Doors Are Open, Again.">
+<meta property="og:url" content="https://yaoav.github.io/2026/06/23/joshelman-2069420268116967797/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Today I’m joining A16Z as a partner to help find and support the next generation">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2069420268116967797-cover.jpg">
+<meta property="article:published_time" content="2026-06-23T22:00:14.000Z">
+<meta property="article:modified_time" content="2026-11-18T00:59:49.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@joshelman">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2069420268116967797-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The World-Building Doors Are Open, Again.",
+  "url": "https://yaoav.github.io/2026/06/23/joshelman-2069420268116967797/",
+  "image": "https://yaoav.github.io/images/2069420268116967797-cover.jpg",
+  "datePublished": "2026-06-23T22:00:14.000Z",
+  "dateModified": "2026-11-18T00:59:49.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/06/23/joshelman-2069420268116967797/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The World-Building Doors Are Open, Again.',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">227</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">116</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2069420268116967797-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The World-Building Doors Are Open, Again.</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The World-Building Doors Are Open, Again.</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-06-23T22:00:14.000Z" title="发表于 2026-06-23 22:00:14">2026-06-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@joshelman（Josh Elman）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2069420268116967797">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Today I’m joining A16Z as a partner to help find and support the next generation of great consumer companies. In particular, I look forward to helping founders and teams navigate the journey from an early spark to a durable . The AI wave is in full bloom and already transforming the world of work; now I think it’s an amazing time to build new AI-first consumer apps and services that people will use throughout their daily lives.</p>
+<p>When I turned 50 last fall, I realized how lucky I’ve been to be part of some incredible products and company journeys, along with some special life experiences too. Helping build Facebook, LinkedIn, Twitter and Robinhood were all journeys that started from discovering a new spark of consumer behavior, which is like opening a door to a brand new world of possibility that isn’t built yet.</p>
+<p>My career has been all about the world-building that follows that spark. Early users show you what’s in the world; you get to make it come to life. Figure out the user patterns, the feature hierarchies, the growth loops, and the development practices that defined social, and defined mobile, for billions of people. My role in these stories wasn’t to blaze the very first trail discovering new streams and valleys (although I’ve had the privilege to work side-by-side with some great founders who did), nor was it to “operate” or scale the world once built out. I was right in the middle, the messy middle, laying down the rails, and mapping out the towns, and setting the foundations for a durable product, and a durable company. To me, this is hands-down the most fun part of the journey.</p>
+<p>It can be tough; it can look silly. As Chris Dixon has said, most great products start out looking like a toy. In the early social days, people saw Twitter as a dumb site where people posted what they had for breakfast, but that has become one of the most important information networks in the world. In the mobile era, people derided Robinhood as a simple stock trading app no one would ever use with their ‘real money’ but that’s now become a full-fledged financial platform for tens of millions. Or take Musical.ly, which was just a way for teenagers to post music videos until it became Tiktok, providing entertainment and more to billions. These were all places I worked at or was on the board through these major shifts. Worlds take time.</p>
+<p><img src="/images/HLgK0hRbQAAe18n.jpg" alt="HLgK0hRbQAAe18n"></p>
+<p>In recent years, there was a period where it seemed like consumer was pretty dead. And that was really just a way of saying, “the worlds that consumers wanted to inhabit were all pretty built out”. Instagram works very well as a scaled-up social network; the iPhone works very well as your remote control device for the world. But two important things have changed, that have completely opened the world-building doors again.</p>
+<p>First, obviously, is that AI has completely upended the assumptions about what ordinary users can do; we all know this. The biggest consumer breakout so far, ChatGPT, introduced the world to the experience of open-ended conversations and relationships with software; and we’re only at the very beginning of that growth opportunity. But meanwhile, just as importantly, we have a new wave of users, especially the newest cohort of gen-alpha consumers, that really want to make things. They are native world-builders themselves. They came up playing Roblox and Minecraft, they have no preconceived limitations about what an app is, or what they can do with it. They expect to be able to customize or build anything they want for themselves and with their friends. And now, suddenly, we’re there.</p>
+<p>The models are finally ready. Costs of inference are getting optimized with open models, and even on-device models. And, when I first experienced OpenClaw earlier this year, I had the epiphany that it isn’t the models that matter, but the harnesses, loops, and context which will lead to so many new opportunities ahead. Just as we’re learning in enterprise, we can finally invent new products that allow users to do things more naturally, using simple language to express their needs.</p>
+<p><img src="/images/HLgLBadagAAHBx1.jpg" alt="HLgLBadagAAHBx1"></p>
+<p>So what does this all mean for consumer founders and operators? The setup is there; it’s an incredibly exciting time to be building in consumer again. Just like in every major tech wave before, from dot com through social and mobile, I expect that billions of people will soon discover new ways to explore the world, get things done, learn, shop, manage their money, arrange their travel, connect and communicate with friends and family, and much more. We’re ready for all of this, and more, to get reinvented around new interfaces and a new compact between software and the user, that is far more generous and accommodating for users’ peculiar needs, or creative spark.</p>
+<p>This means there is a lot of work to do in building out these new worlds, laying down the new rails, mapping its new towns. I can’t wait to meet amazing teams with big ideas, and early sparks of traction. And I love the ones building something that many people will deride as just a toy, but the team knows they have a bigger vision they can’t wait to bring to the world, and bring the world to their vision. I’ve been on so many of these journeys myself. And now, I’m eager to help a lot more teams create something that lasts, and navigate the journey from a spark of something working to making something durable.</p>
+<p>It’s time to build!</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/06/23/joshelman-2069420268116967797/">https://yaoav.github.io/2026/06/23/joshelman-2069420268116967797/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/joshelman/">@joshelman</a></div><div class="post-share"><div class="social-share" data-image="/images/2069420268116967797-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/07/08/vartekxx-2074864291568664646/" title="Context Engineering: the Karpathy-Cherny method that replaced prompting"><img class="cover" src="/images/2074864291568664646-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Context Engineering: the Karpathy-Cherny method that replaced prompting</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @vartekxx（vartekx） 的长文，原文链接，版权归原作者所有。   Prompt engineering is one instruction. Context engineering is the whole operating system.  The same model can score 0.637 or 0.488 on the same benchmark.Same weights. Same question. The only difference is what else was in the context window when the model answered. That gap is not a rounding error. It is the difference between a useful tool and an expensive autocomplete. Everyone is arguing about which model is best. GPT vs Claude vs Gemini....</div></div></div></a><a class="pagination-related" href="/2026/06/02/taylorotwell-2061489146246353383/" title="It's never been a better time to build"><img class="cover" src="/images/2061489146246353383-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">It's never been a better time to build</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @taylorotwell（Taylor Otwell） 的长文，原文链接，版权归原作者所有。  I built Laravel because I wanted to bring my own ideas to life faster. I had projects I wanted to ship, and the existing options slowed me down. Every feature, package, and product I’ve built since is chasing that same goal: remove the friction between an idea and production. Laravel Forge made it easy to provision and manage servers. Laravel Cloud takes that a step further: get your app online in one minute or less, so you can star...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">227</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">116</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground"><img src="/images/2122715101300158735-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Boring Company &amp; the Future Underground"/></a><div class="content"><a class="title" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground">The Boring Company &amp; the Future Underground</a><time datetime="2026-11-17T23:34:52.000Z" title="发表于 2026-11-17 23:34:52">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure"><img src="/images/2122714711095468195-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Brand as Infrastructure"/></a><div class="content"><a class="title" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure">Brand as Infrastructure</a><time datetime="2026-11-17T23:33:19.000Z" title="发表于 2026-11-17 23:33:19">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img src="/images/2122708521959706960-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"/></a><div class="content"><a class="title" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</a><time datetime="2026-11-17T23:08:44.000Z" title="发表于 2026-11-17 23:08:44">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
