@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>MarketCards MintBox — Launch Announcement | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Our first MintBox opens for participation on June 4. It&#39;s a public, transparent,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MarketCards MintBox — Launch Announcement">
+<meta property="og:url" content="https://yaoav.github.io/2026/06/04/mandywangETH-2062353673628598300/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Our first MintBox opens for participation on June 4. It&#39;s a public, transparent,">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2062353673628598300-cover.jpg">
+<meta property="article:published_time" content="2026-06-04T10:00:07.000Z">
+<meta property="article:modified_time" content="2026-11-18T03:30:53.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@mandywangETH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2062353673628598300-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "MarketCards MintBox — Launch Announcement",
+  "url": "https://yaoav.github.io/2026/06/04/mandywangETH-2062353673628598300/",
+  "image": "https://yaoav.github.io/images/2062353673628598300-cover.jpg",
+  "datePublished": "2026-06-04T10:00:07.000Z",
+  "dateModified": "2026-11-18T03:30:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/06/04/mandywangETH-2062353673628598300/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'MarketCards MintBox — Launch Announcement',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">239</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">123</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2062353673628598300-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">MarketCards MintBox — Launch Announcement</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">MarketCards MintBox — Launch Announcement</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-06-04T10:00:07.000Z" title="发表于 2026-06-04 10:00:07">2026-06-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@mandywangETH（MandyWang）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2062353673628598300">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<blockquote>
+<p>Our <strong>first</strong> MintBox opens for participation on June 4. It’s a public, transparent, and verifiable <strong>issuance</strong> on MarketCards — releasing the Tokenized Interest of rare cards we sourced ourselves (all one-of-ones), 100% publicly, to everyone who participates.</p>
+</blockquote>
+<h3 id="1-What-is-MintBox"><a href="#1-What-is-MintBox" class="headerlink" title="1. What is MintBox"></a>1. What is MintBox</h3><p>MintBox is the mechanism for the <strong>first public issuance of Tokenized Interest</strong>. Once a card or Card Collection is tokenized on MarketCards, it can be opened for participation through MintBox. You participate with USDC, and the platform allocates Tokenized Interest to winning users through a public, verifiable draw. Any non-winning portion of USDC becomes claimable after results are published and must be claimed manually.</p>
+<p>The mechanism is built as <strong>Box + Ticket + Draw Factor</strong>, so every allocation does three things at once:</p>
+<ul>
+<li><strong>Open</strong> — all card information, valuation, and participation parameters are disclosed before the MintBox begins.</li>
+<li><strong>Transparent</strong> — exactly which Tokenized Interest, and how much, sits in each Box can be looked up by Box number before it starts.</li>
+<li><strong>Verifiable</strong> — the Draw Factor that decides the draw is generated from the public Binance BTC&#x2F;USDC spot price at a specified moment, and anyone can recompute the result.</li>
+</ul>
+<p><strong>Key Information</strong></p>
+<p><img src="/images/HJ324UiagAAsVtv.jpg" alt="HJ324UiagAAsVtv"></p>
+<h3 id="2-Rules-Mechanics"><a href="#2-Rules-Mechanics" class="headerlink" title="2. Rules &amp; Mechanics"></a>2. Rules &amp; Mechanics</h3><ol>
+<li>Participation rules &amp; key timestamps</li>
+</ol>
+<ul>
+<li><strong>Commitment unit</strong> — the amount must be an integer multiple of the Box Price. With a 10 USDC Box Price, commit in multiples of 10 (e.g., 10, 20, 50, 110…).</li>
+<li><strong>Ticket issuance</strong> — for every full Box Price (10 USDC) committed, the system issues 1 Ticket. Commit 100 USDC → 10 Tickets.</li>
+<li><strong>Target Raise</strong> — if total commitments don’t reach the target by the close of the period, all committed USDC is fully refunded.</li>
+<li>**Key dates:<br>**June 4, 08:00 UTC — participation opens<br>June 8, 00:00 UTC — participation closes<br>June 8, 08:00 UTC — secondary-market trading opens</li>
+</ul>
+<ol start="2">
+<li>The Ticket mechanism &amp; how winning works</li>
+</ol>
+<p>Each Ticket is the <strong>only entry</strong> into the draw, and each independently enters the final draw and ranking:</p>
+<ul>
+<li><strong>Ticket number</strong> — a 4-digit number (e.g., 3827), randomly generated and shown the moment you complete your commitment.</li>
+<li><strong>Generation time</strong> — each Ticket records its timestamp, used as the tie-breaker within the same hit group.</li>
+</ul>
+<p><strong>Draw &amp; allocation (after participation closes):</strong></p>
+<ol>
+<li><strong>Draw Factor generation</strong> — take the Binance BTC&#x2F;USDC spot price at the specified moment (June 8, 00:00 UTC), rounded to two decimals. Extract the <strong>tens digit, ones digit, first decimal, second decimal</strong>, concatenated into a 4-digit Draw Factor.<br>Example: BTC price 77,795.60 → tens 9 &#x2F; ones 5 &#x2F; first decimal 6 &#x2F; second decimal 0 → <strong>Draw Factor &#x3D; 9560</strong></li>
+<li><strong>Digit-by-digit matching</strong> — each Ticket is compared to the Draw Factor position by position; a digit counts as a hit only on an exact same-position match. More hits &#x3D; higher tier.<br>Example: Draw Factor 9560 vs Ticket 3560 → ✗✓✓✓ → <strong>3&#x2F;4 hits</strong></li>
+<li><strong>Ticket ranking</strong> — first by number of hits (4&#x2F;4 &gt; 3&#x2F;4 &gt; 2&#x2F;4 &gt; 1&#x2F;4 &gt; 0&#x2F;4); within the same group, ranked by <strong>commitment time</strong> — earlier ranks higher.</li>
+</ol>
+<ol start="3">
+<li>Over-subscription allocation logic</li>
+</ol>
+<p>Once ranking is done, Tickets map to Box numbers in order:</p>
+<ul>
+<li>With <strong>30,000 Boxes</strong>, <strong>Tickets ranked 1 through 30,000</strong> receive the corresponding Box — rank #1 gets Box #1, rank #2 gets Box #2, and so on.</li>
+<li><strong>Tickets ranked beyond 30,000 are non-winning</strong>; the corresponding commitment becomes <strong>claimable manually</strong> after results are published.</li>
+</ul>
+<p>In short: <strong>when demand is high and Tickets exceed 30,000, the Tickets with more hits and earlier commitment times win first</strong> — the rest are refunded in full.</p>
+<ol start="4">
+<li>Lucky Digit (referral boost, optional)</li>
+</ol>
+<p>To reward sharing: for each invitee who successfully participates in this MintBox with a commitment of at least 100 USDC, the inviter earns <strong>1 Lucky Digit</strong>. A digit upgraded to a Lucky Digit <strong>no longer needs to match — any number 0–9 counts as a hit</strong>.</p>
+<ul>
+<li>Lucky Digits go <strong>only to the inviter</strong>, fill Tickets in generation order, and unlock in a fixed order (1st digit → 2nd → 3rd). The <strong>4th digit always stays an exact-match digit</strong>.</li>
+<li>Max 3 Lucky Digits per Ticket. Lucky Digits <strong>create no new Tickets and don’t change the total number of Boxes</strong> — they only affect the hit result of existing Tickets.</li>
+</ul>
+<blockquote>
+<p>Lucky Digit improves your chance of winning; it <strong>does not guarantee any allocation result</strong>, and should not be understood as investment income or a promise to preserve principal.</p>
+</blockquote>
+<p><img src="/images/HJ35qWlbcAAQZIR.jpg" alt="HJ35qWlbcAAQZIR"></p>
+<ol start="3">
+<li>Cards, Links &amp; Attachments</li>
+</ol>
+<p>This MintBox features <strong>68 cards</strong>. A few standout cards are shown below — head to the website for the full lineup:</p>
+<p><img src="/images/HJ35yHvagAA82VV.jpg" alt="HJ35yHvagAA82VV"></p>
+<p>**See all 68 cards → **<a target="_blank" rel="noopener" href="https://market.cards/ipo/detail?campaign_id=24">https://market.cards/ipo/detail?campaign_id=24</a></p>
+<p>For full openness and verifiability, all materials are available on the MintBox page on our website:</p>
+<ul>
+<li><strong>Full card issuance parameters &amp; valuations</strong> — the issuance parameters and valuation for all 68 cards are disclosed card-by-card on the MintBox page.</li>
+<li><strong>Box allocation &amp; token details</strong> — the <strong>ranked allocation rule for numbers 1 to 30,000</strong> during participation, plus the <strong>Tokenized Interest (token) details for each Box number</strong>, downloadable via the button on the MintBox page, so anyone can verify afterward.</li>
+</ul>
+<h3 id="4-Timeline"><a href="#4-Timeline" class="headerlink" title="4. Timeline"></a>4. Timeline</h3><ul>
+<li><strong>June 4, 08:00 UTC</strong> — Event starts (participation opens)</li>
+<li><strong>June 8, 00:00 UTC</strong> — Event ends (participation closes; results phase begins)</li>
+<li><strong>June 8, 08:00 UTC</strong> — Trading opens (Tokenized Interest enters the secondary market)</li>
+</ul>
+<h3 id="5-Restricted-Jurisdictions"><a href="#5-Restricted-Jurisdictions" class="headerlink" title="5. Restricted Jurisdictions"></a>5. Restricted Jurisdictions</h3><p>To meet legal and sanctions requirements, the Service is not offered to — and may not be accessed or used by — persons or entities in the following (see Terms of Service §2.2 for the full text):</p>
+<ul>
+<li><strong>Mainland China</strong> (excluding Hong Kong, Macau, and Taiwan)</li>
+<li><strong>Absolute-prohibition countries</strong> (domestic law fully bans crypto): Algeria, Bangladesh, Egypt, Iraq, Morocco, Nepal, Qatar, Tunisia</li>
+<li><strong>Comprehensively sanctioned &#x2F; embargoed regions</strong> (per OFAC, the UN, etc.): Cuba, Iran, North Korea, Syria, Crimea, and the so-called Donetsk &#x2F; Luhansk “People’s Republics”</li>
+<li>Plus any other country&#x2F;region under similar sanctions, and any person or entity on a sanctions &#x2F; restricted-party list (OFAC, UN, EU, UK, or similar authorities)</li>
+</ul>
+<p>Full list governed by the platform’s Terms of Service.</p>
+<p><strong>MarketCards · Own a piece of the players you love.</strong> Open, transparent, verifiable — that’s how we do a first issuance.</p>
+<blockquote>
+<p>Risk note: Sale Valuation in MintBox is the platform’s issuance price, not a representation of a card’s true market value or expected returns. Secondary-market prices are driven by factors such as card rarity, player performance, and market liquidity, and can go up or down. Please participate based on your own judgment.</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/06/04/mandywangETH-2062353673628598300/">https://yaoav.github.io/2026/06/04/mandywangETH-2062353673628598300/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/mandywangETH/">@mandywangETH</a></div><div class="post-share"><div class="social-share" data-image="/images/2062353673628598300-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/06/23/joshelman-2069420268116967797/" title="The World-Building Doors Are Open, Again."><img class="cover" src="/images/2069420268116967797-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">The World-Building Doors Are Open, Again.</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @joshelman（Josh Elman） 的长文，原文链接，版权归原作者所有。  Today I’m joining A16Z as a partner to help find and support the next generation of great consumer companies. In particular, I look forward to helping founders and teams navigate the journey from an early spark to a durable . The AI wave is in full bloom and already transforming the world of work; now I think it’s an amazing time to build new AI-first consumer apps and services that people will use throughout their daily lives. When I tur...</div></div></div></a><a class="pagination-related" href="/2026/06/02/taylorotwell-2061489146246353383/" title="It's never been a better time to build"><img class="cover" src="/images/2061489146246353383-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">It's never been a better time to build</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @taylorotwell（Taylor Otwell） 的长文，原文链接，版权归原作者所有。  I built Laravel because I wanted to bring my own ideas to life faster. I had projects I wanted to ship, and the existing options slowed me down. Every feature, package, and product I’ve built since is chasing that same goal: remove the friction between an idea and production. Laravel Forge made it easy to provision and manage servers. Laravel Cloud takes that a step further: get your app online in one minute or less, so you can star...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">239</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">123</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-What-is-MintBox"><span class="toc-number">1.</span> <span class="toc-text">1. What is MintBox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Rules-Mechanics"><span class="toc-number">2.</span> <span class="toc-text">2. Rules &amp; Mechanics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Timeline"><span class="toc-number">3.</span> <span class="toc-text">4. Timeline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Restricted-Jurisdictions"><span class="toc-number">4.</span> <span class="toc-text">5. Restricted Jurisdictions</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"><img src="/images/2122726493935612251-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</a><time datetime="2026-11-18T00:20:09.000Z" title="发表于 2026-11-18 00:20:09">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground"><img src="/images/2122715101300158735-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Boring Company &amp; the Future Underground"/></a><div class="content"><a class="title" href="/2026/11/17/eriktorenberg-2122715101300158735/" title="The Boring Company &amp; the Future Underground">The Boring Company &amp; the Future Underground</a><time datetime="2026-11-17T23:34:52.000Z" title="发表于 2026-11-17 23:34:52">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure"><img src="/images/2122714711095468195-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Brand as Infrastructure"/></a><div class="content"><a class="title" href="/2026/11/17/ridd_design-2122714711095468195/" title="Brand as Infrastructure">Brand as Infrastructure</a><time datetime="2026-11-17T23:33:19.000Z" title="发表于 2026-11-17 23:33:19">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img src="/images/2122708521959706960-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"/></a><div class="content"><a class="title" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</a><time datetime="2026-11-17T23:08:44.000Z" title="发表于 2026-11-17 23:08:44">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/eriktorenberg-2122707379632705575/" title="Investing in Isomorphic"><img src="/images/2122707379632705575-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Investing in Isomorphic"/></a><div class="content"><a class="title" href="/2026/11/17/eriktorenberg-2122707379632705575/" title="Investing in Isomorphic">Investing in Isomorphic</a><time datetime="2026-11-17T23:04:11.000Z" title="发表于 2026-11-17 23:04:11">2026-11-17</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
