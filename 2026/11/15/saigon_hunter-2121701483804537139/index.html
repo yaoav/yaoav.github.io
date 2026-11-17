@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How my friends and I made over $6 million exploiting a single edge | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="First of all, thanks to @Cbb0fe for the inspiration. I learned a lot from readin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How my friends and I made over $6 million exploiting a single edge">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/15/saigon_hunter-2121701483804537139/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="First of all, thanks to @Cbb0fe for the inspiration. I learned a lot from readin">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121701483804537139-cover.jpg">
+<meta property="article:published_time" content="2026-11-15T04:27:07.000Z">
+<meta property="article:modified_time" content="2026-11-16T06:36:31.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@saigon_hunter">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121701483804537139-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How my friends and I made over $6 million exploiting a single edge",
+  "url": "https://yaoav.github.io/2026/11/15/saigon_hunter-2121701483804537139/",
+  "image": "https://yaoav.github.io/images/2121701483804537139-cover.jpg",
+  "datePublished": "2026-11-15T04:27:07.000Z",
+  "dateModified": "2026-11-16T06:36:31.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/15/saigon_hunter-2121701483804537139/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How my friends and I made over $6 million exploiting a single edge',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121701483804537139-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How my friends and I made over $6 million exploiting a single edge</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How my friends and I made over $6 million exploiting a single edge</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-15T04:27:07.000Z" title="发表于 2026-11-15 04:27:07">2026-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@saigon_hunter（Saigon Hunter）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121701483804537139">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>First of all, thanks to @Cbb0fe for the inspiration. I learned a lot from reading how he found asymmetry. I’ve been getting a lot of DMs asking how to find an edge onchain, and I end up repeating much of the same stuff to everyone, so I wanted to write something I could point people to.</p>
+<p>Most of you are going to make 95% of your money in 5% of the time you spend onchain. Most of your time should be spent playing around with things and letting your curiosity roam freely. This is a common factor among many of the top botters and traders I’ve met. In the age of AI, most of the edge people had in terms of low-level details like coding will dissipate, and your ability to think abstractly at a systems level will be exponentially rewarded. Once you identify potential asymmetry, you have to be relentlessly resourceful and attack the problems in front of you from different angles.</p>
+<p>A lot of that resourcefulness shows up as mundane work. I keep adding wallets&#x2F;infra to track, improving my tools, and sharpening different parts of my process. Over time, many small improvements create an emergent effect: you gain an outsized information asymmetry, paint a much clearer picture of what’s happening, and ultimately execute on signals much more efficiently than other market participants.</p>
+<p>With cashcat, weeks of that work gave us enough of an information advantage that we even frontran the Robinhood employees themselves.</p>
+<p>About a month before Robinhood Chain went live, I saw a listing notification and, out of pure curiosity, wondered whether anyone had moved the tokens into Robinhood’s hot wallet beforehand. Wintermute had sent them over about an hour before the announcement. I went back through older listings and kept seeing the same pattern. I couldn’t see a way to trade it at the time, but it stuck in the back of my mind.</p>
+<p>When Vlad followed cashcat, I bought a bunch like most of you. I had a decent position and was up a lot, but it fell short of the standard I was holding myself to. I’d bought multiple % of every Ansem coin expecting him to run one and fumbled badly. cashcat looked like it could be a generational runner, and I wanted to make up for fumbling Ansem. A Robinhood listing was obviously the biggest inflection point, so I spent weeks preparing to get ahead of the market.</p>
+<p>I started with the listing schedule and public endpoints, looking for pairs that showed up ahead of launch. Most of what I found gave me very little lead. The listing accounts that most trenchers track already have notis for this by default, so naturally, I had to deconstruct their pipeline further. The broad idea was to figure out who partnered with Robinhood for their custody and infra, which is all public info.</p>
+<p>That brought me back to Wintermute. On Ethereum, they make markets for all kinds of clients. Seeing them prepare to trade a coin could mean any number of things. But on Robinhood Chain, Wintermute setting up their infra would have much clearer implications, so I created a custom tracker for Robinhood Chain that would show me if the Wintermute cluster I was tracking became active.</p>
+<p>Then I found out BitGo was also an official partner for Robinhood Chain and handled their custody, so I tracked a bunch of their infra and GitHub. My partner had a bot ready so we could buy when something showed up.</p>
+<p>By July 16, cashcat was dumping. The lower it went, the more money we would be able to make, since we estimated that cashcat would likely go to 200–300 on a listing candle. At the time, Blockscout was pretty much the only explorer available for Robinhood Chain, and it was shit to use. I went back through Wintermute’s wallets using a custom EVM explorer that let me read Robinhood Chain and other EVM chains at once, making it much easier to follow their activity across networks. Going this extra mile to make sure there weren’t any wallets I had missed allowed me to find a Wintermute wallet that they had funded on Robinhood for the first time since the chain went live. Keep in mind, it had been two weeks since the chain went live, so it was starting to become very clear to me that I had to ramp up the amount of effort I was putting into this. I now had a realistic chance of frontrunning the listing.</p>
+<p>I looked deeper into the Wintermute Robinhood cluster and found that some of those wallets had deployed contracts. Four were trading contracts owned by the same Wintermute multisig, and its recent transactions showed it giving operators permission to trade through two of them.</p>
+<p>Looking through the code, I found a function called getAllApprovedTokens() on three contracts. Realising these were trading contracts, I started monitoring for changes, since their whitelists were completely empty at the time. A few days later, they whitelisted WETH and USDG and started trading the pair the next day.</p>
+<p>On July 27, our BitGo monitor picked up hoodeth:cashcat five seconds after it appeared in a public pull request. For the first time, we had a concrete cashcat signal. The main issue was that plenty of exchanges use BitGo, so that alone wasn’t enough for me to put millions into it. The big picture was starting to form more clearly, however, with both Wintermute and BitGo prepping their Robinhood Chain infra. BitGo’s cashcat change</p>
+<p><img src="/images/HXHCrOnXIAA4gTB.jpg" alt="HXHCrOnXIAA4gTB"></p>
+<p>The July 28 follow-up on the BitGo pull request, a day after our first alert fired.</p>
+<p>On July 29, BitGo’s release included cashcat alongside 99 Robinhood Chain stock tokens. The implications of this were huge, as it confirmed my hunch that Robinhood was the one behind this request. Why else would cashcat be in there next to their native stock tokens? BitGo’s stock-token change · Release work</p>
+<p>My partner and I had been adding as the evidence came in. By July 29, we’d accumulated 1.5% of the supply between us. The next day I told him what would make me add much more. I wanted to see Wintermute whitelist cashcat or catch a cashcat transfer between Wintermute and Robinhood. We had the monitors running and the money ready.</p>
+<p>On August 3 at 17:48 UTC, the tracker caught Wintermute approving the cashcat&#x2F;WETH pool. That was the alert we’d been waiting for. The desk had selected a venue to trade the exact coin we were holding.</p>
+<p>We were ready to put seven figures in, but doing it all at once would light up the chart and give everyone a reason to dig through our wallets. I told my partner to slowly DCA half our size to gauge whether anyone noticed.</p>
+<p><img src="/images/HXHCwjSWAAEHYqg.png" alt="HXHCwjSWAAEHYqg"></p>
+<p>Half an hour later, at 18:19, the wallet we suspected belonged to a Robinhood insider opened an $11k limit order for cashcat. We’d been tracking it because it kept showing up ahead of listings, and I knew other traders had the address too. The order hadn’t filled, but everyone watching could see which coin it was trying to buy. I figured other people would start buying before we’d finished getting our size in.</p>
+<p>We ditched the slow DCA, bought over $1 million worth of cashcat between us, and candled the chart. By the time we finished sizing in, we held around 4%+ of the supply.</p>
+<p><video controls preload="metadata" poster="/images/2121691667312869376-poster.jpg" src="/videos/2121691667312869376.mp4"></video></p>
+<p>(ignore the song i had some bullshit on autoplay)</p>
+<p>Pages started posting our wallets right away, which is precisely what we wanted to avoid because it would fuel spec and dilute a lot of our edge by letting tons of people frontrun the actual listing. The insider’s lack of onchain trading experience probably cost us a few more million. Bubblemaps’ post</p>
+<p>Three days later, Robinhood listed cashcat while I was taking a nap, so I missed the initial candle. My sells could’ve been better, but my partner and I still made over $4 million between us. Robinhood’s announcement</p>
+<p>By the time PONS came around, I had anticipated that most sharp traders would have caught on to the Wintermute contract pattern, so waiting for the same alerts wasn’t gonna cut it anymore. We had to dig deeper into the pipeline to get ahead again.</p>
+<p>We kept digging from where the cashcat research left off and eventually found enough signal for me to start buying PONS on August 28. I can’t really detail that part of the pipeline.</p>
+<p>Three days later, BitGo added PONS, with Wintermute starting to market-make it shortly after. Then, on September 2, it got the “listing,” which ultimately seemed to have been some kind of honeypot for Robinhood to catch the insiders. After that, most of the edge I’ve detailed here got diluted.</p>
+<p>My friends and I made $2 million between us on PONS.</p>
+<p>Most of these nuances are more relevant to traders who bot, but you might find that a lot of these principles apply to other trading styles too. Overall, my goal in trading has been to bridge the gap between pure narrative trading and maximising my technical edge for better execution. I might write more in the future about some of my narrative trades.</p>
+<p>Thanks for reading.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/15/saigon_hunter-2121701483804537139/">https://yaoav.github.io/2026/11/15/saigon_hunter-2121701483804537139/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/saigon-hunter/">@saigon_hunter</a></div><div class="post-share"><div class="social-share" data-image="/images/2121701483804537139-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/15/Elicellove-2121728281833804137/" title="盘点2026年最具投资价值性的八大银行股"><img class="cover" src="/images/2121728281833804137-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">盘点2026年最具投资价值性的八大银行股</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Elicellove（elise） 的长文，原文链接，版权归原作者所有。  楼主先说下我心目中对投资价值性银行股的定义主要是成长性高，估值低，资产质量优秀。由于楼主持有银行打算至少持有3年以上，所以把成长性看得最重。像民生银行、光大银行、浙商银行这些资产质量差的排除在外了；像农业银行、紫金银行、郑州银行由于估值过高也被排除在外；股份制平安银行，招商银行，中信银行由于股息高，估值低感觉还不错；农商行这几年资产质量下滑很厉害，目前来看常熟（强赎要增加32%股权降严重），苏农，张家港，江阴估值低都还不错；基本上成长性优秀的银行都集中在城商上中，比如26年三季报业绩增速前10的有9家都是城商行，比如青岛银行、齐鲁银行、杭州银行、宁波银行、江苏银行、南京银行等。楼主21年以来收益率达到300%左右，就是严格遵守只买最优质的银行股。今年来收益率达到70%左右，就是因为满仓满融业绩最好、股价涨幅最好的青岛银行与齐鲁银行。 如果在2年前，楼主心中的最具价值投资性的银行股1-3名分别就是杭州银行、江苏银行、成都银行这三只，这三只银行被称为银行“三剑客”，也是21-24年楼...</div></div></div></a><a class="pagination-related" href="/2026/11/15/lonelygogo21-2121645512281723304/" title="万字分享，用 AIsa + AI Agent 串起达人营销全流程"><img class="cover" src="/images/2121645512281723304-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">万字分享，用 AIsa + AI Agent 串起达人营销全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lonelygogo21（Liz栗子） 的长文，原文链接，版权归原作者所有。  我 2024 年刚开始做海外 AI 工具的 KOL 达人营销时，找达人真的是一件苦差事。 那时候我用 SimilarTube、EazyKOL 这些插件，一个一个搜、一个一个点开主页，看内容、核对数据，再手动录入飞书多维表格。 有时候一天什么活都不干，撑死也就找 50 个差不多精准的达人。找完人还要找邮箱、去重、发邮件、跟进回复，一套流程走下来，真的很花时间。 而且我一直做的都是 AI 工具，尤其是面向开发者的产品。之前做过 Chat2DB 这种 text-to-SQL AI 工具，也做过类似 Lovable 这样的 vibe coding 工具。 这类产品找达人，光看他有没有介绍过 AI 相关内容还不够。我还会看他的定位、内容方向和观众里有没有开发者，看看他能不能触达到我们真正想找的用户。 而且当时同时做 AI 和开发者内容的达人还挺少的，所以找起来也不容易。不过我很幸运，去年合作过一位加拿大的 AI 博主，他当时给我们的工具带来了第一笔转化。（现在他已经成了大网红，也基本不...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/12/saigon_hunter-2120630756204785874/" title="Every coin on Elysium gets a perp engine."><img class="cover" src="/images/2120630756204785874-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Every coin on Elysium gets a perp engine.</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @saigon_hunter（Saigon Hunter） 的长文，原文链接，版权归原作者所有。  Perpium is a layer built on top of launchpads, starting with Ascend on Elysium. Every coin launched through Perpium gets its own live Hyperliquid position, paid for by its own trading fees. From the very first trade, part of every fee is set aside for the engine. And nothing about the launchpad changes. A coin launched through Perpium is still a normal launchpad coin, with the same curve and the same trading. The difference is that...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

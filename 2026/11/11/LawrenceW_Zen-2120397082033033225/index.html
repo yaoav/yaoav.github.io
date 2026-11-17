@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="没了 codex 还不能操作电脑了？ 让 AI 自己动手操作电脑，以前我第一个想到的是 Codex。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/11/LawrenceW_Zen-2120397082033033225/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="没了 codex 还不能操作电脑了？ 让 AI 自己动手操作电脑，以前我第一个想到的是 Codex。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120397082033033225-cover.jpg">
+<meta property="article:published_time" content="2026-11-11T14:03:54.000Z">
+<meta property="article:modified_time" content="2026-11-17T07:19:49.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@LawrenceW_Zen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120397082033033225-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格",
+  "url": "https://yaoav.github.io/2026/11/11/LawrenceW_Zen-2120397082033033225/",
+  "image": "https://yaoav.github.io/images/2120397082033033225-cover.jpg",
+  "datePublished": "2026-11-11T14:03:54.000Z",
+  "dateModified": "2026-11-17T07:19:49.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/11/LawrenceW_Zen-2120397082033033225/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2120397082033033225-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">不用 Codex，混元 Hy4 也能自己操作电脑了：实测查完五家 AI 会员价格</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-11T14:03:54.000Z" title="发表于 2026-11-11 14:03:54">2026-11-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@LawrenceW_Zen（劳伦斯）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120397082033033225">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>没了 codex 还不能操作电脑了？ 让 AI 自己动手操作电脑，以前我第一个想到的是 Codex。</p>
+<p>但是最近 OpenAI 实在是太让人失望了，订阅吧没啥用，不订阅吧又想用 computer use，就陷入了两难境地。</p>
+<p>正好混元 Hy4 这一版 11 月 4 日更新，主打的也是这几样：Computer Use（直接操作电脑）、长程 Agent 任务、前端开发。</p>
+<p>我于是想看它能不能独立做完一件我平时真要做的事：核对 ChatGPT、Claude、Gemini、Kimi、智谱五家 AI 会员的官网价格。</p>
+<p>这件事麻烦在两点。很多价格藏在「月付 &#x2F; 年付」切换后面，第一屏看到的不一定是月付价；海外官网还会按你的 IP 换币种。</p>
+<p><strong>先说结果：</strong></p>
+<p>• 五个官网它自己打开、自己点切换、自己截图，30 条价格全对<br>• 卡在人机验证时，它自己换了办法<br>• 查完又用这份数据写了一个会员计算器，还自己写脚本对账<br>• 整个过程我介入了两次</p>
+<p>下面按它的三项能力一个个说，两段提示词都可以直接抄。它查出来的完整价格放在文末。</p>
+<h3 id="1️⃣-交给它的任务"><a href="#1️⃣-交给它的任务" class="headerlink" title="1️⃣ 交给它的任务"></a>1️⃣ 交给它的任务</h3><p>我用的是 WorkBuddy，模型手动选混元 Hy4。</p>
+<p><img src="/images/HW0ovL8bUAA6vUo.jpg" alt="HW0ovL8bUAA6vUo"></p>
+<p>开始前我先让它打开 Mac 自带的计算器 App，用鼠标点按钮算了一道乘法，确认它能直接操作桌面应用。</p>
+<p>然后把真正的任务交给它。提示词里我只给了五个网址和几条规矩：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">帮我操作电脑，去五家 AI 产品的官网核对个人会员价格。</span><br><span class="line"></span><br><span class="line">用你能操作的浏览器（Chrome 或 Safari 都行）依次打开下面五个页面：</span><br><span class="line">1. ChatGPT：https://chatgpt.com/pricing</span><br><span class="line">2. Claude：https://claude.com/pricing</span><br><span class="line">3. Google AI：https://gemini.google/subscriptions/?hl=en-US&amp;gl=US</span><br><span class="line">4. Kimi：https://www.kimi.com/membership/pricing</span><br><span class="line">5. 智谱 GLM Coding Plan：https://bigmodel.cn/glm-coding</span><br><span class="line"></span><br><span class="line">要求：</span><br><span class="line">1. 每个页面都截一张图，保存到工作区的 screenshots 文件夹，文件名用产品名</span><br><span class="line">2. 页面上如果有「月付 / 年付」或「连续包月 / 连续包季 / 连续包年」这类切换，每个选项都要点一下、分别截图、分别读价格。默认显示的往往不是月付价，别只看第一屏</span><br><span class="line">3. 海外产品要美区美元价。如果页面显示的是别的币种，想办法切到美区，并告诉我你是怎么切的</span><br><span class="line">4. 只记面向个人的付费档位，不要企业版、团队版和 API</span><br><span class="line">5. 价格以截图里看到的为准，看不清或读不到的标「未读到」，不要猜</span><br><span class="line"></span><br><span class="line">最后交付：</span><br><span class="line">1. screenshots 文件夹里的全部截图</span><br><span class="line">2. 一个 prices.json，每个档位一条，字段：产品、档位、计费周期、价格、币种、截图文件名</span><br><span class="line">3. 用中文简单说一下：你点了哪些切换，遇到了什么问题，怎么解决的</span><br></pre></td></tr></table></figure>
+
+<h3 id="2️⃣-Computer-Use：它在官网上怎么操作"><a href="#2️⃣-Computer-Use：它在官网上怎么操作" class="headerlink" title="2️⃣ Computer Use：它在官网上怎么操作"></a>2️⃣ Computer Use：它在官网上怎么操作</h3><p><strong>先把页面切到美区</strong></p>
+<p>我的系统是中文的，ChatGPT 一打开就被跳到了中文版。</p>
+<p>它把浏览器的语言、时区、定位都设成美国，再打开就是美区美元价。Google 那边它还在网址后面加了 ?hl&#x3D;en-US&amp;gl&#x3D;US，页面自动跳到了美国站：</p>
+<p><img src="/images/HW0o-MlaAAAGlTk.jpg" alt="HW0o-MlaAAAGlTk"></p>
+<p><strong>点开藏在切换后面的价格</strong></p>
+<p>Kimi 的定价页打开默认停在年付，大字写着 ¥39&#x2F;月：</p>
+<p><img src="/images/HW0pBGoboAAHJPN.jpg" alt="HW0pBGoboAAHJPN"></p>
+<p>它看出来这不是月付价，自己点到 Monthly，读到 ¥49：</p>
+<p><img src="/images/HW0pEB9bAAA-l9u.jpg" alt="HW0pEB9bAAA-l9u"></p>
+<p>智谱也一样，默认停在「连续包季 8 折」。它把包月、包季、包年三个都点了一遍，各截一张：</p>
+<p><img src="/images/HW0pHtYacAANyw4.jpg" alt="HW0pHtYacAANyw4"></p>
+<p>人工查价最容易漏的就是这一步。</p>
+<p><strong>自己检查截图</strong></p>
+<p>ChatGPT 的截图底部被一个推广条挡住了，它点 X 关掉重截。</p>
+<p>Google 底部那行 $199.99 的小字没截全，它把浏览器窗口拉高到 1600×1250 再截一次。</p>
+<h3 id="3️⃣-长程任务：卡住了它怎么办"><a href="#3️⃣-长程任务：卡住了它怎么办" class="headerlink" title="3️⃣ 长程任务：卡住了它怎么办"></a>3️⃣ 长程任务：卡住了它怎么办</h3><p><strong>ChatGPT 的人机验证</strong></p>
+<p>第一个页面就卡住了。ChatGPT 弹出 Cloudflare 验证，它在后台模式下一直过不去。</p>
+<p>它没有停下来问我，自己试了几轮：先等，再点验证框，都不行之后，换成开一个真实的 Chrome 窗口，还自己写了一个小脚本，让五个网站都在同一个浏览器会话里跑，验证就过了。</p>
+<p><strong>一口气跑完</strong></p>
+<p>从装浏览器工具、过验证、切美区，到逐个截图、整理成文件，一整条链路它自己跑完。</p>
+<p>最后交了 9 张截图和一个 30 条价格的文件。我拿着自己核过的价格逐条对，30 条全对，没有编造，也没有「未读到」。</p>
+<p><strong>没做好的地方</strong></p>
+<p>• ChatGPT Pro 只记了「$100 起」，没把 $200、$500 两档展开<br>• 卡在人机验证上反复试了好几次，才换到对的办法</p>
+<h3 id="4️⃣-前端开发：用这份数据写一个计算器"><a href="#4️⃣-前端开发：用这份数据写一个计算器" class="headerlink" title="4️⃣ 前端开发：用这份数据写一个计算器"></a>4️⃣ 前端开发：用这份数据写一个计算器</h3><p>价格表看着累，我接着让它写前端代码，把这份价格做成一个计算器网页：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">用你刚才的 prices.json，帮我做一个「AI 会员计算器」网页，单个 calculator.html 文件，打开就能用，不依赖外部网络。</span><br><span class="line"></span><br><span class="line">输入：主要用途（日常对话 / 写代码 / 想要谷歌全家桶）、付款方式（有美元卡 / 只能用人民币）、打算用几个月（1–24）、汇率（默认 7.1，可改）。</span><br><span class="line"></span><br><span class="line">输出：每个付费档位在所选月数下的总花费，从低到高排，最便宜的高亮；有长期订阅的，同时算出按月付和长期订阅两种总价，显示能省多少。</span><br><span class="line"></span><br><span class="line">长期订阅要按实际收费周期算：用 5 个月买 Kimi 年付，也要付一整年的钱；智谱包季按 3 个月一付。</span><br><span class="line"></span><br><span class="line">做完用三个场景自测，把计算结果和手算对比写出来。</span><br></pre></td></tr></table></figure>
+
+<p>它交了一个 700 多行的单文件网页，界面、交互、计算逻辑都在里面，离线就能打开：</p>
+<p><video controls preload="metadata" poster="/images/2120396426014572545-poster.jpg" src="/videos/2120396426014572545.mp4"></video></p>
+<p><strong>最容易错的逻辑它写对了</strong></p>
+<p>长期订阅最容易算错。拖到 3 个月时它推荐 Kimi 按月付 ¥147，拖到 12 个月才换成年付 ¥468。说明它是按真实的扣费周期在算，不是拿月均价乘月数。</p>
+<p>只能用人民币时，海外产品自动变灰，并注明需要美元卡。</p>
+<p><strong>写完自己对账</strong></p>
+<p>写完它没急着交，又单独写了一个对账脚本。这个脚本不调用网页里的任何公式，把单价重新写一遍、自己手算，再和网页的结果逐项比。三个场景、54 行，全部对上。</p>
+<p>中间比对报过一次不一致，它自己查出来是两边的排序方式不同，数值本身没错，改了比对方式再跑就通过了。</p>
+<p><strong>我指出的一个问题</strong></p>
+<p>我试的时候发现：选「想要谷歌全家桶」，它推荐的是最便宜的 Plus。可 Plus 不带 YouTube Premium 这些权益，用户选这项就是冲着这个来的。</p>
+<p>我把问题发给它，它把推荐从按产品改成按档位，只推荐 Pro 和 Ultra。Plus 留在列表里，标上「不含全家桶权益」：</p>
+<p><img src="/images/HW0pa1iaoAAo8Lx.jpg" alt="HW0pa1iaoAAo8Lx"></p>
+<p>改之前它先把另外两个场景的结果存了一份，改完逐项对比，确认没被改乱。</p>
+<h3 id="5️⃣-用下来的结论"><a href="#5️⃣-用下来的结论" class="headerlink" title="5️⃣ 用下来的结论"></a>5️⃣ 用下来的结论</h3><p>整个过程我介入了两次：一次是中途报「模型繁忙」，我点了重试；一次是指出计算器的推荐逻辑问题。</p>
+<p><strong>适合交给它的活</strong></p>
+<p>步骤多、要在网页上点来点去、能把验收标准写清楚的事。比如这次的核价：给它网址和规矩，它自己去点、去截图、去整理。</p>
+<p>写个小工具也可以，它会自己测、自己对账。</p>
+<p><strong>要注意的地方</strong></p>
+<p>• 最后还是得自己逐条对一遍，它没展开的档位、理解偏的逻辑，得靠人发现<br>• 高峰期可能报「模型繁忙」，任务会中断，点重试能接着跑</p>
+<p>所以我现在的用法是：把网址和规矩交给它，让它自己去点、去截图、去写代码，我最后逐条对一遍。</p>
+<h3 id="6️⃣-使用总结"><a href="#6️⃣-使用总结" class="headerlink" title="6️⃣ 使用总结"></a>6️⃣ 使用总结</h3><p>之前我能用上 Computer Use 的，只有 Codex。</p>
+<p>后来 OpenAI 这几次的模型更新我用着都不太满意，订阅就没再续。可 Computer Use 这个功能我一直惦记着，很多活就是得让 AI 自己上手点。</p>
+<p>这次用下来，Hy4 做得挺好：</p>
+<p>• 切美区、点开月付年付这些细活，它自己就弄明白了<br>• 卡住了会自己换办法，不会停下来等我<br>• 查完还能接着写代码，一条链路做到底</p>
+<p>不用开 Codex，在 WorkBuddy 里选上 Hy4 就能用。对我来说，这是这次更新最实在的进步。</p>
+<h3 id="附：它查出来的五家会员价格"><a href="#附：它查出来的五家会员价格" class="headerlink" title="附：它查出来的五家会员价格"></a>附：它查出来的五家会员价格</h3><p><img src="/images/HW0pg-VakAI3Sdq.jpg" alt="HW0pg-VakAI3Sdq"></p>
+<p>几个容易搞错的地方：</p>
+<p>• ChatGPT 个人档全部只能月付，没有年付<br>• Claude 只有 Pro 能年付，$200 一年，折合 $17&#x2F;月<br>• 最便宜的是 Google AI Plus，$4.99&#x2F;月<br>• Kimi 和智谱能用人民币付，包年能省两到三成<br>• Kimi 默认显示年付价、智谱默认显示包季价，下单前看清楚停在哪个选项</p>
+<p>以下都对过官网，核对日期 2026 年 11 月 9 日。</p>
+<p><strong>ChatGPT</strong><br>• Go：$8&#x2F;月，官方说明可能有广告<br>• Plus：$20&#x2F;月<br>• Pro：$100 &#x2F; $200 &#x2F; $500 三档，$500 那档才有 Ultrafast<br>• 个人档全部只能月付，年付只给 Business 和 Enterprise</p>
+<p><strong>Claude</strong><br>• Pro：$20&#x2F;月，年付 $200，折合 $17&#x2F;月<br>• Max：$100&#x2F;月，Pro 的 5 倍用量<br>• Ultra：$200&#x2F;月，Pro 的 10 倍周用量，验证过的账号没有 5 小时限制<br>• 只有 Pro 能年付，Max 和 Ultra 只能月付</p>
+<p><strong>Google AI（Gemini）</strong><br>• Plus：$4.99&#x2F;月<br>• Pro：$19.99&#x2F;月，带 5TB 存储和 YouTube Premium Lite<br>• Ultra：$99.99&#x2F;月（5 倍用量）或 $199.99&#x2F;月（20 倍用量）</p>
+<p><strong>Kimi</strong><br>• 五档：Go &#x2F; Plus &#x2F; Pro &#x2F; Max &#x2F; Ultra<br>• 连续包月：¥49 &#x2F; ¥99 &#x2F; ¥199 &#x2F; ¥699 &#x2F; ¥1,399<br>• 连续包年：¥468 &#x2F; ¥948 &#x2F; ¥1,908 &#x2F; ¥6,708 &#x2F; ¥13,428<br>• 包年折合每月：¥39 &#x2F; ¥79 &#x2F; ¥159 &#x2F; ¥559 &#x2F; ¥1,119<br>• 额度按月发，包年也一样，当月没用完就清零</p>
+<p><strong>智谱（GLM Coding Plan）</strong><br>• Lite：¥118&#x2F;月，每周 10,000 积分<br>• Pro：¥538&#x2F;月，Lite 的 6 倍用量<br>• Max：¥1,078&#x2F;月，Lite 的 14 倍用量<br>• 连续包季打 8 折：¥94.4 &#x2F; ¥430.4 &#x2F; ¥862.4 每月<br>• 连续包年打 7 折：¥82.6 &#x2F; ¥376.6 &#x2F; ¥754.6 每月<br>• 按每 5 小时和每周限额度<br>• 能在 Claude Code、Codex、WorkBuddy、Cursor 这些编程工具里用，不能拿去自己写程序调用</p>
+<p><strong>长期订阅一年能省多少</strong></p>
+<p><img src="/images/HW0plxJa0AAz286.png" alt="HW0plxJa0AAz286"></p>
+<p>Kimi 包年大约省两成，智谱包年省三成，Claude Pro 年付省一成七。ChatGPT 个人档没有年付，Google AI 官网只写了月付价，所以不在表里。</p>
+<h3 id="📚-历史文章"><a href="#📚-历史文章" class="headerlink" title="📚 历史文章"></a>📚 历史文章</h3><ol>
+<li>豆包工作入门：一份小白看得懂的界面与功能手册</li>
+<li>Muse 代激活在闲鱼居然卖到 29.9？我带你揭秘是怎么搞的</li>
+<li>全网最全 Muse 注册教程：4 种注册方式一次讲清</li>
+<li>还在花钱买美区 Apple ID？国内手机号就能自己注册，附完整图文步骤</li>
+<li>用美区 Apple ID 订阅，没做好这一步，真的会花冤枉钱</li>
+<li>订阅 ChatGPT Plus 全流程：美区礼品卡两种买法 + 充值 + 订阅避坑，花十几刀亲测跑通</li>
+<li>Pockyt Shop 还在缺货？美区苹果礼品卡还可以这样买</li>
+<li>Obsidian 小红书剪藏教程：5 分钟装好，复制链接直接导入</li>
+<li>Obsidian Web Clipper 也能接入 AI？5 分钟搞定，剪藏时笔记自动处理好</li>
+<li>Claudian × opencode 全网首发：用国产模型给 Obsidian 接上一条免费 AI 通道</li>
+<li>可能是全网最全的 Claudian 配置教程了:Claude Code + Codex 双模型实战</li>
+<li>新 Mac 到手先装什么？我的 17 个必装清单</li>
+<li>可能是全网最保姆级的 Obsidian 图床教程了</li>
+<li>零成本搞定 Obsidian 图床：Cloudflare R2 免费方案</li>
+<li>告别复制粘贴：浏览器一键剪藏到 Obsidian</li>
+<li>手机也能一键剪藏：移动端 Obsidian Web Clipper 配置指南</li>
+<li>每天早上打开笔记，AI 已经把今天的待办写好了。</li>
+<li>对笔记说了句”帮我做个健身计划”，它真给我写了一份</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/11/LawrenceW_Zen-2120397082033033225/">https://yaoav.github.io/2026/11/11/LawrenceW_Zen-2120397082033033225/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/LawrenceW-Zen/">@LawrenceW_Zen</a></div><div class="post-share"><div class="social-share" data-image="/images/2120397082033033225-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/11/DeJob_Official-2120410793841951039/" title="Web3 找工作越来越难，或许你需要改变的不只是简历"><img class="cover" src="/images/2120410793841951039-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Web3 找工作越来越难，或许你需要改变的不只是简历</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DeJob_Official（DeJob｜Web3招聘求职 (hiring)） 的长文，原文链接，版权归原作者所有。  最近看到一段 CZ 的访谈，主持人问他：币安招聘人才时，最看重什么？ CZ 提到了一个关键词：主动性。 他认为，尤其是在远程办公环境下，员工不能总是等老板安排任务、催促进度，而应该主动汇报、主动推进，甚至主动发现问题并寻找解决方案。 现在的 Web3 招聘环境不太乐观。 岗位变少了，竞争更激烈了，企业招聘也越来越谨慎。与此同时，AI 正在改变很多岗位的工作方式。 企业需要的，可能不再只是一个熟练完成固定任务的人，而是一个能够独立解决问题、善于使用 AI 提高效率，并且真正创造业务价值的人。 那么，求职者应该如何改变？ 1. 从等待岗位，转变为主动发现机会。 不要每天只是刷招聘信息、投递简历。 关注你感兴趣的项目，研究它们的产品、社区和业务发展，看看它们目前可能存在哪些问题，以及你的能力能提供什么帮助。 主动研究一个项目，甚至主动提出合作方案。有时候，机会并不一定来自一个已经发布的招聘岗位。 2. 从描述经验，转变为展示成果。 简历上写着...</div></div></div></a><a class="pagination-related" href="/2026/11/11/DrRabbitAI-2120347887846760618/" title="GPT-6越写越“怂”？3步避免AI的防御性写作"><img class="cover" src="/images/2120347887846760618-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">GPT-6越写越“怂”？3步避免AI的防御性写作</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @DrRabbitAI（Roxy） 的长文，原文链接，版权归原作者所有。  大家最近在用AI的时候，有没有发现，AI的「道德感」越来越强，也越来越“怂”了？很多话明明一句就能说清楚，它非要在前后加上一堆解释。 这就是最近大家常说的AI防御性写作。如果你还不太理解它是什么，可以看下面几个网上的例子： 1. 让它写婚礼誓言  你是最适合与我共度一生的人之一。需要说明的是，“之一”仅用于避免绝对化表述，并不意味着存在其他候选人。  2. 让它写小说里的表白  我今天喜欢你不代表未来也会选你。  3. 让它汇报任务进度  我没有停止下载，但目前也不能声称它正在正常下载。  4. 让它修改论文  原文：eLife的摘要简化得更多。 &gt; 改后：仅凭作者身份和篇幅，并不能确定简化程度。  （论文《Defensive Writing in GPT Models》中的真实案例。原文的结论其实有数据支持，GPT这一改是多余的）  如果你也遇到过上面这些情况，那你就遇到了防御性写作。 我把常见的“怂”法整理成了7类，大家可以对照一下：  AI为什么越来越“怂”10月初，电...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%B8%8F%E2%83%A3-%E4%BA%A4%E7%BB%99%E5%AE%83%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1️⃣ 交给它的任务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%B8%8F%E2%83%A3-Computer-Use%EF%BC%9A%E5%AE%83%E5%9C%A8%E5%AE%98%E7%BD%91%E4%B8%8A%E6%80%8E%E4%B9%88%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">2️⃣ Computer Use：它在官网上怎么操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%B8%8F%E2%83%A3-%E9%95%BF%E7%A8%8B%E4%BB%BB%E5%8A%A1%EF%BC%9A%E5%8D%A1%E4%BD%8F%E4%BA%86%E5%AE%83%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="toc-number">3.</span> <span class="toc-text">3️⃣ 长程任务：卡住了它怎么办</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%EF%B8%8F%E2%83%A3-%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%EF%BC%9A%E7%94%A8%E8%BF%99%E4%BB%BD%E6%95%B0%E6%8D%AE%E5%86%99%E4%B8%80%E4%B8%AA%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">4️⃣ 前端开发：用这份数据写一个计算器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%EF%B8%8F%E2%83%A3-%E7%94%A8%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="toc-number">5.</span> <span class="toc-text">5️⃣ 用下来的结论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%EF%B8%8F%E2%83%A3-%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">6️⃣ 使用总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%EF%BC%9A%E5%AE%83%E6%9F%A5%E5%87%BA%E6%9D%A5%E7%9A%84%E4%BA%94%E5%AE%B6%E4%BC%9A%E5%91%98%E4%BB%B7%E6%A0%BC"><span class="toc-number">7.</span> <span class="toc-text">附：它查出来的五家会员价格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0"><span class="toc-number">8.</span> <span class="toc-text">📚 历史文章</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="兄弟姐妹们，我想说句实话，之前看了好多所谓的公众号排版自动化，弄出来的效果，啧啧.. 前两天开始深度玩起来 EGO Lite，发现很多之前想达到的公众号排版都可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/14/X-2121569549271412956/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="兄弟姐妹们，我想说句实话，之前看了好多所谓的公众号排版自动化，弄出来的效果，啧啧.. 前两天开始深度玩起来 EGO Lite，发现很多之前想达到的公众号排版都可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121569549271412956-cover.jpg">
+<meta property="article:published_time" content="2026-11-14T19:42:52.000Z">
+<meta property="article:modified_time" content="2026-11-15T19:42:28.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121569549271412956-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程",
+  "url": "https://yaoav.github.io/2026/11/14/X-2121569549271412956/",
+  "image": "https://yaoav.github.io/images/2121569549271412956-cover.jpg",
+  "datePublished": "2026-11-14T19:42:52.000Z",
+  "dateModified": "2026-11-15T19:42:28.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/14/X-2121569549271412956/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121569549271412956-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">全部公开！Codex＋Ego lite 精美公众号自动化排版全流程教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-14T19:42:52.000Z" title="发表于 2026-11-14 19:42:52">2026-11-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121569549271412956">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>兄弟姐妹们，我想说句实话，之前看了好多所谓的公众号排版自动化，弄出来的效果，啧啧..</p>
+<p>前两天开始深度玩起来 EGO Lite，发现很多之前想达到的公众号排版都可以全部交给 AI 了</p>
+<p>用 <strong>Codex＋Ego lite＋秀米</strong>，让 AI 学习我喜欢的版式，再完成排版、组件制作和微调，这一套完整流程我都做成了新人配置 Skill，以及完整的 30 个 AI 可以一键理解的组件！全部公开！</p>
+<p>我知道你急，但你先别急。**下面的头像跳转、互动组件和整篇排版效果，都是我用 Codex＋Ego lite＋秀米做出来的。**先看实录，再来判断小弟有没有吹牛，嘻嘻。</p>
+<p>跑通的方法已经整理成 <strong>「小鱼 Fred 的公众号排版外挂 Skill 包」</strong>，30 个组件入口，连预览和示例一起开源。这次还加了一个<strong>上手配置 Skill</strong>，专门带第一次接触的朋友检查环境、补素材、调风格。</p>
+<p>所有正在做公众号、或者想开始做公众号的朋友们，建议把这篇看完，再拿自己的文章跟着跑一遍。</p>
+<p>**让排版上一个 level，再把满意的效果沉淀成自己的 Skill。以后每次交正文和本篇图片，AI 就按你固定的流程完成排版、组件制作和微调。**遇到扫码、素材缺失或效果需要确认时，你接一下，AI 再继续做。</p>
+<h2 id="先看这篇会做哪四件事"><a href="#先看这篇会做哪四件事" class="headerlink" title="先看这篇会做哪四件事"></a>先看这篇会做哪四件事</h2><p><img src="/images/HXFPnjZaAAAvLSy.jpg" alt="HXFPnjZaAAAvLSy"></p>
+<h2 id="一、先看效果，从头像跳转到整篇排版"><a href="#一、先看效果，从头像跳转到整篇排版" class="headerlink" title="一、先看效果，从头像跳转到整篇排版"></a>一、先看效果，从头像跳转到整篇排版</h2><p>我最开始想做头像跳转，是为了让读者更方便找到我的公众号，喜欢就顺手关注。</p>
+<p>下面是手机实录。点击头像，在微信弹窗里点「允许」，就能进入「小鱼FRED」主页。</p>
+<p><video controls preload="metadata" poster="/images/2121565047365545984-poster.jpg" src="/videos/2121565047365545984.mp4"></video></p>
+<p>约 4 秒，文章头像 → 微信确认 → 公众号主页。</p>
+<p>**下面这张图，把 30 款组件都放在一起了。**拆信、翻牌、图集横滑、点击揭秘……先挑你想用的效果。</p>
+<p><img src="/images/HXFQOncbEAAC4oA.jpg" alt="HXFQOncbEAAC4oA"></p>
+<p>组件库的 30 款浏览器演示总览。完整交互可以点开试用。打开在线预览</p>
+<p><strong>再看看其中 6 款怎么动起来。</strong></p>
+<p><video controls preload="metadata" poster="/images/2121565203410423808-poster.jpg" src="/videos/2121565203410423808.mp4"></video></p>
+<p>我把这些组件的方法、示例和素材一并收进了 Skill 包。下面是仓库里的首次配置入口。</p>
+<p><img src="/images/HXFQcvCaQAAGY1L.jpg" alt="HXFQcvCaQAAGY1L"></p>
+<p>新版仓库首页。README 里的「首次配置下载上手 Skill」，就是这次新增的小白入口。</p>
+<p>你可以让 AI 替换头像、配图和组件文字，按自己的公众号风格调整。</p>
+<p>我之前试过 WorkBuddy 的公众号运营专家，按当时的测试，头像入口和排版效果一直没达到我的预期。后来就沿着 Codex＋Ego lite 这条路线继续做了下去。</p>
+<p>**头像入口需要真实的公众号名片。**提供自己的账号资料并完成登录后，让 AI 按 Skill 处理，最后用手机核对跳转账号。</p>
+<p>先看 GIF，再点「打开可操作演示」，挑适合自己文章的效果。GitHub 仓库 · 组件预览</p>
+<h2 id="二、准备工具，用上手-Skill-带你配置"><a href="#二、准备工具，用上手-Skill-带你配置" class="headerlink" title="二、准备工具，用上手 Skill 带你配置"></a>二、准备工具，用上手 Skill 带你配置</h2><p>这篇以同一台电脑上的 Codex 为例。后面会用到这些东西，<strong>缺哪项，让上手 Skill 带着补齐。</strong></p>
+<ul>
+<li>| 工具或材料 | 用来做什么 |</li>
+<li>|—|—|</li>
+<li>| <a target="_blank" rel="noopener" href="https://openai.com/codex/">Codex</a> | 读取本地 Skill、执行排版任务 |</li>
+<li>| <a target="_blank" rel="noopener" href="https://lite.ego.app/">Ego lite</a> | 让 AI 操作公众号和秀米网页 |</li>
+<li>| <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/">微信公众平台</a>、<a target="_blank" rel="noopener" href="https://xiumi.us/">秀米</a> | 编辑图文、处理组件、保存草稿 |</li>
+<li>| <a target="_blank" rel="noopener" href="https://github.com/frederick-kk/wechat-layout-copilot/releases/download/v0.6.0/wechat-layout-starter.zip">上手配置 Skill（ZIP）</a> | 带你检查环境、选择组件，生成个人排版 Skill |</li>
+<li>| <a target="_blank" rel="noopener" href="https://www.python.org/downloads/">Python 运行环境（3.10+）</a> | 运行组件脚本，由上手 Skill 检查并引导安装 |</li>
+<li>| 正文、参考文章和本人图片 | 确定你的内容、风格与账号身份 |</li>
+</ul>
+<h3 id="2-1-下载上手-Skill，完整解压"><a href="#2-1-下载上手-Skill，完整解压" class="headerlink" title="2.1 下载上手 Skill，完整解压"></a>2.1 下载上手 Skill，完整解压</h3><ol>
+<li>打开 GitHub 仓库首页，点击 <strong>「首次配置下载上手 Skill」</strong>，取得 wechat-layout-starter.zip。</li>
+<li>完整解压到自己的公众号项目文件夹，打开 <strong>wechat-layout-starter</strong> 文件夹，找到里面的 <strong>SKILL.md</strong>。</li>
+<li>把这份文件的完整路径发给 Codex，让它读取。</li>
+</ol>
+<p>上手包里配套的说明和脚本要一起保留。选好效果后，AI 会下载对应组件，已有整库也可以直接复用。下载上手 Skill</p>
+<p>顺手点个 Star，方便以后回来找，嘻嘻。</p>
+<h3 id="2-2-发一段提示词，让-AI-开始带你走"><a href="#2-2-发一段提示词，让-AI-开始带你走" class="headerlink" title="2.2 发一段提示词，让 AI 开始带你走"></a>2.2 发一段提示词，让 AI 开始带你走</h3><p><strong>下面的方括号换成自己的路径或资料。暂时缺少的材料，直接告诉 AI。</strong></p>
+<p><strong>发送给 AI｜开始上手配置</strong></p>
+<blockquote>
+<p>请读取 [解压目标目录]&#x2F;wechat-layout-starter&#x2F;SKILL.md，按 wechat-layout-starter 的流程带我配置公众号排版。先检查本机环境和 Ego lite 连接，集中说明缺少什么、怎么补。已有配置请接着继续。我使用 [操作系统＋AI 工具]，公众号是 [名称或文章链接]，风格参考在 [旧文章链接、HTML 或截图路径]，希望最后保存到公众号草稿箱。带我选组件、补本人素材，先用一小段真实正文做小样。等我确认后，生成包含所选组件和素材的个人排版 Skill，提供完整文件夹、ZIP、实际路径和下次调用方式。</p>
+</blockquote>
+<p>需要首次接通 Ego lite 时，按引导完成安装和首次设置，再重开同机 Codex，输入 &#x2F;ego 选择 <strong>Ego Browser</strong>。AI 要能实际打开网页、读到标题和网址，才算接通。官方接入说明 · 我之前的 Ego lite 教程</p>
+<h2 id="三、配置自己的风格，生成个人-Skill"><a href="#三、配置自己的风格，生成个人-Skill" class="headerlink" title="三、配置自己的风格，生成个人 Skill"></a>三、配置自己的风格，生成个人 Skill</h2><p><strong>上手 Skill 带你完成配置，个人 Skill 则把你的风格、组件和操作流程保存下来。</strong></p>
+<p><img src="/images/HXFQ5UJaQAAv3pP.jpg" alt="HXFQ5UJaQAAv3pP"></p>
+<p>上手 Skill 会带着你把组件方法、个人风格和本人素材组合起来，生成图中这份个人 Skill。</p>
+<h3 id="3-1-AI-会带着你完成这五步"><a href="#3-1-AI-会带着你完成这五步" class="headerlink" title="3.1 AI 会带着你完成这五步"></a>3.1 AI 会带着你完成这五步</h3><ul>
+<li>| 步骤 | 你会看到什么、需要做什么 |</li>
+<li>|—|—|</li>
+<li>| ① 接通环境 | 沿用已接通的环境，补齐缺项，需要登录时扫码，完成后回复「可以继续」 |</li>
+<li>| ② 学习风格 | 提供自己的旧文章，AI 提取配色、字级、间距和图文关系 |</li>
+<li>| ③ 选择组件 | 看预览报组件名或页面序号，AI 下载所选组件，说明放在哪、还缺什么素材 |</li>
+<li>| ④ 试排微调 | 用一小段真实正文看效果，直接指出颜色、间距、头像和组件位置怎么改 |</li>
+<li>| ⑤ 生成个人 Skill | 小样确认后，AI 打包风格配置、所选组件、本人素材和日常排版流程 |</li>
+</ul>
+<p>旧文章先给一篇完整的就能开始。链接打不开，再补 HTML 或完整截图。新公众号可以先给喜欢的参考文章，或者说出偏好，让 AI 做小样供你选。</p>
+<p>比如我喜欢白色折痕纸纹、暖橙和黑色手绘，前后放自己的头像入口。你也可以调出完全属于自己的那一套。</p>
+<h3 id="3-2-直接看效果选，哪里不顺眼就改哪里"><a href="#3-2-直接看效果选，哪里不顺眼就改哪里" class="headerlink" title="3.2 直接看效果选，哪里不顺眼就改哪里"></a>3.2 直接看效果选，哪里不顺眼就改哪里</h3><p>让 AI 打开组件预览，看动图、试交互，再把想用的组件名称告诉它。打开在线预览</p>
+<p>想加点击揭秘、拆信或图集，直接说。AI 会结合正文安排位置，列出需要的图片、文字或真实账号名片。</p>
+<p>小样出来后，可以这样提意见。「第二节底色再浅一点，标题上下多留一点空隙，头像放到结尾也来一次。」</p>
+<p><strong>你负责看效果、说偏好、补素材，AI 负责把这些要求整理成可复用的规则。</strong></p>
+<h3 id="3-3-最后拿到一份完整的个人-Skill"><a href="#3-3-最后拿到一份完整的个人-Skill" class="headerlink" title="3.3 最后拿到一份完整的个人 Skill"></a>3.3 最后拿到一份完整的个人 Skill</h3><p>让 AI 给出 <strong>个人 Skill 文件夹、ZIP 和 SKILL.md 的完整路径</strong>，确认里面已经带上所选组件与本人素材。</p>
+<p>以后想固定下来的微调，直接让它更新这份个人 Skill。通过名称调用时，按所用 AI 工具的方式安装；直接提供完整路径让它读取，也能继续用。</p>
+<h2 id="四、实际排一篇，最后检查公众号草稿"><a href="#四、实际排一篇，最后检查公众号草稿" class="headerlink" title="四、实际排一篇，最后检查公众号草稿"></a>四、实际排一篇，最后检查公众号草稿</h2><p><img src="/images/HXFRCUnboAEHgbC.jpg" alt="HXFRCUnboAEHgbC"></p>
+<h3 id="4-1-提供正文，调用自己的-Skill"><a href="#4-1-提供正文，调用自己的-Skill" class="headerlink" title="4.1 提供正文，调用自己的 Skill"></a>4.1 提供正文，调用自己的 Skill</h3><p>配置完成后，把<strong>个人 Skill 路径、完整正文和本篇图片</strong>交给 AI，日常就从这里开始。</p>
+<p><strong>发送给 AI｜开始本篇排版</strong></p>
+<blockquote>
+<p>请读取 [个人 Skill 文件夹]&#x2F;SKILL.md，正文为 [正文路径或粘贴内容]，图片在 [素材目录]，目标公众号是 [名称或文章链接]。沿用我的个人配置，保留原文措辞和顺序，缺少素材集中说明。通过 Ego lite 检查公众号和秀米的登录状态，核对目标账号。已有稿件 [链接或 ID] 时继续编辑本篇，新正文新建独立图文。按组件 Skill 完成排版与微调，保存到配置中的目标草稿，需要秀米同步时按对应入口处理。保存后重新打开检查，返回最终草稿的标题、链接或 ID，列出本篇使用的组件及对应段落，最后停在草稿检查环节。</p>
+</blockquote>
+<p>遇到扫码、授权或登录过期，你接一下，完成后明确回复 <strong>「已登录，可以继续」</strong>，AI 再接着操作。</p>
+<p>好了，先去喝口水，等 AI 给你看第一版。</p>
+<h3 id="4-2-公众号已有草稿，怎么拉到秀米继续改"><a href="#4-2-公众号已有草稿，怎么拉到秀米继续改" class="headerlink" title="4.2 公众号已有草稿，怎么拉到秀米继续改"></a>4.2 公众号已有草稿，怎么拉到秀米继续改</h3><p>需要在两端编辑时，让 AI 在同一个 Ego lite 任务里同时打开公众号和秀米。首次使用，通过秀米右上角 <strong>「授权设置」</strong> 绑定自己的公众号。</p>
+<p><strong>从公众号草稿箱导入秀米，按这四步。</strong></p>
+<ol>
+<li>在秀米新建空白图文。</li>
+<li>点击 <strong>「更多 → 导入公众号文章」</strong>。</li>
+<li>切到 <strong>「从授权公众号导入」</strong>，选择自己的公众号。</li>
+<li>在 <strong>「草稿箱」</strong> 选中图文，点击 <strong>「导入」</strong>，核对文字和图片后继续编辑。</li>
+</ol>
+<p><img src="/images/HXFRHCobYAA-gm1.png" alt="HXFRHCobYAA-gm1"></p>
+<p>授权导入窗口。选择账号后，从草稿箱找到目标图文。</p>
+<p>已发表文章可在「导入公众号文章」标签里粘贴阅读页链接。当前页面标注，链接导入对等级 VIP 开放。</p>
+<p>**改完送回公众号，点击「保存 → 导出 → 同步到公众号」。**核对目标账号，完成后按标题找到最终草稿。特殊组件的同步方式按对应 Skill 处理。</p>
+<p><img src="/images/HXFRJz9bUAA3S8y.png" alt="HXFRJz9bUAA3S8y"></p>
+<p>秀米顶部「导出」里的同步入口。</p>
+<h3 id="4-3-需要调整，指清位置和变化"><a href="#4-3-需要调整，指清位置和变化" class="headerlink" title="4.3 需要调整，指清位置和变化"></a>4.3 需要调整，指清位置和变化</h3><p><strong>发送给 AI｜定点微调示例</strong></p>
+<blockquote>
+<p>请把第二节标题下的卡片底色调浅，增加上下留白，放大按钮文字。保留正文，保存后重新打开检查显示和点击效果。</p>
+</blockquote>
+<h3 id="4-4-保存重开，核对四项"><a href="#4-4-保存重开，核对四项" class="headerlink" title="4.4 保存重开，核对四项"></a>4.4 保存重开，核对四项</h3><ul>
+<li>| 核对项 | 看什么 |</li>
+<li>|—|—|</li>
+<li>| ① 文字 | 标题、正文、顺序、图注是否完整 |</li>
+<li>| ② 版面 | 图片、纸纹、字号、间距、换行是否正常 |</li>
+<li>| ③ 组件 | 保存重开后能否操作，头像是否跳到自己的账号 |</li>
+<li>| ④ 手机 | 图片加载、实际点击、浅色与深色显示是否正常 |</li>
+</ul>
+<p>所选组件按实际草稿逐项检查，库内也保留了各自的测试范围。查看组件检查说明</p>
+<p><strong>拿到个人 Skill 后，下一篇就是同一个入口，换上新的正文和图片继续排。</strong></p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>现在看到好玩的组件，我就想让 AI 去研究一下。跑通后收进 Skill 包，下一篇又能接着用。</p>
+<p>这次连第一次配置的路也整理进去了。先让 AI 带着你跑通一篇，再慢慢调出自己的风格。</p>
+<p>你用出更好看的效果，也欢迎拿来交流，我继续学。小鱼 Fred 的公众号排版外挂 Skill 包</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/14/X-2121569549271412956/">https://yaoav.github.io/2026/11/14/X-2121569549271412956/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2121569549271412956-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/14/fxh_crypto-2121585071392215457/" title="SQOREX 把 AI 放进交易过程，五位一体从这里起步"><img class="cover" src="/images/2121585071392215457-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">SQOREX 把 AI 放进交易过程，五位一体从这里起步</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @fxh_crypto（Feixiaohao.ai） 的长文，原文链接，版权归原作者所有。  把自己的交易想法变成一套策略，需要跨过编程、回测和执行之间的距离。SQOREX希望从这里切入，让用户用自然语言描述需求，由AI协助创建工具和策略，再把它们带入交易场景。这也解释了它为什么把交易所作为当前重点推进的业务。 11月13日，在非小号旗舰先导峰会系列访谈中，主持人K博士（@ken_fxh）与SQOREX战略规划师奇哥，围绕AI交易功能、基础设施进度和生态协作展开交流。奇哥自述也是项目联合创始人之一，2017年进入区块链行业，参与过公链、交易所、钱包和量化平台的建设运营。他希望将这些经验整合到一个面向全球市场的数字金融生态中。 平台竞争走向产品和长期服务奇哥对行业变化的判断很明确。过去，交易平台可以依靠上币、手续费优惠和推广获取用户；未来，用户会更重视安全、流动性、风控能力与长期服务。平台需要拿出综合实力，产品和持续运营的分量会更重。 他同时关注稳定币支付、链上金融、跨境结算、链游和RWA等方向，认为行业发展需要真实需求和可持续的商业模式。K博士则从参与者变...</div></div></div></a><a class="pagination-related" href="/2026/11/14/Kainative-2121538740011086306/" title="开源一个没有推荐算法的 B 站，专门给孩子学科学、数学和 AI"><img class="cover" src="/images/2121538740011086306-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">开源一个没有推荐算法的 B 站，专门给孩子学科学、数学和 AI</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Kainative（大宇） 的长文，原文链接，版权归原作者所有。  最近看短剧，发现里面的“系统”设定贼厉害。主角绑定系统，完成任务、领取奖励、解锁技能，一路升级。 我突然想到，能不能给娃也做一个？ 娃现在五六年级，我确实希望他以后能接触 AI，甚至研究深度学习。 但现实是，现在直接塞给他神经网络课程，估计两分钟就跑了。😂 反过来看红果短剧，连大人都能刷得停不下来，更别说孩子。 **能不能把这套玩法反过来，用在孩子学习上？**不要无限下滑的推荐流，而是自己精选内容，给娃设计一条成长路线。从拆玩具、科学实验开始，一步步解锁数学、编程，最后进入机器学习。 看完打卡、完成任务、领取徽章，像短剧主角一样不断升级。 于是，我用 Ling-3.2-flash + pi，给娃做了一个学习成长系统：BiliPicks。支持手机、平板、电视、投影仪。  01 从推荐流变成家长严选灵感来自 Karpathy。 前几天，他用 Claude Code，花 3 分钟把 Tristan 分享的优质 YouTube 频道做成了 TristanTube，收录 4.7 万个视频，还带电...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/11/X-2120480271195910591/" title="AI 时代，90% 的项目都可以批量"><img class="cover" src="/images/2120480271195910591-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-11</div><div class="info-item-2">AI 时代，90% 的项目都可以批量</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  AI 时代，90% 的项目都可以批量我从 1 个号做到 2000 个号：任何跑通的项目，都能矩阵化 先看结果。 下面是我抖音上自己的号。一个号，累计收益 481713.71 元。基础收益 200279.2，精选收益 53465.85，签约收益 227869.41。签约收益占了接近一半。  这不是孤例。另外两个号，一个累计 13376.19，一个累计 8636.7。三个号加起来，50 万出头。   再看公众号。下面是我随手截的 7 个号，都是我自己的。  7 个号，昨日阅读加起来 407280 次，昨日广告收入加起来 3702.27 元。  我把这 7 个号的数字列出来：  · 阅读 75142，昨日广告收入 807.09  · 阅读 120070，昨日广告收入 888.51  · 阅读 50971，昨日广告收入 409.36 · 阅读 48747，昨日广告收入 223.29 · 阅读 24671，昨日广告收入 430.47 · 阅读 70181，昨日广告收入 774.04 · 阅读 17498，昨日广告收...</div></div></div></a><a class="pagination-related" href="/2026/11/12/X-2120783846253719901/" title="两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操"><img class="cover" src="/images/2120783846253719901-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我做视频号两年多，粉丝近2000。 这个数字放进任何一篇起号教程，都算还没起来。可我靠视频号赚到的钱，比不少几万粉的账号要多。我做的是个人 IP 口播，对着手机讲装修科普、孩子上学要注意的事、公文写作里常见的问题，都是身边的日常小问题。没有团队，客户大部分在县城。 这两天我把自己在视频号上走过的路理了一遍。两个平台差别挺大，有些地方我的做法跟小红书刚好反着来，后面会讲到。 这篇写给想做个人 IP、还没开始的人。我的经验只来自县城客户和私域成交，做纯流量号或者带货号的朋友，看的时候要打个折，我没有这样的经验。 一、视频号怎么把你送到别人面前在小红书，陌生人靠兴趣推荐和搜索看到你。抖音主要靠算法。视频号也有算法推荐，但它多了一条路，就是你的微信好友。 视频号里那颗爱心是“推荐”。一个人点了它，他的好友就有机会刷到这条视频，还能看到是谁推荐的。视频也能一键转进群、发朋友圈、私聊给某个人。一条视频就这样顺着人和人的关系往外走。 社交推荐和算法推荐各占多少，网上说法很多，有说五五开的，也有说社交占六成以上的。我没找...</div></div></div></a><a class="pagination-related" href="/2026/10/26/X-2114602910797709607/" title="2.3万字长文｜FDE 百问百答：从入行求职、独立接单到进场交付"><img class="cover" src="/images/2114602910797709607-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-26</div><div class="info-item-2">2.3万字长文｜FDE 百问百答：从入行求职、独立接单到进场交付</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  大家好，我是司徒K，做企业服务十几年了，这几年一直把主要的精力放在企业 AI 落地业务里。我很看好这个方向，但对个人靠做 FDE 把它变成一门独立生意，并不太乐观。 FDE 这个词本身就没意义了，它被用得也太宽了，培训、咨询、定制开发、驻场交付，所有的这些业务都用 FDE 来定义。这些业务怎么服务？怎么收钱？怎么交付？差别特别大，所以我更喜欢用企业 AI 落地来介绍这个业务。 FDE 是个岗位，能把一个项目交付出来，和能把一门生意持续经营下去，完全是两回事。 把知识库建起来、把核心流程跑通，只是开始。客户从哪来、需求怎么梳理、成交成本多高、钱怎么收、交付后谁维护——这些经营上的问题，不会因为项目跑通了就自动解决。 如果只拿个人时间硬扛非标交付，结果往往是越做越忙，最后把自己困在项目里。 所以我把 FDE 从入行、求职，到独立接单、进场交付的 100 个具体问题整理成了这份百问百答。无论你是准备入行做 FDE 工程师，还是想自己接项目，把企业 AI 落地当成一门生意来做，都可以拿它对照着梳理、查漏补缺。在真...</div></div></div></a><a class="pagination-related" href="/2026/10/28/X-2115427239412351155/" title="别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！"><img class="cover" src="/images/2115427239412351155-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-28</div><div class="info-item-2">别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  你是否也因为影视会员费用越来越高，渐渐不怎么看电视了？ 想看内容时，常常只能用手机投屏，步骤多、体验也打折，电视的使用率越来越低。今天就手把手教你安装电视盒子，让电视不再只能靠手机投屏，重新回到开机就能直接使用的状态。  第一步：先选适配的电视端软件下载地址：https://zoo.ink/tvbox.html 准备个U盘：电视端应用有不同品牌、版本和遥控器适配情况。选择前先看它是否标注 TV 版&#x2F;盒子版，核对系统要求、开发者信息与下载来源；安装电视 APK。  第二步：确认电视系统与安装入口电视系统决定了能否直接安装 Android APK。Android TV&#x2F;安卓电视通常可从系统自带应用商店安装应用；Samsung Tizen、LG webOS 等系统不能直接运行 Android APK，可先查看电视自带商店，或用 HDMI 外接 Android 电视盒子。 下图整理了小米&#x2F;红米、海信&#x2F;VIDAA、TCL&#x2F;雷鸟的常见入口参考。  图 2｜小米 &#x...</div></div></div></a><a class="pagination-related" href="/2026/10/26/X-2114669418433401152/" title="公众号新手保姆级0-1起号流程"><img class="cover" src="/images/2114669418433401152-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-26</div><div class="info-item-2">公众号新手保姆级0-1起号流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  公众号新手保姆级起号流程从选赛道到流量主变现我是生于，我做公众号矩阵 3 年，最高月收益100W+。运营规模最大时，我同时运营过 2000 个公众号 单账号程序化广告累计收益最高达到 247,248.92 元。 这篇文章，我会按实际运营流程，把公众号从选赛道、定读者、起号，到内容创作、开通流量主和广告变现拆开讲。直发、垂直养号、AB 转类型、找对标、写文章和做排版，都会结合我的实操经验说明白。  单账号程序化广告累计收入截图 01  选赛道、定读者，做好账号包装先想清楚自己准备长期做什么，再去找对应的读者。你做读书内容，账号名称、头像和简介就围绕读书来设计；做楼市内容，主页也要让人一眼知道你关注房地产。读者点进主页，应该很快看懂这个账号在写什么。 赛道也要具体到人群。同样写职场，可以写给刚毕业的新人，也可以写给工作多年的管理者；他们关心的问题不一样，选题和表达也要跟着变。年龄段可以作为切入口，再继续细分生活阶段和实际需求。 公众号不要今天做读书，明天转楼市，后天又追情感热点。先选一个方向持续写，几篇数据不...</div></div></div></a><a class="pagination-related" href="/2026/10/27/X-2114973973503185354/" title="我是如何从好莱坞视效，开始转型做AIGC的"><img class="cover" src="/images/2114973973503185354-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-27</div><div class="info-item-2">我是如何从好莱坞视效，开始转型做AIGC的</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  做 AI 视频这几个月，我花钱最多、卡得最久的地方，跟我原来想的完全不一样。 先说结论： 当技术的门槛降到极低的时候，做 AIGC最难的已不是技术，而是怎么讲好一个故事，也就是内容。 我这么说可能挺反直觉的，按理说以我的行业经验，最拿手的应该是画面。当然，这跟我有合成和制片的底子有关，对没做过视频的朋友来说，技术和流程确实需要花时间去啃。 但自从我裸辞、All in AI 以来，技术层面的东西我花了一阵子就跑通了第一套制作流程，真正让我头大的，反而是「讲故事&#x2F;Story Telling」。 下面聊聊，我是怎么一路撞到这堵墙上的。希望可以给你们带来一点参考或启发。 01. 来时路-好莱坞我是做影视视效合成出身的。在好莱坞，我参与过《西部世界》《怪奇物语》《神盾局特工》和《哥谭市》等几十部科幻剧，当时所在的团队还凭借《哥谭市》的视效拿过艾美奖。  做视效有点像变魔法：演员对着空气演，我们负责把场景和画面一层层造出来，让观众信以为真。但合成对画面的要求是像素级的，边缘、颜色、运动模糊、景深、噪点，只要...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E7%9C%8B%E8%BF%99%E7%AF%87%E4%BC%9A%E5%81%9A%E5%93%AA%E5%9B%9B%E4%BB%B6%E4%BA%8B"><span class="toc-number">1.</span> <span class="toc-text">先看这篇会做哪四件事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E7%9C%8B%E6%95%88%E6%9E%9C%EF%BC%8C%E4%BB%8E%E5%A4%B4%E5%83%8F%E8%B7%B3%E8%BD%AC%E5%88%B0%E6%95%B4%E7%AF%87%E6%8E%92%E7%89%88"><span class="toc-number">2.</span> <span class="toc-text">一、先看效果，从头像跳转到整篇排版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%87%86%E5%A4%87%E5%B7%A5%E5%85%B7%EF%BC%8C%E7%94%A8%E4%B8%8A%E6%89%8B-Skill-%E5%B8%A6%E4%BD%A0%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">二、准备工具，用上手 Skill 带你配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E4%B8%8B%E8%BD%BD%E4%B8%8A%E6%89%8B-Skill%EF%BC%8C%E5%AE%8C%E6%95%B4%E8%A7%A3%E5%8E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 下载上手 Skill，完整解压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8F%91%E4%B8%80%E6%AE%B5%E6%8F%90%E7%A4%BA%E8%AF%8D%EF%BC%8C%E8%AE%A9-AI-%E5%BC%80%E5%A7%8B%E5%B8%A6%E4%BD%A0%E8%B5%B0"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 发一段提示词，让 AI 开始带你走</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A3%8E%E6%A0%BC%EF%BC%8C%E7%94%9F%E6%88%90%E4%B8%AA%E4%BA%BA-Skill"><span class="toc-number">4.</span> <span class="toc-text">三、配置自己的风格，生成个人 Skill</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-AI-%E4%BC%9A%E5%B8%A6%E7%9D%80%E4%BD%A0%E5%AE%8C%E6%88%90%E8%BF%99%E4%BA%94%E6%AD%A5"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 AI 会带着你完成这五步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E7%9B%B4%E6%8E%A5%E7%9C%8B%E6%95%88%E6%9E%9C%E9%80%89%EF%BC%8C%E5%93%AA%E9%87%8C%E4%B8%8D%E9%A1%BA%E7%9C%BC%E5%B0%B1%E6%94%B9%E5%93%AA%E9%87%8C"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 直接看效果选，哪里不顺眼就改哪里</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E6%9C%80%E5%90%8E%E6%8B%BF%E5%88%B0%E4%B8%80%E4%BB%BD%E5%AE%8C%E6%95%B4%E7%9A%84%E4%B8%AA%E4%BA%BA-Skill"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 最后拿到一份完整的个人 Skill</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E9%99%85%E6%8E%92%E4%B8%80%E7%AF%87%EF%BC%8C%E6%9C%80%E5%90%8E%E6%A3%80%E6%9F%A5%E5%85%AC%E4%BC%97%E5%8F%B7%E8%8D%89%E7%A8%BF"><span class="toc-number">5.</span> <span class="toc-text">四、实际排一篇，最后检查公众号草稿</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E6%8F%90%E4%BE%9B%E6%AD%A3%E6%96%87%EF%BC%8C%E8%B0%83%E7%94%A8%E8%87%AA%E5%B7%B1%E7%9A%84-Skill"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 提供正文，调用自己的 Skill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%85%AC%E4%BC%97%E5%8F%B7%E5%B7%B2%E6%9C%89%E8%8D%89%E7%A8%BF%EF%BC%8C%E6%80%8E%E4%B9%88%E6%8B%89%E5%88%B0%E7%A7%80%E7%B1%B3%E7%BB%A7%E7%BB%AD%E6%94%B9"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 公众号已有草稿，怎么拉到秀米继续改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E9%9C%80%E8%A6%81%E8%B0%83%E6%95%B4%EF%BC%8C%E6%8C%87%E6%B8%85%E4%BD%8D%E7%BD%AE%E5%92%8C%E5%8F%98%E5%8C%96"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 需要调整，指清位置和变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E4%BF%9D%E5%AD%98%E9%87%8D%E5%BC%80%EF%BC%8C%E6%A0%B8%E5%AF%B9%E5%9B%9B%E9%A1%B9"><span class="toc-number">5.4.</span> <span class="toc-text">4.4 保存重开，核对四项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">5.5.</span> <span class="toc-text">写在最后</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

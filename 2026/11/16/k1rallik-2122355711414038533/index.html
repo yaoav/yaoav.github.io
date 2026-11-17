@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="You ask Grok Bot to research an idea. Send the findings to Claude. Move the resu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/16/k1rallik-2122355711414038533/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="You ask Grok Bot to research an idea. Send the findings to Claude. Move the resu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122355711414038533-cover.jpg">
+<meta property="article:published_time" content="2026-11-16T23:46:47.000Z">
+<meta property="article:modified_time" content="2026-11-17T01:00:16.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@k1rallik">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122355711414038533-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Graphs, Loops & Reverse Engineering: Build Your Own AI Team (Full Guide)",
+  "url": "https://yaoav.github.io/2026/11/16/k1rallik-2122355711414038533/",
+  "image": "https://yaoav.github.io/images/2122355711414038533-cover.jpg",
+  "datePublished": "2026-11-16T23:46:47.000Z",
+  "dateModified": "2026-11-17T01:00:16.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/16/k1rallik-2122355711414038533/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Graphs, Loops & Reverse Engineering: Build Your Own AI Team (Full Guide)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122355711414038533-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@k1rallik（BuBBliK）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122355711414038533">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>You ask Grok Bot to research an idea. Send the findings to Claude. Move the result into ChatGPT for a second opinion.</p>
+<p>An hour later, you have three chats, several conflicting answers, and a job carrying context between them.</p>
+<p>You still remember the requirements, catch the mistakes, and decide what happens next. Every handoff depends on you.</p>
+<p>To delegate more of that work, you need a process:</p>
+<ul>
+<li>Reverse engineering turns an existing product into observable requirements.</li>
+<li>A graph defines the tasks and their dependencies.</li>
+<li>A loop checks a result and sends it back for correction.</li>
+</ul>
+<p>Let’s put them together around one example: building your own version of a tool that turns articles into social media cards.</p>
+<h3 id="1-Reverse-engineer-the-behavior"><a href="#1-Reverse-engineer-the-behavior" class="headerlink" title="1. Reverse engineer the behavior"></a>1. Reverse engineer the behavior</h3><p>A screenshot can show you the layout. It cannot tell you what happens when a title is too long, an input is empty, or an export contains ten cards.</p>
+<p>Before asking a model to build anything, investigate the user journey.</p>
+<p>Provide screenshots, descriptions, and observations from trying the product. If the model has browser tools, it can help inspect the public interface.</p>
+<p>Start with this prompt:</p>
+<blockquote>
+<p>Analyze the product’s observable behavior. Describe the user’s inputs, actions, outputs, and error states. Separate observations from assumptions and unknowns.Propose a minimal version we could build, with an acceptance check for each feature.</p>
+</blockquote>
+<p>The output should contain requirements you can test:</p>
+<p>“The user can edit generated cards, change their order, and export images in that order.”</p>
+<p>A working interface does not reveal the original source code, prompts, or architecture. You are reconstructing enough behavior to design your own implementation.</p>
+<h3 id="2-Give-each-model-a-bounded-job"><a href="#2-Give-each-model-a-bounded-job" class="headerlink" title="2. Give each model a bounded job"></a>2. Give each model a bounded job</h3><p>For this example, try this starting allocation:</p>
+<ul>
+<li>| Participant | Job | Deliverable |</li>
+<li>|—|—|—|</li>
+<li>| Grok Bot with search access | Investigate public discussions and complaints | Findings with sources |</li>
+<li>| Claude | Analyze workflows and write the specification | Requirements and acceptance criteria |</li>
+<li>| ChatGPT with development tools | Implement the agreed scope | Code and check results |</li>
+</ul>
+<p>These are proposed roles, not a universal ranking. Change them based on results and available tools.</p>
+<p>A chat that can suggest code cannot necessarily run it. A model without search access cannot independently gather current discussions.</p>
+<p>Give each participant a defined output. For research:</p>
+<blockquote>
+<p>Find concrete complaints about tools that turn text into social cards. Include source links. Distinguish recurring problems from isolated opinions, and identify where evidence is insufficient.</p>
+</blockquote>
+<p>Research informs the scope. It does not automatically expand it: one complaint is not enough reason to add another feature.</p>
+<h3 id="3-Draw-the-graph-before-running-the-tasks"><a href="#3-Draw-the-graph-before-running-the-tasks" class="headerlink" title="3. Draw the graph before running the tasks"></a>3. Draw the graph before running the tasks</h3><p>A graph makes dependencies explicit.</p>
+<p>Audience research and interface analysis can happen independently. Implementation needs an agreed specification.</p>
+<p><img src="/images/HXM7hPkXsAA0iw_.png" alt="HXM7hPkXsAA0iw_"></p>
+<p>Reference materials feed interface analysis and audience research in parallel. Their outputs inform the specification and checks. Implementation then goes through validation: failed work returns for repair; accepted work moves forward.</p>
+<p>For each connection, identify what passes across it: a requirements document, source findings, code, or a failure report.</p>
+<p><video controls preload="metadata" poster="/images/2122106165785923585-poster.jpg" src="/videos/2122106165785923585.mp4"></video></p>
+<p>Also check for shared resources. Two tasks may have independent inputs but still conflict if both edit the same file.</p>
+<p>For a small job, one worker and a check may be enough. Another model needs a useful responsibility to justify the coordination cost.</p>
+<h3 id="4-Define-what-“done”-means"><a href="#4-Define-what-“done”-means" class="headerlink" title="4. Define what “done” means"></a>4. Define what “done” means</h3><p>Every task needs a compact contract.</p>
+<p>For card export:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">Current cards, their order, and selected image dimensions.</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">One PNG file per card.</span><br><span class="line"></span><br><span class="line">Acceptance checks:</span><br><span class="line">File count matches card count.</span><br><span class="line">Export order matches editor order.</span><br><span class="line">Images have the selected dimensions.</span><br><span class="line">Card text appears in the exported images.</span><br><span class="line"></span><br><span class="line">Scope:</span><br><span class="line">Do not change text generation or editor behavior.</span><br></pre></td></tr></table></figure>
+
+<p>Write these conditions before implementation. Otherwise, it is easy to accept whatever the model happened to build.</p>
+<p>Passing checks only establishes what those checks cover. A successful export test says nothing about whether the generated cards preserve the article’s meaning.</p>
+<h3 id="5-Build-a-loop-that-can-reject-work"><a href="#5-Build-a-loop-that-can-reject-work" class="headerlink" title="5. Build a loop that can reject work"></a>5. Build a loop that can reject work</h3><p>A loop connects execution to actionable feedback:</p>
+<p><strong>Produce -&gt; Check -&gt; Correct -&gt; Check again.</strong></p>
+<p>Suppose a long title overflows its card.</p>
+<p>“Make it look better” leaves the worker guessing. A useful failure report provides a reproducible case:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Component: card title</span><br><span class="line">Conditions: 390 px viewport, 120-character title</span><br><span class="line">Failure: text extends beyond the right boundary</span><br><span class="line">Expected: title remains inside the card</span><br><span class="line">Repair scope: title wrapping and container sizing</span><br><span class="line">Recheck: short and long titles at narrow and wide widths</span><br></pre></td></tr></table></figure>
+
+<p>Use code for exact checks such as file counts, dimensions, and required fields.</p>
+<p><video controls preload="metadata" poster="/images/2122106259310518272-poster.jpg" src="/videos/2122106259310518272.mp4"></video></p>
+<p>For meaning or visual quality, use human review or a separate model with explicit criteria. Ask it to identify defects and provide evidence.</p>
+<p>Agreement between models is not proof. Sources still need verification, and executable work needs to be run.</p>
+<h3 id="6-Return-the-failed-unit"><a href="#6-Return-the-failed-unit" class="headerlink" title="6. Return the failed unit"></a>6. Return the failed unit</h3><p>If export breaks but the editor works, send export back for repair.</p>
+<p>Regenerating the entire application creates unnecessary changes and increases the amount of work you must verify.</p>
+<p>Each return should include the affected unit, failure evidence, expected behavior, and permitted scope. After the local fix, run the relevant integration checks too.</p>
+<p><video controls preload="metadata" poster="/images/2122106340256411648-poster.jpg" src="/videos/2122106340256411648.mp4"></video></p>
+<p>Set a retry or spending limit. Three correction attempts can be a starting setting, but repeated failure does not automatically mean the plan is wrong. The environment, requirements, or checker may be at fault.</p>
+<p>When the limit is reached, preserve the attempts and escalate for diagnosis.</p>
+<h3 id="7-Save-lessons-with-evidence"><a href="#7-Save-lessons-with-evidence" class="headerlink" title="7. Save lessons with evidence"></a>7. Save lessons with evidence</h3><p>After fixing the title overflow, save a reusable lesson:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Rule:</span><br><span class="line">Include long titles in narrow-screen layout checks.</span><br><span class="line"></span><br><span class="line">Evidence:</span><br><span class="line">This case exposed text overflow.</span><br><span class="line"></span><br><span class="line">Applies to:</span><br><span class="line">Card templates with editable titles.</span><br></pre></td></tr></table></figure>
+
+<p>Feed it into future requirements and checks.</p>
+<p>An entire chat history also contains abandoned ideas and incorrect assumptions. Extract confirmed lessons, record their scope, and allow them to be revised.</p>
+<h3 id="8-Automate-the-handoffs"><a href="#8-Automate-the-handoffs" class="headerlink" title="8. Automate the handoffs"></a>8. Automate the handoffs</h3><p>You can test this process manually with shared files before building an orchestrator.</p>
+<p>Keep the reference materials, specification, check results, and accepted decisions together. Pass each participant the artifacts it needs.</p>
+<p>Once the handoffs are repeatable, a coordinating program can call model APIs, transfer results, run checks, and enforce limits:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Checks pass -&gt; advance.</span><br><span class="line"></span><br><span class="line">Checks fail -&gt; return the affected task.</span><br><span class="line"></span><br><span class="line">Retry limit reached -&gt; stop that branch and diagnose.</span><br><span class="line"></span><br><span class="line">User decision required -&gt; ask and wait.</span><br></pre></td></tr></table></figure>
+
+<p>Subscriptions to separate chat products do not create this integration automatically.</p>
+<p>Define where human judgment belongs: scope, unresolved requirements, and approval for consequential actions. Reversible local changes can have different permissions from publishing or modifying production data.</p>
+<p>Start with one complete workflow: paste text, edit cards, export images.</p>
+<p>Compare the process against a single-model attempt. Track time, cost, remaining defects, and how often you intervene. If coordination adds more work than it removes, simplify the graph.</p>
+<p>Every time you have to type “continue,” restate a requirement, or explain an avoidable failure, record why. Use those observations to improve the next run’s transitions, checks, and task boundaries.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/16/k1rallik-2122355711414038533/">https://yaoav.github.io/2026/11/16/k1rallik-2122355711414038533/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/k1rallik/">@k1rallik</a></div><div class="post-share"><div class="social-share" data-image="/images/2122355711414038533-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img class="cover" src="/images/2122375535720333743-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Yes, That's a Hearing Aid</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Sachin_and_Adam（Sachin and Adam） 的长文，原文链接，版权归原作者所有。  I am 29 and largely deaf in my left ear, though I wasn’t born this way. Two and a half years ago, I went to bed with completely normal hearing and woke up the next morning (the day of a friend’s wedding!) barely able to hear out of that ear. Otherwise, I felt completely fine. My hearing hasn’t improved since. I’m writing about this for a few reasons: 1) if you’ve noticed my hearing aid and were too polite to ask me about it, he...</div></div></div></a><a class="pagination-related" href="/2026/11/16/amazon-2122347694836400530/" title="Robert Pattinson is the new James Bond"><img class="cover" src="/images/2122347694836400530-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Robert Pattinson is the new James Bond</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @amazon（Amazon） 的长文，原文链接，版权归原作者所有。  Denis Villeneuve is directing the Amazon MGM Studios film from a script by Steven Knight, with Amy Pascal and David Heyman producing and Tanya Lapointe executive producing. Today, Amazon MGM Studios announced that Robert Pattinson will take on the iconic role of James Bond in the studio’s highly anticipated film, ushering in a new era for one of cinema’s most celebrated characters. Denis Villeneuve is directing the film from a script by Steven K...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/09/k1rallik-2119784591426789830/" title="Grok Bot + Picsart: How to Build a One-Person AI Content Studio for $10K&#x2F;Month (Full Guide)"><img class="cover" src="/images/2119784591426789830-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-09</div><div class="info-item-2">Grok Bot + Picsart: How to Build a One-Person AI Content Studio for $10K&#x2F;Month (Full Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @k1rallik（BuBBliK） 的长文，原文链接，版权归原作者所有。  You find the trends. Write the scripts. Make the visuals. Edit the videos. Then wake up and do it all again. That used to be a team’s workload. Now you can build a workflow where Grok Bot researches the conversation and Picsart helps turn your ideas into content. A creator I know made over $1 million using this tool, generating just a couple of videos a week Make your first two weeks a focused test: build your Grok Bot + Picsart workflow and ...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Reverse-engineer-the-behavior"><span class="toc-number">1.</span> <span class="toc-text">1. Reverse engineer the behavior</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Give-each-model-a-bounded-job"><span class="toc-number">2.</span> <span class="toc-text">2. Give each model a bounded job</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Draw-the-graph-before-running-the-tasks"><span class="toc-number">3.</span> <span class="toc-text">3. Draw the graph before running the tasks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Define-what-%E2%80%9Cdone%E2%80%9D-means"><span class="toc-number">4.</span> <span class="toc-text">4. Define what “done” means</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Build-a-loop-that-can-reject-work"><span class="toc-number">5.</span> <span class="toc-text">5. Build a loop that can reject work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Return-the-failed-unit"><span class="toc-number">6.</span> <span class="toc-text">6. Return the failed unit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Save-lessons-with-evidence"><span class="toc-number">7.</span> <span class="toc-text">7. Save lessons with evidence</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Automate-the-handoffs"><span class="toc-number">8.</span> <span class="toc-text">8. Automate the handoffs</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

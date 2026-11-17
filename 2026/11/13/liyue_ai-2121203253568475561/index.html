@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大家好，我是李岳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/13/liyue_ai-2121203253568475561/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="大家好，我是李岳">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121203253568475561-cover.jpg">
+<meta property="article:published_time" content="2026-11-13T19:27:20.000Z">
+<meta property="article:modified_time" content="2026-11-17T04:11:34.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@liyue_ai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121203253568475561-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程",
+  "url": "https://yaoav.github.io/2026/11/13/liyue_ai-2121203253568475561/",
+  "image": "https://yaoav.github.io/images/2121203253568475561-cover.jpg",
+  "datePublished": "2026-11-13T19:27:20.000Z",
+  "dateModified": "2026-11-17T04:11:34.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/13/liyue_ai-2121203253568475561/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121203253568475561-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我用 Grok Bot + ChatCut 搞定 AI 视频剪辑，附详细教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-13T19:27:20.000Z" title="发表于 2026-11-13 19:27:20">2026-11-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@liyue_ai（李岳）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121203253568475561">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>大家好，我是李岳</p>
+<p>做自媒体的或多或少都有制作视频的时候，特别是录制一些视频教程之类的，很早之前都是手工一点一点的剪辑。</p>
+<p> 诸如一些口语化的内容，停顿词，说错的内容等等，还需要加一些特性等等，硬生生把我从一个小白炼成了一个剪辑达人。</p>
+<p>但手工剪辑就是一个苦力活，作为一个AI博主，我已经进化了，现在剪辑相关的内容都丢给AI自动取剪辑了。</p>
+<p>这里就不得不推荐一下我常用的剪辑工具：<strong>ChatCut</strong>。</p>
+<p>配合老马的Grok Bot简直如虎添翼，下面给兄弟们分享一下我平时是怎么用ChatCut来剪辑视频的。</p>
+<h3 id="一、Grok-Bot安装ChatCut"><a href="#一、Grok-Bot安装ChatCut" class="headerlink" title="一、Grok Bot安装ChatCut"></a>一、Grok Bot安装ChatCut</h3><p>老马的Grok Bot在Personal Agent方面还是很能打的，不仅操作方便而且能力也不弱。  直接一句话就可以让Grok Bot自动安装好ChatCut。  把这段提示词发给Grok Bot：</p>
+<blockquote>
+<p>Read ChatCut.io&#x2F;grok to connect the ChatCut app</p>
+</blockquote>
+<p><img src="/images/HW_89unbcAEE9pz.jpg" alt="HW_89unbcAEE9pz"></p>
+<p>直接在Grok Bot中安装好ChatCut，享受用Grok Bot剪辑视频</p>
+<p>安装过程中如有弹窗授权一下，并且用连接器连接一下就可以通过Grok Bot操控ChatCut了。</p>
+<p><img src="/images/HW_9BxgbgAAjao0.jpg" alt="HW_9BxgbgAAjao0"></p>
+<h3 id="二、口播剪辑"><a href="#二、口播剪辑" class="headerlink" title="二、口播剪辑"></a>二、口播剪辑</h3><p>上次分享Workbuddy的相关干货的时候顺便录了一个简单的视频教程，正好拿来试试刀，帮忙剪辑一下。  直接先给Grok Bot发个提示词指令：</p>
+<blockquote>
+<p>帮我剪一个口播视频，去掉口误和停顿，加个字幕</p>
+</blockquote>
+<p><strong>这里不要急着发视频附件</strong>，目前Grok Bot有个读不到视频文件的bug，并且通过VPN传视频给Grok Bot有可能会非常慢。</p>
+<p><img src="/images/HW_9FtibIAAzSK7.jpg" alt="HW_9FtibIAAzSK7"></p>
+<p>然后再打开的页面中上传你的视频附件就可以了，Grok Bot会直接去读取的。</p>
+<p><img src="/images/HW_9IIjawAAokAN.jpg" alt="HW_9IIjawAAokAN"></p>
+<p>接着再回到Grok Bot继续对话说传完了，让它接着干活就可以了，一开始可能是视频太大没上传完，它没读取到。</p>
+<p><img src="/images/HW_9LM8aYAAn5FK.jpg" alt="HW_9LM8aYAAn5FK"></p>
+<p>我这个视频原本由8分钟，里面有不少口语化或者停顿方面的内容，它给我一通剪辑还剩6分47秒，我听了一下非常丝滑。</p>
+<p><img src="/images/HW_9N1ja8AAvd3H.jpg" alt="HW_9N1ja8AAvd3H"></p>
+<p>Grok Bot干活是一步一步来的，干完一件等你确认没问题了，它才会继续干第二件，比如我这里剪辑口语化是第一步，加字幕就是第二步。  上面的剪辑完成了，然后再给Grok Bot说，让它继续添加字幕。</p>
+<p><img src="/images/HW_9QzcbQAAIRLB.jpg" alt="HW_9QzcbQAAIRLB"></p>
+<p>让我惊讶的是Grok Bot居然能自动识别一些错的字幕并调整，下面是剪辑完后的视频。</p>
+<p><video controls preload="metadata" poster="/images/2121192557980061696-poster.jpg" src="/videos/2121192557980061696.mp4"></video></p>
+<h3 id="三、爆款复刻"><a href="#三、爆款复刻" class="headerlink" title="三、爆款复刻"></a>三、爆款复刻</h3><p>这个也是真不错，我只需要提供一个参考视频和替换的人物三视图，ChatCut就自动帮我复刻成功了，一个提示词都没有写。  过程虽然很简单，还是给大家演示一下。</p>
+<p>它这里有个自带的“Viral Video Clone”Skill，只要提示词里面调用它，然后把图片和引导视频上传到ChatCut编辑界面就不用管了。  直接给Grok Bot发这条指令：</p>
+<blockquote>
+<p>帮我试下ChatCut App上的”Viral Video Clone“（视频复刻）功能进行视频动作迁移复刻</p>
+</blockquote>
+<p><img src="/images/HW_-FNSbMAATvQD.jpg" alt="HW_-FNSbMAATvQD"></p>
+<p>然后再给Grok Bot发一张参考图。</p>
+<p><img src="/images/HW_-D5RacAEP6HH.jpg" alt="HW_-D5RacAEP6HH"></p>
+<p>参考图原图</p>
+<p><img src="/images/HW_-IpaboAAs72l.jpg" alt="HW_-IpaboAAs72l"></p>
+<p>再把引导视频上传到ChatCut后台后，我们就不用管了。</p>
+<p><video controls preload="metadata" poster="/images/2121193477623119872-poster.jpg" src="/videos/2121193477623119872.mp4"></video></p>
+<p>这是上传视频的界面，包括参考图和服装也一起上传后的效果。</p>
+<p><img src="/images/HW_-XPrbcAA3fGl.jpg" alt="HW_-XPrbcAA3fGl"></p>
+<p>然后等待一会儿后，就得到了生成后的视频，除了发布任务和上传视频和参考图，没有进行其它操作。</p>
+<p>看下复刻视频的效果。</p>
+<p><video controls preload="metadata" poster="/images/2121193745563713536-poster.jpg" src="/videos/2121193745563713536.mp4"></video></p>
+<p>用一个字形容就是赞，两个字形容就是超赞。这以后复刻视频完全不需要花太多时间了。</p>
+<h3 id="四、ChatCut-还有哪些实用场景？"><a href="#四、ChatCut-还有哪些实用场景？" class="headerlink" title="四、ChatCut 还有哪些实用场景？"></a>四、ChatCut 还有哪些实用场景？</h3><p>除了上面分享的口播剪辑和爆款复刻，ChatCut 其实还有不少值得尝试的功能。</p>
+<p>特别是对于经常制作视频的AI博主来说，很多以前需要手动操作的事情，现在都可以尝试交给 Grok Bot 来处理。</p>
+<p>这里简单介绍几个我觉得比较实用的场景。</p>
+<ol>
+<li>一条视频剪出多个版本</li>
+</ol>
+<p>做自媒体的兄弟应该都有这样的经历，辛辛苦苦录了一条十几分钟的教程，最后只发布一次，感觉多少有点浪费。</p>
+<p>其实完全可以让 ChatCut 把长视频拆成多个版本。</p>
+<p>比如保留完整教学内容的长视频、突出核心功能的精华版，以及适合短视频平台传播的几十秒短视频。</p>
+<p>同一份素材可以反复利用，不用每次都从头剪辑。</p>
+<p>对于经常发布 AI 工具教程、产品测评或者录屏演示的博主来说，这个场景还是挺实用的。</p>
+<p><img src="/images/HW_-k4abYAAfsq1.jpg" alt="HW_-k4abYAAfsq1"></p>
+<ol start="2">
+<li>给视频添加 MG 动画</li>
+</ol>
+<p>这个功能也比较有意思，而且目前还是免费的。</p>
+<p>比如我们在介绍某个 AI 工具的工作流程时，单纯依靠口播和录屏，有时候会显得比较枯燥。</p>
+<p>这时候就可以让 ChatCut 添加一些 MG 动画，比如动态文字、数据展示、流程图、信息卡片等。</p>
+<p>不仅能让视频看起来更专业，也能让观众更容易理解一些复杂的内容。</p>
+<p>最重要的是，不需要自己去研究那些复杂的动画关键帧，直接通过对话描述需求就行。</p>
+<p><img src="/images/HW_-oEcakAATWvB.jpg" alt="HW_-oEcakAATWvB"></p>
+<ol start="3">
+<li>从几张图片生成 AI 带货广告</li>
+</ol>
+<p>这个场景对于做电商或者产品推广的兄弟来说，应该会比较感兴趣。</p>
+<p>传统的带货短视频，需要准备脚本、拍摄产品、剪辑素材、添加配音和背景音乐。</p>
+<p>现在可以尝试把这些流程交给 Grok Bot + ChatCut。</p>
+<p>只需要提供几张商品的不同角度照片，再告诉 AI 产品的核心卖点、目标用户和视频风格，就可以让它协助完成脚本、分镜、画面生成以及后期剪辑。</p>
+<p>ChatCut 还支持调用一些 AI 图片和视频生成模型，可以用于补充缺少的画面素材。</p>
+<p>当然，生成的商品细节和宣传内容还是需要人工核对，不能让 AI 随便编造。</p>
+<p>这类涉及 AI 生成的功能主要属于 PRO 能力。</p>
+<p><img src="/images/HW_-rBya0AAN0AU.jpg" alt="HW_-rBya0AAN0AU"></p>
+<ol start="4">
+<li>手机拍完，直接让 Grok Bot 剪辑</li>
+</ol>
+<p>还有一点我觉得值得单独说一下。</p>
+<p><strong>ChatCut 现在已经支持通过 Grok Bot 在手机和电脑双端使用。</strong></p>
+<p>这意味着不一定非要坐在电脑面前，才能完成视频剪辑。</p>
+<p>比如在手机上录制一段 AI 工具的操作教程，拍完就可以交给 Grok Bot 处理。</p>
+<p>参加活动时录制的现场演讲、产品发布会，也可以让它帮忙清理停顿、添加字幕、提取精彩片段。</p>
+<p>甚至出去旅游，手机里拍了一堆照片和视频，也可以让它整理成一条 Vlog。</p>
+<p>对于经常需要随时随地更新内容的博主来说，这种使用方式确实方便不少。</p>
+<p>而且手机端和电脑端使用的连接指令是一样的：</p>
+<blockquote>
+<p><strong>Read <a target="_blank" rel="noopener" href="https://chatcut.io/grok">https://chatcut.io/grok</a> to connect the ChatCut app</strong></p>
+</blockquote>
+<p>把这句话发送给 Grok Bot，再按照提示完成连接就可以了。</p>
+<p><img src="/images/HW_-tWFaEAENqbn.jpg" alt="HW_-tWFaEAENqbn"></p>
+<h3 id="五、写到最后"><a href="#五、写到最后" class="headerlink" title="五、写到最后"></a>五、写到最后</h3><p>体验完 ChatCut 的口播剪辑和视频复刻，再看看它支持的这些功能，我最大的感受就是：</p>
+<p><strong>AI 正在把视频剪辑这件事，从手动操作软件，变成直接用自然语言描述需求。</strong></p>
+<p>以前剪视频，需要自己研究时间轴、切片段、加字幕、找配乐、做转场，一套流程下来还挺折腾的。</p>
+<p>现在配合 Grok Bot + ChatCut，很多事情直接告诉 AI 想要什么，它就可以帮忙处理。</p>
+<p>而且不只是简单的口播剪辑，从 MG 动画、字幕翻译、调色配乐，到 AI 视频生成、商品广告制作，都可以在同一套工作流里完成。</p>
+<p>当然，目前还不能指望 AI 一句话就能把所有视频剪得完美无缺，复杂的创意和最终效果还是需要自己把关。</p>
+<p>但对于那些重复、繁琐的剪辑工作，确实能省下不少精力。</p>
+<p>我觉得这也是 AI Agent 比较有意思的地方。</p>
+<p><strong>它不再只是告诉你一件事应该怎么做，而是真的可以调用工具，替你把事情做了。</strong></p>
+<p>对于我这种经常制作 AI 教程、产品测评和 AI 视频内容的人来说，与其把大量时间花在重复剪辑上，不如把更多精力放在选题、创意和内容本身。</p>
+<p>最后，如果你也想体验一下，可以先从 ChatCut 的免费功能开始，口播剪辑、字幕、MG 动画和基础调色都可以试试。</p>
+<p>安装也不复杂，无论电脑端还是手机端，直接把下面这句专属口令发给 Grok Bot：</p>
+<p><strong>Read <a target="_blank" rel="noopener" href="https://chatcut.io/grok">https://chatcut.io/grok</a> to connect the ChatCut app</strong></p>
+<p>然后按照提示完成连接即可。</p>
+<p>好了，今天就分享到这里，感兴趣的兄弟可以自己去折腾一下。</p>
+<p>**以后视频怎么剪，或许真的只需要动动嘴了。<br>**</p>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><p>Workbuddy做了一套自动出稿流程</p>
+<p>3步复刻抖音爆款视频</p>
+<p>Grok Bot连接飞书，组建一支X内容团队</p>
+<p>2026年X新手避坑指南</p>
+<p>我用豆包开了家 “奶茶店”</p>
+<p>我用这个Skill，复刻爆款卡点换装视频</p>
+<p>我用6个Skill做了一套AI视觉工作流</p>
+<p>我用Codex做了一个东方仙界Skill</p>
+<p>GPT Image 2生图骗局：上传参考图就能生成同一个人</p>
+<p>你缺的不是GPT提示词，是一套能复用的出图流程</p>
+<p>GPT Image 2从参数到出图，一次看懂</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/13/liyue_ai-2121203253568475561/">https://yaoav.github.io/2026/11/13/liyue_ai-2121203253568475561/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/liyue-ai/">@liyue_ai</a></div><div class="post-share"><div class="social-share" data-image="/images/2121203253568475561-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/13/AI_Jasonyu-2121207382630117537/" title="AI公众号稳定月入变现10万+，从选题到接商单的万字实操教程"><img class="cover" src="/images/2121207382630117537-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">AI公众号稳定月入变现10万+，从选题到接商单的万字实操教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @AI_Jasonyu（鱼总聊AI） 的长文，原文链接，版权归原作者所有。  我是西堂，原来在腾讯做工程师，后来和几个伙伴一起创业，做了西羊石。 过去两年多，我们一直在做 AI 视频。做过广告片、文旅片和 AI 漫剧，写过不少实操教程，也做培训，把一线制作经验整理成了书籍《AI视频一本通》和《AI 漫剧创作一本通》，到现在半年多，已经卖了 9 万册。  如果你平时看 AI 视频相关的公众号，可能刷到过西羊石 AI 视频、羊羊 AI 视频，背后就是我们团队。 今天想完整聊聊我们正在做的一块业务：AI 公众号商单。目前，这个项目每月收入稳定在 10 万元以上。 合作过的产品包括 LibTV、Seko、RunningHub、Lovart、豆包等。有品牌直接合作，也有通过媒介承接的项目。  很多人看到这种结果，最先想到的问题是：账号要多少粉丝？一篇广告多少钱？文章是不是直接让 AI 写就行了？ 真做起来，会发现要解决的事情远不止这几个。 哪个方向适合自己，第一批文章怎么做，品牌为什么愿意付钱，客户说贵怎么聊，几个人怎么一起交付，以及一篇文章发出去之后，怎么判断这次...</div></div></div></a><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Grok-Bot%E5%AE%89%E8%A3%85ChatCut"><span class="toc-number">1.</span> <span class="toc-text">一、Grok Bot安装ChatCut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%A3%E6%92%AD%E5%89%AA%E8%BE%91"><span class="toc-number">2.</span> <span class="toc-text">二、口播剪辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%88%86%E6%AC%BE%E5%A4%8D%E5%88%BB"><span class="toc-number">3.</span> <span class="toc-text">三、爆款复刻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81ChatCut-%E8%BF%98%E6%9C%89%E5%93%AA%E4%BA%9B%E5%AE%9E%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">四、ChatCut 还有哪些实用场景？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%86%99%E5%88%B0%E6%9C%80%E5%90%8E"><span class="toc-number">5.</span> <span class="toc-text">五、写到最后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-number">6.</span> <span class="toc-text">推荐阅读</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

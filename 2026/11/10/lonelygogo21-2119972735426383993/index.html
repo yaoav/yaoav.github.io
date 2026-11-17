@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>将你的Personal Agent打造成自动化赚钱系统 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文中这套系统已经开源：https:&#x2F;&#x2F;github.com&#x2F;Pluviobyte&#x2F;saas-growth-agents 。把链接发给你的 Bot（Grok Bo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将你的Personal Agent打造成自动化赚钱系统">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/10/lonelygogo21-2119972735426383993/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="文中这套系统已经开源：https:&#x2F;&#x2F;github.com&#x2F;Pluviobyte&#x2F;saas-growth-agents 。把链接发给你的 Bot（Grok Bo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2119972735426383993-cover.jpg">
+<meta property="article:published_time" content="2026-11-10T09:57:41.000Z">
+<meta property="article:modified_time" content="2026-11-16T04:59:53.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@lonelygogo21">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2119972735426383993-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "将你的Personal Agent打造成自动化赚钱系统",
+  "url": "https://yaoav.github.io/2026/11/10/lonelygogo21-2119972735426383993/",
+  "image": "https://yaoav.github.io/images/2119972735426383993-cover.jpg",
+  "datePublished": "2026-11-10T09:57:41.000Z",
+  "dateModified": "2026-11-16T04:59:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/10/lonelygogo21-2119972735426383993/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '将你的Personal Agent打造成自动化赚钱系统',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2119972735426383993-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">将你的Personal Agent打造成自动化赚钱系统</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">将你的Personal Agent打造成自动化赚钱系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-10T09:57:41.000Z" title="发表于 2026-11-10 09:57:41">2026-11-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@lonelygogo21（Liz栗子）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2119972735426383993">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<blockquote>
+<p>文中这套系统已经开源：<strong><a target="_blank" rel="noopener" href="https://github.com/Pluviobyte/saas-growth-agents">https://github.com/Pluviobyte/saas-growth-agents</a></strong> 。把链接发给你的 Bot（Grok Bot、Muse、Dot 等都可以），它会自己读完仓库、问你几个问题，然后把自己装好。</p>
+</blockquote>
+<p>很多人第一次用 Grok Bot，问的都是同一个问题：它能帮我赚钱吗？</p>
+<p>我的答案是：不能。</p>
+<p>Grok Bot 不会凭空帮你找到一门生意。它真正厉害的地方在于，你已经在做、并且知道怎么做的那些重复劳动，它可以接过去，按你定的规矩，每天、每小时一直做下去，做完了主动来跟你汇报。</p>
+<p>所以这篇文章我们不讲「AI 躺赚」，讲的是一件更朴素的事：<strong>怎么把你原本的重复劳动固化成 SOP，然后交给 Bot 去跑。</strong></p>
+<p>我会拿我自己正在用的三个 Bot 来给大家讲：</p>
+<ol>
+<li><strong>出海站点运营 Bot</strong>：每天找新词、找竞品站、查外链，这是我做出海站的主力</li>
+<li><strong>社媒分析 Bot</strong>：刷到好内容丢个链接，它负责分析、提取、存进知识库</li>
+<li><strong>交易 Bot</strong>：盯突发事件，Grok Bot 自己分析市场趋势，给我参考，最后由我决定</li>
+</ol>
+<p>不讲代码。Bot 的代码是它自己写的，你需要搞清楚的是怎么跟它交代。</p>
+<blockquote>
+<p><strong>本文由Grok Bot导出配置和记忆，Claude Opus5.5阅读编写完成，如果想要同款配置，可以直接发给你的Bot阅读并配置(Grok Bot、Muse、Dot等都可以，Claude Code或者Codex也可以使用，但是需要搭配一些定时任务)</strong></p>
+</blockquote>
+<p><img src="/images/HWunWdeaEAANNyb.jpg" alt="HWunWdeaEAANNyb"></p>
+<h3 id="一、先想清楚：什么样的活值得交给-Bot"><a href="#一、先想清楚：什么样的活值得交给-Bot" class="headerlink" title="一、先想清楚：什么样的活值得交给 Bot"></a>一、先想清楚：什么样的活值得交给 Bot</h3><p>我判断一件事要不要交给 Bot，就看三点：</p>
+<ul>
+<li><strong>重复</strong>：一周做好几次，每次的步骤都差不多</li>
+<li><strong>有规矩</strong>：做对、做错能说清楚，不是全凭手感</li>
+<li><strong>有账可记</strong>：做完能留下记录，下次能接着做，而不是从头再来</li>
+</ul>
+<p>满足这三点的活，就可以走下面这个四步流程：</p>
+<p><strong>做一次 → 改到满意 → 存成技能 → 设成例程</strong></p>
+<ul>
+<li><strong>做一次</strong>：先让 Bot 手动做一遍，你在旁边看，哪里不对当场纠正</li>
+<li><strong>改到满意</strong>：同样的活再让它做一遍，直到连续两次都不用你改</li>
+<li><strong>存成技能（Skill）</strong>：跟它说「把刚才的做法存成一个技能」，以后不用重新交代</li>
+<li><strong>设成例程（Routine）</strong>：跟它说「以后每天早上 9 点做这件事」，到点自动跑</li>
+</ul>
+<p>技能管怎么做，例程管什么时候做。两样都有了，这件事才算真正从你手上移交出去。</p>
+<p>除了这四步，还有三条是我踩坑踩出来的，后面三个 Bot 都遵守：</p>
+<ol>
+<li><strong>状态写在文件里，不靠聊天记忆</strong>。Bot 的对话会越来越长，早期的细节会被压缩掉。所以凡是进度、队列、做过什么，一律让它写进表格或账本，每次开工先读账本</li>
+<li><strong>缺工具必须说，不许跳过</strong>。Bot 遇到做不了的步骤，有时会默默跳过，或者自己编一个结果。我在每个 Bot 的规则里都写了：执行中缺工具、缺权限，必须告诉我，不能静默</li>
+<li><strong>花钱、发东西、删东西，必须我点头</strong>。这三类操作永远不交给 Bot 自己决定</li>
+</ol>
+<h2 id="二、出海站点运营-Bot：把「找词找站」变成一条流水线"><a href="#二、出海站点运营-Bot：把「找词找站」变成一条流水线" class="headerlink" title="二、出海站点运营 Bot：把「找词找站」变成一条流水线"></a>二、出海站点运营 Bot：把「找词找站」变成一条流水线</h2><p>先说背景。做出海工具站，核心就两件事：<strong>找到值得做的词</strong>，然后<strong>让新站尽快被搜到</strong>。这两件事都非常吃时间，而且每天都要做。</p>
+<p>以前我是手动刷导航站、翻 Product Hunt、看竞品的 sitemap，一刷就是一两个小时。现在这些都交给了一个叫「出海站点运营」的 Bot。</p>
+<h3 id="1-词从哪来：让词源源不断"><a href="#1-词从哪来：让词源源不断" class="headerlink" title="1. 词从哪来：让词源源不断"></a>1. 词从哪来：让词源源不断</h3><p>最开始我只是每次想到一个词，就让 Bot 去搜。很快就发现一个问题：<strong>系统的上限，卡在我能想到多少词</strong>。</p>
+<p>后来我跟 Bot 一起把「找词」改成了多个固定的词源，每个词源一个例程，早中晚各扫一次：</p>
+<ul>
+<li><strong>Product Hunt</strong>：每天新发布的产品，反推它们抢的是什么需求词</li>
+<li><strong>导航站新上架</strong>：Toolify 这类导航站的「New」页面，新工具名里藏着新词</li>
+<li><strong>竞品 sitemap</strong>：竞品网站新增了哪些页面，新页面就是它在抢的新词</li>
+<li><strong>Google Trends</strong>：哪些词的热度在往上走</li>
+<li><strong>GitHub</strong>：最近两周新建、涨星很快的开源项目</li>
+<li><strong>X 和短视频</strong>：最近的 AI 爆款内容，用 AIsa 的 Twitter 和 TikHub 接口去扫</li>
+</ul>
+<p>六个词源同时跑，词就不会断。</p>
+<h3 id="2-有了词之后：找站、查外链、分类"><a href="#2-有了词之后：找站、查外链、分类" class="headerlink" title="2. 有了词之后：找站、查外链、分类"></a>2. 有了词之后：找站、查外链、分类</h3><p>词找到了，后面是一条固定的五步流水线：</p>
+<ol>
+<li><strong>找新词</strong>：上面六个词源每天产出</li>
+<li><strong>按词找站</strong>：用这个词去搜，把所有在抢这个词的网站都找出来，要有深度也要有广度</li>
+<li><strong>查这些站的外链</strong>：竞品为了抢新词排名，一定会上一批有效外链。它们上过的地方，我们大概率也能上</li>
+<li><strong>给外链分类</strong>：博客评论区、导航站、博客文章站、其他</li>
+<li><strong>再筛一遍，单独维护一张表</strong>：能直接提交的进待发布池，需要登录的单独列出来，付费导航站单独记账</li>
+</ol>
+<p>查外链、查域名评分、查 Google 收录，我用的是 AIsa 里的 DataForSEO 和 Ahrefs 接口。AIsa 可以理解为给 AI 智能体用的数据接口集合，一个 Key 后面挂了几千个 API，按返回结果计费，查不到结果不扣钱。Bot 查一次收录大约 1 美分，查一次竞品外链几美分。</p>
+<h3 id="3-每天固定的例程"><a href="#3-每天固定的例程" class="headerlink" title="3. 每天固定的例程"></a>3. 每天固定的例程</h3><p>现在这个 Bot 每天的固定动作是这样的：</p>
+<ul>
+<li><strong>早、中、晚三次新词播报</strong>：新词、老词新站、竞品新页面，只报没推过的</li>
+<li><strong>每 20 分钟巡检一次</strong>：任务卡住了就自己处理，处理不了再叫我</li>
+<li><strong>每晚 23 点总结</strong>：今天完成了什么，没完成的是因为什么，明天怎么改</li>
+<li><strong>每周两次抽样复核</strong>：随机抽一批已经分好类的外链，看看规则有没有判错</li>
+<li><strong>每天查一次自有站的 DR 和外链数</strong>：截图存档，跟昨天对比涨了多少</li>
+</ul>
+<p>后来新词这块越做越大，我又单独拆出了一个「新词监控」Bot，专门负责早、中、晚三次播报，还有播报前的预跑和夜间采集：</p>
+<p><img src="/images/HWuk7I4awAANyNK.jpg" alt="HWuk7I4awAANyNK"></p>
+<p>巡检的时候，它会自己处理卡住的任务。比如下面这次，一批任务卡在 230&#x2F;300，它先把已经处理的结果恢复出来，剩下的 70 条放回队列，接着开下一批；我的电脑突然断网，它也自己把浏览器切到了自己的网络：</p>
+<p><img src="/images/HWuk9Pka8AAGl4v.png" alt="HWuk9Pka8AAGl4v"></p>
+<h3 id="4-这套系统里最值钱的不是代码，是规矩"><a href="#4-这套系统里最值钱的不是代码，是规矩" class="headerlink" title="4. 这套系统里最值钱的不是代码，是规矩"></a>4. 这套系统里最值钱的不是代码，是规矩</h3><p>回头看这几周，真正让这个 Bot 好用的，其实是一条一条攒下来的规矩。举几个例子：</p>
+<ul>
+<li><strong>新站只算一年以内的</strong>，老站不要推给我</li>
+<li><strong>已经推过的词和站，不要再推</strong>，所有推送都进账本去重</li>
+<li><strong>前一天没跑完的，第二天先补</strong>，再按剩余时间缩减当天的量</li>
+<li><strong>花费监控</strong>：一项任务的额度消耗超过 7% 就自动停下来问我</li>
+<li><strong>收益递减就降频</strong>：比如竞品 sitemap 盯得差不多了，扫描频率就降下来，别浪费额度</li>
+</ul>
+<p>这些规矩每一条都是在某次出问题之后，我跟它说「把这个记下来」，它写进记忆或者技能里的。<strong>你踩的每一个坑，都应该变成 Bot 的一条规则。</strong></p>
+<p>一组真实数据：这个 Bot 从 10 月底到 11 月初，从 352 个竞品站身上整理出了约 14 万行外链来源，去重后约 3 万个引荐域名，全部分好了类。这个量，手动做我一个月也做不完。</p>
+<h2 id="三、社媒分析-Bot：刷到就丢，它负责分析、提取、入库"><a href="#三、社媒分析-Bot：刷到就丢，它负责分析、提取、入库" class="headerlink" title="三、社媒分析 Bot：刷到就丢，它负责分析、提取、入库"></a>三、社媒分析 Bot：刷到就丢，它负责分析、提取、入库</h2><p>第二个 Bot 解决的是另一个问题：<strong>刷到好东西，收藏了，然后再也没看过。</strong></p>
+<p>我的做法是建一个专职 Bot，名字就叫「社媒分析」。刷到一条好的推文、短视频、公众号文章，复制链接丢给它，剩下的事都由它来做。</p>
+<h3 id="1-整个流程四步"><a href="#1-整个流程四步" class="headerlink" title="1. 整个流程四步"></a>1. 整个流程四步</h3><p><strong>刷到链接 → 分析 → 提取 → 进知识库</strong></p>
+<ul>
+<li><strong>刷到链接</strong>：X、抖音、小红书、YouTube、公众号，复制分享链接，在 Grok Bot 里发给它</li>
+<li><strong>分析</strong>：它去把原内容拿下来，全部走 AIsa接口：一个 Key 就够，不用分别去注册好几家</li>
+<li><strong>提取</strong>：不只是总结，而是提取「跟我有关的部分」。这一步最关键，后面细说</li>
+<li><strong>进知识库</strong>：按主题追加到一个 Page 里，同主题的合并，不重复</li>
+</ul>
+<p>下面是我实际在用的「自媒体运营」Bot。丢给它一条 65 分钟的抖音长视频，它先把完整内容提取下来，再按章节整理进知识库，同时会说清楚哪些地方值得我们借鉴：</p>
+<p><img src="/images/HWuk_WkakAAXI1q.jpg" alt="HWuk_WkakAAXI1q"></p>
+<h3 id="2-提取的关键：对照你现有的工作"><a href="#2-提取的关键：对照你现有的工作" class="headerlink" title="2. 提取的关键：对照你现有的工作"></a>2. 提取的关键：对照你现有的工作</h3><p>普通的总结工具只会告诉你「这篇文章讲了什么」。但我真正想知道的是：<strong>这篇东西对我现在在做的事，有没有用？</strong></p>
+<p>所以我给它的要求是，每条内容都要对照我现有的工作流来看：</p>
+<ul>
+<li>我们已经在做的，标出来，不用重复</li>
+<li>我们没做、但值得做的，给出具体怎么接进来</li>
+<li>跟我们无关的，一句话带过</li>
+</ul>
+<p>举个真实的例子。我在 X 上刷到一篇讲「7 大外链渠道」的帖子，丢给 Bot 之后，它没有给我总结这 7 个渠道是什么，而是直接告诉我：其中哪几个渠道我们的流程里已经有了；有一份 316 条的表里，大约 150 个提交入口是我们没有的，已经加进待核验队列；另外几个要付费的，按我们「跳过付费」的规则没有收。</p>
+<p><strong>这才是「提取」：从别人的内容里，提取出能改进你自己 SOP 的东西。</strong></p>
+<h3 id="3-岗位说明，直接抄"><a href="#3-岗位说明，直接抄" class="headerlink" title="3. 岗位说明，直接抄"></a>3. 岗位说明，直接抄</h3><p>建好 Bot 之后，把下面这段发给它：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">你是我的社媒分析员。我会发给你刷到的链接（X、抖音、小红书、YouTube、公众号或任意网页）。</span><br><span class="line"></span><br><span class="line">每收到一条：</span><br><span class="line">1. 先拿到原内容，全部通过 AIsa 的接口：推文用 Twitter 接口，抖音/小红书用 TikHub 接口，YouTube 用 YouTube 接口，网页用 Firecrawl 或 Tavily 接口。拿不到就直接告诉我原因，不要自己编一段总结。</span><br><span class="line">2. 按固定格式整理：一句话总结、核心要点、可操作步骤、提到的工具和链接、作者和原链接、主题标签。</span><br><span class="line">3. 对照我现有的工作流做提取：哪些我们已经在做；哪些没做但值得做，具体怎么接进来；哪些跟我们无关。值得做的部分，先给建议，由我确认后再改技能或例程。</span><br><span class="line">4. 追加到「社媒知识库」页面对应的主题下，同主题已有内容就合并，不要重复。</span><br><span class="line"></span><br><span class="line">每周日晚上 9 点，把本周新增内容整理成周报，挑出最值得我动手试的三条。</span><br><span class="line"></span><br><span class="line">只整理、不评论、不转发，不替我发帖。别人的内容只做学习记录，不搬运发布。</span><br></pre></td></tr></table></figure>
+
+<p>这里面最重要的一句是「拿不到就直接告诉我原因」。如果不写这句，它打不开链接的时候，可能会根据标题自己编一段总结出来，这比没有总结更糟糕。</p>
+<h3 id="4-存在哪"><a href="#4-存在哪" class="headerlink" title="4. 存在哪"></a>4. 存在哪</h3><p>整理好的内容放在一个 Page 里，也就是一个可以一直更新的页面，在资料库里能找到。把它置顶，手机和电脑上就都能看到。</p>
+<h2 id="四、交易-Bot：盯突发事件，Bot-分析，我来决定"><a href="#四、交易-Bot：盯突发事件，Bot-分析，我来决定" class="headerlink" title="四、交易 Bot：盯突发事件，Bot 分析，我来决定"></a>四、交易 Bot：盯突发事件，Bot 分析，我来决定</h2><p>第三个 Bot 是最近搭的，用来盯盘。</p>
+<p>先说清楚它<strong>不做</strong>什么：<strong>它不下单、不转账、不替我做任何交易决定。</strong> 它的工作是在大事件发生的第一时间，把事情查清楚、分析好，然后告诉我有没有值得关注的机会。最后要不要动手，永远是我自己决定。</p>
+<h3 id="1-为什么要盯事件"><a href="#1-为什么要盯事件" class="headerlink" title="1. 为什么要盯事件"></a>1. 为什么要盯事件</h3><p>加密市场和美股，经常被突发事件带着走。最近两周就有两个现成的例子：</p>
+<ul>
+<li><strong>币安被盗</strong>：10 月 29 日，币安热钱包被盗。按币安 11 月 3 日的初步调查报告，被转出的资产约 63.4 亿美元，起点是四个月前一场针对工程师的虚假招聘面试，是有记录以来规模最大的加密货币盗窃案。之后币安宣布补回了九成以上的被盗资产，承诺用户不承担损失，恢复上线后又出现了大额提现潮</li>
+<li><strong>黄仁勋承认婚外情</strong>：据媒体报道，黄仁勋向员工发出道歉信，承认对妻子不忠，英伟达董事会启动独立调查。消息出来后，英伟达美股夜盘一度下跌超过 3%</li>
+</ul>
+<p>这两个例子正好说明，事件出来的第一时间，有三件事最难判断：</p>
+<ol>
+<li><strong>真假和程度</strong>：哪些是已经证实的，哪些只是指控或传闻。比如黄仁勋这件事，他承认的是对妻子不忠，媒体报道里涉及的其他指控，他本人并没有承认，这两件事的影响完全不一样</li>
+<li><strong>归因</strong>：价格跌了，到底是不是因为这件事。英伟达在这之前的 11 月 5 日就已经单日大跌过一次，当时市场主要担心的是 AI 资本开支放缓，跟婚外情无关。如果把所有下跌都算到新闻头上，判断就会跑偏</li>
+<li><strong>持续多久</strong>：币安被盗金额创了纪录，但很快宣布补足资产。是一次性冲击，还是会持续发酵，要看后续进展</li>
+</ol>
+<p>人盯不过来，而且第一时间很难把这三件事想清楚。这恰好是 Bot 擅长的：24 小时盯着，一有动静马上交叉核实，区分已证实和传闻，再结合行情和历史上类似的事件给出参考。</p>
+<h3 id="2-整体流程"><a href="#2-整体流程" class="headerlink" title="2. 整体流程"></a>2. 整体流程</h3><p><strong>AIsa 采数据 → 触发条件 → Grok Bot 分析 → 推送给我 → 我决定 → 事后复盘</strong></p>
+<p><strong>第一步，用 <strong>AIsa</strong> 采数据。</strong> 交易 Bot 需要的数据源很杂，好在 AIsa 一个 Key 就能全部接上：</p>
+<ul>
+<li><strong>X 上的突发消息、重点账号动态</strong>：Twitter</li>
+<li><strong>加密货币价格、成交量</strong>：CoinGecko</li>
+<li><strong>美股个股和指数行情</strong>：Financial</li>
+<li><strong>预测市场对事件的押注概率</strong>：Polymarket</li>
+<li><strong>宏观数据（利率、通胀等）</strong>：FRED</li>
+<li><strong>交叉核实消息真假</strong>：Perplexity、Tavily</li>
+</ul>
+<p>AIsa 支持 MCP 接入，Grok 在它官方支持的客户端列表里。按返回结果计费，查不到就不收钱，适合这种「大部分时候没事、偶尔要猛查」的场景。</p>
+<p><strong>第二步，设触发条件。</strong> 不是每条新闻都要分析，那样太费钱也太吵。我设了两类触发：</p>
+<ul>
+<li><strong>价格异动</strong>：比如 BTC 15 分钟内跌幅从8w到了7.7w，或者某只重点股盘中异动</li>
+<li><strong>高影响关键词</strong>：被盗、漏洞、调查、起诉、辞职、破产这类词出现在重点账号或主流媒体上</li>
+</ul>
+<p><strong>第三步，Grok Bot 直接分析。</strong> 触发之后，Bot 自己把收集到的材料过一遍，分析市场趋势，按固定格式输出：</p>
+<ul>
+<li>事件一句话说清楚</li>
+<li>可信度：已证实、单一信源，还是传闻</li>
+<li>归因：价格波动有多少是这件事造成的，有没有别的原因在同时起作用</li>
+<li>影响哪些资产，方向和大概的时间窗口</li>
+<li>历史上类似的事件，当时市场怎么走的</li>
+<li>值得关注的价位</li>
+<li>什么情况说明这个判断是错的</li>
+<li>置信度</li>
+</ul>
+<p>其中「什么情况说明判断错了」这一条一定要有。它逼着分析给出一个可以验证的条件，而不是只说「可能涨也可能跌」。</p>
+<p><strong>第四步，推送给我。</strong> 只有达到门槛的才推：消息已证实，或者虽然只有单一信源、但价格已经明显异动。传闻类消息会明确标注「传闻」。</p>
+<p>价格提醒也是一句话的事。比如 BTC 跌破 77000 时它推给我，我回一句「突破 8 万再提醒我」，它就改好了：</p>
+<p><img src="/images/HWulczfbgAAfdFG.jpg" alt="HWulczfbgAAfdFG"></p>
+<p><strong>第五步，事后复盘。</strong> 这一步最容易被忽略，但它才是让这个 Bot 越用越准的关键。每天晚上，Bot 会回看当天推过的每一条：事后走势跟判断对不对，把结果记进一个「判断账本」。每周统计一次命中率，再提出提示词的修改建议，我确认之后再改。</p>
+<p>这又回到了开头那个思路：<strong>把复盘也固化成 SOP。</strong></p>
+<h3 id="3-岗位说明，直接抄-1"><a href="#3-岗位说明，直接抄-1" class="headerlink" title="3. 岗位说明，直接抄"></a>3. 岗位说明，直接抄</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">你是我的事件交易雷达。只分析，不下单、不转账、不替我发帖。所有结论仅供我参考，交易由我自己决定。</span><br><span class="line"></span><br><span class="line">数据：通过 AIsa 获取。X 突发消息和重点账号用 Twitter 接口；加密价格用 CoinGecko；美股行情用 Financial；事件概率参考 Polymarket；宏观数据用 FRED；核实消息用 Perplexity 或 Tavily。</span><br><span class="line"></span><br><span class="line">每 15 分钟扫描一次。出现以下任一情况就触发分析：</span><br><span class="line">- BTC 或 ETH 15 分钟内涨跌超过 3%，或我的观察股盘中异动超过 5%</span><br><span class="line">- 重点账号或主流媒体出现：被盗、漏洞、调查、起诉、辞职、破产、禁令等关键词</span><br><span class="line"></span><br><span class="line">触发后，你直接分析这些材料，判断市场趋势，按以下格式输出：</span><br><span class="line">事件一句话、信源与可信度（已证实 / 单一信源 / 传闻，承认的事实和外界指控要分开写）、归因（当前价格波动有多少来自这件事，是否有其他因素同时起作用）、影响资产、可能方向和时间窗、历史可比事件及当时走势、值得关注的价位、什么情况说明判断错了、置信度。</span><br><span class="line"></span><br><span class="line">推送规则：已证实，或单一信源但价格已明显异动，才推送给我；传闻必须标注「传闻」。没有达到门槛的不用报。</span><br><span class="line"></span><br><span class="line">每天北京时间 23 点复盘：回看今天推过的每一条，记录事后走势和判断对错，写入「判断账本」。每周日统计命中率，提出提示词修改建议，由我确认后再改。</span><br><span class="line"></span><br><span class="line">执行中缺工具、缺数据、接口报错，必须告诉我，不能跳过或编造。</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、想复刻的话，照这个清单来"><a href="#五、想复刻的话，照这个清单来" class="headerlink" title="五、想复刻的话，照这个清单来"></a>五、想复刻的话，照这个清单来</h2><p><strong>第一步：列出你的重复劳动。</strong> 不知道从哪开始，可以直接问你的主 Bot：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">看看我最近两周的邮件、日程和文档，按类型列出我重复在做的事：多久做一次、大概花多长时间、你能帮我做多少、需要什么权限。再按能省下的时间排序，挑出最值得交给你的三件事，建议做成例程还是专职 Bot。只给建议，先不要动手。</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二步：一件事一个 Bot。</strong> 找词、拆内容、盯盘，是三种完全不同的活，分开建 Bot，岗位说明更清楚，也不会互相干扰。</p>
+<p><strong>第三步：走「做一次 → 改到满意 → 存成技能 → 设成例程」。</strong> 别一上来就设例程，先手动跑通两次。</p>
+<p><strong>第四步：把数据接口接好。</strong></p>
+<ul>
+<li>数据：AIsa，一个 Key 拿到 Twitter、TikHub、YouTube、Firecrawl、Tavily、CoinGecko、Financial、DataForSEO 等接口</li>
+<li>所有 Key 和账号密码，<strong>一律放进保险库</strong></li>
+</ul>
+<p><strong>第五步：给每个 Bot 立三条底线。</strong></p>
+<ol>
+<li>状态写进文件和账本，每次开工先读账本</li>
+<li>缺工具、拿不到数据，必须说，不能跳过或编造</li>
+<li>花钱、对外发送、删除，必须你点头</li>
+</ol>
+<p><strong>第六步：定期看收益。</strong> 一套例程跑了一段时间，收益明显变少了，就降频或者停掉。额度是每周固定的，要花在回报最高的地方。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>回到开头那个问题：Grok Bot 能帮你赚钱吗？</p>
+<p>它不会替你想出一门生意。但如果你已经知道怎么赚钱，只是被重复劳动拖住了，那它可以帮你把这些活接过去，按你的规矩每天做下去，做完了主动来汇报，出了问题还会自己记下来，下次不再犯。</p>
+<p><strong>你负责判断和决策，Bot 负责把 SOP 跑下去。</strong> 这才是 AI 智能体真正能帮你赚钱的方式。</p>
+<blockquote>
+<p>风险提示：本文提到的交易 Bot 只做信息整理和分析参考，不构成任何投资建议。加密货币和股票交易风险极高，请独立判断，自行承担风险。</p>
+</blockquote>
+<p>我的Bot目前用到的API(想要稳定的服务，付费API是必不可少的，自己实现无论是稳定性和并发都很差，我也尝试自己实现了几个查询方式，速度很慢，也会慢慢开源出来，可以关注下文章开头的仓库，适合轻量使用的朋友)：</p>
+<ul>
+<li>AIsa：给 AI 智能体用的数据资源层。一个 Key 接入 6000+ API，Twitter、TikHub、YouTube、CoinGecko、DataForSEO 都在里面。支持 MCP，Grok 可以直接接。按结果计费，查不到不扣钱。</li>
+</ul>
+<p>欢迎关注我@Pluvio9yte，我在持续分享AI类干货</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/10/lonelygogo21-2119972735426383993/">https://yaoav.github.io/2026/11/10/lonelygogo21-2119972735426383993/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/lonelygogo21/">@lonelygogo21</a></div><div class="post-share"><div class="social-share" data-image="/images/2119972735426383993-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a><a class="pagination-related" href="/2026/11/10/amazon-2119855536216920564/" title="Amazon Leo to launch 40 satellites on its first Vulcan mission"><img class="cover" src="/images/2119855536216920564-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Amazon Leo to launch 40 satellites on its first Vulcan mission</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @amazon（Amazon） 的长文，原文链接，版权归原作者所有。  Leo Vulcan 1 (LV-01) will carry the largest batch of Leo satellites to orbit yet and kick off a 38-launch partnership with ULA.Key takeaways Amazon Leo’s first Vulcan mission will carry 40 satellites to orbit. Vulcan will launch 1,500+ first generation Leo satellites across 38 missions—more than any other rocket in the program. Amazon’s investment in Cape Canaveral infrastructure will allow LV-02 to launch within weeks of LV-01.  Amazon complete...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/15/lonelygogo21-2121645512281723304/" title="万字分享，用 AIsa + AI Agent 串起达人营销全流程"><img class="cover" src="/images/2121645512281723304-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">万字分享，用 AIsa + AI Agent 串起达人营销全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lonelygogo21（Liz栗子） 的长文，原文链接，版权归原作者所有。  我 2024 年刚开始做海外 AI 工具的 KOL 达人营销时，找达人真的是一件苦差事。 那时候我用 SimilarTube、EazyKOL 这些插件，一个一个搜、一个一个点开主页，看内容、核对数据，再手动录入飞书多维表格。 有时候一天什么活都不干，撑死也就找 50 个差不多精准的达人。找完人还要找邮箱、去重、发邮件、跟进回复，一套流程走下来，真的很花时间。 而且我一直做的都是 AI 工具，尤其是面向开发者的产品。之前做过 Chat2DB 这种 text-to-SQL AI 工具，也做过类似 Lovable 这样的 vibe coding 工具。 这类产品找达人，光看他有没有介绍过 AI 相关内容还不够。我还会看他的定位、内容方向和观众里有没有开发者，看看他能不能触达到我们真正想找的用户。 而且当时同时做 AI 和开发者内容的达人还挺少的，所以找起来也不容易。不过我很幸运，去年合作过一位加拿大的 AI 博主，他当时给我们的工具带来了第一笔转化。（现在他已经成了大网红，也基本不...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">221</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">111</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E6%83%B3%E6%B8%85%E6%A5%9A%EF%BC%9A%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%B4%BB%E5%80%BC%E5%BE%97%E4%BA%A4%E7%BB%99-Bot"><span class="toc-number">1.</span> <span class="toc-text">一、先想清楚：什么样的活值得交给 Bot</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%87%BA%E6%B5%B7%E7%AB%99%E7%82%B9%E8%BF%90%E8%90%A5-Bot%EF%BC%9A%E6%8A%8A%E3%80%8C%E6%89%BE%E8%AF%8D%E6%89%BE%E7%AB%99%E3%80%8D%E5%8F%98%E6%88%90%E4%B8%80%E6%9D%A1%E6%B5%81%E6%B0%B4%E7%BA%BF"><span class="toc-number">2.</span> <span class="toc-text">二、出海站点运营 Bot：把「找词找站」变成一条流水线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AF%8D%E4%BB%8E%E5%93%AA%E6%9D%A5%EF%BC%9A%E8%AE%A9%E8%AF%8D%E6%BA%90%E6%BA%90%E4%B8%8D%E6%96%AD"><span class="toc-number">2.1.</span> <span class="toc-text">1. 词从哪来：让词源源不断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%89%E4%BA%86%E8%AF%8D%E4%B9%8B%E5%90%8E%EF%BC%9A%E6%89%BE%E7%AB%99%E3%80%81%E6%9F%A5%E5%A4%96%E9%93%BE%E3%80%81%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">2. 有了词之后：找站、查外链、分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%AF%8F%E5%A4%A9%E5%9B%BA%E5%AE%9A%E7%9A%84%E4%BE%8B%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">3. 每天固定的例程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%99%E5%A5%97%E7%B3%BB%E7%BB%9F%E9%87%8C%E6%9C%80%E5%80%BC%E9%92%B1%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%98%AF%E8%A7%84%E7%9F%A9"><span class="toc-number">2.4.</span> <span class="toc-text">4. 这套系统里最值钱的不是代码，是规矩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%A4%BE%E5%AA%92%E5%88%86%E6%9E%90-Bot%EF%BC%9A%E5%88%B7%E5%88%B0%E5%B0%B1%E4%B8%A2%EF%BC%8C%E5%AE%83%E8%B4%9F%E8%B4%A3%E5%88%86%E6%9E%90%E3%80%81%E6%8F%90%E5%8F%96%E3%80%81%E5%85%A5%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">三、社媒分析 Bot：刷到就丢，它负责分析、提取、入库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B4%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%9B%9B%E6%AD%A5"><span class="toc-number">3.1.</span> <span class="toc-text">1. 整个流程四步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8F%90%E5%8F%96%E7%9A%84%E5%85%B3%E9%94%AE%EF%BC%9A%E5%AF%B9%E7%85%A7%E4%BD%A0%E7%8E%B0%E6%9C%89%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="toc-number">3.2.</span> <span class="toc-text">2. 提取的关键：对照你现有的工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B2%97%E4%BD%8D%E8%AF%B4%E6%98%8E%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%8A%84"><span class="toc-number">3.3.</span> <span class="toc-text">3. 岗位说明，直接抄</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AD%98%E5%9C%A8%E5%93%AA"><span class="toc-number">3.4.</span> <span class="toc-text">4. 存在哪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%BA%A4%E6%98%93-Bot%EF%BC%9A%E7%9B%AF%E7%AA%81%E5%8F%91%E4%BA%8B%E4%BB%B6%EF%BC%8CBot-%E5%88%86%E6%9E%90%EF%BC%8C%E6%88%91%E6%9D%A5%E5%86%B3%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">四、交易 Bot：盯突发事件，Bot 分析，我来决定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%9B%AF%E4%BA%8B%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">1. 为什么要盯事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="toc-number">4.2.</span> <span class="toc-text">2. 整体流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B2%97%E4%BD%8D%E8%AF%B4%E6%98%8E%EF%BC%8C%E7%9B%B4%E6%8E%A5%E6%8A%84-1"><span class="toc-number">4.3.</span> <span class="toc-text">3. 岗位说明，直接抄</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%83%B3%E5%A4%8D%E5%88%BB%E7%9A%84%E8%AF%9D%EF%BC%8C%E7%85%A7%E8%BF%99%E4%B8%AA%E6%B8%85%E5%8D%95%E6%9D%A5"><span class="toc-number">5.</span> <span class="toc-text">五、想复刻的话，照这个清单来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">6.</span> <span class="toc-text">最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"><img src="/images/2122492699555012996-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍"/></a><div class="content"><a class="title" href="/2026/11/17/PengP66810-2122492699555012996/" title="黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍">黄仁勋走了，15万人求他回归，我把名单按钱拆了一遍</a><time datetime="2026-11-17T08:51:08.000Z" title="发表于 2026-11-17 08:51:08">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"><img src="/images/2122480634577010756-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队"/></a><div class="content"><a class="title" href="/2026/11/17/ai_edisonZ-2122480634577010756/" title="万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队">万字长文｜DeepSeek Harness 进阶指南，搭建全自动顶级 AI 团队</a><time datetime="2026-11-17T08:03:11.000Z" title="发表于 2026-11-17 08:03:11">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img src="/images/2122455841290817783-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"/></a><div class="content"><a class="title" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</a><time datetime="2026-11-17T06:24:40.000Z" title="发表于 2026-11-17 06:24:40">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid"><img src="/images/2122375535720333743-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Yes, That's a Hearing Aid"/></a><div class="content"><a class="title" href="/2026/11/17/Sachin_and_Adam-2122375535720333743/" title="Yes, That's a Hearing Aid">Yes, That's a Hearing Aid</a><time datetime="2026-11-17T01:05:34.000Z" title="发表于 2026-11-17 01:05:34">2026-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"><img src="/images/2122355711414038533-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)"/></a><div class="content"><a class="title" href="/2026/11/16/k1rallik-2122355711414038533/" title="Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)">Graphs, Loops &amp; Reverse Engineering: Build Your Own AI Team (Full Guide)</a><time datetime="2026-11-16T23:46:47.000Z" title="发表于 2026-11-16 23:46:47">2026-11-16</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
