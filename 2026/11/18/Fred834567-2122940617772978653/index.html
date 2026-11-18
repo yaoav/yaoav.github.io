@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/Fred834567-2122940617772978653/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122940617772978653-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T14:31:00.000Z">
+<meta property="article:modified_time" content="2026-11-19T07:12:04.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Fred834567">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122940617772978653-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透",
+  "url": "https://yaoav.github.io/2026/11/18/Fred834567-2122940617772978653/",
+  "image": "https://yaoav.github.io/images/2122940617772978653-cover.jpg",
+  "datePublished": "2026-11-18T14:31:00.000Z",
+  "dateModified": "2026-11-19T07:12:04.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/Fred834567-2122940617772978653/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">300</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">157</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122940617772978653-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Grok Bot 额度用不够用？一百一十招省额度方法，一篇讲透</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T14:31:00.000Z" title="发表于 2026-11-18 14:31:00">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Fred834567（Fred-New）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122940617772978653">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<h3 id="先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》"><a href="#先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》" class="headerlink" title="先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》"></a>先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》</h3><p><strong>用了这几周的时间总是额度用到一半就见底，常常不是因为你事情太多，是我的机器人被反复叫醒，做了很多空转的活。</strong></p>
+<p><img src="/images/HXYxn4BacAAOUuG.jpg" alt="HXYxn4BacAAOUuG"></p>
+<p>你每发一条消息，或定时任务每跑一次，它都会开始一轮工作，并因此花掉一些额度。哪怕最后只回一句「没有更新」，检查的功夫也已经花了。额度是按它实际干的活来扣的，不是按你发了几条消息。步骤越多，处理的内容越大，通常花得越多。</p>
+<p><img src="/images/HXYwuBfa8AA5dE-.jpg" alt="HXYwuBfa8AA5dE-"></p>
+<p>官方没有公布每一档到底有多少额度，也没有公布每种操作具体扣多少。所以这里不写那些猜出来的数字。实际省了多少，要看你自己用量页上的变化。</p>
+<p>还要分清两种订阅。如果你用的是新的统一订阅 （The X Subscription），Grok、Grok Bot 和 Cursor 共用一个每周额度池，把活从 Grok Bot 挪到 Cursor，省不下来。如果你还在用旧的 Cursor 订阅，Grok Bot 的周额度是单独计算的。两种不要混着套用。</p>
+<h3 id="最先做的-10-件事"><a href="#最先做的-10-件事" class="headerlink" title="最先做的 10 件事"></a>最先做的 10 件事</h3><p>下面先列出最值得先做的 10 件事，然后再按类别把全部方法写全。每条都写了要做什么、为什么省。部分条目附上了可以直接复制给机器人的话。</p>
+<p><img src="/images/HXYpWuDbsAAnWcN.jpg" alt="HXYpWuDbsAAnWcN"></p>
+<p>目录</p>
+<ul>
+<li>一、交代任务的习惯 （第 1-12 条，共 12 条）</li>
+<li>二、少开网页，少做空转 （第 13-19 条，共 7 条）</li>
+<li>三、把定时任务管紧 （第 20-32 条，共 13 条）</li>
+<li>四、少让机器人互相传话 （第 33-42 条，共 10 条）</li>
+<li>五、工具和资料大家共用 （第 43-50 条，共 8 条）</li>
+<li>六、记忆、页面和聊天怎么用 （第 51-58 条，共 8 条）</li>
+<li>七、搜索和查资料 （第 59-65 条，共 7 条）</li>
+<li>八、图片、视频和文件 （第 66-75 条，共 10 条）</li>
+<li>九、按常见场景来省 （第 76-95 条，共 20 条）</li>
+<li>十、机器人数目和分工 （第 96-102 条，共 7 条）</li>
+<li>十一、看用量、看账单，别踩坑 （第 103-110 条，共 8 条）</li>
+</ul>
+<h3 id="一、交代任务的习惯"><a href="#一、交代任务的习惯" class="headerlink" title="一、交代任务的习惯"></a>一、交代任务的习惯</h3><p><strong>1. 一次说全</strong></p>
+<p>目标、格式、给谁看、不要什么，都在第一条消息里讲清楚。少来回改，就少启动几次工作。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请按这些要求一次做完再回复，先不要连着追问：</span><br><span class="line">目标：……</span><br><span class="line">给谁看：……</span><br><span class="line">格式和字数：……</span><br><span class="line">不要做：……</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 零碎的事攒一起说</strong></p>
+<p>想到一件就发一条，每条都会让它开始一轮工作。不急的事先记下来，用 1、2、3 写在同一条消息里一起交代。</p>
+<p><strong>3. 先说清楚格式和口气</strong></p>
+<p>要几条、每条多少字、口语还是正式，一开始就定好。比如「写 5 条，每条 50 字以内，口语化」，比只说「写几条」更少返工。</p>
+<p><strong>4. 先给一篇你满意的示例</strong></p>
+<p>贴一篇你喜欢的成品，让它照着写。它一次对准你的口味，比改三遍更省。</p>
+<p><strong>5. 大活先做小样</strong></p>
+<p>先写一章、先做一页、先改一条，你看过方向对了，再做剩下的。整本或整批返工，最费额度。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一件比较大的活。请先只做最小的 1 个样本，做完就停，</span><br><span class="line">等我看过再继续。在我说「可以继续」之前，不要往后做。</span><br></pre></td></tr></table></figure>
+
+<p><strong>6. 做完再回，少在中途来回确认</strong></p>
+<p>让它做完再一次把结论发给你。你中途反复追问进度，它中途再回来解释，还是会多花。同一次工作里的几句说明，不一定按条另扣，但来回越多，通常越费。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请全部做完后再回复。回复里只要结论、必要依据和文件路径。</span><br><span class="line">中途不用专门来报进度。如果检查后没有新变化，不必专门发「没有更新」，</span><br><span class="line"></span><br><span class="line">直接结束即可。但请记住：检查本身已经花了额度，所以能少跑就少跑。</span><br></pre></td></tr></table></figure>
+
+<p><strong>7. 手上有现成的直接贴</strong></p>
+<p>你已经有的原文、数据、截图说明，直接发给它。比如平台里已经生成好的文字，你贴过来，就比让它再去网页里抓一遍省得多。</p>
+<p><strong>8. 不急的事别反复催进度</strong></p>
+<p>每问一次「好了没」，就会再启动一次工作。不急的话，等它做完自己回来即可。</p>
+<p><strong>9. 先写明不要做什么</strong></p>
+<p>比如「不要发帖」「不要打开付费工具」「不要删除文件」。提前划清边界，能避免它走错再重做。</p>
+<p><strong>10. 材料和要求放在同一条消息里</strong></p>
+<p>不要先丢文件，过一会儿再补要求。两次消息就是两次启动。文件、链接、要求和示例，尽量一次给齐。</p>
+<p><strong>11. 改稿时只指出要改的地方</strong></p>
+<p>说「只改第 3 条的开头，其他不动」。不要让它整篇重写。改动越小，花得越少，也不容易把已经对的部分改坏。</p>
+<p><strong>12. 方向不对马上叫停</strong></p>
+<p>发现写偏了，立刻说停，并指出哪里不对。别让它按错误方向做完再推翻。</p>
+<h3 id="二、少开网页，少做空转"><a href="#二、少开网页，少做空转" class="headerlink" title="二、少开网页，少做空转"></a>二、少开网页，少做空转</h3><p><strong>13. 能直接取数，就别一页页点开网页</strong></p>
+<p>打开网页、等待加载、再一页页查找，步骤又多又慢。很多资料能直接下载表格，或用现成的数据接口一次取回。同样是拿一份名单或公开表格，能一次取回就不要慢慢点。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这个任务先找能不能直接下载、用接口，或写一小段命令来拿结果。</span><br><span class="line">写好后每次直接运行。</span><br><span class="line">除非确实只能在网页上点按钮，否则不要打开浏览器慢慢翻。</span><br></pre></td></tr></table></figure>
+
+<p><strong>14. 每天都要重复的步骤，写成命令存起来</strong></p>
+<p>以后直接运行，不必每次重新在网页上走一遍。同一账号下的机器人共用一台云电脑，放在大家都能找到的目录里即可。</p>
+<p><strong>15. 已经接好的服务，优先用连接器</strong></p>
+<p>像 X、邮箱这类已经接好的服务，优先用官方连接器读数据。这比一页页打开网页更直接，也更稳。</p>
+<p><strong>16. 能一起做的步骤一次做完</strong></p>
+<p>同一件事里要查的资料、要写的稿、要整理的表，能一轮做完就不要拆成好几轮。每多一轮，就多一次启动。</p>
+<p><strong>17. 连续失败就停下来问你</strong></p>
+<p>不要让它在后台自己转圈。可以先约定：同一操作连续 2 次不成功，就停下来问你。这是建议次数，不是系统规定。反复重试，最容易悄悄把额度花光。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行时先记住：同一操作连续 2 次不成功，</span><br><span class="line">或你自己拿不准，就立刻停下来问我。不要自行不停重试。</span><br></pre></td></tr></table></figure>
+
+<p><strong>18. 不要反复刷新同一个页面干等更新</strong></p>
+<p>没有变化的等待，最容易白花额度。需要盯变化的，改用后面「定时任务」里的办法：先做一次很轻的检查，真有变化再叫醒它来整理。</p>
+<p><strong>19. 动手前先看电脑里有没有现成结果</strong></p>
+<p>先让它检查是不是已经有上次保存的文件或结论。有就接着用，不必重新搜、重新做。</p>
+<h3 id="三、把定时任务管紧"><a href="#三、把定时任务管紧" class="headerlink" title="三、把定时任务管紧"></a>三、把定时任务管紧</h3><p><img src="/images/HXYrqPaagAAv_PO.jpg" alt="HXYrqPaagAAv_PO"></p>
+<p><strong>20. 日报和例行收集，一天看一次通常就够</strong></p>
+<p>把检查间隔拉长。不是越勤越好。该一天看一次的，就不要设得更密。官方也提醒过：跑得越勤，花得越多。</p>
+<p><strong>21. 没变化时不必专门再报「没有更新」</strong></p>
+<p>回一句「没有更新」，也会再写一条消息。没有新情况，结束即可。但要分清：任务只要跑起来做了检查，额度就已经花了。不发这句，最多少掉回消息的部分。更省的办法，是把间隔拉长，或有变化再叫醒。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请先列出我现在的定时任务。把日报和常规收集改成一天一次。</span><br><span class="line">每次如果没有新变化，不必专门给我发，没有更新，也不要转给别的机器人。同时记住：检查本身已经花额度，所以能少跑就少跑。</span><br></pre></td></tr></table></figure>
+
+<p><strong>22. 不要把间隔设成每小时，甚至更短</strong></p>
+<p>官方提醒过：间隔太短，可能一天就用完一周的额度。定时任务最短可以设到 5 分钟，但省额度时应该比这长得多。</p>
+<p><strong>23. 手动点「测试」也会花额度</strong></p>
+<p>测试会按真实步骤执行一遍，所以一样会花额度。调试时少点。确认任务没问题后，只在必要时再测一次。</p>
+<p><strong>24. 这段时间不用了，就先暂停</strong></p>
+<p>活动结束、临时照看结束，及时停掉。确定还要长期用，再保持开启。暂停着的任务，平时不会花额度。</p>
+<p><strong>25. 只在你真会查看结果的时间跑</strong></p>
+<p>比如只在工作日白天运行。夜里和周末没人看结果，就不必每次都跑。按你真正会打开来看的时间来设。</p>
+<p><strong>26. 查同一类信息的任务，合成一个</strong></p>
+<p>两个任务都在看热点、都在整理同类信息，就合成一个，出一份结果。重复检查会花双份额度。</p>
+<p><strong>27. 先做一次很轻的检查，真有变化再叫醒它</strong></p>
+<p>比如你要看某个公开报名页或公告页有没有更新，可以先让电脑做一次很轻的比对。真有变化，再叫醒机器人，把变化要点整理给你。这样它就不必每隔一会儿完整醒一次。</p>
+<p><strong>28. 能「有事情再跑」，就别按时去空翻一遍</strong></p>
+<p>比如指定邮箱来了某类邮件再跑，或某个来源真的有更新再跑，比每隔一小时去翻一遍更省。</p>
+<p><strong>29. 叫醒它的条件要写窄</strong></p>
+<p>不要监听一个很忙的频道或收件箱里的每一条消息。只盯某个关键词、某个来源、某一个收件箱。范围越大，空转越多。</p>
+<p><strong>30. 先在聊天里手动跑通，再改成定时自动</strong></p>
+<p>流程还不稳，就先不要自动化。否则它会按错误步骤定时反复执行，越自动越费。官方也建议：先把一次性的做法做稳，存成技能，再考虑定时。</p>
+<p><strong>31. 离开很久再回来，先看哪些任务被暂停了</strong></p>
+<p>你离开很久时，系统有时会询问并暂停定时任务。回来后先看一眼清单。不要把已经不用的任务全部重新打开。</p>
+<p><strong>32. 同一件事只留一个机器人照看</strong></p>
+<p>同一条公告、同一个页面、同一类邮件，只留一个机器人负责。两个人同时盯，会花双份额度。</p>
+<h3 id="四、少让机器人互相传话"><a href="#四、少让机器人互相传话" class="headerlink" title="四、少让机器人互相传话"></a>四、少让机器人互相传话</h3><p><img src="/images/HXYsd8NbIAAx_mw.jpg" alt="HXYsd8NbIAAx_mw"></p>
+<p><strong>33. 能一个人做完，就不必拉群</strong></p>
+<p>群里每条机器人回复都会花额度，它们之间传话也一样。能在和一个机器人的单独聊天里做完，就不要拉一群。</p>
+<p><strong>34. 群里的机器人越少越好</strong></p>
+<p>一个群最多可以放 6 个机器人。这是上限，不是建议人数。不是非要凑满。人越少，互相回复就越少。</p>
+<p><strong>35. 交接时把结果存成文件，只发一段路径说明</strong></p>
+<p>上一个机器人把结果存成固定格式的文件，只发一条消息告诉下一个：文件在哪、要做什么。不要把整段内容在聊天里再说一遍。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">以后需要其他机器人接着做时，你先把完整结果存成文件，</span><br><span class="line">再发一条短消息，写清文件路径和下一步要求。</span><br><span class="line">不要把全文再贴一遍，也不要先发「我开始了」或「收到」。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>36. 不要为了打招呼再叫对方一次</strong></p>
+<p>「收到」「好的」「我开始了」没有新结果，却会让对方再工作一轮。做完把结果交给你就行。</p>
+<p><strong>37. 只有对方真要接着动手时，再叫它</strong></p>
+<p>不需要别人接着做，就不要再转手。能自己做完并直接交给你的，就不要多叫一个机器人。</p>
+<p><strong>38. 一件完整的事，交给一个机器人从头做到尾</strong></p>
+<p>比如从一份会议记录，整理成纪要，再列出待办，交给同一个机器人做完。不要拆成找资料、整理、排版、交给你这几段，让几个机器人来回传。每转一次手，都要把来龙去脉再说一遍，额度花在交接上，活还没做完。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这件事由你一个人从头做到尾，不要再转给别的机器人。</span><br><span class="line">你按我给的来源和格式做完，检查无误后，把完整结果一次性发给我。</span><br></pre></td></tr></table></figure>
+
+<p><strong>39. 只想停某一个时，就只停那一个</strong></p>
+<p>不要把全部正在做的事一起停掉。那样会把其他机器人正在做的活一并中断，而且停掉的工作不会自动接着做。你只是想叫停眼前这一件时，去停那一个即可。</p>
+<p><strong>40. 群里点名该动手的那一个</strong></p>
+<p>只让该动手的那个回。不要动不动叫所有人一起回复。大家都回一句，额度就叠上去了。</p>
+<p><strong>41. 群里开始的事，回复也留在群里</strong></p>
+<p>不要同一件事既在群里说一遍，又私聊再讲一遍。重复说明，就是重复消耗。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请记住：在群里开始的任务，把回复留在群里。不要再私聊里把同一件事重复讲一遍。</span><br></pre></td></tr></table></figure>
+
+<p><strong>42. 拿不准要不要建群时，先在一对一里做完</strong></p>
+<p>真的需要两个机器人接力时再开群。先建群再分活，往往会多出很多没有必要的对话。</p>
+<h3 id="五、工具和资料大家共用"><a href="#五、工具和资料大家共用" class="headerlink" title="五、工具和资料大家共用"></a>五、工具和资料大家共用</h3><p><strong>43. 把常用查法做成技能</strong></p>
+<p>搜索、知识库这类常用方法，做成大家都能调用的技能。哪个机器人要用就直接用，不必每次重新教一遍怎么查。</p>
+<p><strong>44. 常用命令放在云电脑大家都能找到的目录</strong></p>
+<p>同一账号下的机器人共用一台云电脑。不要每人各做一套重复的工具。谁要用，谁直接调用即可。</p>
+<p><strong>45. 不要专门再养一个只负责「帮你查一下」的机器人</strong></p>
+<p>比如你正在写稿的机器人需要查资料，让它自己调用技能或公共命令即可。如果为此再设一个「查询助手」，查一次就要聊两轮，通常更费。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以后要查资料或读数据时，你直接使用已经启用的技能，</span><br><span class="line">或运行云电脑公共目录里的命令。不要再发消息找别的机器人代查。</span><br></pre></td></tr></table></figure>
+
+<p><strong>46. 查过的资料存成文件，下次先读再决定要不要重搜</strong></p>
+<p>选题库、模板、已经核实过的来源，都放在固定位置。下次先读文件，不必再搜一遍。</p>
+<p><strong>47. 已经跑顺的步骤，存成技能并起一个好记的名字</strong></p>
+<p>下次直接说技能名，按同样步骤做，不用从头教。</p>
+<p><strong>48. 长期要遵守的规矩，让它记住</strong></p>
+<p>比如「不要替我发帖」「只要草稿」「长结果存文件」。说一次并让它记住，就不必每次重复说。现在主要是在聊天里交代并请它记住，而不是去填一个旧的简介页。</p>
+<p><strong>49. 技能里把关键事项写清楚</strong></p>
+<p>至少写清：什么时候用、需要准备什么、按什么步骤做、最后交什么结果、怎样算做对、哪些要先问你。写清楚了，以后少走弯路，也少返工。</p>
+<p><strong>50. 把常用来源和链接也存下来</strong></p>
+<p>官方说明、常用后台、固定数据表的地址，写成一份来源清单。下次直接把链接给它，不用再让它满世界找。</p>
+<h3 id="六、记忆、页面和聊天怎么用"><a href="#六、记忆、页面和聊天怎么用" class="headerlink" title="六、记忆、页面和聊天怎么用"></a>六、记忆、页面和聊天怎么用</h3><p><strong>51. 把你的偏好说一次，并让它记住</strong></p>
+<p>口吻、格式、常用目录、不要做什么，说一次并让它记住。以后少重复说明，也少因忘了你的习惯而返工。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请记住这些以后都适用的偏好，并在之后默认遵守：</span><br><span class="line">口吻和格式：……</span><br><span class="line">文件放在：……</span><br><span class="line">不要做：……</span><br><span class="line">长结果只回结论和文件路径。</span><br></pre></td></tr></table></figure>
+
+<p><strong>52. 偶尔核对它记得的习惯</strong></p>
+<p>问一句「你还记得我哪些习惯」。过时的让它改掉或忘掉，免得按旧规矩做错，再花一轮重做。</p>
+<p><strong>53. 已经有一页或一份成品，就在原文件上改</strong></p>
+<p>报告、看板、对照表，如果已经有一份，就说「在上一份上改这几处」。推倒重来，比改几处费得多。</p>
+<p><strong>54. 常用模板先搭好架子</strong></p>
+<p>周报、推文、对照表先做好固定格式。以后只填新内容，不必每次从空白重新排。</p>
+<p><strong>55. 长资料和中间结果存成文件，聊天里只回结论和路径</strong></p>
+<p>这样能少让它反复处理同一大段原文，下次也更好接着做。官方并没有说「聊天窗口越长就越费」。费的是它实际处理的内容和步骤。日志、原文、表格底稿，都放进文件里。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以后长资料、排查记录和中间结果都存成文件。</span><br><span class="line">回我时只给结论和文件路径，不要把原文整段贴回来。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>56. 长期项目交给专门的机器人，或把进度写成文件</strong></p>
+<p>天天对话的机器人，如果同时塞进很多长期项目，下次往往要把背景再讲一遍。长期项目交给专门的机器人，或把进度写成文件，主聊天只谈当前的事。</p>
+<p><strong>57. 做完一段，就把关键结论写入固定笔记</strong></p>
+<p>下次接着做时，先读笔记再动手。不必把旧聊天从头翻一遍，也不必把背景重新解释一遍。</p>
+<p><strong>58. 会变化的数字，不要只靠记忆</strong></p>
+<p>价格、名额、最新通知这类会变的信息，让它再查一次现在的来源。按过期记忆写错，再返工，往往更费。</p>
+<h3 id="七、搜索和查资料"><a href="#七、搜索和查资料" class="headerlink" title="七、搜索和查资料"></a>七、搜索和查资料</h3><p><strong>59. 你已经有链接就直接给</strong></p>
+<p>不要只说「去网上找一下某某文章」。把链接放进消息里，它少找很多路，也不容易找错再重来。</p>
+<p><strong>60. 先限定范围和关键词</strong></p>
+<p>说清在哪个网站、哪段时间、找什么、不找什么。范围越小，乱跑的步骤越少。</p>
+<p><strong>61. 搜到的原文存进文件，聊天里只回要点和链接</strong></p>
+<p>大批原文贴回聊天，会让它反复处理同一批内容。文件里保存原文，聊天里只看提炼后的要点，需要时再打开文件。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">检索时请把原始结果保存到文件中。</span><br><span class="line">对话里只向我汇报提炼后的要点和对应链接，不要把大段原文贴进聊天。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>62. 能下载的表格或文档，就先下载再读</strong></p>
+<p>比在网页上滚来滚去更直接。下载后还可以留着下次复用，不必重复打开同一页面。</p>
+<p><strong>63. 同一批资料尽量一次搜完</strong></p>
+<p>不要「再搜一下」「再补几个」地拆成很多次。每补一次，就多一轮。一开始把要找的范围一次说清。</p>
+<p><strong>64. 你已经知道的部分直接写上</strong></p>
+<p>背景、已有结论、要排除的内容，先告诉它。别让它把你已经掌握的信息再查一遍。</p>
+<p><strong>65. 付费采集或试用，先问你再做</strong></p>
+<p>不要为了「再试一次」「再抓一轮」自己反复跑。先告诉你要花什么、能得到什么，你同意了再做。</p>
+<h3 id="八、图片、视频和文件"><a href="#八、图片、视频和文件" class="headerlink" title="八、图片、视频和文件"></a>八、图片、视频和文件</h3><p><strong>66. 只发需要看的那部分</strong></p>
+<p>一张长截图里，只裁出关键区域再发。无关的菜单、广告、长空白，不必一起丢进去。</p>
+<p><strong>67. 能先转成文字的，就先转成文字</strong></p>
+<p>音视频口播、长扫描件，可以先得到文字再给机器人读。直接丢进很多图片和很长的视频，通常会花得很快。</p>
+<p><strong>68. 生图时一次说清关键信息</strong></p>
+<p>主体、风格、气氛、画面比例，以及不要出现什么，尽量一次写全。说得越清楚，越少反复生成。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">请生成图片，先只出 1 张给我看。按下面描述一次做对，不要连续生成多张：</span><br><span class="line">主体：……</span><br><span class="line">风格和气氛：……</span><br><span class="line">画面比例：……</span><br><span class="line">不要出现：……</span><br><span class="line">我确认后再说要不要改、要不要加。</span><br></pre></td></tr></table></figure>
+
+<p><strong>69. 生视频先按默认效果试一条</strong></p>
+<p>官方默认清晰度是 480p，默认时长大约 6 秒。可以先出一条较短的，看看画面和风格对不对。一开始就要求又长又清晰，错了重做更亏。这里只写默认参数，不写猜出来的扣费数字。</p>
+<p><strong>70. 方向对了，再考虑更清晰或稍长一点</strong></p>
+<p>视频时长可在 1 到 15 秒之间，也可以要求 720p。先确认内容对，再提高清晰度或加长。不要第一次就按最高要求去生成。</p>
+<p><strong>71. 少反复重新生成</strong></p>
+<p>先改文字说明，你确认后再生成。不要连续点很多次「再来一张」「再做一条」。每一次生成，通常都比改几句说明更费。</p>
+<p><strong>72. 表格、对比和图表，用页面或表格来做</strong></p>
+<p>不要用生图功能去硬画图表。官方也说明：图表、对照和表格，适合做成页面，而不是靠生图硬画。这种图往往画不准，还容易返工。</p>
+<p><strong>73. 大文件只抽出需要的章节再发</strong></p>
+<p>无关章节一并丢进去，只会让它多看很多没用的部分。能摘出关键页，就不要发整本。如果文件实在太大，也可能发不出去：单条消息最多 20 个附件，文档和视频都有大小限制。</p>
+<p><strong>74. 不要把同一段很长的视频反复丢进去「再看一遍」</strong></p>
+<p>把问题的时间点、已经转好的文字，或需要看的那几秒说明清楚。重复让它「再看整段」，会重复消耗。</p>
+<p><strong>75. 生成失败或被拦截时，换一种说法再试一次</strong></p>
+<p>不要连着原样重试很多次。换个描述、少用专有名称，或先确认这次功能是否可用，再继续。</p>
+<h3 id="九、按常见场景来省"><a href="#九、按常见场景来省" class="headerlink" title="九、按常见场景来省"></a>九、按常见场景来省</h3><p><strong>76. 写推文或日常文案</strong></p>
+<p>先写清账号定位、字数、口气，并给 1 篇你满意的示例。只要草稿，由你自己发布。不要让它反复改到「再来一版」，除非你指出具体要改哪几句。</p>
+<p><strong>77. 一组帖子一次出齐</strong></p>
+<p>同一主题要写 5 条，就一次说清 5 条的要求。不要今天要一条、明天再要一条地来回叫。</p>
+<p><strong>78. 选题和热点监控，不要一天叫醒好多次</strong></p>
+<p>一天集中整理一次就够。结果写入固定的选题库文件。需要看更勤，也尽量合并成一个任务，而不是好几个任务一起盯。</p>
+<p><strong>79. 选题不要再每天传话给写稿的机器人</strong></p>
+<p>让写稿的那个到点自己去读选题库文件。少一轮「我发给你了」「收到」，额度就能留下来写真正的稿。</p>
+<p><strong>80. 短视频或图文素材，能用平台自带文字就直接贴</strong></p>
+<p>比如平台里已经生成好的原话，准确且现成。你贴过来，比让机器人去网页或应用里反复抓更省。</p>
+<p><strong>81. 不要为了「全部抓下来」反复开网页，或擅自跑付费采集</strong></p>
+<p>先用已经到手的少量准确材料。需要扩大范围时，先问你，再决定要不要抓、抓多少。</p>
+<p><strong>82. 素材按主题放进固定文件夹</strong></p>
+<p>封面、口播稿、数据表分开放好。下次直接用现成文件，不必重新寻找、重新下载。</p>
+<p><strong>83. 写长文档或电子书，先写大纲</strong></p>
+<p>先交章节目录和每章要写什么，你确认后再分章写。大纲不对就开工，整本都可能返工。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请先只写大纲：列出章节目录，以及每章要覆盖的要点和大约篇幅。</span><br><span class="line">写完后停下来等我确认。确认之前不要开始写正文。</span><br></pre></td></tr></table></figure>
+
+<p><strong>84. 每章写完先给你看方向</strong></p>
+<p>一章或一节先交一小段样稿。方向对了再写下章。不要整本写完再一次性大改。</p>
+<p><strong>85. 做演示文稿或表格，先定结构再填内容</strong></p>
+<p>先定页数或列名，说明每一页、每一列要什么。结构确认后再往里填，避免整份推倒重排。</p>
+<p><strong>86. 改演示文稿时说清改第几页、哪一块</strong></p>
+<p>只改需要改的页面和段落。不要让它「整体再优化一版」，把已经对的页一并重做。</p>
+<p><strong>87. 处理邮件：先分类和写摘要</strong></p>
+<p>真正需要回复的，再起草回信。不要每封都当深活处理。读一遍摘要，往往就够你判断要不要继续。</p>
+<p><strong>88. 邮件自动处理要设关键词</strong></p>
+<p>只对某类主题、某个发件人或某个邮箱启动。不要对所有新邮件都跑一遍完整流程。</p>
+<p><strong>89. 盯一个指定页面时，把链接写死，先比对再叫醒</strong></p>
+<p>把要照看的页面链接写清楚，先做一次很轻的比对。有变化再叫醒机器人整理给你。不要每次重新搜索同一批地址。</p>
+<p><strong>90. 日报和周报用固定模板，只写变化</strong></p>
+<p>模板固定后，每次只填写和上次相比的变化。没有重要变化，可以不发送。但请记住：任务只要跑起来做了检查，额度就已经花了。所以更值得先把检查间隔拉长。</p>
+<p><strong>91. 购物、订票、比价：先出对比清单，你确认后再往下走</strong></p>
+<p>先比较价格、条件和来源，不要一上来就进入提交或下单步骤。这样既省额度，也更安全。</p>
+<p><strong>92. 写代码或做网站，先做最小能用的一版</strong></p>
+<p>先做出能看、能用的一小块，你确认后再扩展。不要一上来就改整个项目，或同时改很多互不相关的文件。</p>
+<p><strong>93. 新的统一订阅里，不要指望把代码活挪到 Cursor 来省额度</strong></p>
+<p>在新的统一订阅里，Grok、Grok Bot 和 Cursor 共用一个每周额度池。把活挪过去，池子还是同一个，省不下来。</p>
+<p><strong>94. 只有你另外已经付费、且不占用同一池子的工具，才适合把重活分出去</strong></p>
+<p>比如你已经有单独付过费的写代码工具，可以让 Grok Bot 只负责拆任务、下命令和看结果，把写代码的重活交给那一边。前提是这些工具已经装好并登录。没有的，不必为了省额度临时新配一堆。更不要和上一款搞混：在新的统一订阅里，把活交给 Cursor 是省不下来的。</p>
+<p><strong>95. 报错时只贴相关的那一段</strong></p>
+<p>不要把整份巨大日志全部丢进聊天。标出报错附近的几十行，并说明你刚做了什么，足够它判断，也少很多无用阅读。</p>
+<h3 id="十、机器人数目和分工"><a href="#十、机器人数目和分工" class="headerlink" title="十、机器人数目和分工"></a>十、机器人数目和分工</h3><p><strong>96. 机器人少而精，职责差不多的就合并</strong></p>
+<p>不是机器人越多越强。重叠的职责放在一起，能少很多互相传话，也更好管理。如果你希望名册保持精简，新建之前也可以先问现有的机器人。</p>
+<p><strong>97. 很少用的，先停掉定时任务；确定不用再删</strong></p>
+<p>只是隐藏或关掉通知，定时任务可能还在跑，额度照样会花。要省额度，先暂停任务。可以先观察几天，看缺不缺它，再决定删不删。避免删完又重建，白白再花一轮交代和初始化的功夫。</p>
+<p><strong>98. 新建之前先问：现有机器人能不能兼任</strong></p>
+<p>能兼任就不要再新开一个。每多一个机器人，就多一份交代、测试和可能的定时任务。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">先不要新建机器人。请先判断：现有哪一个最适合兼任这件事？</span><br><span class="line">如果可以兼任，直接告诉我怎么改它的规矩。</span><br><span class="line">只有现有的都明显不合适时，再提议新建，并说明理由。</span><br></pre></td></tr></table></figure>
+
+<p><strong>99. 从模板市场导入后，先检查自带的定时任务</strong></p>
+<p>别人做好的模板，常常自带一组技能和定时任务。不需要的先暂停或删掉，再开始用。不然一导入就可能在后台跑。</p>
+<p><strong>100. 导入后先读说明，再决定启用哪些技能</strong></p>
+<p>不要一导入就把全部自动任务打开。先看它是干什么的，只打开你真正要用的部分。</p>
+<p><strong>101. 同一件事不要同时开两个执行者</strong></p>
+<p>已经有一个机器人或一个助手在做，就让它做完。不要再派一个从头来，两头同时做同一份活。</p>
+<p><strong>102. 谁负责哪类事要固定</strong></p>
+<p>比如日常稿件始终交给同一个写稿机器人，长文档交给同一个写作机器人。不要每次换人，以免重新交代背景和规矩。</p>
+<h3 id="十一、看用量、看账单，别踩坑"><a href="#十一、看用量、看账单，别踩坑" class="headerlink" title="十一、看用量、看账单，别踩坑"></a>十一、看用量、看账单，别踩坑</h3><p>[配图：用量页示意。标出「设置 → 用量与账单」，以及「按 Bot」「按来源」两个查看方式。用示意界面即可，不要出现真实账号、金额或机器人名字。]</p>
+<p><strong>103. 定期打开「用量与账单」，看「按 Bot」和「按来源」</strong></p>
+<p>路径一般是：设置 → 用量与账单 → Grok Bot 用量。先看本周用了每周上限的多少，再看哪个机器人最费，最后看来源主要是聊天、定时任务还是别的。哪块最费，就先改哪块。</p>
+<p><strong>104. 给每个机器人单独做一次自查</strong></p>
+<p>把文末的提示词分别发给它们，只让它们汇报自己的情况。不要在群里集体自查，以免互相插话，又多花一轮。询问用量和套餐时，也只在你和它的私聊里问。</p>
+<p><strong>105. 额外额度先关掉，或设一个每月上限</strong></p>
+<p>新订阅看「额外用量」和自动充值，可在账单页设每月上限。旧订阅看按量付费开关，或设一个较低的每月上限。注意：上限不会瞬间刹车，正在跑的任务可能会稍稍超过。关掉额外扣费后，周额度用完就会停，等到重置再继续。</p>
+<p><strong>106. 额度快用完时，先把文件和进度说明存好</strong></p>
+<p>写下做到哪一步、文件在哪、下一步是什么。不要为了抢着做完而打开额外扣费，或反复抢救。把半成品留住，等额度恢复再接着做。</p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果系统提示周额度快用完，请在结束前把正在处理的文件路径、</span><br><span class="line">临时结果和做到哪一步，保存成一份简短说明。然后停下来告诉我，</span><br><span class="line">不要继续强行做完，也不要建议我立刻开通额外扣费。</span><br></pre></td></tr></table></figure>
+
+<p><strong>107. 不要指望多订一份套餐，就把额度叠加上去</strong></p>
+<p>如果你还在用旧的 Cursor 订阅，并且另外连了 SuperGrok 或 X Premium+，官方说明是：两份不会加在一起用，通常只按较高的那一份计算。两份仍会各自计费。多订一份，往往不会让可用额度翻倍。新的统一订阅则是同一个每周额度池，更不是买两份就能叠加。</p>
+<p><strong>108. 不要指望手动切成更便宜的模型来省额度</strong></p>
+<p>目前没有让你自己选择模型的开关。系统会按任务自动分配。把精力放在少空转、少返工、少互相传话上，比寻找「更便宜的模型」更有效。</p>
+<p><strong>109. 有「用量重置」时，不要还没用完就提前用掉</strong></p>
+<p>用量重置会把本周已用掉的部分清回 0%，不必等每周固定重置的时间。手机上通常要等用完才会出现这个按钮。官方也说明，提前用会放弃本周还没用完的额度。重置次数有限，用过一次后要等一段时间才能再用。真正用完或接近用完时，再考虑用它。</p>
+<p><strong>110. 改完设置后，过几天再对照用量页</strong></p>
+<p>看最费的那一块有没有降下来，再决定要不要继续改。一次只改最费的几项，比同时大改全部却说不清哪项有效，更清楚。</p>
+<h3 id="给每个机器人的「额度体检」提示词"><a href="#给每个机器人的「额度体检」提示词" class="headerlink" title="给每个机器人的「额度体检」提示词"></a>给每个机器人的「额度体检」提示词</h3><p>动手改之前，可以把下面这段话分别发给每一个机器人，让它只汇报自己的情况。不要在群里群发给所有人。</p>
+<p>拿到回复后，打开「用量与账单」，切到「按 Bot」和「按来源」对照着看。哪块最费，就先改哪块。</p>
+<p><img src="/images/HXYvXmZbEAA536j.jpg" alt="HXYvXmZbEAA536j"></p>
+<p><strong>可以复制给机器人：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请只汇报你自己的情况，先不要改任何设置，按下面几项逐条写：</span><br><span class="line">1. 你有哪些定时任务、多久一次。没有新变化时，你是会发消息，还是直接结束。</span><br><span class="line">2. 你在哪些群里，群里还有谁。</span><br><span class="line">3. 你平时会不会给其他机器人发消息。如果会，主要是交接工作，还是确认和进度。</span><br><span class="line">4. 哪些活你在用浏览器做。有没有办法改成连接器、直接取数，或运行已有命令。</span><br><span class="line">5. 哪些长期规矩你已经记住或写成了技能，哪些还要我每次重新说。</span><br><span class="line">6. 最近有没有连续失败还不停重试、反复生成图片或视频，或把很长的原文整篇贴回聊天。</span><br></pre></td></tr></table></figure>
+
+<p>这些方法不必一次全改。先看用量页里最费的那一块，改最有用的几条就行。</p>
+<p> 你的额度最常被哪个机器人吃掉？欢迎在评论里说说，也欢迎补充你用过的办法。</p>
+<h3 id="关于作者："><a href="#关于作者：" class="headerlink" title="关于作者："></a>关于作者：</h3><p>大家好，我是 Daniel.S，探索和人工智能领域的各种工具与工作流程，这样你就能随时找到对你有用的内容。关注@ai_goge ，持续更新 Grok Bot 系列教程。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/Fred834567-2122940617772978653/">https://yaoav.github.io/2026/11/18/Fred834567-2122940617772978653/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Fred834567/">@Fred834567</a></div><div class="post-share"><div class="social-share" data-image="/images/2122940617772978653-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/zhuanfgghjnb-2122965020455678261/" title="你还在等，FTX已经在给别人打款"><img class="cover" src="/images/2122965020455678261-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">你还在等，FTX已经在给别人打款</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @zhuanfgghjnb（蜡币小鑫） 的长文，原文链接，版权归原作者所有。  Qredax · 2026年11月10日文中案件状态截至2026年11月9日 FTX已经开始还钱了。如果你很久没关注这个案子，可能还不知道，其他债权人已经收到了分配款。而住在中国大陆或澳门的你，可能连收款服务商都选不了。 你也在这家交易所损失了钱，也等了快四年。现在别人陆续到账，你却还被告知继续等，等所在地区获准接收分配款。什么时候能等到，没有日期。 你可能想，再忍一忍，限制解除了，钱就会来。可信托的钱不是无限的。你等着的时候，律师和管理人员的费用照付，其他债权人的分配款也在发。等限制终于解除，还能剩下足够的钱支付你的那一份吗？目前没有答案。更何况，有些分配款设有领取期限，错过了，可能连领取的权利都会失去。  为什么你至今还没收到钱负责处理债务、分配剩余资产的是FTX Recovery Trust，下文简称信托。你向FTX主张偿还的权利，叫作债权，也就是英文里的claim。 要收到分配款，需要先完成FTX债权门户里的几个步骤。到了第8步，也就是Step 8，你要选择分配服务商并...</div></div></div></a><a class="pagination-related" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Why I hate GPT-6.2 Astra</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yifanxu_ephai（Yifan Xu） 的长文，原文链接，版权归原作者所有。  During early testing, I found myself so frustrated with this model that I spent a day writing a letter to OpenAI about it. They fixed a small handful of my complaints, but not enough for me to recommend using it. I’m currently sick in bed and I’m not gonna be able to film a video about it today, so I’ve chosen to post the letter in full.  I feel bad about this, but I know you guys will listen and use this feedback to make a better model...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/16/Fred834567-2122174130892238951/" title="AI rap video ：从竞品拆解到免费音乐工具站"><img class="cover" src="/images/2122174130892238951-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">AI rap video ：从竞品拆解到免费音乐工具站</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Fred834567（Fred-New） 的长文，原文链接，版权归原作者所有。  之前哥飞老师带着我们组了一个黑客松，主题是AI rap video 最近终于开始着手研究了！ 下面按顺序讲一下我是怎么一步步查的，中间还用哥飞老师的 SEO agent 挑出了好几个错 这次的数据基本都是用 @Glasser 查的，Semrush、Ahrefs、Similarweb 这几家不用分别开会员，按次付费，整个过程花了不到一美元！ 每一次查询跟数据我都公开在文章底部了  读完这篇，你能学会用免费工具判断一个选题值不值得做，每一节后面都写了自己怎么查，不用花钱也能照着走一遍  AI rap video 感觉没什么人搜，但是就是能出单！一开始的想法很简单，做一个 AI 生成 rap 视频的网站 然后先查了下搜索量，一次查了 65 个相关的词 https://link.glasser.ai/HIT-SZ  rap video 每月 1,900 次，rap music video 1,300 次，how to make a rap music video 只有 30 次，全...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">300</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">157</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E5%81%9A10%E4%BB%B6%E4%BA%8B%EF%BC%8C%E4%BB%8A%E5%A4%A9%E5%B0%B1%E8%83%BD%E5%B0%91%E8%8A%B1%E4%B8%80%E5%8D%8A%E5%86%A4%E6%9E%89%E9%A2%9D%E5%BA%A6%EF%BC%8C%E3%80%8A%E9%99%84%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%A4%8D%E5%88%B6%E7%9A%84%E9%A2%9D%E5%BA%A6%E4%BD%93%E9%AA%8C%E6%8F%90%E7%A4%BA%E8%AF%8D%E3%80%8B"><span class="toc-number">1.</span> <span class="toc-text">先做10件事，今天就能少花一半冤枉额度，《附可直接复制的额度体验提示词》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%85%88%E5%81%9A%E7%9A%84-10-%E4%BB%B6%E4%BA%8B"><span class="toc-number">2.</span> <span class="toc-text">最先做的 10 件事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BA%A4%E4%BB%A3%E4%BB%BB%E5%8A%A1%E7%9A%84%E4%B9%A0%E6%83%AF"><span class="toc-number">3.</span> <span class="toc-text">一、交代任务的习惯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B0%91%E5%BC%80%E7%BD%91%E9%A1%B5%EF%BC%8C%E5%B0%91%E5%81%9A%E7%A9%BA%E8%BD%AC"><span class="toc-number">4.</span> <span class="toc-text">二、少开网页，少做空转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%8A%8A%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%B4%A7"><span class="toc-number">5.</span> <span class="toc-text">三、把定时任务管紧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B0%91%E8%AE%A9%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BA%92%E7%9B%B8%E4%BC%A0%E8%AF%9D"><span class="toc-number">6.</span> <span class="toc-text">四、少让机器人互相传话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%B7%A5%E5%85%B7%E5%92%8C%E8%B5%84%E6%96%99%E5%A4%A7%E5%AE%B6%E5%85%B1%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">五、工具和资料大家共用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%AE%B0%E5%BF%86%E3%80%81%E9%A1%B5%E9%9D%A2%E5%92%8C%E8%81%8A%E5%A4%A9%E6%80%8E%E4%B9%88%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">六、记忆、页面和聊天怎么用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%90%9C%E7%B4%A2%E5%92%8C%E6%9F%A5%E8%B5%84%E6%96%99"><span class="toc-number">9.</span> <span class="toc-text">七、搜索和查资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E5%92%8C%E6%96%87%E4%BB%B6"><span class="toc-number">10.</span> <span class="toc-text">八、图片、视频和文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8C%89%E5%B8%B8%E8%A7%81%E5%9C%BA%E6%99%AF%E6%9D%A5%E7%9C%81"><span class="toc-number">11.</span> <span class="toc-text">九、按常见场景来省</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%95%B0%E7%9B%AE%E5%92%8C%E5%88%86%E5%B7%A5"><span class="toc-number">12.</span> <span class="toc-text">十、机器人数目和分工</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%9C%8B%E7%94%A8%E9%87%8F%E3%80%81%E7%9C%8B%E8%B4%A6%E5%8D%95%EF%BC%8C%E5%88%AB%E8%B8%A9%E5%9D%91"><span class="toc-number">13.</span> <span class="toc-text">十一、看用量、看账单，别踩坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E6%AF%8F%E4%B8%AA%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E3%80%8C%E9%A2%9D%E5%BA%A6%E4%BD%93%E6%A3%80%E3%80%8D%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">14.</span> <span class="toc-text">给每个机器人的「额度体检」提示词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85%EF%BC%9A"><span class="toc-number">15.</span> <span class="toc-text">关于作者：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

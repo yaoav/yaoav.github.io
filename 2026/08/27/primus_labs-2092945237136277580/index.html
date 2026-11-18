@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AutoHoG: the FHE engine for confidential onchain finance | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="A confidential transfer on fully encrypted 64-bit balances now completes in abou">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AutoHoG: the FHE engine for confidential onchain finance">
+<meta property="og:url" content="https://yaoav.github.io/2026/08/27/primus_labs-2092945237136277580/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="A confidential transfer on fully encrypted 64-bit balances now completes in abou">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2092945237136277580-cover.jpg">
+<meta property="article:published_time" content="2026-08-27T20:00:04.000Z">
+<meta property="article:modified_time" content="2026-11-19T07:11:50.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@primus_labs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2092945237136277580-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AutoHoG: the FHE engine for confidential onchain finance",
+  "url": "https://yaoav.github.io/2026/08/27/primus_labs-2092945237136277580/",
+  "image": "https://yaoav.github.io/images/2092945237136277580-cover.jpg",
+  "datePublished": "2026-08-27T20:00:04.000Z",
+  "dateModified": "2026-11-19T07:11:50.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/08/27/primus_labs-2092945237136277580/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AutoHoG: the FHE engine for confidential onchain finance',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">300</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">157</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2092945237136277580-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">AutoHoG: the FHE engine for confidential onchain finance</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AutoHoG: the FHE engine for confidential onchain finance</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-08-27T20:00:04.000Z" title="发表于 2026-08-27 20:00:04">2026-08-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@primus_labs（Primus Labs）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2092945237136277580">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>A confidential transfer on fully encrypted 64-bit balances now completes in about <strong>90 milliseconds</strong> on our stack. Eight NVIDIA RTX 5090s, consumer GPUs you can buy off the shelf, sustain more than <strong>210 of them per second</strong>, and every card you add is pure additional throughput. For years, numbers like these were the missing piece between “FHE is the future of privacy” and FHE actually powering confidential onchain finance.</p>
+<p>This post is the story of how we got there: a scheme, a compiler, and a GPU engine, designed and built in-house at Primus.</p>
+<h3 id="The-promise-and-the-wall"><a href="#The-promise-and-the-wall" class="headerlink" title="The promise, and the wall"></a>The promise, and the wall</h3><p>Fully Homomorphic Encryption lets a network compute directly on encrypted data. Balances, amounts, and logic stay encrypted at every step. Nobody sees anything, yet everything still works. It is the cleanest answer to on-chain privacy that cryptography has ever produced.</p>
+<p>It was also slow, and the reason lives in one operation. In gate-based FHE, encrypted logic runs as a boolean circuit, and every gate requires a bootstrapping: a refresh procedure that keeps ciphertext noise under control. Two distinct types of bootstrapping emerged early: one introduced by FHEW [1], and a different construction known as GINX [2], co-authored by one of our own team. TFHE [3] then took the GINX approach and refined it, bringing two breakthroughs at once. It made bootstrapping fast, milliseconds instead of minutes. And it revealed that bootstrapping is programmable: internally it rotates an encrypted lookup table, so the same operation that refreshes noise can also evaluate a small function.</p>
+<p>Yet circuits kept being evaluated the old way: one gate, one bootstrapping. A 64-bit operation compiles to thousands of gates, so it cost thousands of bootstrappings.</p>
+<p>The primitive was powerful. The way circuits used it was not. That is the wall.</p>
+<h3 id="Make-every-bootstrapping-count"><a href="#Make-every-bootstrapping-count" class="headerlink" title="Make every bootstrapping count"></a>Make every bootstrapping count</h3><p>If one bootstrapping can evaluate a small function, why spend it on a single AND? The right question is how to feed several encrypted bits in and read several results out, so that one bootstrapping swallows a whole cluster of gates.</p>
+<p>The mathematical machinery took shape in the open literature. A 2018 result by Carpov, Izabachène and Mollimard [4] showed how to pack multiple encrypted inputs into one ciphertext through a weighted combination, and how to factor the lookup table so that a single rotation, the expensive part, yields several outputs at almost no extra cost.</p>
+<p>We built on this foundation deliberately: every cryptographic building block in our stack comes from the open literature and from our own peer-reviewed research. A clean, independent lineage from top to bottom.</p>
+<p>But a toolkit is not a technology. Researchers could hand-craft specific compound gates and show they worked. Nobody had the general theory: given an arbitrary piece of logic, how do you design the gate that computes it? That open problem is what our AutoHoG research [5] solves.</p>
+<h3 id="Gate-design-automated"><a href="#Gate-design-automated" class="headerlink" title="Gate design, automated"></a>Gate design, automated</h3><p>AutoHoG’s first contribution is a <strong>theory of homomorphic gate design</strong>. Hand it any small boolean function, multiple inputs, multiple outputs, and it derives the custom gate automatically: the input weights, the encrypted lookup table, and the guarantee that everything stays inside the noise budget. What used to be a cryptographer’s craft became a procedure a machine executes. In our toolchain, a solver does exactly that.</p>
+<p>The second contribution scales this <strong>from one gate to entire circuits</strong>. AutoHoG takes standard Verilog, the same language chips are described in, runs it through industry-grade logic synthesis, then hunts through the circuit for subcircuits that can legally collapse into a single custom gate. It generates that gate on the fly, checks the constraints, and rewrites the netlist. No manual optimization anywhere in the loop.</p>
+<p>The payoff, measured across adders, multipliers, and the standard ISCAS circuit benchmarks: up to <strong>5.7x lower latency</strong> than gate-by-gate evaluation, before any hardware acceleration enters the picture.</p>
+<h3 id="A-workload-hardware-loves"><a href="#A-workload-hardware-loves" class="headerlink" title="A workload hardware loves"></a>A workload hardware loves</h3><p>Here is what falls out of that compilation, and why it matters. Whatever the original circuit was, the entire computation collapses into one uniform primitive executed over and over: a weighted sum, then a bootstrapping. Same shape, same memory pattern, integer arithmetic, no data-dependent branching. Ask anyone who designs silicon: one primitive to accelerate means one pipeline to perfect.</p>
+<p>On GPUs we pushed this to its conclusion with one deliberate choice: every polynomial operation runs in <strong>exact integer arithmetic</strong> using the number-theoretic transform. No floating-point FFT anywhere in the pipeline.</p>
+<p>Why so strict? Floats round, and rounding drifts across hardware, so two machines can produce subtly different ciphertexts from identical inputs. In a decentralized network, that is fatal. With pure integer math, every node computes exactly the same bytes. We verified it the hard way: independent nodes, deliberately scheduled differently, reproduced byte-identical ciphertexts across our entire operator suite. Consensus-grade determinism, by construction.</p>
+<h3 id="The-numbers"><a href="#The-numbers" class="headerlink" title="The numbers"></a>The numbers</h3><p>Measured on 8x NVIDIA RTX 5090:</p>
+<ul>
+<li>One bootstrapping: <strong>~5 ms</strong></li>
+<li>One confidential transfer (64-bit encrypted balances: balance check, subtract, add, select): <strong>~90 ms</strong></li>
+<li>Throughput: <strong>210+ confidential transfers per second</strong></li>
+<li>Scaling: 8 GPUs deliver <strong>8.0x</strong> one GPU</li>
+</ul>
+<p>And look at the hardware again: <strong>consumer GPUs</strong>, the same silicon sold to gamers, available off the shelf anywhere in the world. No datacenter-exclusive accelerators, no six-figure hardware budget. This is not an accident. Our pipeline is latency-bound and clock-hungry, and high clock speed is exactly where consumer GPUs shine. The economics of confidential computation change when anyone can rack the hardware.</p>
+<h3 id="From-GPUs-to-silicon"><a href="#From-GPUs-to-silicon" class="headerlink" title="From GPUs to silicon"></a>From GPUs to silicon</h3><p>The same regularity points forward. A workload that is one integer pipeline with static dataflow is exactly what FPGAs and ASICs are best at. GPUs are our today. Dedicated silicon, computing the exact same bytes, is the natural next step, and the scheme was shaped for that journey from day one.</p>
+<p>Privacy that costs milliseconds stops being a feature you justify and becomes a default you switch on. Confidential onchain finance, running at full speed. That is what we are building at Primus.</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>[1] L. Ducas, D. Micciancio. FHEW: Bootstrapping Homomorphic Encryption in Less Than a Second. EUROCRYPT 2015.</p>
+<p>[2] N. Gama, M. Izabachène, P. Q. Nguyen, X. Xie. Structural Lattice Reduction: Generalized Worst-Case to Average-Case Reductions and Homomorphic Cryptosystems. EUROCRYPT 2016. <a target="_blank" rel="noopener" href="https://eprint.iacr.org/2014/283">https://eprint.iacr.org/2014/283</a></p>
+<p>[3] I. Chillotti, N. Gama, M. Georgieva, M. Izabachène. TFHE: Fast Fully Homomorphic Encryption over the Torus. ASIACRYPT 2016.</p>
+<p>[4] S. Carpov, M. Izabachène, V. Mollimard. New Techniques for Multi-value Input Homomorphic Evaluation and Applications. CT-RSA 2019. <a target="_blank" rel="noopener" href="https://eprint.iacr.org/2018/622">https://eprint.iacr.org/2018/622</a></p>
+<p>[5] Z. Guan, R. Mao, Q. Zhang, Z. Zhang, Z. Zhao, S. Bian. AutoHoG: Automating Homomorphic Gate Design for Large-Scale Logic Circuit Evaluation. IEEE TCAD 2024. <a target="_blank" rel="noopener" href="https://eprint.iacr.org/2024/1250">https://eprint.iacr.org/2024/1250</a></p>
+<p>Built by Primus.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/08/27/primus_labs-2092945237136277580/">https://yaoav.github.io/2026/08/27/primus_labs-2092945237136277580/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/primus-labs/">@primus_labs</a></div><div class="post-share"><div class="social-share" data-image="/images/2092945237136277580-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/08/29/iwyryxbt-2093685107534000560/" title="Harness Engineering: How to Build AI Agents That Don't Fall Apart"><img class="cover" src="/images/2093685107534000560-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Harness Engineering: How to Build AI Agents That Don't Fall Apart</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @iwyryxbt（iwyry） 的长文，原文链接，版权归原作者所有。  Most people respond to a failing agent by changing the prompt Then they change the model Then they add a larger context window The agent still forgets decisions It still uses the wrong tool It still skips verification It still gets stuck in the same loop The problem is not always the intelligence The problem is the environment around it That environment is the harness And designing it is harness engineering Dario Amodei, CEO of Anthropic, said ...</div></div></div></a><a class="pagination-related" href="/2026/08/23/kyr0stack-2091515787366306154/" title="Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) "><img class="cover" src="/images/2091515787366306154-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @kyr0stack（Kyrox） 的长文，原文链接，版权归原作者所有。  You check every step your agents take. Not because you want to, but because nothing else does. Getting out of that chair takes two things, and almost everyone builds only one of them. A loop makes a unit of work correct without you. A graph decides which units exist at all. Here is the split, the mechanics that are not obvious, and the point where you approve one thing instead of everything. A loop is a check that can failStrip everything else...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">300</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">157</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-promise-and-the-wall"><span class="toc-number">1.</span> <span class="toc-text">The promise, and the wall</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Make-every-bootstrapping-count"><span class="toc-number">2.</span> <span class="toc-text">Make every bootstrapping count</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gate-design-automated"><span class="toc-number">3.</span> <span class="toc-text">Gate design, automated</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-workload-hardware-loves"><span class="toc-number">4.</span> <span class="toc-text">A workload hardware loves</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-numbers"><span class="toc-number">5.</span> <span class="toc-text">The numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#From-GPUs-to-silicon"><span class="toc-number">6.</span> <span class="toc-text">From GPUs to silicon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#References"><span class="toc-number">7.</span> <span class="toc-text">References</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
