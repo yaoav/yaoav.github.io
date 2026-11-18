@@ -101,6 +101,27 @@
   </entry>
   
   <entry>
+    <title>Allora Inference Contracts Live on TRON Nile Testnet </title>
+    <link href="https://yaoav.github.io/2026/11/17/trondao-2122713876672201068/"/>
+    <id>https://yaoav.github.io/2026/11/17/trondao-2122713876672201068/</id>
+    <published>2026-11-17T23:30:00.000Z</published>
+    <updated>2026-11-18T11:03:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文转载自 X 博主 <strong>@trondao（TRON DAO）</strong> 的长文，<a href="https://x.com/i/article/2122713876672201068">原文链接</a>，版权归原作者所有。</p></blockquote><p>Allora’s inference contracts are live on TRON’s Nile testnet. Predictions from the Allora network now land on-chain on a regular cadence, and any smart contract on the TRON Virtual Machine (TVM) can read them.</p><p>The deployment was built with TRON DAO. It launches with TRX&#x2F;USDT price and volatility topics, served through a Chainlink-compatible adapter so TRON protocols can read Allora forecasts the same way they already read price data.</p><p><strong>How it works</strong></p><p>Three pieces carry a prediction from the Allora network to a TRON contract:</p><ul><li><strong>Consumer contracts.</strong> Allora’s consumer contracts, ported to the TVM and deployed on the Nile testnet. They make Allora network inferences queryable by any contract on TRON.</li><li><strong>Relayer.</strong> Pushes signed inferences from the Allora network on-chain on a regular cadence, so each topic stays current.</li><li><strong>Chainlink-compatible adapter.</strong> Exposes each topic through the same interface as a Chainlink Data Feed.</li></ul><p>The first topics live on Nile are TRX&#x2F;USDT price and TRX&#x2F;USDT volatility.</p><p><strong>Built for how TRON protocols already work</strong></p><p>Chainlink Data Feeds are TRON’s standard oracle. Lending markets, DEXs and yield protocols on TRON already read prices through that interface.</p><p>Allora’s adapter uses the same one. A protocol can add a volatility forecast next to the price feed it already reads, without learning a new integration pattern.</p><p>A price feed reports where the market is. An Allora topic forecasts where it is likely to go, drawing on many machine learning models that are scored against real outcomes and weighted by how well they perform.</p><p><strong>What builders can do with it</strong></p><ul><li><strong>Lending.</strong> Set collateral factors and interest-rate curves that respond to forecast volatility.</li><li><strong>DEXs.</strong> Run dynamic fee models driven by volatility forecasts.</li><li><strong>Yield optimizers.</strong> Automate risk management and capital allocation from forward-looking signals.</li><li><strong>AI agents.</strong> Use on-chain forecasts as inputs to autonomous decisions.</li></ul>]]></content>
+    
+    
+    <summary type="html">Allora&#39;s inference contracts are live on TRON&#39;s Nile testnet. Predictions from t</summary>
+    
+    
+    
+    <category term="行业观察" scheme="https://yaoav.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
+    
+    
+    <category term="@trondao" scheme="https://yaoav.github.io/tags/trondao/"/>
+    
+  </entry>
+  
+  <entry>
     <title>点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</title>
     <link href="https://yaoav.github.io/2026/11/17/0xlangeai-2122708521959706960/"/>
     <id>https://yaoav.github.io/2026/11/17/0xlangeai-2122708521959706960/</id>
@@ -412,27 +433,6 @@
     
     
     <category term="@leo_xiaolei" scheme="https://yaoav.github.io/tags/leo-xiaolei/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Backpack 交易所：获得 CFTC 牌照，成为美国持牌衍生品交易所</title>
-    <link href="https://yaoav.github.io/2026/11/17/Trader_Aiden-2122510071104233645/"/>
-    <id>https://yaoav.github.io/2026/11/17/Trader_Aiden-2122510071104233645/</id>
-    <published>2026-11-17T10:00:09.000Z</published>
-    <updated>2026-11-18T03:30:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>本文转载自 X 博主 <strong>@Trader_Aiden（𝐀𝐢𝐝𝐞𝐧）</strong> 的长文，<a href="https://x.com/i/article/2122510071104233645">原文链接</a>，版权归原作者所有。</p></blockquote><p><strong>Backpack 交易所已获得美国商品期货交易委员会（CFTC）<strong>批准，注册为</strong>指定合约市场（DCM）和衍生品清算组织（DCO）</strong>。这意味着 Backpack 具备了在美国合法提供衍生品交易与清算服务的资质，正式进入全球最大的零售衍生品市场</p><p>本文将就这两张牌照的含义、Backpack 的美国布局、在行业中的位置，以及这对现有用户意味着什么做一次完整说明</p><h3 id="一、两张牌照是什么"><a href="#一、两张牌照是什么" class="headerlink" title="一、两张牌照是什么"></a>一、两张牌照是什么</h3><p><strong>1. 美国期货市场的三层结构</strong></p><p>美国期货市场有一套沿用了几十年的三层结构：交易所负责撮合，清算所负责担保履约，经纪商负责面向客户。其中交易所和清算所在 CFTC 的注册类别，分别是 DCM 和 DCO</p><p>Backpack 此次获批的，正是交易所和清算所这两张。</p><p><strong>TLD Markets, Inc. 注册为 DCM，</strong></p><p><strong>TLD Clearing, Inc. 注册为 DCO</strong></p><p><strong>2. 交易所：DCM（Designated Contract Market）</strong></p><p>DCM 是 CFTC 监管下的期货交易所，是唯一可以向美国普通用户提供期货和期货期权交易的场所</p><p>DCM 必须持续满足《商品交易法》规定的 23 条核心原则，包括合约设计不易被操纵、实时交易监控、价格波动限制、紧急处置权、治理与利益冲突管理等等。DCM 本身作为自律组织，要制定规则并执行规则。财务上，DCM 必须持有至少覆盖 12 个月运营成本的资源，CFTC 将每季度审查</p><p>简单来说，每个季度 DCM持牌交易所都要向 CFTC 证明两件事：公司账上的有至少 12 个月的运营成本，其中一半随时能变现；交易监控、审计轨迹和纪律程序真的在运转。CFTC 不定期进场复核，有问题可以要求追加资本或整改</p><p>这套机制的目的只有一个：<strong>确保平台在任何时候都有足够的资金和足够的监控，最大程度上避免黑天鹅情况的发生，充分保护平台及用户</strong></p><p><strong>3. 清算所：DCO（Derivatives Clearing Organization）</strong></p><p>DCO 是清算所。你在交易所里成交之后，真正跟你结算的不是对面那个人，而是清算所：它站在买卖双方中间，同时对两边负责。即使发生极端行情，对手方亏穿了、清算所依然负责把用户的利润计提</p><p>清算所自己不持仓、不做市。它的账本永远是配平的，每一笔多头对应一笔空头，对行情没有任何方向性敞口。它只做一件事：站在中间保证两边都能兑付</p><p>为了在极端行情下也能做到这一点，CFTC 对 DCO 的要求是：<strong>收取的保证金必须够覆盖 99% 的行情波动；自己账上的钱必须够扛住最大一家会员的违约，再加 12 个月的运营成本；每天做压力测试；</strong></p><p><strong>CFTC 监管下，用户的钱和清算所自己的钱分开存放，不能混用</strong></p><p>简单来说，交易所负责让你成交，清算所负责让你拿到钱。清算所自己不下场，黑天鹅来了也有钱、有预案，照常清算。对手方违约、平台挪用资金这类事，在 DCO 的制度设计里是做不到的</p><p><strong>4. 与 CME、ICE 同一监管类别</strong></p><p>CFTC 的牌照不管是 CME 这样的百年交易所，还是 Backpack 这样的新交易所，拿到的是同一张 DCM 牌照、同一张 DCO 牌照，遵守同一部法律、同一套规则，接受同一种检查</p><p>这意味着，在法律身份上，Backpack 的交易所和清算所与** CME（芝加哥商业交易所集团）、ICE（洲际交易所，纽约证券交易所母公司）是同一级别的注册实体，**接受同一个监管者以同一标准监督</p><h3 id="二、合法服务美国零售用户"><a href="#二、合法服务美国零售用户" class="headerlink" title="二、合法服务美国零售用户"></a>二、合法服务美国零售用户</h3><p><strong>5. 进入全球最大的零售衍生品市场</strong></p><p>CFTC 作为美国联邦行政机构，发出的牌照在全美 50 个州通用。<strong>从获批之日起，Backpack 可以合法向美国全境的零售用户提供衍生品交易和清算服务</strong></p><p>美国是全球最大的零售衍生品市场。此前加密交易所要么只能服务机构，要么只能绕开美国用户。Backpack 现在拿到的是正门的钥匙</p><p><strong>6. 美国牌照矩阵</strong></p><p>在此之前，Backpack 已经持有 FINRA 注册券商 Backpack Securities、FinCEN 货币服务业务（MSB）登记和数十个州的汇款牌照。加上迪拜 VARA 和欧盟 MiFID II，这次 CFTC 批准补上的是美国牌照矩阵里最难的一块：衍生品</p><h3 id="三、自有清算所意味着什么"><a href="#三、自有清算所意味着什么" class="headerlink" title="三、自有清算所意味着什么"></a>三、自有清算所意味着什么</h3><p><strong>7. 控制权在自己手里</strong></p><p>因为 CFTC 清算所牌照极高的准入门槛和极低的申请通过率，在美国期货体系里，大多数交易所把清算交给第三方清算所。但是 Backpack 自己建立了一个</p><p>这件事对用户的直接影响是速度。作为一家合规交易所，Backpack 将有更快的市场反应速度，包括但不限于交易对上线、产品更新等等</p><p><strong>8. 清算范围</strong></p><p>按 Backpack 清算所（TLD Clearing）向 CFTC 提交的申请文件，它申请清算的产品包括四类：<strong>传统期货、加密货币衍生品（含永续式期货）、全额抵押的互换，以及在注册交易所上市并经 CFTC 批准的事件合约</strong></p><p>这意味着，从比特币永续到预测市场类产品，都可以在同一个清算所里结算。目前美国市场上，多数新获批的加密清算所只能清算全额抵押的合约，也就是没有杠杆的产品；能清算永续这类保证金产品的，屈指可数</p><h3 id="四、对现有用户意味着什么"><a href="#四、对现有用户意味着什么" class="headerlink" title="四、对现有用户意味着什么"></a>四、对现有用户意味着什么</h3><p><strong>9. 服务不变，同一套系统</strong></p><p>中文区用户的服务、实体和规则不变。变的是公司整体进入了美国监管体系</p><p>Backpack 的全球平台和美国平台由同一个团队建设，运行同一套交易、撮合和风控系统</p><p>Backpack 选择了一条更慢但更长的路</p><p><strong>10. 下一步</strong></p><p>牌照是起点。接下来的工作分两项：<strong>在 DCM 上完成首批合约的上市程序，以及美股永续在美国的合约审批与 SEC 登记</strong></p><p>每一项完成，我们都会更新</p><p><strong>接下来，Backpack 将在美国全境向 C 端和 B 端用户开放衍生品服务，并在美国设立总部</strong></p><p><strong>Backpack 正式回到美国</strong></p>]]></content>
-    
-    
-    <summary type="html">Backpack 交易所已获得美国商品期货交易委员会（CFTC）批准，注册为指定合约市场（DCM）和衍生品清算组织（DCO）。这意味着 Backpack 具备了</summary>
-    
-    
-    
-    <category term="行业观察" scheme="https://yaoav.github.io/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
-    
-    
-    <category term="@Trader_Aiden" scheme="https://yaoav.github.io/tags/Trader-Aiden/"/>
     
   </entry>
   
