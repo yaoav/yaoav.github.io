@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我用 ChatGPT 做了一款微信小游戏 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个季度流水超过1000万元，这样的微信小游戏，已经有300多款。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我用 ChatGPT 做了一款微信小游戏">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/momo_peggy-2123013876249944333/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="一个季度流水超过1000万元，这样的微信小游戏，已经有300多款。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123013876249944333-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T19:22:06.000Z">
+<meta property="article:modified_time" content="2026-11-19T04:21:43.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@momo_peggy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123013876249944333-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我用 ChatGPT 做了一款微信小游戏",
+  "url": "https://yaoav.github.io/2026/11/18/momo_peggy-2123013876249944333/",
+  "image": "https://yaoav.github.io/images/2123013876249944333-cover.jpg",
+  "datePublished": "2026-11-18T19:22:06.000Z",
+  "dateModified": "2026-11-19T04:21:43.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/momo_peggy-2123013876249944333/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我用 ChatGPT 做了一款微信小游戏',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123013876249944333-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">我用 ChatGPT 做了一款微信小游戏</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我用 ChatGPT 做了一款微信小游戏</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T19:22:06.000Z" title="发表于 2026-11-18 19:22:06">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@momo_peggy（夏林果的出海日记）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123013876249944333">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p><strong>一个季度流水超过1000万元，这样的微信小游戏，已经有300多款。</strong></p>
+<p>这是2026年5月微信小游戏开发者大会公布的过去一年数据。同场公布的还有：80多款小游戏，日活跃用户超过100万。</p>
+<p>大家都说小游戏已经卷到天际了，但是看到这些数字，我仍然想知道：<strong>这门生意，个人借助 AI 到底有没有机会做？</strong></p>
+<p>我自己在一家手游公司上班，公司做的是一款知名IP的MMO手游，其中一个渠道就是小游戏的版本，所以我深知要做一款重度游戏，仍然还是需要大量人力物力 去支撑。</p>
+<p>可是如果是轻度游戏呢，不是SLG,MMO,MOBA，而是点点点 ，刷刷刷呢？</p>
+<p>带着疑问，我撸起袖子说干就干，全程只用了Chatgpt，做了一款轻松解谜类游戏 - 《谜题必须解开》</p>
+<p>今天我就聊聊 ，我是怎么从0开始到做完第一个版本。</p>
+<h3 id="1-一个人做游戏，AI-能帮到什么程度"><a href="#1-一个人做游戏，AI-能帮到什么程度" class="headerlink" title="1. 一个人做游戏，AI 能帮到什么程度"></a>1. 一个人做游戏，AI 能帮到什么程度</h3><p>公司做游戏分以下的职位，制作人、策划、程序开发、美术、测试</p>
+<p>原来程序开发门槛最高，现在变成人人皆是天才程序员了</p>
+<p>然后现在策划变成了香饽饽 ，因为我做这个游戏的过程中，觉得AI 最代替不了的就是顺畅的玩法和合适的点子</p>
+<p>作为程序员，我都没有写一行代码，全程中文PUA<br>美术也是让Chatgpt直接出图</p>
+<p>只有游戏要怎么进行，系统要怎么闭环，哪里体验不友好，只需要我自己动脑思考的</p>
+<p>所以AI确实很强大，已经帮你做 你以前做不了的事情了，但是要想有核心竞争力，还是得想象力丰富的人类的小脑瓜</p>
+<h3 id="2-选哪个游戏引擎？"><a href="#2-选哪个游戏引擎？" class="headerlink" title="2. 选哪个游戏引擎？"></a>2. 选哪个游戏引擎？</h3><p>那做游戏常用的几个引擎如下：</p>
+<ul>
+<li>| 引擎                | 主要区别                                                    | 我会在什么情况下考虑                                                                                                                                                                                                       |</li>
+<li>| —————– | ——————————————————- | —————————————————————————————————————————————————————————————————————- |</li>
+<li>| <strong>Cocos Creator</strong> | 可以在编辑器里搭场景，官方提供微信小游戏打包流程。                               | 目标明确是微信，想做找物、消除、休闲闯关这类游戏，可以优先研究它的发布流程。<a target="_blank" rel="noopener" href="https://docs.cocos.com/creator/3.8/manual/zh/editor/publish/publish-wechatgame.html">官方说明</a>                                                                                |</li>
+<li>| <strong>Unity／团结引擎</strong>    | 有完整的 2D、3D 制作工具，覆盖动画、物理等功能。团结是 Unity 中国版，有自己的微信小游戏部署方案。 | 已有 Unity 基础，或者准备做需要较多 3D 场景和角色动画的游戏，可以列入候选；先确认所用版本对应的发布路径。<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/tuanjiemanual/Manual/UnityManual.html">引擎介绍</a>、<a target="_blank" rel="noopener" href="https://docs.unity.cn/cn/tuanjiemanual/Manual/UploadWeixinMiniGame.html">微信部署</a> |</li>
+<li>| <strong>Godot</strong>         | 免费开源，不收引擎版税；支持 2D、3D，可以导出桌面、手机和网页游戏。                    | 想做独立游戏，也愿意学一点脚本，希望制作工具和项目都能自己掌握。<a target="_blank" rel="noopener" href="https://docs.godotengine.org/en/stable/about/introduction.html">官方介绍</a>                                                                                                           |</li>
+<li>| <strong>GDevelop</strong>      | 用可视化事件组织玩法，例如点中物品后加分，也提供 AI 辅助制作。                       | 暂时不想从编程入门，想先把一个小玩法做出来、发个链接给朋友试试。<a target="_blank" rel="noopener" href="https://gdevelop.io/">引擎介绍</a>、<a target="_blank" rel="noopener" href="https://wiki.gdevelop.io/gdevelop5/publishing/">发布方式</a>                                                                                              |</li>
+</ul>
+<p>可以先按照自己的游戏喜好来做，我基本什么类型的游戏都喜欢玩，只是尤其喜欢解谜类的，所以我想先做2D解谜类的游戏，</p>
+<p>基于这个情况， 我选择了微信开发者工具 😂 ，对 ，没有用任何游戏引擎，主要是我觉得，这个小游戏用不上牛刀</p>
+<p>当然，这些引擎，你不需要会，你只要知道就行，然后根据你想做的游戏类型问AI 适合用哪个引擎，让他推荐就行，反正都是它干货。</p>
+<h3 id="3-第一个关卡"><a href="#3-第一个关卡" class="headerlink" title="3. 第一个关卡"></a>3. 第一个关卡</h3><p>选好引擎了，开始做我的第一关卡</p>
+<p>当然我这个脑子，重新想出一个全新的游戏是不可能的<br>肯定要站在巨人的肩膀上啊</p>
+<p>所以我找了一款我觉得不错的游戏<br>然后体验后，决定要复刻它一关打个样，把流程跑一下</p>
+<p>所以 我基于体验的结果后，跟AI简单的说了下 我的整个体验过程<br>我希望做一个从画面中找出所有人物这样一个简单的玩法<br>大部分人是很轻易能找到 但是有少数几个需要动脑看看 查一查才能找到</p>
+<p>然后让它给我出了一个简易的测试玩法 如下图</p>
+<p><img src="/images/HW01_gTboAAEuGm.jpg" alt="HW01_gTboAAEuGm"></p>
+<p>因为是测试玩法，就真的给我出的非常简陋<br>但是 大体是符合我的想法的</p>
+<p>所以当这个测试玩法通过后，我就让它基于此 ，加上风格开始出资源和写代码。最终效果如下：</p>
+<p><img src="/images/HW01wuMbsAAC4yH.png" alt="HW01wuMbsAAC4yH"></p>
+<p>当然这是玩之前的效果 ，如果你感兴趣，可以扫标题图的小程序码来体验下，我敢说98%的人不靠提示找不到所有人。</p>
+<p>好了，上面都说了些我开始做游戏的历程，下面给一些真正可以系统化，我当时最先建立项目的提示词</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br></pre></td><td class="code"><pre><span class="line">你担任这个项目的技术负责人，负责技术调研、架构设计、实现规划和质量控制。</span><br><span class="line"></span><br><span class="line">我的目标不是只做出一个能玩的小游戏，而是建立一个可维护、可扩展、可以支撑后续不同类型游戏的 【目标引擎】 微信小游戏工程底座。</span><br><span class="line"></span><br><span class="line">请用源码、官方文档和实际验证支撑判断，不要只用“资深经验”“最佳实践”“成熟框架”等表述代替证据。</span><br><span class="line"></span><br><span class="line">一、项目背景与玩法需求</span><br><span class="line"></span><br><span class="line">我会提供以下信息，部分内容可能尚未确定：</span><br><span class="line"></span><br><span class="line">- 游戏想法：[我想做什么样的游戏]</span><br><span class="line">- 核心体验：[希望玩家在游玩中感受到什么]</span><br><span class="line">- 参考资料：[游戏、视频、图片、文档，以及我想参考的具体部分]</span><br><span class="line">- 目标平台：[微信小游戏、网页、手机、PC、主机，或待定]</span><br><span class="line">- 引擎和技术栈：[已确定的选项，或待定]</span><br><span class="line">- 项目现状：[只有想法、已有原型、已有工程，或已上线]</span><br><span class="line">- 开发约束：[人员、时间、预算、设备、已有资源等]</span><br><span class="line">- 本轮交付：[设计方案、可玩原型、某个功能，或可发布版本]</span><br><span class="line"></span><br><span class="line">第一款游戏的类型和机制由我提供的想法和已确认需求决定。请从以下方面把想法整理成能开发、能验证的规则：</span><br><span class="line"></span><br><span class="line">1. 玩家目标与体验。玩家要完成什么，什么会驱动玩家继续玩。</span><br><span class="line">2. 核心循环。玩家反复做什么，系统如何判定并反馈，结果如何影响下一次决策。</span><br><span class="line">3. 操作与状态。列出关键操作、成立条件、状态变化，以及操作失败、取消或中断时的表现。</span><br><span class="line">4. 游玩结构。说明一次游玩如何开始、推进和结束。根据实际玩法决定是否需要关卡、局次、章节、持续进度或自由探索。</span><br><span class="line">5. 功能范围。按需要确定成长、存档、结算、多人、内容更新等功能，并明确哪些直接服务核心体验。</span><br><span class="line">6. 首版验证。选取一个最小但完整的可玩片段，说明玩家能做什么、能看到什么结果、怎样判断这一版值得继续投入。</span><br><span class="line"></span><br><span class="line">如果我提供参考视频，请按实际操作顺序拆解。每个关键片段记录玩家做了什么、画面和状态怎样变化、接下来能做什么。将看得到的事实、根据表现推断的规则、我的明确要求、你提出的方案分别标明。引用资料时说明它支撑哪项判断，无法访问或无法确认的内容列为待验证。</span><br><span class="line"></span><br><span class="line">已有工程时，先核对项目说明、实际运行入口、当前实现和已确认的范围。项目尚无工程时，从可验证的玩法与目标平台出发。缺少会实质影响玩法、技术选型或交付范围的信息时，提出最少的必要问题。可逆的细节可以先按合理假设推进，并记录假设。</span><br><span class="line">区分：</span><br><span class="line">- 视频或现有文件已经确认的事实；</span><br><span class="line">- 尚未验证的推断；</span><br><span class="line">- 我的要求；</span><br><span class="line">- 你提出的设计选择。</span><br><span class="line"></span><br><span class="line">不能凭空补全原游戏规则。如果缺少资料，请明确指出；不要声称已经看过无法访问的文件或视频。</span><br><span class="line"></span><br><span class="line">二、核心目标</span><br><span class="line"></span><br><span class="line">这套工程需要支持：</span><br><span class="line">- 方便新增关卡；</span><br><span class="line">- 方便替换和迭代美术；</span><br><span class="line">- 方便增加交互能力；</span><br><span class="line">- 方便增加新的玩法模块；</span><br><span class="line">- 可复用到以后其他类型游戏；</span><br><span class="line">- 可靠的云数据记录与同步；</span><br><span class="line">- 可控的内容更新、发布、监控与回滚。</span><br><span class="line"></span><br><span class="line">跨游戏复用不等于把所有游戏都塞进同一个解谜规则引擎。</span><br><span class="line"></span><br><span class="line">账号、资源、存档、UI、平台接口、发布和监控可以共用；不同类型游戏应能拥有自己的玩法运行器。</span><br><span class="line"></span><br><span class="line">三、先研究成熟方案，不要直接从零开写</span><br><span class="line"></span><br><span class="line">优先查阅：</span><br><span class="line">1. 本地已有工程和能力。</span><br><span class="line">2. 微信小游戏、云服务的官方文档。</span><br><span class="line">3. GitHub 官方或维护情况较好的开源项目。</span><br><span class="line">4. 与本项目相关的真实源码、issue 和测试。</span><br><span class="line"></span><br><span class="line">候选项目至少比较：</span><br><span class="line">- 功能覆盖；</span><br><span class="line">- 与当前引擎和微信平台的兼容性；</span><br><span class="line">- 许可证及商业使用限制；</span><br><span class="line">- 维护状态、固定版本或 commit；</span><br><span class="line">- 模块耦合与侵入性；</span><br><span class="line">- 测试与已知问题；</span><br><span class="line">- 接入、升级和退出成本。</span><br><span class="line"></span><br><span class="line">不要仅凭 stars、README 宣传就认定可靠。</span><br><span class="line"></span><br><span class="line">对候选给出明确结论：</span><br><span class="line">直接复用 / 适配后复用 / 只参考机制 / 暂缓 / 排除。</span><br><span class="line"></span><br><span class="line">不要同时拼装多套相互重叠的资源、UI、事件和生命周期框架。</span><br><span class="line"></span><br><span class="line">已有方案中的技术选型也需要独立复核，不要为了保持一致而盲目沿用。若要自行实现某个基础模块，必须说明现有方案为什么不适合，以及自建的最小范围。</span><br><span class="line"></span><br><span class="line">四、架构必须回答的问题</span><br><span class="line"></span><br><span class="line">1. 模块边界</span><br><span class="line">说明应用入口、公共服务、平台适配、玩法规则、表现层、内容系统、存档同步和后端的职责及依赖方向。</span><br><span class="line"></span><br><span class="line">避免巨型全局管理器、循环依赖、关卡编号判断和遍布业务代码的 wx/云 SDK 调用。</span><br><span class="line"></span><br><span class="line">2. 玩法抽象</span><br><span class="line">说明输入如何转为意图，如何检查前置条件、原子修改状态、产生事件、更新目标和驱动画面。</span><br><span class="line"></span><br><span class="line">区分事实与表现、玩家目标与演出、局内状态与永久进度。</span><br><span class="line"></span><br><span class="line">用已知关卡证明抽象成立，并说明：</span><br><span class="line">- 哪些需求只改配置；</span><br><span class="line">- 哪些需要新资源；</span><br><span class="line">- 哪些需要增加能力代码；</span><br><span class="line">- 哪些应成为新的玩法模块。</span><br><span class="line"></span><br><span class="line">3. 资源与生命周期</span><br><span class="line">说明共享资源引用、所有权、释放时机、对象池、异步取消、迟到回调、事件与计时器清理。</span><br><span class="line"></span><br><span class="line">重点考虑切关、关闭界面、加载失败、重复打开、切后台等场景，而不只画成功流程。</span><br><span class="line"></span><br><span class="line">4. 美术与内容生产</span><br><span class="line">说明稳定资源 ID、状态与形态、锚点、逻辑画布、裁切偏移、层级、命中区域、放置区域和上色遮罩的协议。</span><br><span class="line"></span><br><span class="line">说明源文件、运行资源和构建产物怎样组织，以及如何检查缺图、错位、缺失状态、依赖错误和不兼容变更。</span><br><span class="line"></span><br><span class="line">5. 数据库与同步</span><br><span class="line">明确哪些数据只存本地，哪些同步到云端，哪些必须服务端权威。</span><br><span class="line"></span><br><span class="line">给出身份边界、数据模型、关键索引、接口职责、事务、幂等和迁移方案。</span><br><span class="line"></span><br><span class="line">必须覆盖：</span><br><span class="line">- 离线操作和待上传队列；</span><br><span class="line">- 请求超时但服务端已经成功；</span><br><span class="line">- 重复请求和重复领奖；</span><br><span class="line">- 两设备同时操作；</span><br><span class="line">- 游客绑定与切换账号；</span><br><span class="line">- 本地存档损坏；</span><br><span class="line">- 旧版本存档；</span><br><span class="line">- 客户端伪造余额、身份或时间。</span><br><span class="line"></span><br><span class="line">不能把“客户端上传整个 JSON”当作完整同步方案，也不能让客户端直接决定货币和权益。</span><br><span class="line"></span><br><span class="line">6. 更新与动态加关</span><br><span class="line">根据当前官方文档，区分微信代码包更新、远程资源更新、关卡数据更新和运营配置更新。</span><br><span class="line"></span><br><span class="line">说明新增关卡、新增组件、新增算法分别怎样发布。</span><br><span class="line"></span><br><span class="line">给出具体链路：</span><br><span class="line">制作 → 校验 → 构建 → 上传 → 预发布 → 兼容性检查 → 逐步开放 → 监控 → 回滚。</span><br><span class="line"></span><br><span class="line">考虑旧客户端、未知能力、半上传、缓存、缺文件、正在游玩的旧关卡，以及内容回滚与数据库变更之间的关系。</span><br><span class="line"></span><br><span class="line">不得把原生 App 热更新直接套用到微信，也不得把技术可行等同平台允许发布。</span><br><span class="line"></span><br><span class="line">五、主动补齐工程遗漏</span><br><span class="line"></span><br><span class="line">请检查并补充必要事项：</span><br><span class="line">- 广告生命周期和奖励去重；</span><br><span class="line">- 前后台切换、输入取消、安全区和设备适配；</span><br><span class="line">- 首屏加载、包体、纹理内存和低端机性能；</span><br><span class="line">- 网络错误、维护模式和离线兜底；</span><br><span class="line">- 环境隔离、密钥管理、权限和日志脱敏；</span><br><span class="line">- 内容后台、发布权限和操作审计；</span><br><span class="line">- 监控、成本预算、备份和恢复；</span><br><span class="line">- 自动化测试、版本兼容和故障注入；</span><br><span class="line">- 第三方代码及素材的授权；</span><br><span class="line">- 底座升级、模板维护和第二款游戏接入。</span><br><span class="line"></span><br><span class="line">按“首版必做 / 后续需要时做 / 当前不做”分类，避免过度设计。</span><br><span class="line"></span><br><span class="line">六、第一阶段交付</span><br><span class="line"></span><br><span class="line">请交付可直接评审的文件，而不只在聊天里给概念建议：</span><br><span class="line"></span><br><span class="line">1. 技术选型与 GitHub 复用评审</span><br><span class="line">包含真实链接、版本、许可证、取舍、已读源码范围和未验证项。</span><br><span class="line"></span><br><span class="line">2. 工程架构方案</span><br><span class="line">包含模块职责、依赖关系、工程目录、主要数据流和关键设计决定。</span><br><span class="line"></span><br><span class="line">3. 数据与同步方案</span><br><span class="line">包含数据模型、身份授权、事务边界、重试、幂等、冲突与迁移。</span><br><span class="line"></span><br><span class="line">4. 内容生产和更新方案</span><br><span class="line">包含资源协议、关卡制作流程、版本兼容、动态加关、发布和回滚示例。</span><br><span class="line"></span><br><span class="line">5. 分阶段实施与验收清单</span><br><span class="line">每项写清输入或故障、预期结果、验证环境和通过标准。</span><br><span class="line"></span><br><span class="line">请用已有四关机制验证方案，再用一个不同类型玩法检验底座的复用边界。</span><br><span class="line"></span><br><span class="line">七、质量与执行要求</span><br><span class="line"></span><br><span class="line">- 不承诺零 BUG；把重要风险转化为可以验证的用例。</span><br><span class="line">- 不把源码静态判断、issue 报告、设计推演和实际运行结果混为一谈。</span><br><span class="line">- 未执行的测试明确标为未执行。</span><br><span class="line">- 不把一堆空目录、接口和 Manager 当作成熟框架。</span><br><span class="line">- 不为了复用而引入当前不需要的微服务、复杂 ECS、通用脚本解释器或完整无代码编辑器。</span><br><span class="line">- 首先验证一条完整链路：一关制作、游玩、保存、云结算、恢复、内容发布和回滚。</span><br><span class="line">- 技术负责人负责可自动完成的工程工作，不把全部操作转交给不懂技术的用户。</span><br><span class="line">- 只有缺少真正必要的信息时才提最小问题，其余工作继续推进。</span><br><span class="line">- 第一阶段先完成研究和设计，不修改正式游戏工程，不安装外部扩展，不开通付费服务，不部署或发布。</span><br><span class="line">- 方案确认后，再按阶段实施；每阶段交付可运行结果和验收证据。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-工作流的改变"><a href="#4-工作流的改变" class="headerlink" title="4. 工作流的改变"></a>4. 工作流的改变</h3><p>我就这样一关一关的制作，前面两个关卡做了好几天，因为总是没有达到我想要的效果，而且也是刚开始制作，资源分层和资源生成顺序都是想一出是一出<br>风格也是换了又换</p>
+<p>然后发现 原来眼中的 那么简单的游戏用AI复现做起来也是挺费劲的</p>
+<p>AI的精细度和仔细度都很差，需要人为定点去纠正<br>还总愿意糊弄你，交出一个非常粗劣的版本交差</p>
+<p>但是怎么提高效率和质量呢</p>
+<p>第一有些事情 就是做着做着发现怎么做才效果好，也就是经验</p>
+<p>比如生成资源，我改了好几个版本，开始是整图出，再分别对互动物件进行抠图，但是抠图的效果差强人意，又变成全部互动物件单独出，又遇到了 单独出的组合在一起又有非常强烈的拼凑感，不和谐不统一</p>
+<p>然后我反反复复在这中间来回拉扯</p>
+<p>最后咋解决的呢<br>就是还是先出带有逻辑的整图，然后专门做了一个技能来对互动物件做分层，风格尽量不要那么写实<br>然后就是不断的修改 😂</p>
+<p>再看看做这个新关卡的测试demo 只测试玩法 不生成资源</p>
+<p><img src="/images/HW03DcybMAA84RW.png" alt="HW03DcybMAA84RW"></p>
+<p>还是简陋至极，但是我开始做的时候 新鲜感还十足<br>后来，当我一周才做出两个关卡的时候<br>我就开始打起邪修的主意</p>
+<h3 id="5-开始邪修"><a href="#5-开始邪修" class="headerlink" title="5. 开始邪修"></a>5. 开始邪修</h3><p>因为游戏性质的原因，我需要大量的关卡来支撑游戏内容，而且我所参考的成熟游戏里面大概有1300多关  ，所以我希望我推出的首个版本最少包含30个关卡内容，然后每个关卡内容又要有所不同，不断的要给与玩家新的新鲜感，</p>
+<p>但是我之前的制作方法不但慢，还总偷懒，放假的时候总想着玩，做10关都不知道要搞到猴年马月</p>
+<p>然后，我想了一个招，我把玩别的游戏的一个关卡的全程录下来，然后 直接发给chatgpt然后跟他说就按照视频的内容，大致换个风格 ，玩法加几个减几个，直接给我出一个可玩关卡。</p>
+<p>本着试试看的想法，结果意外的结果不错，基本很快就搭出一个框子 ，然后基于框架，我就源源不断的出现新的想法和意见，还可以同时出多个关卡，我需要做的就是不断的给意见和修改内容。</p>
+<p>就这样，一下干到50关，改的昏天暗地的<br>天天PUA chatgpt 并把从视频做成关卡也搞成skill<br>终于感觉自己的游戏有一丁点看头了</p>
+<p>最后 ，我觉得做游戏主要就两个优化</p>
+<p>截图给AI说 ，这个优化一下，那个优化一下😂 没错就这两个</p>
+<p>不是开玩笑，其实是想说好游戏是慢慢改出来的，以我的工作经验来说，成熟游戏都是要长期打磨出来的，而不是一下子设计出来的</p>
+<h3 id="6-要相信自己"><a href="#6-要相信自己" class="headerlink" title="6. 要相信自己"></a>6. 要相信自己</h3><p>作为游戏程序员，我天天的工作都是在大型游戏里添加玩法系统、优化、服务器功能和迭代</p>
+<p>但是我开始做游戏还是怀疑自己的<br>但是我又非常喜欢玩游戏</p>
+<p>所以why not<br>带着疑虑和困惑开始了</p>
+<p>我以为我没啥想法，脑袋空空，但是有些东西自然而然的就跳出来<br>很多问号自动冒出</p>
+<p>所以 ，把这些问题解决，把执行力拉满<br>也许命运的齿轮开始转动了呢</p>
+<p>虽然游戏我还不是很满意，但是一个雏形已经出来了<br>我现在有时候工作或者在哪个环境下的时候都会自动想到这个场景可以放进来做成关卡<br>这可能就是真的热爱吧</p>
+<p>如果你也喜欢玩游戏，要不要看看这款一个普通人用AI做出来的游戏是啥样的</p>
+<p>而且最重要的是做出这样的游戏，到底能不能赚到钱？我会持续更新后续</p>
+<p>我是宋宋，很感谢你看完我写的内容  X：@songsong</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/momo_peggy-2123013876249944333/">https://yaoav.github.io/2026/11/18/momo_peggy-2123013876249944333/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/momo-peggy/">@momo_peggy</a></div><div class="post-share"><div class="social-share" data-image="/images/2123013876249944333-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/blocmates-2123024198247579901/" title="The $900 Billion Problem Hiding in Anthropic’s IPO"><img class="cover" src="/images/2123024198247579901-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">The $900 Billion Problem Hiding in Anthropic’s IPO</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  The biggest IPO in history is just around the corner. Anthropic is targeting an IPO between $1 trillion and $1.5 trillion, which is an absolutely insane number. Just a few hours from now, and we’ll have the exact figure. Of course, with the official S-1 filings, I’m sure most of you have seen the headline stat of Anthropic reporting a net loss of $104 billion. Although there is more to this number than meets the eye, that’s not what we’re...</div></div></div></a><a class="pagination-related" href="/2026/11/18/TuyetloanP81840-2123011987143815270/" title="不用海外卡，微信就能开 Claude 会员：自己的号直充、合租、4 折 Claude Code，一篇讲清"><img class="cover" src="/images/2123011987143815270-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">不用海外卡，微信就能开 Claude 会员：自己的号直充、合租、4 折 Claude Code，一篇讲清</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @TuyetloanP81840（Miller） 的长文，原文链接，版权归原作者所有。  想用 Claude，却被海外卡、扣款失败、收不到验证码挡在门外的，这篇建议直接收藏。 Fable 5.2 刚上线，想第一时间用上 Claude 的人，第一道坎还是付款。 我自己做 AI 短剧，剧本、分镜基本都交给 Claude。带冲刺班这几期，学员问得最多的也不是提示词，而是这几句：  虚拟卡又被拒了 第一个月能扣，第二个月扣款失败 账单地址到底填哪 注册 Claude 收不到验证码   我现在给学员的统一答案是 WildAI（bewild.ai）：已经服务超过 20 万用户，微信、支付宝直接付，不用海外卡，也不用折腾虚拟卡。 Claude、ChatGPT、Gemini 订阅，Codex 充值，Claude Code 和开发者 API，连注册要用的接码，一个站全有。  它最实在的地方，是按你的情况拆成了四条路，对号入座就行。  ① 有自己的号：微信直充，会员开在你自己账号上这是我最推荐的一条，也是它的主业。 这条不是中转：会员直接开在你自己的官方账号上，聊天记录、Pr...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/14/momo_peggy-2121605011952246834/" title="抖音200W粉丝博主AI美女涨粉技术保姆级教程"><img class="cover" src="/images/2121605011952246834-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-14</div><div class="info-item-2">抖音200W粉丝博主AI美女涨粉技术保姆级教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  兄弟们，247.3 万粉丝，3617.1 万获赞，157 条作品。 这是这次拿到的“温柚柚”主页截图里显示的数据。 往下看，作品封面里的元素很集中：人物、服装、表情，加上相近的拍摄距离和背景。 换一套衣服，换一个角度，再换几个小动作，就能围绕同一个人物继续做内容。  数据以这张截图为准。原账号的制作方式未知，本文用自己的 AI 角色练习同类视频的镜头和动作。 猫哥直接给大家拆解这类账号视频到底怎么做。 拿这次约 6 秒的参考片来说，画面主要围绕一个人展开。 开头镜头有变化，停稳以后，靠视线、眨眼、偏头这些小动作继续推进。想复刻这种感觉，就要把动作的顺序和幅度写出来。 只丢一句“帮我生成一个美女自拍视频”，能控制的信息太少。 所以，这次我把它放进 YouArt Desktop 桌面应用，按下面这条流程来做： 反推视频 → 整理首帧和动作提示词 → 做自己的角色三视图 → 替换人物 → 调用爆款克隆 Skill。 我之前写 Codex 和 Skill 的时候，经常讲：把输入、步...</div></div></div></a><a class="pagination-related" href="/2026/11/16/momo_peggy-2122288595822420163/" title="闲鱼搞钱常见问题（3）：点进来了，就是不买单？别急着降价，先查这 6 个转化环节"><img class="cover" src="/images/2122288595822420163-cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">闲鱼搞钱常见问题（3）：点进来了，就是不买单？别急着降价，先查这 6 个转化环节</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  曝光有了，点击也有了，人进来了又走了：详情翻两屏就退出，聊两句没影了，拍下不付款。很多人这时候第一反应就是降价，但降价只解决「贵」，其他问题降价救不了。 客户点进链接，心里其实就三个问题：东西是真的吗？有没有坑？出了事找谁？这篇的 6 个自查项就是冲着这三个问题来的。它们在原教程里散落在详情、图片、话术、定价好几章里，我按「点进来到下单」这条线拼到一起了。按顺序查，先别动价格。 一、详情页重点后置，核心卖点被参数淹没详情写太全，反而是劝退的开始。 很多人恨不得把所有参数、注意事项全塞进去，觉得写得全客户就不用问了。但买家只关心三五个参数，进来看到一长串文字，懒得找，直接退出。 文案结构照这个搭：标题 + 产品基本信息 + SKU 与价格 + 物流与发货 + 售后 + 使用感受 + 卖家承诺。自己不想写，就收几份同行文案丢给 AI 改，但拼完一定要对着你要卖的实物过一遍，为什么后面细说。  写多长不用纠结，重点和核心卖点放最前面就行，参数细节能折叠就折叠、能靠后就靠后。拿不准...</div></div></div></a><a class="pagination-related" href="/2026/11/17/momo_peggy-2122455841290817783/" title="做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品"><img class="cover" src="/images/2122455841290817783-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">做了 12 个出海网站，我最想知道是“它凭什么有人付钱”，所以做了个网站，每天拆 3 个在赚钱的 AI 产品</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  我做了个网站，叫 WhyItEarns，今天正式开放。 首页第一句话，就是我做它的原因：别人的 AI 产品在赚钱，你能做哪一个？ 每天早上 8 点，它更新 3 张“收据”，每张拆一个已经在赚钱的海外 AI 产品：谁在付钱，怎么收钱，一个人几周能做出来，最后是我的判断，你能不能也做一个。 现在收了 24 个产品，每月合计收入 $395,882。每一个数字都来自对方的支付后台，经 TrustMRR 公开页或者我们自己的收入认证同步过来，不估，不编，不用创始人自己报的数。 收据、收入、收入榜一直免费，不用登录就能看。  为什么要做这个先交代一下我自己。 我之前是做前程序员，写了 5 年代码，现在在 X 上 Build in Public。手上有 12 个出海网站，AI 图片、AI 视频、AI 换装、颜值打分、纹身、厨房设计，基本都是小工具站，靠 SEO 和 GEO 拿流量。 站做多了，你会发现建站反而是最简单的，最费脑子的是决定做哪个。 每次准备做新站，我脑子里转的就三个问题： ...</div></div></div></a><a class="pagination-related" href="/2026/11/18/momo_peggy-2123028568053854520/" title="超简单 X 收藏瀑布流插件，一键筛出你收藏里的百万爆款"><img class="cover" src="/images/2123028568053854520-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">超简单 X 收藏瀑布流插件，一键筛出你收藏里的百万爆款</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  大家好，今天来看一个Chrome插件 X 收藏瀑布流 (X Bookmarks Grid)  ！ 你的 X 收藏夹，是不是收藏了就再也没打开过？ X 上的收藏越攒越多，想找回某一篇，只能在书签页一条条往下滑。 收藏了，等于没收藏。太奔溃了太难用了，上次还不小心，把收藏夹清空了，还好有备份，不然记录是真没了。 这收藏功能实在受不了，所以我最近做了个 Chrome 插件，专治这个毛病：把 X 收藏同步到浏览器本地，变成一面能搜索、能筛选、能导出的封面墙。 一分钟把上千条收藏变成封面墙！【如图管理页瀑布流全景】  目录：  一、它是什么 二、下载安装 三、同步：点一下，剩下的不用管 四、筛选·排序：几千条里捞出想要的那条 五、右键卡片：五个操作 六、备份·换电脑 七、隐私：数据只在自己的浏览器里 八、常见坑  一、它是什么 简单说，X 收藏瀑布流就是给 X 书签页配了一个本地资料库。 插件用浏览器里已登录的 X 会话读取收藏，存在本机，再用瀑布流的方式摆出来——每条收藏一张卡片，...</div></div></div></a><a class="pagination-related" href="/2026/11/16/momo_peggy-2122308853320806490/" title="零基础怎么用 AI 搭一个能收款的网站？"><img class="cover" src="/images/2122308853320806490-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">零基础怎么用 AI 搭一个能收款的网站？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  从两次“打不开”讲清网站怎么上线。每一步都附一条可以复制给编程 AI 的提示词。 如果你也想做一个网站，把文里的提示词复制给能写代码的 AI，就可以一步一步搭起来。 先把方括号换成你的需求，让 AI 做出一个能在自己电脑上打开的版本。再按需要加表单、登录或收款，最后部署上线。每做完一步，照着提示词里的检查方法亲手试一次。  先看上面这条访问主线。下面的支线按网站功能选用，做作品集只走主线也可以。 目录 在我电脑上能跑，离别人能打开还有多远？ 打开一个网站，先经过哪些环节？ 记录放数据库，文件放哪里？ 网站什么时候需要发邮件？ 自动收款，网站怎么知道钱到了？ 两次打不开，查出来是两件事 每月要养哪些东西 如果你也要上线，可以照这张清单验收 我学到的，是怎么把问题交代给 AI  我的网站两次打不开。第一次，隔着网络敲门明明有人应声，浏览器就是进不去。后来我换了个对外访问的地址（公网 IP），网页恢复了。第二次，服务器里的程序还在跑，最后却是给云账户充钱才恢复。 01｜在我电脑上...</div></div></div></a><a class="pagination-related" href="/2026/11/16/momo_peggy-2122293839595794936/" title="Reddit 养号及获取 Karma 保姆级教程:从 0 到 1 一个月搞定"><img class="cover" src="/images/2122293839595794936-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">Reddit 养号及获取 Karma 保姆级教程:从 0 到 1 一个月搞定</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  **这篇文章只解决一个问题：注册完账号后怎么起号？**一篇帖子教会你，跟着做，一个月之后，你的号就练成了，练成后，看看第二部分：讲透 Karma 到底是什么、怎么攒、怎么不踩坑？ 📅 第一周：只动手不动口 每天打开 Reddit 2-3 次，每次 15-30 分钟 刷刷 r&#x2F;all，找几个你感兴趣的版块 前三天只浏览不点赞，从第四天起，每天只点 1 个赞 第一周不评论、不发帖、不私信  📅 第二周：可以说话了🔹 社区选对  去 r&#x2F;askreddit、r&#x2F;CasualConversation 这种话题广、氛围好的大版 找那种”你遇到过最 xxx 的事？”的帖子回复  🔹 怎么回复  内容短、真诚，比如：”上次陌生人帮我拎了行李箱上楼梯，我一直记得”  🔹 数量要求  第 10 天前每天只发 1 条评论，2-3 个点赞 第 10-15 天可以每天发 2-3 条评论，但是评论要间隔 2-3 个小时  🔹 避雷区 💣  不要去 r&#x...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%81%9A%E6%B8%B8%E6%88%8F%EF%BC%8CAI-%E8%83%BD%E5%B8%AE%E5%88%B0%E4%BB%80%E4%B9%88%E7%A8%8B%E5%BA%A6"><span class="toc-number">1.</span> <span class="toc-text">1. 一个人做游戏，AI 能帮到什么程度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%89%E5%93%AA%E4%B8%AA%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">2. 选哪个游戏引擎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%B3%E5%8D%A1"><span class="toc-number">3.</span> <span class="toc-text">3. 第一个关卡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E6%94%B9%E5%8F%98"><span class="toc-number">4.</span> <span class="toc-text">4. 工作流的改变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%BC%80%E5%A7%8B%E9%82%AA%E4%BF%AE"><span class="toc-number">5.</span> <span class="toc-text">5. 开始邪修</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E8%A6%81%E7%9B%B8%E4%BF%A1%E8%87%AA%E5%B7%B1"><span class="toc-number">6.</span> <span class="toc-text">6. 要相信自己</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

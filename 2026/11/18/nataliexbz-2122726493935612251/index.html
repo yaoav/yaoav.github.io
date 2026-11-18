@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="6 repos, one maintainer, and no idea which job was eating my credits.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/nataliexbz-2122726493935612251/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="6 repos, one maintainer, and no idea which job was eating my credits.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122726493935612251-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T00:20:09.000Z">
+<meta property="article:modified_time" content="2026-11-18T03:30:27.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@nataliexbz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122726493935612251-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)",
+  "url": "https://yaoav.github.io/2026/11/18/nataliexbz-2122726493935612251/",
+  "image": "https://yaoav.github.io/images/2122726493935612251-cover.jpg",
+  "datePublished": "2026-11-18T00:20:09.000Z",
+  "dateModified": "2026-11-18T03:30:27.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/nataliexbz-2122726493935612251/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122726493935612251-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T00:20:09.000Z" title="发表于 2026-11-18 00:20:09">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@nataliexbz（natalie）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122726493935612251">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>6 repos, one maintainer, and no idea which job was eating my credits.</p>
+<p>I had a theory, though. Like most people, I assumed the model was the expensive part. Use the smartest one, pay the most. Use a lighter one, pay less. So the whole game is picking the right model, right?</p>
+<p>Then I opened Viktor’s Usage page and read it line by line.</p>
+<p>The check that reads all my repos twice a day, every single day? 18 credits for the whole month. Most of its runs don’t show a single credit.</p>
+<p>The most expensive line on the page was a chat. One chat, 93% of everything I’d spent.</p>
+<p>My chat. The one where I hired him, explained my projects and set up every job.</p>
+<p><video controls preload="metadata" poster="/images/2122438236584714241-poster.jpg" src="/videos/2122438236584714241.mp4"></video></p>
+<p>So the model wasn’t eating my budget. The way I worked with him was. Once I saw that, I stopped picking models and started sorting jobs instead.</p>
+<p>That’s what this article is: how I sort every job I give my AI employee now, from the one that costs almost nothing to the one that cost me the most. For each job you’ll see what it is, what it runs on, why, and the first thing you can do today.</p>
+<p>One rule before we start: every number here comes from my own Usage page. Viktor runs on what I set. He doesn’t choose a model for each job by himself, and nothing changed without my yes.</p>
+<h3 id="The-four-settings-that-actually-matter"><a href="#The-four-settings-that-actually-matter" class="headerlink" title="The four settings that actually matter"></a>The four settings that actually matter</h3><p>Viktor runs on modes you set for the whole team. Ultra is for the hardest work. Smart is for everyday work, and it’s the default. Balanced is for routine work in volume. Cheap is for quick lookups and checks.</p>
+<p>On top of that, each scheduled automation can run on its own model, you can switch models inside a chat (Claude, GPT, Grok and more), and in any chat !fast gets you a quick answer while !deep takes on a hard problem.</p>
+<p><img src="/images/HXRorn2WAAEn-sI.jpg" alt="HXRorn2WAAEn-sI"></p>
+<p>Here’s how I think about them now. They’re not really “models”. They’re how hard you want him to think. And most of my jobs don’t need him to think hard at all.</p>
+<h3 id="The-job-that-costs-almost-nothing"><a href="#The-job-that-costs-almost-nothing" class="headerlink" title="The job that costs almost nothing"></a>The job that costs almost nothing</h3><p>Every morning and every evening Viktor reads all six of my repos, compares them with the last run and tells me only what’s new. On most days that’s nothing, which is exactly what I want from a check.</p>
+<p>Why it’s almost free: it runs as a script. Think about what a check actually is. Pull the latest, list what changed, run the same comparisons, format the result. None of that needs thinking, so the fixed steps run without the model at all.</p>
+<p>The result is my favorite screen in the whole app: weeks of runs, every one of them succeeded, and the credits column next to them is empty.</p>
+<p><img src="/images/HXRowOAWMAAAQl_.jpg" alt="HXRowOAWMAAAQl_"></p>
+<p><video controls preload="metadata" poster="/images/2122438365949603840-poster.jpg" src="/videos/2122438365949603840.mp4"></video></p>
+<p>First move: find the job you run most often and ask yourself which of its steps are exactly the same every time. Those steps shouldn’t cost you thinking.</p>
+<h3 id="Stop-asking-a-genius-what-time-it-is"><a href="#Stop-asking-a-genius-what-time-it-is" class="headerlink" title="Stop asking a genius what time it is"></a>Stop asking a genius what time it is</h3><p>“Which of my repos has no license file?” “When did I last push to this one?”</p>
+<p>If you ask that in a chat on the default mode, you’re asking your smartest setting a question a quick lookup could answer. It works. It’s just like asking a senior engineer what time it is.</p>
+<p>In my Viktor workspace !fast points to Balanced, and !deep uses the default model. Quick question, !fast. Hard question, !deep. I don’t think about models anymore.</p>
+<p><img src="/images/HXRpyeAXMAA9Imx.jpg" alt="HXRpyeAXMAA9Imx"></p>
+<p>First move: start your next quick question with !fast and see if the answer is enough. It usually is.</p>
+<h3 id="The-boring-report-doesn’t-need-a-genius-either"><a href="#The-boring-report-doesn’t-need-a-genius-either" class="headerlink" title="The boring report doesn’t need a genius either"></a>The boring report doesn’t need a genius either</h3><p>Every Friday Viktor sends me one community digest: new stars and forks, new issues and pull requests, anyone waiting for my reply, and a draft reply for each.</p>
+<p>It’s a lot of reading, but it’s the same reading every week. That’s what Balanced is for: volume, not difficulty. Running it on Smart would mean paying for thinking the job never uses.</p>
+<p>First move: pick one report you put together by hand every week and give it to him as a scheduled job on Balanced.</p>
+<p>Still reading? Then you’re exactly who I write these for. Follow me: I test this stuff on my own setup and post what I find.</p>
+<h3 id="Where-I-let-him-think"><a href="#Where-I-let-him-think" class="headerlink" title="Where I let him think"></a>Where I let him think</h3><p>Every Monday Viktor clones each of my repos on a clean machine, runs every command exactly as the README says, and reports only real problems, each one with a fix.</p>
+<p>This one stays on Smart, and I’m happy to pay for it. Here he isn’t just noticing that something broke. He has to work out why, and that’s the kind of work the default mode is for.</p>
+<p>First move: ask Viktor to run your own README the way a stranger would. Nothing gets pushed until you say yes.</p>
+<h3 id="The-only-place-I’d-pay-for-the-best"><a href="#The-only-place-I’d-pay-for-the-best" class="headerlink" title="The only place I’d pay for the best"></a>The only place I’d pay for the best</h3><p>Release notes, the changelog and the last check before a tag. Do the version, the changelog and the README all say the same thing?</p>
+<p>A mistake here reaches every user and stays public. So this is the one place where I want the strongest reasoning I can get, and I can afford it because I’m not paying for it anywhere else.</p>
+<p>To be honest, Ultra is the one Viktor mode I haven’t used yet. My first release is the job it’s waiting for.</p>
+<p>First move: write your jobs in two columns, “the same every time” and “a mistake here is public”. Only the second column gets the top mode.</p>
+<h3 id="Plot-twist-my-priciest-jobs-came-with-the-setup"><a href="#Plot-twist-my-priciest-jobs-came-with-the-setup" class="headerlink" title="Plot twist: my priciest jobs came with the setup"></a>Plot twist: my priciest jobs came with the setup</h3><p>When I sorted my scheduled jobs by credits, the top of the list surprised me. The two most expensive ones were background jobs that came with my Viktor setup. They ran on the team default, and the priciest one cost 269 credits a run. I paused both myself.</p>
+<p>Further down the same list sits another one of his background jobs, set to its own lighter model, a GPT model at low reasoning. That one costs 14 credits a run.</p>
+<p><video controls preload="metadata" poster="/images/2122438475416788993-poster.jpg" src="/videos/2122438475416788993.mp4"></video></p>
+<p>They’re different jobs, so it isn’t a lab test. But it’s the same employee in the same month, and the gap between those two lines is the whole point of this article: what a job runs on decides what it costs.</p>
+<p>First move: open Usage, then Scheduled tasks, sort by credits and read the “per run” line under each job. If one looks too high, that’s the one to move to a lighter setup. You can also give each automation a monthly cap, so a surprise shows up as a cap and not as a bill.</p>
+<h3 id="And-then-there’s-me"><a href="#And-then-there’s-me" class="headerlink" title="And then there’s me"></a>And then there’s me</h3><p>So what was the most expensive thing on my page? The long chat. Hiring him, explaining my projects, setting up every job, running each first report, asking follow-up questions.</p>
+<p>The chart tells the story. Two tall bars: the day I hired him, and the evening I gave him three new jobs and asked for every first report at once. On most other days, it’s almost flat.</p>
+<p><img src="/images/HXRqDSBXQAAcIDR.jpg" alt="HXRqDSBXQAAcIDR"></p>
+<p>I don’t regret a single message in that chat. Every job in this article started there. But it changed how I see the whole thing: setting up is the expensive part, and running is cheap. Once a job is set up right, it can run for weeks for almost nothing.</p>
+<p>First move: when you set up a new job, keep that chat about that one job. When it’s ready, the routine moves to a schedule and the long chat stops growing.</p>
+<h3 id="Where-to-start-this-week"><a href="#Where-to-start-this-week" class="headerlink" title="Where to start this week"></a>Where to start this week</h3><ul>
+<li>You run the same check again and again: make the fixed steps a script</li>
+<li>You ask a lot of small questions: !fast</li>
+<li>You send the same report every week: Balanced</li>
+<li>You need real problem-solving: Smart</li>
+<li>You ship anything public: the top mode, and only there</li>
+<li>You’ve never opened your Usage page: sort it by credits per run</li>
+<li>Your bill is mostly one chat: separate the setup from the routine</li>
+</ul>
+<h3 id="When-I-still-pick-a-model-myself"><a href="#When-I-still-pick-a-model-myself" class="headerlink" title="When I still pick a model myself"></a>When I still pick a model myself</h3><p>For single questions in a chat I still decide: !fast for a lookup, !deep when it’s genuinely hard. And when my first release comes, I’ll switch to Ultra by hand.</p>
+<p>Viktor doesn’t choose the best model for each job by himself. That part is mine. What he gives me is a bill I can read job by job and run by run, so I can see when I got it wrong.</p>
+<h3 id="What-I-got-wrong"><a href="#What-I-got-wrong" class="headerlink" title="What I got wrong"></a>What I got wrong</h3><p>I spent weeks wondering which model is the smartest. Wrong question.</p>
+<p>The right one is simpler: which of my jobs need thinking at all? For most of mine, the answer is almost none. The thinking goes where a mistake would be public, and everything else runs as light as it can.</p>
+<p>Pick one job you already have. Make it one step lighter this week and watch your Usage page.</p>
+<p>Next, I’m asking Viktor himself where my credits go. Follow me if you want to see what he says.</p>
+<p>Hire @viktor_com for your team, free to start: <a target="_blank" rel="noopener" href="https://ref.viktor.com/shmidt-x-3">https://ref.viktor.com/shmidt-x-3</a> Use code SHMIDT100 for $100 in free credits.</p>
+<p>#AIemployee #opensource</p>
+<p>Paid Partnership</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/nataliexbz-2122726493935612251/">https://yaoav.github.io/2026/11/18/nataliexbz-2122726493935612251/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/nataliexbz/">@nataliexbz</a></div><div class="post-share"><div class="social-share" data-image="/images/2122726493935612251-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/sentry-2122751213749858605/" title="How a broken release name overloaded our symbolication database "><img class="cover" src="/images/2122751213749858605-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">How a broken release name overloaded our symbolication database </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @sentry（Sentry） 的长文，原文链接，版权归原作者所有。   TL;DR: A few releases with broken names had piled up tens of millions of rows, and one unbounded lookup kept trying to scan all of them. Capping how much work a single lookup can do cut database CPU from 76% to 19% and symbolication timeouts by 98%. Bigger hardware hadn’t managed either.  How Sentry finds your source mapsWhen a JavaScript error reaches Sentry, the stack trace points at minified code. Sentry finds the source map that was uploade...</div></div></div></a><a class="pagination-related" href="/2026/11/17/blocmates-2122720869097296206/" title="A Deep Dive Into Outcome, HIP-4 &amp; Prediction Markets on Hyperliquid"><img class="cover" src="/images/2122720869097296206-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">A Deep Dive Into Outcome, HIP-4 & Prediction Markets on Hyperliquid</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  The market is down, and as expected, everyone is overreacting again. Doom-posting is at an all-time high and Binance is on the onslaught this time around, to the relief of Wintermute. On the other side of the pandemonium are those calling for $5 HYPE - either for want of a generational buying opportunity, or just because they are simply perma-bears. Either way, it would be nice for both parties to put their money where their mouth is and ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/01/31/nataliexbz-2017314080395296995/" title="The Math Needed for Trading on Polymarket (Complete Roadmap)"><img class="cover" src="/images/2017314080395296995-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-01-31</div><div class="info-item-2">The Math Needed for Trading on Polymarket (Complete Roadmap)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @nataliexbz（natalie） 的长文，原文链接，版权归原作者所有。  I’m going to break down the essential math you need for trading on Polymarket. I’ll also share the exact roadmap and resources that helped me personally. Let’s get straight to it A recent research paper just exposed the reality. Sophisticated traders extracted $40 million in guaranteed arbitrage profits from Polymarket in one year. The top trader alone made $2,009,631.76. These aren’t lucky gamblers. They’re running Bregman projections, Fra...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-four-settings-that-actually-matter"><span class="toc-number">1.</span> <span class="toc-text">The four settings that actually matter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-job-that-costs-almost-nothing"><span class="toc-number">2.</span> <span class="toc-text">The job that costs almost nothing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stop-asking-a-genius-what-time-it-is"><span class="toc-number">3.</span> <span class="toc-text">Stop asking a genius what time it is</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-boring-report-doesn%E2%80%99t-need-a-genius-either"><span class="toc-number">4.</span> <span class="toc-text">The boring report doesn’t need a genius either</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-I-let-him-think"><span class="toc-number">5.</span> <span class="toc-text">Where I let him think</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-only-place-I%E2%80%99d-pay-for-the-best"><span class="toc-number">6.</span> <span class="toc-text">The only place I’d pay for the best</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Plot-twist-my-priciest-jobs-came-with-the-setup"><span class="toc-number">7.</span> <span class="toc-text">Plot twist: my priciest jobs came with the setup</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-then-there%E2%80%99s-me"><span class="toc-number">8.</span> <span class="toc-text">And then there’s me</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-to-start-this-week"><span class="toc-number">9.</span> <span class="toc-text">Where to start this week</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#When-I-still-pick-a-model-myself"><span class="toc-number">10.</span> <span class="toc-text">When I still pick a model myself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-I-got-wrong"><span class="toc-number">11.</span> <span class="toc-text">What I got wrong</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

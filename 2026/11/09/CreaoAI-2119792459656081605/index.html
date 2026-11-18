@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>AI Video Got Easier. Making It Still Feels Like Work. | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="AI Video Got Easier. The Workflow Didn’t.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Video Got Easier. Making It Still Feels Like Work.">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/09/CreaoAI-2119792459656081605/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="AI Video Got Easier. The Workflow Didn’t.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2119792459656081605-cover.jpg">
+<meta property="article:published_time" content="2026-11-09T22:01:20.000Z">
+<meta property="article:modified_time" content="2026-11-16T04:59:57.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@CreaoAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2119792459656081605-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI Video Got Easier. Making It Still Feels Like Work.",
+  "url": "https://yaoav.github.io/2026/11/09/CreaoAI-2119792459656081605/",
+  "image": "https://yaoav.github.io/images/2119792459656081605-cover.jpg",
+  "datePublished": "2026-11-09T22:01:20.000Z",
+  "dateModified": "2026-11-16T04:59:57.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/09/CreaoAI-2119792459656081605/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AI Video Got Easier. Making It Still Feels Like Work.',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2119792459656081605-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">AI Video Got Easier. Making It Still Feels Like Work.</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">AI Video Got Easier. Making It Still Feels Like Work.</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-09T22:01:20.000Z" title="发表于 2026-11-09 22:01:20">2026-11-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@CreaoAI（Creao AI）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2119792459656081605">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>AI Video Got Easier. The Workflow Didn’t.</p>
+<p>Generating a video is getting ridiculously easy.</p>
+<p>Actually getting one you want to post?</p>
+<p>Still somehow a process.</p>
+<p>Pick a model.</p>
+<p>Figure out the prompt.</p>
+<p>Render.</p>
+<p>Try again.</p>
+<p>Realize you made it in the wrong aspect ratio.</p>
+<p>Try another model.</p>
+<p>Lose the prompt that worked.</p>
+<p>Come back three days later and start almost from scratch.</p>
+<p><strong>The models got faster. The workflow around them didn’t.</strong></p>
+<p>That’s why we built <strong>Video Studio in CREAO</strong>.</p>
+<p>It gives you one place to make, edit, compare, and come back to your videos without rebuilding the process every time.</p>
+<p>And if you just want to try it, <strong>new accounts start with 30 free credits. No credit card required.</strong></p>
+<h3 id="One-place-for-the-whole-messy-part"><a href="#One-place-for-the-whole-messy-part" class="headerlink" title="One place for the whole messy part"></a>One place for the whole messy part</h3><p>Video Studio is a dedicated space in CREAO just for making video.</p>
+<p>You can start from an example or write your own prompt, watch the render happen there, and come back to every take you’ve made later.</p>
+<p>No hunting for the version you liked.</p>
+<p>No trying to remember which prompt produced it.</p>
+<p><strong>The take and the prompt stay together.</strong></p>
+<p>That matters more than it sounds.</p>
+<p>Because if you make video regularly for your business, the goal isn’t to create one impressive clip.</p>
+<p>It’s to be able to make the <strong>next one</strong> without rebuilding the process.</p>
+<h3 id="You-don’t-have-to-start-with-a-blank-prompt"><a href="#You-don’t-have-to-start-with-a-blank-prompt" class="headerlink" title="You don’t have to start with a blank prompt"></a>You don’t have to start with a blank prompt</h3><p>Blank prompt boxes are overrated.</p>
+<p>Video Studio opens with examples you can actually start from.</p>
+<p>Product shots.</p>
+<p>Logo reveals.</p>
+<p>Interiors.</p>
+<p>Cinematic scenes.</p>
+<p>Anime.</p>
+<p>Character videos.</p>
+<p>And more.</p>
+<p>Pick one and the prompt and settings are already there.</p>
+<p>Render it as-is.</p>
+<p>Then change the product.</p>
+<p>Change the setting.</p>
+<p>Change the style.</p>
+<p>Change one line and see what happens.</p>
+<p><strong>It’s a much easier way to figure out what works than staring at an empty prompt box</strong> trying to remember how many adjectives make something cinematic.</p>
+<h3 id="Different-ideas-need-different-models"><a href="#Different-ideas-need-different-models" class="headerlink" title="Different ideas need different models"></a>Different ideas need different models</h3><p>There still isn’t one video model that’s best at everything.</p>
+<p>So Video Studio puts multiple options in one place, including:</p>
+<p><strong>Veo 3.1</strong></p>
+<p><strong>Seedance 2.0</strong></p>
+<p><strong>Seedance 2.5</strong></p>
+<p><strong>Gemini Omni Flash</strong></p>
+<p>That means you can try the same idea with different models instead of deciding upfront which one is supposed to be perfect for the job.</p>
+<p>Some are better for cinematic motion.</p>
+<p>Some are better for consistency.</p>
+<p>Some are better when sound matters.</p>
+<p>And sometimes one model just gives you something weird.</p>
+<p>Try another.</p>
+<p><strong>Choosing the model becomes part of making the video, not a separate research project.</strong></p>
+<h3 id="Editing-shouldn’t-mean-starting-over"><a href="#Editing-shouldn’t-mean-starting-over" class="headerlink" title="Editing shouldn’t mean starting over"></a>Editing shouldn’t mean starting over</h3><p>Sometimes a video is almost right.</p>
+<p>Which can honestly be more annoying than it being completely wrong.</p>
+<p>Maybe the character looks good but the setting doesn’t.</p>
+<p>Maybe the product needs to stay the same across several clips.</p>
+<p>Maybe you just want to change one thing without regenerating the entire idea.</p>
+<p><strong>With Gemini Omni Flash in Video Studio, you can give CREAO an existing video and describe what you want changed.</strong></p>
+<p><strong>You can also add reference images to help keep a product, character, or visual style more consistent across clips.</strong></p>
+<p><strong>The editing itself is available on the free plan.</strong></p>
+<h3 id="Make-it-once-Post-it-where-it-belongs"><a href="#Make-it-once-Post-it-where-it-belongs" class="headerlink" title="Make it once. Post it where it belongs."></a>Make it once. Post it where it belongs.</h3><p>A video for TikTok is not necessarily a video for YouTube.</p>
+<p><strong>Video Studio supports the formats businesses actually post in.</strong></p>
+<p><strong>9:16</strong> for Reels and TikTok.</p>
+<p><strong>1:1</strong> for feed posts.</p>
+<p><strong>16:9</strong> for YouTube, websites, and product pages.</p>
+<p>Plus wider cinematic formats.</p>
+<p>You can also describe dialogue, music, or sound effects as part of the prompt and render them with the video.</p>
+<p>So the question becomes less:</p>
+<p><strong>How do I make an AI video?</strong></p>
+<p>and more:</p>
+<p><strong>What do I actually want this video to do?</strong></p>
+<p>That’s a much more useful question.</p>
+<h3 id="The-part-we-think-matters-most-your-takes-stay-useful"><a href="#The-part-we-think-matters-most-your-takes-stay-useful" class="headerlink" title="The part we think matters most: your takes stay useful"></a>The part we think matters most: your takes stay useful</h3><p>Every take you make stays inside Video Studio with the prompt that created it.</p>
+<p>So when something works, you don’t have to treat it like a lucky accident.</p>
+<p>Rerun it with one change.</p>
+<p>Use the same structure for another product.</p>
+<p>Try a different model.</p>
+<p>Adapt it for another format.</p>
+<p>Come back next week and build from the version that already worked.</p>
+<p>For a creator, that means less starting over.</p>
+<p>For a small business, it means the product video, ad, or Reel you figured out once can become something you keep improving.</p>
+<p><strong>Good work should be reusable.</strong></p>
+<h3 id="You-probably-don’t-need-another-video-tool"><a href="#You-probably-don’t-need-another-video-tool" class="headerlink" title="You probably don’t need another video tool"></a>You probably don’t need another video tool</h3><p>There are already plenty of those.</p>
+<p>What we wanted was a place where the different pieces of AI video creation actually live together:</p>
+<p>the examples,</p>
+<p>the prompts,</p>
+<p>the models,</p>
+<p>the editing,</p>
+<p>the formats,</p>
+<p>the sound,</p>
+<p>and the versions you already made.</p>
+<p>Less time figuring out the tooling.</p>
+<p>More time figuring out what’s actually worth making.</p>
+<p><strong>Video Studio is live now in CREAO.</strong></p>
+<p>New accounts get <strong>30 free credits with no credit card required</strong>, so you can pick an example and see what you make.</p>
+<p><strong>Make the first take.<br>Keep the good ones.<br>Build from there.</strong></p>
+<p><strong>Link to try it in the reply.</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/09/CreaoAI-2119792459656081605/">https://yaoav.github.io/2026/11/09/CreaoAI-2119792459656081605/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CreaoAI/">@CreaoAI</a></div><div class="post-share"><div class="social-share" data-image="/images/2119792459656081605-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/10/shuvoo45-2119823413682590194/" title="Sending BTC, Burning Assets? DarkHorse Wallet Adds UTXO Protection"><img class="cover" src="/images/2119823413682590194-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Sending BTC, Burning Assets? DarkHorse Wallet Adds UTXO Protection</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @shuvoo45（Shuvo） 的长文，原文链接，版权归原作者所有。  Have you ever sent BTC and unintentionally transferred or even burned other Bitcoin-based assets in your wallet? The risk may lie in the UTXOs your wallet automatically selects. A UTXO contains BTC, but it may also be associated with RGB assets, inscriptions, Runes, or Alkanes. If a wallet selects transaction inputs based only on their BTC value without correctly handling the associated assets, an ordinary payment can result in asset loss. Keep...</div></div></div></a><a class="pagination-related" href="/2026/11/09/yanchuanlab-2119785596273168892/" title="AI 视频Bot（2D/3D）：从想法到成片一手实战全流程（附完整提示词）"><img class="cover" src="/images/2119785596273168892-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI 视频Bot（2D/3D）：从想法到成片一手实战全流程（附完整提示词）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yanchuanlab（言川） 的长文，原文链接，版权归原作者所有。  我做了五种风格完全不同的 AI 视频：史诗短片、3D 诗意短片、认知思维、剧情故事、vibe 知识大赏。这篇每种风格挑一条代表作，给你讲清楚一个想法怎么一步步做成片子：用了哪些 AI、分几步走、每一步的提示词，还有每条片子踩过的坑。2D、3D 都有。 从 10 月 20 日开始发短视频，截至 11 月 9 日，20 天左右，视频号加抖音累计 24300+ 粉丝，累计播放 70 万+。 视频号 20000+ 粉丝，抖音 4300+ 粉丝，两边累计播放 70 万+  截图里能看到的播放量只是部分片子的数据，仅作示意。 下面按这个顺序讲：  AI 视频制作 bot：一张图看懂全流程。 你、大脑规划层、能力层、反馈层、记忆层，五层各管什么。 从一个想法到成片的 6 步： 每一步都附提示词，复制就能用。 五个实战案例和经验： 每条片子怎么做、花了多少，怎么省钱，怎么把效果做好，以及我踩过的坑。  一、AI 视频制作 bot：一张图看懂全流程我一共用到 6 个主要制作工具：Claude Code...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#One-place-for-the-whole-messy-part"><span class="toc-number">1.</span> <span class="toc-text">One place for the whole messy part</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#You-don%E2%80%99t-have-to-start-with-a-blank-prompt"><span class="toc-number">2.</span> <span class="toc-text">You don’t have to start with a blank prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Different-ideas-need-different-models"><span class="toc-number">3.</span> <span class="toc-text">Different ideas need different models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Editing-shouldn%E2%80%99t-mean-starting-over"><span class="toc-number">4.</span> <span class="toc-text">Editing shouldn’t mean starting over</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Make-it-once-Post-it-where-it-belongs"><span class="toc-number">5.</span> <span class="toc-text">Make it once. Post it where it belongs.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-part-we-think-matters-most-your-takes-stay-useful"><span class="toc-number">6.</span> <span class="toc-text">The part we think matters most: your takes stay useful</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#You-probably-don%E2%80%99t-need-another-video-tool"><span class="toc-number">7.</span> <span class="toc-text">You probably don’t need another video tool</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

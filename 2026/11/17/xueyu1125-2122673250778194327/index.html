@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令） | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="很多人不知道：Antigravity 其实不能生成视频。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令）">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/17/xueyu1125-2122673250778194327/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="很多人不知道：Antigravity 其实不能生成视频。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122673250778194327-cover.jpg">
+<meta property="article:published_time" content="2026-11-17T20:48:34.000Z">
+<meta property="article:modified_time" content="2026-11-18T02:14:07.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@xueyu1125">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122673250778194327-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令）",
+  "url": "https://yaoav.github.io/2026/11/17/xueyu1125-2122673250778194327/",
+  "image": "https://yaoav.github.io/images/2122673250778194327-cover.jpg",
+  "datePublished": "2026-11-17T20:48:34.000Z",
+  "dateModified": "2026-11-18T02:14:07.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/17/xueyu1125-2122673250778194327/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122673250778194327-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">万字干货｜Gemini 4 + Antigravity，从 0 到 1 跑通全自动出片（附 Agent 指令）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-17T20:48:34.000Z" title="发表于 2026-11-17 20:48:34">2026-11-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@xueyu1125（雪瑜）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122673250778194327">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>很多人不知道：Antigravity 其实不能生成视频。</p>
+<p>上一篇我写它能把爆款视频的提示词反推出来，文末吐槽了一句：<strong>谷歌全家桶，就差出片这最后一块。</strong></p>
+<p>这两天我把这块接上了。</p>
+<p>现在同一个对话里，它看完参考视频、画好角色定妆照、写完提示词，直接调视频模型出片，再下载、配回原声、抽帧给我验收。我只管花钱前点头和最后看片。</p>
+<p><strong>一共跑通三条路，前两条用的全是 Google AI 会员本来就送的额度。</strong> Pro、Ultra 5x、Ultra 20x 都能用。</p>
+<p>我自己是 Pro 会员，下文的额度和账单都按 Pro 实测；Ultra 的额度更多，方法完全一样。</p>
+<p><img src="/images/HXU-SxKaUAEEshi.jpg" alt="HXU-SxKaUAEEshi"></p>
+<p><strong>每节末尾都有一段指令，复制给 Antigravity 就能跑。</strong></p>
+<p><strong>小目录</strong></p>
+<ul>
+<li>一、Antigravity 缺的那一块：看得懂，出不了片</li>
+<li>二、你的会员里，藏着两份出片额度</li>
+<li>三、第一条路 · Gemini API：用会员赠金后台直出</li>
+<li>四、第二条路 · Google Flow：用深度灰模过审，花会员点数</li>
+<li>五、第三条路 · 外部视频命令行：LibTV、即梦、小云雀都能接</li>
+<li>六、Pro 够不够用：我的真实账单</li>
+<li>写在最后</li>
+</ul>
+<p>───</p>
+<h2 id="一、Antigravity-缺的那一块：看得懂，出不了片"><a href="#一、Antigravity-缺的那一块：看得懂，出不了片" class="headerlink" title="一、Antigravity 缺的那一块：看得懂，出不了片"></a>一、Antigravity 缺的那一块：看得懂，出不了片</h2><p>先交代前情。上一篇讲的是：刷到一条爆款视频，作者不给提示词，就丢给 Antigravity 让它看，它能把镜头、运镜、节奏反推成提示词。</p>
+<p>能反推，是因为 Antigravity 的大脑是 Gemini。<strong>GPT、Claude 看视频是抽帧看截图，Gemini 是真的看懂了动作和节奏。</strong> 现在换成 Gemini 4，看片这一步更稳。</p>
+<p>但那篇写完我很别扭：前面看片、反推、画定妆照，它全能干；一到出片，我还得自己打开网页、传图、点生成、等、下载，再丢回给它检查。</p>
+<p>最麻烦的不是点几下鼠标，是<strong>闭环断了</strong>。</p>
+<p>它看不到成片，就没法对着原片挑错、改提示词、再跑一版。来回搬运一次，我就得在场一次。</p>
+<p><img src="/images/HXU-TSwbcAA9AmX.jpg" alt="HXU-TSwbcAA9AmX"></p>
+<p>接上以后，分工变成这样：</p>
+<ul>
+<li>我：说清要做什么片子，花钱前点头，看样片，拍板。</li>
+<li><strong>Antigravity</strong>：看原片、定角色、写提示词、选通道、提交、下载、配回原声、抽帧和原片并排对比，不合格自己改一版再交。</li>
+</ul>
+<p>这篇讲的就是”出片”这一块，怎么接。</p>
+<p>───</p>
+<h2 id="二、你的会员里，藏着两份出片额度"><a href="#二、你的会员里，藏着两份出片额度" class="headerlink" title="二、你的会员里，藏着两份出片额度"></a>二、你的会员里，藏着两份出片额度</h2><p>很多人订了 Google AI Pro 或 Ultra，只拿来在网页上聊天。其实会员里有两份能出视频的额度，跟 Antigravity 一拍即合。</p>
+<p><strong>第一份：Gemini API 赠金（美元）。</strong></p>
+<p>今年起，Google 把开发者计划的福利并进了 AI 会员，每个月送一笔 Google Cloud 赠金，可以拿来调 Gemini API，包括视频模型。按 Google 开发者计划的官方 FAQ：</p>
+<ul>
+<li><strong>Pro：每月 10 美元</strong></li>
+<li><strong>Ultra 5x：每月 40 美元</strong></li>
+<li><strong>Ultra 20x：每月 100 美元</strong></li>
+</ul>
+<p>赠金要自己去领，领了才有；每笔有效期一年。第三节有图文步骤。</p>
+<p><strong>第二份：Google Flow 点数。</strong></p>
+<p>Google Flow 是谷歌官方的 AI 视频创作网页（flow.google.com）。你可以把它理解成谷歌版的即梦：传图、传视频、写一句话，它帮你出视频。</p>
+<p>会员每个月送 Flow 点数，<strong>Pro 是 1000 点</strong>，Ultra 多得多。出视频按点数扣，生图基本不扣。</p>
+<p><strong>顺手把几个会反复出现的名字讲清楚：</strong></p>
+<ul>
+<li><strong>Omni、Veo</strong>：谷歌的两个视频模型系列。Omni 擅长”看着参考视频和参考图来生成”，这篇主要用它（Omni 1.2 Flash）；Veo 偏电影感画质。</li>
+<li><strong>Nano Banana 2</strong>（Flow 里简称 Nano 2）：谷歌的生图模型，就是网上很火那个”香蕉”。在 Flow 里用它画角色图，实测不扣点数。</li>
+<li><strong>Antigravity</strong>：谷歌官方的命令行 AI Agent，大脑是 Gemini。能读文件、跑命令、开浏览器，这篇里它是总导演。</li>
+</ul>
+<p><strong>三条路，一句话说清区别：</strong></p>
+<ul>
+<li><strong>Gemini API</strong>：吃赠金，纯后台跑，最省心；参考视频最长 10 秒。</li>
+<li><strong>Google Flow</strong>：吃点数，能直接喂 15 秒参考视频；但它没有接口，得让 Agent 操作网页，审核也严。</li>
+<li><strong>外部视频命令行</strong>：吃第三方平台的积分；谷歌这两条卡住时兜底，长镜头、多人复杂场面更稳。</li>
+</ul>
+<p>───</p>
+<h2 id="三、第一条路-·-Gemini-API：用会员赠金后台直出"><a href="#三、第一条路-·-Gemini-API：用会员赠金后台直出" class="headerlink" title="三、第一条路 · Gemini API：用会员赠金后台直出"></a>三、第一条路 · Gemini API：用会员赠金后台直出</h2><h3 id="原理：Agent-直接给谷歌的视频模型发请求"><a href="#原理：Agent-直接给谷歌的视频模型发请求" class="headerlink" title="原理：Agent 直接给谷歌的视频模型发请求"></a>原理：Agent 直接给谷歌的视频模型发请求</h3><p>API 就是程序之间的”窗口”。Antigravity 把”参考视频 + 角色图 + 提示词”打包发给谷歌的视频模型，模型在云端生成，Antigravity 每隔一会儿去问一次好了没，好了就下载。</p>
+<p><strong>全程不开网页、不占你的屏幕。</strong> 这是三条路里最像”全自动”的一条。</p>
+<h3 id="实操第-1-步：把会员赠金领出来"><a href="#实操第-1-步：把会员赠金领出来" class="headerlink" title="实操第 1 步：把会员赠金领出来"></a>实操第 1 步：把会员赠金领出来</h3><p>打开 Google AI Studio（aistudio.google.com），左下角有「领取免费 API 赠金」的卡片，点进去。</p>
+<p><img src="/images/HXU-UU1aIAAq_3n.jpg" alt="HXU-UU1aIAAq_3n"></p>
+<p>会直接弹出领取窗口，选好结算账号，点「兑换并继续」。Ultra 会员这里显示的金额更高。</p>
+<p><img src="/images/HXU-VEGawAAe6om.jpg" alt="HXU-VEGawAAe6om"></p>
+<p>领完以后，在 Google Cloud 的「结算 → 赠金」页能看到一行 Google Developer Program premium benefit、状态「可用」，就是领到了。</p>
+<p><img src="/images/HXU-Voba4AAjujC.jpg" alt="HXU-Voba4AAjujC"></p>
+<h3 id="实操第-2-步：先预充-5-美元，赠金才用得上"><a href="#实操第-2-步：先预充-5-美元，赠金才用得上" class="headerlink" title="实操第 2 步：先预充 5 美元，赠金才用得上"></a>实操第 2 步：先预充 5 美元，赠金才用得上</h3><p>我领完赠金去调接口，AI Studio 结算页弹了一条黄色提示：<strong>此账号已转为预付款结算方式，余额需大于 0 美元方可恢复服务</strong>，符合条件的 GCP 赠金会优先抵扣。</p>
+<p><img src="/images/HXU-WNZagAAnjE1.jpg" alt="HXU-WNZagAAnjE1"></p>
+<p><strong>这一步很多人会卡住：</strong> 赠金领到了，接口还是调不通。我是先预充了最低的 5 美元，服务才恢复。充完以后，调用费用会优先从赠金里扣。</p>
+<p><img src="/images/HXU-WyPawAE6L20.jpg" alt="HXU-WyPawAE6L20"></p>
+<h3 id="实操第-3-步：拿-API-密钥，交给-Antigravity"><a href="#实操第-3-步：拿-API-密钥，交给-Antigravity" class="headerlink" title="实操第 3 步：拿 API 密钥，交给 Antigravity"></a>实操第 3 步：拿 API 密钥，交给 Antigravity</h3><p>在 AI Studio 左侧「API 密钥」里新建一把密钥，选你刚绑定赠金的那个项目。</p>
+<p><strong>密钥别直接贴进对话里。</strong> 存成本机的一个文件（比如 <strong>~&#x2F;.config&#x2F;video-gen&#x2F;.env</strong>，权限设成只有自己能读），然后告诉 Antigravity 文件在哪。</p>
+<h3 id="使用边界：这-4-条踩过才知道"><a href="#使用边界：这-4-条踩过才知道" class="headerlink" title="使用边界：这 4 条踩过才知道"></a>使用边界：这 4 条踩过才知道</h3><p><strong>① 参考视频最长 10 秒。</strong></p>
+<p>模型能输出 15 秒，但你喂给它当参考的原视频，超过 10 秒直接被退回。</p>
+<p>想复刻 15 秒的片子，就切成两段（比如 0-8 秒、7-15 秒）分别跑，再拼起来。拼接处人物衣服、站位可能对不上，后面 Tips 里说怎么防。</p>
+<p><img src="/images/HXU-XZAaEAIkCk2.jpg" alt="HXU-XZAaEAIkCk2"></p>
+<p><strong>② 参考视频要先去掉声音。</strong></p>
+<p>带音轨的视频传上去，秒拒，连原因都不细说。先把声音去掉再传，出片以后再把原视频的音乐配回去。这两步 Antigravity 用 ffmpeg 一句命令就能做。</p>
+<p><strong>③ 参考视频不能比你要的成片短。</strong></p>
+<p>你要 8 秒成片，参考视频就得 ≥ 8 秒，哪怕短 0.5 秒也会被拒。剪的时候多留 0.1-0.2 秒最稳。</p>
+<p><strong>④ 不说分辨率，它默认给你 720p，很贵。</strong></p>
+<p>我第一次没注意，两条 9.5 秒的 720p 直接花掉 3.16 美元，一条 1.58。Pro 一个月才 10 美元。</p>
+<p><strong>先用 360p 试，构图、动作都对了再出高清。</strong></p>
+<h3 id="Tips：提示词怎么写，换角色才不乱"><a href="#Tips：提示词怎么写，换角色才不乱" class="headerlink" title="Tips：提示词怎么写，换角色才不乱"></a>Tips：提示词怎么写，换角色才不乱</h3><ul>
+<li><strong>按衣服认人，别按位置认人。</strong> 多人舞台一换位，”左一换成 A、左二换成 B”必乱。要写”穿黑袖白衬衣的那位换成 A”，模型会跟着衣服追。</li>
+<li><strong>告诉它角色图只管长相。</strong> 角色定妆照一般是站着摆拍，不说清楚，成片里人物会照着定妆照的姿势站桩。加一句”角色图只锁长相和服装，动作完全照原片”。</li>
+<li><strong>背景要锁死。</strong> 不写的话，模型会把定妆照里的背景搬进来。写清”保留原片的舞台、灯光和机位，只换台上的人”。</li>
+<li><strong>提示词短一点反而好。</strong> 我堆过一大串”必须、严禁”，结果请求直接校验失败；删到简洁清楚，一次过，动作还更自然。</li>
+<li><strong>出片后要抽帧对比。</strong> 让 Antigravity 从原片和成片各抽 6 帧拼成一张图并排看，比你自己拖进度条快得多。</li>
+</ul>
+<h3 id="一键甩给-Antigravity"><a href="#一键甩给-Antigravity" class="headerlink" title="一键甩给 Antigravity"></a>一键甩给 Antigravity</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">帮我用 Gemini API 的视频模型（先列出可用模型，优先 gemini-omni-1.2-flash）做一段视频：</span><br><span class="line">参考视频：&lt;原视频路径&gt;，角色图：&lt;定妆照路径们&gt;，API 密钥在 &lt;密钥文件路径&gt;。</span><br><span class="line">规则：</span><br><span class="line">1. 参考视频先去掉音轨；超过 10 秒就按镜头切成 ≤10 秒的几段，每段时长 ≥ 要生成的时长；</span><br><span class="line">2. 先出 360p，确认构图和动作没问题再问我要不要出高清；</span><br><span class="line">3. 提示词里按服装特征绑定替换角色，写明&quot;角色图只锁长相服装，动作和背景照原片&quot;；</span><br><span class="line">4. 用异步方式提交，轮询到完成再下载；</span><br><span class="line">5. 出片后把原视频的音轨配回去，原片和成片各抽 6 帧拼图给我看；</span><br><span class="line">6. 每次提交前告诉我大概花多少钱。</span><br></pre></td></tr></table></figure>
+
+<p>───</p>
+<h2 id="四、第二条路-·-Google-Flow：用深度灰模过审，花会员点数"><a href="#四、第二条路-·-Google-Flow：用深度灰模过审，花会员点数" class="headerlink" title="四、第二条路 · Google Flow：用深度灰模过审，花会员点数"></a>四、第二条路 · Google Flow：用深度灰模过审，花会员点数</h2><h3 id="原理：Flow-能干活，但它没有门"><a href="#原理：Flow-能干活，但它没有门" class="headerlink" title="原理：Flow 能干活，但它没有门"></a>原理：Flow 能干活，但它没有门</h3><p>Flow 有三个 API 没有的好处：</p>
+<ul>
+<li><strong>能直接喂 15 秒参考视频</strong>，不用切段；</li>
+<li>扣的是会员点数，不花赠金；</li>
+<li>出片后下载时可以 <strong>5 点升到 1080p</strong>，比重新生成高清便宜得多。</li>
+</ul>
+<p>在 Flow 里，Omni 1.2 Flash 出一条 15 秒：<strong>360p 是 20 点，720p 是 60 点</strong>。下面这张是我开着 720p、一次出 2 条时的报价。</p>
+<p><img src="/images/HXU-YHUbkAAvfjN.jpg" alt="HXU-YHUbkAAvfjN"></p>
+<p>问题是：<strong>Flow 是给人用的网页，没有给程序用的接口。</strong> Agent 想用它，只能像人一样去操作网页。这里有三道坎：</p>
+<ul>
+<li><strong>没有官方接口</strong>，只能模拟浏览器操作；</li>
+<li><strong>有人机验证</strong>，谷歌会拦”一看就是机器”的无头浏览器，必须是真的 Chrome 窗口；</li>
+<li><strong>上传文件走的是系统原生的选文件窗口</strong>，脚本点不进去，本地视频传不上去。</li>
+</ul>
+<h3 id="两种接法，各有千秋"><a href="#两种接法，各有千秋" class="headerlink" title="两种接法，各有千秋"></a>两种接法，各有千秋</h3><p><strong>接法一：开源工具 gflow-cli。</strong></p>
+<p>有人把 Flow 网页背后的接口包成了命令行，还自带 MCP（让 Agent 直接调用的插件接口）：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ffroliva/gflow-cli">https://github.com/ffroliva/gflow-cli</a></p>
+<ul>
+<li>好处：一句命令就能生图、生视频、查点数，<strong>几乎不费 Agent 的算力</strong>；</li>
+<li>不足：<strong>只能传图片，不能传参考视频</strong>；默认只下载 360p；每次会弹出一个独立的 Chrome 窗口抢你屏幕（我写了个小脚本让它自动最小化）；</li>
+<li>风险：它是非官方的，调的是谷歌的内部接口，谷歌随时可能改，账号风险自担。</li>
+</ul>
+<p><strong>接法二：web-access 这类浏览器 skill。</strong></p>
+<p>让 Antigravity 直接接管你日常那个已登录 Google 的 Chrome，像人一样点按钮。</p>
+<ul>
+<li>好处：<strong>网页上能点的它都能点</strong>，挂视频、切分辨率、点 720p 下载都行；</li>
+<li>不足：每一步都要看页面、截图、判断，<strong>非常费算力，也慢</strong>；参考视频第一次进项目，还是要你手动拖一下（就是上面说的那个系统选文件窗口）。</li>
+</ul>
+<p><strong>我的组合：</strong> 生图、注入角色图、查点数这种轻活交给 gflow；挂参考视频、提交、下载 720p 这几步交给浏览器 skill。你只需要在开头拖一次视频。</p>
+<h3 id="最大的坎：真人视频过不了审"><a href="#最大的坎：真人视频过不了审" class="headerlink" title="最大的坎：真人视频过不了审"></a>最大的坎：真人视频过不了审</h3><p>我第一次直接把女团的打歌原片拖进去，进度跑到 83%，卡片直接消失了。另一条连卡片都没出。<strong>没报错，也没扣点。</strong></p>
+<p>Flow 对真人脸和有版权的画面审核很严，会在后台静默取消。</p>
+<p><strong>解法是深度灰模。</strong></p>
+<p>深度灰模（行业里叫深度图，Depth Map）就是把彩色视频洗成”离镜头近的发白、远的发黑”的灰色剪影：<strong>五官、衣服花纹、台标全没了，只剩人在哪、怎么动、镜头怎么推拉。</strong></p>
+<p><img src="/images/HXU-YfhboAAWGJT.png" alt="HXU-YfhboAAWGJT"></p>
+<p>审核看不到真人和版权内容，就放行了；模型照样能读出站位和运镜。我两条 15 秒都是一次出片。</p>
+<p><img src="/images/HXU-ZFpbQAAGZkK.jpg" alt="HXU-ZFpbQAAGZkK"></p>
+<h3 id="实操步骤"><a href="#实操步骤" class="headerlink" title="实操步骤"></a>实操步骤</h3><p><strong>① 本地把原片转成深度灰模。</strong></p>
+<p>让 Antigravity 用开源的 Depth-Anything-V2 模型转。本地跑不用钱，就是慢：15 秒 720p 的视频，我这台老 Mac 用 CPU 跑了 20 分钟左右。</p>
+<p><strong>② 在 Flow 里新建项目，把灰模视频拖进去。</strong></p>
+<p>这是全流程唯一要你动手的一步。</p>
+<p><strong>③ 让 Agent 把角色图注入同一个项目。</strong></p>
+<p>用 gflow 调 Nano Banana 2，把角色定妆照传进同一个项目。第一次传图，Flow 会弹一个”确认你有权使用这张图”的窗口，你在网页上点一次确认就行。</p>
+<p><strong>④ 让 Agent 挂素材、提交。</strong></p>
+<p>点输入框左边的「+」，<strong>先切到「视频」标签挂灰模</strong>，再切「图片」标签勾角色图，写提示词，提交。</p>
+<p><img src="/images/HXU-Zxwa0AAA8iY.jpg" alt="HXU-Zxwa0AAA8iY"></p>
+<p><strong>⑤ 出片后下载，配回原声。</strong></p>
+<p>满意的那条，下载时选 1080p，多花 5 点。</p>
+<h3 id="使用边界"><a href="#使用边界" class="headerlink" title="使用边界"></a>使用边界</h3><ul>
+<li><strong>深度灰模丢掉了表情和手指这些细节。</strong> 适合”同构图、同节奏”的二创；要逐帧 1:1 复刻舞蹈，不如第一条路。</li>
+<li><strong>只能放在会员点数够的时候用。</strong> 点数用完，这条路就停了，下个月再来。</li>
+<li><strong>gflow 是非官方工具。</strong> 谷歌改版它就可能失灵，别把它当唯一的路。</li>
+</ul>
+<h3 id="Tips：省点数、少翻车"><a href="#Tips：省点数、少翻车" class="headerlink" title="Tips：省点数、少翻车"></a>Tips：省点数、少翻车</h3><ul>
+<li><strong>提交前看一眼底部是不是”15 秒”。</strong> 「+」弹窗默认停在”全部&#x2F;最近”，新生成的图片会把视频顶下去。我就因为这个，一次本该挂视频的任务按 8 秒纯图提交了，白扣了点数。</li>
+<li><strong>别同时挂”多人合成的同框图”。</strong> 猫那条我多挂了一张正面合成图，结果镜头全程正面单机位，原片的切镜没了。只挂灰模 + 单人角色图。</li>
+<li><strong>先 360p 试动作。</strong> 20 点一条，动作对了再出 720p，或者直接下载时升 1080p。</li>
+<li><strong>生图尽量放在 Flow 里做。</strong> Nano Banana 2 生图实测不扣点。</li>
+</ul>
+<h3 id="一键甩给-Antigravity-1"><a href="#一键甩给-Antigravity-1" class="headerlink" title="一键甩给 Antigravity"></a>一键甩给 Antigravity</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">帮我用 Google Flow 出一条视频（Flow 网址：https://flow.google.com/）。</span><br><span class="line">1. 先用 Depth-Anything-V2 把 &lt;原视频路径&gt; 转成深度灰模视频，转好告诉我，我来拖进 Flow 新项目；</span><br><span class="line">2. 用 gflow-cli（https://github.com/ffroliva/gflow-cli）把 &lt;角色图路径们&gt; 注入同一个项目，用 Nano Banana 2，不要扣视频点数；</span><br><span class="line">3. 用浏览器 skill 打开我的 Chrome：点「+」，先在「视频」标签挂灰模，确认底部显示 15 秒，再在「图片」标签勾单人角色图，不要挂多人合成图；</span><br><span class="line">4. 先选 360p 跑一条，下载后配回原音轨，抽帧和原片对比给我看；</span><br><span class="line">5. 每次提交前报一下要扣多少点、还剩多少点。</span><br></pre></td></tr></table></figure>
+
+<p>───</p>
+<h2 id="五、第三条路-·-外部视频命令行：LibTV、即梦、小云雀都能接"><a href="#五、第三条路-·-外部视频命令行：LibTV、即梦、小云雀都能接" class="headerlink" title="五、第三条路 · 外部视频命令行：LibTV、即梦、小云雀都能接"></a>五、第三条路 · 外部视频命令行：LibTV、即梦、小云雀都能接</h2><h3 id="原理：给-Agent-插一个新插头"><a href="#原理：给-Agent-插一个新插头" class="headerlink" title="原理：给 Agent 插一个新插头"></a>原理：给 Agent 插一个新插头</h3><p>谷歌两条路各有卡点：API 参考视频只能 10 秒，Flow 审核严。碰到 <strong>15 秒以上的长镜头、四五个人来回换位的复杂场面</strong>，我就换第三方平台。</p>
+<p>现在很多视频平台都出了<strong>命令行工具（CLI）或 MCP</strong>，本来就是给 Agent 用的。Antigravity 会跑命令，你把文档丢给它，它自己就能学会怎么用。</p>
+<p><strong>这条路不挑平台。</strong> 我恰好有 LibTV 的积分，所以拿它举例；你手里有哪家的积分，就接哪家。</p>
+<p><img src="/images/HXU-afeasAASb8w.jpg" alt="HXU-afeasAASb8w"></p>
+<h3 id="能接哪些？文档在哪"><a href="#能接哪些？文档在哪" class="headerlink" title="能接哪些？文档在哪"></a>能接哪些？文档在哪</h3><ul>
+<li><strong>LibTV</strong>：官方命令行 <strong>libtv</strong>；平台内 CLI 文档；装好后 <strong>libtv –help</strong></li>
+<li><strong>即梦（海外版 Dreamina）</strong>：官方命令行 <strong>dreamina</strong>；dreamina.capcut.com&#x2F;tools&#x2F;dreamina-cli</li>
+<li><strong>小云雀（剪映出品）</strong>：命令行 <strong>pippit-tool-cli</strong>；npm 包 <strong>@pippit-dev&#x2F;cli</strong></li>
+<li><strong>MiniMax 海螺</strong>：官方 MCP；github.com&#x2F;MiniMax-AI&#x2F;MiniMax-MCP</li>
+<li><strong>可灵</strong>：官方开放平台 API（MCP 目前是社区版）；可灵开放平台开发者文档</li>
+</ul>
+<p>同一个平台里，通常还能选不同模型。LibTV 里就有 Seedance 2.5、Seedance 2.0、Wan 3.0 等好几个。</p>
+<p><strong>模型没有绝对的好坏，看任务。</strong> 我这个”四个虚拟角色换掉女团成员”的任务：</p>
+<ul>
+<li><strong>Seedance 2.5</strong>：25 秒一条，四个角色从头到尾不串、不变形，节奏稳。这个任务里最强。</li>
+<li><strong>Wan 3.0</strong>：15 秒，很多原片真人没被换掉，还留在画面里。</li>
+</ul>
+<p>换个简单点的任务，结论可能不一样。</p>
+<h3 id="实操步骤（以-LibTV-为例）"><a href="#实操步骤（以-LibTV-为例）" class="headerlink" title="实操步骤（以 LibTV 为例）"></a>实操步骤（以 LibTV 为例）</h3><p><strong>① 登录。</strong> 让 Antigravity 跑 <strong>libtv login web</strong>，在弹出的网页里登录一次，之后它就能一直用。</p>
+<p><strong>② 建画布、传素材。</strong> 它会建一张画布，把参考视频（先把角落台标糊掉）和角色图传上去。</p>
+<p><strong>③ 选”混合参考”模式出片。</strong> 参考视频 + 角色图一起连到生成节点，<strong>记得打开声音</strong>，先出 480p 看效果。</p>
+<p><strong>④ 满意再升清。</strong> 在 LibTV 画布里选中那条，点高清重塑就行，这一步我自己在网页上点。</p>
+<h3 id="使用边界-1"><a href="#使用边界-1" class="headerlink" title="使用边界"></a>使用边界</h3><ul>
+<li><strong>花的是第三方的积分，不是谷歌会员权益。</strong> Seedance 2.5 480p 一条 25 秒，大约 500 积分，不便宜。</li>
+<li><strong>每个模型时长上限不同。</strong> Seedance 2.5 单条最长 30 秒；Wan 3.0 混合参考最长 15 秒，超了会失败退积分。</li>
+<li><strong>文档以 <strong><strong>–help</strong></strong> 为准。</strong> 平台更新很快，网上的教程可能已经过时。</li>
+</ul>
+<h3 id="Tips：长片怎么接得上"><a href="#Tips：长片怎么接得上" class="headerlink" title="Tips：长片怎么接得上"></a>Tips：长片怎么接得上</h3><p><strong>尾帧续写。</strong> 积分不够一次跑完、或者想往后接一段，就把上一段成片的<strong>最后一帧</strong>截下来当参考图，连同原片接下来那段一起喂进去，再出 10 秒。</p>
+<p>我用这个办法把 25 秒接到了 34.5 秒，衣服、光影、站位都接上了，拼起来看不出接缝。</p>
+<p><strong>声音别关。</strong> 为了省积分把声音关掉，成片没声音就废了一半。降成本只降分辨率和时长。</p>
+<h3 id="一键甩给-Antigravity-2"><a href="#一键甩给-Antigravity-2" class="headerlink" title="一键甩给 Antigravity"></a>一键甩给 Antigravity</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">我本机装了 &lt;平台&gt; 的视频命令行（或 MCP），文档在 &lt;文档链接或本地路径&gt;。</span><br><span class="line">请先读文档、跑 --help，确认登录状态和可选模型，再帮我出片：</span><br><span class="line">1. 参考视频 &lt;路径&gt;（先把四角台标糊掉），角色图 &lt;路径们&gt;；</span><br><span class="line">2. 用&quot;参考视频 + 参考图&quot;的混合模式，先出 480p、打开声音；</span><br><span class="line">3. 提交前告诉我要扣多少积分；</span><br><span class="line">4. 需要接续上一段时，截上一段成片的最后一帧当参考图一起传；</span><br><span class="line">5. 出片后下载，抽帧和原片对比给我看。</span><br></pre></td></tr></table></figure>
+
+<p>───</p>
+<h2 id="六、Pro-够不够用：我的真实账单"><a href="#六、Pro-够不够用：我的真实账单" class="headerlink" title="六、Pro 够不够用：我的真实账单"></a>六、Pro 够不够用：我的真实账单</h2><p>先说结论：<strong>跑通流程，Pro 够；拿来量产，Pro 不够。</strong></p>
+<p>这两天我只做了两个复刻任务（一个女团舞台、一个猫咪短片），来回调了十几版。账单是这样的：</p>
+<p><img src="/images/HXU-bJyaEAEVwlY.jpg" alt="HXU-bJyaEAEVwlY"></p>
+<p><strong>Gemini API 赠金：10 美元，折腾完这一轮只剩 3.95 美元。</strong></p>
+<ul>
+<li>大头是一开始没设分辨率，两条 720p 就花了 3.16 美元；</li>
+<li>后面全改 360p 试，花得慢多了，但来回十几版，还是花掉了一大半；</li>
+<li>另外，账单有延迟：Agent 当时查到的余额比实际多，别全信实时数字，隔天再看一眼；</li>
+<li>按 720p 一条 1.58 美元算，10 美元就是 6 条左右。拿来调试够，拿来出成片很紧。</li>
+</ul>
+<p><strong>Flow 点数：从 1047 点用到 779 点，用掉 268 点。</strong></p>
+<ul>
+<li>15 秒 720p 一条 60 点，1000 点满打满算 16 条；</li>
+<li>360p 一条 20 点，能跑 50 条，但 360p 只能看动作，不能发；</li>
+<li>还有一次因为没挂上视频白扣的点数，前面 Tips 里说过。</li>
+</ul>
+<p><strong>第三方积分：Seedance 2.5 一条 25 秒 480p，约 500 积分。</strong></p>
+<ul>
+<li>效果最好，也最贵；我的积分跑完 25 秒、20 秒、10 秒三条，就剩 400 多了，还得留着做高清。</li>
+</ul>
+<p><strong>所以我的判断：</strong></p>
+<ul>
+<li>想先把流程跑通、偶尔做一两条好玩的：<strong>Pro 足够</strong>，Antigravity 自带的出片能力就都有了；</li>
+<li>想拿它日更、起号：<strong>Pro 的额度撑不住</strong>。同样的方法，Ultra 5x 每月 40 美元赠金、Ultra 20x 每月 100 美元，Flow 点数也多得多。</li>
+</ul>
+<p>说实话，跑完这一轮，我自己都想升 Ultra 了。</p>
+<p>想升 Ultra 5x 的，可以看 @xueyu1125 这篇，订阅步骤写得很清楚：</p>
+<p>───</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>上一篇结尾我说，谷歌全家桶就差出片这一块。</p>
+<p>现在这块补上了：<strong>Gemini 4 负责看懂视频，Antigravity 负责调度，三条出片通道负责干活。</strong> 赠金、Flow 点数、第三方积分，哪个先用完就切下一条。</p>
+<p>如果你也是 Google 会员，会员里的出片额度大概率还没领。照着第三节领出来，把上面三段指令甩给 Antigravity，今晚就能出第一条。</p>
+<p>觉得有用，欢迎转发给同样订了 Google 会员的朋友 🙏</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/17/xueyu1125-2122673250778194327/">https://yaoav.github.io/2026/11/17/xueyu1125-2122673250778194327/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/xueyu1125/">@xueyu1125</a></div><div class="post-share"><div class="social-share" data-image="/images/2122673250778194327-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/17/yaohongan2025-2122675722376683644/" title="981万单AI订单背后：2026普通人真正跑通的5个搞钱赛道，与2027生存预测"><img class="cover" src="/images/2122675722376683644-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">981万单AI订单背后：2026普通人真正跑通的5个搞钱赛道，与2027生存预测</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yaohongan2025（虹安） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：构建你的搞钱思路 如果你问 2026 年普通人线上搞钱特征是什么，答案只有六个字：AI 轻资产中间商。 这一年，没有出现什么需要重资产投入的新物种，所有的爆发都集中在“信息差 + AI 工具交付”上。最有说服力的数据来自闲鱼：仅 2026 年上半年，平台上的 AI 服务订单就狂飙到 981.6 万单（同比暴涨 157%），近 500 万人为 AI 技能掏了腰包。 很多人只看到了热闹，没看懂门道。Roland 我结合今年各平台的公开数据与一线观察，把 2026 年真正跑通的 5 大核心赚钱赛道逐一拆解，并按 1 月到 1 1 月的时间轴复盘了一遍全年的风口流转。还有 Roland 本人独家预测的 12 月份搞钱风口 建议先收藏，看懂别人的 2026年，才能提前卡位你的 2027年。 一、 2026 五大核心搞钱赛道深度拆解今年所有的副业，几乎都跑不出以下 5 个赛道：  AI 编程与建站接单（全年增速王：+1732%）   怎么赚的钱：这是上半年增速最夸张的...</div></div></div></a><a class="pagination-related" href="/2026/11/17/EianLu-2122653224997937307/" title="本地大模型：数字人案例实测教程"><img class="cover" src="/images/2122653224997937307-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">本地大模型：数字人案例实测教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  你一定有这样的烦恼： 想拍口播，觉得自己人也不好看，声音也不好听，鼓起勇气去化妆、打光、半天整了一条视频出去0 个赞。 于是就想偷懒用数字人： 视频是出来了，发现一条视频花了几十块，效果差强人意，重试一下又是几十块，发出去还没流量。 有没有低成本效果又逼真的方法？ 不知道，试试就知道了。 本地显卡实测： 先看结论 案例一：只有一张照片，能让它开口吗？ 能。 给它一张我的半身照、一段 10 秒的配音，它会从零开始把整段视频画出来，人会眨眼、点头、比手势，嘴跟着声音动。 在Dgx Spark 上，10 秒的视频大约等 8 分半钟。 第一次跑出来效果还行，但很快就翻车了：人物动不动把两只大手怼到镜头前，挡住半个画面。 问题出在提示词：我写了”近距离自拍、双手做各种自然手势”，AI 就真的把手往镜头上举。 改成”镜头不动、保持照片原来的距离、手放低”以后，这个问题就没了。 下图是同一张照片、同一句话，旧描述和新描述的对比：  这里有个小白很容易忽略的点： AI 很听话，你写什么它就放大什么。 我还...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/12/xueyu1125-2120865290703552993/" title="网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！"><img class="cover" src="/images/2120865290703552993-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">网页小游戏有人赚了 $25,000+！我只花 $5.77 做出 3D 猫咪拆家，整套提示词 + 工作流全部开源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  独立开发者 anul agarwal 用 ChatGPT 写代码做了个合成大西瓜变体，累计赚了 $25,000 以上。但他也说了，前后做了 120 多个原型，前 100 个几乎没赚到钱。小游戏想赚钱，靠的是能一直试下去，而每试一次都要付一次模型账单。 这次我一行游戏代码没写，用新加坡 FUMO Lab 的融合模型 Fusion Max 2.0，做出了一款能玩的** 3D 网页小游戏《猫咪拆家：从出租屋拆到博物馆》**。 先看成品，让人惊喜的是，这个视频也是Fusion Max 纯代码做的： **从写设计、写代码到连改四轮，只花了 $5.77。**同样的用量按官方公开价测算，换成 Claude Fable 5.1 或 GPT-6 Astra 要约 $14.92，是它的 2.6 倍；做 100 个原型，差出 900 多美元。 这篇把整个过程摊开：两段提示词原文、四轮修改各改了什么、17 次调用的成本明细、接入的 4 步，还有上 CrazyGames 和微信小游戏各要过哪些关。 想自己试的话，...</div></div></div></a><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-10</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120729388140695705/" title="好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法"><img class="cover" src="/images/2120729388140695705-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">好用的 Skill 怎么写？从 Matt Pocock 的热门案例，写出自己的工作方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  假设你刚开完一场活动筹备会，你把讨论记录交给 AI，希望它整理出一份会后行动清单：谁负责什么？什么时候交付？还有哪些事没定。这件事看起来只是做个表格真正需要判断的却是：“报名表我来做”算明确承诺、“要不做张海报”仍然只是建议；缺少会议日期时也不能把“周五”擅自换成某月某日。 这些判断如果经常用到，就值得整理成一份方法交给 AI 反复使用。下面先用“菜谱”说明 Skill 是什么，再拆解 Matt Pocock 的三个代表案例，理解方法怎样影响产物。最后一起写出“会议记录转行动清单”的 Skill，并用实际输出检查它是否有用。 **通过我的判断：Matt 最值得学的，是把做事顺序、判断条件和验收标准写成可复用的方法。Skill不是万能的，核心还是对于标准工作方法的高度抽象成一个长期复用的内容。**所以后面我把热度、方法和结果分别讲清楚，你也可以据此判断自己的经验值不值得写成 Skill。 一、先把 Skill 想成一份菜谱模型像厨师、工具像灶具、输入材料像食材、**Skill 则像菜谱。*...</div></div></div></a><a class="pagination-related" href="/2026/11/12/xueyu1125-2120769549679386878/" title="Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件"><img class="cover" src="/images/2120769549679386878-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Deepseek Harness 保姆级教程：从读第一份文件，到做一个结合 Grok Bot 读评论找选题的小插件</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  如果你用过 DeepSeek 网页或 App，大概见过聊天框里的「深度思考」。2025 年 1 月，深度求索发布了推理模型 DeepSeek-R1，当时打开这个开关，就能让 R1 把一道难题拆开来想。到了同年 12 月，DeepSeek-V3.2 又多了一项本领：它可以一边推理，一边调用工具，拿到结果再决定下一步。 模型能判断「我得先看一眼文件」，可谁来把文件打开，把内容交给它？这就是 DeepSeek Harness 的用处。2026 年，深度求索先把这套连接模型和工具的工作环境开放给开发者试用，后来又推出了 Mac 和 Windows 桌面端。现在，打开桌面应用就能选文件夹、看模型做了哪些修改，也能给它装插件，添上自己常用的功能。 01｜先分清：模型、Harness、工作区平时我把一段话贴到 DeepSeek 聊天网页里，让它改个标题。换成这次的任务，我想说的是：「原稿在这个文件夹里，读一下。结果另存一份，原稿别动。」 这里分了三件事：模型读懂材料，决定怎么改；Harness 提供读...</div></div></div></a><a class="pagination-related" href="/2026/11/16/xueyu1125-2122303422984863860/" title="Google Antigravity 最全使用攻略：从订阅、反代、插件、模型，到白嫖 40 美元 API"><img class="cover" src="/images/2122303422984863860-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">Google Antigravity 最全使用攻略：从订阅、反代、插件、模型，到白嫖 40 美元 API</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：一篇文章搞定Antigravity注册、改区、订阅、插件、反代、到白嫖40美元API。 &#x3D;&#x3D;&#x3D;&gt; 很多人以为用上 Antigravity 就是充个会员、下个安装包的事，真自己动手跑一遍就会发现，装客户端反而是最简单的一步。电脑注册 Gmail 强制弹二维码让你给 96831&#x2F;244444 发国际短信死循环、中国区老号登进去直接弹 ineligible 拒之门外、土区 Google AI Ultra 5x不知道怎么订阅、好不容易登进客户端又卡在 Eligibility check failed 二次验证，甚至付完钱账号还锁在 Starter Quota 免费档、开着代理照样无限转圈，随手切个节点或挂个反代就直接吃 403 封禁。 上面这些坑我这阵子全实打实踩了一遍，也把每个卡点亲测能跑通的解法记了下来，你在折腾 Antigravity 时会碰到的绝大部分问题，基本都能在这篇里直接翻到答案，改区申请话术也放在文里了，复制就...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Antigravity-%E7%BC%BA%E7%9A%84%E9%82%A3%E4%B8%80%E5%9D%97%EF%BC%9A%E7%9C%8B%E5%BE%97%E6%87%82%EF%BC%8C%E5%87%BA%E4%B8%8D%E4%BA%86%E7%89%87"><span class="toc-number">1.</span> <span class="toc-text">一、Antigravity 缺的那一块：看得懂，出不了片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%A0%E7%9A%84%E4%BC%9A%E5%91%98%E9%87%8C%EF%BC%8C%E8%97%8F%E7%9D%80%E4%B8%A4%E4%BB%BD%E5%87%BA%E7%89%87%E9%A2%9D%E5%BA%A6"><span class="toc-number">2.</span> <span class="toc-text">二、你的会员里，藏着两份出片额度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%AC%AC%E4%B8%80%E6%9D%A1%E8%B7%AF-%C2%B7-Gemini-API%EF%BC%9A%E7%94%A8%E4%BC%9A%E5%91%98%E8%B5%A0%E9%87%91%E5%90%8E%E5%8F%B0%E7%9B%B4%E5%87%BA"><span class="toc-number">3.</span> <span class="toc-text">三、第一条路 · Gemini API：用会员赠金后台直出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9AAgent-%E7%9B%B4%E6%8E%A5%E7%BB%99%E8%B0%B7%E6%AD%8C%E7%9A%84%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B%E5%8F%91%E8%AF%B7%E6%B1%82"><span class="toc-number">3.1.</span> <span class="toc-text">原理：Agent 直接给谷歌的视频模型发请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E7%AC%AC-1-%E6%AD%A5%EF%BC%9A%E6%8A%8A%E4%BC%9A%E5%91%98%E8%B5%A0%E9%87%91%E9%A2%86%E5%87%BA%E6%9D%A5"><span class="toc-number">3.2.</span> <span class="toc-text">实操第 1 步：把会员赠金领出来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E7%AC%AC-2-%E6%AD%A5%EF%BC%9A%E5%85%88%E9%A2%84%E5%85%85-5-%E7%BE%8E%E5%85%83%EF%BC%8C%E8%B5%A0%E9%87%91%E6%89%8D%E7%94%A8%E5%BE%97%E4%B8%8A"><span class="toc-number">3.3.</span> <span class="toc-text">实操第 2 步：先预充 5 美元，赠金才用得上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E7%AC%AC-3-%E6%AD%A5%EF%BC%9A%E6%8B%BF-API-%E5%AF%86%E9%92%A5%EF%BC%8C%E4%BA%A4%E7%BB%99-Antigravity"><span class="toc-number">3.4.</span> <span class="toc-text">实操第 3 步：拿 API 密钥，交给 Antigravity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BE%B9%E7%95%8C%EF%BC%9A%E8%BF%99-4-%E6%9D%A1%E8%B8%A9%E8%BF%87%E6%89%8D%E7%9F%A5%E9%81%93"><span class="toc-number">3.5.</span> <span class="toc-text">使用边界：这 4 条踩过才知道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips%EF%BC%9A%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%80%8E%E4%B9%88%E5%86%99%EF%BC%8C%E6%8D%A2%E8%A7%92%E8%89%B2%E6%89%8D%E4%B8%8D%E4%B9%B1"><span class="toc-number">3.6.</span> <span class="toc-text">Tips：提示词怎么写，换角色才不乱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E7%94%A9%E7%BB%99-Antigravity"><span class="toc-number">3.7.</span> <span class="toc-text">一键甩给 Antigravity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%AC%AC%E4%BA%8C%E6%9D%A1%E8%B7%AF-%C2%B7-Google-Flow%EF%BC%9A%E7%94%A8%E6%B7%B1%E5%BA%A6%E7%81%B0%E6%A8%A1%E8%BF%87%E5%AE%A1%EF%BC%8C%E8%8A%B1%E4%BC%9A%E5%91%98%E7%82%B9%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">四、第二条路 · Google Flow：用深度灰模过审，花会员点数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9AFlow-%E8%83%BD%E5%B9%B2%E6%B4%BB%EF%BC%8C%E4%BD%86%E5%AE%83%E6%B2%A1%E6%9C%89%E9%97%A8"><span class="toc-number">4.1.</span> <span class="toc-text">原理：Flow 能干活，但它没有门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E6%8E%A5%E6%B3%95%EF%BC%8C%E5%90%84%E6%9C%89%E5%8D%83%E7%A7%8B"><span class="toc-number">4.2.</span> <span class="toc-text">两种接法，各有千秋</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E7%9A%84%E5%9D%8E%EF%BC%9A%E7%9C%9F%E4%BA%BA%E8%A7%86%E9%A2%91%E8%BF%87%E4%B8%8D%E4%BA%86%E5%AE%A1"><span class="toc-number">4.3.</span> <span class="toc-text">最大的坎：真人视频过不了审</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.4.</span> <span class="toc-text">实操步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BE%B9%E7%95%8C"><span class="toc-number">4.5.</span> <span class="toc-text">使用边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips%EF%BC%9A%E7%9C%81%E7%82%B9%E6%95%B0%E3%80%81%E5%B0%91%E7%BF%BB%E8%BD%A6"><span class="toc-number">4.6.</span> <span class="toc-text">Tips：省点数、少翻车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E7%94%A9%E7%BB%99-Antigravity-1"><span class="toc-number">4.7.</span> <span class="toc-text">一键甩给 Antigravity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%AC%AC%E4%B8%89%E6%9D%A1%E8%B7%AF-%C2%B7-%E5%A4%96%E9%83%A8%E8%A7%86%E9%A2%91%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%9ALibTV%E3%80%81%E5%8D%B3%E6%A2%A6%E3%80%81%E5%B0%8F%E4%BA%91%E9%9B%80%E9%83%BD%E8%83%BD%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">五、第三条路 · 外部视频命令行：LibTV、即梦、小云雀都能接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%EF%BC%9A%E7%BB%99-Agent-%E6%8F%92%E4%B8%80%E4%B8%AA%E6%96%B0%E6%8F%92%E5%A4%B4"><span class="toc-number">5.1.</span> <span class="toc-text">原理：给 Agent 插一个新插头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%BD%E6%8E%A5%E5%93%AA%E4%BA%9B%EF%BC%9F%E6%96%87%E6%A1%A3%E5%9C%A8%E5%93%AA"><span class="toc-number">5.2.</span> <span class="toc-text">能接哪些？文档在哪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%93%8D%E6%AD%A5%E9%AA%A4%EF%BC%88%E4%BB%A5-LibTV-%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">实操步骤（以 LibTV 为例）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BE%B9%E7%95%8C-1"><span class="toc-number">5.4.</span> <span class="toc-text">使用边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tips%EF%BC%9A%E9%95%BF%E7%89%87%E6%80%8E%E4%B9%88%E6%8E%A5%E5%BE%97%E4%B8%8A"><span class="toc-number">5.5.</span> <span class="toc-text">Tips：长片怎么接得上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E7%94%A9%E7%BB%99-Antigravity-2"><span class="toc-number">5.6.</span> <span class="toc-text">一键甩给 Antigravity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Pro-%E5%A4%9F%E4%B8%8D%E5%A4%9F%E7%94%A8%EF%BC%9A%E6%88%91%E7%9A%84%E7%9C%9F%E5%AE%9E%E8%B4%A6%E5%8D%95"><span class="toc-number">6.</span> <span class="toc-text">六、Pro 够不够用：我的真实账单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">7.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

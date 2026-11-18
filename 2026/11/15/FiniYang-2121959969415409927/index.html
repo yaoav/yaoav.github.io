@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="今天拆透一套「主脑规划 + 多工兵并行 + 独立验货」的省钱高效Agent编排方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/15/FiniYang-2121959969415409927/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="今天拆透一套「主脑规划 + 多工兵并行 + 独立验货」的省钱高效Agent编排方案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121959969415409927-cover.jpg">
+<meta property="article:published_time" content="2026-11-15T21:34:15.000Z">
+<meta property="article:modified_time" content="2026-11-16T00:59:00.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@FiniYang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121959969415409927-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战",
+  "url": "https://yaoav.github.io/2026/11/15/FiniYang-2121959969415409927/",
+  "image": "https://yaoav.github.io/images/2121959969415409927-cover.jpg",
+  "datePublished": "2026-11-15T21:34:15.000Z",
+  "dateModified": "2026-11-16T00:59:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/15/FiniYang-2121959969415409927/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121959969415409927-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">别再拿旗舰模型干杂活了：从 Google 连发 Hydrogen、Orchestrator 与 Swarm，聊透多 Agent 编排实战</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-15T21:34:15.000Z" title="发表于 2026-11-15 21:34:15">2026-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@FiniYang（Fini.Yang）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121959969415409927">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p><strong>今天拆透一套「主脑规划 + 多工兵并行 + 独立验货」的省钱高效Agent编排方案</strong></p>
+<p>早上打开面板看配额，我的 Claude Opus 和 Sonnet 周额度双双躺在了刺眼的 <strong>0%</strong>，得干等到下周四才刷新</p>
+<p>转头切进 Google Antigravity，刚好撞上 Google 在 11 月 12 日推上线的几张硬牌：<strong>Gemini 4 Hydrogen</strong>、<strong>Orchestrator</strong>，以及多智能体原生的 <strong>Antigravity Swarm（原生蜂群）</strong></p>
+<p>把官方文档和本机实测数据对在一起看，我直接长舒一口气：<strong>大厂终于把我们这帮重度用户折腾了大半年的「高低档混编 + 多工兵隔离协同」，做成了开箱即用的原生能力</strong></p>
+<p>先摆三组实打实的效率账单：</p>
+<ul>
+<li><strong>单会话纵向动态接力（Orchestrator）</strong>：在 Google 官方 Terminal-Bench 实测里，Orchestrator 让 Carbon 和 Hydrogen 在同一会话里动态换挡，拿下了逼近纯 Carbon 的任务成功率，同时<strong>立省 24% 额度、提速 19%</strong></li>
+<li><strong>同 IDE 原生蜂群并发（Antigravity Swarm）</strong>：昨天我直接在 Antigravity Swarm 里拉起 <strong>5 路 Hydrogen (High) 造物工兵 + 1 路独立只读 verifier + 1 路停摆巡检 monitor</strong> 并行跑 5 个零素材 3D 原型，跑满 <strong>24 分 04 秒</strong>，Antigravity 总额度仅掉了 <strong>1%（19% → 18%）</strong></li>
+<li><strong>跨宿主横向铺开工兵（@zseven-w&#x2F;dsh-crew）</strong>：结合我自己本机跑过的 <strong>21 场 Claude Code 多工兵编队</strong>，以及我们团队把这套经验写成的开源插件，主脑留在 Claude Code &#x2F; Codex &#x2F; Grok 原地不动，也能一键扇出 <strong>18 个廉价工兵</strong>并行干脏活，主会话上下文干净得像刚新建一样</li>
+</ul>
+<p><strong>不用先搭复杂框架也能直接用</strong>：哪怕现在只在 Antigravity 里切到 Orchestrator (Carbon) 跑一轮，或者把下面第一段「只读规划 + 自包含施工单」提示词贴进日常对话，当场就能省下一大截白烧的额度</p>
+<p><strong>文中所有编排约束提示词、零上下文派工模板与开源插件一键配置命令均可直接复制，动手前建议先点收藏放在手边</strong></p>
+<h2 id="一｜Google-连发-Hydrogen-与-Orchestrator：为什么「静态路由」早就该淘汰了？"><a href="#一｜Google-连发-Hydrogen-与-Orchestrator：为什么「静态路由」早就该淘汰了？" class="headerlink" title="一｜Google 连发 Hydrogen 与 Orchestrator：为什么「静态路由」早就该淘汰了？"></a>一｜Google 连发 Hydrogen 与 Orchestrator：为什么「静态路由」早就该淘汰了？</h2><p>这次更新如果只看模型名字，很容易漏掉最核心的工程信号：Google 正式拿 <strong>Gemini 4 Hydrogen</strong> 接替了沿用多年的 Flash 命名</p>
+<p>它不再是过去那种「便宜但经常漏条件」的缩水小弟，而是直接从旗舰 Carbon 演化出来、专门针对高频代码编辑与工具调用打磨的 <strong>实干工兵（The Doer）</strong>：</p>
+<ul>
+<li><strong>全窗口拉平计价与高吞吐</strong>：原生 <strong>100 万 Token</strong> 输入输出窗口，API 价格统一拉平在输入 <strong>$1.50 &#x2F; 百万 Token</strong>、输出 <strong>$7.50 &#x2F; 百万 Token</strong>；日常编码速度比上代 3.8 Flash <strong>快 2.5x</strong>，实测输出吞吐飙到 <strong>168–236 tokens&#x2F;s</strong></li>
+<li><strong>四档思考深度按需拧</strong>：在 Antigravity 里开放了 Low &#x2F; Medium &#x2F; High &#x2F; XHigh 四档，Artificial Analysis 智力指数默认 High 档 <strong>51</strong>、拉满 XHigh 冲到 <strong>54</strong>（直接反超老款大参数 Argon 默认档）</li>
+<li><strong>能扛真实终端重活</strong>：Terminal-Bench 4.1 拿下 <strong>57.0%</strong>，在 Antigravity-CLI 跑仓库级子任务的 <strong>SWE-sweep 拿到 13.5%</strong>（同台对照的 Sonnet 5.5 为 3.1%，GPT-6.1 Terra 为 5.8%）</li>
+</ul>
+<p>光有快马还不够，真正戳中重度开发者痛点的是同场登台的 <strong>Orchestrator</strong></p>
+<p>用过市面上各种自动选模型功能的朋友都知道，过去的「静态路由（Static Router）」有多鸡肋：<br>它只看你第一句提示词长不长，开局盲猜一次难度，然后<strong>整场对话把你死死锁在同一个模型里</strong></p>
+<p>如果你开局挂着 Carbon 或 Opus 聊架构，前五分钟确实惊艳；可接下来半小时装 npm 包、改十几个文件的变量名、跑测试修拼写错误，每一轮百万上下文回传都在狂烧最昂贵的旗舰配额</p>
+<p>而 <strong>Orchestrator 直接把「动态换挡」塞进了同一条会话轨迹里</strong>：</p>
+<ol>
+<li><strong>第 1 棒 · 只读规划期（Carbon &#x2F; Argon 领衔）</strong>：先在只读模式下扫描代码依赖、消解模糊需求，输出结构化改造蓝图，并提前写明<strong>触发重规划的边界条件（Re-planning Triggers）</strong></li>
+<li><strong>第 2 棒 · 高速施工期（Hydrogen 接管）</strong>：蓝图敲定后，无缝切给 Hydrogen 飞速写代码、升依赖、跑测试套件</li>
+<li><strong>第 3 棒 · 受阻动态回传（Dynamic Recovery）</strong>：一旦 Hydrogen 在跑测试时撞上未预料的报错或工具失败，控制权当场交回给 Carbon 检查现场、修补方案，再把执行权派回下层</li>
+</ol>
+<p><img src="/images/HXKY96FbQAAzthQ.jpg" alt="HXKY96FbQAAzthQ"></p>
+<p>告别开局盲猜难度的静态路由：Carbon 只读定蓝图、Hydrogen 2.5 倍速干脏活、遇错秒级回传重规划，实测省 24% 额度且快 19%</p>
+<p>说白了，这才是符合人类工程直觉的分工：<strong>让架构师留在白板前做关键决断，别让架构师蹲在地上拧每一颗螺丝</strong></p>
+<h2 id="二｜Antigravity-原生蜂群（Swarm）：把多工兵防踩踏纪律直接焊进-IDE-调度层"><a href="#二｜Antigravity-原生蜂群（Swarm）：把多工兵防踩踏纪律直接焊进-IDE-调度层" class="headerlink" title="二｜Antigravity 原生蜂群（Swarm）：把多工兵防踩踏纪律直接焊进 IDE 调度层"></a>二｜Antigravity 原生蜂群（Swarm）：把多工兵防踩踏纪律直接焊进 IDE 调度层</h2><p>Orchestrator 解决的是**「单条会话里怎么动态省额度」**；可一旦遇到能同时拆成三五块并排推进的大项目，光靠一个会话顺序干还是不够快</p>
+<p>Google 紧接着在 Antigravity 里放出的 <strong>原生蜂群（Native Swarm）</strong>，干脆把我们在多智能体实战里摸索了大半年的协同规矩，原封不动焊进了四个底层原语里（swarm、post_message、read_board、swarm_wait）：</p>
+<ol>
+<li><strong>共享留言板 + 零消耗休眠（@name 与 #seq）</strong>：Coordinator 协调器自己绝不抢着写代码，只负责把大活拆成互不冲突的领地，按职责命名（parser、verifier、docs）发进共享留言板；工兵交接不再靠人工来回复制粘贴长报告，直接喊序号互引（比如 @verifier check #4 and #6），空闲工兵调 swarm_wait 原地休眠等点名，等待期间 <strong>0 Token 消耗</strong></li>
+<li><strong>原生隔离工作区（share &#x2F; branch &#x2F; inherit）</strong>：这是最直击痛点的一刀——以前怕并发写互踩全靠口头求自觉，现在给每个写工兵配 workspace: “share”，系统自动给它分一套共享底层仓库的独立工作副本（branch 则是完整独立克隆），只读侦察和验收留 inherit，各自改完提交再统合落盘，然后 kill 清理副本</li>
+<li><strong>防僵死与防假绿双保险（verifier + monitor）</strong>：Swarm 规范明确按每 2–4 个写工兵配 1 个独立只读 verifier 查 diff 跑测试，只验不改、有问题直接打回原作者修；同时可常驻一个 monitor 巡检员，一旦全队静默卡死就精准点名能打破僵局的成员，杜绝集体“哑火”</li>
+<li><strong>热上下文分叉（fork）+ 运行时热换挡（model）</strong>：调查中途分裂成两条线时，不用冷启动重读全仓，直接 fork 已有成员的对话上下文接力；万一某个工兵跑一半撞上限流或额度吃紧，也不必杀掉重来，直接对其原地执行一次 model 切档就能保留历史记忆接着干</li>
+</ol>
+<p><img src="/images/HXKX5OWbMAA5wX1.jpg" alt="HXKX5OWbMAA5wX1"></p>
+<p>单线还是蜂群？Orchestrator 是在 1 条对话轨道上动态换棒，Swarm 是在共享留言板下让多工兵进各自 share 隔间并跑</p>
+<p>为了摸清这套蜂群带着 Hydrogen 干重活的真实成色，我昨天直接拉起 <strong>5 路 Hydrogen (High) 3D 工兵 + 1 路独立 verifier + 1 路 monitor</strong>，同时在共享留言板上并排赶工 5 款零外部素材的纯代码 Three.js 3D 原型（含《掌中造物星盘》）：</p>
+<ul>
+<li><strong>效率账单</strong>：5 个从源码到单文件 HTML 打包、Chrome 零报错实跑、60fps 演示录屏全检走完，总墙钟耗时 <strong>24 分 04 秒</strong>（其中《掌中造物星盘》单独耗时 <strong>23 分 08 秒</strong>，交付 8 个源码文件 86.7 KB &#x2F; 2,649 行；同题盲测丢给 Codex GPT-6.1-Sol (Max) 单跑则耗时 <strong>40 分 05 秒</strong>）</li>
+<li><strong>额度损耗</strong>：7 个协同会话并排跑满整整 24 分钟，面板上的 Antigravity 总额度仅仅掉了 <strong>1%（从 19% 掉到 18%）</strong></li>
+</ul>
+<p><img src="/images/HXKZBq9a4AA0ZOZ.jpg" alt="HXKZBq9a4AA0ZOZ"></p>
+<p>真机面板实拍：左图 Board #1–#7 划死独立目录并挂上 @verifier 与 @monitor，右图 Graph 实时点亮 5 路运行绿灯，24 分钟全程仅掉 1% 额度</p>
+<h2 id="三｜从「13-个-Opus-豪华团」到额度清零：我在-Claude-编排里交过的三次真学费"><a href="#三｜从「13-个-Opus-豪华团」到额度清零：我在-Claude-编排里交过的三次真学费" class="headerlink" title="三｜从「13 个 Opus 豪华团」到额度清零：我在 Claude 编排里交过的三次真学费"></a>三｜从「13 个 Opus 豪华团」到额度清零：我在 Claude 编排里交过的三次真学费</h2><p>看到 Google 把「主脑只读规划 + 工兵快速执行 + 失败升档回传」做成官方原生的那一刻，我之所以格外感慨，是因为翻开我自己电脑 ~&#x2F;.claude&#x2F;teams&#x2F; 目录下的 <strong>21 场真实编队配置</strong>，里面全是用真金白银和烧穿的周额度换来的同款教训</p>
+<p>拿我们打磨 6700+ Star 开源设计工具 OpenPencil 和 10 款 DSH 插件的过程来说，前后刚好经历了三次蜕变：</p>
+<h3 id="1-第一阶段：13-个-Opus-同场开火的「土豪火力覆盖」"><a href="#1-第一阶段：13-个-Opus-同场开火的「土豪火力覆盖」" class="headerlink" title="1. 第一阶段：13 个 Opus 同场开火的「土豪火力覆盖」"></a>1. 第一阶段：13 个 Opus 同场开火的「土豪火力覆盖」</h3><p>做 OpenPencil v0.8.3 演示模板扩产那次，我一场会话直接拉起了 <strong>13 个 Agent 组成的完整流水线</strong>：<br>1 个 team-lead 坐镇，底下配齐 2 个只读侦察兵（分头扫本地资产与线上合规参考）、1 个设计架构师、3 个并行产稿工（同时造 6 套 .op 模板）、语料工、修复管线工、集成工、探针取证工、画布重排工，最后再蹲 1 个只准 rebase + commit 绝不准 push 的专职收口工</p>
+<p>活干得确实漂亮，但事后复盘账单差点心梗——<strong>底下 12 个工兵清一色全挂着旗舰 opus</strong></p>
+<p>哪怕只是「把 6 页横排画布改成上下两行排布，只算 x&#x2F;y 坐标不动设计内容」这种纯算术搬砖活，也在照单全收旗舰模型的长上下文计费；连跑两场大编队，一周的订阅配额直接见底</p>
+<h3 id="2-第二阶段：9-个工兵挤同一工作区的「口头警告地狱」"><a href="#2-第二阶段：9-个工兵挤同一工作区的「口头警告地狱」" class="headerlink" title="2. 第二阶段：9 个工兵挤同一工作区的「口头警告地狱」"></a>2. 第二阶段：9 个工兵挤同一工作区的「口头警告地狱」</h3><p>紧接着赶桌面端交互冲刺时，我又试过同时拉起拖图填充、批量导出、图片比例适配、缩放卡顿诊断等 <strong>9 个工兵共用同一个未提交目录</strong></p>
+<p>为了防止工兵 A 把工兵 B 改到一半的文件顺手提交或格式化掉，我被迫在每条任务简报末尾贴满冗长的免责声明：<br>「工作区已有大量他人未提交改动（质量显性化 15 个文件 + templates&#x2F;），一律只读别碰，绝不 git commit」</p>
+<p>结果证明：<strong>靠自然语言求 AI 守规矩是最脆弱的防线</strong>——只要有一个工兵调错一次全局格式化命令，整片共享工作区立刻搅成一锅粥</p>
+<h3 id="3-第三阶段：「280-个测试全绿」教我永远别轻信工兵自述"><a href="#3-第三阶段：「280-个测试全绿」教我永远别轻信工兵自述" class="headerlink" title="3. 第三阶段：「280 个测试全绿」教我永远别轻信工兵自述"></a>3. 第三阶段：「280 个测试全绿」教我永远别轻信工兵自述</h3><p>更隐蔽的翻车发生在验收环节</p>
+<p>我们在审校自动化测试插件 dsh-qa 时，仓库里躺着 <strong>280+ 单元测试、102 条对抗语料和 5 万例随机 fuzz，跑起来满屏全绿</strong>；结果真人拿去测真实动态网页，一口气抓出了 <strong>7 个自动化测试完全漏掉的真缺陷</strong></p>
+<p>最哭笑不得的是第 7 个缺陷：有个工兵发现某类边界输入会触发报错，它没有去修底层逻辑，而是<strong>悄悄缩窄了 fuzz 生成器的随机范围</strong>，让触发报错的数据结构不再生成——用例数没变、通过率 100%、绿灯照亮，但真实防御面直接被挖空了一块</p>
+<p><img src="/images/HXKYCo7bkAAEaIn.jpg" alt="HXKYCo7bkAAEaIn"></p>
+<p>21 场 Claude Code 真实编队沉淀出的四条铁律：算力按档切分、简报自包含零假设、目录物理隔离、只信产物与独立验收</p>
+<p>如果你现在主力还在用 Claude Code、Codex 或 Antigravity 单兵带子代理，下面这段浓缩了上面三次学费的编排契约，可以直接复制贴进你的 CLAUDE.md 或开局系统规则里：</p>
+<p><strong>📋 抄作业 1：直接贴进 CLAUDE.md 的「主脑 × 工兵 × 验收」三段式契约</strong></p>
+<blockquote>
+<p>本项目多步骤任务严格执行「只读主脑 → 零上下文工兵 → 独立验收」三段式纪律：</p>
+</blockquote>
+<ol>
+<li><strong>主脑只读探路</strong>：动代码前先在只读模式下盘清依赖与接缝归属（Seam Owner），严禁未定方案直接派写手下场</li>
+<li><strong>自包含施工单</strong>：子代理默认零历史记忆，每次派活必须写死【涉及文件的绝对路径】+【明确验收命令】+【严禁触碰的目录&#x2F;锁文件】+【严禁自行 git commit &#x2F; push】</li>
+<li><strong>读写严格互斥</strong>：同一工作目录同一时刻只允许 1 个写工兵落盘；并行写任务必须先拆进完全不相交的文件领地或独立 worktree</li>
+<li><strong>只信产物不信自述</strong>：工兵回报完成后，主脑或独立只读验收工必须亲自跑 git status、git diff 与真实测试脚本，严禁为凑绿灯删断言或缩窄测试输入</li>
+</ol>
+<h2 id="四｜跨出单一-IDE-怎么白嫖高速工兵？我们把这套护栏做成了开源插件-dsh-crew"><a href="#四｜跨出单一-IDE-怎么白嫖高速工兵？我们把这套护栏做成了开源插件-dsh-crew" class="headerlink" title="四｜跨出单一 IDE 怎么白嫖高速工兵？我们把这套护栏做成了开源插件 dsh-crew"></a>四｜跨出单一 IDE 怎么白嫖高速工兵？我们把这套护栏做成了开源插件 dsh-crew</h2><p>聊到这儿，其实就看清了 2026 年底多 Agent 编排的三块核心拼图：</p>
+<p>Google 的 <strong>Orchestrator</strong> 和 <strong>Swarm</strong> 分别解决了 <strong>Antigravity 内部</strong> 的单线切档与原生蜂群并行；但一到真实开发现场，我们手里的工具往往是跨阵营混搭的——</p>
+<p>比如你习惯待在 <strong>Claude Code</strong> 里用顺手的终端交互和主脑判断，但 Anthropic 的周额度金贵得要命；又或者你想在 <strong>Codex、Antigravity、Grok</strong> 里保住当前主脑不动，把「15 国语言文档翻译、全仓符号重命名、补齐成批单测、扫 6 个仓库的边界缺陷」这种吞 Token 巨兽，统统外包给便宜大碗的 <strong>DeepSeek V4 Flash &#x2F; Pro</strong></p>
+<p>这就是我们团队动手造出 <strong>@zseven-w&#x2F;dsh-crew</strong>（刚发到 0.1.0-rc.15）的初衷：<strong>让你不离开自己最顺手的宿主界面，直接把外部完整的 DSH Agent 当成原生子代理使唤，顺手把防翻车护栏焊死在工具层</strong></p>
+<h3 id="1-一次派发两个视角：18-个工兵并发干活，状态栏实时跳账单"><a href="#1-一次派发两个视角：18-个工兵并发干活，状态栏实时跳账单" class="headerlink" title="1. 一次派发两个视角：18 个工兵并发干活，状态栏实时跳账单"></a>1. 一次派发两个视角：18 个工兵并发干活，状态栏实时跳账单</h3><p>装好插件后，派出去干活的不是一次裸的模型接口请求，而是跑在开源 DeepSeek Harness 里的完整 Agent 会话（自带工具链、沙箱预设和 Web 会话记录）</p>
+<p>之前我们给项目做 <strong>15 国语言 README 同步本地化</strong>，主脑一句话直接扇出 <strong>18 个并行 worker</strong> 同时开工：</p>
+<ul>
+<li><strong>在 Claude Code 宿主侧</strong>：18 个任务整整齐齐列在原生子代理面板里，底部 claude-hud 状态栏实时滚动当前在跑的档位、耗时和 Token 消耗（⚙dsh 5▶pro 1m15s 14.6k&#x2F;334 · flash 1m4s 16k&#x2F;1.2k）</li>
+<li><strong>在 DSH Crew 看板侧</strong>：hub-1 到 hub-18 每个任务由哪个宿主派出、用的什么档位、跑到哪一步一目了然，点开就能围观完整执行过程</li>
+</ul>
+<p><img src="/images/HXKZqs2aAAAwTiN.jpg" alt="HXKZqs2aAAAwTiN"></p>
+<p>主脑留在原地不动，18 个 DSH 工兵并发跑完多国文档本地化：上方为 Claude Code 原生状态栏，下方为 DSH Crew 任务看板</p>
+<h3 id="2-跟-Google-Orchestrator-不谋而合的「按结果自动升档」"><a href="#2-跟-Google-Orchestrator-不谋而合的「按结果自动升档」" class="headerlink" title="2. 跟 Google Orchestrator 不谋而合的「按结果自动升档」"></a>2. 跟 Google Orchestrator 不谋而合的「按结果自动升档」</h3><p>日常派活最让人纠结的就是「这活派给快模型怕它写挂，派给强模型又肉疼额度」</p>
+<p>我们在 dsh-crew 里直接内置了 <strong>escalate_on_failure（失败自动升档）</strong> 开关：<br>拿不准难度的任务，默认一律先派飞快便宜的 ds-flash 上去试水；万一阻塞任务跑挂了，工具层<strong>自动切到推理更强的 ds-pro 重试一次</strong></p>
+<p>这跟 Google Orchestrator 让 Hydrogen 先冲、遇挫再回传 Carbon 的底层逻辑完全一致：<strong>永远用真实执行证据，而不是开局拍脑袋来决定花多少钱</strong></p>
+<h3 id="3-不靠提示词自觉，把-3-道防崩护栏写进代码执法层"><a href="#3-不靠提示词自觉，把-3-道防崩护栏写进代码执法层" class="headerlink" title="3. 不靠提示词自觉，把 3 道防崩护栏写进代码执法层"></a>3. 不靠提示词自觉，把 3 道防崩护栏写进代码执法层</h3><p>吃够了前面「9 个工兵挤脏目录」的苦头后，我们把所有安全边界全做成了<strong>发车前强制拦截的硬护栏</strong>：</p>
+<ul>
+<li><strong>cwd 工作区咨询锁</strong>：同一个仓库目录只要有 1 个写任务正在跑，第 2 个派发请求进来会<strong>当场报错拒绝</strong>，并把当前锁持有者的 Job ID、后端和启动时间明明白白返回给主脑（绝不静默排队，只有纯只读侦察才准显式传 allow_concurrent_cwd: true）</li>
+<li><strong>递归套娃深度封顶（默认 3 跳）+ 环路拒绝</strong>：严防工兵自己又去拉工兵无限套娃把账单跑爆</li>
+<li><strong>后台无人值守防挂死 + 孤儿任务显影</strong>：后台工兵一旦试图调 ask_user_question 等人回答，会立刻以 needs_input 状态干净停机回报主脑，绝不在后台傻等半小时超时；就算中途服务重启，断连任务也会在看板标为孤儿状态（Orphan Ghost），绝不无声消失</li>
+</ul>
+<p><strong>📋 抄作业 2：3 行命令把 dsh-crew 一键装进四大宿主</strong></p>
+<p>dsh plugin –profile web add @zseven-w&#x2F;dsh-crew@latest<br>dsh web</p>
+<h1 id="一键注册-Claude-Code-Codex-Antigravity-Grok-集成与状态栏："><a href="#一键注册-Claude-Code-Codex-Antigravity-Grok-集成与状态栏：" class="headerlink" title="一键注册 Claude Code &#x2F; Codex &#x2F; Antigravity &#x2F; Grok 集成与状态栏："></a>一键注册 Claude Code &#x2F; Codex &#x2F; Antigravity &#x2F; Grok 集成与状态栏：</h1><p>node src&#x2F;install&#x2F;cli.mjs all</p>
+<p>装好重启会话后，派活时直接套用下面这张**「零上下文工兵施工单」**，成功率比随口喊一句高出一个数量级：</p>
+<p><strong>📋 抄作业 3：直接喂给 ds-flash &#x2F; ds-pro 或 Hydrogen 工兵的标准施工单</strong></p>
+<blockquote>
+<p>请派给 ds-flash（若涉及跨模块权衡改派 ds-pro）执行以下自包含任务：</p>
+</blockquote>
+<ul>
+<li><strong>目标文件</strong>：仅允许修改 【填写绝对路径，如 &#x2F;abs&#x2F;path&#x2F;src&#x2F;auth.ts】 与对应单测 【&#x2F;abs&#x2F;path&#x2F;test&#x2F;auth.test.ts】</li>
+<li><strong>完成标准</strong>：修好 【具体问题现象】，补充覆盖该边界的单测，并亲自运行 【npm test】 确认通过</li>
+<li><strong>禁碰红线</strong>：严禁修改 package-lock.json、生成产物目录及其他未点名模块；<strong>严禁执行 git commit 或 push</strong></li>
+<li><strong>诚实回报</strong>：返回实际改动的 git diff –stat 摘要与测试终端原始输出；若有未跑通项必须如实标明 not verified</li>
+</ul>
+<h2 id="五｜写在最后：三套多-Agent-编排怎么选，不互斥也不白烧额度？"><a href="#五｜写在最后：三套多-Agent-编排怎么选，不互斥也不白烧额度？" class="headerlink" title="五｜写在最后：三套多 Agent 编排怎么选，不互斥也不白烧额度？"></a>五｜写在最后：三套多 Agent 编排怎么选，不互斥也不白烧额度？</h2><p>回头看这两天的更新，AI 编程工具的演进方向已经彻底明牌了：<strong>单模型从头硬扛到底的时代翻篇了，接下来拉开开发者效率代差的，是谁更懂「单线切档 × 原生蜂群 × 跨宿主外包」的分层调度手艺</strong></p>
+<p>如果你今天想立刻升级自己的日常开发流，按下面这四条对号入座最省心：</p>
+<ul>
+<li><strong>单条主线开发、边探路边攻坚复杂交互</strong>：直接在 Antigravity 里切到 <strong>Orchestrator (Carbon)</strong>，让 Carbon 管架构与重规划、Hydrogen 跑高频改码，白捡官方优化好的 24% 额度余量与 19% 提速</li>
+<li><strong>大任务能拆成多个独立模块并行冲刺（同 IDE 内）</strong>：直接在 Antigravity 里拉原生 <strong>Swarm</strong>，给写工兵配 workspace: “share” 隔离副本、配齐 verifier 和 monitor，让 5 个 Hydrogen 并行造物也能做到只掉 1% 额度</li>
+<li><strong>主力常驻 Claude Code &#x2F; Codex，手头有大把跨仓批量重活</strong>：装上开源的 <strong>@zseven-w&#x2F;dsh-crew</strong>，主脑留给最聪明的大模型做决策与把关，把多文件机械修改、多语言同步、跨仓代码审计全甩给 ds-flash &#x2F; ds-pro 并发跑完</li>
+<li><strong>不管用哪套编排，死守两条底线</strong>：并发改代码必须有<strong>工作区隔离或目录锁</strong>；工兵交活必须过<strong>真实 git diff 与独立验收</strong></li>
+</ul>
+<h3 id="互动时间：你的主力额度最常死在哪一步？"><a href="#互动时间：你的主力额度最常死在哪一步？" class="headerlink" title="互动时间：你的主力额度最常死在哪一步？"></a>互动时间：你的主力额度最常死在哪一步？</h3><p>你平时写代码或做产品时，最常被哪类活儿不知不觉吃光 Opus &#x2F; Carbon 的周额度？</p>
+<p><strong>欢迎在评论区丢一句你最头疼的多步骤开发场景，我挑 3 个直接按上面的护栏标准，帮你拆成一套主脑拿来就能派活的工兵提示词模板 👇</strong></p>
+<p>顺便留个小预告：靠着这套「主脑控审美架构 + 工兵啃脏活」的工作流，暗黑三国 3D 动作肉鸽 <strong>《孤枪入夜》首章双端网页试玩</strong> 已经正式上线，接下来正在收口它背后的「角色绑骨、零滑步与战斗手感全流程长文教程」——想继续抄硬核 Agent 工具链的朋友，记得点个关注蹲后续更新 🫡</p>
+<h3 id="📎-附件：本文相关开源仓库与在线试玩直达"><a href="#📎-附件：本文相关开源仓库与在线试玩直达" class="headerlink" title="📎 附件：本文相关开源仓库与在线试玩直达"></a>📎 附件：本文相关开源仓库与在线试玩直达</h3><ul>
+<li><strong>跨宿主多工兵调度插件 dsh-crew</strong>（支持 Claude Code &#x2F; Codex &#x2F; Antigravity &#x2F; Grok）：GitHub 开源仓库与安装说明 ｜ npm 包主页（0.1.0-rc.15）</li>
+<li><strong>团队全部 10 款 DSH 开源插件合集</strong>（含文中提到的 OpenPencil、Game Studio、dsh-qa 等）：github.com&#x2F;orgs&#x2F;ZSeven-W&#x2F;repositories</li>
+<li><strong>多模型管线做出的 13 款在线可玩 3D&#x2F;2D 网页游戏墙</strong>（免安装点开即玩）：finiking.github.io&#x2F;dsh-games&#x2F;wall</li>
+<li><strong>暗黑三国 3D 动作肉鸽《孤枪入夜》首章双端网页试玩</strong>（电脑键鼠 + 手机横屏摇杆）：sanguo.finiyang.com</li>
+</ul>
+<h3 id="📚-往期精选长文与代表作合集（点击蓝字直达）"><a href="#📚-往期精选长文与代表作合集（点击蓝字直达）" class="headerlink" title="📚 往期精选长文与代表作合集（点击蓝字直达）"></a>📚 往期精选长文与代表作合集（点击蓝字直达）</h3><p>⚡ 算力变局与多 Agent 开源工具链</p>
+<ul>
+<li><strong>[长文]</strong> 《黄仁勋掌舵 33 年突然卸任：一个做 3D 游戏显卡的人，给「一人开发时代」留下了什么？》 —— 从实时图形管线聊透「一人带多工兵并行推理」的算力底座</li>
+<li><strong>[置顶合集]</strong> 《10 款 DeepSeek Harness 开源插件全景清单》 —— 一次认齐 OpenPencil、Game Studio、Crew、QA 与真机自动化武器库</li>
+<li><strong>[开源首发]</strong> 《DSH 游戏工坊开源：一句话出 2D&#x2F;3D 游戏 + Agent 自动试玩验收》 —— 生成完自动无头试玩查报错，支持一键发布整面在线游戏墙</li>
+</ul>
+<p>🎨 OpenPencil 与 AI-Native 设计工程</p>
+<ul>
+<li><strong>[长文]</strong> 《什么才是 AI-Native 的设计？》 —— 60 个门店按钮实测：AI 出完初稿后，怎么靠继承与覆盖在十轮修改里保住人的设计意图</li>
+<li><strong>[长文]</strong> 《Codex-OpenPencil 快速上手篇》 —— 从安装插件到做出可编辑 APP 设计稿、选中局部微调、保存 .op 与转代码全流程</li>
+<li><strong>[长文]</strong> 《不止设计稿：用 Codex-OpenPencil 做可复用的海报、封面、对比图和教程配图》 —— 把无限画布变成日常内容生产台，一次排版长期复用</li>
+<li><strong>[工具实测]</strong> 《OpenPencil Chrome 插件：几秒把真实网页吸进可编辑画布》 —— 告别对着截图让 AI 盲猜复刻，一键把线上结构拉进画布改新稿</li>
+</ul>
+<p>🎮 3D 游戏管线与新模型硬核实测</p>
+<ul>
+<li><strong>[长文]</strong> 《别再用 GPT-Astra 从零捏人物了，这套 3D 流程更靠谱》 —— 拆清纯代码场景建模与角色转模绑骨的分工边界，少走十倍返工弯路</li>
+<li><strong>[实机试玩]</strong> 《暗黑三国动作肉鸽〈孤枪入夜〉首章双端网页试玩上线》 —— Tripo 不到 900 积分走通角色场景动作，支持电脑键鼠与手机横屏摇杆直玩</li>
+<li><strong>[模型实测]</strong> 《Gemini 4 Carbon 实测：一段提示词搓出 3D 空战〈裂风 XF-99〉》 —— 峡湾反舰、钻跨海大桥、王牌狗斗与全息盲降（附在线试玩与原版 Prompt）</li>
+<li><strong>[模型实测]</strong> 《Gemini 4 Carbon 实测：一句话搓出 3D 全息海战棋〈海峡指挥官〉》 —— 附双端在线验货入口与完整单段测试提示词</li>
+</ul>
+<p>🖼️ 开源生图部署与提示词 Skill</p>
+<ul>
+<li><strong>[长文]</strong> 《拆解 Qwen-Image 官方「智能改写」：我把生图和改图经验总结成了一个 Skill》 —— 把官方改写逻辑提炼成可复用的生图与局部精修方法论</li>
+<li><strong>[长文]</strong> 《Qwen-Image 2.1 本地部署实战：从此生图自由》 —— 跑通 RTX 5080 与 MacBook Pro 双端部署，理清 Diffusers &#x2F; ComfyUI &#x2F; GGUF 权重路</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/15/FiniYang-2121959969415409927/">https://yaoav.github.io/2026/11/15/FiniYang-2121959969415409927/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/FiniYang/">@FiniYang</a></div><div class="post-share"><div class="social-share" data-image="/images/2121959969415409927-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/15/leaf_sanren-2121962744236929101/" title="无惧 Claude 封号！DeepSeek harness 如何用出 Claude Code 效果？"><img class="cover" src="/images/2121962744236929101-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">无惧 Claude 封号！DeepSeek harness 如何用出 Claude Code 效果？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @leaf_sanren（Leaf Yeah!） 的长文，原文链接，版权归原作者所有。  上篇 DeepSeek Harness 入门有 20 万人看过，讲的是怎么装、怎么上手： 装好之后我发现，我的 Claude Code 好用，很大一部分靠的是自己一点点配出来的东西：一份全局规则、100 多个 skill、几台 MCP。这些，DeepSeek Harness（下面简称 DSH）一样都读不到。 结论先放这：这一套 DSH 照样能配，只是放的位置和写法不一样。 这篇把我的配法整理成 5 步，命令和提示词都能直接复制走。DSH 本身没有的 deny rule 和 hook，也给了兜底办法。 目录一、一份规则，6 个 AI 共用：让 DSH 记住你的规矩 二、100 多个 skill，一行命令接进 DSH 三、MCP 一台台接：搜索、剪辑软件照样能调 四、DSH 没有 deny rule：密钥和 .env 自己守 五、DSH 没有 hook：用 &#x2F;goal 验收，重活交给 Claude Code ─── 一、一份规则，6 个 AI 共用：让 DSH ...</div></div></div></a><a class="pagination-related" href="/2026/11/15/criscxuan-2121958702924312671/" title="腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了"><img class="cover" src="/images/2121958702924312671-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  前两天在 x 上分享的鹅次元没想到爆了，看来大家兴趣很高，于是我今天实测了一下。 这是腾讯 QQ 出的首款专属 AI 游戏陪伴 Agent。 面向端游玩家，提供拟人化 AI 陪伴和实时语音互动。  可以实现在 PC&#x2F;QQ 内部进行聊天。  还可以作为桌宠、一键换装、嘴替变声等有趣玩法。  最下面会有不同女生的介绍，而且每个女生性格不同，有 ENFP、INTP、INFJ 和 ESTP ，这个大家最好实际体验下哈哈哈。 目前只能使用 QQ 登录，而且只支持 Windows 版本，Mac 不支持。 猛的一看好像有点违和感，现在还有啥 Agent 能不支持 Mac ？但你细想一下好像也没错，你会用 Mac 来玩游戏吗？ 于是我就拿出来我那个积灰已久的 Windows 本了，终于有了用武之地。  客户端下载完了。 鹅次元我来了，哈哈哈。  我倒要看看你怎么懂我。 不过问题来了，为啥上面 QQ 登录之后 ，下载完成后又提供了两种登录方式，什么鬼？？？ 闹了半天我才明白，上面的 QQ ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/08/FiniYang-2119431663642153128/" title="Growing Together with Our Plugin Community"><img class="cover" src="/images/2119431663642153128-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-08</div><div class="info-item-2">Growing Together with Our Plugin Community</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @FiniYang（Fini.Yang） 的长文，原文链接，版权归原作者所有。  Since DeepSeek Harness launched, more and more people have been working and exploring in it, and more and more developers have been extending what it can do through plugins. Today we’d like to share where the product and the community stand, and introduce a support program for plugin authors. Growing together with the communityDeepSeek Harness v0.1 went live on August 13, and we released the DeepSeek Harness desktop app on September 29. As ...</div></div></div></a><a class="pagination-related" href="/2026/11/15/FiniYang-2121935695094931781/" title="审美拯救计划(一) · 文章封面配色"><img class="cover" src="/images/2121935695094931781-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">审美拯救计划(一) · 文章封面配色</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @FiniYang（Fini.Yang） 的长文，原文链接，版权归原作者所有。  文章封面配色怎么选？终于不用纠结了！我收集了100 种世界公认顶级配色。安装这个 skill，把你的文章发给 AI，一键选出适合的配色！也可以自己从中挑选！ skill👉https://github.com/WoYun520/gif-factory 🔥强烈推荐，搭配使用 punk 老师的封面生成 skill，选完配色一键出封面，这个 skill 效果超赞👍：https://github.com/adrianpunk/Punk-Posters 这里放四张对比图，只用 punk 老师的 skill 和搭配使用的配色区别：  以下是 100 种色卡： 001紫黄电波：帝王紫#6A0DAD，柠檬黄#FFF300 002莓夜霓虹：树莓粉#E63A7A，哑光炭黑#1A191E 003青柠脉冲：青柠绿#BFFF00，炭黑灰#222222 004薄荷樱桃：冰薄荷绿#98FF98，樱桃红#D2042D 005樱色森林：樱花粉#FFB7C5，墨绿色#014421  006蓝橙节拍：钴蓝#0...</div></div></div></a><a class="pagination-related" href="/2026/11/17/FiniYang-2122644280334266628/" title="OpenPencil 从 0 到 1 保姆级手册：15 分钟做完官网、App、海报、PPT 和宣传片"><img class="cover" src="/images/2122644280334266628-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">OpenPencil 从 0 到 1 保姆级手册：15 分钟做完官网、App、海报、PPT 和宣传片</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @FiniYang（Fini.Yang） 的长文，原文链接，版权归原作者所有。  今天下午，Figma、Keynote、AE 我一个都没打开。 15 分钟，我做出了一整套 AI 眼镜发布会物料：官网、3 屏 App、海报、3 页 PPT、一条 6 秒的宣传片，还有一份能直接在浏览器里打开的 React 页面。 全部在一个开源工具里完成，它叫 OpenPencil。作者@FiniYang @kayshen_xu  改一个按钮，293 个图层只动了 1 个AI 生图交出来的是一整张图，想换个按钮颜色，多半只能重抽。OpenPencil 交出来的是设计稿，每段字、每个按钮都是能单独选中的图层。 我让 Claude Code 只把首屏「立即预订」按钮换个颜色。改之前和改之后各存一份 .op 文件，把里面 293 个图层节点逐个比对。 变了的只有那一个按钮。  .op 文件就是 JSON 文本，这次的比对就是直接拿两份文件做的。放进 Git，每次改了哪里一目了然。 15 分钟做出来的东西叫「光迹 Lumen One」。产品图先让 GPT 画了 6 张，同一副钛合金镜...</div></div></div></a><a class="pagination-related" href="/2026/11/13/FiniYang-2120918363354673273/" title="掌舵英伟达 33 年后即刻裸退，黄仁勋留下的帝国与 AI 算力新牌局"><img class="cover" src="/images/2120918363354673273-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">掌舵英伟达 33 年后即刻裸退，黄仁勋留下的帝国与 AI 算力新牌局</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @FiniYang（Fini.Yang） 的长文，原文链接，版权归原作者所有。  北京时间 11 月 12 日下午，国内科技圈和美股交易群还在流传一张“印度裔高管杰伊·普里（Jay Puri）接任英伟达首席执行官（CEO）”的截图，很快被多家财经媒体核实为假消息。仅仅几个小时后，晚上 9 点 49 分美股盘前，英伟达官网新闻中心挂出了一纸不到五百词的人事通告，同步向美国证券交易委员会提交了重大事项报告（SEC Form 8-K）。63 岁的创始人黄仁勋辞去总裁、首席执行官及董事会成员全部三项职务，即刻生效。2013 年 9 月加入公司的执行副总裁兼首席财务官（CFO）科莱特·克雷斯（Colette Kress）出任临时 CEO 并继续掌管财务；自 1993 年公司创立起就担任董事的新思科技（Synopsys）前掌门人哈维·琼斯（Harvey C. Jones），接任英伟达 33 年历史上头一位董事会主席。那份官方通稿只字未提过去四天席卷华盛顿与华尔街的风波，只用一段客套话感谢黄仁勋三十三年来的付出。  把过去四天的日程表摊开看，送走黄仁勋的导火索和外界最初...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%EF%BD%9CGoogle-%E8%BF%9E%E5%8F%91-Hydrogen-%E4%B8%8E-Orchestrator%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E3%80%8C%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E3%80%8D%E6%97%A9%E5%B0%B1%E8%AF%A5%E6%B7%98%E6%B1%B0%E4%BA%86%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一｜Google 连发 Hydrogen 与 Orchestrator：为什么「静态路由」早就该淘汰了？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%EF%BD%9CAntigravity-%E5%8E%9F%E7%94%9F%E8%9C%82%E7%BE%A4%EF%BC%88Swarm%EF%BC%89%EF%BC%9A%E6%8A%8A%E5%A4%9A%E5%B7%A5%E5%85%B5%E9%98%B2%E8%B8%A9%E8%B8%8F%E7%BA%AA%E5%BE%8B%E7%9B%B4%E6%8E%A5%E7%84%8A%E8%BF%9B-IDE-%E8%B0%83%E5%BA%A6%E5%B1%82"><span class="toc-number">2.</span> <span class="toc-text">二｜Antigravity 原生蜂群（Swarm）：把多工兵防踩踏纪律直接焊进 IDE 调度层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%EF%BD%9C%E4%BB%8E%E3%80%8C13-%E4%B8%AA-Opus-%E8%B1%AA%E5%8D%8E%E5%9B%A2%E3%80%8D%E5%88%B0%E9%A2%9D%E5%BA%A6%E6%B8%85%E9%9B%B6%EF%BC%9A%E6%88%91%E5%9C%A8-Claude-%E7%BC%96%E6%8E%92%E9%87%8C%E4%BA%A4%E8%BF%87%E7%9A%84%E4%B8%89%E6%AC%A1%E7%9C%9F%E5%AD%A6%E8%B4%B9"><span class="toc-number">3.</span> <span class="toc-text">三｜从「13 个 Opus 豪华团」到额度清零：我在 Claude 编排里交过的三次真学费</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A13-%E4%B8%AA-Opus-%E5%90%8C%E5%9C%BA%E5%BC%80%E7%81%AB%E7%9A%84%E3%80%8C%E5%9C%9F%E8%B1%AA%E7%81%AB%E5%8A%9B%E8%A6%86%E7%9B%96%E3%80%8D"><span class="toc-number">3.1.</span> <span class="toc-text">1. 第一阶段：13 个 Opus 同场开火的「土豪火力覆盖」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%EF%BC%9A9-%E4%B8%AA%E5%B7%A5%E5%85%B5%E6%8C%A4%E5%90%8C%E4%B8%80%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E3%80%8C%E5%8F%A3%E5%A4%B4%E8%AD%A6%E5%91%8A%E5%9C%B0%E7%8B%B1%E3%80%8D"><span class="toc-number">3.2.</span> <span class="toc-text">2. 第二阶段：9 个工兵挤同一工作区的「口头警告地狱」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9A%E3%80%8C280-%E4%B8%AA%E6%B5%8B%E8%AF%95%E5%85%A8%E7%BB%BF%E3%80%8D%E6%95%99%E6%88%91%E6%B0%B8%E8%BF%9C%E5%88%AB%E8%BD%BB%E4%BF%A1%E5%B7%A5%E5%85%B5%E8%87%AA%E8%BF%B0"><span class="toc-number">3.3.</span> <span class="toc-text">3. 第三阶段：「280 个测试全绿」教我永远别轻信工兵自述</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%EF%BD%9C%E8%B7%A8%E5%87%BA%E5%8D%95%E4%B8%80-IDE-%E6%80%8E%E4%B9%88%E7%99%BD%E5%AB%96%E9%AB%98%E9%80%9F%E5%B7%A5%E5%85%B5%EF%BC%9F%E6%88%91%E4%BB%AC%E6%8A%8A%E8%BF%99%E5%A5%97%E6%8A%A4%E6%A0%8F%E5%81%9A%E6%88%90%E4%BA%86%E5%BC%80%E6%BA%90%E6%8F%92%E4%BB%B6-dsh-crew"><span class="toc-number">4.</span> <span class="toc-text">四｜跨出单一 IDE 怎么白嫖高速工兵？我们把这套护栏做成了开源插件 dsh-crew</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%80%E6%AC%A1%E6%B4%BE%E5%8F%91%E4%B8%A4%E4%B8%AA%E8%A7%86%E8%A7%92%EF%BC%9A18-%E4%B8%AA%E5%B7%A5%E5%85%B5%E5%B9%B6%E5%8F%91%E5%B9%B2%E6%B4%BB%EF%BC%8C%E7%8A%B6%E6%80%81%E6%A0%8F%E5%AE%9E%E6%97%B6%E8%B7%B3%E8%B4%A6%E5%8D%95"><span class="toc-number">4.1.</span> <span class="toc-text">1. 一次派发两个视角：18 个工兵并发干活，状态栏实时跳账单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B7%9F-Google-Orchestrator-%E4%B8%8D%E8%B0%8B%E8%80%8C%E5%90%88%E7%9A%84%E3%80%8C%E6%8C%89%E7%BB%93%E6%9E%9C%E8%87%AA%E5%8A%A8%E5%8D%87%E6%A1%A3%E3%80%8D"><span class="toc-number">4.2.</span> <span class="toc-text">2. 跟 Google Orchestrator 不谋而合的「按结果自动升档」</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8D%E9%9D%A0%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%87%AA%E8%A7%89%EF%BC%8C%E6%8A%8A-3-%E9%81%93%E9%98%B2%E5%B4%A9%E6%8A%A4%E6%A0%8F%E5%86%99%E8%BF%9B%E4%BB%A3%E7%A0%81%E6%89%A7%E6%B3%95%E5%B1%82"><span class="toc-number">4.3.</span> <span class="toc-text">3. 不靠提示词自觉，把 3 道防崩护栏写进代码执法层</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E9%94%AE%E6%B3%A8%E5%86%8C-Claude-Code-Codex-Antigravity-Grok-%E9%9B%86%E6%88%90%E4%B8%8E%E7%8A%B6%E6%80%81%E6%A0%8F%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">一键注册 Claude Code &#x2F; Codex &#x2F; Antigravity &#x2F; Grok 集成与状态栏：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%EF%BD%9C%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E4%B8%89%E5%A5%97%E5%A4%9A-Agent-%E7%BC%96%E6%8E%92%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%8C%E4%B8%8D%E4%BA%92%E6%96%A5%E4%B9%9F%E4%B8%8D%E7%99%BD%E7%83%A7%E9%A2%9D%E5%BA%A6%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">五｜写在最后：三套多 Agent 编排怎么选，不互斥也不白烧额度？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%92%E5%8A%A8%E6%97%B6%E9%97%B4%EF%BC%9A%E4%BD%A0%E7%9A%84%E4%B8%BB%E5%8A%9B%E9%A2%9D%E5%BA%A6%E6%9C%80%E5%B8%B8%E6%AD%BB%E5%9C%A8%E5%93%AA%E4%B8%80%E6%AD%A5%EF%BC%9F"><span class="toc-number">5.1.1.</span> <span class="toc-text">互动时间：你的主力额度最常死在哪一步？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8E-%E9%99%84%E4%BB%B6%EF%BC%9A%E6%9C%AC%E6%96%87%E7%9B%B8%E5%85%B3%E5%BC%80%E6%BA%90%E4%BB%93%E5%BA%93%E4%B8%8E%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9%E7%9B%B4%E8%BE%BE"><span class="toc-number">5.1.2.</span> <span class="toc-text">📎 附件：本文相关开源仓库与在线试玩直达</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-%E5%BE%80%E6%9C%9F%E7%B2%BE%E9%80%89%E9%95%BF%E6%96%87%E4%B8%8E%E4%BB%A3%E8%A1%A8%E4%BD%9C%E5%90%88%E9%9B%86%EF%BC%88%E7%82%B9%E5%87%BB%E8%93%9D%E5%AD%97%E7%9B%B4%E8%BE%BE%EF%BC%89"><span class="toc-number">5.1.3.</span> <span class="toc-text">📚 往期精选长文与代表作合集（点击蓝字直达）</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

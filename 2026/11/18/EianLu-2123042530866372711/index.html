@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k/month With It) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Animation pages are the single best way to get millions of views and build a per">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k&#x2F;month With It)">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/EianLu-2123042530866372711/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Animation pages are the single best way to get millions of views and build a per">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123042530866372711-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T21:15:58.000Z">
+<meta property="article:modified_time" content="2026-11-19T04:21:20.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@EianLu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123042530866372711-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k/month With It)",
+  "url": "https://yaoav.github.io/2026/11/18/EianLu-2123042530866372711/",
+  "image": "https://yaoav.github.io/images/2123042530866372711-cover.jpg",
+  "datePublished": "2026-11-18T21:15:58.000Z",
+  "dateModified": "2026-11-19T04:21:20.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/EianLu-2123042530866372711/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k/month With It)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123042530866372711-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k/month With It)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k/month With It)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T21:15:58.000Z" title="发表于 2026-11-18 21:15:58">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@EianLu（Eian）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123042530866372711">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Animation pages are the single best way to get millions of views and build a personal brand but for some reason nobody is paying attention to them.</p>
+<p>The clearest example is an Instagram account called @⁠neuronvisuals, it got 228 million views from 3 videos in one week in October and every single video is a stick figure animation of about 10 seconds on a black background.</p>
+<p>The guy behind it sells a course on how to make them and charges companies $2000+&#x2F;month to make the same videos for them.</p>
+<p><img src="/images/HXaOLy9W8AAdMTo.jpg" alt="HXaOLy9W8AAdMTo"></p>
+<p>And he’s not the only one, I’ve been studying these pages for a month now and they’re everywhere once you know what to look for.</p>
+<p><img src="/images/HXaON9zW4AAHVYy.jpg" alt="HXaON9zW4AAHVYy"></p>
+<p>A year ago a video like this needed a motion designer and cost hundreds to a couple thousand dollars, and today Claude writes the animation as code and renders it on your laptop in a few minutes, so the video itself costs you nothing.</p>
+<p>The only reason people aren’t doing this is because they either don’t know Claude can make animations for you or they are just too lazy to build the systems, and that’s exactly what I’m going to show you in this article.</p>
+<p>I’m going to go over the whole thing: how to pick a format, how to get Claude to write and render the videos, how to schedule 10 days of them in one sitting and the 5 ways these pages actually make money,</p>
+<p>with the exact prompts I used and the batch of videos I scheduled while writing this.</p>
+<p>Let’s begin.</p>
+<h3 id="Step-1-Pick-your-format"><a href="#Step-1-Pick-your-format" class="headerlink" title="Step #1: Pick your format"></a>Step #1: Pick your format</h3><p>There are 3 kinds of animation pages working right now and you need to pick one before you make a single video.</p>
+<p>All 3 run the same way as the slideshow pages and the AI talking head pages people already run today, you make a batch of videos in one sitting and you schedule them.</p>
+<p>Faceless. Videos where no human face ever appears, for example stick figures acting out a lesson, 3D videos that answer one “what if” question, or low poly characters, which are simple blocky 3D people like in an old video game.</p>
+<p>Three pages show how this works. @neuronvisuals is the stick figure account I showed at the top of this article and has 936K followers.</p>
+<p>@agentpoly has 24.4K followers, he says the first 10K came in one week, and the whole page is a blocky 3D character who talks to an AI about life at the edge of the world.</p>
+<p>Minute Zero is a YouTube channel that makes 9 minute 3D videos, each one takes a single question like what if you sped up and couldn’t stop, and shows a man walking down a street faster and faster until the whole city is a blur.</p>
+<p>Faceless is the easiest of the three to start and the easiest to copy, and the money comes from volume, ads, courses, selling the system or putting your app on the last frame.</p>
+<p><img src="/images/HXaL_lFXEAAj1Kw.jpg" alt="HXaL_lFXEAAj1Kw"></p>
+<p><img src="/images/HXaOQHdWkAAMmdt.jpg" alt="HXaOQHdWkAAMmdt"></p>
+<p><img src="/images/HXaOSYjXUAAgPbW.jpg" alt="HXaOSYjXUAAgPbW"></p>
+<p>Face on. Explainer pages where the whole video is a 3D animation of how something works (how the internet works, how your phone knows where you are) and you show up on camera for a few seconds in the middle of it to say one line.</p>
+<p>This is @charles.zhengg, 26 posts, 325K followers, 11.6M views on one reel about how the internet works, and he says his videos are made with Claude plus a few skills he wrote himself.</p>
+<p>It’s harder because you have to record yourself, but people follow a person, and that is what gets you brand deals and lets you sell your own products later. I would choose this over any other format since this actually builds a personal brand.</p>
+<p><img src="/images/HXaOUhtXQAAwwa3.jpg" alt="HXaOUhtXQAAwwa3"></p>
+<p>The mix.</p>
+<p>A character that is clearly not you but has a voice and a personality, so people follow the character instead of a face.</p>
+<p>@ashutoshwithclaude is a low poly guy who sits in front of the camera and asks Claude dumb questions like how to get a job at Claude’s own company, 41.7K followers on 52 posts, and he now sells a tool that makes the videos for you.</p>
+<p>You get the volume of faceless with some of the loyalty of a face.</p>
+<p><img src="/images/HXaOIpHWQAEvD6N.jpg" alt="HXaOIpHWQAEvD6N"></p>
+<p>I’m using faceless for the example in this article because it’s the fastest to make and it has the biggest numbers, but every step below works the same for the other two.</p>
+<p>And the real point of all of this is that once the videos cost nothing you don’t have to pick only one format, you can run a stick figure page, a “what if” page and a face on page at the same time and let the numbers tell you which one to double down on.</p>
+<h3 id="Step-2-Copy-the-account-that’s-already-winning"><a href="#Step-2-Copy-the-account-that’s-already-winning" class="headerlink" title="Step #2: Copy the account that’s already winning"></a>Step #2: Copy the account that’s already winning</h3><p>Don’t invent a format, find the one that already works in your niche and figure out why it works.</p>
+<p>I use ViewTrack for this, which is a small tool we built that takes an Instagram or TikTok account and lists every video it posted next to its view count,</p>
+<p>but you can do the same thing by hand, open the account on your phone, sort the posts by most viewed and write down the top 10.</p>
+<p><img src="/images/HXaOWtfW4AAghgm.jpg" alt="HXaOWtfW4AAghgm"></p>
+<p>I watched the top 10 frame by frame and they all have the exact same 5 things:</p>
+<ul>
+<li>A pure black background with two smooth white figures, no faces, thick rounded arms and legs, a soft glow around them and a faint reflection on the floor like they’re standing on black glass</li>
+<li>Two short labels in spaced out capital letters above the figures, like PERFECTIONIST and ACTION TAKER, and that’s all the text on screen, the sentence goes in the caption</li>
+<li>A tiny silent story that takes 8 to 16 seconds with no voice and a trending sound, for example the perfectionist keeps fixing the same brick while the action taker builds a whole wall and climbs it</li>
+<li>The payoff in the last 2 seconds, the winner turns yellow and raises his arms, and the loser stays white</li>
+<li>A caption that says the lesson in one sentence, and on the videos that are selling the course it ends with “want to learn how I make these animations? comment animate”</li>
+</ul>
+<p>That’s the whole format, there’s nothing else to it, and once you know the 5 things you will see them in every video on the page.</p>
+<p>The labels are a contrast people already believe, the story shows that contrast in 10 seconds without a single word, and the account has 1,383 posts and every one I looked at follows this same structure with different props.</p>
+<h3 id="Step-3-Have-Fable-5-2-write-30-scenes"><a href="#Step-3-Have-Fable-5-2-write-30-scenes" class="headerlink" title="Step #3: Have Fable 5.2 write 30 scenes"></a>Step #3: Have Fable 5.2 write 30 scenes</h3><p>This is the first of the two steps that need taste and it’s the step most people get wrong, because they pick contrasts their audience doesn’t actually feel.</p>
+<p>Every video is a contrast between two kinds of people your audience already recognizes, and the contrast has to be something you can show with two figures and a prop, a wall, a staircase, a row of doors, so the viewer gets it with the sound off.</p>
+<p>This is the exact prompt I typed into Claude using its newest model, Fable 5.2, you can paste it into the normal Claude app or website, copy it:</p>
+<p>“I run a faceless animation page for app founders and people trying to make money online. Every video is 11 seconds, black background, two smooth white figures with no faces, left vs right, and a silent story with a prop where the right one wins and turns yellow at the end. I have 3 stories built: WALL (left keeps fixing one brick, right builds a wall and stands on top), STAIRS (left stands at the bottom looking up, right climbs to the top) and DOORS (left waits in front of one closed door, right knocks on door after door until one opens). Write me 30 scenes. Each one picks one of the 3 stories and gives the two labels that go above the figures, one or two words each in capital letters, a contrast my audience already feels (PERFECTIONIST vs ACTION TAKER, WAITING vs STARTING, ONE PITCH vs 100 PITCHES). Then write the caption for each one, a single sentence that says the lesson in plain words, lowercase, no hashtags. Output as JSON with id, template, left, right, caption.”</p>
+<p>This file is the only thing you will edit from here on, because in the next step Claude writes a script that reads it and makes one video per scene.</p>
+<p><img src="/images/HXaOZSoXsAAOq3T.jpg" alt="HXaOZSoXsAAOq3T"></p>
+<p>Here are 3 of the 30 it gave me:</p>
+<ul>
+<li>WALL, PERFECTIONIST vs ACTION TAKER, “one is still fixing the first brick, the other one is standing on the wall”</li>
+<li>STAIRS, WAITING vs STARTING, “you don’t need to see the whole staircase, you need to take the first step”</li>
+<li>DOORS, ASKING ONCE vs ASKING AGAIN, “the door that opens is never the first one you knock on”</li>
+</ul>
+<p>I kept all 30 even though not all of them are great, because at this point you don’t know which contrasts are going to hit and the page is going to tell you in a week anyway.</p>
+<h3 id="Step-4-Have-Fable-5-2-build-the-animation"><a href="#Step-4-Have-Fable-5-2-build-the-animation" class="headerlink" title="Step #4: Have Fable 5.2 build the animation"></a>Step #4: Have Fable 5.2 build the animation</h3><p>This is the part everyone thinks is hard, and to be honest it is, but not because of the code.</p>
+<p>Getting an animation out of Claude is easy, getting YOUR style out of it is not, you have to have a clear picture of what you want the video to look like before you type a single prompt.</p>
+<p>Then you put your frame next to the one you’re copying, fix one thing at a time, and keep going until every video on the page looks like the same person made it, and that part is manual and you have to be very involved in it.</p>
+<p>It took me most of the afternoon, but it’s the only part that works like this, because once you have the style you never do it again, every video after that is the same script with different labels.</p>
+<p>You describe the style and the 3 stories to Claude and it writes a script that makes the videos, you run it once and from then on every new video is the same script with different labels.</p>
+<p>The exact prompt:</p>
+<p>“Write me a Python script that renders 11 second 1080x1920 30fps videos in this exact style: pure black background, two smooth white figures with no faces made of thick rounded capsules with a thin dark rim around them so they look 3D, a round head, a soft white glow around each figure, and a faint blurred reflection of everything under the floor line like black glass. Above each figure a short label in bold spaced out capital letters. Build 3 story templates. WALL: the left figure kneels over one brick and keeps adjusting it with a small red tool, the right figure stacks a brick wall row by row for 7 seconds then climbs on top of it. STAIRS: the left figure stands at the bottom with a hand on his chin looking up, the right figure climbs one step per second to the top. DOORS: the left figure stands in front of one closed door the whole time, the right figure walks door to door knocking until the fourth one opens with yellow light. In every template, at second 9 the winner turns yellow (figure and label) and raises both arms, the loser stays white. The bricks have a visible top face and a darker side so they look like real blocks. Small watermark at the bottom. Read a JSON file of scenes with template, left, right and render one mp4 per scene with ffmpeg. Use PIL only, no other libraries.”</p>
+<p><img src="/images/HXaOb6KXgAEGCWU.jpg" alt="HXaOb6KXgAEGCWU"></p>
+<p><img src="/images/HXaLrjZXwAAevlA.jpg" alt="HXaLrjZXwAAevlA"></p>
+<p><img src="/images/HXaL6HQXAAALn8G.jpg" alt="HXaL6HQXAAALn8G"></p>
+<p>It took one prompt and a couple of rounds of fixes next to the original videos (the figures were too thin, the labels were sitting on the heads, the glow was lighting up the bricks), which is normal,</p>
+<p>you put your frame next to theirs and fix the biggest difference until you can’t tell them apart, and rendering one video takes 2 to 3 minutes on a MacBook.</p>
+<h3 id="Step-5-Render-the-whole-batch-at-once"><a href="#Step-5-Render-the-whole-batch-at-once" class="headerlink" title="Step #5: Render the whole batch at once"></a>Step #5: Render the whole batch at once</h3><p>Once the script works you only touch the JSON, and the only time you go back to the script is when you ask Claude to add a new story so the page feels new.</p>
+<p>To run it you need Python on your computer, Claude gives you the install commands if you ask, then you open a terminal and run one line and Claude tells you which one.</p>
+<p>One more tip, when you ask Claude for the script add “render 6 videos at the same time”, that is what made my batch finish in 13 minutes.</p>
+<p>I put the 30 scenes in one file and ran it once, and it gave me 30 videos of 11 seconds each in about 13 minutes.</p>
+<p><img src="/images/HXaOeW8XIAAsJFi.jpg" alt="HXaOeW8XIAAsJFi"></p>
+<p><img src="/images/HXaOg5oXsAAXTvg.jpg" alt="HXaOg5oXsAAXTvg"></p>
+<p>To put this in perspective, a creator you hire to film short videos for your brand charges $500 to $1,000 for 60 videos a month,</p>
+<p>and this made 30 videos in 13 minutes with nothing but the Claude subscription I already pay for.</p>
+<h3 id="Step-6-Check-the-first-3-seconds-of-every-video"><a href="#Step-6-Check-the-first-3-seconds-of-every-video" class="headerlink" title="Step #6: Check the first 3 seconds of every video"></a>Step #6: Check the first 3 seconds of every video</h3><p>Don’t skip this.</p>
+<p>I watch the first 3 seconds of every video, that’s all anyone watches before they decide to keep scrolling,</p>
+<p>and I look for 3 things: both figures are on screen and doing something by the first second, the labels are readable on a phone, and nothing is broken (a label touching a head, a figure walking off the frame).</p>
+<h3 id="Step-7-Captions-and-sound"><a href="#Step-7-Captions-and-sound" class="headerlink" title="Step #7: Captions and sound"></a>Step #7: Captions and sound</h3><p>The caption has three parts, first the one sentence lesson Claude already wrote in the JSON for that scene, then one question to get people commenting, then a closing line that matches how you plan to make money in Step #10,</p>
+<p>for example the course pitch neuronvisuals uses or your app name.</p>
+<p>For the sound, go back to the account you copied in Step #2, open their top 3 videos and use the same sounds, because they already tested those sounds for you.</p>
+<p>A scheduler can’t pick a trending sound for you, so the 3 scenes I think are strongest I post from the Instagram app myself with the sound from the account I copied,</p>
+<p>and the other 27 go out through Postiz with a free music track I downloaded and asked Claude to add to every video in the script.</p>
+<p><img src="/images/HXaOjJwW0AAcIoU.jpg" alt="HXaOjJwW0AAcIoU"></p>
+<h3 id="Step-8-Schedule-all-of-them-with-Postiz"><a href="#Step-8-Schedule-all-of-them-with-Postiz" class="headerlink" title="Step #8: Schedule all of them with Postiz"></a>Step #8: Schedule all of them with Postiz</h3><p>Once the 30 videos are ready the last thing I want to do is upload and schedule every one of them by hand.</p>
+<p>The pages that grow fastest post 1 to 3 times a day on Instagram, TikTok and YouTube Shorts, and doing that by hand is a waste of time,</p>
+<p>I use a tool that lets you schedule posts to all of your social accounts from one calendar, it’s called Postiz.</p>
+<p>The first time I did this I uploaded the 30 videos once, picked the 3 accounts and spread them across the calendar, 3 a day at the hours the account I copied posts at, which covers 10 days.</p>
+<p>After that the Monday batch from Step #9 keeps the calendar full and I never sit down for more than an hour.</p>
+<p>This is also what makes running several formats at once possible, every page I open is just one more account in the same Postiz calendar, so 3 pages is the same hour of work as 1.</p>
+<p>The caption goes in once per video and the same post goes out to Instagram, TikTok and YouTube at the same time, so 10 days of posting is done in one sitting.</p>
+<p><img src="/images/HXaOl2IXMAAqMyy.jpg" alt="HXaOl2IXMAAqMyy"></p>
+<p>And you don’t even have to fill the calendar yourself, because Postiz plugs into Claude, you connect the two once at claude.ai&#x2F;directory&#x2F;postiz and from then on the whole thing is one message:</p>
+<p>“Take the 30 videos in the folder I just shared and the captions file next to them, the caption for each video is the row with the same number. Schedule them on my Instagram, TikTok and YouTube Shorts accounts starting tomorrow, 3 a day at 9am, 2pm and 7pm my time, in order from 01 to 30 so every day gets one wall, one stairs and one doors video. Same caption on all 3 platforms, no hashtags. Leave every post as a draft so I can approve them from the calendar, and when you’re done tell me which day the last one lands on so I know when to render the next batch.”</p>
+<p>I still look at the calendar before anything goes live, but I don’t fill it by hand anymore, and that’s the whole reason a page like this can run on an hour a week.</p>
+<h3 id="Step-9-Read-the-numbers-every-Monday"><a href="#Step-9-Read-the-numbers-every-Monday" class="headerlink" title="Step #9: Read the numbers every Monday"></a>Step #9: Read the numbers every Monday</h3><p>The views tell you which scenes work, you just have to look at them every week.</p>
+<p>Every Monday I pull the views per video. The format is so simple that the only things that change between videos are the two labels and the caption, so the top 3 are telling you exactly which contrasts your audience feels the most.</p>
+<p>I send those 3 back to Fable 5.2 with the same prompt from Step #3 and one extra sentence: “these three did the most views, write me 10 variations of each that keep the same contrast.” Then I render them, schedule them and do it again next Monday.</p>
+<p><img src="/images/HXaOoSHWwAEzX4j.jpg" alt="HXaOoSHWwAEzX4j"></p>
+<p>That loop is the entire page, there’s no editing and there’s no filming, which is why one person can run 3 of these at the same time.</p>
+<h3 id="Step-10-Turn-the-views-into-money"><a href="#Step-10-Turn-the-views-into-money" class="headerlink" title="Step #10: Turn the views into money"></a>Step #10: Turn the views into money</h3><p>Views by themselves mean absolutely nothing, so this is the step that actually matters, and every account in the image at the top of this article does it differently.</p>
+<ol>
+<li>Sell the system. @neuronvisuals sells a 72 lesson course on how to make the animations and a “work with us” monthly plan where they make the videos for brands.</li>
+</ol>
+<p>@agentpoly sells a $29 guide and a $69 studio kit that includes the code. @ashutoshwithclaude turned the videos into a tool where you type one line and it makes the reel for you.</p>
+<p>In all 3 cases the videos are what gets people to follow the page and then they sell those followers the way they make the videos.<br>2. Platform money. Minute Zero is the YouTube channel I mentioned in Step #1, 9 minute “what if” animations, 22.7K subscribers at the time of the YouTube Studio screenshot the owner posted (23.5K today), 5.9M views and $17.8K in estimated ad revenue in 28 days.</p>
+<p>Keep in mind Shorts pay far less per view than long videos, so if you’re on YouTube make the 9 minute version too.<br>3. Make them for companies. Every brand with a social team needs 3 posts a day and has nobody to make them.</p>
+<p>This is literally what the “work with us” plan on neuronvisuals is, and 5 companies at $1,000 a month is $60k a year, and the page you already run is what you show them to close the deal.<br>4. Put your app on the last frame. This is what we did with our app, the last 2 seconds say the app name, the caption has the app name and you watch the downloads next to the views.</p>
+<p>neuronvisuals alone says the format has done over a billion views, and adding your app name under the yellow winner in the last 2 seconds costs you nothing.<br>5. The personal brand. @charles.zhengg went from 1K to 150K followers in two weeks and is at 325K now with 26 posts, and he’s building a company on top of it.</p>
+<p>If you’re the face, people follow you and not the format, so later you can sell them your own app, course or service without starting over.</p>
+<p>Any one of these gets a page to a few thousand a month and sometimes a lot more, Minute Zero did $17.8K in 28 days on ads alone, but the pages that pass $20k&#x2F;month stack two of them, the course plus the companies, or the ads plus the app.</p>
+<h3 id="What-I-still-do-myself"><a href="#What-I-still-do-myself" class="headerlink" title="What I still do myself"></a>What I still do myself</h3><p>There are 4 things I still do myself every week and they take me about an hour.</p>
+<p>I set the style, and this is the hardest part of the whole page and the one thing you can’t automate, Claude can make you an animation in a minute but deciding what it looks like and keeping it the same across every video is on you.</p>
+<p>I read the scenes, knowing which contrasts my audience actually connects with is something Claude is not good at doing.</p>
+<p>I approve every video before it gets scheduled, which is 3 seconds each or 90 seconds for a batch, and that same check on the test renders is what caught the labels on the heads and the climber walking off the frame before I rendered the 30.</p>
+<p>I pick the niche and the account to copy.</p>
+<p>Everything else happens without me, Claude writes the scenes, the script renders the videos and Postiz posts them, and the only thing I open on Monday is the views page to pick the top 3.</p>
+<h3 id="The-whole-system"><a href="#The-whole-system" class="headerlink" title="The whole system"></a>The whole system</h3><ol>
+<li>Pick faceless, face on or the mix</li>
+<li>Find the account already winning in your niche and write down what the top 10 have in common</li>
+<li>Fable 5.2 writes 30 scenes from one prompt</li>
+<li>Fable 5.2 writes the animation script, then you iterate next to the original until it has your style</li>
+<li>Render the batch in one go.</li>
+<li>Check the first 3 seconds of each</li>
+<li>Write the caption from the lesson in the JSON and use the same sound as the account you copied</li>
+<li>Schedule 3 a day on every platform with Postiz</li>
+<li>Read the views on Monday and make 10 variations of the top 3</li>
+<li>Pick how you make money: sell the system, platform ads, make them for companies, your app on the last frame or the personal brand</li>
+</ol>
+<p>The whole thing took me an afternoon to set up and it takes me about an hour a week to run it.</p>
+<p>Most people are going to read this and go back to scrolling the pages instead of building one.</p>
+<p>People aren’t doing this because they still think animation costs money, and it doesn’t anymore, the only thing stopping you now is sitting down for one afternoon.</p>
+<p>Go make money.</p>
+<p>Drop any questions below, I’ll try to answer all of them.</p>
+<p>Try Postiz here: postiz.pro&#x2F;maubaron</p>
+<p>Thank you Postiz for sponsoring this article.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/EianLu-2123042530866372711/">https://yaoav.github.io/2026/11/18/EianLu-2123042530866372711/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/EianLu/">@EianLu</a></div><div class="post-share"><div class="social-share" data-image="/images/2123042530866372711-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img class="cover" src="/images/2123046178975891883-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Use this skill to land you more interviews.</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ridd_design（Ridd 🤿） 的长文，原文链接，版权归原作者所有。  Recently I hired another design engineer at DuckDuckGo. After reviewing 100s of portfolios I put together a skill you can use to improve your portfolio today ↓ Quick experiment: How many seconds does it take someone reviewing your portfolio to get to “wow”? If your answer is more than 30s, you’ve got some work to do… When I’m reviewing a portfolio, I’m trying to understand whether someone could do the work we’re hiring them to do. And some...</div></div></div></a><a class="pagination-related" href="/2026/11/18/lemomo_ai-2123038832815907084/" title="开源 lemo-animi 定格动画Skill。一句话，让 Codex 做一支定格动画短片"><img class="cover" src="/images/2123038832815907084-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">开源 lemo-animi 定格动画Skill。一句话，让 Codex 做一支定格动画短片</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lemomo_ai（Lemomo） 的长文，原文链接，版权归原作者所有。  做一支 40 秒的黏土定格动画：小企鹅学做煎饼。 就这一句话。agent 自己写故事和镜头表，用生图模型做出角色，布景和动作表，然后在代码里一格一格地让它们动起来；再用真实乐器采样配乐、加拟音，最后打开一个本地审片台修改，直到成片。 这是我今天新发布的开源项目 lemo-animi。是一个Codex和Claude都可以使用的定格动画插件。 下面八种材质、八支样片，每一支都是它自己从一句话开始做出来的。  一、lemo-animi 是什么一句话，做一支定格动画短片。它是给 Codex 和 Claude Code 用的 agent skill。主要的用法是在 Codex 里做片，图用 Codex 自带的生图；Claude Code 配一个生图模型也能用。  生图模型负责出角色设定、八格动作表、背景。 Python 把动作表切成一格一格，一拍二（或一拍三）排在布景上，再加运镜、接触阴影、光和调色。这一部分是定格动画的核心。 每种材质是一个固定的风格包：提示词模板、光线、机位写法、配乐和...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/17/EianLu-2122676987420623080/" title="How I got 3M views with AI slideshows and Fable 5.2"><img class="cover" src="/images/2122676987420623080-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">How I got 3M views with AI slideshows and Fable 5.2</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  By the end of this guide you will have one finished 6-slide AI UGC slideshow, five variations of it and a full week of posts scheduled. It is a method you can repeat on any app or product, on any platform that supports slideshows. What you get is a repeatable way to make good slideshows fast. The slideshow comes out of one simple loop and the loop is what this article is about:  Find a slideshow format that is already working for someone else.  Ha...</div></div></div></a><a class="pagination-related" href="/2026/11/17/EianLu-2122653224997937307/" title="本地大模型：数字人案例实测教程"><img class="cover" src="/images/2122653224997937307-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">本地大模型：数字人案例实测教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  你一定有这样的烦恼： 想拍口播，觉得自己人也不好看，声音也不好听，鼓起勇气去化妆、打光、半天整了一条视频出去0 个赞。 于是就想偷懒用数字人： 视频是出来了，发现一条视频花了几十块，效果差强人意，重试一下又是几十块，发出去还没流量。 有没有低成本效果又逼真的方法？ 不知道，试试就知道了。 本地显卡实测： 先看结论 案例一：只有一张照片，能让它开口吗？ 能。 给它一张我的半身照、一段 10 秒的配音，它会从零开始把整段视频画出来，人会眨眼、点头、比手势，嘴跟着声音动。 在Dgx Spark 上，10 秒的视频大约等 8 分半钟。 第一次跑出来效果还行，但很快就翻车了：人物动不动把两只大手怼到镜头前，挡住半个画面。 问题出在提示词：我写了”近距离自拍、双手做各种自然手势”，AI 就真的把手往镜头上举。 改成”镜头不动、保持照片原来的距离、手放低”以后，这个问题就没了。 下图是同一张照片、同一句话，旧描述和新描述的对比：  这里有个小白很容易忽略的点： AI 很听话，你写什么它就放大什么。 我还...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-Pick-your-format"><span class="toc-number">1.</span> <span class="toc-text">Step #1: Pick your format</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-Copy-the-account-that%E2%80%99s-already-winning"><span class="toc-number">2.</span> <span class="toc-text">Step #2: Copy the account that’s already winning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-Have-Fable-5-2-write-30-scenes"><span class="toc-number">3.</span> <span class="toc-text">Step #3: Have Fable 5.2 write 30 scenes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-4-Have-Fable-5-2-build-the-animation"><span class="toc-number">4.</span> <span class="toc-text">Step #4: Have Fable 5.2 build the animation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-5-Render-the-whole-batch-at-once"><span class="toc-number">5.</span> <span class="toc-text">Step #5: Render the whole batch at once</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-6-Check-the-first-3-seconds-of-every-video"><span class="toc-number">6.</span> <span class="toc-text">Step #6: Check the first 3 seconds of every video</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-7-Captions-and-sound"><span class="toc-number">7.</span> <span class="toc-text">Step #7: Captions and sound</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-8-Schedule-all-of-them-with-Postiz"><span class="toc-number">8.</span> <span class="toc-text">Step #8: Schedule all of them with Postiz</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-9-Read-the-numbers-every-Monday"><span class="toc-number">9.</span> <span class="toc-text">Step #9: Read the numbers every Monday</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-10-Turn-the-views-into-money"><span class="toc-number">10.</span> <span class="toc-text">Step #10: Turn the views into money</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-I-still-do-myself"><span class="toc-number">11.</span> <span class="toc-text">What I still do myself</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-whole-system"><span class="toc-number">12.</span> <span class="toc-text">The whole system</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

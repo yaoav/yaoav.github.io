@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Polymarket AI V2   交易系统：原理 + 实现 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一代的只是一代根据策略执行的机器人，高度依赖于策略，对外界感知力不足，（比如最近BTC大跌很多宏观原因它不会感知）这次加入了新闻扫描+大模型分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Polymarket AI V2   交易系统：原理 + 实现">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/15/chenke20266-2121987007333441920/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="第一代的只是一代根据策略执行的机器人，高度依赖于策略，对外界感知力不足，（比如最近BTC大跌很多宏观原因它不会感知）这次加入了新闻扫描+大模型分析">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121987007333441920-cover.jpg">
+<meta property="article:published_time" content="2026-11-15T23:21:41.000Z">
+<meta property="article:modified_time" content="2026-11-16T00:58:47.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@chenke20266">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121987007333441920-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Polymarket AI V2   交易系统：原理 + 实现",
+  "url": "https://yaoav.github.io/2026/11/15/chenke20266-2121987007333441920/",
+  "image": "https://yaoav.github.io/images/2121987007333441920-cover.jpg",
+  "datePublished": "2026-11-15T23:21:41.000Z",
+  "dateModified": "2026-11-16T00:58:47.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/15/chenke20266-2121987007333441920/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Polymarket AI V2   交易系统：原理 + 实现',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121987007333441920-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Polymarket AI V2   交易系统：原理 + 实现</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Polymarket AI V2   交易系统：原理 + 实现</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-15T23:21:41.000Z" title="发表于 2026-11-15 23:21:41">2026-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/">交易策略</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@chenke20266（上车的乘客）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121987007333441920">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<blockquote>
+<p>第一代的只是一代根据策略执行的机器人，高度依赖于策略，对外界感知力不足，（比如最近BTC大跌很多宏观原因它不会感知）这次加入了新闻扫描+大模型分析</p>
+</blockquote>
+<h2 id="第一部分：原理篇"><a href="#第一部分：原理篇" class="headerlink" title="第一部分：原理篇"></a>第一部分：原理篇</h2><h3 id="1-这套系统赚什么钱"><a href="#1-这套系统赚什么钱" class="headerlink" title="1. 这套系统赚什么钱"></a>1. 这套系统赚什么钱</h3><p>预测市场有两个可利用的东西：</p>
+<ol>
+<li><strong>信息差</strong>：市场还没消化新闻、资金流、情绪、事件进展</li>
+<li><strong>定价偏差</strong>：市场价格 ≠ 真实概率</li>
+</ol>
+<p>系统只做一件事：</p>
+<blockquote>
+<p>用多渠道信息判断”真实概率 P”，再和市场价格比，只有 P 明显高于&#x2F;低于价格时才下注。 数学公式负责”买哪个、买多少、什么时候卖”，不负责”猜方向”。</p>
+</blockquote>
+<p>一句话：<strong>基本面找机会，公式管执行。</strong></p>
+<h3 id="2-旧版本为什么亏"><a href="#2-旧版本为什么亏" class="headerlink" title="2. 旧版本为什么亏"></a>2. 旧版本为什么亏</h3><p><strong>旧策略结果原因</strong>做市 V1-1.551~2 分价差 &lt; 手续费+滑点做市 V2-0.23逆向选择，被知情者成交scalp-0.21同上天气 AI 回测负公开天气数据打不过市场实盘做市-0.30 熔断微亏累积，参数救不了结构</p>
+<p><img src="/images/HXLJIGsaoAAzBIt.png" alt="HXLJIGsaoAAzBIt"></p>
+<p><strong>核心教训：</strong></p>
+<ul>
+<li>纯数学公式在有效市场里找不到漏洞</li>
+<li>小价差策略长期被手续费吃光</li>
+<li>真正的 edge 来自”事件 + 信息 + 人怎么想”</li>
+</ul>
+<h3 id="3-系统总览（五层）"><a href="#3-系统总览（五层）" class="headerlink" title="3. 系统总览（五层）"></a>3. 系统总览（五层）</h3><p><img src="/images/HXLOBu7aQAAjaU4.jpg" alt="HXLOBu7aQAAjaU4"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">┌─────────────────────────────────────────────┐</span><br><span class="line">│ 1. 数据层                                    │</span><br><span class="line">│    新闻扫描(5min) / 宏观扫描(30min)          │</span><br><span class="line">│    BTC·ETH 现货、恐惧贪婪、ETF 流向、IPO     │</span><br><span class="line">├─────────────────────────────────────────────┤</span><br><span class="line">│ 2. 推理层（LLM）                             │</span><br><span class="line">│    必要条件 → 催化剂 → 反证 → 概率 P        │</span><br><span class="line">│    无 API key 时用因素加权近似               │</span><br><span class="line">├─────────────────────────────────────────────┤</span><br><span class="line">│ 3. 定价层                                    │</span><br><span class="line">│    模型概率 + 因素调整 + LLM 复核            │</span><br><span class="line">│    和市场价比较 → edge                       │</span><br><span class="line">├─────────────────────────────────────────────┤</span><br><span class="line">│ 4. 决策层                                    │</span><br><span class="line">│    P≥60% 买 YES / P≤40% 买 NO                │</span><br><span class="line">│    便宜尾部(&lt;15¢) → 小彩票                   │</span><br><span class="line">├─────────────────────────────────────────────┤</span><br><span class="line">│ 5. 执行层                                    │</span><br><span class="line">│    凯利仓位 / 限价单 / 止盈止损 / 风控熔断   │</span><br><span class="line">└─────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-怎么想（思考框架）"><a href="#4-怎么想（思考框架）" class="headerlink" title="4. 怎么想（思考框架）"></a>4. 怎么想（思考框架）</h3><p>分析任何一个事件，按这五步走：</p>
+<p>4.1 事件成立的必要条件</p>
+<p>列出”要发生这件事，必须先满足哪些条件”。</p>
+<p>例：BTC 跌破 66,000</p>
+<ul>
+<li>现货必须跌到 66,000 以下</li>
+<li>时间必须在结算时刻（币安 1 分钟收盘价）</li>
+<li>期间不能出现大反弹</li>
+</ul>
+<p>4.2 已经出现了哪些条件</p>
+<ul>
+<li>现价距离阈值多少</li>
+<li>24h&#x2F;7d 动量</li>
+<li>资金流：ETF 流入&#x2F;流出</li>
+<li>情绪：恐惧贪婪指数</li>
+<li>新闻：利好&#x2F;利空&#x2F;催化剂</li>
+</ul>
+<p>4.3 反证与阻力</p>
+<ul>
+<li>什么情况会让判断失效</li>
+<li>极端恐惧也可能是底部（反向指标）</li>
+<li>市场可能知道你不知道的事</li>
+</ul>
+<p>4.4 给出概率 P</p>
+<ul>
+<li>P ≥ 60% → 考虑买 YES</li>
+<li>P ≤ 40% → 考虑买 NO</li>
+<li>40%~60% → 不参与（没有优势）</li>
+</ul>
+<p>4.5 写下失效条件</p>
+<ul>
+<li>出现什么信息就必须退出</li>
+<li>什么时候必须重新评估</li>
+</ul>
+<h3 id="5-怎么决策（概率与公式）"><a href="#5-怎么决策（概率与公式）" class="headerlink" title="5. 怎么决策（概率与公式）"></a>5. 怎么决策（概率与公式）</h3><p>5.1 模型概率</p>
+<p>对”到期时价格高于 K”的市场：</p>
+<p>代码块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(高于 K) = 1 − Φ( ln(K/S) / (σ√T) )</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>S：现价</li>
+<li>K：阈值</li>
+<li>σ：日波动率（近期已实现波动，取短&#x2F;长窗口较大值）</li>
+<li>T：剩余天数</li>
+<li>Φ：标准正态分布函数</li>
+</ul>
+<p><img src="/images/HXLOaCcb0AAOLti.jpg" alt="HXLOaCcb0AAOLti"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cdf</span>(<span class="params">x: <span class="built_in">float</span></span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0.5</span> * (<span class="number">1.0</span> + math.erf(x / math.sqrt(<span class="number">2.0</span>)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">prob_above</span>(<span class="params">spot: <span class="built_in">float</span>, strike: <span class="built_in">float</span>, sigma_daily: <span class="built_in">float</span>, days: <span class="built_in">float</span></span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">    <span class="keyword">if</span> days &lt;= <span class="number">0</span> <span class="keyword">or</span> sigma_daily &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.5</span></span><br><span class="line">    z = math.log(strike / spot) / (sigma_daily * math.sqrt(days))</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.0</span> - cdf(z)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">realized_vol_daily</span>(<span class="params">closes: <span class="built_in">list</span>[<span class="built_in">float</span>]</span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">    rets = [math.log(closes[i] / closes[i-<span class="number">1</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(closes))]</span><br><span class="line">    short = rets[-<span class="number">168</span>:]          <span class="comment"># 最近 7 天</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hv</span>(<span class="params">rs</span>):</span><br><span class="line">        m = <span class="built_in">sum</span>(rs) / <span class="built_in">len</span>(rs)</span><br><span class="line">        v = <span class="built_in">sum</span>((x - m) ** <span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> rs) / <span class="built_in">max</span>(<span class="number">1</span>, <span class="built_in">len</span>(rs) - <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> math.sqrt(v) * math.sqrt(<span class="number">24</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">max</span>(<span class="number">0.015</span>, <span class="built_in">min</span>(<span class="number">0.2</span>, <span class="built_in">max</span>(hv(short), hv(rets))))</span><br></pre></td></tr></table></figure>
+
+<p>5.2 因素调整</p>
+<p><strong>因素调整方向</strong>24h 暴跌 ≥3%下调”高于”概率恐惧贪婪 ≤25下调利空新闻 ≥2 条下调24h 大涨 ≥4%上调贪婪 ≥75上调</p>
+<p><img src="/images/HXLJA5NbcAAtbBt.png" alt="HXLJA5NbcAAtbBt"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">adjust</span>(<span class="params">p_above, chg24, fng_value, bear_hits</span>):</span><br><span class="line">    adj = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">if</span> chg24 &lt;= -<span class="number">6</span>: adj -= <span class="number">0.10</span></span><br><span class="line">    <span class="keyword">elif</span> chg24 &lt;= -<span class="number">3</span>: adj -= <span class="number">0.05</span></span><br><span class="line">    <span class="keyword">elif</span> chg24 &gt;= <span class="number">4</span>: adj += <span class="number">0.05</span></span><br><span class="line">    <span class="keyword">if</span> fng_value &lt;= <span class="number">15</span>: adj -= <span class="number">0.07</span></span><br><span class="line">    <span class="keyword">elif</span> fng_value &lt;= <span class="number">25</span>: adj -= <span class="number">0.04</span></span><br><span class="line">    <span class="keyword">elif</span> fng_value &gt;= <span class="number">75</span>: adj += <span class="number">0.04</span></span><br><span class="line">    <span class="keyword">if</span> bear_hits &gt;= <span class="number">2</span>: adj -= <span class="number">0.05</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">max</span>(<span class="number">0.02</span>, <span class="built_in">min</span>(<span class="number">0.98</span>, p_above + <span class="built_in">max</span>(-<span class="number">0.2</span>, <span class="built_in">min</span>(<span class="number">0.2</span>, adj))))</span><br><span class="line"><span class="number">5.3</span> Edge（优势）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Edge(买YES) = P − YES价格</span><br><span class="line">Edge(买NO)  = (1−P) − NO价格</span><br></pre></td></tr></table></figure>
+
+<p>只有 Edge 足够大才交易；系统阈值 <strong>10%</strong>。</p>
+<p>5.4 凯利仓位</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = (P − price) / (1 − price)</span><br><span class="line">仓位 = 账户 × f × 1/4（分数凯利）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">edge_yes = p - yes_price</span><br><span class="line">edge_no  = (<span class="number">1</span> - p) - (<span class="number">1</span> - yes_price)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 买 YES 的凯利比例</span></span><br><span class="line">b = (<span class="number">1</span> - price) / price</span><br><span class="line">kelly = <span class="built_in">max</span>(<span class="number">0.0</span>, (p_win * (b + <span class="number">1</span>) - <span class="number">1</span>) / b)</span><br><span class="line">size = <span class="built_in">min</span>(<span class="number">2.0</span>, bankroll * kelly * <span class="number">0.25</span>)</span><br></pre></td></tr></table></figure>
+
+<p>单笔上限 2 USDC（彩票模式 1.2 USDC）。</p>
+<p>5.5 什么时候卖</p>
+<ul>
+<li>价格涨到接近你的 P → 卖出</li>
+<li>出现反证、P 下降到 50% 以下 → 退出</li>
+<li>彩票模式：涨到 2.5 倍或跌 50% → 自动平仓</li>
+<li>到期前结算，赢的自动赎回</li>
+</ul>
+<h3 id="6-两种交易模式"><a href="#6-两种交易模式" class="headerlink" title="6. 两种交易模式"></a>6. 两种交易模式</h3><p><img src="/images/HXLOPexa0AAvwXf.jpg" alt="HXLOPexa0AAvwXf"></p>
+<p>6.1 事件价值投注（正期望，主策略）</p>
+<ul>
+<li>概率 ≥60% &#x2F; ≤40%</li>
+<li>每笔 1~2 USDC，最多 2 仓</li>
+<li>持有到结算或止盈止损</li>
+</ul>
+<p>6.2 尾部彩票（小概率高赔率）</p>
+<p>触发条件（满足其一）：</p>
+<ul>
+<li>24h 跌幅 ≥1%</li>
+<li>恐惧贪婪 ≤15</li>
+</ul>
+<p>筛选：</p>
+<ul>
+<li>BTC 日线阈值低于现价 3%~10%</li>
+<li>No 价格 ≤15¢</li>
+<li>LLM 判断 No 概率高于市场价</li>
+</ul>
+<p>执行：</p>
+<ul>
+<li>每次 1.2 USDC</li>
+<li>最多 2 个持仓</li>
+<li>涨 2.5 倍或跌 50% 自动平</li>
+</ul>
+<blockquote>
+<p>这就是暴跌 + 极度恐惧时，市场低估继续下跌尾部概率的机会。</p>
+</blockquote>
+<h2 id="第二部分：实现篇"><a href="#第二部分：实现篇" class="headerlink" title="第二部分：实现篇"></a>第二部分：实现篇</h2><h3 id="7-环境与依赖"><a href="#7-环境与依赖" class="headerlink" title="7. 环境与依赖"></a>7. 环境与依赖</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> F:\deepseek\polymarket<span class="literal">-bot</span></span><br><span class="line">.\.venv\Scripts\python.exe <span class="literal">-m</span> pip install <span class="literal">-r</span> requirements.txt</span><br></pre></td></tr></table></figure>
+
+<p>requirements.txt 关键项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">httpx</span><br><span class="line">pyyaml</span><br><span class="line">py-clob-client-v2</span><br><span class="line">websockets</span><br></pre></td></tr></table></figure>
+
+<p>需要的外部 API &#x2F; 凭证：</p>
+<p><img src="/images/HXLI4DDbEAE4wb5.png" alt="HXLI4DDbEAE4wb5"></p>
+<p>.env 示例（<strong>不要提交到任何仓库、不要发聊天</strong>）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">OPERATOR_API_KEY=sk-xxxx</span><br><span class="line">OPERATOR_BASE_URL=https://api.deepseek.com/v1</span><br><span class="line">OPERATOR_MODEL=deepseek-chat</span><br><span class="line">BURNER_PRIVATE_KEY=0x...</span><br><span class="line">POLY_API_KEY=...</span><br><span class="line">POLY_API_SECRET=...</span><br><span class="line">POLY_API_PASSPHRASE=...</span><br><span class="line">POLY_FUNDER=0x...</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-代码结构"><a href="#8-代码结构" class="headerlink" title="8. 代码结构"></a>8. 代码结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">polymarket/</span><br><span class="line">  config.py          # 读配置/凭证</span><br><span class="line">  ledger.py          # SQLite 账本（fills/positions/equity）</span><br><span class="line">  intel.py           # 多源情报裁决</span><br><span class="line">  event_think.py     # LLM 事件推理 + 概率</span><br><span class="line">  regime.py          # 市场状态</span><br><span class="line">  decision.py        # 准入门槛</span><br><span class="line">scripts/</span><br><span class="line">  news_scanner.py    # 新闻扫描 5min</span><br><span class="line">  macro_scan.py      # 宏观扫描 30min</span><br><span class="line">  value_bet_scanner.py</span><br><span class="line">  value_bet_bot.py   # 价值投注</span><br><span class="line">  lottery_bot.py     # 尾部彩票</span><br><span class="line">  live.py            # 做市（可关）</span><br><span class="line">  dashboard.py       # 面板 + API</span><br><span class="line">  sync_manual_trades.py</span><br><span class="line">  reconcile_live.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-LLM-事件推理（核心升级）"><a href="#9-LLM-事件推理（核心升级）" class="headerlink" title="9. LLM 事件推理（核心升级）"></a>9. LLM 事件推理（核心升级）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json, os, re, httpx</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">llm_probability</span>(<span class="params">dossier: <span class="built_in">dict</span></span>) -&gt; <span class="built_in">float</span> | <span class="literal">None</span>:</span><br><span class="line">    key = os.getenv(<span class="string">&quot;OPERATOR_API_KEY&quot;</span>, <span class="string">&quot;&quot;</span>).strip()</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> key:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    base = os.getenv(<span class="string">&quot;OPERATOR_BASE_URL&quot;</span>, <span class="string">&quot;https://api.deepseek.com/v1&quot;</span>).rstrip(<span class="string">&quot;/&quot;</span>)</span><br><span class="line">    model = os.getenv(<span class="string">&quot;OPERATOR_MODEL&quot;</span>, <span class="string">&quot;deepseek-chat&quot;</span>)</span><br><span class="line">    prompt = (</span><br><span class="line">        <span class="string">&quot;你是预测市场分析师。根据资料判断事件发生概率，输出 JSON：&quot;</span></span><br><span class="line">        <span class="string">&#x27;&#123;&quot;probability&quot;:0-1,&quot;reason&quot;:&quot;简短中文&quot;,&quot;catalysts&quot;:[&quot;...&quot;],&quot;falsifiers&quot;:[&quot;...&quot;]&#125;。&#x27;</span></span><br><span class="line">        <span class="string">&quot;只依据资料，不臆造。资料：&quot;</span> + json.dumps(dossier, ensure_ascii=<span class="literal">False</span>)[:<span class="number">6000</span>]</span><br><span class="line">    )</span><br><span class="line">    r = httpx.post(<span class="string">f&quot;<span class="subst">&#123;base&#125;</span>/chat/completions&quot;</span>,</span><br><span class="line">                   headers=&#123;<span class="string">&quot;Authorization&quot;</span>: <span class="string">f&quot;Bearer <span class="subst">&#123;key&#125;</span>&quot;</span>&#125;,</span><br><span class="line">                   json=&#123;<span class="string">&quot;model&quot;</span>: model,</span><br><span class="line">                         <span class="string">&quot;messages&quot;</span>: [&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: prompt&#125;],</span><br><span class="line">                         <span class="string">&quot;temperature&quot;</span>: <span class="number">0.2</span>, <span class="string">&quot;max_tokens&quot;</span>: <span class="number">400</span>&#125;, timeout=<span class="number">40</span>)</span><br><span class="line">    text = r.json()[<span class="string">&quot;choices&quot;</span>][<span class="number">0</span>][<span class="string">&quot;message&quot;</span>][<span class="string">&quot;content&quot;</span>]</span><br><span class="line">    m = re.search(<span class="string">r&quot;\&#123;.*\&#125;&quot;</span>, text, re.S)</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">float</span>(json.loads(m.group(<span class="number">0</span>))[<span class="string">&quot;probability&quot;</span>]) <span class="keyword">if</span> m <span class="keyword">else</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<p>dossier（资料）应包含：问题、阈值、现价、剩余天数、24h 动量、恐惧贪婪、新闻标题、市场赔率。</p>
+<h3 id="10-决策函数"><a href="#10-决策函数" class="headerlink" title="10. 决策函数"></a>10. 决策函数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">decide</span>(<span class="params">p_above, yes_price, chg24, fng_value</span>):</span><br><span class="line">    no_price = <span class="number">1</span> - yes_price</span><br><span class="line">    <span class="keyword">if</span> p_above &gt;= <span class="number">0.60</span> <span class="keyword">and</span> yes_price &lt;= p_above - <span class="number">0.05</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;BUY_YES&quot;</span>, <span class="built_in">min</span>(<span class="number">2.0</span>, <span class="number">4</span> * (p_above - yes_price))</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> - p_above) &gt;= <span class="number">0.60</span> <span class="keyword">and</span> no_price &lt;= (<span class="number">1</span> - p_above) - <span class="number">0.05</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;BUY_NO&quot;</span>, <span class="built_in">min</span>(<span class="number">2.0</span>, <span class="number">4</span> * ((<span class="number">1</span> - p_above) - no_price))</span><br><span class="line">    <span class="keyword">if</span> no_price &lt;= <span class="number">0.15</span> <span class="keyword">and</span> (chg24 &lt;= -<span class="number">1</span> <span class="keyword">or</span> fng_value &lt;= <span class="number">15</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;LOTTERY_NO&quot;</span>, <span class="number">1.2</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;SKIP&quot;</span>, <span class="number">0.0</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-下单（Polymarket-CLOB-V2）"><a href="#11-下单（Polymarket-CLOB-V2）" class="headerlink" title="11. 下单（Polymarket CLOB V2）"></a>11. 下单（Polymarket CLOB V2）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> py_clob_client_v2 <span class="keyword">import</span> ApiCreds, ClobClient, OrderArgs, PartialCreateOrderOptions</span><br><span class="line"></span><br><span class="line">client = ClobClient(</span><br><span class="line">    host=<span class="string">&quot;https://clob.polymarket.com&quot;</span>, chain_id=<span class="number">137</span>,</span><br><span class="line">    key=private_key, signature_type=<span class="number">2</span>, funder=funder,</span><br><span class="line">    creds=ApiCreds(api_key=..., api_secret=..., api_passphrase=...),</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">resp = client.create_and_post_order(</span><br><span class="line">    order_args=OrderArgs(token_id=token_id, price=<span class="number">0.117</span>, size=<span class="number">10.26</span>, side=<span class="string">&quot;BUY&quot;</span>),</span><br><span class="line">    options=PartialCreateOrderOptions(tick_size=<span class="string">&quot;0.01&quot;</span>, neg_risk=<span class="literal">False</span>),</span><br><span class="line">    order_type=<span class="string">&quot;GTC&quot;</span>,   <span class="comment"># 挂单；急成交用 FAK</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li>市价 BUY 最小 1 USDC，金额精度 2 位小数</li>
+<li>彩票单用 GTC + 限价，避免精度报错</li>
+<li>卖出同理，side&#x3D;”SELL”</li>
+</ul>
+<h3 id="12-定时任务（Windows）"><a href="#12-定时任务（Windows）" class="headerlink" title="12. 定时任务（Windows）"></a>12. 定时任务（Windows）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新闻扫描 每 5 分钟</span></span><br><span class="line">schtasks /create /tn <span class="string">&quot;PolymarketNewsScan&quot;</span> /tr <span class="string">&quot;wscript.exe //nologo F:\deepseek\polymarket-bot\scripts\run_hidden.vbs F:\deepseek\polymarket-bot\scripts\run_news_scan.ps1&quot;</span> /<span class="built_in">sc</span> minute /mo <span class="number">5</span> /f</span><br><span class="line"></span><br><span class="line"><span class="comment"># 宏观扫描 每 30 分钟</span></span><br><span class="line">schtasks /create /tn <span class="string">&quot;PolymarketMacroScan&quot;</span> /tr <span class="string">&quot;wscript.exe //nologo ...\run_hidden.vbs ...\run_macro_scan.ps1&quot;</span> /<span class="built_in">sc</span> minute /mo <span class="number">30</span> /f</span><br><span class="line"></span><br><span class="line"><span class="comment"># 手动交易同步 每 5 分钟</span></span><br><span class="line">schtasks /create /tn <span class="string">&quot;PolymarketManualSync&quot;</span> /tr <span class="string">&quot;wscript.exe //nologo ...\run_hidden.vbs ...\run_manual_sync.ps1&quot;</span> /<span class="built_in">sc</span> minute /mo <span class="number">5</span> /f</span><br><span class="line">run_hidden.vbs：</span><br></pre></td></tr></table></figure>
+
+<p>代码块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set s = CreateObject(&quot;WScript.Shell&quot;)</span><br><span class="line">s.Run WScript.Arguments(0), 0, False</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-面板开关-API"><a href="#13-面板开关-API" class="headerlink" title="13. 面板开关 API"></a>13. 面板开关 API</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">build_strategy_mode</span>():</span><br><span class="line">    <span class="keyword">return</span> json.loads((ROOT/<span class="string">&quot;data/strategy_mode.json&quot;</span>).read_text())</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">strategy_toggle</span>(<span class="params">name, on</span>):</span><br><span class="line">    mode = build_strategy_mode()</span><br><span class="line">    <span class="keyword">if</span> name == <span class="string">&quot;value&quot;</span>:</span><br><span class="line">        mode[<span class="string">&quot;value_bet&quot;</span>] = on</span><br><span class="line">        (ROOT/<span class="string">&quot;data/strategy_mode.json&quot;</span>).write_text(json.dumps(mode))</span><br><span class="line">        <span class="keyword">if</span> on:</span><br><span class="line">            subprocess.Popen([python, <span class="string">&quot;scripts/value_bet_bot.py&quot;</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            kill_process(<span class="string">&quot;value_bet_bot&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">&quot;ok&quot;</span>: <span class="literal">True</span>, <span class="string">&quot;mode&quot;</span>: mode&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前端两个开关（价差&#x2F;价值）调用 &#x2F;api&#x2F;strategy_toggle?name&#x3D;value&amp;on&#x3D;1。</p>
+<h3 id="14-系统组件与文件"><a href="#14-系统组件与文件" class="headerlink" title="14. 系统组件与文件"></a>14. 系统组件与文件</h3><p><img src="/images/HXLIhT-a0AAppRs.png" alt="HXLIhT-a0AAppRs"></p>
+<p>数据文件：</p>
+<ul>
+<li>data&#x2F;strategy_mode.json：策略开关</li>
+<li>data&#x2F;live_state.db：账本</li>
+<li>data&#x2F;value_bet_state.json、data&#x2F;lottery_state.json</li>
+<li>logs&#x2F;value_bet.log、logs&#x2F;lottery.log</li>
+</ul>
+<h3 id="15-面板怎么用"><a href="#15-面板怎么用" class="headerlink" title="15. 面板怎么用"></a>15. 面板怎么用</h3><p>打开 <a target="_blank" rel="noopener" href="http://127.0.0.1:8787/">http://127.0.0.1:8787/</a></p>
+<p>交易页工具栏：</p>
+<ul>
+<li><strong>交易总开关</strong>：启动&#x2F;停止 AI 交易</li>
+<li><strong>价差</strong>：做市策略开关（当前建议关）</li>
+<li><strong>价值</strong>：事件价值 + 彩票机器人开关</li>
+<li><strong>⟳ 同步账户</strong>：把手动交易、链上余额同步进账本</li>
+<li><strong>立即刷新</strong></li>
+</ul>
+<p>两个开关独立，建议一次只开一个。</p>
+<h3 id="16-升级对比（旧-→-新）"><a href="#16-升级对比（旧-→-新）" class="headerlink" title="16. 升级对比（旧 → 新）"></a>16. 升级对比（旧 → 新）</h3><p><img src="/images/HXLIZDKbYAA0Pfp.png" alt="HXLIZDKbYAA0Pfp"></p>
+<h3 id="17-最小可运行流程"><a href="#17-最小可运行流程" class="headerlink" title="17. 最小可运行流程"></a>17. 最小可运行流程</h3><ol>
+<li>配好 .env</li>
+<li>跑 news_scanner.py、macro_scan.py 确认抓得到数据</li>
+<li>跑 crash_scan.py 确认能列出机会</li>
+<li>跑 value_bet_scanner.py 确认有 edge 输出</li>
+<li>用只读&#x2F;小额验证</li>
+<li>开 1.2 USDC 彩票单试水</li>
+<li>看 logs&#x2F;lottery.log、面板成交</li>
+<li>有成交后跑 reconcile_live.py 对账</li>
+</ol>
+<h3 id="18-复刻最容易踩的坑"><a href="#18-复刻最容易踩的坑" class="headerlink" title="18. 复刻最容易踩的坑"></a>18. 复刻最容易踩的坑</h3><ol>
+<li><strong>私钥&#x2F;API key 泄露</strong>：只放 .env，不提交、不发聊天</li>
+<li><strong>签名类型</strong>：代理钱包常用 signature_type&#x3D;2，错了报 invalid signature</li>
+<li><strong>neg_risk</strong>：部分市场要 neg_risk&#x3D;True，从 Gamma 市场字段读</li>
+<li><strong>最小单</strong>：市价单最低 1 USDC，金额精度 2 位</li>
+<li><strong>结算源</strong>：BTC 日线市场看币安 1 分钟收盘价，不是 Coinbase</li>
+<li><strong>时区</strong>：结算 ET 正午 &#x3D; 北京次日 01:00</li>
+<li><strong>手续费</strong>：taker 有费，maker 0；小价差策略会被费吃光</li>
+<li><strong>过度拟合</strong>：别拿回测当实盘，先小仓验证</li>
+</ol>
+<h3 id="19-每日流程"><a href="#19-每日流程" class="headerlink" title="19. 每日流程"></a>19. 每日流程</h3><p><strong>早上</strong></p>
+<ol>
+<li>看面板权益、持仓、成交</li>
+<li>看 reports&#x2F;intel&#x2F;news.md、macro.md</li>
+<li>看彩票&#x2F;价值机器人日志</li>
+</ol>
+<p><strong>触发条件出现时</strong></p>
+<ul>
+<li>暴跌&#x2F;极度恐惧 → 检查彩票仓位</li>
+<li>大新闻 → 让 LLM 重新评估相关持仓</li>
+</ul>
+<p><strong>晚上</strong></p>
+<ul>
+<li>21:00 巡检报告</li>
+<li>复盘当天交易：赢在哪、输在哪、概率判断是否偏差</li>
+</ul>
+<h3 id="20-铁律"><a href="#20-铁律" class="headerlink" title="20. 铁律"></a>20. 铁律</h3><ol>
+<li>单笔不超过 2 USDC，彩票不超过 1.2 USDC</li>
+<li>概率 40%~60% 不交易</li>
+<li>不因为”跌得猛”就重仓</li>
+<li>出现反证立刻退出，不补仓摊平</li>
+<li>不把 API key&#x2F;私钥发到聊天里</li>
+<li>亏损后不急着回本，先停一天</li>
+<li>记录每笔交易的理由，方便复盘</li>
+</ol>
+<h3 id="21-快速命令"><a href="#21-快速命令" class="headerlink" title="21. 快速命令"></a>21. 快速命令</h3><p>powershell</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd F:\deepseek\polymarket-bot</span><br><span class="line"></span><br><span class="line">.\.venv\Scripts\python.exe scripts\news_scanner.py</span><br><span class="line">.\.venv\Scripts\python.exe scripts\macro_scan.py</span><br><span class="line">.\.venv\Scripts\python.exe scripts\value_bet_scanner.py</span><br><span class="line">.\.venv\Scripts\python.exe scripts\crash_scan.py</span><br><span class="line">.\.venv\Scripts\python.exe scripts\sync_manual_trades.py --days 2</span><br><span class="line">.\.venv\Scripts\python.exe scripts\reconcile_live.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="22-下一步可升级"><a href="#22-下一步可升级" class="headerlink" title="22. 下一步可升级"></a>22. 下一步可升级</h3><ul>
+<li>更多事件类型：选举、体育、宏观数据（非农&#x2F;CPI）</li>
+<li>用历史结算数据校准概率模型（Brier score）</li>
+<li>接入期权隐含波动率，替代已实现波动</li>
+<li>多市场套利：同一事件不同档位&#x2F;日期之间的定价偏差</li>
+<li>自动生成每日复盘报告</li>
+</ul>
+<h3 id="上车的乘客请注意！！！！！"><a href="#上车的乘客请注意！！！！！" class="headerlink" title="上车的乘客请注意！！！！！"></a>上车的乘客请注意！！！！！</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/15/chenke20266-2121987007333441920/">https://yaoav.github.io/2026/11/15/chenke20266-2121987007333441920/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/chenke20266/">@chenke20266</a></div><div class="post-share"><div class="social-share" data-image="/images/2121987007333441920-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/15/Elicellove-2121993132850266518/" title="银行上涨之谜"><img class="cover" src="/images/2121993132850266518-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">银行上涨之谜</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Elicellove（elise） 的长文，原文链接，版权归原作者所有。  近期银行股相对大盘持续逆势上涨，我自己从6月份起也是配置了一半银行+一半煤炭（还有少量海狗），简单说一下银行这么强势的原因：  过去20年，31个一级行业里，银行业是唯一的一个，利润每年都是赚钱的，哪怕在2008年和2020年都是。放贷要消耗资本，补资本最核心的渠道是利润留存，所以监管有充分理由保住银行体系安全  利润增速波动率比实体行业低得多，长期业绩增长更可靠，何况还有行业拨备覆盖率可以平滑盈利波动  历史高股东回报，大部分是股息贡献，未来还可以持续  而且银行分红率并不高，全行业只有29%，排名倒数第三。在核心一级资本充足率不变、资产结构稳定、不考虑外部股权融资和其他综合收益变动的假设下，通过分析其长期ROE底部、长期风险加权资产增速水平，倒算出其长期分红率较当前水平仍有提升空间，参考2024年国外大型银行平均分红可以达到80%附近，国内银行股分红率肯定有缓慢提升空间。所以银行分红不仅稳，而且还有上升空间，这对长线资金来说，预期很关键。     2022年底至今十年国债利率...</div></div></div></a><a class="pagination-related" href="/2026/11/15/Elicellove-2121964338718351432/" title="芒格：我这一生离婚、丧子、失明、腰斩，但我都熬过来了"><img class="cover" src="/images/2121964338718351432-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">芒格：我这一生离婚、丧子、失明、腰斩，但我都熬过来了</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Elicellove（elise） 的长文，原文链接，版权归原作者所有。  2023 年 11 月，99 岁的芒格上了 Acquired 播客。那是他最后一次公开长谈，几天后人就走了。 一个离过婚、送走过儿子、瞎过一只眼、被市场摁下去过两次的人，那天聊的不是他自己。 主持人问他，你在大公司上下重注，有什么建议。 他答： 我一生中只做过一两次大获成功，仅此而已。我又没做过一百次。 一个被全世界研究了半辈子「怎么变聪明」的人，最后交出来的答案是「我只赢过一两次」。 这句话很容易被当成谦虚，或者被读成「少即是多」这种鸡汤。但它其实是个算术问题：如果一个人一辈子只有一两次真正的大成功，那他其余那些年都在干什么？他靠什么保证那一两次不出错？ 一、先看这句话是在什么底子上说的 1953 年，他 29 岁，离婚。那个年代这是件挺严重的事。他几乎净身出户，从自己亲手设计的大房子搬进一间廉价单身公寓，开一辆漆皮剥落的二手庞蒂亚克。 紧接着，8 岁的儿子泰迪查出白血病。那个年代儿童白血病基本等于判决书。他白天穿西装上法庭挣钱，傍晚准时出现在病房，抱着瘦得几乎透明的儿子在走廊...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/15/chenke20266-2121957966756622763/" title="一晚上从零搭好 Grok Bot：完整配置 + 一套可直接复制的跑路盘过滤器"><img class="cover" src="/images/2121957966756622763-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">一晚上从零搭好 Grok Bot：完整配置 + 一套可直接复制的跑路盘过滤器</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  大多数人认识 Grok Bot，是从别人晒的盈亏截图开始：打开它、丢给它一张 K 线图，然后把第一个 50美元亏在一枚「买入前就已经凉了」的币上。机器人不是问题所在——没人告诉过它「凉了」长什么样。  如果今晚让我从头再来，我会照这套搭：一个 bot，一个文件夹，十个小文件。它不找百倍币，它的主要工作是杀掉代币；侥幸活下来的那几个，还得先让Grok读一遍 X，一分钱才能动。 01–07是第一个晚上：机器人、密钥、限额、离场。08–12是跑路过滤器，14 项检查，每一项都写成代码。13和14把它设成自动跑，先跑纸面。 如果你看过我那篇「八个智能体交易台」，这篇就是那张台子的地基。 怎么用：打开你的 Grok Bot，把整篇文章粘进去，说一句「在 &#x2F;workspace&#x2F;desk 里把这套台子搭出来，纸面模式，任何碰钱包的动作先问我」。它会在自己的电脑上把每个文件写出来。 你要守住的分工：代码杀，Grok读 X，你签字。台子上没人干别人的活。  01. 开始之前准...</div></div></div></a><a class="pagination-related" href="/2026/11/05/chenke20266-2118011377998835792/" title="Polymarket 自动交易机器人创建方法"><img class="cover" src="/images/2118011377998835792-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-05</div><div class="info-item-2">Polymarket 自动交易机器人创建方法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  一个可插拔策略、带完整风控、默认纸面模拟的Polymarket交易机器人。 先纸面&#x2F;回测跑通，再手动开实盘。默认状态下它不会动你一分钱。 0. 先说清楚风险（真的请读完）预测市场是 0&#x2F;1 结算：仓位不是”浮亏”，而是可能直接归零。自动交易程序能做的只是 “按规则执行 + 限制损失规模”，不能保证盈利，也不能避免亏损。 2026 年Polymarket的真实成本结构（实测自 API）：  实测结论（2026-11-04，扫描前 80 个市场）：二元Yes+No套利在扣手续费后全部为负 （约 -10bps）。也就是说：网上教程里”买Yes+买 No稳赚”的说法在当前费率下基本不成立。 negRisk 篮子套利偶尔有空间，但深度很小、且必须拿到事件的全部腿。  1. 它能做什么12345678910111213              ┌──────────────┐Gamma API ───▶│ 市场发现/筛选 │──┐CLOB REST ───▶│ 订单簿...</div></div></div></a><a class="pagination-related" href="/2026/10/24/chenke20266-2113664180385686006/" title="如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统"><img class="cover" src="/images/2113664180385686006-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-24</div><div class="info-item-2">如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  98% 的 pumpfun 代币从来没离开过联合曲线（bonding curve）。 大多数交易者亏在那里，原因只有一个：他们只有 4 秒做决定，一个人，K 线还在耳边尖叫。  Claude 治不好你的进场点，但它治得了那 4 秒。 它会读你跳过没看的持仓分布，会查你忘掉的 dev 钱包，会把你凌晨两点破的那条规矩写下来，周日再摆到你面前。  这是完整的搭建方法：终端、工作流、提示词、表格。全部抄走。 第一部分 为什么大多数终端玩家一直在流血标准配置长这样： 1 个终端。6 个标签页。3 个 Telegram 群。0 条写下来的规则。 一个币 11 分钟拉了 +300%，你在顶部买入。90 秒内砸掉 80%。你跟自己说：运气不好。 不是运气。是漏了 3 项检查：  速度不是你的问题，漏检才是。 第二部分 工具栈你需要 4 层。它们都不替 Claude 下单。Claude 永远碰不到你的私钥。 保住账户的那条规矩： Claude 负责分析，你负责点鼠标。 永远不要把助记词或私钥贴...</div></div></div></a><a class="pagination-related" href="/2026/10/22/chenke20266-2113293947422544121/" title="扫描 验证 执行 退出 构建一个GROK机器人交易平台"><img class="cover" src="/images/2113293947422544121-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-22</div><div class="info-item-2">扫描 验证 执行 退出 构建一个GROK机器人交易平台</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  交易台上最好的BOT，从来不下单。它的唯一工作是说“不”。 大多数人第一次做交易机器人时，都会把所有事塞进一个提示词：找币、检查、买入、卖在高点。前几天可能有点效果，但很快就会买入一个已经死掉的币，然后你完全分不清是提示词哪一步出了问题。 真正的解决办法不是换更聪明的模型，而是把交易拆成一个“交易台”。每笔交易都必须走完四个固定步骤：SCAN（扫描）→ VERIFY（验证）→ EXECUTE（执行）→ EXIT（退出）。每个步骤由不同的角色负责，没有人能跳过，也没有“就这一次”的例外。 在一个正常运转的交易台上，绝大多数任务最终都会以“跳过”结束。扫描器每天能找到几百个交易对，验证环节会免费淘汰掉绝大部分，真正留下来的少数币再根据当前余额决定仓位大小。小交易始终保持小规模，赢的才会复利。 截图里那几笔交易只是结果。真正重要的是背后那套让大部分交易保持小规模、甚至直接跳过的系统。 怎么使用这套框架 打开你的 Grok Bot，把整篇文章贴进去，然后说：  在 &#x2F;work...</div></div></div></a><a class="pagination-related" href="/2026/11/11/chenke20266-2120542381946847608/" title="空投机器人：我把每天领水做成了一条流水线（3 天真实运行记录）"><img class="cover" src="/images/2120542381946847608-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-11</div><div class="info-item-2">空投机器人：我把每天领水做成了一条流水线（3 天真实运行记录）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  我把前几天那Polymarket机器人改了下，这个还是AI给我的，它觉得这样最务实。于是我就改下，还跑了几天  我想要的不是「自动赚钱」，是「不用每天早上想着今天该领哪个水」。先说结论：能自动的只有「检查」和「打开页面」，真正决定成败的三步必须你亲手做。这不是技术做不到，是安全边界——一旦越过，被偷的不是一次空投，是钱包里的全部。 一、先划边界：哪些能自动，哪些不能做这类工具，第一件事不是写代码，是列清楚边界。我的划分：  关键认知：「打开页面」是自动化的极限。再往后一步是签名，那一步交出去，工具就从「助手」变成「风险」。 二、两个 JSON 就是全部配置整套系统没有数据库，只有两个文件： data&#x2F;projects.json —— 项目注册表： 123456789101112&#123;  &quot;projects&quot;: [    &#123;      &quot;id&quot;: &quot;push&quot;,      &quot;name&...</div></div></div></a><a class="pagination-related" href="/2026/08/20/chenke20266-2090130749768786050/" title="Grok Bot Agents: Build 24&#x2F;7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)"><img class="cover" src="/images/2090130749768786050-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-20</div><div class="info-item-2">Grok Bot Agents: Build 24&#x2F;7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Are you unsure whether to read this article? Well, take a look below: **I don’t think you have any more questions XD**@bot  is something that will literally change your life, and this step-by-step guide will show you exactly how to do it! **before the alpha -  subscribe to my substack for more fresh alpha - **https://substack.com/@0xcodila According to the official Grok Bot page, Bots can operate from their own computers, sign in to your too...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E5%8E%9F%E7%90%86%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text">第一部分：原理篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%99%E5%A5%97%E7%B3%BB%E7%BB%9F%E8%B5%9A%E4%BB%80%E4%B9%88%E9%92%B1"><span class="toc-number">1.1.</span> <span class="toc-text">1. 这套系统赚什么钱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%97%A7%E7%89%88%E6%9C%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">2. 旧版本为什么亏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E6%80%BB%E8%A7%88%EF%BC%88%E4%BA%94%E5%B1%82%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">3. 系统总览（五层）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%80%8E%E4%B9%88%E6%83%B3%EF%BC%88%E6%80%9D%E8%80%83%E6%A1%86%E6%9E%B6%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">4. 怎么想（思考框架）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%80%8E%E4%B9%88%E5%86%B3%E7%AD%96%EF%BC%88%E6%A6%82%E7%8E%87%E4%B8%8E%E5%85%AC%E5%BC%8F%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">5. 怎么决策（概率与公式）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%B8%A4%E7%A7%8D%E4%BA%A4%E6%98%93%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.6.</span> <span class="toc-text">6. 两种交易模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9A%E5%AE%9E%E7%8E%B0%E7%AF%87"><span class="toc-number">2.</span> <span class="toc-text">第二部分：实现篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%8E%AF%E5%A2%83%E4%B8%8E%E4%BE%9D%E8%B5%96"><span class="toc-number">2.1.</span> <span class="toc-text">7. 环境与依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">8. 代码结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-LLM-%E4%BA%8B%E4%BB%B6%E6%8E%A8%E7%90%86%EF%BC%88%E6%A0%B8%E5%BF%83%E5%8D%87%E7%BA%A7%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">9. LLM 事件推理（核心升级）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%86%B3%E7%AD%96%E5%87%BD%E6%95%B0"><span class="toc-number">2.4.</span> <span class="toc-text">10. 决策函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%B8%8B%E5%8D%95%EF%BC%88Polymarket-CLOB-V2%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">11. 下单（Polymarket CLOB V2）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%EF%BC%88Windows%EF%BC%89"><span class="toc-number">2.6.</span> <span class="toc-text">12. 定时任务（Windows）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E9%9D%A2%E6%9D%BF%E5%BC%80%E5%85%B3-API"><span class="toc-number">2.7.</span> <span class="toc-text">13. 面板开关 API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E7%B3%BB%E7%BB%9F%E7%BB%84%E4%BB%B6%E4%B8%8E%E6%96%87%E4%BB%B6"><span class="toc-number">2.8.</span> <span class="toc-text">14. 系统组件与文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E9%9D%A2%E6%9D%BF%E6%80%8E%E4%B9%88%E7%94%A8"><span class="toc-number">2.9.</span> <span class="toc-text">15. 面板怎么用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-%E5%8D%87%E7%BA%A7%E5%AF%B9%E6%AF%94%EF%BC%88%E6%97%A7-%E2%86%92-%E6%96%B0%EF%BC%89"><span class="toc-number">2.10.</span> <span class="toc-text">16. 升级对比（旧 → 新）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-%E6%9C%80%E5%B0%8F%E5%8F%AF%E8%BF%90%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">2.11.</span> <span class="toc-text">17. 最小可运行流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-%E5%A4%8D%E5%88%BB%E6%9C%80%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E5%9D%91"><span class="toc-number">2.12.</span> <span class="toc-text">18. 复刻最容易踩的坑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-%E6%AF%8F%E6%97%A5%E6%B5%81%E7%A8%8B"><span class="toc-number">2.13.</span> <span class="toc-text">19. 每日流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-%E9%93%81%E5%BE%8B"><span class="toc-number">2.14.</span> <span class="toc-text">20. 铁律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E5%BF%AB%E9%80%9F%E5%91%BD%E4%BB%A4"><span class="toc-number">2.15.</span> <span class="toc-text">21. 快速命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%8F%AF%E5%8D%87%E7%BA%A7"><span class="toc-number">2.16.</span> <span class="toc-text">22. 下一步可升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E8%BD%A6%E7%9A%84%E4%B9%98%E5%AE%A2%E8%AF%B7%E6%B3%A8%E6%84%8F%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">2.17.</span> <span class="toc-text">上车的乘客请注意！！！！！</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

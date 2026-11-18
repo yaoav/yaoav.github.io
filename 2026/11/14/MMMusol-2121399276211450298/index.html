@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>价格与消息的纠缠 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="（本文是在旅途中手打草稿后交给ChatGPT捋顺了一遍语法和逻辑生成的，所以语气非常的“AI味儿”，但我阅读完全文确实是我要表达的意思，所以就懒得计较这些了，介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="价格与消息的纠缠">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/14/MMMusol-2121399276211450298/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="（本文是在旅途中手打草稿后交给ChatGPT捋顺了一遍语法和逻辑生成的，所以语气非常的“AI味儿”，但我阅读完全文确实是我要表达的意思，所以就懒得计较这些了，介">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121399276211450298-cover.jpg">
+<meta property="article:published_time" content="2026-11-14T08:26:15.000Z">
+<meta property="article:modified_time" content="2026-11-16T07:23:22.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@MMMusol">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121399276211450298-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "价格与消息的纠缠",
+  "url": "https://yaoav.github.io/2026/11/14/MMMusol-2121399276211450298/",
+  "image": "https://yaoav.github.io/images/2121399276211450298-cover.jpg",
+  "datePublished": "2026-11-14T08:26:15.000Z",
+  "dateModified": "2026-11-16T07:23:22.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/14/MMMusol-2121399276211450298/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '价格与消息的纠缠',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121399276211450298-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">价格与消息的纠缠</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">价格与消息的纠缠</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-14T08:26:15.000Z" title="发表于 2026-11-14 08:26:15">2026-11-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@MMMusol（Musolsol.𝟎𝐱𝐔）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121399276211450298">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>（本文是在旅途中手打草稿后交给ChatGPT捋顺了一遍语法和逻辑生成的，所以语气非常的“AI味儿”，但我阅读完全文确实是我要表达的意思，所以就懒得计较这些了，介意的可以滑走。）</p>
+<p>一、基本假设</p>
+<p><strong>市场中的成交与价格的运动并不纯粹的随机游走。</strong></p>
+<p>如果我们无法在这一点上达成共识，你没有继续阅读这篇文章的理由。无论是短线的投机交易，还是长期的投资与配置，我们首先要承认，市场有一套价格形成的机制。参与者的行为虽然受到信息、预期、资金和风险偏好等不同因素的影响，但这些行为相互作用之后形成的价格，并不是凭空产生的。</p>
+<p>如果价格完全不受任何可以识别的经济机制影响，过去与现在的信息也无法为未来的收益分布提供任何判断依据，那么我们寻找交易优势的努力就失去了基础，不如去赌场来一把猜大小。即使是长期投资者中常常把短期的投机看作赌博行为——因为在越小的时间周期上的博弈越呈现非理性的特征与噪音大于信号的特质——他们也是相信在自己投资的更长的时间周期内，价格会随着理性回归而走向更符合实际的位置，或许是更高（买入低估的资产等待升值），或许是更低（抛出高估的资产等待狂热褪去），或许是某种比值回归基准线（如金油比BTC&#x2F;ETH汇率），等等。首先，我们相信市场有效，起码在你认可的时间周期内有效，才选择开始寻找可以获利的标的。</p>
+<p>当然，这些判断都可能出错。合理估值不是一个固定的数字，相对价值关系也不存在必然回归的保证。但无论采用哪一种方法，投资者至少都在尝试建立某种关于价格形成及其未来变化的判断。</p>
+<p>但价格的运动究竟是如果发生的呢？</p>
+<p>我们都知道有基本面或者共识来支撑一个标的，作为“锚”。对公司股票来说，公司的业绩以及对未来的展望可以为这个“锚”提供一定的参考。但拿这个套入市场，又会发现它在绝大部分时间都是不准确的。很少时间里一家公司的股票价格是完完全全符合估值模型的，绝大部分时间里，要么低估，要么高估。</p>
+<p>当然，估值模型有很多种，也没有哪个估值模型可以宣称自己是完美的。对与错不仅要交给市场去验证，还要依靠时间来反复验证。我们认为错误的是市场价格，最终也可能是自己的估值模型。筹码结构、资金流向、流动性、叙事、预期、风险偏好，乃至市场参与者自身的交易约束，都可能对价格产生影响。基本面的变化很难一夜之间翻天覆地，一家工厂昨天生产了多少产品，今天生产了多少产品，通常不会有翻天覆地的区别。公司的生产设备不会一夜之间消失，管理层也未必突然改变了经营战略，但它的股票价格却可能在一夜之间暴涨或者暴跌。</p>
+<p>这并不一定意味着市场疯了，也不意味着一定有人在背后操纵价格。</p>
+<p>因为股票价格所反映的，从来不只是公司此刻生产了多少产品、拥有多少资产，也包括参与者对于公司未来的判断，以及他们此时此刻愿意以什么价格买入或卖出。</p>
+<p><strong>基本面可以相对稳定，但市场对于基本面的预期、参与者的持仓结构，以及愿意提供的流动性，却可以在很短的时间内发生剧烈变化。</strong></p>
+<p>所以，价格实际上是在上述一切因素，以及更多我没有提及的因素共同作用下，由参与该标的交易的不同主体不断博弈形成的结果。</p>
+<p>这里还需要强调一点：价格是博弈的结果，并不意味着价格一定合理。我们承认价格形成存在可以分析的机制，不等于承认每一个时刻的市场价格都正确。</p>
+<p>去展开说，这个问题有方方面面可以聊。单是价格发现、风险溢价、流动性以及不同时间尺度下的市场有效性，就足以分别写出很长的文章。</p>
+<p>但我们今天先把问题放小一点，着重聊一聊“消息”对价格的影响，以及我们应该如何理解两者之间的关系。</p>
+<p><strong>究竟是消息推动了价格，还是价格的变化促使我们开始寻找消息？</strong></p>
+<p>很多人习惯于在价格发生剧烈变化之后，寻找一条能够解释行情的新闻。而当新闻无法给出令人满意的解释时，又会把原因归结于某个拥有信息优势、甚至能够操纵市场的主体。“华尔街”、“做市商”、“主力”、“庄家”……你一定听过它各种各样的名字。这样的思路，把价格、消息与交易行为之间复杂的相互作用，简化成一个看似合理、却未必能够验证的因果故事。好处则是，它可以让我们的亏损变得心安理得，毕竟“都是xxx的操控与阴谋”。</p>
+<p>但我们应当在继续往下讨论前达成一点共识：在美股指数、黄金、BTC这种成交量巨大的标的中，即使在极短的时间窗口有价格的操纵行为，他们的力量也是非常有限的。例如，当某个主体试图通过集中买入推动价格时，其他参与者可能因为价格上涨而增加卖出意愿，也可能主动提供流动性、调整对冲头寸，或者在其他关联市场建立反向敞口。博弈足够的充分、参与者足够的复杂的前提下，市场不存在一个个人的、主观的意志，而是一个共同决定出来的结果。任何一个影响力巨大的个体，其力量依然有可能被市场所吸收，从而呈现出一些所谓“反直觉”的价格行为，利空不跌，利好不涨。甚至利空反而涨，利好反而跌。</p>
+<p><strong>市场不是一个人的交易账户，也不存在一个能够始终凌驾于所有参与者之上的主观意志。</strong></p>
+<p>价格与消息之间，并非简单的线性关系，而是复杂的反馈系统。消息是系统的一项输入，系统中存在各方力量对消息的解读与对当下环境的判断，叠加各方利益的诉求与可提供的筹码，全部进行换手与博弈，推动价格向共识更强的方向去运动，这才是消息面对价格驱动的真相。<strong>价格反映的是边际交易需求与可用流动性之间的关系，而不是简单的多空人数投票，或者乐观与悲观态度的分歧。</strong></p>
+<p>二、非对称博弈与反身性</p>
+<p>这里我们还需要引入一个新的概念：<strong>市场中的每一个参与者，实际上都在进行一场信息不对称的博弈。</strong></p>
+<p>没有任何一个参与者掌握全部的信息，也没有任何人能够百分之百地确定未来会发生什么。每个人都只能基于自己能够获取的信息、对信息的理解，以及自身的资金和风险约束，作出相应的判断。即使两个人掌握完全相同的公开信息，也可能得出截然相反的结论，更何况市场参与者之间的信息本来就是不对称的。</p>
+<p>甚至那些真正拥有信息优势的内幕人士，也不能完全脱离这套博弈机制。假设某个人提前知道了一项即将公布的重大利空消息，他当然可能比其他人拥有更高的胜率，但他依然需要通过实际的交易来实现获利。他需要卖出持仓，或者建立空头敞口，而这些行为本身就会改变市场中的供需关系，进而影响价格。</p>
+<p><strong>信息优势并不意味着交易行为可以不留下痕迹。</strong> 一个知情者试图利用信息优势获利，其产生的订单流可能被其他市场参与者观察到。其他人虽然不知道他掌握了什么信息，却可能通过异常的成交量、价格变化、订单流或者跨市场的联动，察觉到某些不同寻常的事情，并据此调整自己的仓位。</p>
+<p>于是，一个人的信息优势通过交易行为部分转化成了其他人可以观察到的市场信息。而其他参与者对这些信息作出的反应，又会反过来改变最初知情者面对的市场环境。</p>
+<p>这也是为什么我前面强调，市场不是由某个主体的意志单方面决定的。即使有人提前知道了某个重大事件，也不意味着他可以完全控制价格将如何反应，更不意味着其他参与者只能被动地等待消息公布。信息优势可能带来交易优势，但这种优势同样需要在市场的博弈中兑现。</p>
+<p>反过来说，当价格开始出现一些超出我们预期的运动时，我们当然可以合理地怀疑，是不是某些参与者掌握了我们不知道的信息。</p>
+<p>但这种怀疑与确认之间，存在很长的距离。</p>
+<p>我们不知道这些潜在的信息究竟是什么，不知道掌握信息的人有多少，不知道市场是否已经部分消化了这些信息，也不知道相关事件究竟需要多长时间才能真正发生。甚至连我们最初的怀疑是否正确，都无法确定。所谓的异常价格行为，也完全可能来自某个大型机构的仓位调整、流动性的突然变化，或者一连串与消息毫无关系的被动交易。</p>
+<p>然而，这并不意味着我们应该忽略这些异常。</p>
+<p><strong>因为市场本来就是一场信息不对称的博弈，而价格行为本身，也是我们能够获得的信息之一。</strong></p>
+<p>这有点像在牌桌上打扑克。你不知道对手的底牌，也不知道他是否真的拿到了好牌。但当一个此前始终表现谨慎的对手突然大幅加注时，即使你没有看到他的牌，你也获得了一条新的信息。</p>
+<p>这个加注可能意味着他拿到了好牌，也可能只是一次诈唬，甚至可能是他对你的牌力作出了错误判断。但无论如何，加注这个行为是真实发生的，它改变了你对于对手可能持有什么牌的判断，也改变了你接下来需要面对的决策。</p>
+<p>市场也是如此。</p>
+<p>价格突然下跌，并不能证明有人提前知道了利空；成交量突然放大，也不能证明某个机构正在出货。但这些行为的出现，至少意味着市场中某些参与者正在以真实的资金表达自己的判断，或者被迫调整自己的风险敞口。</p>
+<p>我们不知道他们为什么这样做，但我们可以观察他们做了什么，以及其他参与者如何回应他们的行为。</p>
+<p><strong>所以，价格行为并不一定能够告诉我们市场中发生了什么，却能够告诉我们市场正在如何应对某些我们可能尚未理解的变化。</strong></p>
+<p>这里的关键，并不是把每一次异常波动都想象成内幕交易的证据，而是承认自身信息的局限性，同时把其他参与者通过真实交易表达出来的行为，纳入自己的判断。我们不需要知道牌桌上每个人的底牌，才能决定自己是否应该跟注。同样，我们也不需要提前知道每一条消息，才能根据市场已经展现出来的价格行为，调整自己的交易决策。</p>
+<p>只不过，我们始终要记得：<strong>对手的加注是一条信息，而不是他一定拿到了好牌的证明。</strong></p>
+<p>三、结语</p>
+<p>最后，回到今天美股尾盘的异常波动，以及收盘后期货市场的进一步下跌。</p>
+<p>我们当然可以怀疑，是不是有某些参与者提前知道了周末可能发生的事情，并且正在通过交易调整自己的风险敞口。但我们同样需要承认，这种价格行为也可能完全来自市场内部的资金流动、仓位调整与流动性变化。究竟是哪一种原因，至少在目前，我们没有足够的信息作出判断。</p>
+<p>如果周末真的发生了某项重大事件，我们很容易回过头来，把周五的下跌解释成知情资金的提前行动；如果周末什么都没有发生，我们又可以用获利了结、避险情绪或者期权对冲来解释同一段行情。</p>
+<p>但这恰恰是我写这篇文章想讨论的问题：<strong>我们究竟是在通过消息理解价格，还是在通过已经发生的价格，为市场编写一个看似合理的故事？</strong></p>
+<p>我并不是说消息不重要，更不是说我们不应该尝试理解价格运动背后的原因。恰恰相反，理解消息如何改变预期、仓位和交易行为，是理解市场的重要组成部分。但我们必须始终区分，什么是已经观察到的事实，什么是基于事实作出的推测，以及什么只是事后拼凑出来的解释。</p>
+<p>交易从来不是一场要求我们掌握全部信息、看穿所有参与者意图之后才能开始的游戏。我们面对的始终是一个信息不完全、参与者不断调整自身判断的市场。我们可以研究消息，可以分析价格，可以根据异常行为推测潜在的信息优势，但不应该把自己的推测当成已经得到验证的事实。</p>
+<p><strong>价格行为是信息，但不是答案；消息可以解释价格，却不一定是价格运动的全部原因。</strong></p>
+<p>对于交易者来说，重要的不是为每一次涨跌找到一个令人满意的理由，而是在信息不完全的情况下，持续根据市场提供的新证据修正自己的判断，并为判断错误的可能性付出可控的代价。</p>
+<p>毕竟，我们不需要知道牌桌上每个人拿着什么牌，也不需要证明对手为什么突然加注。<strong>我们只需要理解，这一次加注如何改变了我们面对的局面，以及自己是否还有理由继续留在牌桌上。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/14/MMMusol-2121399276211450298/">https://yaoav.github.io/2026/11/14/MMMusol-2121399276211450298/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MMMusol/">@MMMusol</a></div><div class="post-share"><div class="social-share" data-image="/images/2121399276211450298-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img class="cover" src="/images/2121464710088516066-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  导言（万字预警，建议收藏） 耐心看完下面内容，你将轻松上手闲鱼 闲鱼上把一件东西卖出去不难，难的是把它变成一门能持续、不封号、算得清账的小生意。 这份攻略面向没有货源、没有团队、也没有启动资金的普通人，把闲鱼倒卖拆成一条可以照着走的路径。哪些钱普通人能赚、每一步具体做什么、做到什么程度算做对了、什么情况下应该收手。 在动手之前，先把三条判断记住，后面所有章节都是它们的展开。  **闲鱼倒卖赚的是“筛选 + 服务 + 履约” 的钱，不是信息差暴利。**信息差存在，但会被大量同行迅速抹平；能长期留下来的，是把选品、拍摄、描述、回复、发货这些琐碎环节做得比别人稳的人。**新手亏钱的主因不是不会卖，而是选错品类、算错成本、踩平台红线。**这三件事都可以在动手前用半小时规避。**起步阶段最该做的不是囤货，而是把一单的完整闭环跑通。**从发布到签收的每个环节都标准化的那天，你才有资格谈加量。  全文按行动顺序组织：先算账和定模式，再开号、选品、找货，然后是拍照、标题、详情、定价、发布、履约、...</div></div></div></a><a class="pagination-related" href="/2026/11/14/github-2121342281865154923/" title="The cheapest way to run GrokBot: The manager and worker split (Send this to you @bot)"><img class="cover" src="/images/2121342281865154923-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">The cheapest way to run GrokBot: The manager and worker split (Send this to you @bot)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @github（GitHub） 的长文，原文链接，版权归原作者所有。  A Grok Bot does two kinds of work: deciding and doing. They both come down to the model underneath and right now GrokBot is at the frontier of Cloud hosted agent intelligence. We also know that GrokBot comes with some usage issues. So we found a way to let GrokBot do the deciding while other agents do the heavy lifting. Thankfully, we have incredible teams like @OpenBot_ building products we can use to make the most out of our AI usage. How do w...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/05/14/MMMusol-2054789628016931253/" title="美股防守指南：当巴菲特囤了3970亿现金，聪明钱在告诉我们什么"><img class="cover" src="/images/2054789628016931253-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-05-14</div><div class="info-item-2">美股防守指南：当巴菲特囤了3970亿现金，聪明钱在告诉我们什么</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @MMMusol（Musolsol.𝟎𝐱𝐔） 的长文，原文链接，版权归原作者所有。  一个反常的老人 2026年春天，全世界最会赚钱的男人正在做一件让所有人困惑的事情。 巴菲特的伯克希尔·哈撒韦，现金储备再次刷新历史纪录。不是在买入，而是在持续减持——远离 AI 热点、抛售高位科技资产、疯狂囤积现金。与此同时，他加码的全是那些无聊至极的东西：公用事业、消费必需品、保险浮存金。  巴菲特指标（也就是美股总市值&#x2F;GDP）截至2026年5月已突破200%，远超2000年互联网泡沫时的峰值。巴菲特本人称这是“衡量市场估值最好的单一指标”。 同一时间线上，我们打开朋友圈、小红书、雪球，满屏是同一种画风——“英伟达 yyds”“闪迪一年40倍财富自由”“现在不买以后哭着求上车”。 看到这种氛围，后脖颈不免有些发凉。 一边是94岁的股神在静静地卖出、囤现金；一边是无数散户摩拳擦掌、争先恐后地高位进场。 两种完全相反的操作，到底谁才是最后的赢家？ 杰西·利弗莫尔在《股票作手回忆录》里写过一句话：**“华尔街不会变，因为人性不会变。” **每一轮牛市的末期，...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前几天我在立创商城买了一块实战派 ESP32-S3 开发板，原价 148，用了新人券 128 块到手，带摄像头和一块 2 寸屏。到手以后我截了张商品页丢给 DS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/16/xiangxiang103-2110948324543193560/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="前几天我在立创商城买了一块实战派 ESP32-S3 开发板，原价 148，用了新人券 128 块到手，带摄像头和一块 2 寸屏。到手以后我截了张商品页丢给 DS">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2110948324543193560-cover.jpg">
+<meta property="article:published_time" content="2026-10-16T12:17:54.000Z">
+<meta property="article:modified_time" content="2026-11-17T07:19:44.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@xiangxiang103">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2110948324543193560-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱",
+  "url": "https://yaoav.github.io/2026/10/16/xiangxiang103-2110948324543193560/",
+  "image": "https://yaoav.github.io/images/2110948324543193560-cover.jpg",
+  "datePublished": "2026-10-16T12:17:54.000Z",
+  "dateModified": "2026-11-17T07:19:44.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/16/xiangxiang103-2110948324543193560/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2110948324543193560-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">一条命令没敲，一分钱模型费没花，我用 DSH 把 128 元的 ESP32-S3 刷成了 AI 音箱</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-16T12:17:54.000Z" title="发表于 2026-10-16 12:17:54">2026-10-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@xiangxiang103（雨哥向前冲）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2110948324543193560">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>前几天我在立创商城买了一块实战派 ESP32-S3 开发板，原价 148，用了新人券 128 块到手，带摄像头和一块 2 寸屏。到手以后我截了张商品页丢给 DSH（DeepSeek Harness），只打了一句”我搞了一个这个”。</p>
+<p>四十分钟后，这块板子在桌上跟我说话了。其中十二分钟耗在一根线上。</p>
+<p><video controls preload="metadata" poster="/images/2110935839907999744-poster.jpg" src="/videos/2110935839907999744.mp4"></video></p>
+<p>整个过程我没装 ESP-IDF，没编译，终端里一条命令都没自己敲。查固件、校验、烧录、读日志都是 DSH 干的。我负责插线、换线、拿手机配网，最后对着板子喊话。</p>
+<p>还有一件事我想先说。这一整轮对话跑的模型是 <strong>DeepSeek V4.1 Flash</strong>，走 WorkBuddy 海外版的免费额度，倍率标着 x0.00，不扣积分。会话日志里 154 次模型请求全部记在 workbuddy-ai &#x2F; deepseek-v4.1-flash 名下。壳是国产的 DSH，模型是免费的 Flash，一块开发板从插上电脑到能聊天，模型这边没花一分钱。</p>
+<blockquote>
+<p><strong>先把边界写清楚</strong><br>我的电脑是 Apple 芯片的 Mac，系统 macOS 26.6。板子型号 LCKFB-SZPI-ESP32-S3-VA，刷的是小智 AI 固件 v2.5.2。Windows 我没测。DSH 能替你跑命令，替不了你换线、收短信验证码和拿手机配网。</p>
+</blockquote>
+<h3 id="零、先把-DSH-接上免费模型"><a href="#零、先把-DSH-接上免费模型" class="headerlink" title="零、先把 DSH 接上免费模型"></a>零、先把 DSH 接上免费模型</h3><p>DSH 本身是个桌面端 Agent，模型可以自己选。我用的是一个叫 dsh-workbuddy-connect 的插件，它把 WorkBuddy 国内版和海外版的模型一起塞进了 DSH 的模型列表。模型名后面直接标积分倍率，x0.00 就是免费。我这边 DeepSeek V4.1 Flash 和阶跃星辰的模型都是 x0.00。</p>
+<p>配置只有三步。</p>
+<ol>
+<li>装好 WorkBuddy 桌面端并登录，国内版、海外版都行</li>
+<li>在 DSH 桌面端的插件管理里装 dsh-workbuddy-connect</li>
+<li>重启 DSH，在模型列表里找到 WorkBuddy 分组，挑一个 x0.00 的</li>
+</ol>
+<p><img src="/images/HUuK-4VbwAA5PZb.jpg" alt="HUuK-4VbwAA5PZb"></p>
+<p>这一轮用的就是 DeepSeek V4.1 Flash，倍率 x0.00</p>
+<p>我之前专门发过一条推特，录了完整的配置过程，不会配的同学照着看就行。</p>
+<p>实在配不明白，把插件的 README 丢给 DSH，让它自己装。这个插件走的是非官方接口，自己用没问题，别薅太狠。</p>
+<p>有人会担心免费的 Flash 扛不住这种活。我这轮对话里，它查 GitHub 仓库、翻板级源码、比对 SHA256、调 esptool 读芯片、读串口日志定位唤醒词，129 次工具调用一路接下来，没有出现跑着跑着忘了前面在干什么的情况。上下文窗口是 1M，四十轮对话加一堆日志塞进去也够用。</p>
+<h3 id="一、这块板子到底能不能跑小智"><a href="#一、这块板子到底能不能跑小智" class="headerlink" title="一、这块板子到底能不能跑小智"></a>一、这块板子到底能不能跑小智</h3><p>DSH 认出了板子，给了几个能玩的方向，其中一条是社区里的小智 AI 音箱固件。我挑了这个。</p>
+<p>它接着提醒我先别急。商品页的描述只写了”集成了摄像头和液晶屏”，一个字没提麦克风，它想让我先翻过板子看看丝印。我觉得立创官方都把它当推荐玩法在卖了，再准备别的没多大意义。</p>
+<p><img src="/images/HUuLbztbkAA1cA1.jpg" alt="HUuLbztbkAA1cA1"></p>
+<p>我丢给 DSH 的第一张图，描述里只提了摄像头和液晶屏</p>
+<p>DSH 没硬拦，换了个办法确认。它去翻小智的开源仓库 78&#x2F;xiaozhi-esp32，在 main&#x2F;boards&#x2F;lckfb&#x2F; 下面找到了 szpi-esp32s3 这个目录，就是这块板子的官方板级配置。配置里写着 ES8311 和 ES7210 两颗音频芯片，前一颗管喇叭，后一颗管麦克风，还专门打开了设备端回声消除 CONFIG_USE_DEVICE_AEC&#x3D;y。</p>
+<p>麦克风是板载的，不用外接模块。后来它又挖到立创产品页的原文，”配备ES7210和ES8311芯片，支持双麦输入及回声消除”。我的判断没错，它这一趟也没白查，后面挑固件靠的就是这里拿到的板子代号 lichuang-dev。</p>
+<p>这一步还有个小插曲。DSH 自带的网页抓取打不开 GitHub 和立创 wiki，域名全被我本机代理解析成了 198.18 开头的假地址。它自己改用命令行的 curl 去拉 GitHub API，一下就通了。你要是也开着代理，看到它说抓不到网页，等它换条路就行。</p>
+<h3 id="二、它帮我选了一条不用装环境的路"><a href="#二、它帮我选了一条不用装环境的路" class="headerlink" title="二、它帮我选了一条不用装环境的路"></a>二、它帮我选了一条不用装环境的路</h3><p>我告诉它我用 Mac。它先看了一眼我的环境，arm64 芯片，Homebrew 已装，Python 是 3.14.6。</p>
+<p>然后它去读小智仓库的 README，翻出两条对新手很要紧的信息。</p>
+<p><strong>第一条，小智固件现在要求 ESP-IDF v6.0.1 以上，5.x 已经不支持了。</strong> 网上不少小智教程是照着 5.x 写的，照抄编译会报一堆错，还很难搜到原因。</p>
+<p><strong>第二条，官方建议新手直接烧编好的固件，不用搭开发环境。</strong></p>
+<p>它去翻最新的 v2.5.2 Release，里面一共 190 个固件包，名字带”立创”的有两个。v2.5.2_lckfb-lichuang-c3-dev.zip 是 ESP32-C3 版本，v2.5.2_lckfb-lichuang-dev.zip 才是这块 S3。两个名字只差一个 c3，自己下很容易点错。</p>
+<p>我选了免编译这条路。</p>
+<h3 id="三、十二分钟耗在一根线上"><a href="#三、十二分钟耗在一根线上" class="headerlink" title="三、十二分钟耗在一根线上"></a>三、十二分钟耗在一根线上</h3><p>我插上板子，问它能不能识别出来。</p>
+<p>DSH 查了一圈串口，只有蓝牙口和系统调试口，USB 设备树里也没有任何 ESP32 的影子。它给了几种可能，插错口、线是只能充电的线、板子没上电。</p>
+<p>我换了个 USB 口，跟它说”我换了个接口，你试一下”。结果一样，还是没有。</p>
+<p>这一次它注意到一个细节。USB 2.1 Hub 的设备 ID 变了，说明系统确实感知到了插拔，电是通的，板子却没有作为 USB 设备枚举出来。这种表现最像只有电源针脚、没有数据针脚的充电线。</p>
+<p>我翻出另一根线直连电脑，跟它说”我换了一根数据线直连 你看下”。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/dev/cu.usbmodem21301</span><br><span class="line">USB JTAG/serial debug unit</span><br></pre></td></tr></table></figure>
+
+<p>认出来了。从我第一次问它能不能识别，到换线成功，正好十二分钟。</p>
+<p><img src="/images/HUuLmCwbYAEdDQw.jpg" alt="HUuLmCwbYAEdDQw"></p>
+<p>换了根线，它马上认出来了</p>
+<p>这是全程唯一一处 DSH 帮不上忙的地方。它能从设备树里推断出是线的问题，线还得我自己换。所以开始之前，请直接拿一根确定能传数据的 Type-C 线，平时给手机传照片那种，插在电脑上，别走扩展坞。</p>
+<h3 id="四、烧录之前，它先读了一遍芯片"><a href="#四、烧录之前，它先读了一遍芯片" class="headerlink" title="四、烧录之前，它先读了一遍芯片"></a>四、烧录之前，它先读了一遍芯片</h3><p>要和芯片通信得用 esptool。DSH 先试着用系统的 pip 装，被 macOS 的 PEP 668 保护挡了回来，报 externally-managed-environment。它自己建了个虚拟环境，在里面装好 esptool 5.6.0，顺便确认了 Python 3.14 能用。</p>
+<p>第一次读芯片又碰到 Operation not permitted。DSH 默认跑在沙盒里，碰串口这种设备要我点允许，它弹出的申请理由写的是”需要访问 &#x2F;dev&#x2F;cu.usbmodem21301 这个串口设备来验证 ESP32-S3 芯片能否正常通信”。我点了允许，芯片信息全读出来了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Chip type:    ESP32-S3 (QFN56) revision v0.2</span><br><span class="line">Features:     Wi-Fi, BT 5 (LE), Dual Core + LP Core, 240MHz</span><br><span class="line">              Embedded PSRAM 8MB</span><br><span class="line">Flash:        16MB</span><br><span class="line">USB mode:     USB-Serial/JTAG</span><br></pre></td></tr></table></figure>
+
+<p>16MB Flash 加 8MB PSRAM，小智要求的是 8MB Flash 起步，空间很宽裕。USB 模式是芯片原生的 USB-Serial&#x2F;JTAG，所以我电脑上一个串口驱动都没装，也能直接用。</p>
+<blockquote>
+<p><strong>关于授权弹窗</strong><br>烧录和读日志都要碰串口，前后我点了四次允许，后来嫌烦，把 DSH 的审批策略从”ask”改成了”never”。新手我建议前几次还是看一眼申请理由再点，确认它要做的就是读写这块板子。</p>
+</blockquote>
+<h3 id="五、烧录花了-35-秒"><a href="#五、烧录花了-35-秒" class="headerlink" title="五、烧录花了 35 秒"></a>五、烧录花了 35 秒</h3><p>DSH 接下来的动作我照着日志列一遍。</p>
+<ol>
+<li>下载 v2.5.2_lckfb-lichuang-dev.zip，2.7MB</li>
+<li>拿 Release 里官方的 SHA256SUMS 比对，哈希一致</li>
+<li>解压出一个合并好的 merged-binary.bin，9.7MB，不用管分区表和 bootloader</li>
+<li>用 esptool image-info 读固件头，Flash size: 16MB，ESP-IDF: v6.1，和板子对得上</li>
+<li>写入</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Wrote 10164192 bytes at 0x00000000 in 26.4 seconds (3079.3 kbit/s)</span><br><span class="line">Hash of data verified.</span><br><span class="line">Hard resetting via RTS pin...</span><br></pre></td></tr></table></figure>
+
+<p>写 Flash 26.4 秒，加上握手和校验一共 34.7 秒，写完自动重启。</p>
+<p>第四步是我最放心的地方。它烧之前先确认固件就是给 16MB 板子编的，没有拿到文件就直接往里写。</p>
+<h3 id="六、板子自己告诉我该怎么配网"><a href="#六、板子自己告诉我该怎么配网" class="headerlink" title="六、板子自己告诉我该怎么配网"></a>六、板子自己告诉我该怎么配网</h3><p>DSH 装了个 pyserial 去读串口日志，板子启动后打印得很清楚。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WifiConfigurationAp: Access Point started with SSID Xiaozhi-B545</span><br><span class="line">WifiBoard: WiFi config mode entered</span><br><span class="line">配网模式: 手机连接热点 Xiaozhi-B545，浏览器访问 http://192.168.4.1</span><br><span class="line">Adev_Codec: Open codec device OK</span><br></pre></td></tr></table></figure>
+
+<p>前三行是配网提示，最后一行说明音频芯片初始化成功。之前从源码推断出来的板载麦克风，到这里有了运行时的证据。</p>
+<p>板子屏幕上也显示着同样的提示。</p>
+<p><img src="/images/HUuLvbcaoAAZt4i.jpg" alt="HUuLvbcaoAAZt4i"></p>
+<p>烧完自动进入配网模式</p>
+<p>剩下的我用手机完成。</p>
+<ol>
+<li>手机连上板子的热点 Xiaozhi-B545，你的后缀会不一样，以屏幕为准</li>
+<li>手机提示”受限无线局域网”是正常的，这个热点本来就不通外网</li>
+<li>浏览器打开 <a target="_blank" rel="noopener" href="http://192.168.4.1,选自己家的/">http://192.168.4.1，选自己家的</a> Wi-Fi，填密码，点连接</li>
+</ol>
+<p><img src="/images/HUuL5WsagAEkglg.jpg" alt="HUuL5WsagAEkglg"></p>
+<p>配网页面会自动扫出附近的 Wi-Fi</p>
+<p>页面上写着”从下面列表选择 2.4G Wi-Fi”。ESP32 只认 2.4GHz，路由器双频合一时如果死活连不上，先往这个方向查。</p>
+<p><img src="/images/HUuMElYaAAAR9nV.jpg" alt="HUuMElYaAAAR9nV"></p>
+<p>看到”配置成功”就可以了</p>
+<p>连上网以后，板子屏幕上出现一个 6 位数字。我顺手把它发给了 DSH，它读完日志告诉我方向反了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">激活设备: xiaozhi.me</span><br><span class="line">811139</span><br><span class="line">Activating... 1/10</span><br></pre></td></tr></table></figure>
+
+<p>这个码要拿到 xiaozhi.me 去输入。我登录控制台，点”添加设备”，填上 811139，板子那边一直在轮询，几秒钟就激活了。</p>
+<h3 id="七、第一次喊它，它没理我"><a href="#七、第一次喊它，它没理我" class="headerlink" title="七、第一次喊它，它没理我"></a>七、第一次喊它，它没理我</h3><p>激活完我对着板子说了几句，没反应。</p>
+<p>DSH 先看待机日志，只有心跳，没有任何唤醒记录，板子根本没”听到”。它又把板子重启了一遍，抓完整的启动日志，麦克风、回声消除、语音检测和唤醒引擎全部就绪，问题出在唤醒词上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AFE_CONFIG: Set WakeNet Model: wn9_nihaoxiaozhi_tts</span><br></pre></td></tr></table></figure>
+
+<p>这块板子的唤醒词是「你好小智」，四个字。我照着喊了一遍，它回话了。</p>
+<p>答案一直写在日志里，我自己是不会去翻的。所以板子不理你的时候，直接问 DSH 唤醒词是什么，比对着板子换着花样喊快得多。</p>
+<p>我用下来的感受是，声音挺清晰，没有回声，也没有断断续续，从说完到它开口延迟很短。屏幕上是一张表情脸，对话时表情会跟着变。麦克风孔一个在侧边，一个在底部，别用手或者壳子挡住。</p>
+<p><img src="/images/HUuMOcRb0AAI0el.jpg" alt="HUuMOcRb0AAI0el"></p>
+<p>聊完它自己说”好啦，那我先不打扰你了，拜拜！”</p>
+<p>DSH 动手前担心过一件事。这类带喇叭的板子如果回声消除没调好，可能把自己的声音当成新指令，自问自答停不下来。它从日志里看到固件默认开的是 NLP_VERY_AGGRESSIVE，抑制得很狠。我实际用下来没碰到回声。</p>
+<h3 id="八、它跑偏的时候，喊一声就行"><a href="#八、它跑偏的时候，喊一声就行" class="headerlink" title="八、它跑偏的时候，喊一声就行"></a>八、它跑偏的时候，喊一声就行</h3><p>DSH 很勤快，勤快过头的时候需要人喊一声。</p>
+<p>板子能聊天以后，它开始研究板子上的孔。它让我拍侧面、拍底部，猜这个孔是复位键，那个口是 USB-HUB，猜完又让我捂住孔测麦克风。来回拍了三张照片以后，我跟它说：”咱们天天研究这些孔干嘛呀？……能用怎么用？怎么更好的用？”</p>
+<p>它回我”你说得对，我跑偏了”，马上收住，转去整理这块板子能怎么玩。</p>
+<p>Agent 会把每个细节都当成必须搞清楚的事。你要的是能用、好用，就直接告诉它，它不会跟你较劲。</p>
+<h3 id="九、换-Wi-Fi-要不要重新绑定"><a href="#九、换-Wi-Fi-要不要重新绑定" class="headerlink" title="九、换 Wi-Fi 要不要重新绑定"></a>九、换 Wi-Fi 要不要重新绑定</h3><p>第一次配网时我没截图。第二天早上我想补，问 DSH 还能不能让板子重新进配网模式。</p>
+<p>它先试了温和的办法，重启板子，结果板子记得 Wi-Fi，直接连上了。它跟我确认以后，用 esptool 擦掉了存 Wi-Fi 配置的 NVS 区域，没碰固件。板子重启，回到了配网模式，上面那几张配网截图就是这次补拍的。</p>
+<p>重新配好网，我有点慌，跑去跟它说没看到设备连接，问是不是要去后台把智能体删了重新添加。它读完日志让我别删。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WifiBoard: Connected to WiFi: TP-LINK_2836</span><br><span class="line">Application: Activation done</span><br><span class="line">StateMachine: State: activating -&gt; idle</span><br></pre></td></tr></table></figure>
+
+<p>板子连上网以后自己就激活了，屏幕上也没再出现配对码，后台还是原来那个智能体。我这台的情况是，清掉 Wi-Fi 重新配网，绑定关系还在。搬家、换路由器、改密码，直接重新配网就行。</p>
+<p><img src="/images/HUuMUKdbYAAjF51.jpg" alt="HUuMUKdbYAAjF51"></p>
+<p>后台显示”在线”，最近对话 1 分钟前</p>
+<h3 id="十、后台能调的东西比我以为的多"><a href="#十、后台能调的东西比我以为的多" class="headerlink" title="十、后台能调的东西比我以为的多"></a>十、后台能调的东西比我以为的多</h3><p>板子能聊天以后，DSH 想帮我看看 xiaozhi.me 控制台。它用内置浏览器打开了登录页，卡在短信验证码和图形验证码上，这两样只能我自己来。我当时也觉得控制台没什么可配的，就让它算了。</p>
+<p>后来我在手机上登进去一看，能调的东西不少。</p>
+<p><strong>角色。</strong> 支持普通话、英语、日语、粤语、越南语、法语、阿拉伯语、西班牙语，切成英语就是个口语陪练。音色有 6 种，每个都能先试听。右上角打开”自定义”开关，就能直接改那段用 Markdown 写的角色设定。</p>
+<p><strong>模型与记忆。</strong> 默认是小智 Lite。下拉列表里写着”GitHub 认证 以下模型免费用”，有 Qwen 3.6、DeepSeek V4 和豆包 Seed 2.0，官方自己标了”响应快速””性格丰富””延迟较大”。记忆开着的话，它能跨对话记住你说过的话，我这台已经攒了 2 条。</p>
+<p><img src="/images/HUuMaDdacAAZ97Z.jpg" alt="HUuMaDdacAAZ97Z"></p>
+<p>板子这边也能免费换大模型，要先做 GitHub 认证</p>
+<p><strong>扩展能力。</strong> 天气、笑话、音乐、新闻、知识库都能勾选，下面还有个 MCP 接入点，可以接外部服务。</p>
+<p><img src="/images/HUuMkVlbUAA6vGa.jpg" alt="HUuMkVlbUAA6vGa"></p>
+<p>扩展能力页</p>
+<p>声纹识别和换模型这两项我还没实测，有兴趣可以自己试。</p>
+<p>算下来，从电脑到板子全程没花模型费。电脑上 DSH 跑的是 WorkBuddy 免费的 DeepSeek V4.1 Flash，板子上小智做完 GitHub 认证也能免费用 DeepSeek V4。花掉的钱只有那块 128 元的板子。</p>
+<h3 id="十一、照着做，可以这样跟-DSH-说"><a href="#十一、照着做，可以这样跟-DSH-说" class="headerlink" title="十一、照着做，可以这样跟 DSH 说"></a>十一、照着做，可以这样跟 DSH 说</h3><p>我当时的说法都很随意，下面是整理过的版本，直接复制就能用。</p>
+<p><strong>插上板子以后</strong></p>
+<blockquote>
+<p>我买了一块立创实战派 ESP32-S3 开发板，已经用数据线插到 Mac 上了，你看下能不能识别出来。</p>
+</blockquote>
+<p><strong>识别成功以后</strong></p>
+<blockquote>
+<p>帮我把它刷成小智 AI 音箱，用官方编好的固件，不装开发环境。烧之前先读一下芯片信息，确认固件和板子匹配，下载的文件也校验一下。</p>
+</blockquote>
+<p><strong>烧完以后</strong></p>
+<blockquote>
+<p>读一下串口日志，告诉我板子现在是什么状态，下一步我该做什么。</p>
+</blockquote>
+<p><strong>喊它没反应</strong></p>
+<blockquote>
+<p>我对它说话没反应，帮我从日志里看看唤醒词是什么，麦克风有没有正常初始化。</p>
+</blockquote>
+<p><strong>想重新配网</strong></p>
+<blockquote>
+<p>我想重新配网，帮我清掉板子里存的 Wi-Fi 配置，别动固件。</p>
+</blockquote>
+<p>还有一个习惯很管用。每做一个物理动作，就告诉它你做了什么，”我换了个口””我换了根线”。它会重新检测，对比前后两次的结果，我那根充电线就是这么揪出来的。</p>
+<h3 id="十二、常见问题速查"><a href="#十二、常见问题速查" class="headerlink" title="十二、常见问题速查"></a>十二、常见问题速查</h3><ul>
+<li><strong>插上电脑没反应</strong>　先换一根确定能传数据的线，直连电脑，不走扩展坞</li>
+<li><strong>DSH 弹出授权申请</strong>　它要访问串口，看清理由是读写这块板子再点允许</li>
+<li><strong>固件烧进去跑不起来</strong>　检查下的是不是 lichuang-c3-dev，那是 ESP32-C3 版本</li>
+<li><strong>对它说话没反应</strong>　唤醒词是「你好小智」，四个字说全，别挡住麦克风孔</li>
+<li><strong>配网时密码对却连不上</strong>　ESP32 只认 2.4G，看看路由器是不是双频合一</li>
+<li><strong>屏幕上出现 6 位数字</strong>　拿到 xiaozhi.me 控制台的”添加设备”里输入</li>
+<li><strong>重新配网后没出现配对码</strong>　绑定还在，板子会自己激活，后台不用删</li>
+<li><strong>不会给 DSH 配免费模型</strong>　看上面插进来的那条推特，或者把插件 README 丢给 DSH</li>
+</ul>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>这块板子还有摄像头和触摸屏没用上，后面再慢慢折腾。</p>
+<p>国产的壳，免费的模型，一块 128 元的板子，四十分钟能聊天。你要是手里也有块吃灰的开发板，先找一根能传数据的线，再把 DSH 接上免费模型，剩下的跟它说就行。遇到卡住的地方欢迎丢在评论区。</p>
+<p><strong>用到的链接</strong></p>
+<ul>
+<li>小智固件仓库　<a target="_blank" rel="noopener" href="https://github.com/78/xiaozhi-esp32">https://github.com/78/xiaozhi-esp32</a></li>
+<li>小智控制台　<a target="_blank" rel="noopener" href="https://xiaozhi.me/">https://xiaozhi.me</a></li>
+<li>立创实战派 S3 文档　<a target="_blank" rel="noopener" href="https://wiki.lckfb.com/zh-hans/szpi-esp32s3/">https://wiki.lckfb.com/zh-hans/szpi-esp32s3/</a></li>
+<li>DSH 接 WorkBuddy 免费模型的配置推特　<a target="_blank" rel="noopener" href="https://x.com/xiangxiang103/status/2109640515981623333">https://x.com/xiangxiang103/status/2109640515981623333</a></li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/16/xiangxiang103-2110948324543193560/">https://yaoav.github.io/2026/10/16/xiangxiang103-2110948324543193560/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/xiangxiang103/">@xiangxiang103</a></div><div class="post-share"><div class="social-share" data-image="/images/2110948324543193560-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/17/mattturck-2111223952609870085/" title="From Inference to Execution: AI’s Next Economy"><img class="cover" src="/images/2111223952609870085-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">From Inference to Execution: AI’s Next Economy</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @mattturck（Matt Turck） 的长文，原文链接，版权归原作者所有。  Authors: Jaya Gupta and Ashu Garg (@ashugarg) For the past few years, the AI story has been written by the companies supplying intelligence and their infrastructure. The central questions revolved around NVIDIA, frontier labs, inference providers and neoclouds: how large could a model be, who could secure enough GPUs to train and serve it, and who could finance the next cluster. That era is ending. The next phase will be organized around ...</div></div></div></a><a class="pagination-related" href="/2026/10/14/robinhoodeco_zh-2110094500316205317/" title="Who Lends to a Robot?"><img class="cover" src="/images/2110094500316205317-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Who Lends to a Robot?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @robinhoodeco_zh（Robinhood 中文社區） 的长文，原文链接，版权归原作者所有。  Robinhood spent its HOOD Summit pitching AI agents as the next generation of traders and more than 150,000 agentic accounts have opened since May. However, currently Robinhood gives those agents no credit and in-app agents have no margin and customers carry all the risk for what their agents do.  Priors is one answer and it’s already live on Robinhood Chain. It lends unsecured USDG to AI agents once someone else has put money in...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E3%80%81%E5%85%88%E6%8A%8A-DSH-%E6%8E%A5%E4%B8%8A%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">零、先把 DSH 接上免费模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%99%E5%9D%97%E6%9D%BF%E5%AD%90%E5%88%B0%E5%BA%95%E8%83%BD%E4%B8%8D%E8%83%BD%E8%B7%91%E5%B0%8F%E6%99%BA"><span class="toc-number">2.</span> <span class="toc-text">一、这块板子到底能不能跑小智</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%83%E5%B8%AE%E6%88%91%E9%80%89%E4%BA%86%E4%B8%80%E6%9D%A1%E4%B8%8D%E7%94%A8%E8%A3%85%E7%8E%AF%E5%A2%83%E7%9A%84%E8%B7%AF"><span class="toc-number">3.</span> <span class="toc-text">二、它帮我选了一条不用装环境的路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%8D%81%E4%BA%8C%E5%88%86%E9%92%9F%E8%80%97%E5%9C%A8%E4%B8%80%E6%A0%B9%E7%BA%BF%E4%B8%8A"><span class="toc-number">4.</span> <span class="toc-text">三、十二分钟耗在一根线上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%83%A7%E5%BD%95%E4%B9%8B%E5%89%8D%EF%BC%8C%E5%AE%83%E5%85%88%E8%AF%BB%E4%BA%86%E4%B8%80%E9%81%8D%E8%8A%AF%E7%89%87"><span class="toc-number">5.</span> <span class="toc-text">四、烧录之前，它先读了一遍芯片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%83%A7%E5%BD%95%E8%8A%B1%E4%BA%86-35-%E7%A7%92"><span class="toc-number">6.</span> <span class="toc-text">五、烧录花了 35 秒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%9D%BF%E5%AD%90%E8%87%AA%E5%B7%B1%E5%91%8A%E8%AF%89%E6%88%91%E8%AF%A5%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%91"><span class="toc-number">7.</span> <span class="toc-text">六、板子自己告诉我该怎么配网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%96%8A%E5%AE%83%EF%BC%8C%E5%AE%83%E6%B2%A1%E7%90%86%E6%88%91"><span class="toc-number">8.</span> <span class="toc-text">七、第一次喊它，它没理我</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%AE%83%E8%B7%91%E5%81%8F%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E5%96%8A%E4%B8%80%E5%A3%B0%E5%B0%B1%E8%A1%8C"><span class="toc-number">9.</span> <span class="toc-text">八、它跑偏的时候，喊一声就行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E6%8D%A2-Wi-Fi-%E8%A6%81%E4%B8%8D%E8%A6%81%E9%87%8D%E6%96%B0%E7%BB%91%E5%AE%9A"><span class="toc-number">10.</span> <span class="toc-text">九、换 Wi-Fi 要不要重新绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%90%8E%E5%8F%B0%E8%83%BD%E8%B0%83%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%AF%94%E6%88%91%E4%BB%A5%E4%B8%BA%E7%9A%84%E5%A4%9A"><span class="toc-number">11.</span> <span class="toc-text">十、后台能调的东西比我以为的多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%85%A7%E7%9D%80%E5%81%9A%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%BF%99%E6%A0%B7%E8%B7%9F-DSH-%E8%AF%B4"><span class="toc-number">12.</span> <span class="toc-text">十一、照着做，可以这样跟 DSH 说</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E9%80%9F%E6%9F%A5"><span class="toc-number">13.</span> <span class="toc-text">十二、常见问题速查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">14.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

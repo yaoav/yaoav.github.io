@@ -1,0 +1,440 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Motion Engineering: Build a Video Studio Around Opus 5.5 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Everybody is sharing videos made with Claude Opus 5.5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Motion Engineering: Build a Video Studio Around Opus 5.5">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/01/rincyXIII-2105643919119696297/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Everybody is sharing videos made with Claude Opus 5.5">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2105643919119696297-cover.jpg">
+<meta property="article:published_time" content="2026-10-01T21:00:05.000Z">
+<meta property="article:modified_time" content="2026-11-19T03:02:29.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@rincyXIII">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2105643919119696297-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Motion Engineering: Build a Video Studio Around Opus 5.5",
+  "url": "https://yaoav.github.io/2026/10/01/rincyXIII-2105643919119696297/",
+  "image": "https://yaoav.github.io/images/2105643919119696297-cover.jpg",
+  "datePublished": "2026-10-01T21:00:05.000Z",
+  "dateModified": "2026-11-19T03:02:29.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/01/rincyXIII-2105643919119696297/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Motion Engineering: Build a Video Studio Around Opus 5.5',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2105643919119696297-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Motion Engineering: Build a Video Studio Around Opus 5.5</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Motion Engineering: Build a Video Studio Around Opus 5.5</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-01T21:00:05.000Z" title="发表于 2026-10-01 21:00:05">2026-10-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@rincyXIII（rincy）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2105643919119696297">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Everybody is sharing videos made with Claude Opus 5.5</p>
+<p>Some are excellent</p>
+<p>Most look like the same demo</p>
+<p>Large text in the center</p>
+<p>A gradient behind it</p>
+<p>Everything fades in</p>
+<p>The logo appears at the end</p>
+<p>The difference is not a secret prompt</p>
+<p>It is the system around the model</p>
+<p><strong>Anthropic released Opus 5.5 on September 22</strong></p>
+<p>Its coding and visual judgment make this workflow practical, but the model is only one part of it</p>
+<p>The model writes the program</p>
+<p>The program draws the frames</p>
+<p>The renderer turns those frames into a film</p>
+<p>The review loop decides whether anyone should see it</p>
+<blockquote>
+<p>A prompt can produce a clip. A studio can produce the next clip without rebuilding itself</p>
+</blockquote>
+<p>This is how I would engineer that studio</p>
+<blockquote>
+<p><strong>I publish practical breakdowns of AI agents, workflows, and production systems on Substack Join the newsletter here</strong></p>
+</blockquote>
+<h2 id="What-Opus-is-actually-making"><a href="#What-Opus-is-actually-making" class="headerlink" title="What Opus is actually making"></a>What Opus is actually making</h2><p>You ask for a video</p>
+<p>Opus does not need to imagine every frame as a separate image</p>
+<p>It can write code that answers a more useful question</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">What should the screen look like at time t?</span><br></pre></td></tr></table></figure>
+
+<p>That code becomes a frame function</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function renderFrame(t, spec, assets) &#123;</span><br><span class="line">  // Draw the exact state of the film at time t</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>A renderer calls it across the timeline, captures frames, and encodes them into a video file</p>
+<p>This changes the economics of revision</p>
+<p>If a title enters too early, you change one time value</p>
+<p>If a shape overshoots too far, you change one motion curve</p>
+<p>If a product screen is wrong, you replace the asset and render again</p>
+<p>You do not ask a video model to regenerate the whole shot and hope it remembers the previous version</p>
+<p>Code-made motion is not the answer to every visual problem. Photoreal scenes, complex characters, and organic movement may still need footage or generated video</p>
+<p>But for product films, UI motion, data stories, typography, diagrams, and launch explainers, a controllable frame function is a serious advantage</p>
+<h2 id="The-studio-has-five-layers"><a href="#The-studio-has-five-layers" class="headerlink" title="The studio has five layers"></a>The studio has five layers</h2><p>Most people give Opus a description and judge the MP4</p>
+<p>That skips almost every layer that determines the result</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DIRECTOR       What is the film trying to say?</span><br><span class="line">REFERENCE      What should it feel and look like?</span><br><span class="line">TIMELINE       What changes at each beat?</span><br><span class="line">RENDERER       How is every frame produced?</span><br><span class="line">CRITIC         What failed, exactly where, and why?</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HTiw7HyXwAA20mm.jpg" alt="HTiw7HyXwAA20mm"></p>
+<p>The model can help with all five</p>
+<p>It should not be allowed to collapse them into one uninspected step</p>
+<p>That is where the generic output comes from</p>
+<p>The model fills missing decisions with the safest visual defaults it knows</p>
+<p>Your job is to remove the missing decisions before it starts rendering</p>
+<h3 id="1-Write-a-director’s-brief-not-a-vibe-prompt"><a href="#1-Write-a-director’s-brief-not-a-vibe-prompt" class="headerlink" title="1. Write a director’s brief, not a vibe prompt"></a>1. Write a director’s brief, not a vibe prompt</h3><p>“Make an insane product video” leaves the important choices undefined</p>
+<p>Thariq from the Claude Code team put the “one-shot” myth in perspective</p>
+<ul>
+<li>What is the product?</li>
+<li>What is the one thing the viewer should remember?</li>
+<li>Which visual reference is allowed to influence the work?</li>
+<li>Which elements must come from the real product?</li>
+<li>What would make the result unacceptable?</li>
+</ul>
+<p><strong>Give Opus a small production document before giving it a render task</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">FILM</span><br><span class="line">One sentence: [the idea the viewer should remember]</span><br><span class="line">Audience: [who this is for]</span><br><span class="line">Duration: [seconds]</span><br><span class="line">Formats: [16:9 / 9:16 / 1:1]</span><br><span class="line"></span><br><span class="line">ASSETS</span><br><span class="line">Real logo: [path]</span><br><span class="line">Real UI screenshots: [paths]</span><br><span class="line">Brand type and colors: [tokens]</span><br><span class="line">Music or audio reference: [path]</span><br><span class="line"></span><br><span class="line">VISUAL RULES</span><br><span class="line">Keep: [specific traits from the reference]</span><br><span class="line">Avoid: [specific visual clichés]</span><br><span class="line">Never invent product screens or metrics</span><br><span class="line"></span><br><span class="line">DELIVERABLES</span><br><span class="line">Storyboard, contact sheet, final video, poster frame, source files</span><br></pre></td></tr></table></figure>
+
+<p>Notice what this does</p>
+<p>It separates facts about the product from choices about the film</p>
+<p>The model can invent camera movement</p>
+<p>It cannot invent your dashboard</p>
+<p>It can propose a stronger opening</p>
+<p>It cannot quietly replace your logo</p>
+<p>That boundary matters more than a longer adjective list</p>
+<h3 id="2-Give-it-a-reference-it-can-inspect"><a href="#2-Give-it-a-reference-it-can-inspect" class="headerlink" title="2. Give it a reference it can inspect"></a>2. Give it a reference it can inspect</h3><p>If you do not supply a visual grammar, the model supplies its own</p>
+<p>That is why unrelated one-prompt reels often look related</p>
+<p>Give it a frame, a short film, or a folder of previous work</p>
+<p>Then make it write down what it learned</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">REFERENCE ANALYSIS</span><br><span class="line">Palette: [actual colors, not “premium”]</span><br><span class="line">Typography: [family, width, weight, scale]</span><br><span class="line">Composition: [where the eye goes first]</span><br><span class="line">Pacing: [average time between meaningful changes]</span><br><span class="line">Motion: [snap, glide, overshoot, cut, hold]</span><br><span class="line">Texture: [grain, paper, glass, none]</span><br><span class="line"></span><br><span class="line">DO NOT COPY</span><br><span class="line">Subjects, logos, copy, or product-specific imagery</span><br></pre></td></tr></table></figure>
+
+<p>The output should be a style guide, not a collage of borrowed shots</p>
+<p>For a product film, also give Opus access to the real site and ask it to collect the exact screens it intends to animate</p>
+<p>Review that asset list before production</p>
+<p>If an asset is missing, the agent should stop and ask rather than draw a convincing fake</p>
+<h3 id="3-Turn-the-story-into-states-and-beats"><a href="#3-Turn-the-story-into-states-and-beats" class="headerlink" title="3. Turn the story into states and beats"></a>3. Turn the story into states and beats</h3><p>A list of effects is not a storyboard</p>
+<p>“Zoom in, then morph, then add particles” describes activity, not meaning</p>
+<p>A stronger plan says what the viewer knows at each moment</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">00-02s   HOOK       One image that earns attention</span><br><span class="line">02-05s   PROBLEM    Show the friction, not a paragraph about it</span><br><span class="line">05-09s   REVEAL     The product enters through a real interaction</span><br><span class="line">09-13s   PROOF      One screen or number demonstrates the claim</span><br><span class="line">13-16s   CLOSE      A clean final state and a readable CTA</span><br></pre></td></tr></table></figure>
+
+<p>Each beat needs an entry state, an exit state, and a reason to exist</p>
+<p>For UI motion, write a state list before drawing transitions</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SEARCH -&gt; RESULT -&gt; DETAIL -&gt; ACTION -&gt; CONFIRMATION</span><br></pre></td></tr></table></figure>
+
+<p>Now the model can design continuity between known states</p>
+<p>One component may change size, color, content, and position across the film while remaining recognizably the same object</p>
+<p>That is a better brief than “make the interface dynamic”</p>
+<p><img src="/images/HTixrE4XkAA11MQ.jpg" alt="HTixrE4XkAA11MQ"></p>
+<p>The shot list is also a contract</p>
+<p>If the agent cannot explain why shot four exists, shot four does not belong in the render</p>
+<h3 id="4-Choose-the-renderer-on-purpose"><a href="#4-Choose-the-renderer-on-purpose" class="headerlink" title="4. Choose the renderer on purpose"></a>4. Choose the renderer on purpose</h3><p>Opus can write a lightweight Canvas or SVG film in one project</p>
+<p>That is useful for a small, self-contained piece</p>
+<p>For a repeatable series, a video framework can make scene structure, media placement, and export easier to maintain</p>
+<p><strong>Remotion</strong> - treats video as React components rendered at known frame numbers</p>
+<p>**HyperFrames **- uses an editable HTML composition with explicit timing and seekable animation runtimes</p>
+<p>Neither is automatically “better”</p>
+<p>Use the smallest system that supports the film you intend to make again</p>
+<p>The non-negotiable requirement is seekability</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">frame 240 must be renderable directly</span><br><span class="line">without replaying frames 0 through 239</span><br></pre></td></tr></table></figure>
+
+<p>That means no hidden clock, no unseeded randomness, and no animation that only works after a browser has been running for eight seconds</p>
+<p>Think of every frame as a deterministic query</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame = render(time, shot_list, assets, style_tokens, seed)</span><br></pre></td></tr></table></figure>
+
+<p>Once the film works this way, revisions become local and testable</p>
+<h3 id="5-Make-motion-have-weight"><a href="#5-Make-motion-have-weight" class="headerlink" title="5. Make motion have weight"></a>5. Make motion have weight</h3><p>Basic motion moves from A to B on a fixed curve</p>
+<p>Good motion communicates mass, hierarchy, and intent</p>
+<ul>
+<li><strong>Small control can snap</strong></li>
+<li><strong>Large panel can settle</strong></li>
+<li><strong>Camera can move slowly enough to preserve orientation</strong></li>
+<li><strong>Headline can arrive fast, then hold long enough to be read</strong></li>
+</ul>
+<p>Springs are useful because they describe that behavior more naturally than a generic ease-in-out</p>
+<p>But do not turn every object into a spring</p>
+<p>If everything overshoots, nothing feels precise</p>
+<p>Write a motion rule for each class of object</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MICRO UI      quick, minimal overshoot</span><br><span class="line">PANELS        controlled settle</span><br><span class="line">CAMERA        smooth, almost invisible</span><br><span class="line">HEADLINES     strong entrance, stable hold</span><br><span class="line">MASCOT        playful, clearly intentional</span><br></pre></td></tr></table></figure>
+
+<p>The most important check is still visual</p>
+<p>Does the viewer know where to look after each move?</p>
+<p>If not, the animation is decoration competing with the message</p>
+<h3 id="6-Put-sound-on-the-same-timeline"><a href="#6-Put-sound-on-the-same-timeline" class="headerlink" title="6. Put sound on the same timeline"></a>6. Put sound on the same timeline</h3><p>Many AI-made films look finished with the audio muted</p>
+<p>Then you turn the sound on and realize nothing is connected</p>
+<p>The click lands after the button</p>
+<p>The cut misses the beat</p>
+<p>The final logo arrives before the music resolves</p>
+<p>Treat sound as a timeline input, not a last-minute file dropped under the video</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">BEAT GRID</span><br><span class="line">0.00s   opening hit</span><br><span class="line">0.50s   first state change</span><br><span class="line">1.00s   product reveal</span><br><span class="line">1.50s   interaction click</span><br><span class="line">2.00s   visual payoff</span><br></pre></td></tr></table></figure>
+
+<p>Use a licensed or original track when you have one. Measure its beats and cut against them</p>
+<p>If the sound is synthesized, place every cue against the same timestamps that drive the picture</p>
+<p>The test is simple</p>
+<p>Close your eyes and listen to the film</p>
+<p>If it has no shape without the picture, the sound design is probably not finished</p>
+<h3 id="7-Inspect-the-frames-before-exporting-the-film"><a href="#7-Inspect-the-frames-before-exporting-the-film" class="headerlink" title="7. Inspect the frames before exporting the film"></a>7. Inspect the frames before exporting the film</h3><p>This is the step people skip because the first render feels like progress</p>
+<p>Do not start by watching a full 60-second export ten times</p>
+<p>Ask the renderer for a contact sheet</p>
+<p>Take one frame at every major beat, then a short strip around the fastest transitions</p>
+<p>Look for the things a text-only agent misses</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[ ] Text readable at phone size</span><br><span class="line">[ ] No element crossing the safe area</span><br><span class="line">[ ] Real product assets, not invented replacements</span><br><span class="line">[ ] Consistent type and color across scenes</span><br><span class="line">[ ] No awkward mid-transition frames</span><br><span class="line">[ ] Cuts and sound cues land together</span><br><span class="line">[ ] First two seconds contain a real hook</span><br><span class="line">[ ] Last frame is strong enough to be a poster</span><br></pre></td></tr></table></figure>
+
+<p>Then give Opus the contact sheet and a specific critique task</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Do not describe what you intended to make</span><br><span class="line">Judge only the rendered frames</span><br><span class="line"></span><br><span class="line">Identify the three largest defects</span><br><span class="line">Give each defect a timestamp, evidence, and a local fix</span><br><span class="line">Patch only those sections, then render the affected frames again</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HTiyP0EXkAAQbnL.jpg" alt="HTiyP0EXkAAQbnL"></p>
+<p>This is the difference between <strong>“the agent made a video”</strong> and <strong>“the agent directed a video”</strong></p>
+<p>The first one stops when the file exists</p>
+<p>The second stops when the evidence says the film works</p>
+<h3 id="8-Export-variants-from-the-source-not-from-a-crop"><a href="#8-Export-variants-from-the-source-not-from-a-crop" class="headerlink" title="8. Export variants from the source, not from a crop"></a>8. Export variants from the source, not from a crop</h3><p>A 16:9 launch film and a 9:16 social cut are different compositions</p>
+<p>The vertical version may need larger type, fewer simultaneous elements, a different camera path, and a tighter story</p>
+<p>Do not make one beautiful wide video and ask software to crop its center</p>
+<p>Keep the same assets, timeline, and narrative states</p>
+<p>Then define layout behavior for each format</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ONE STORY</span><br><span class="line">  -&gt; 16:9: more spatial context</span><br><span class="line">  -&gt; 9:16: fewer elements, stronger vertical hierarchy</span><br><span class="line">  -&gt; 1:1: tighter typography and shorter holds</span><br></pre></td></tr></table></figure>
+
+<p>Render a contact sheet for every variant</p>
+<p>An export is not correct because the encoder finished</p>
+<p>It is correct because the composition survived the format change</p>
+<h3 id="9-Package-the-studio-not-the-chat"><a href="#9-Package-the-studio-not-the-chat" class="headerlink" title="9. Package the studio, not the chat"></a>9. Package the studio, not the chat</h3><p>If the only record of the film is a conversation, you do not have a production system</p>
+<p>You have a lucky session</p>
+<p>Keep the important decisions in files that another run can read</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">motion-studio/</span><br><span class="line">  brief.md             the one-sentence goal and product facts</span><br><span class="line">  style-guide.md       palette, type, motion, and banned defaults</span><br><span class="line">  shotlist.md          beats, states, timestamps, and purpose</span><br><span class="line">  assets/              approved logos, screens, footage, and sound</span><br><span class="line">  src/                 seekable composition and motion code</span><br><span class="line">  reviews/             contact sheets and defect notes</span><br><span class="line">  out/                 exports for each format</span><br></pre></td></tr></table></figure>
+
+<p>Then the next video starts with a real base</p>
+<p>Swap the product brief and assets</p>
+<p>Keep the render contract, review checklist, and delivery structure</p>
+<p>This is also how you stop a long agent run from drifting</p>
+<p>The agent can inspect its own files, resume from a completed gate, and tell you which artifact is missing</p>
+<p>It should not claim the film is done because the last command exited successfully</p>
+<h3 id="10-Give-long-runs-gates-not-freedom"><a href="#10-Give-long-runs-gates-not-freedom" class="headerlink" title="10. Give long runs gates, not freedom"></a>10. Give long runs gates, not freedom</h3><p>The appeal of Opus is that you can hand it a large creative task and leave it working</p>
+<p>That only helps if the run knows when to stop, when to ask, and when to repair</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GATE 1  Approve references and product assets</span><br><span class="line">GATE 2  Approve style guide and shot list</span><br><span class="line">GATE 3  Inspect representative stills</span><br><span class="line">GATE 4  Render rough cut and contact sheet</span><br><span class="line">GATE 5  Repair the three highest-impact defects</span><br><span class="line">GATE 6  Check audio, formats, and final deliverables</span><br></pre></td></tr></table></figure>
+
+<p>The agent can work for hours between those gates</p>
+<p>It should not make irreversible brand decisions on your behalf</p>
+<p>If the brief says <strong>“use the real interface”</strong> a missing interface screenshot is a blocker, not an invitation to hallucinate one</p>
+<p>If the reference is unclear, the right output is a question or a small test frame, not 900 polished wrong frames</p>
+<p>Autonomy becomes useful when every stage leaves evidence for the next one</p>
+<p>That is the same lesson behind reliable agents in any domain</p>
+<p>The loop needs a target, an observation, a bounded repair, and a way to stop</p>
+<h2 id="The-prompt-I-would-actually-give-Opus"><a href="#The-prompt-I-would-actually-give-Opus" class="headerlink" title="The prompt I would actually give Opus"></a>The prompt I would actually give Opus</h2><p><strong>The useful prompt is not “make a viral video”</strong></p>
+<p><strong>It is a production contract with review gates</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">You are directing and engineering a code-rendered motion film</span><br><span class="line"></span><br><span class="line">Goal:</span><br><span class="line">Make a [duration]-second film for [product/audience]</span><br><span class="line">The viewer should remember: [one sentence]</span><br><span class="line"></span><br><span class="line">Inputs:</span><br><span class="line">- Use only the supplied product assets and approved copy</span><br><span class="line">- Inspect the reference files and write a style-guide.md</span><br><span class="line">- Write shotlist.md with timestamps, entry states, exit states, and purpose</span><br><span class="line"></span><br><span class="line">Build:</span><br><span class="line">- Choose a renderer and explain why it fits this project</span><br><span class="line">- Make every frame seekable and deterministic</span><br><span class="line">- Keep motion, audio cues, and transitions on one timeline</span><br><span class="line">- Preserve editable source and a repeatable render command</span><br><span class="line"></span><br><span class="line">Review gates:</span><br><span class="line">1. Show the style guide and shot list before building</span><br><span class="line">2. Show a contact sheet before the full render</span><br><span class="line">3. Score hook, readability, continuity, motion, and sound sync</span><br><span class="line">4. Fix the three worst defects and re-render those sections</span><br><span class="line">5. Export 16:9 and 9:16 as separate compositions</span><br><span class="line"></span><br><span class="line">Deliver:</span><br><span class="line">final videos, poster frames, contact sheets, source, assets list,</span><br><span class="line">and a short note on what still needs human review</span><br></pre></td></tr></table></figure>
+
+<p>That prompt is longer than the viral one-liner</p>
+<p>The important part is not its length</p>
+<p>It gives the model a sequence of decisions, artifacts, and stop conditions</p>
+<p>You can reuse that system for the next launch instead of asking for a miracle from scratch</p>
+<h2 id="The-real-shift"><a href="#The-real-shift" class="headerlink" title="The real shift"></a>The real shift</h2><p>One-prompt video is impressive because the first result arrives fast</p>
+<p>Motion engineering is valuable because the tenth result can be better than the first</p>
+<p>The model gives you speed</p>
+<p>The brief gives it direction</p>
+<p>The renderer gives you control</p>
+<p>The contact sheet gives you evidence</p>
+<p>The loop turns that evidence into improvement</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PROMPT -&gt; CLIP</span><br><span class="line"></span><br><span class="line">BRIEF -&gt; SYSTEM -&gt; FILM -&gt; REVIEW -&gt; BETTER SYSTEM</span><br></pre></td></tr></table></figure>
+
+<p>That is the difference between generating a demo and operating a studio</p>
+<p><strong>-&gt; Subscribe to my Substack</strong></p>
+<p><strong>-&gt; Join my Telegram</strong></p>
+<p><strong>-&gt; Bookmark this this before you ask an AI to “make a video” with no brief, no references, and no way to inspect the result</strong></p>
+<p><strong>-&gt; Follow @0xwhrrari</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/01/rincyXIII-2105643919119696297/">https://yaoav.github.io/2026/10/01/rincyXIII-2105643919119696297/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/rincyXIII/">@rincyXIII</a></div><div class="post-share"><div class="social-share" data-image="/images/2105643919119696297-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/05/KinGao476942-2106985933966832090/" title="如何用 Grok Bot 稳定注册并订阅 Claude Code：保姆级新手终极指南"><img class="cover" src="/images/2106985933966832090-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">如何用 Grok Bot 稳定注册并订阅 Claude Code：保姆级新手终极指南</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinGao476942（Kin） 的长文，原文链接，版权归原作者所有。  最近越来越多朋友，来问我同一个问题：「到底应该怎么安全、稳定地用 Grok bot 注册和订阅 Claude Code？」毕竟， Claude Opus 5.5 确实太强了——量大管饱、效果又好，已经成了很多人的主力模型。但官方风控越来越严，普通用法很容易踩坑，动不动就喜提封号。 所以我决定写一篇全网最详细的 Grok bot 注册和订阅 Claude Code 的保姆级新手终极指南，专门教大家用 Grok Bot 来解决这个安全注册 + 订阅的问题，做到稳定、省心、安全。 我自己已经在 Grok bot 里实测使用 Claude Code  1 个多月了，正常跑编程和视频生成等非编程任务，目前没有任何问题。  核心就三样东西：  Grok Bot（全程指挥 + 自动操作，美国云电脑是它自带的） 新加坡信用卡订阅（Starryblu，目前实测最稳的） 海外接码平台（https://hero-sms.com/，注册时收验证码用）  使用时建议只在 Grok Bot 里操作，尽量不要...</div></div></div></a><a class="pagination-related" href="/2026/09/28/CatalystMkts_-2104570589184770089/" title="man made fire"><img class="cover" src="/images/2104570589184770089-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">man made fire</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @CatalystMkts_（catalyst） 的长文，原文链接，版权归原作者所有。  were you paying attention? did you catch it? last friday, we announced our launch on Robinhood Chain via X.attached to the post was a video of a lit match.a subtle clue for what was about to happen. 57 seconds later, @RobinhoodCrypto reposted it. 1.3 seconds after the repost, a market on catalyst had drained its fuse pool and converted its liquidity to $CATALYST in a single transaction. 17 traders benefited from the catalyst and were im...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Opus-is-actually-making"><span class="toc-number">1.</span> <span class="toc-text">What Opus is actually making</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-studio-has-five-layers"><span class="toc-number">2.</span> <span class="toc-text">The studio has five layers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Write-a-director%E2%80%99s-brief-not-a-vibe-prompt"><span class="toc-number">2.1.</span> <span class="toc-text">1. Write a director’s brief, not a vibe prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Give-it-a-reference-it-can-inspect"><span class="toc-number">2.2.</span> <span class="toc-text">2. Give it a reference it can inspect</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Turn-the-story-into-states-and-beats"><span class="toc-number">2.3.</span> <span class="toc-text">3. Turn the story into states and beats</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Choose-the-renderer-on-purpose"><span class="toc-number">2.4.</span> <span class="toc-text">4. Choose the renderer on purpose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Make-motion-have-weight"><span class="toc-number">2.5.</span> <span class="toc-text">5. Make motion have weight</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Put-sound-on-the-same-timeline"><span class="toc-number">2.6.</span> <span class="toc-text">6. Put sound on the same timeline</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Inspect-the-frames-before-exporting-the-film"><span class="toc-number">2.7.</span> <span class="toc-text">7. Inspect the frames before exporting the film</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Export-variants-from-the-source-not-from-a-crop"><span class="toc-number">2.8.</span> <span class="toc-text">8. Export variants from the source, not from a crop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Package-the-studio-not-the-chat"><span class="toc-number">2.9.</span> <span class="toc-text">9. Package the studio, not the chat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Give-long-runs-gates-not-freedom"><span class="toc-number">2.10.</span> <span class="toc-text">10. Give long runs gates, not freedom</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-prompt-I-would-actually-give-Opus"><span class="toc-number">3.</span> <span class="toc-text">The prompt I would actually give Opus</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-real-shift"><span class="toc-number">4.</span> <span class="toc-text">The real shift</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

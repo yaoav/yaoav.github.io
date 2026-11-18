@@ -1,0 +1,350 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Muse 上手保姆级教程：从登录到完成第一个任务 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Muse 上手保姆级教程：从登录到完成第一个任务">
+<meta property="og:url" content="https://yaoav.github.io/2026/09/25/0xlangeai-2103300004966478284/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2103300004966478284-cover.jpg">
+<meta property="article:published_time" content="2026-09-25T09:46:13.000Z">
+<meta property="article:modified_time" content="2026-11-18T08:18:33.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@0xlangeai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2103300004966478284-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Muse 上手保姆级教程：从登录到完成第一个任务",
+  "url": "https://yaoav.github.io/2026/09/25/0xlangeai-2103300004966478284/",
+  "image": "https://yaoav.github.io/images/2103300004966478284-cover.jpg",
+  "datePublished": "2026-09-25T09:46:13.000Z",
+  "dateModified": "2026-11-18T08:18:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/09/25/0xlangeai-2103300004966478284/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Muse 上手保姆级教程：从登录到完成第一个任务',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2103300004966478284-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Muse 上手保姆级教程：从登录到完成第一个任务</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Muse 上手保姆级教程：从登录到完成第一个任务</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-09-25T09:46:13.000Z" title="发表于 2026-09-25 09:46:13">2026-09-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@0xlangeai（蓝哥AI）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2103300004966478284">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。</p>
+<p>第一次用，先让它把几个链接整理成资料表：下任务、打开文件、核对来源，再改一版。</p>
+<p><strong>这不是功能清单。按顺序做完，就能让 Muse 在你看得见的范围内把一件事做完。</strong> 连接器、记忆和长期目标，用到再加。</p>
+<p><img src="/images/HTBmhE0akAEMSjJ.jpg" alt="HTBmhE0akAEMSjJ"></p>
+<h2 id="1-从哪里开始？先登录，再看可用范围"><a href="#1-从哪里开始？先登录，再看可用范围" class="headerlink" title="1. 从哪里开始？先登录，再看可用范围"></a>1. 从哪里开始？先登录，再看可用范围</h2><p>打开 muse.ai，按页面提示登录</p>
+<p>也可以从 muse 桌面端登陆</p>
+<p>还可以从 muse 手机应用登陆</p>
+<p>开始前知道这几件事就够了：</p>
+<ul>
+<li>官方 9 月 8 日的公告宣布首发面向美国，支持 iOS、Android 和网页端。你的账号当前能否使用，以注册页面为准。</li>
+<li>官方提供免费使用与付费订阅，具体额度和价格看账号内的说明。先试一个任务，再决定是否订阅。</li>
+<li>本文用 Muse 桌面端做示范，先选一个设备跟着做即可。</li>
+</ul>
+<p>如果进不去，先看页面具体提示。地区未开放、账号不符合条件和网络连接失败，需要分别处理。</p>
+<h2 id="2-登录后，先告诉它怎么和你合作"><a href="#2-登录后，先告诉它怎么和你合作" class="headerlink" title="2. 登录后，先告诉它怎么和你合作"></a>2. 登录后，先告诉它怎么和你合作</h2><p>按引导完成命名等初始化，然后在聊天里发这段话。时区和习惯可以自行修改：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">我是中文用户，时区 Asia/Shanghai（UTC+8）。</span><br><span class="line">回复先给结论，再补充必要解释。</span><br><span class="line">无法确认的信息请标注，并附上能核对的来源。</span><br><span class="line"></span><br><span class="line">涉及对外发送、提交表单、下单、付款或修改账号时，</span><br><span class="line">先展示具体内容，等我明确同意后再执行。</span><br></pre></td></tr></table></figure>
+
+<p>接着打开 Settings，检查权限、审批和已有连接。重点看清楚：连接了哪个账号，可以读取什么，是否可以代你修改或发送内容。</p>
+<p><strong>聊天里的合作要求不能代替权限设置。</strong> 官方提供了关键操作的审批机制；遇到授权卡片时，核对具体动作再决定是否同意。</p>
+<p>第一天不用记住全部界面。先找到聊天区域和 Settings；生成回复后，从对应消息里的入口打开。点击助手头像，还可以查看它正在做什么，以及活动与已批准权限的记录。</p>
+<p><img src="/images/HTBmuu9akAAXsu3.jpg" alt="HTBmuu9akAAXsu3"></p>
+<h2 id="3-跟练：把网页链接整理成一份资料表"><a href="#3-跟练：把网页链接整理成一份资料表" class="headerlink" title="3. 跟练：把网页链接整理成一份资料表"></a>3. 跟练：把网页链接整理成一份资料表</h2><p>第一次任务建议选自己熟悉的主题。这样你能判断整理得对不对，也容易发现遗漏。</p>
+<p>这里用“了解 Muse 的基础功能”做一个跟练示例。资料就选官方发布公告和设计说明，不需要先连接邮箱或网盘。</p>
+<p>下面这段可以直接发给 Muse：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">我准备写一篇 Muse 入门介绍，请先帮我整理资料，不要代写文章。</span><br><span class="line"></span><br><span class="line">只使用以下两篇资料：</span><br><span class="line">https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/</span><br><span class="line">https://introducing.muse.ai/</span><br><span class="line"></span><br><span class="line">请整理一份中文资料表，文件名为「Muse入门资料表」。</span><br><span class="line">表格包含：功能或主题、原文要点、来源链接、待核实项。</span><br><span class="line"></span><br><span class="line">重点整理：网页浏览、文件生成、后台任务、Goals、记忆和操作审批。</span><br><span class="line">两篇资料都提到的内容可以合并，但保留对应来源。</span><br><span class="line">打不开的链接请说明；原文没写的细节标注「未说明」，不要推测。</span><br><span class="line"></span><br><span class="line">本次只做公开资料整理，不注册账号，不联系他人，不付费。</span><br><span class="line">完成后给我可打开的表格文件，并在聊天中附上文件入口。</span><br><span class="line">如果当前无法生成文件，请给完整的可复制表格，并说明限制。</span><br></pre></td></tr></table></figure>
+
+<p>这条任务把几件事交代清楚了：读哪些资料、整理什么、哪里不能自行补充，以及最后交什么。</p>
+<p>以后换成自己的工作，也可以沿用这个写法：</p>
+<p><strong>任务 + 资料范围 + 完成标准 + 交付形式。</strong></p>
+<p>涉及账号或外部操作时，再补充行动边界。</p>
+<p>例如，把“帮我看看这几款产品”改成“只根据这三个官网，比较价格、适用人群和主要限制，给我一份附来源的表格”。要求越具体，你越容易判断结果是否合格。</p>
+<p><img src="/images/HTBm2UGbIAAxojo.jpg" alt="HTBm2UGbIAAxojo"></p>
+<h2 id="4-收到结果后，先打开，再抽查"><a href="#4-收到结果后，先打开，再抽查" class="headerlink" title="4. 收到结果后，先打开，再抽查"></a>4. 收到结果后，先打开，再抽查</h2><p>看到“已完成”，先点开文件。确认内容能正常显示，表头齐全，来源链接可以点击。</p>
+<p>如果只有一段聊天回复，可以接着说：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">刚才没有看到文件入口。请确认是否已生成文件，给我准确的文件名和打开位置。</span><br></pre></td></tr></table></figure>
+
+<p>然后抽查几条结论。这个跟练任务，可以重点检查：</p>
+<ul>
+<li>“关闭 App 后继续工作”的说法，是否能在官方原文里找到？</li>
+<li>Goals 是如何描述的？表格有没有把目标管理写成保证按时完成？</li>
+<li>资料没有提供的额度、按钮位置或功能限制，是否被标为“未说明”？</li>
+</ul>
+<p><strong>有来源链接，还要看链接里的内容是否支持这条结论。</strong></p>
+<p>如果某个链接打不开，可以把你自己打开后读到的正文粘贴给它，注明来源；暂时拿不到内容，就让这一项保持待核实。</p>
+<h2 id="5-在原对话里，让它完成一次修改"><a href="#5-在原对话里，让它完成一次修改" class="headerlink" title="5. 在原对话里，让它完成一次修改"></a>5. 在原对话里，让它完成一次修改</h2><p>第一版不够用很正常。继续告诉它需要改哪里，比重新开一段对话更方便。</p>
+<p>比如，资料表已经有了，但写文章时还需要区分“官方明确说过的”与“自己要进一步确认的”。可以追加：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">请基于刚才的资料表修改，保留原文件，另存为「Muse入门资料表-v2」。</span><br><span class="line"></span><br><span class="line">1. 增加「资料发布日期」一列；找不到确切日期就写「未标明」。</span><br><span class="line">2. 对照来源复查功能描述，不要把能力介绍写成效果保证。</span><br><span class="line">3. 没有原文支持的内容移到「待核实项」。</span><br><span class="line"></span><br><span class="line">完成后给我新版文件入口，并简要列出改了哪些地方。</span><br></pre></td></tr></table></figure>
+
+<p>打开新版，看看新增列是否出现、原来的问题是否真的修正。若它只回复“已修改”，却没有新的文件或实际变化，就指出具体缺失，让它继续处理。</p>
+<p>到这里，你已经走完了最常用的一轮操作：交代任务，打开成果，核对内容，再提出修改。</p>
+<p>后面换成整理 PDF、比较方案或准备行程，也可以按这个顺序做。</p>
+<p><img src="/images/HTBm9CVbUAAkBxu.jpg" alt="HTBm9CVbUAAkBxu"></p>
+<h2 id="6-用过几次后，再加这些能力"><a href="#6-用过几次后，再加这些能力" class="headerlink" title="6. 用过几次后，再加这些能力"></a>6. 用过几次后，再加这些能力</h2><h3 id="Memory-和-Soul：先正常用，不用急着改"><a href="#Memory-和-Soul：先正常用，不用急着改" class="headerlink" title="Memory 和 Soul：先正常用，不用急着改"></a>Memory 和 Soul：先正常用，不用急着改</h3><p>Muse 会在与你的互动中逐步积累记忆、调整合作方式。Memory 记录关于你的信息和偏好，Soul 影响助手的表达方式与行为风格。</p>
+<p><strong>新手不需要先手动编辑这两份文件。</strong> 正常交代任务、反馈结果就行：喜欢怎样的回复，哪里理解错了，直接在对话里告诉它，让它逐步完善。</p>
+<p>比如：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以后回复先给简短结论，需要时再展开。</span><br></pre></td></tr></table></figure>
+
+<p>如果只是这一次想要简短回复，就说“这次简短一点”，避免把临时要求表达成长期偏好。</p>
+<p><strong>这两块也可以由你查看和修改。</strong> 想了解它记住了什么，或者发现某条信息不准确、某种表达一直不合适时，再从助手头像进入 Identity，查看 Memory &#x2F; Soul，按需纠正即可，入口以当前版本为准。</p>
+<p>涉及账号访问和操作审批，仍然到权限设置里管理。</p>
+<p><img src="/images/HTBnC2IbQAA73he.jpg" alt="HTBnC2IbQAA73he"></p>
+<h3 id="资料在邮箱里？连接邮箱再整理"><a href="#资料在邮箱里？连接邮箱再整理" class="headerlink" title="资料在邮箱里？连接邮箱再整理"></a>资料在邮箱里？连接邮箱再整理</h3><p>需要整理邮件里的信息时，再打开 Settings 中的连接器或服务连接入口，选择支持的邮箱服务并授权。</p>
+<p><img src="/images/HTBnJHqbkAA6gFA.jpg" alt="HTBnJHqbkAA6gFA"></p>
+<p>授权前看清连接的是哪个账号，以及能否读取、发送或删除邮件。第一次只做整理，支持只读时先选只读。密码和验证码在邮箱服务的登录或授权界面填写。</p>
+<p>连好后，选一个你熟悉的邮件主题做测试：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">请在刚连接的邮箱里，查找最近 7 天与 [项目名称] 有关的邮件。</span><br><span class="line">整理成一份清单，包含：发件人、邮件主题、日期、主要事项，</span><br><span class="line">以及邮件中明确提到的待办和截止时间。</span><br><span class="line">没有明确截止时间的，标注「未说明」，不要推测。</span><br><span class="line">附上原邮件入口，方便我核对。</span><br><span class="line"></span><br><span class="line">只读取和整理，不发送或回复邮件，</span><br><span class="line">不删除、移动邮件，也不修改标签。</span><br></pre></td></tr></table></figure>
+
+<p>把项目名称换成你实际收过邮件的主题。拿到结果后，打开几封原邮件，核对发件人、事项和截止时间，确认没有漏掉或误解关键信息。</p>
+<p>用完后可以在设置里断开邮箱连接；已经进入聊天或记忆的内容，需要另外检查和管理。</p>
+<h3 id="一件事要做几天？放进-Goals"><a href="#一件事要做几天？放进-Goals" class="headerlink" title="一件事要做几天？放进 Goals"></a>一件事要做几天？放进 Goals</h3><p>一次性整理用聊天就够了。需要分几步、持续推进的事情，可以建立 Goal。</p>
+<p>沿用前面的资料整理任务：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">请建立一个 Goal：在 [填写具体日期] 前，</span><br><span class="line">整理好 Muse 入门文章的资料清单。</span><br><span class="line"></span><br><span class="line">以刚才的资料表为基础，列出还缺哪些信息、下一步怎么补齐。</span><br><span class="line">交付物是一份带来源链接和待核实项的资料表。</span><br><span class="line">需要我提供账号内截图或补充资料时，请明确告诉我缺什么。</span><br></pre></td></tr></table></figure>
+
+<p>使用前把日期改成自己的截止时间。</p>
+<p><img src="/images/HTBnhl0awAAqZj-.jpg" alt="HTBnhl0awAAqZj-"></p>
+<p>建立后，打开 Goals 检查是否保存、交付物是否明确、下一步是什么。</p>
+<p><img src="/images/HTBnmTjasAAIshG.jpg" alt="HTBnmTjasAAIshG"></p>
+<p>如果还希望每天固定时间更新，再确认定时安排和下次运行时间。建立目标与设置定时更新，要分别检查。</p>
+<h2 id="7-需要更多能力时，再开这两个入口"><a href="#7-需要更多能力时，再开这两个入口" class="headerlink" title="7. 需要更多能力时，再开这两个入口"></a>7. 需要更多能力时，再开这两个入口</h2><h3 id="自定义连接器：接入列表里没有的服务"><a href="#自定义连接器：接入列表里没有的服务" class="headerlink" title="自定义连接器：接入列表里没有的服务"></a>自定义连接器：接入列表里没有的服务</h3><p>**在哪开始：**先检查 Settings 里的连接器列表。</p>
+<p><img src="/images/HTBnt4BaMAAqAGU.jpg" alt="HTBnt4BaMAAqAGU"></p>
+<p>没有对应服务时，在聊天中让 Muse 给出配置方案。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">我想连接 [服务名称]，读取 [指定资料]。</span><br><span class="line">请先检查是否有官方连接器。</span><br><span class="line">如果需要自定义配置，请说明：</span><br><span class="line">去哪里设置、需要哪些权限、能否只读、</span><br><span class="line">凭证在哪个安全入口填写，以及如何撤销授权。</span><br><span class="line">先给步骤，等我确认后再继续。</span><br></pre></td></tr></table></figure>
+
+<p>**先做什么：**确认账号和授权范围，连好后只读取一条你熟悉的测试记录，核对返回内容。</p>
+<p>**别做什么：**不要把 API Key、密码或验证码贴进普通聊天；不要直接用重要数据测试修改、删除。</p>
+<p><img src="/images/HTBpwc1aIAAKiA0.jpg" alt="HTBpwc1aIAAKiA0"></p>
+<h3 id="接到电脑：先列出一个测试文件夹"><a href="#接到电脑：先列出一个测试文件夹" class="headerlink" title="接到电脑：先列出一个测试文件夹"></a>接到电脑：先列出一个测试文件夹</h3><p>**在哪开始：**Mac 用户从官方入口获取客户端，按当前版本提示配置电脑操作权限。其他设备或远程连接方式，先让 Muse 确认是否支持，再给配置步骤。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我的系统是 [系统和版本]。</span><br><span class="line">我想让你访问一个测试文件夹。</span><br><span class="line">先说明支持的接入方式、开启位置、需要哪些权限，</span><br><span class="line">能否限制到指定目录，以及在哪里关闭。</span><br><span class="line">先给配置步骤，等我确认后再继续。</span><br></pre></td></tr></table></figure>
+
+<p>配置好后，用这句话测试：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请列出 [完整文件夹路径] 中的文件名。</span><br><span class="line">不要读取无关目录，不要修改、删除、移动文件或安装软件。</span><br><span class="line">列完后停下，等我检查。</span><br></pre></td></tr></table></figure>
+
+<p>**先做什么：**放几份不敏感的文件副本进去，核对列出的路径和文件名，再考虑创建新文件。</p>
+<p>**别做什么：**不要一开始就批量改文件。提示词不会自动限制目录访问，能在授权设置里限制范围，就在那里设置；用完收回不需要的权限。</p>
+<p><img src="/images/HTBoSXPbcAAySgA.jpg" alt="HTBoSXPbcAAySgA"></p>
+<h2 id="8-卡住了，就从这里排查"><a href="#8-卡住了，就从这里排查" class="headerlink" title="8. 卡住了，就从这里排查"></a>8. 卡住了，就从这里排查</h2><p>**它一直解释，却没有交付。**补上明确的成果要求：文件名、表格字段、格式和打开入口。如果当前无法生成文件，就要求完整的可复制版本。</p>
+<p>**找不到生成的文件。**先回到对应任务消息找入口，让它报出文件名。 还可以去资源库那里查找。</p>
+<p>**等了很久，不知道做到哪一步。**点击助手头像查看活动记录。也可以直接问：“已经完成什么？卡在哪一步？需要我补充什么？”</p>
+<p>**保存过偏好，还是没按要求来。**先在原对话中指出具体哪里不符合要求，让它纠正；如果同一个问题反复出现，再查看记忆内容，按需修正错误或冲突的信息。</p>
+<p>**准备执行的操作不符合预期。**拒绝对应审批并停止任务，检查活动记录和授权范围，必要时断开相关服务。</p>
+<h2 id="最后，检查自己是否完成了这一轮"><a href="#最后，检查自己是否完成了这一轮" class="headerlink" title="最后，检查自己是否完成了这一轮"></a>最后，检查自己是否完成了这一轮</h2><ul>
+<li><input disabled="" type="checkbox"> 已经登录，知道在哪里查看权限和任务活动。</li>
+<li><input disabled="" type="checkbox"> 发出一个有明确资料范围和交付要求的任务。</li>
+<li><input disabled="" type="checkbox"> 打开成果，抽查过其中的来源和内容。</li>
+<li><input disabled="" type="checkbox"> 在原对话里提出修改，并打开新版确认变化。</li>
+</ul>
+<p>做完这一轮，再换成自己的文章、方案或会议笔记。先拿到一份能用的结果，需要什么能力，再开什么。</p>
+<p>参考资料：</p>
+<ul>
+<li>Meta：Muse 发布公告，用于核对产品定位、首发范围、平台、免费与订阅说明。</li>
+<li>How We Designed Muse，用于核对后台任务、活动记录、Goals、Memory、审批与文件交付的设计说明。</li>
+<li>Meta：连接器与审批说明，用于核对连接器、授权与自定义配置。</li>
+<li>Meta：个性化与数据管理，用于核对记忆、设定与数据管理。</li>
+<li>Meta Connect 2026，用于核对 Mac 端电脑操作能力</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/09/25/0xlangeai-2103300004966478284/">https://yaoav.github.io/2026/09/25/0xlangeai-2103300004966478284/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/0xlangeai/">@0xlangeai</a></div><div class="post-share"><div class="social-share" data-image="/images/2103300004966478284-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/26/alexandr_wang-2103551714536439951/" title="Why We're Building Muse"><img class="cover" src="/images/2103551714536439951-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Why We're Building Muse</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @alexandr_wang（Alexandr Wang） 的长文，原文链接，版权归原作者所有。  Most people never say what they want. It’s not because we don’t want. We want fiercely and constantly. It happens in the moments before falling asleep or while daydreaming on the car ride home. We want to spend more time with our families, overcome social anxiety, eat healthier food, open a bakery, build an app, or just find a few more moments of calm in a hectic life. But rarely do we get to even express these dreams, and even mor...</div></div></div></a><a class="pagination-related" href="/2026/09/22/alannnfx-2102313175660286311/" title="Jev: Stop Paying Frontier Models to Make Simple Decisions"><img class="cover" src="/images/2102313175660286311-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Jev: Stop Paying Frontier Models to Make Simple Decisions</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @alannnfx（Alan） 的长文，原文链接，版权归原作者所有。  Most of what you pay a frontier model for isn’t thinking. It’s a yes or a no Your agent sits in a loop, picking the next worker, checking if a result is good enough, deciding whether to keep going. Each one of those is a full model call that costs tokens, waits on generation, and comes back as a paragraph you have to parse. That’s a $0.03 hammer driving a thumbtack. Those decisions don’t need a brain that writes, they need a brain that decides, ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img class="cover" src="/images/2122708521959706960-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  领取链接：https://tokenized.play.google.com/eacquire/multiline?authuser=0&amp;ear=%5Bnull%2Cnull%2C%5Bnull%2Cnull%2C%22%2Fplans%3Fg1_last_touchpoint%3D37%26g1_landing_page%3D1%26otzr%3D1%22%5D%2Cnull%2C%5B%22W1tudWxsLG51bGwsbnVsbCxbbnVsbCxbIlJzMi4wLjY6OjpzMTEsMiwyNmI1ZTE5LDAsNzY5LGEwNjNlYmU5LDAsNGEyLGVkZDk4YmFjLDAsMTgsNDg2M2ZkMzUsMCw3NjksY2IyZDVjNmYsMCw0N2UsNmFkNDdjNmMsMCw1M2UsN2JkYjQ5ZjYsMCw0MjgsYjY1NDAyMDAsMCw3NjksZWVhODIwYjYsMCw0N2UsMWFhNDMzMSwwL...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%EF%BC%9F%E5%85%88%E7%99%BB%E5%BD%95%EF%BC%8C%E5%86%8D%E7%9C%8B%E5%8F%AF%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">1.</span> <span class="toc-text">1. 从哪里开始？先登录，再看可用范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%99%BB%E5%BD%95%E5%90%8E%EF%BC%8C%E5%85%88%E5%91%8A%E8%AF%89%E5%AE%83%E6%80%8E%E4%B9%88%E5%92%8C%E4%BD%A0%E5%90%88%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">2. 登录后，先告诉它怎么和你合作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%B7%9F%E7%BB%83%EF%BC%9A%E6%8A%8A%E7%BD%91%E9%A1%B5%E9%93%BE%E6%8E%A5%E6%95%B4%E7%90%86%E6%88%90%E4%B8%80%E4%BB%BD%E8%B5%84%E6%96%99%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">3. 跟练：把网页链接整理成一份资料表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%94%B6%E5%88%B0%E7%BB%93%E6%9E%9C%E5%90%8E%EF%BC%8C%E5%85%88%E6%89%93%E5%BC%80%EF%BC%8C%E5%86%8D%E6%8A%BD%E6%9F%A5"><span class="toc-number">4.</span> <span class="toc-text">4. 收到结果后，先打开，再抽查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%9C%A8%E5%8E%9F%E5%AF%B9%E8%AF%9D%E9%87%8C%EF%BC%8C%E8%AE%A9%E5%AE%83%E5%AE%8C%E6%88%90%E4%B8%80%E6%AC%A1%E4%BF%AE%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">5. 在原对话里，让它完成一次修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%94%A8%E8%BF%87%E5%87%A0%E6%AC%A1%E5%90%8E%EF%BC%8C%E5%86%8D%E5%8A%A0%E8%BF%99%E4%BA%9B%E8%83%BD%E5%8A%9B"><span class="toc-number">6.</span> <span class="toc-text">6. 用过几次后，再加这些能力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Memory-%E5%92%8C-Soul%EF%BC%9A%E5%85%88%E6%AD%A3%E5%B8%B8%E7%94%A8%EF%BC%8C%E4%B8%8D%E7%94%A8%E6%80%A5%E7%9D%80%E6%94%B9"><span class="toc-number">6.1.</span> <span class="toc-text">Memory 和 Soul：先正常用，不用急着改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E5%9C%A8%E9%82%AE%E7%AE%B1%E9%87%8C%EF%BC%9F%E8%BF%9E%E6%8E%A5%E9%82%AE%E7%AE%B1%E5%86%8D%E6%95%B4%E7%90%86"><span class="toc-number">6.2.</span> <span class="toc-text">资料在邮箱里？连接邮箱再整理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BB%B6%E4%BA%8B%E8%A6%81%E5%81%9A%E5%87%A0%E5%A4%A9%EF%BC%9F%E6%94%BE%E8%BF%9B-Goals"><span class="toc-number">6.3.</span> <span class="toc-text">一件事要做几天？放进 Goals</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%9C%80%E8%A6%81%E6%9B%B4%E5%A4%9A%E8%83%BD%E5%8A%9B%E6%97%B6%EF%BC%8C%E5%86%8D%E5%BC%80%E8%BF%99%E4%B8%A4%E4%B8%AA%E5%85%A5%E5%8F%A3"><span class="toc-number">7.</span> <span class="toc-text">7. 需要更多能力时，再开这两个入口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E5%99%A8%EF%BC%9A%E6%8E%A5%E5%85%A5%E5%88%97%E8%A1%A8%E9%87%8C%E6%B2%A1%E6%9C%89%E7%9A%84%E6%9C%8D%E5%8A%A1"><span class="toc-number">7.1.</span> <span class="toc-text">自定义连接器：接入列表里没有的服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%88%B0%E7%94%B5%E8%84%91%EF%BC%9A%E5%85%88%E5%88%97%E5%87%BA%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">7.2.</span> <span class="toc-text">接到电脑：先列出一个测试文件夹</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%8D%A1%E4%BD%8F%E4%BA%86%EF%BC%8C%E5%B0%B1%E4%BB%8E%E8%BF%99%E9%87%8C%E6%8E%92%E6%9F%A5"><span class="toc-number">8.</span> <span class="toc-text">8. 卡住了，就从这里排查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%EF%BC%8C%E6%A3%80%E6%9F%A5%E8%87%AA%E5%B7%B1%E6%98%AF%E5%90%A6%E5%AE%8C%E6%88%90%E4%BA%86%E8%BF%99%E4%B8%80%E8%BD%AE"><span class="toc-number">9.</span> <span class="toc-text">最后，检查自己是否完成了这一轮</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

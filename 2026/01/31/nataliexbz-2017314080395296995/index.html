@@ -1,0 +1,646 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The Math Needed for Trading on Polymarket (Complete Roadmap) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="I&#39;m going to break down the essential math you need for trading on Polymarket. I">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Math Needed for Trading on Polymarket (Complete Roadmap)">
+<meta property="og:url" content="https://yaoav.github.io/2026/01/31/nataliexbz-2017314080395296995/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="I&#39;m going to break down the essential math you need for trading on Polymarket. I">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2017314080395296995-cover.jpg">
+<meta property="article:published_time" content="2026-01-31T03:08:51.000Z">
+<meta property="article:modified_time" content="2026-11-16T03:19:51.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@nataliexbz">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2017314080395296995-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Math Needed for Trading on Polymarket (Complete Roadmap)",
+  "url": "https://yaoav.github.io/2026/01/31/nataliexbz-2017314080395296995/",
+  "image": "https://yaoav.github.io/images/2017314080395296995-cover.jpg",
+  "datePublished": "2026-01-31T03:08:51.000Z",
+  "dateModified": "2026-11-16T03:19:51.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/01/31/nataliexbz-2017314080395296995/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The Math Needed for Trading on Polymarket (Complete Roadmap)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2017314080395296995-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The Math Needed for Trading on Polymarket (Complete Roadmap)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The Math Needed for Trading on Polymarket (Complete Roadmap)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-01-31T03:08:51.000Z" title="发表于 2026-01-31 03:08:51">2026-01-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@nataliexbz（natalie）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2017314080395296995">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>I’m going to break down the essential math you need for trading on Polymarket. I’ll also share the exact roadmap and resources that helped me personally.</p>
+<p>Let’s get straight to it</p>
+<p>A recent research paper just exposed the reality. Sophisticated traders extracted $40 million in guaranteed arbitrage profits from Polymarket in one year. The top trader alone made $2,009,631.76. These aren’t lucky gamblers. They’re running Bregman projections, Frank-Wolfe algorithms, and solving optimization problems that would make most computer science PhDs uncomfortable.</p>
+<blockquote>
+<p>**Bookmark This -<br>**I’m Roan, a backend developer working on system design, HFT-style execution, and quantitative trading systems. My work focuses on how prediction markets actually behave under load.</p>
+</blockquote>
+<p>When you see a market where YES is $0.62 and NO is $0.33, you think “that adds up to $0.95, there’s arbitrage.” You’re right. What most people never realize is that while they’re manually checking whether YES plus NO equals $1, quantitative systems are solving integer programs that scan <strong>17,218 conditions across 2^63 possible outcomes</strong> in milliseconds. By the time a human places both orders, the spread is gone. The systems have already found the same violation across dozens of correlated markets, calculated optimal position sizes accounting for order book depth and fees, executed parallel non-atomic trades, and rotated capital into the next opportunity.</p>
+<p>The difference isn’t just speed. It’s mathematical infrastructure.</p>
+<p>By the end of this article, you will understand the exact optimization frameworks that extracted $40 million from Polymarket. You’ll know why simple addition fails, how integer programming compresses exponential search spaces, and what Bregman divergence actually means for pricing efficiency. More importantly, you’ll see the specific code patterns and algorithmic strategies that separate hobby projects from production systems running millions in capital.</p>
+<p><strong>Note:</strong> This isn’t a skim. If you’re serious about building systems that can scale to seven figures, read it end to end. If you’re here for quick wins or vibe coding, this isn’t for you.</p>
+<h3 id="Part-I-The-Marginal-Polytope-Problem-Why-Simple-Math-Fails"><a href="#Part-I-The-Marginal-Polytope-Problem-Why-Simple-Math-Fails" class="headerlink" title="Part I: The Marginal Polytope Problem (Why Simple Math Fails)"></a>Part I: The Marginal Polytope Problem (Why Simple Math Fails)</h3><p><strong>The Reality of Multi-Condition Markets</strong></p>
+<p>Single condition market: “Will Trump win Pennsylvania?”</p>
+<ul>
+<li>YES: $0.48</li>
+<li>NO: $0.52</li>
+<li>Sum: $1.00</li>
+</ul>
+<p>Looks perfect. No arbitrage, right?</p>
+<p>Wrong.</p>
+<p>Now add another market: “Will Republicans win Pennsylvania by 5+ points?”</p>
+<ul>
+<li>YES: $0.32</li>
+<li>NO: $0.68</li>
+</ul>
+<p>Still both sum to $1. Still looks fine.</p>
+<p>But there’s a logical dependency. If Republicans win by 5+ points, Trump must win Pennsylvania. These markets aren’t independent. And that creates arbitrage.</p>
+<p><strong>The Mathematical Framework</strong></p>
+<p>For any market with n conditions, there are 2^n possible price combinations. But only n valid outcomes because exactly one condition must resolve to TRUE.</p>
+<p>Define the set of valid payoff vectors:</p>
+<blockquote>
+<p><strong>Z &#x3D; {φ(ω) : ω ∈ Ω}</strong></p>
+</blockquote>
+<p>Where φ(ω) is a binary vector showing which condition is TRUE in outcome ω.</p>
+<p>The marginal polytope is the convex hull of these valid vectors:</p>
+<blockquote>
+<p><strong>M &#x3D; conv(Z)</strong></p>
+</blockquote>
+<p>Arbitrage-free prices must lie in M. Anything outside M is exploitable.</p>
+<p>For the Pennsylvania example:</p>
+<ol>
+<li>Market A has 2 conditions, 2 valid outcomes</li>
+<li>Market B has 2 conditions, 2 valid outcomes</li>
+<li>Combined naive check: 2 × 2 &#x3D; 4 possible outcomes</li>
+<li>Actual valid outcomes: 3 (dependency eliminates one)</li>
+</ol>
+<p>When prices assume 4 independent outcomes but only 3 exist, the mispricing creates guaranteed profit.</p>
+<p><strong>Why Brute Force Dies</strong></p>
+<p>NCAA 2010 tournament market had:</p>
+<ul>
+<li>63 games (win&#x2F;loss each)</li>
+<li>2^63 &#x3D; 9,223,372,036,854,775,808 possible outcomes</li>
+<li>5,000+ securities</li>
+</ul>
+<p>Checking every combination is computationally impossible.</p>
+<p>The research paper found 1,576 potentially dependent market pairs in the 2024 US election alone. Naive pairwise verification would require checking 2^(n+m) combinations for each pair.</p>
+<p>At just 10 conditions per market, that’s 2^20 &#x3D; 1,048,576 checks per pair. Multiply by 1,576 pairs. Your laptop will still be computing when the election results are already known.</p>
+<p><strong>The Integer Programming Solution</strong></p>
+<p>Instead of enumerating outcomes, describe the valid set with linear constraints.</p>
+<blockquote>
+<p><strong>Z &#x3D; {z ∈ {0,1}^I : A^T × z ≥ b}</strong></p>
+</blockquote>
+<p>Real example from Duke vs Cornell market:</p>
+<p>Each team has 7 securities (0 to 6 wins). That’s 14 conditions, 2^14 &#x3D; 16,384 possible combinations.</p>
+<p>But they can’t both win 5+ games because they’d meet in the semifinals.</p>
+<p>Integer programming constraints:</p>
+<blockquote>
+<p>Sum of z(duke, 0 to 6) &#x3D; 1<br>Sum of z(cornell, 0 to 6) &#x3D; 1<br>z(duke,5) + z(duke,6) + z(cornell,5) + z(cornell,6) ≤ 1</p>
+</blockquote>
+<p>Three linear constraints replace 16,384 brute force checks.</p>
+<p>This is how quantitative systems handle exponential complexity. They don’t enumerate. They constrain.</p>
+<p><strong>Detection Results from Real Data</strong></p>
+<p>The research team analyzed markets from April 2024 to April 2025:</p>
+<ul>
+<li>17,218 total conditions examined</li>
+<li>7,051 conditions showed single-market arbitrage (41%)</li>
+<li>Median mispricing: $0.60 per dollar (should be $1.00)</li>
+<li>13 confirmed dependent market pairs with exploitable arbitrage</li>
+</ul>
+<p>The median mispricing of $0.60 means markets were regularly wrong by 40%. Not close to efficient. Massively exploitable.</p>
+<p><strong>Key takeaway:</strong> Arbitrage detection isn’t about checking if numbers add up. It’s about solving constraint satisfaction problems over exponentially large outcome spaces using compact linear representations.</p>
+<h3 id="Part-II-Bregman-Projection-How-to-Actually-Remove-Arbitrage"><a href="#Part-II-Bregman-Projection-How-to-Actually-Remove-Arbitrage" class="headerlink" title="Part II: Bregman Projection (How to Actually Remove Arbitrage)"></a>Part II: Bregman Projection (How to Actually Remove Arbitrage)</h3><p>Finding arbitrage is one problem. Calculating the optimal exploiting trade is another.</p>
+<p>You can’t just “fix” prices by averaging or nudging numbers. You need to project the current market state onto the arbitrage-free manifold while preserving the information structure.</p>
+<p><strong>Why Standard Distance Fails</strong></p>
+<p>Euclidean projection would minimize:</p>
+<blockquote>
+<p><strong>||μ - θ||^2</strong></p>
+</blockquote>
+<p>This treats all price movements equally. But markets use cost functions. A price move from $0.50 to $0.60 has different information content than a move from $0.05 to $0.15, even though both are 10 cent changes.</p>
+<p>Market makers use logarithmic cost functions (LMSR) where prices represent implied probabilities. The right distance metric must respect this structure.</p>
+<p><strong>The Bregman Divergence</strong></p>
+<p>For any convex function R with gradient ∇R, the Bregman divergence is:</p>
+<blockquote>
+<p><strong>D(μ||θ) &#x3D; R(μ) + C(θ) - θ·μ</strong></p>
+</blockquote>
+<p>Where:</p>
+<ul>
+<li>R(μ) is the convex conjugate of the cost function C</li>
+<li>θ is the current market state</li>
+<li>μ is the target price vector</li>
+<li>C(θ) is the market maker’s cost function</li>
+</ul>
+<p>For LMSR, R(μ) is negative entropy:</p>
+<blockquote>
+<p><strong>R(μ) &#x3D; Sum of μ_i × ln(μ_i)</strong></p>
+</blockquote>
+<p>This makes D(μ||θ) the Kullback-Leibler divergence, measuring information-theoretic distance between probability distributions.</p>
+<p><strong>The Arbitrage Profit Formula</strong></p>
+<p>The maximum guaranteed profit from any trade equals:</p>
+<blockquote>
+<p>max over all trades δ of [min over outcomes ω of (δ·φ(ω) - C(θ+δ) + C(θ))] &#x3D; D(μ||θ)*</p>
+</blockquote>
+<p>Where μ* is the Bregman projection of θ onto M.</p>
+<p>This is not obvious. The proof requires convex duality theory. But the implication is clear: finding the optimal arbitrage trade is equivalent to computing the Bregman projection.</p>
+<p><strong>Real Numbers</strong></p>
+<p>The top arbitrageur extracted $2,009,631.76 over one year.<br>Their strategy was solving this optimization problem faster and more accurately than everyone else:</p>
+<blockquote>
+<p>μ &#x3D; argmin over μ in M of D(μ||θ)*</p>
+</blockquote>
+<p>Every profitable trade was finding μ* before prices moved.</p>
+<p><strong>Why This Matters for Execution</strong></p>
+<p>When you detect arbitrage, you need to know:</p>
+<ol>
+<li>What positions to take (which conditions to buy&#x2F;sell)</li>
+<li>What size (accounting for order book depth)</li>
+<li>What profit to expect (accounting for execution risk)</li>
+</ol>
+<p>Bregman projection gives you all three.</p>
+<p>The projection μ* tells you the arbitrage-free price vector. The divergence D(μ*||θ) tells you the maximum extractable profit. The gradient ∇D tells you the trading direction.</p>
+<p>Without this framework, you’re guessing. With it, you’re optimizing.</p>
+<p><strong>Key takeaway:</strong> Arbitrage isn’t about spotting mispriced assets. It’s about solving constrained convex optimization problems in spaces defined by market microstructure. The math determines profitability. You can’t just “fix” prices by averaging or nudging numbers. You need to project the current market state onto the arbitrage-free manifold while preserving the information structure.</p>
+<h3 id="Part-III-The-Frank-Wolfe-Algorithm-Making-It-Computationally-Tractable"><a href="#Part-III-The-Frank-Wolfe-Algorithm-Making-It-Computationally-Tractable" class="headerlink" title="Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)"></a>Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)</h3><p>Computing the Bregman projection directly is intractable. The marginal polytope M has exponentially many vertices.</p>
+<p>Standard convex optimization requires access to the full constraint set. For prediction markets, that means enumerating every valid outcome. Impossible at scale.</p>
+<p>The Frank-Wolfe algorithm solves this by reducing projection to a sequence of linear programs.</p>
+<p><strong>The Core Insight</strong></p>
+<p>Instead of optimizing over all of M at once, Frank-Wolfe builds it iteratively.</p>
+<p><strong>Algorithm:</strong></p>
+<blockquote>
+<ol>
+<li>Start with a small set of known vertices Z_0</li>
+<li>For iteration t:<br>a. Solve convex optimization over conv(Z_{t-1})<br>   μ_t &#x3D; argmin over μ in conv(Z_{t-1}) of F(μ)</li>
+</ol>
+</blockquote>
+<p>   b. Find new descent vertex by solving IP:<br>      z_t &#x3D; argmin over z in Z of ∇F(μ_t)·z</p>
+<p>   c. Add to active set:<br>      Z_t &#x3D; Z_{t-1} ∪ {z_t}</p>
+<p>   d. Compute convergence gap:<br>      g(μ_t) &#x3D; ∇F(μ_t)·(μ_t - z_t)</p>
+<p>   e. Stop if g(μ_t) ≤ ε</p>
+<p>The active set Z_t grows by one vertex per iteration. Even after 100 iterations, you’re only tracking 100 vertices instead of 2^63.</p>
+<p><strong>The Integer Programming Oracle</strong></p>
+<p>Step 2b is the expensive part. Each iteration requires solving:</p>
+<p><strong>min over z in Z of c·z</strong></p>
+<p>Where c &#x3D; ∇F(μ_t) is the current gradient and Z is the set of valid payoff vectors defined by integer constraints.</p>
+<p>This is an integer linear program. NP-hard in general. But modern IP solvers like Gurobi handle these efficiently for well-structured problems.</p>
+<p>The research team used Gurobi 5.5. Typical solve times:</p>
+<ul>
+<li>Early iterations (small partial outcomes): under 1 second</li>
+<li>Mid-tournament (30-40 games settled): 10-30 seconds</li>
+<li>Late tournament (50+ games settled): under 5 seconds</li>
+</ul>
+<p>Why does it get faster later? Because as outcomes settle, the feasible set shrinks. Fewer variables, tighter constraints, faster solves.</p>
+<p><strong>The Controlled Growth Problem</strong></p>
+<p>Standard Frank-Wolfe assumes the gradient ∇F is Lipschitz continuous with bounded constant.</p>
+<p>For LMSR, ∇R(μ) &#x3D; ln(μ) + 1. As μ approaches 0, the gradient explodes to negative infinity.</p>
+<p>This violates standard convergence proofs.</p>
+<p>The solution is Barrier Frank-Wolfe. Instead of optimizing over M, optimize over a contracted polytope:</p>
+<blockquote>
+<p><strong>M’ &#x3D; (1-ε)M + εu</strong></p>
+</blockquote>
+<p>Where u is an interior point with all coordinates strictly between 0 and 1, and ε in (0,1) is the contraction parameter.</p>
+<p>For any ε greater than 0, the gradient is bounded on M’. The Lipschitz constant is O(1&#x2F;ε).</p>
+<p>The algorithm adaptively decreases ε as iterations progress:</p>
+<blockquote>
+<p>If g(μ_t) &#x2F; (-4g_u) &lt; ε_{t-1}:<br>ε_t &#x3D; min{g(μ_t)&#x2F;(-4g_u), ε_{t-1}&#x2F;2}<br>Else:<br>    ε_t &#x3D; ε_{t-1}</p>
+</blockquote>
+<p>This ensures ε goes to 0 asymptotically, so the contracted problem converges to the true projection.</p>
+<p><strong>Convergence Rate</strong></p>
+<p>Frank-Wolfe converges at rate O(L × diam(M) &#x2F; t) where L is the Lipschitz constant and diam(M) is the diameter of M.</p>
+<p>For LMSR with adaptive contraction, this becomes O(1&#x2F;(ε×t)). As ε shrinks adaptively, convergence slows but remains polynomial.</p>
+<p>The research showed that in practice, 50 to 150 iterations were sufficient for convergence on markets with thousands of conditions.</p>
+<p><strong>Production Performance</strong></p>
+<p>From the paper: “Once projections become practically fast, FWMM achieves superior accuracy to LCMM.”</p>
+<p>Timeline:</p>
+<ul>
+<li>First 16 games: LCMM and FWMM perform similarly (IP solver too slow)</li>
+<li>After 45 games settled: First successful 30-minute projection completes</li>
+<li>Remaining tournament: FWMM outperforms LCMM by 38% median improvement on security prices</li>
+</ul>
+<p>The crossover point is when the outcome space shrinks enough for IP solves to complete within trading timeframes.</p>
+<p><strong>Key takeaway:</strong> Theoretical elegance means nothing without computational tractability. Frank-Wolfe with integer programming oracles makes Bregman projection practical on markets with trillions of outcomes. This is how $40 million in arbitrage actually got computed and executed.</p>
+<h3 id="Part-IV-Execution-Under-Non-Atomic-Constraints-Why-Order-Books-Change-Everything"><a href="#Part-IV-Execution-Under-Non-Atomic-Constraints-Why-Order-Books-Change-Everything" class="headerlink" title="Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)"></a>Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)</h3><p>You’ve detected arbitrage. You’ve computed the optimal trade via Bregman projection. Now you need to execute.</p>
+<p>This is where most strategies fail.</p>
+<p><strong>The Non-Atomic Problem</strong></p>
+<p>Polymarket uses a Central Limit Order Book (CLOB). Unlike decentralized exchanges where arbitrage can be atomic (all trades succeed or all fail), CLOB execution is sequential.</p>
+<p>Your arbitrage plan:</p>
+<blockquote>
+<p>Buy YES at $0.30<br>Buy NO at $0.30<br>Total cost: $0.60<br>Guaranteed payout: $1.00<br>Expected profit: $0.40</p>
+</blockquote>
+<p>Reality:</p>
+<blockquote>
+<p>Submit YES order → Fills at $0.30 ✓<br>Price updates due to your order<br>Submit NO order → Fills at $0.78 ✗<br>Total cost: $1.08<br>Payout: $1.00<br>Actual result: -$0.08 loss</p>
+</blockquote>
+<p>One leg fills. The other doesn’t. You’re exposed.</p>
+<p>This is why the research paper only counted opportunities with at least $0.05 profit margin. Smaller edges get eaten by execution risk.</p>
+<p><strong>Volume-Weighted Average Price (VWAP) Analysis</strong></p>
+<p>Instead of assuming instant fills at quoted prices, calculate expected execution price:</p>
+<blockquote>
+<p><strong>VWAP &#x3D; Sum of (price_i × volume_i) &#x2F; Sum of (volume_i)</strong></p>
+</blockquote>
+<p>The research methodology:</p>
+<blockquote>
+<p>For each block on Polygon (approximately 2 seconds):<br>  Calculate VWAP_yes from all YES trades in that block<br>  Calculate VWAP_no from all NO trades in that block</p>
+</blockquote>
+<p>  If abs(VWAP_yes + VWAP_no - 1.0) &gt; 0.02:<br>    Record arbitrage opportunity<br>    Profit &#x3D; abs(VWAP_yes + VWAP_no - 1.0)</p>
+<p>Blocks are the atomic time unit. Analyzing per-block VWAP captures the actual achievable prices, not the fantasy of instant execution.</p>
+<p><strong>The Liquidity Constraint</strong></p>
+<p>Even if prices are mispriced, you can only capture profit up to available liquidity.</p>
+<p>Real example from the data:</p>
+<ul>
+<li>Market shows arbitrage: sum of YES prices &#x3D; $0.85</li>
+<li>Potential profit: $0.15 per dollar</li>
+<li>Order book depth at these prices: $234 total volume</li>
+<li>Maximum extractable profit: $234 × 0.15 &#x3D; $35.10</li>
+</ul>
+<p>The research calculated maximum profit per opportunity as:</p>
+<blockquote>
+<p><strong>profit &#x3D; (price deviation) × min(volume across all required positions)</strong></p>
+</blockquote>
+<p>For multi-condition markets, you need liquidity in ALL positions simultaneously. The minimum determines your cap.</p>
+<p><strong>Time Window Analysis</strong></p>
+<p>The research used a 950-block window (approximately 1 hour) to group related trades.</p>
+<p>Why 1 hour? Because 75% of matched orders on Polymarket fill within this timeframe. Orders submitted, matched, and executed on-chain typically complete within 60 minutes.</p>
+<p>For each trader address, all bids within a 950-block window were grouped as a single strategy execution. Profit was calculated as the guaranteed minimum payout across all possible outcomes minus total cost.</p>
+<p><strong>Execution Success Rate</strong></p>
+<p>Of the detected arbitrage opportunities:</p>
+<ul>
+<li>Single condition arbitrage: 41% of conditions had opportunities, most were exploited</li>
+<li>Market rebalancing: 42% of multi-condition markets had opportunities</li>
+<li>Combinatorial arbitrage: 13 valid pairs identified, 5 showed execution</li>
+</ul>
+<p>The gap between detection and execution is execution risk.</p>
+<p><strong>Latency Layers: The Speed Hierarchy</strong></p>
+<p><strong>Retail trader execution:</strong></p>
+<blockquote>
+<p>Polymarket API call:           ~50ms<br>Matching engine:                ~100ms<br>Polygon block time:           ~2,000ms<br>Block propagation:            ~500ms<br>Total:                                       ~2,650ms</p>
+</blockquote>
+<p><strong>Sophisticated arbitrage system:</strong></p>
+<blockquote>
+<p>WebSocket price feed:        &lt;5ms (real-time push)<br>Decision computation:        &lt;10ms (pre-calculated)<br>Direct RPC submission:       ~15ms (bypass API)<br>Parallel execution:                 ~10ms (all legs at once)<br>Polygon block inclusion:     ~2,000ms (unavoidable)<br>Total:                                           ~2,040ms</p>
+</blockquote>
+<p><strong>The 20-30ms you see on-chain</strong> is decision-to-mempool time. Fast wallets submit all positions within 30ms, eliminating sequential execution risk by confirming everything in the same block.</p>
+<p><strong>The compounding advantage:</strong></p>
+<p>By the time you see their transaction confirmed on-chain (Block N), they detected the opportunity 2+ seconds earlier (Block N-1), submitted all legs in 30ms, and the market already rebalanced. When you copy at Block N+1, you’re 4 seconds behind a sub-second opportunity.</p>
+<p><strong>Why Copytrading Fast Wallets Fails</strong></p>
+<p>**What actually happens:<br>**Block N-1: Fast system detects mispricing, submits 4 transactions in 30ms Block N: All transactions confirm, arbitrage captured, you see this Block N+1: You copy their trade, but price is now $0.78 (was $0.30)</p>
+<p>You’re not arbitraging. You’re providing exit liquidity.</p>
+<p><strong>Order book depth kills you:</strong></p>
+<p>Fast wallet buys 50,000 tokens:</p>
+<ul>
+<li>VWAP: $0.322 across multiple price levels</li>
+<li>Market moves</li>
+</ul>
+<p>You buy 5,000 tokens after:</p>
+<ul>
+<li>VWAP: $0.344 (market already shifted)</li>
+<li>They paid $0.322, you paid $0.344</li>
+<li>Their 10 cent edge became your 2.2 cent loss</li>
+</ul>
+<p><strong>The Capital Efficiency Problem</strong></p>
+<p>Top arbitrageur operated with $500K+ capital. With $5K capital, the same strategy breaks because:</p>
+<ul>
+<li>Slippage eats larger percentage of smaller positions</li>
+<li>Cannot diversify across enough opportunities</li>
+<li>Single failed execution wipes out days of profit</li>
+<li>Fixed costs (gas) consume more of profit margin</li>
+</ul>
+<p>Gas fees on 4-leg strategy: ~$0.02</p>
+<ul>
+<li>$0.08 profit → 25% goes to gas</li>
+<li>$0.03 profit → 67% goes to gas</li>
+</ul>
+<p>This is why $0.05 minimum threshold exists.</p>
+<p><strong>Real Execution Data</strong></p>
+<p><strong>Single condition arbitrage:</strong></p>
+<ul>
+<li>Detected: 7,051 conditions</li>
+<li>Executed: 87% success rate</li>
+<li>Failed due to: liquidity (48%), price movement (31%), competition (21%)</li>
+</ul>
+<p><strong>Combinatorial arbitrage:</strong></p>
+<ul>
+<li>Detected: 13 pairs</li>
+<li>Executed: 45% success rate</li>
+<li>Failed due to: insufficient simultaneous liquidity (71%), speed competition (18%)</li>
+</ul>
+<p><strong>Key takeaway:</strong> Mathematical correctness is necessary but not sufficient. Execution speed, order book depth, and non-atomic fill risk determine actual profitability. The research showed $40 million extracted because sophisticated actors solved execution problems, not just math problems.</p>
+<h3 id="Part-V-The-Complete-System-What-Actually-Got-Deployed"><a href="#Part-V-The-Complete-System-What-Actually-Got-Deployed" class="headerlink" title="Part V: The Complete System (What Actually Got Deployed)"></a>Part V: The Complete System (What Actually Got Deployed)</h3><p>**Theory is clean. Production is messy. </p>
+<p>**Here’s what a working arbitrage system actually looks like based on the research findings and practical requirements.</p>
+<p><strong>The Data Pipeline</strong></p>
+<blockquote>
+<p>Real-time requirements:<br>WebSocket connection to Polymarket CLOB API<br>  └─ Order book updates (price&#x2F;volume changes)<br>  └─ Trade execution feed (fills happening)<br>  └─ Market creation&#x2F;settlement events</p>
+</blockquote>
+<p>Historical analysis:<br>Alchemy Polygon node API<br>  └─ Query events from contract 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045<br>      └─ OrderFilled events (trades executed)<br>      └─ PositionSplit events (new tokens minted)<br>      └─ PositionsMerge events (tokens burned)</p>
+<p>The research analyzed 86 million transactions. That volume requires infrastructure, not scripts.</p>
+<p><strong>The Dependency Detection Layer</strong></p>
+<p>For 305 US election markets, there are 46,360 possible pairs to check.</p>
+<p>Manual analysis is impossible. The research used DeepSeek-R1-Distill-Qwen-32B with prompt engineering:</p>
+<blockquote>
+<p>Input: Two markets with their condition descriptions<br>Output: JSON of valid outcome combinations</p>
+</blockquote>
+<p>Validation checks:</p>
+<ol>
+<li>Does each market have exactly one TRUE condition per outcome?</li>
+<li>Are there fewer valid combinations than n × m (dependency exists)?</li>
+<li>Do dependent subsets satisfy arbitrage conditions?</li>
+</ol>
+<p>Results on election markets:<br>  40,057 independent pairs (no arbitrage possible)<br>  1,576 dependent pairs (potential arbitrage)<br>  374 satisfied strict combinatorial conditions<br>  13 manually verified as exploitable</p>
+<p>81.45% accuracy on complex multi-condition markets. Good enough for filtering. Requires manual verification for execution.</p>
+<p><strong>The Optimization Engine</strong></p>
+<p>Three-layer arbitrage removal:</p>
+<p>**Layer 1: Simple LCMM constraints<br>**Fast linear programming relaxations. Check basic constraints like “sum of probabilities equals 1” and “if A implies B, then P(A) cannot exceed P(B).”</p>
+<p>Runs in milliseconds. Removes obvious mispricing.</p>
+<p>**Layer 2: Integer programming projection<br>**Frank-Wolfe algorithm with Gurobi IP solver.</p>
+<p>Parameters from research:</p>
+<ul>
+<li>Alpha &#x3D; 0.9 (extract at least 90% of available arbitrage)</li>
+<li>Initial epsilon &#x3D; 0.1 (10% contraction)</li>
+<li>Convergence threshold &#x3D; 1e-6</li>
+<li>Time limit &#x3D; 30 minutes (reduced as markets shrink)</li>
+</ul>
+<p>Typical iterations: 50 to 150. Typical solve time per iteration: 1 to 30 seconds depending on market size.</p>
+<p>**Layer 3: Execution validation<br>**Before submitting orders, simulate fills against current order book.</p>
+<p>Check:</p>
+<ul>
+<li>Is liquidity sufficient at these prices?</li>
+<li>What is expected slippage?</li>
+<li>What is guaranteed profit after slippage?</li>
+<li>Does profit exceed minimum threshold (research used $0.05)?</li>
+</ul>
+<p>Only execute if all checks pass.</p>
+<p><strong>Position Sizing Logic</strong></p>
+<p>Modified Kelly criterion accounting for execution risk:</p>
+<blockquote>
+<p>f &#x3D; (b×p - q) &#x2F; b × sqrt(p)*</p>
+</blockquote>
+<p>Where:</p>
+<ul>
+<li>b &#x3D; arbitrage profit percentage</li>
+<li>p &#x3D; probability of full execution (estimated from order book depth)</li>
+<li>q &#x3D; 1 - p</li>
+</ul>
+<p>Cap at 50% of order book depth to avoid moving the market.</p>
+<p><strong>The Monitoring Dashboard</strong></p>
+<p>Track in real-time:</p>
+<blockquote>
+<p>Opportunities detected per minute<br>Opportunities executed per minute<br>Execution success rate<br>Total profit (running sum)<br>Current drawdown percentage<br>Average latency (detection to submission)</p>
+</blockquote>
+<p>Alerts:<br>  Drawdown exceeds 15%<br>  Execution rate drops below 30%<br>  IP solver timeouts increase<br>  Order fill failures spike</p>
+<p>The research identified the top arbitrageur made 4,049 transactions. That’s approximately 11 trades per day over one year. Not high-frequency in the traditional sense, but systematic and consistent.</p>
+<p><strong>The Actual Results</strong></p>
+<p>Total extracted April 2024 to April 2025:</p>
+<blockquote>
+<p>Single condition arbitrage:<br>  Buy both &lt; $1:           $5,899,287<br>  Sell both &gt; $1:           $4,682,075<br>  Subtotal:                     $10,581,362</p>
+</blockquote>
+<p>Market rebalancing:<br>  Buy all YES &lt; $1:        $11,092,286<br>  Sell all YES &gt; $1:        $612,189<br>  Buy all NO:                  $17,307,114<br>  Subtotal:                      $29,011,589</p>
+<p>Combinatorial arbitrage:<br>  Cross-market execution:           $95,634</p>
+<p>Total:                               $39,688,585</p>
+<p>Top 10 extractors took $8,127,849 (20.5% of total).</p>
+<p>Top single extractor: $2,009,632 from 4,049 trades.</p>
+<p>Average profit per trade for top player: $496.</p>
+<p>Not lottery wins. Not lucky timing. Mathematical precision executed systematically.</p>
+<p><strong>What Separates Winners from Losers</strong></p>
+<p>The research makes it clear:</p>
+<p><strong>Retail approach:</strong></p>
+<ul>
+<li>Check prices every 30 seconds</li>
+<li>See if YES + NO roughly equals $1</li>
+<li>Maybe use a spreadsheet</li>
+<li>Manual order submission</li>
+<li>Hope for the best</li>
+</ul>
+<p><strong>Quantitative approach:</strong></p>
+<ul>
+<li>Real-time WebSocket feeds</li>
+<li>Integer programming for dependency detection</li>
+<li>Frank-Wolfe with Bregman projection for optimal trades</li>
+<li>Parallel order execution with VWAP estimation</li>
+<li>Systematic position sizing under execution constraints</li>
+<li>2.65 second latency vs. 30 second polling</li>
+</ul>
+<p>One group extracted $40 million. The other group provided the liquidity.</p>
+<p><strong>Key takeaway:</strong> Production systems require mathematical rigor AND engineering sophistication. Optimization theory, distributed systems, real-time data processing, risk management, execution algorithms. All of it. The math is the foundation. The infrastructure is what makes it profitable.</p>
+<h2 id="The-Final-Reality"><a href="#The-Final-Reality" class="headerlink" title="The Final Reality"></a>The Final Reality</h2><p>While traders were reading “10 tips for prediction markets,” quantitative systems were:</p>
+<ol>
+<li>Solving integer programs to detect dependencies across 17,218 conditions</li>
+<li>Computing Bregman projections to find optimal arbitrage trades</li>
+<li>Running Frank-Wolfe algorithms with controlled gradient growth</li>
+<li>Executing parallel orders with VWAP-based slippage estimation</li>
+<li>Systematically extracting $40 million in guaranteed profits</li>
+</ol>
+<p>The difference is not luck. It’s mathematical infrastructure. </p>
+<p>The research paper is public. The algorithms are known. The profits are real.</p>
+<p>The question is: can you build it before the next $40 million is extracted?</p>
+<p><strong>Resources:</strong></p>
+<ul>
+<li>Research paper: “Unravelling the Probabilistic Forest: Arbitrage in Prediction Markets” (arXiv:2508.03474v1)</li>
+<li>Theory foundation: “Arbitrage-Free Combinatorial Market Making via Integer Programming” (arXiv:1606.02825v2)</li>
+<li>IP solver: Gurobi Optimizer</li>
+<li>LLM for dependencies: DeepSeek-R1-Distill-Qwen-32B</li>
+<li>Data source: Alchemy Polygon node API</li>
+</ul>
+<p>The math works. The infrastructure exists. The only question is execution.</p>
+<p>Let me know below if you guys want Part 2 on this?</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/01/31/nataliexbz-2017314080395296995/">https://yaoav.github.io/2026/01/31/nataliexbz-2017314080395296995/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/nataliexbz/">@nataliexbz</a></div><div class="post-share"><div class="social-share" data-image="/images/2017314080395296995-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/03/18/Arxiv_Daily-2033971463422972025/" title="A Mathematical Theory of Language Modeling "><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">A Mathematical Theory of Language Modeling </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Arxiv_Daily（arXiv Daily） 的长文，原文链接，版权归原作者所有。  A Sequel to the Greatest Paper Ever Written By C. E. SHANNON Bell Telephone Laboratories, Inc., Murray Hill, N. J. Published in advance of all competitors, as is tradition INTRODUCTION IN a previous paper, which the reader has no doubt studied carefully and at length (and if not, one must question why one is reading the sequel before the original, a decision reflecting poorly on one’s organizational faculties), the author established a...</div></div></div></a><a class="pagination-related" href="/2026/01/16/AI_Jasonyu-2012176019206320507/" title="🔥 国行手机如何用上eSIM？我把四款写卡器全买了，到底哪个最值得？"><img class="cover" src="/images/2012176019206320507-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">🔥 国行手机如何用上eSIM？我把四款写卡器全买了，到底哪个最值得？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @AI_Jasonyu（鱼总聊AI） 的长文，原文链接，版权归原作者所有。   写在前面：我为什么折腾了两个月，来写这篇测评说实话，这篇文章我憋了好久，之前虽然有分享过一些写卡器的使用教程，比如Xesim，但是我觉得不够全面，很多人依然不了解实体eSIM卡，更不知道这东西能干啥，而且目前所有网上的教程和信息都已经过时，我需要去做一个最新的给大家做使用和购买参考。  去年注册矩阵账号，想要做TK，就去注册Gmail邮箱，哪怕用了静态ip，也是过几天就要接码，由于手机号不是自己的，导致后来我的很多账号都废掉了，有的TK都做了很多粉丝，最后也因为登录不上废掉了。  后来买了一张Paygo紫卡和一张ENC，也是因为没有及时充值，也被废掉了。也是今年玩X的时候，我才知道eSIM这种东西，但我用的是国行iPhone,想用个海外的eSIM保号卡(giffgaff那种)，结果发现——国行手机压根不支持eSIM。当时挺无奈，我还专门去万能的闲鱼买了一个Pixel4 XL，用这个手机下载了Giffgaff的eSIM卡。  后来偶然在X上发现了实体eSIM写卡器这个东西，感觉像...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"><img class="cover" src="/images/2122726493935612251-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @nataliexbz（natalie） 的长文，原文链接，版权归原作者所有。  6 repos, one maintainer, and no idea which job was eating my credits. I had a theory, though. Like most people, I assumed the model was the expensive part. Use the smartest one, pay the most. Use a lighter one, pay less. So the whole game is picking the right model, right? Then I opened Viktor’s Usage page and read it line by line. The check that reads all my repos twice a day, every single day? 18 credits for the whole month. Most of its r...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-I-The-Marginal-Polytope-Problem-Why-Simple-Math-Fails"><span class="toc-number">1.</span> <span class="toc-text">Part I: The Marginal Polytope Problem (Why Simple Math Fails)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-II-Bregman-Projection-How-to-Actually-Remove-Arbitrage"><span class="toc-number">2.</span> <span class="toc-text">Part II: Bregman Projection (How to Actually Remove Arbitrage)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-III-The-Frank-Wolfe-Algorithm-Making-It-Computationally-Tractable"><span class="toc-number">3.</span> <span class="toc-text">Part III: The Frank-Wolfe Algorithm (Making It Computationally Tractable)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-IV-Execution-Under-Non-Atomic-Constraints-Why-Order-Books-Change-Everything"><span class="toc-number">4.</span> <span class="toc-text">Part IV: Execution Under Non-Atomic Constraints (Why Order Books Change Everything)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Part-V-The-Complete-System-What-Actually-Got-Deployed"><span class="toc-number">5.</span> <span class="toc-text">Part V: The Complete System (What Actually Got Deployed)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Final-Reality"><span class="toc-number">6.</span> <span class="toc-text">The Final Reality</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

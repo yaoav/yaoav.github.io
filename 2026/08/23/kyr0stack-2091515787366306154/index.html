@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Loops and Graphs: how to stop babysitting agents and only approve the last step (full course)  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="You check every step your agents take. Not because you want to, but because noth">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) ">
+<meta property="og:url" content="https://yaoav.github.io/2026/08/23/kyr0stack-2091515787366306154/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="You check every step your agents take. Not because you want to, but because noth">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2091515787366306154-cover.jpg">
+<meta property="article:published_time" content="2026-08-23T21:19:56.000Z">
+<meta property="article:modified_time" content="2026-11-16T04:12:56.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@kyr0stack">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2091515787366306154-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) ",
+  "url": "https://yaoav.github.io/2026/08/23/kyr0stack-2091515787366306154/",
+  "image": "https://yaoav.github.io/images/2091515787366306154-cover.jpg",
+  "datePublished": "2026-08-23T21:19:56.000Z",
+  "dateModified": "2026-11-16T04:12:56.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/08/23/kyr0stack-2091515787366306154/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2091515787366306154-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Loops and Graphs: how to stop babysitting agents and only approve the last step (full course) </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-08-23T21:19:56.000Z" title="发表于 2026-08-23 21:19:56">2026-08-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@kyr0stack（Kyrox）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2091515787366306154">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>You check every step your agents take. Not because you want to, but because nothing else does.</p>
+<p>Getting out of that chair takes two things, and almost everyone builds only one of them.</p>
+<p>A loop makes a unit of work correct without you. A graph decides which units exist at all.</p>
+<p>Here is the split, the mechanics that are not obvious, and the point where you approve one thing instead of everything.</p>
+<h3 id="A-loop-is-a-check-that-can-fail"><a href="#A-loop-is-a-check-that-can-fail" class="headerlink" title="A loop is a check that can fail"></a>A loop is a check that can fail</h3><p>Strip everything else away and a loop is four parts: produce, check, correct, repeat until green.</p>
+<p>The check is the whole thing.</p>
+<p>Without something that can fail the work while you are out of the room, you do not have a loop. You have a scheduler.</p>
+<p>This sounds obvious and almost nobody writes the check first.</p>
+<p>They build the work, then bolt a review onto the end, and the review is another model asked to look at the output.</p>
+<p>Two optimists agreeing.</p>
+<p><strong>Write the condition first, and write it so a program could evaluate it:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GREEN    the test suite exits 0</span><br><span class="line">GREEN    every claim carries a source line</span><br><span class="line">GREEN    the diff touches only files listed in the plan</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NOT A CHECK   the output looks good</span><br><span class="line">NOT A CHECK   the model says it is confident</span><br><span class="line">NOT A CHECK   no errors were raised</span><br></pre></td></tr></table></figure>
+
+<p>That last one catches careful people. Absence of an error is not evidence of correctness.</p>
+<p>Build a loop on it and you get a system that confidently repeats a mistake until the budget runs out, with a clean log the whole way.</p>
+<h3 id="The-ceiling-nobody-warns-you-about"><a href="#The-ceiling-nobody-warns-you-about" class="headerlink" title="The ceiling nobody warns you about"></a>The ceiling nobody warns you about</h3><p>A loop makes one unit of work better. That is its entire job, and it is very good at it.</p>
+<p>It cannot decide which units exist, or their order, or notice that two of the five steps never needed to wait for each other.</p>
+<p>So you get a very good agent running the wrong three steps, in the wrong order, one at a time.</p>
+<p>Every step is correct. The result is still slow and still wrong-shaped, and tuning the loop will not fix it, because the fault is not inside any unit.</p>
+<p>That is the moment people blame the model. It is also the moment the next layer starts paying for itself.</p>
+<p><img src="/images/HQZ4wCCWgAA5YYj.png" alt="HQZ4wCCWgAA5YYj"></p>
+<h3 id="The-graph-is-the-layer-above"><a href="#The-graph-is-the-layer-above" class="headerlink" title="The graph is the layer above"></a>The graph is the layer above</h3><p>**A graph is the shape of the work: **what runs, what runs at the same time, what waits, what never runs at all, and where results go back.</p>
+<p>Two things and nothing else. A node is a unit of work: one bounded job, one input in, one output out.</p>
+<p>An edge is a dependency, this node’s output feeds that node’s input.</p>
+<p>The mistake behind every unnecessary wait is treating “and then” as an edge.</p>
+<p>Summarize the file and then check the weather has no edge between them. The weather does not consume the summary.</p>
+<p>Those are two independent nodes that a linear script chained, and the chaining came from the order you typed them.</p>
+<p>**So run this on every arrow in a pipeline you already have: **does the next step actually read the previous step’s output?</p>
+<p>If you cannot name the variable that crosses, there is no edge, and the wait is pure waste.</p>
+<p>Most chains have two or three arrows like that, and finding them is usually the largest single speedup available.</p>
+<blockquote>
+<p><strong>The full breakdown of all five layers, in the order they matter, is here:</strong> agent-layers.vercel.app</p>
+</blockquote>
+<h3 id="Four-kinds-of-node-and-one-of-them-is-not-a-model"><a href="#Four-kinds-of-node-and-one-of-them-is-not-a-model" class="headerlink" title="Four kinds of node, and one of them is not a model"></a>Four kinds of node, and one of them is not a model</h3><p>Splitter, worker, code node, gate. That is the whole vocabulary.</p>
+<p>The splitter cuts the work into units and sits at the front.</p>
+<p>It decides more than any other node, because splitting by the wrong dimension wastes everything downstream.</p>
+<p>Cut a repository by folder and four workers audit the same three files.</p>
+<p>Cut by blast radius and each one sees something the others cannot.</p>
+<p>Workers do one unit each, with one lens, in their own context. That last part gets skipped constantly.</p>
+<p>Give four auditors a shared window and they converge: the first writes a finding, the rest read it, and all four reports centre on the same thing.</p>
+<p><strong>You paid four times for one opinion with three echoes.</strong></p>
+<p>The code node is the one people forget exists. Merging, ranking, deduplicating, comparing every export before and after.</p>
+<p>None of that is reasoning. Each has exactly one correct answer, each is a few lines of code, and running it through a model adds cost, latency and variance to a step that had none.</p>
+<p>If you can describe the transformation without using the words judge, decide, assess or summarize, it is code.</p>
+<p>A graph where every edge is an agent pays rent on its own wiring.</p>
+<p><img src="/images/HQZ5BxZXwAAY8_J.png" alt="HQZ5BxZXwAAY8_J"></p>
+<h3 id="Where-the-loop-actually-lives"><a href="#Where-the-loop-actually-lives" class="headerlink" title="Where the loop actually lives"></a>Where the loop actually lives</h3><p>One sentence resolves the whole confusion. The loop lives inside a node. The graph lives between them.</p>
+<p><strong>Inside one unit:</strong> produce, check, correct, repeat until green.</p>
+<p>**Between units: **split, fan out, merge, gate, send back. None of the second list is expressible from inside a single unit.</p>
+<p>So you do not choose. A graph without loops in its nodes produces unverified work in parallel, which is worse than serially because there is more of it.</p>
+<p>A loop without a graph around it is one very good step in a queue nobody designed.</p>
+<h3 id="The-two-return-paths-and-the-one-everyone-skips"><a href="#The-two-return-paths-and-the-one-everyone-skips" class="headerlink" title="The two return paths, and the one everyone skips"></a>The two return paths, and the one everyone skips</h3><p>A graph without a way back is a pipeline. It produces output and forgets.</p>
+<p>Next week it starts from the same place with the same blind spots.</p>
+<p>Working graphs have two return paths, doing different jobs.</p>
+<p>The correction edge is short. A gate rejects one unit back to the step that produced it, and it fixes the run you are in.</p>
+<p>The learning edge is long. An accepted result goes back to the splitter as a constraint, and it fixes every run after.</p>
+<p>Almost everyone builds the first and skips the second. The tell is a system that is fast and never gets smarter.</p>
+<p><strong>The learning edge does not carry the output, it carries a constraint derived from it:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ACCEPTED   utils slice ported, green on first pass</span><br><span class="line">DERIVED    adapters preserve keyword args exactly</span><br><span class="line">LANDS IN   the splitter&#x27;s brief for every later slice</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Notice where it lands. Not in the worker’s instructions, in the brief that shapes how the work gets cut.</p>
+<p>A confirmed cause becomes a rule, so the next break starts where this one ended.</p>
+<p><img src="/images/HQZ6Gt9WQAAbTUk.png" alt="HQZ6Gt9WQAAbTUk"></p>
+<h3 id="Return-the-unit-not-the-batch"><a href="#Return-the-unit-not-the-batch" class="headerlink" title="Return the unit, not the batch"></a>Return the unit, not the batch</h3><p>This is the most expensive mistake on the return path, and it is worth stating plainly.</p>
+<p>Four slices were ported. One fails its tests. If the whole batch goes back, three correct slices get rewritten.</p>
+<p>Their next version is different, not better, because nothing was wrong with them.</p>
+<p>Now you re-verify all four, and any of the three may fail this time for unrelated reasons.</p>
+<p>You converted one failure into four uncertain outcomes and paid for the privilege. Do it twice in a run and it never converges.</p>
+<p>From the outside this looks like the model failing repeatedly. It is a return path destroying correct work.</p>
+<p><strong>Four things travel with a return, and each is doing a job:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">UNIT      handlers slice</span><br><span class="line">VERDICT   red</span><br><span class="line">REASON    test_auth_redirect failed</span><br><span class="line">EVIDENCE  expected 302, got 200, handlers/auth.py:88</span><br><span class="line">SCOPE     fix this file only, do not touch other slices</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>The scope line matters more than it looks.</p>
+<p><strong>Without it a returned unit grows:</strong> the agent opens the file, notices two adjacent issues, fixes those too, and your one-slice correction becomes a four-file diff nobody reviewed.</p>
+<p>Cap it at three attempts. If a unit fails three corrections the problem is in the plan that produced it, and the loop cannot see the plan.</p>
+<h3 id="Open-the-gate-on-blast-radius-not-on-confidence"><a href="#Open-the-gate-on-blast-radius-not-on-confidence" class="headerlink" title="Open the gate on blast radius, not on confidence"></a>Open the gate on blast radius, not on confidence</h3><p>Most write-ups build a confidence score, set a threshold, and let anything above it through. That is the wrong variable.</p>
+<p>Confidence is the weakest input in that decision, for a reason that is easy to miss: it is the only one the model can influence.</p>
+<p>The strong variable is what happens if the change is wrong. Sort work by how expensive the mistake is to undo:</p>
+<p>Reversible and contained. A copy change, a test, an isolated function with coverage. One bad merge costs a revert, so this lane can open first.</p>
+<p>Reversible but wide. A shared utility, a schema addition, anything a dozen callers touch. Gate on deterministic checks plus a clean trajectory.</p>
+<p>Hard to reverse. Migrations, deletions, anything writing to production data or moving money. This lane does not open, regardless of score.</p>
+<p>That third row is not a threshold set very high. It is a lane that does not open, and the distinction matters because thresholds get adjusted and closed lanes do not.</p>
+<p>**Inside an open lane the gate reads evidence in order: **deterministic results, then the trajectory of this run, then how often work from this node has been rolled back before, and the model’s own assessment last.</p>
+<p><img src="/images/HQZ5mTxXUAANsQt.jpg" alt="HQZ5mTxXUAANsQt"></p>
+<h3 id="Where-to-start-on-your-own-work"><a href="#Where-to-start-on-your-own-work" class="headerlink" title="Where to start on your own work"></a>Where to start on your own work</h3><p>Take one thing you do repeatedly. Draw the splitter, the lanes, the merge, one gate, one back edge.</p>
+<p>Build the gate first. Everything gets easier once something can fail loudly, and a graph without a gate is just a faster way to produce unverified output.</p>
+<p>Then the lanes. Then the learning edge, last, because you cannot derive constraints from accepted results until something is accepting results.</p>
+<p>Put the human on one step, at the point of highest consequence and lowest reversibility.</p>
+<p>Approve the merge. Choose which fixes ship. Not reviewing intermediate output, not confirming each step.</p>
+<p>A human in the middle of a graph becomes the slowest node in it, and the graph runs exactly as fast as a person reading things.</p>
+<blockquote>
+<p><strong>I put all five layers into a full course, twenty lessons with the templates, the configs and the order to build them in:</strong> agent-layers.vercel.app</p>
+</blockquote>
+<p>Three lines hold the whole discipline. Measure the path, not only the answer it landed on.</p>
+<p>A verdict that does not change what runs next is a report.</p>
+<p>And any failure you do not turn into a permanent constraint, you will meet again.</p>
+<p>Most people will keep tuning one loop and calling it a system.</p>
+<p>The ones who draw the graph around it will run a fleet, and never quite understand why everyone else finds it so hard to keep up.</p>
+<p><strong>If you want the one-page version of the graph layer before anything else, DM me the word Graph.</strong></p>
+<p><strong>Also follow me for more on agent internals, and subscribe to my Telegram channel:</strong></p>
+<p><a target="_blank" rel="noopener" href="https://t.me/+75nMf005jRpjMDU1">https://t.me/+75nMf005jRpjMDU1</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/08/23/kyr0stack-2091515787366306154/">https://yaoav.github.io/2026/08/23/kyr0stack-2091515787366306154/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/kyr0stack/">@kyr0stack</a></div><div class="post-share"><div class="social-share" data-image="/images/2091515787366306154-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/08/29/iwyryxbt-2093685107534000560/" title="Harness Engineering: How to Build AI Agents That Don't Fall Apart"><img class="cover" src="/images/2093685107534000560-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Harness Engineering: How to Build AI Agents That Don't Fall Apart</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @iwyryxbt（iwyry） 的长文，原文链接，版权归原作者所有。  Most people respond to a failing agent by changing the prompt Then they change the model Then they add a larger context window The agent still forgets decisions It still uses the wrong tool It still skips verification It still gets stuck in the same loop The problem is not always the intelligence The problem is the environment around it That environment is the harness And designing it is harness engineering Dario Amodei, CEO of Anthropic, said ...</div></div></div></a><a class="pagination-related" href="/2026/08/20/chenke20266-2090130749768786050/" title="Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)"><img class="cover" src="/images/2090130749768786050-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Grok Bot Agents: Build 24/7 AI Agent Graph That Automate Your Life (The Ultimate 5-Step Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  Are you unsure whether to read this article? Well, take a look below: **I don’t think you have any more questions XD**@bot  is something that will literally change your life, and this step-by-step guide will show you exactly how to do it! **before the alpha -  subscribe to my substack for more fresh alpha - **https://substack.com/@0xcodila According to the official Grok Bot page, Bots can operate from their own computers, sign in to your too...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-loop-is-a-check-that-can-fail"><span class="toc-number">1.</span> <span class="toc-text">A loop is a check that can fail</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-ceiling-nobody-warns-you-about"><span class="toc-number">2.</span> <span class="toc-text">The ceiling nobody warns you about</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-graph-is-the-layer-above"><span class="toc-number">3.</span> <span class="toc-text">The graph is the layer above</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Four-kinds-of-node-and-one-of-them-is-not-a-model"><span class="toc-number">4.</span> <span class="toc-text">Four kinds of node, and one of them is not a model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-the-loop-actually-lives"><span class="toc-number">5.</span> <span class="toc-text">Where the loop actually lives</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-two-return-paths-and-the-one-everyone-skips"><span class="toc-number">6.</span> <span class="toc-text">The two return paths, and the one everyone skips</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Return-the-unit-not-the-batch"><span class="toc-number">7.</span> <span class="toc-text">Return the unit, not the batch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-the-gate-on-blast-radius-not-on-confidence"><span class="toc-number">8.</span> <span class="toc-text">Open the gate on blast radius, not on confidence</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-to-start-on-your-own-work"><span class="toc-number">9.</span> <span class="toc-text">Where to start on your own work</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Story Factory: How one mega bento led to an all-new AI studio for marketing | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="How a new approach to the Founder keynote at Team ’26 Europe is helping Atlassia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Story Factory: How one mega bento led to an all-new AI studio for marketing">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/04/davidhoang-2117710524381348006/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="How a new approach to the Founder keynote at Team ’26 Europe is helping Atlassia">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2117710524381348006-cover.jpg">
+<meta property="article:published_time" content="2026-11-04T04:08:28.000Z">
+<meta property="article:modified_time" content="2026-11-17T01:00:38.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@davidhoang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2117710524381348006-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Story Factory: How one mega bento led to an all-new AI studio for marketing",
+  "url": "https://yaoav.github.io/2026/11/04/davidhoang-2117710524381348006/",
+  "image": "https://yaoav.github.io/images/2117710524381348006-cover.jpg",
+  "datePublished": "2026-11-04T04:08:28.000Z",
+  "dateModified": "2026-11-17T01:00:38.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/04/davidhoang-2117710524381348006/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Story Factory: How one mega bento led to an all-new AI studio for marketing',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2117710524381348006-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Story Factory: How one mega bento led to an all-new AI studio for marketing</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Story Factory: How one mega bento led to an all-new AI studio for marketing</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-04T04:08:28.000Z" title="发表于 2026-11-04 04:08:28">2026-11-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@davidhoang（David Hoang）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2117710524381348006">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>How a new approach to the Founder keynote at Team ’26 Europe is helping Atlassian reimagine content creation: what we built in two days, the app it became, and how it works.</p>
+<p><video controls preload="metadata" poster="/images/2117703957732814848-poster.jpg" src="/videos/2117703957732814848.mp4"></video></p>
+<p>Team ’26 Europe is one of Atlassian’s biggest moments of the year, and the Founder keynote is where we share our most important news. Building it usually spans many teams and tools like Figma and Keynote, with a lot of manual curation. <strong>This year, two days before the keynote in Amsterdam, we decided to close the show with something we’d never built before.</strong></p>
+<p>I was there to lead the Rovo Desktop demo. The new idea: one huge bento, a single scrolling wall summarizing everything we had announced. Hundreds of pieces of work from many teams, moving in concert across three stage screens at a fixed speed, with content changing down to the wire. Thanks to today’s tools and the team’s creativity, we pulled it off.</p>
+<p>The team locked the content at 2:51 AM, about six hours before the 9am keynote. The save bar read version 54. That matters because making things today is iterative: we built tools, and a new way of working, that let us move through those iterations faster.</p>
+<p><video controls preload="metadata" poster="/images/2117709625965625344-poster.jpg" src="/videos/2117709625965625344.mp4"></video></p>
+<p>A fully animated bento, customized for the stage, was the deliverable. The tool behind it turned out to be the bigger story. Three weeks later, we’re piloting Story Factory, a way for marketing and design to transform content production in the AI era. We’re building it to be an internal agentic creation studio that turns real front-end code and design tokens into production-grade marketing films, 3D motion, stage visuals, decks and social assets, in minutes, in any language, without screen recordings. We’re not done yet: it’s still in pilot, with more to come.</p>
+<h3 id="The-real-problem-was-never-pixels"><a href="#The-real-problem-was-never-pixels" class="headerlink" title="The real problem was never pixels"></a>The real problem was never pixels</h3><p>The mega bento wasn’t hard because of the design. It was hard because of scale, change and alignment.</p>
+<ul>
+<li><strong>Scale.</strong> Hundreds of pieces of work, each team with its own visual language.</li>
+<li><strong>Change.</strong> Cards were added, swapped and cut until the night before.</li>
+<li><strong>The venue.</strong> Three LED screens across about 65 metres of stage (two 18 × 5 m, one 9 × 5 m, about 10 m apart), one picture 19,440 pixels wide. This was a wall moving across them, so every piece had to work as motion.</li>
+<li><strong>Alignment.</strong> Many people needed to see it, react to it and trust it at the same time.</li>
+</ul>
+<p>It wasn’t smooth. The picture was wider than a Mac can display: QuickTime showed those files black, H.264 stopped at 4,096 pixels, and seven seconds of ProRes weighed over 4 GB, so we judged most of it through a cut-down preview.</p>
+<p>Designers had dropped everything into one shared Figma file. That was fast, and it was messy. <strong>Cleaning it up by hand would have taken more time than we had</strong>, so I connected my agent to the file through the Figma MCP. For each card it read the frame’s layers and tokens through the MCP, rebuilt it as a code component, timed its entrance on our motion curves and added it to a shared library, ready to place.</p>
+<p><video controls preload="metadata" poster="/images/2117705403559710720-poster.jpg" src="/videos/2117705403559710720.mp4"></video></p>
+<p><img src="/images/HWOaAWBacAEDxJz.jpg" alt="HWOaAWBacAEDxJz"></p>
+<p>When feedback came in, nobody rebuilt anything. The team iterated on spacing, order and placement to make each card shine on its own and as part of the whole canvas: we dragged a card, saved and played it back. It really came alive when I merged in a Jira board animation my colleague Ee Venn Soh had built. The mega bento stopped being a montage: it morphed from an animation on one screen to a wrap around of all the work shipped across all screens up on stage. That’s the part I’m proudest of: one shared surface where different people’s craft could meet without stepping on each other. A power outage almost nixed it. Instead, it opened the closing keynote, the perfect wrapper to a news-packed event.</p>
+<h3 id="Three-weeks-later-Story-Factory"><a href="#Three-weeks-later-Story-Factory" class="headerlink" title="Three weeks later: Story Factory"></a>Three weeks later: Story Factory</h3><p>Standing backstage watching the keynote land, we realized a keynote is just a product launch under pressure. The problem we had to solve for the Founder keynote is the same one our marketing colleagues face every week. A launch needs dozens of assets from many teams: a film, a deck, a keynote moment, social cuts, a poster, with reviews from product, creative, PMM and social along the way. They change until the last minute, and they still have to line up with each other and with the product. Same scale, same change, same alignment, only now it never stops.</p>
+<p>So we decided to build the tool we made into something every team can use. In its first fifteen days, a handful of us, working with a pilot group of marketers and our agents, landed more than 2,000 commits.</p>
+<p><strong>Story Factory turns real product code and Figma designs into reusable, scalable content: films, decks, social posts, print and more, in every market, grounded in brand guidelines and product truth.</strong></p>
+<p>You open it and it asks one question: what will you make? A scene, a film, a presentation or stage wall, a social post or a print, or a set of Figma frames to bring in as scenes. Pick one, pick a template and a library to follow, and describe what you want to the Storyteller, the agent inside Story Factory. It writes the story, checks it and keeps every version. Scenes and films share one editor, where length is pace and trim is content.</p>
+<p><img src="/images/HWOaHUjbEAAgEgJ.jpg" alt="HWOaHUjbEAAgEgJ"></p>
+<p><img src="/images/HWOag1qbAAApTEz.jpg" alt="HWOag1qbAAApTEz"></p>
+<p><img src="/images/HWOag1qbEAAJPhY.jpg" alt="HWOag1qbEAAJPhY"></p>
+<h3 id="What-makes-Story-Factory-scale"><a href="#What-makes-Story-Factory-scale" class="headerlink" title="What makes Story Factory scale"></a>What makes Story Factory scale</h3><p>There are good AI video tools, and good design tools with agents in them. Most of them treat a film as something you edit. We made Story Factory scale across Atlassian by training our agent on our product codebases to understand their UI&#x2F;UX, transitions, motion and features, and we treat a film as something you write: <strong>in Story Factory, the film is the code.</strong></p>
+<p><strong>01 · Stories are code</strong></p>
+<p>Our product UI isn’t screenshots or lookalikes. Agents recreate it from Atlassian’s own front-end code at a pinned version, cite every value, and score the result against real renders. What you preview is what you export, up to 4K, with no screen recording and nothing to drift.</p>
+<p><strong>02 · An agent that knows the products</strong></p>
+<p>Story Factory starts from real templates and a collection you choose, writes the story, checks it and keeps every version. Ask using descriptive words, fine-tune the result yourself in the editor, and hand your changes back to an agent.</p>
+<p><strong>03 · On-brand by construction</strong></p>
+<p>The Atlassian Brand library carries the palette, type, logos and motion, and a brand check refuses work that breaks them, down to a logo’s clear space.</p>
+<p><strong>04 · One app, every format</strong></p>
+<p>A scene is a one-scene film, so everything shares one editor and one timeline. Put a shot in a laptop or a 3D room, present a deck, run a stage wall, export a social cut, or send a film straight to Loom.</p>
+<p><strong>05 · Motion that’s on the system</strong></p>
+<p>Brand motion reads the Atlassian Design System’s motion tokens, its named curves and timings for how things move. When our Head of Design, Maria Christley, published Atlassian’s motion system, we took its film, measured every word frame by frame and started rebuilding it shot by shot. The finished shots match the original’s curves to within a pixel. Every piece is checked for jumps, jerks and frames out of order before it ships.</p>
+<h3 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h3><p>1- Describe a feature, get the launch</p>
+<p>Our product marketing team is now ten times more productive. A product marketer describes a feature in a sentence. The Storyteller already knows the product’s codebase, so it draws the real screens, applies the brand guidelines and builds the scene.</p>
+<p>From there, the same story becomes whatever the launch needs: a video, a printout, a social post or a presentation, in every market we sell in. People still make the calls: what to make, what good looks like, and when it’s done. The agents do the tedious part.</p>
+<p>2- An agent that knows the products</p>
+<p>Every library is a set of ready pieces drawn from one product’s real UI or one brand’s real assets. Thirteen collections hold more than 650 of them today. The Storyteller follows the one you pick, so a Confluence film looks like Confluence, down to the pixel.</p>
+<p><img src="/images/HWOasM-boAA_Vy5.jpg" alt="HWOasM-boAA_Vy5"></p>
+<p>3- Collaborating and editing</p>
+<p>Nothing an agent makes is locked: ask for a change in words, or tune the camera and timing by hand within the brand’s rules, and the agent picks up from there.</p>
+<p><video controls preload="metadata" poster="/images/2117706445131321344-poster.jpg" src="/videos/2117706445131321344.mp4"></video></p>
+<p>4- What it makes</p>
+<p>Signature shots, social demos built from the brand team’s guidelines, posters and decks all come from the same pieces, and every word on them is an option you can change.</p>
+<p><video controls preload="metadata" poster="/images/2117706587855048704-poster.jpg" src="/videos/2117706587855048704.mp4"></video></p>
+<p><video controls preload="metadata" poster="/images/2117706803035475968-poster.jpg" src="/videos/2117706803035475968.mp4"></video></p>
+<p><video controls preload="metadata" poster="/images/2117706942059892736-poster.jpg" src="/videos/2117706942059892736.mp4"></video></p>
+<p><video controls preload="metadata" poster="/images/2117706942030454784-poster.jpg" src="/videos/2117706942030454784.mp4"></video></p>
+<p><video controls preload="metadata" poster="/images/2117707068962738176-poster.jpg" src="/videos/2117707068962738176.mp4"></video></p>
+<p>A poster for the event, a signature take for Loom, and the same poster renamed live: every piece is code, so every word on it can change.</p>
+<p>5- One brand, many products, every surface</p>
+<p>Creating became easy, but keeping tabs on the brand guidelines immediately became a challenge. Atlassian is one brand with many product brands inside it. Jira, Confluence, Loom, Rovo and the rest each have their own UI, their own words and their own way of moving. Multiply that by dozens of markets and every format marketing needs, from a sales deck to a keynote stage, and you get a really big problem to scale: thousands of assets that have to look like Atlassian and like the product they show, at the same time.</p>
+<p>Our take is to build in layers.</p>
+<p><img src="/images/HWObpgFb0AALXn_.jpg" alt="HWObpgFb0AALXn_"></p>
+<ul>
+<li><strong>The Atlassian brand is the foundation.</strong> Palette, type, logo rules, the motion system and the brand team’s demo system live in one library, and a brand check holds every story to them.</li>
+<li><strong>Product brands are infused on top.</strong> Each product library carries the product’s real UI and identity, and speaks the master brand’s language for everything around it: the grids, the type, the motion, the end cards.</li>
+<li><strong>Every surface uses the same pieces.</strong> A moment made once becomes a slide in a keynote, a post for X or LinkedIn, an A3 printout, a cut in a launch film and a card on a stage wall across three screens. Placed by reference, it updates everywhere it’s used, unless you choose to keep a version where it is.</li>
+</ul>
+<p>6- Every market, every format, themes and more</p>
+<p>Because a story is code, it isn’t one video. It’s every version of it, made from the same source.</p>
+<p><video controls preload="metadata" poster="/images/2117707502406279168-poster.jpg" src="/videos/2117707502406279168.mp4"></video></p>
+<ul>
+<li><strong>Many markets, many languages.</strong> Switch a piece from English to German or Japanese and the product UI changes with it, using the product’s own translations, along with local names, dates and numbers. It’s an easy way to see how a screen holds up in another language before it ships.</li>
+<li><strong>Every shape.</strong> X, LinkedIn and Instagram posts, stories and verticals. 16:9, 1:1, 4:5 and 9:16 cuts. A4 and A3 printouts and posters. Slides, and a stage wall. One export can make every shape at once.</li>
+<li><strong>Light and dark.</strong> Every piece, slide and card has its own appearance, and a card can follow its slide or keep its own. The app’s theme never decides it for you.</li>
+<li><strong>Options instead of copies.</strong> A piece shows what it can change, like its view, its moment, its market or its background. Save a combination you like as a variant, or make it the default.</li>
+</ul>
+<p>7- Motion that’s on the system</p>
+<p>Motion is where a brand drifts first. Every designer eases a little differently, and after a few hundred assets a company moves in a few hundred ways. We built Story Factory so every asset moves like Atlassian by design.</p>
+<p><video controls preload="metadata" poster="/images/2117707694958387200-poster.jpg" src="/videos/2117707694958387200.mp4"></video></p>
+<ul>
+<li><strong>A keyframe is the camera at a moment.</strong> How near it is, where it looks, how it’s turned and how high it sits. On a 3D shot, the same controls move the scene’s own camera.</li>
+<li><strong>Curves from the system.</strong> Each move rides a named curve: the brand’s camera curves first, then the brand’s motion, the film’s and the app’s, each drawn as its own glyph.</li>
+<li><strong>It travels with its shot.</strong> Reorder, duplicate or remove a shot, and its camera goes with it.</li>
+</ul>
+<h3 id="Built-as-a-team"><a href="#Built-as-a-team" class="headerlink" title="Built as a team"></a>Built as a team</h3><p>Story Factory is built in the open, and people from across Atlassian have shipped to it: a teammate’s Jira board animation, browser exports, a dead-code cleanup, whole new libraries. Even our CEO, Mike Cannon-Brookes, has jammed on it with us, and his pull requests went through review like everyone else’s.</p>
+<p>We say “Open company, no bullshit” a lot at Atlassian. This is what it looks like in practice: a designer sees a problem, builds the tool, and the whole company is welcome to pitch in.</p>
+<h3 id="What-we-learned"><a href="#What-we-learned" class="headerlink" title="What we learned"></a>What we learned</h3><ol>
+<li><strong>Count your repeats.</strong> If you’ve done something three times, build a tool for it.</li>
+<li><strong>Name the real problem.</strong> Late requests are about scale, change and alignment more than the final frame.</li>
+<li><strong>Let AI do the tedious part.</strong> Cleanup, measuring and testing can be prompted. Decisions can’t.</li>
+<li><strong>Make the product the spec.</strong> Draw from the source, and measure against it.</li>
+<li><strong>Build for the team.</strong> The best tools make room for other people’s craft.</li>
+<li><strong>Let it compound.</strong> Small tools become building blocks. When the next two-day request lands, most of the work is already done.</li>
+</ol>
+<p>Look at what’s around you. Then build for it.</p>
+<p>Thanks to @mcannonbrookes, @andymac4182, @vennsoh, @jsonjun, @charliedesigned, @davidhoang and the amazingly talented @Atlassian team  for building it with me, to the Atlassian Design System, Marketing and brand teams whose foundations it stands on, and to everyone who has already filed a bug or requested a feature.  #build-in-public</p>
+<p><strong>Every clip and picture in this article was made with Story Factory, on sample data.</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/04/davidhoang-2117710524381348006/">https://yaoav.github.io/2026/11/04/davidhoang-2117710524381348006/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/davidhoang/">@davidhoang</a></div><div class="post-share"><div class="social-share" data-image="/images/2117710524381348006-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/04/waveking1314-2118014699606585780/" title="用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）"><img class="cover" src="/images/2118014699606585780-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">用 Grok Bot 搭一支 24 小时 AI 交易团队（完整提示词，照抄就能跑）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @waveking1314（断浪 WaveKing） 的长文，原文链接，版权归原作者所有。  我会把用 Grok Bot 搭一支 24 小时 AI 交易团队的完整框架拆开讲：它自己研究市场、找策略、回测，最后自己下单。 直接开始。  先收藏。 文里提示词很多，搭的时候要翻回来对着做。  我自己盯链上新币和聪明钱用的是 GMGN 和 Fomo，从我的链接注册，手续费有返佣。 时间线上正在发生一件事，大部分交易者还没反应过来。  有人已经用 Grok Bot 管起了自己的整个生活：邮箱、日程、调研、销售，全交给它。 还有人拿它跑整个公司。上面一个人，下面一排 Bot 干活。 每个 Bot 都有一台自己的云端电脑。它登录你平时用的工具，从不下线。 它记得你的规矩，按时间表干活，会跟别的 Bot 互相发消息，只有需要你点头的时候才回来找你。 现在把这支团队从邮箱挪到市场上。 一支 AI 团队全天候盯盘，发现定价错了的地方，把它变成策略，拿几年的数据回测，再把执行的交易机器人搭出来。你睡觉的时候，这些事都在跑。 到这一步，它已经不是聊天机器人了。 它是一张接进你 T...</div></div></div></a><a class="pagination-related" href="/2026/11/04/figma-2117705397985476941/" title="Toto, we're back on canvas. "><img class="cover" src="/images/2117705397985476941-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Toto, we're back on canvas. </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @figma（Figma） 的长文，原文链接，版权归原作者所有。  Code layers just rolled out to everyone!  I’m incredibly excited for this to be out in the wild and to work with you to make it even better. Some thoughts on how we got here… In a Maker Week in the summer of 2024 a few us were dabbling with AI and code — as one does — and we explored this idea if we could generate code when you attach Dev Mode annotations to designs and use AI to build them in code. And holy moly it worked. During that maker week ...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">294</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">154</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-real-problem-was-never-pixels"><span class="toc-number">1.</span> <span class="toc-text">The real problem was never pixels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Three-weeks-later-Story-Factory"><span class="toc-number">2.</span> <span class="toc-text">Three weeks later: Story Factory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-makes-Story-Factory-scale"><span class="toc-number">3.</span> <span class="toc-text">What makes Story Factory scale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-it-works"><span class="toc-number">4.</span> <span class="toc-text">How it works</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Built-as-a-team"><span class="toc-number">5.</span> <span class="toc-text">Built as a team</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-we-learned"><span class="toc-number">6.</span> <span class="toc-text">What we learned</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
