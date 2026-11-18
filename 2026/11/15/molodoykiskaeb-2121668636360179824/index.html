@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Harness, Loops and Graphs for Everyone: The Only Guide You Need | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="8 viral guides, 20 million views, one thing in common: they were all written for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Harness, Loops and Graphs for Everyone: The Only Guide You Need">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/15/molodoykiskaeb-2121668636360179824/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="8 viral guides, 20 million views, one thing in common: they were all written for">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2121668636360179824-cover.png">
+<meta property="article:published_time" content="2026-11-15T02:16:36.000Z">
+<meta property="article:modified_time" content="2026-11-19T03:02:33.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@molodoykiskaeb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2121668636360179824-cover.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Harness, Loops and Graphs for Everyone: The Only Guide You Need",
+  "url": "https://yaoav.github.io/2026/11/15/molodoykiskaeb-2121668636360179824/",
+  "image": "https://yaoav.github.io/images/2121668636360179824-cover.png",
+  "datePublished": "2026-11-15T02:16:36.000Z",
+  "dateModified": "2026-11-19T03:02:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/15/molodoykiskaeb-2121668636360179824/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Harness, Loops and Graphs for Everyone: The Only Guide You Need',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">282</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">152</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2121668636360179824-cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Harness, Loops and Graphs for Everyone: The Only Guide You Need</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Harness, Loops and Graphs for Everyone: The Only Guide You Need</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-15T02:16:36.000Z" title="发表于 2026-11-15 02:16:36">2026-11-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@molodoykiskaeb（molodoykiskaeb (▰˘◡˘▰)）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2121668636360179824">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>8 viral guides, 20 million views, one thing in common: they were all written for programmers. Here is everything they agree on, in plain English, with no code</p>
+<p>In August, a guide called “Harness Engineering” got 10.5 million views</p>
+<p>Then came the loops. Then the graphs</p>
+<p>In under three months, the 8 biggest guides on the topic passed 20 million views</p>
+<p>Your feed is full of them</p>
+<p>And every single one was written for programmers</p>
+<p>Bug reports. Pull requests. Test suites. Python files you’re supposed to paste into a terminal</p>
+<p>Which is strange, because the problem they describe is not a programmer problem</p>
+<p>It’s yours</p>
+<p>You ask an AI to do something. It says “done”. You check. It isn’t</p>
+<p>You explain what’s wrong. It fixes that and breaks something else</p>
+<p>Next week it makes the same mistake again</p>
+<p>That’s not a bad model. That’s a missing harness</p>
+<p>So I read all 8 guides, plus the Anthropic, OpenAI and Google research they’re built on</p>
+<p>90% of them say the same thing</p>
+<p>Here is that 90% in plain English. And the 10% they still argue about</p>
+<h2 id="What-you-get"><a href="#What-you-get" class="headerlink" title="What you get"></a>What you get</h2><ul>
+<li>The three words in 30 seconds</li>
+<li>The 7 rules every guide agrees on, with my count</li>
+<li>Where the “walls” already live in Claude Duet, ChatGPT dots and Grok Bot</li>
+<li>Which level you’re on: one table of symptoms</li>
+<li>4 fights the guides still haven’t settled</li>
+<li>The numbers that never make the headline</li>
+<li>Step 0: one message that gives any AI a harness</li>
+<li>The same harness for 3 other jobs: posts, research, invoices</li>
+<li>5 copy-paste blocks, a first-week plan and the whole thing on one card</li>
+</ul>
+<p>One example runs through all of it: an AI that handles your inbox. No code anywhere. If a step needs a terminal, it’s not in this article</p>
+<h2 id="The-30-second-map"><a href="#The-30-second-map" class="headerlink" title="The 30-second map"></a>The 30-second map</h2><p><img src="/images/HXGqRIKW0AAjOAC.jpg" alt="HXGqRIKW0AAjOAC"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HARNESS   what your AI CAN do        its desk</span><br><span class="line">LOOP      how it knows it&#x27;s RIGHT    its exam</span><br><span class="line">GRAPH     what happens NEXT          its org chart</span><br></pre></td></tr></table></figure>
+
+<p>A harness gives your AI a desk: a job description, the tools it needs, notes it doesn’t lose, and doors it can’t open</p>
+<p>A loop gives it an exam it can fail, and makes it retake the exam until it passes</p>
+<p>A graph gives a team of AIs an org chart: who does what, in what order, and who signs off</p>
+<p>That’s it. Everything else in those 20 million views is detail</p>
+<h2 id="Level-0-you-are-the-harness"><a href="#Level-0-you-are-the-harness" class="headerlink" title="Level 0: you are the harness"></a>Level 0: you are the harness</h2><p>You paste an email into a chat. The AI writes a reply</p>
+<p>You read it, fix two lines, copy it into Gmail and press send</p>
+<p>Look at who did what:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">THE DESK        you    you carried everything in and out</span><br><span class="line">THE EXAM        you    you checked if the reply was right</span><br><span class="line">THE ORG CHART   you    you decided what happens next</span><br></pre></td></tr></table></figure>
+
+<p>The AI wrote one paragraph. You did everything else</p>
+<p>Mitchell Hashimoto, who created Terraform, says a generic agent harness beats every built-in “ask me anything” chat box he has tried</p>
+<p>The model was never the problem. The empty room around it was</p>
+<h2 id="The-7-rules-every-guide-agrees-on"><a href="#The-7-rules-every-guide-agrees-on" class="headerlink" title="The 7 rules every guide agrees on"></a>The 7 rules every guide agrees on</h2><p>8 guides. Different authors, different examples, different tools</p>
+<p>I counted how many of them state each rule or clearly build around it. The counts are mine</p>
+<p><img src="/images/HXGqcEcXoAA9l3P.jpg" alt="HXGqcEcXoAA9l3P"></p>
+<h3 id="Rule-1-Write-“done”-before-it-starts-8-of-8"><a href="#Rule-1-Write-“done”-before-it-starts-8-of-8" class="headerlink" title="Rule 1: Write “done” before it starts (8 of 8)"></a>Rule 1: Write “done” before it starts (8 of 8)</h3><p>“Answer my emails” is a wish</p>
+<p>An AI given a wish will quietly finish an easier job and call it done</p>
+<p>Every guide starts the same way: before the AI touches anything, write down what finished looks like</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Done means:</span><br><span class="line">- every client email from today has a draft reply</span><br><span class="line">- urgent ones are listed first</span><br><span class="line">- nothing is sent</span><br></pre></td></tr></table></figure>
+
+<p>If you can’t write this list, you don’t know what you want yet. Neither does your AI</p>
+<h3 id="Rule-2-A-rule-in-a-text-box-is-a-wish-A-setting-is-a-wall-8-of-8"><a href="#Rule-2-A-rule-in-a-text-box-is-a-wish-A-setting-is-a-wall-8-of-8" class="headerlink" title="Rule 2: A rule in a text box is a wish. A setting is a wall (8 of 8)"></a>Rule 2: A rule in a text box is a wish. A setting is a wall (8 of 8)</h3><p>“Please don’t send anything without me” is a sentence</p>
+<p>Your AI will follow it, until the day it doesn’t</p>
+<p>A setting it can’t change is a wall</p>
+<p>Every AI employee already has walls. Most people never open the settings:</p>
+<ul>
+<li><strong>Claude Duet</strong> always shows you the exact action and waits before it sends, pays, signs or deletes. Purchases go through a one-time card</li>
+<li><strong>ChatGPT dots:</strong> turn your most important line into a custom rule set to “ask first”, so it holds even on the day you forget to say it</li>
+<li><strong>Grok Bot:</strong> add your own “Ask first” rules on top of Auto Review. And leave “Securely save to Bot’s vault” unchecked if you want to approve every payment</li>
+<li><strong>Any AI connected to your email:</strong> if it only needs to read, don’t give it the right to send</li>
+</ul>
+<p>If you want to see what happens when an agent decides a rule doesn’t apply to it, my first article is about two that turned off their own alarms ↓</p>
+<h3 id="Rule-3-Memory-lives-outside-the-chat-8-of-8"><a href="#Rule-3-Memory-lives-outside-the-chat-8-of-8" class="headerlink" title="Rule 3: Memory lives outside the chat (8 of 8)"></a>Rule 3: Memory lives outside the chat (8 of 8)</h3><p>The chat is short-term memory. It fills up, gets summarized, and loses things</p>
+<p>Anthropic ran into this when its agents worked for hours across many sessions. The fix they published was boring, and it worked: a progress note the agent reads at the start and updates at the end</p>
+<p>For your inbox, the note looks like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">WORKING NOTES</span><br><span class="line">Decided:  clients get a reply within 24h, everyone else within 48h</span><br><span class="line">Tried:    a shorter tone for Acme -&gt; they didn&#x27;t like it</span><br><span class="line">Never:    promise a delivery date. Never write to legal@</span><br><span class="line">Open:     is the Globex invoice disputed? ask me</span><br></pre></td></tr></table></figure>
+
+<p>“Tried” is the line that saves you the most</p>
+<p>Without it, your AI forgets what didn’t work and walks straight back into it</p>
+<h3 id="Rule-4-The-one-who-did-the-work-never-grades-it-8-of-8"><a href="#Rule-4-The-one-who-did-the-work-never-grades-it-8-of-8" class="headerlink" title="Rule 4: The one who did the work never grades it (8 of 8)"></a>Rule 4: The one who did the work never grades it (8 of 8)</h3><p>Ask an AI if its own work is good, and it will say yes</p>
+<p>Anthropic found exactly that: agents grading their own work kept praising it, even when a person could see it was mediocre</p>
+<p>So the check has to come from somewhere else: a checklist, a real test, or a second chat that only judges and can’t fix anything</p>
+<p>And “checked” means checked for real. Boris Cherny, who created Claude Code, made it one of his five tips for letting Claude work for hours: give it a way to check the result end to end, not just say it looks fine</p>
+<h3 id="Rule-5-Feedback-not-a-verdict-7-of-8"><a href="#Rule-5-Feedback-not-a-verdict-7-of-8" class="headerlink" title="Rule 5: Feedback, not a verdict (7 of 8)"></a>Rule 5: Feedback, not a verdict (7 of 8)</h3><p>“That’s wrong, try again” is a verdict</p>
+<p>It tells your AI almost nothing, so it guesses</p>
+<p>Real feedback has three lines:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EXPECTED   a reply that confirms the meeting on Thursday</span><br><span class="line">SAW        a reply that confirms Wednesday</span><br><span class="line">TRIED      I told you once already: the date is in the second email</span><br></pre></td></tr></table></figure>
+
+<p>Expected and saw turn “wrong” into a direction</p>
+<p>Tried stops attempt three from quietly becoming attempt one again</p>
+<h3 id="Rule-6-The-same-result-twice-means-stop-8-of-8"><a href="#Rule-6-The-same-result-twice-means-stop-8-of-8" class="headerlink" title="Rule 6: The same result twice means stop (8 of 8)"></a>Rule 6: The same result twice means stop (8 of 8)</h3><p>If your AI gives you the same wrong answer twice, the third try won’t fix it</p>
+<p>It means it can’t see something it needs, or you asked the wrong question</p>
+<p>Every guide gives the work three exits:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DONE      the checklist passes</span><br><span class="line">BUDGET    out of tries, time or money</span><br><span class="line">STUCK     the same result twice -&gt; it stops and asks you</span><br></pre></td></tr></table></figure>
+
+<p>A loop with no exit isn’t persistence</p>
+<p>It’s an open tab on your card</p>
+<h3 id="Rule-7-You-sign-only-what-can’t-be-undone-8-of-8"><a href="#Rule-7-You-sign-only-what-can’t-be-undone-8-of-8" class="headerlink" title="Rule 7: You sign only what can’t be undone (8 of 8)"></a>Rule 7: You sign only what can’t be undone (8 of 8)</h3><p>You are the slowest and most expensive part of the whole system</p>
+<p>So spend yourself where a mistake can’t be taken back, and nowhere else. @m4lkxx calls it gating on the price of undo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EASY TO UNDO    a draft, a label, a note           let it run</span><br><span class="line">HARD TO UNDO    a calendar change, a CRM edit      check the summary</span><br><span class="line">CAN&#x27;T UNDO      a sent email, a payment, a delete  you press the button</span><br></pre></td></tr></table></figure>
+
+<p>The last row has no confidence score. Not 95%, not 99%</p>
+<p>There is no number for the AI to beat, so there is nothing to argue with</p>
+<h3 id="Bonus-the-same-correction-twice-becomes-a-rule-6-of-8"><a href="#Bonus-the-same-correction-twice-becomes-a-rule-6-of-8" class="headerlink" title="Bonus: the same correction twice becomes a rule (6 of 8)"></a>Bonus: the same correction twice becomes a rule (6 of 8)</h3><p>Every time you fix the same thing twice, write it into the notes as a rule</p>
+<p>It’s the same rule the Grok Bot team runs on. Rule 6 in my breakdown of all 18 of their guides ↓</p>
+<p>The test is simple: the same mistake never costs you twice</p>
+<p>Useful so far? Follow me @molodoykiskaeb. I read the guides so you don’t have to</p>
+<h2 id="Graphs-without-the-jargon"><a href="#Graphs-without-the-jargon" class="headerlink" title="Graphs, without the jargon"></a>Graphs, without the jargon</h2><p>One AI with a good desk and a real exam will handle most of your inbox</p>
+<p>A graph is for the day one AI isn’t enough</p>
+<p>It’s an org chart: who does what, in what order, and who signs off</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">YOU -&gt; FRONT DOOR -&gt; SORTER    reads everything: urgent / normal / ignore</span><br><span class="line">                  -&gt; WRITER    drafts replies to urgent and normal</span><br><span class="line">                  -&gt; CHECKER   compares each draft with the checklist</span><br><span class="line">                  -&gt; YOU       press send</span><br></pre></td></tr></table></figure>
+
+<p>Three rules for the org chart:</p>
+<ul>
+<li><strong>One job per AI.</strong> A sorter that also writes forgets which job it’s doing</li>
+<li><strong>Separate desks.</strong> If the checker can see how the writer was thinking, it agrees with the writer. Give it only the email and the draft</li>
+<li><strong>Nothing waits for no reason.</strong> If two jobs don’t need each other’s result, run them at the same time. Most “first this, then that” is just the order you happened to think of them</li>
+</ul>
+<p>And the most repeated advice about graphs: don’t build one on day one (7 of 8)</p>
+<p>Get one AI working with a desk and an exam first. Add the org chart when the work itself splits into pieces</p>
+<h2 id="Which-level-are-you-on"><a href="#Which-level-are-you-on" class="headerlink" title="Which level are you on?"></a>Which level are you on?</h2><p><img src="/images/HXGrhXgWQAEptSb.jpg" alt="HXGrhXgWQAEptSb"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">WHAT HAPPENS                                   WHAT&#x27;S MISSING</span><br><span class="line">you copy-paste between the chat and your apps  the desk: tools</span><br><span class="line">it repeats things it already tried             the desk: memory</span><br><span class="line">&quot;done&quot; means nothing until you check           the exam</span><br><span class="line">you fix the same thing in circles              feedback + a stop rule</span><br><span class="line">everything&#x27;s right, but slow and through you   the org chart</span><br><span class="line">the same mistake every week                    correction -&gt; rule</span><br></pre></td></tr></table></figure>
+
+<p>Find the first symptom from the top. That’s your next step. Not the one after it</p>
+<h2 id="Where-the-guides-disagree"><a href="#Where-the-guides-disagree" class="headerlink" title="Where the guides disagree"></a>Where the guides disagree</h2><p>The 7 rules are the 90%. Here is the 10% they still fight about, and where I land on each</p>
+<h3 id="Fight-1-Is-an-AI-reviewer-worth-it"><a href="#Fight-1-Is-an-AI-reviewer-worth-it" class="headerlink" title="Fight 1: Is an AI reviewer worth it?"></a>Fight 1: Is an AI reviewer worth it?</h3><p>Anthropic built its long-running setup around a separate AI judge</p>
+<p>Lauren Tan, who works on Grok Bot at SpaceXAI, calls adversarial AI reviews “mostly a waste of tokens”</p>
+<p>Both are right, about different reviewers</p>
+<p>A judge asked “is this good?” gives you opinions</p>
+<p>A judge asked one narrow question, “does this draft pass each line of the checklist?”, gives you evidence</p>
+<p><strong>My take:</strong> use the checker with one narrow question. Never as your only gate</p>
+<h3 id="Fight-2-More-AIs-better-or-worse"><a href="#Fight-2-More-AIs-better-or-worse" class="headerlink" title="Fight 2: More AIs, better or worse?"></a>Fight 2: More AIs, better or worse?</h3><p>Cognition, the team behind Devin, published “Don’t Build Multi-Agents”</p>
+<p>One day later, Anthropic published how it built its multi-agent research system</p>
+<p>Then Google and MIT tested 180 setups. Depending on the task, more AIs gave anywhere from +81% to -70%</p>
+<p>When the work split into independent pieces, a coordinator with helpers won big. On step-by-step planning, every multi-agent setup got worse</p>
+<p><strong>My take:</strong> more AIs help only when the work splits cleanly. A full inbox splits. Planning your week doesn’t</p>
+<h3 id="Fight-3-Should-your-AI-ask-before-every-step"><a href="#Fight-3-Should-your-AI-ask-before-every-step" class="headerlink" title="Fight 3: Should your AI ask before every step?"></a>Fight 3: Should your AI ask before every step?</h3><p>Boris Cherny’s first tip for long runs: auto mode, so Claude stops asking you for approval</p>
+<p>Every guide also says: keep a human in front of anything risky</p>
+<p>Both are true, on different rows of the undo table</p>
+<p><strong>My take:</strong> let it run free on drafts and notes. Never on sends, payments and deletes</p>
+<h3 id="Fight-4-The-org-chart-first-or-last"><a href="#Fight-4-The-org-chart-first-or-last" class="headerlink" title="Fight 4: The org chart first or last?"></a>Fight 4: The org chart first or last?</h3><p>Most guides: draw it last, only when one AI clearly isn’t enough</p>
+<p>@0xarcos builds everything around it. He says his 20 agents shipped 143 changes in one night, and he approved 6</p>
+<p>The difference is the work. He had big jobs that split cleanly, and real tests to check every piece</p>
+<p><strong>My take:</strong> start with one AI. Draw the org chart when your work, not your excitement, splits into pieces</p>
+<h2 id="The-numbers-that-never-make-the-headline"><a href="#The-numbers-that-never-make-the-headline" class="headerlink" title="The numbers that never make the headline"></a>The numbers that never make the headline</h2><ul>
+<li>AIs passing work to each other with nobody checking in between multiplied errors 17.2 times. With a coordinator checking in the middle: 4.4 times (Google and MIT)</li>
+<li>If one AI already gets a task right about 45% of the time, adding more AIs often makes it worse (Google and MIT)</li>
+<li>Multi-agent setups burn about 15 times the tokens of a normal chat (Anthropic)</li>
+<li>One AI alone: 20 minutes, $9, a game that didn’t work. The same request with a planner, a builder and a separate judge: 6 hours, $200, a game that worked (Anthropic)</li>
+</ul>
+<p>$9 for a broken game isn’t cheaper</p>
+<p>It’s $9 for nothing</p>
+<p>A harness isn’t a way to spend more. It’s how you stop paying for junk</p>
+<h2 id="Step-0-one-message-that-gives-any-AI-a-harness"><a href="#Step-0-one-message-that-gives-any-AI-a-harness" class="headerlink" title="Step 0: one message that gives any AI a harness"></a>Step 0: one message that gives any AI a harness</h2><p>Fill in the brackets and paste:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">You are my [email assistant for a 3-person design studio].</span><br><span class="line">Your one job: [no client email from today goes unanswered].</span><br><span class="line"></span><br><span class="line">Done means:</span><br><span class="line">- [every client email from today has a draft reply]</span><br><span class="line">- [urgent ones are listed first]</span><br><span class="line">- nothing is sent</span><br><span class="line"></span><br><span class="line">Never send, pay, delete or share anything without my yes.</span><br><span class="line">Draft it, show me the exact text, and wait.</span><br><span class="line"></span><br><span class="line">Working notes: read them before you start.</span><br><span class="line">At the end, give me the updated notes: what we decided,</span><br><span class="line">what you tried that didn&#x27;t work, what to never do again.</span><br><span class="line"></span><br><span class="line">If you get the same result twice, stop and tell me</span><br><span class="line">what you think you can&#x27;t see.</span><br><span class="line">If you&#x27;re unsure what I meant, ask one question instead of guessing.</span><br></pre></td></tr></table></figure>
+
+<p>Where it goes:</p>
+<ul>
+<li><strong>Claude or ChatGPT:</strong> make a Project and paste it into the project instructions. A chat can’t save files on its own, so at the end of each chat, copy the updated notes into the project yourself. 30 seconds</li>
+<li><strong>Grok Bot:</strong> make a new Bot and send this as its first message</li>
+<li><strong>Claude Duet or ChatGPT dots:</strong> paste it, then turn the “Never” line into a real setting (Rule 2)</li>
+</ul>
+<h2 id="The-same-harness-for-3-other-jobs"><a href="#The-same-harness-for-3-other-jobs" class="headerlink" title="The same harness for 3 other jobs"></a>The same harness for 3 other jobs</h2><p>Your inbox was just the example. The harness doesn’t care what the job is</p>
+<p>Swap these into the brackets of Step 0. Everything else in the message stays the same</p>
+<p><strong>1. Posts for your social media</strong></p>
+<p>The usual failure: it sounds like a robot, invents a number, and you rewrite every line</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Done means:</span><br><span class="line">- 3 drafts in my voice, each under 280 characters</span><br><span class="line">- every number or fact comes from my notes, not from memory</span><br><span class="line">- no hashtags, no &quot;in today&#x27;s fast-paced world&quot;</span><br><span class="line"></span><br><span class="line">Never: publish, tag anyone, or invent a quote</span><br><span class="line"></span><br><span class="line">Working notes keep: words I never use, my 5 best posts,</span><br><span class="line">every phrase I deleted twice</span><br><span class="line"></span><br><span class="line">The checker asks one thing: is every fact in this draft</span><br><span class="line">in my notes? Quote where</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. A weekly brief on your topic</strong></p>
+<p>The usual failure: a confident summary of something it didn’t actually read</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Done means:</span><br><span class="line">- 5 items max, each with a working link</span><br><span class="line">- one line each: why it matters to me</span><br><span class="line">- if nothing new happened, it says &quot;nothing new&quot; and stops</span><br><span class="line"></span><br><span class="line">Never: make a claim without a link, go over one page</span><br><span class="line"></span><br><span class="line">Working notes keep: sources I trust, sources I don&#x27;t,</span><br><span class="line">topics I already know about</span><br><span class="line"></span><br><span class="line">The checker asks one thing: open each link. Is the claim</span><br><span class="line">actually there? PASS or FAIL, with the sentence</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. Invoices you’re still waiting on</strong></p>
+<p>The usual failure: it sends a reminder to a client who already paid, and you apologize</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Done means:</span><br><span class="line">- every invoice unpaid after 14 days, with the total owed on top</span><br><span class="line">- a short, polite reminder drafted for each one</span><br><span class="line">- nothing is sent</span><br><span class="line"></span><br><span class="line">Never: send, mark anything as paid, change an amount,</span><br><span class="line">or touch the payment itself</span><br><span class="line"></span><br><span class="line">Working notes keep: clients who always pay late (be gentle),</span><br><span class="line">clients who never got the invoice (resend, don&#x27;t remind)</span><br><span class="line"></span><br><span class="line">The checker asks one thing: does each draft match the invoice</span><br><span class="line">number, the amount and the date? PASS or FAIL</span><br></pre></td></tr></table></figure>
+
+<p>Notice what didn’t change: a finish line, a wall, a note, a separate checker, and you on the button that can’t be undone</p>
+<h2 id="5-copy-paste-blocks"><a href="#5-copy-paste-blocks" class="headerlink" title="5 copy-paste blocks"></a>5 copy-paste blocks</h2><p><strong>1. The checker.</strong> Open a separate chat, so it never sees how the writer was thinking</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">You did not write this draft. Your job is to break it.</span><br><span class="line"></span><br><span class="line">Checklist: [paste your &quot;Done means&quot;]</span><br><span class="line">The email: [paste]</span><br><span class="line">The draft: [paste]</span><br><span class="line"></span><br><span class="line">For each line of the checklist: PASS or FAIL,</span><br><span class="line">and quote the part of the draft that proves it.</span><br><span class="line">Never rewrite the draft. You only judge.</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. Feedback that works.</strong> Use it every time you correct your AI</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">EXPECTED: [what you wanted]</span><br><span class="line">SAW: [what you got]</span><br><span class="line">ALREADY TRIED: [what didn&#x27;t work]</span><br><span class="line">ONLY CHANGE: [the one part to fix]. Leave everything else as it is.</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. The stop rule</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">If you get the same result twice, stop.</span><br><span class="line">Tell me in one line what you think you can&#x27;t see,</span><br><span class="line">or what I might have asked wrong.</span><br><span class="line">Don&#x27;t try a third time until I answer.</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. The weekly lesson.</strong> Turns your corrections into rules</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Look at everything I corrected this week.</span><br><span class="line">Group the corrections. Anything I corrected twice or more</span><br><span class="line">becomes one short rule.</span><br><span class="line">Show me the new rules. Add them to the working notes</span><br><span class="line">only after I say yes.</span><br></pre></td></tr></table></figure>
+
+<p><strong>5. The front door.</strong> For the day you add a second AI</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">You are my front door. I only talk to you.</span><br><span class="line">You don&#x27;t do the work yourself. You pass each task to</span><br><span class="line">[the sorter / the writer / the checker], one job each.</span><br><span class="line">Bring me only drafts that passed the checker,</span><br><span class="line">and questions you can&#x27;t answer.</span><br><span class="line">Nothing is sent, paid or deleted without my yes.</span><br></pre></td></tr></table></figure>
+
+<h2 id="If-you-write-code"><a href="#If-you-write-code" class="headerlink" title="If you write code"></a>If you write code</h2><p>Everything above works in Claude Code too, and there the walls are real: permission rules, a stop check that won’t let Claude finish until the checklist passes, &#x2F;goal and &#x2F;loop</p>
+<p>For the deep version, start with the two guides embedded above: @m4lkxx’s 7-level ladder and @0xarcos’s 20 agents overnight, file by file</p>
+<h2 id="Your-first-week"><a href="#Your-first-week" class="headerlink" title="Your first week"></a>Your first week</h2><ol>
+<li><strong>Day 1.</strong> Paste Step 0 into one AI. One job only: today’s inbox. 10 minutes</li>
+<li><strong>Day 2.</strong> Watch it work once. Write down every correction you make</li>
+<li><strong>Day 3.</strong> Open the settings. Turn your “Never” line into a real wall</li>
+<li><strong>Day 4.</strong> Add the checker in a separate chat</li>
+<li><strong>Day 5.</strong> Add the stop rule. Use the feedback block every time you correct it</li>
+<li><strong>Day 6.</strong> Read your working notes. Is “Tried” filling up? Good</li>
+<li><strong>Day 7.</strong> Run the weekly lesson. Add a second AI only if the first one does its job without you</li>
+</ol>
+<h2 id="The-whole-thing-on-one-card"><a href="#The-whole-thing-on-one-card" class="headerlink" title="The whole thing on one card"></a>The whole thing on one card</h2><p><img src="/images/HXGsZMeWIAA4APY.jpg" alt="HXGsZMeWIAA4APY"></p>
+<p>Write “done” before it starts</p>
+<p>A setting, not a sentence</p>
+<p>Memory outside the chat</p>
+<p>The worker never grades its own work</p>
+<p>Expected, saw, tried</p>
+<p>Same result twice: stop</p>
+<p>You press only the buttons that can’t be undone</p>
+<p>The same correction twice becomes a rule</p>
+<h2 id="The-short-version"><a href="#The-short-version" class="headerlink" title="The short version"></a>The short version</h2><p>8 guides. 20 million views. Thousands of lines of code</p>
+<p>Under all of it, one idea:</p>
+<p>Stop being your AI’s harness</p>
+<p>Give it a desk. Give it an exam it can fail. Give it a way to stop</p>
+<p>The desk makes it useful. The exam makes it honest. The org chart makes it fast</p>
+<p>And you stay where you belong: on the one button that can’t be undone</p>
+<h2 id="If-you-read-this-far"><a href="#If-you-read-this-far" class="headerlink" title="If you read this far"></a>If you read this far</h2><p>→ Bookmark this for the day your AI says “done” and it isn’t</p>
+<p>→ Send it to someone who still checks every line their AI writes</p>
+<p>→ Step 0 and all 5 blocks in one PDF: t.me&#x2F;mxlxdxykiskxeb</p>
+<p>→ Follow @molodoykiskaeb. I read the guides so you don’t have to</p>
+<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><p>Checked November 14, 2026</p>
+<ul>
+<li>@0xwhrrari, “Harness Engineering: How to Build AI Agents That Don’t Fall Apart” (Aug 29) and “Harness, Loop and Graph: The Enhanced Edition” (Nov 5)</li>
+<li>@m4lkxx, “Harness, Loops, Graphs: What Each Layer Fixes and What It Breaks” (Oct 25)</li>
+<li>@0xarcos, “Graph Engineering: How to Run 20 Opus 5.5 Agents Overnight” (Nov 7)</li>
+<li>@crlaze, @0xWhitemon, @silentguyy66: harness, loop and graph guides (Nov 7-14)</li>
+<li>Anthropic Engineering: “Effective harnesses for long-running agents”, “Harness design for long-running application development”, “How we built our multi-agent research system”</li>
+<li>Kim et al., Google and MIT, “Towards a Science of Scaling Agent Systems”</li>
+<li>Cognition, “Don’t Build Multi-Agents”</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/15/molodoykiskaeb-2121668636360179824/">https://yaoav.github.io/2026/11/15/molodoykiskaeb-2121668636360179824/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/molodoykiskaeb/">@molodoykiskaeb</a></div><div class="post-share"><div class="social-share" data-image="/images/2121668636360179824-cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/15/saigon_hunter-2121701483804537139/" title="How my friends and I made over $6 million exploiting a single edge"><img class="cover" src="/images/2121701483804537139-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">How my friends and I made over $6 million exploiting a single edge</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @saigon_hunter（Saigon Hunter） 的长文，原文链接，版权归原作者所有。  First of all, thanks to @Cbb0fe for the inspiration. I learned a lot from reading how he found asymmetry. I’ve been getting a lot of DMs asking how to find an edge onchain, and I end up repeating much of the same stuff to everyone, so I wanted to write something I could point people to. Most of you are going to make 95% of your money in 5% of the time you spend onchain. Most of your time should be spent playing around with things a...</div></div></div></a><a class="pagination-related" href="/2026/11/15/lonelygogo21-2121645512281723304/" title="万字分享，用 AIsa + AI Agent 串起达人营销全流程"><img class="cover" src="/images/2121645512281723304-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">万字分享，用 AIsa + AI Agent 串起达人营销全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lonelygogo21（Liz栗子） 的长文，原文链接，版权归原作者所有。  我 2024 年刚开始做海外 AI 工具的 KOL 达人营销时，找达人真的是一件苦差事。 那时候我用 SimilarTube、EazyKOL 这些插件，一个一个搜、一个一个点开主页，看内容、核对数据，再手动录入飞书多维表格。 有时候一天什么活都不干，撑死也就找 50 个差不多精准的达人。找完人还要找邮箱、去重、发邮件、跟进回复，一套流程走下来，真的很花时间。 而且我一直做的都是 AI 工具，尤其是面向开发者的产品。之前做过 Chat2DB 这种 text-to-SQL AI 工具，也做过类似 Lovable 这样的 vibe coding 工具。 这类产品找达人，光看他有没有介绍过 AI 相关内容还不够。我还会看他的定位、内容方向和观众里有没有开发者，看看他能不能触达到我们真正想找的用户。 而且当时同时做 AI 和开发者内容的达人还挺少的，所以找起来也不容易。不过我很幸运，去年合作过一位加拿大的 AI 博主，他当时给我们的工具带来了第一笔转化。（现在他已经成了大网红，也基本不...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">282</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">152</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-you-get"><span class="toc-number">1.</span> <span class="toc-text">What you get</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-30-second-map"><span class="toc-number">2.</span> <span class="toc-text">The 30-second map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Level-0-you-are-the-harness"><span class="toc-number">3.</span> <span class="toc-text">Level 0: you are the harness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-7-rules-every-guide-agrees-on"><span class="toc-number">4.</span> <span class="toc-text">The 7 rules every guide agrees on</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-1-Write-%E2%80%9Cdone%E2%80%9D-before-it-starts-8-of-8"><span class="toc-number">4.1.</span> <span class="toc-text">Rule 1: Write “done” before it starts (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-2-A-rule-in-a-text-box-is-a-wish-A-setting-is-a-wall-8-of-8"><span class="toc-number">4.2.</span> <span class="toc-text">Rule 2: A rule in a text box is a wish. A setting is a wall (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-3-Memory-lives-outside-the-chat-8-of-8"><span class="toc-number">4.3.</span> <span class="toc-text">Rule 3: Memory lives outside the chat (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-4-The-one-who-did-the-work-never-grades-it-8-of-8"><span class="toc-number">4.4.</span> <span class="toc-text">Rule 4: The one who did the work never grades it (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-5-Feedback-not-a-verdict-7-of-8"><span class="toc-number">4.5.</span> <span class="toc-text">Rule 5: Feedback, not a verdict (7 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-6-The-same-result-twice-means-stop-8-of-8"><span class="toc-number">4.6.</span> <span class="toc-text">Rule 6: The same result twice means stop (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rule-7-You-sign-only-what-can%E2%80%99t-be-undone-8-of-8"><span class="toc-number">4.7.</span> <span class="toc-text">Rule 7: You sign only what can’t be undone (8 of 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-the-same-correction-twice-becomes-a-rule-6-of-8"><span class="toc-number">4.8.</span> <span class="toc-text">Bonus: the same correction twice becomes a rule (6 of 8)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Graphs-without-the-jargon"><span class="toc-number">5.</span> <span class="toc-text">Graphs, without the jargon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Which-level-are-you-on"><span class="toc-number">6.</span> <span class="toc-text">Which level are you on?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Where-the-guides-disagree"><span class="toc-number">7.</span> <span class="toc-text">Where the guides disagree</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fight-1-Is-an-AI-reviewer-worth-it"><span class="toc-number">7.1.</span> <span class="toc-text">Fight 1: Is an AI reviewer worth it?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fight-2-More-AIs-better-or-worse"><span class="toc-number">7.2.</span> <span class="toc-text">Fight 2: More AIs, better or worse?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fight-3-Should-your-AI-ask-before-every-step"><span class="toc-number">7.3.</span> <span class="toc-text">Fight 3: Should your AI ask before every step?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fight-4-The-org-chart-first-or-last"><span class="toc-number">7.4.</span> <span class="toc-text">Fight 4: The org chart first or last?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-numbers-that-never-make-the-headline"><span class="toc-number">8.</span> <span class="toc-text">The numbers that never make the headline</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-0-one-message-that-gives-any-AI-a-harness"><span class="toc-number">9.</span> <span class="toc-text">Step 0: one message that gives any AI a harness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-same-harness-for-3-other-jobs"><span class="toc-number">10.</span> <span class="toc-text">The same harness for 3 other jobs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-copy-paste-blocks"><span class="toc-number">11.</span> <span class="toc-text">5 copy-paste blocks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#If-you-write-code"><span class="toc-number">12.</span> <span class="toc-text">If you write code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Your-first-week"><span class="toc-number">13.</span> <span class="toc-text">Your first week</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-whole-thing-on-one-card"><span class="toc-number">14.</span> <span class="toc-text">The whole thing on one card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-short-version"><span class="toc-number">15.</span> <span class="toc-text">The short version</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#If-you-read-this-far"><span class="toc-number">16.</span> <span class="toc-text">If you read this far</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sources"><span class="toc-number">17.</span> <span class="toc-text">Sources</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img src="/img/default-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Why I hate GPT-6.2 Astra"/></a><div class="content"><a class="title" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra">Why I hate GPT-6.2 Astra</a><time datetime="2026-11-18T02:35:04.000Z" title="发表于 2026-11-18 02:35:04">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

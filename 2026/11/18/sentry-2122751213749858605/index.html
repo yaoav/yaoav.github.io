@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How a broken release name overloaded our symbolication database  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="TL;DR: A few releases with broken names had piled up tens of millions of rows, a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How a broken release name overloaded our symbolication database ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/sentry-2122751213749858605/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="TL;DR: A few releases with broken names had piled up tens of millions of rows, a">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122751213749858605-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T01:58:22.000Z">
+<meta property="article:modified_time" content="2026-11-19T03:02:21.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@sentry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122751213749858605-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How a broken release name overloaded our symbolication database ",
+  "url": "https://yaoav.github.io/2026/11/18/sentry-2122751213749858605/",
+  "image": "https://yaoav.github.io/images/2122751213749858605-cover.jpg",
+  "datePublished": "2026-11-18T01:58:22.000Z",
+  "dateModified": "2026-11-19T03:02:21.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/sentry-2122751213749858605/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How a broken release name overloaded our symbolication database ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">282</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">152</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122751213749858605-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How a broken release name overloaded our symbolication database </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How a broken release name overloaded our symbolication database </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T01:58:22.000Z" title="发表于 2026-11-18 01:58:22">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@sentry（Sentry）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122751213749858605">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<blockquote>
+<p><strong>TL;DR:</strong> A few releases with broken names had piled up tens of millions of rows, and one unbounded lookup kept trying to scan all of them. Capping how much work a single lookup can do cut database CPU from 76% to 19% and symbolication timeouts by 98%. Bigger hardware hadn’t managed either.</p>
+</blockquote>
+<h3 id="How-Sentry-finds-your-source-maps"><a href="#How-Sentry-finds-your-source-maps" class="headerlink" title="How Sentry finds your source maps"></a>How Sentry finds your source maps</h3><p>When a JavaScript error reaches Sentry, the stack trace points at minified code. Sentry finds the source map that was uploaded for that build to be able to show you the original file and line.</p>
+<p>Source maps are uploaded in artifact bundles. There are two ways to find the right one:</p>
+<ul>
+<li>By debug ID. Modern build tooling stamps each file with a unique ID, so the lookup is exact.</li>
+<li>By release and URL. Older setups match on the release name plus the file’s URL. We keep a URL index to make that fast, one row for every file in every bundle.</li>
+</ul>
+<p>Symbolicator, our open-source symbolication service, does the lookup when it processes an event. Bundles that are still in use get their “last used” date renewed, and bundles nobody has used for about 90 days are cleaned up.</p>
+<p>All of this lives in a Postgres 14 database dedicated to files. The URL index is by far its biggest table.</p>
+<h3 id="The-problematic-database"><a href="#The-problematic-database" class="headerlink" title="The problematic database"></a>The problematic database</h3><p>This database has been a problem for a while. Load and storage kept growing, and every once in a while someone got paged about it. In early October it caused an incident where symbolication latency spiked for customers in our US region, the latest in a long line of problems with this database.</p>
+<p>We’d already tried the usual database fixes: bigger instances and more indexes. But load and storage kept growing anyway, and the extra indexes made storage worse, since every index is more data to write, keep, and clean up. That’s why I decided to go straight to the source and look at how Sentry itself stores and queries this data.</p>
+<h3 id="Investigating-the-issues"><a href="#Investigating-the-issues" class="headerlink" title="Investigating the issues"></a>Investigating the issues</h3><p>I’m not an expert in these systems, so I paired with Claude to investigate. It read the code, suggested queries and kept track of what we’d learned, while I ran everything myself against read replicas. I then reviewed the findings with engineers who were more familiar with these systems. I started with a simple prompt: help me investigate the layout of the artifact bundles in this database and find the releases with the most artifacts. A few hours of back-and-forth later, things were starting to make more sense.</p>
+<p>A few things made that work well:</p>
+<ul>
+<li><strong>One query at a time.</strong> The model proposed a single query, I ran it and pasted the result back, and the next step depended on what came back. That was slower than asking for a plan up front, but every step was grounded in real data rather than guesses.</li>
+<li><strong>Keep a running record.</strong> A dedicated doc with timelines, findings, and dead ends gave colleagues (and agents) somewhere to track the progress.</li>
+<li><strong>Guardrails stay with the human.</strong> No direct database access for the model. Heavy reads ran against our read replicas.</li>
+<li><strong>Ask for sources.</strong> Every timestamp and number had to point back to a graph, a query result or a pull request. That caught several mistakes before they spread.</li>
+</ul>
+<p><img src="/images/HXWGFAfXoAAtbu2.png" alt="HXWGFAfXoAAtbu2"></p>
+<p>We had found some suspicious releases causing an outsized share of the load. The worst of them, which a teammate had already found and blocked from lookups after it kept showing up in our query-killer logs, was named, literally, VERCEL_GIT_COMMIT_SHA. I was having a hard time building a mental model of how things were fitting together, so I asked Claude to build some visualization to help me out.</p>
+<p><img src="/images/HXWGQdXWYAAFuLf.png" alt="HXWGQdXWYAAFuLf"></p>
+<p>Somewhere in a customer’s build config, an environment variable was referenced but never expanded. So instead of each deploy getting its own release named after its commit, every build landed in the same release, forever. Even worse, the bundled files used generated names, so URL lookups could never match them anyway.</p>
+<blockquote>
+<p><strong>Note:</strong> This isn’t a bug in Vercel or in our Vercel integration. The string comes from the project’s own build configuration. It can happen with any CI provider’s variables. We saw the same pattern with release names like undefined.</p>
+</blockquote>
+<p>More than 200 organizations had a release with this exact name. The worst one had:</p>
+<ul>
+<li>13,595 bundles (2,039 active)</li>
+<li>3,226 files per bundle</li>
+<li>44 million URL index rows with all generated file names</li>
+<li>13 GB of disk for that index alone</li>
+<li>More than 6,000 rows rewritten every time a bundle was renewed</li>
+</ul>
+<p>A single URL lookup against that release took 7.4 minutes uncached and 53 seconds with everything already in memory. We normally cancel queries that run longer than 30 seconds and had lowered that to 10 seconds during the incident, so this query could never finish. Then Symbolicator would retry it two more times.</p>
+<p>After enough digging, we’d also turned up a pile of smaller issues, like odd queries and unused indexes. At that point I went from investigating to fixing.</p>
+<h3 id="Fixing-the-issues"><a href="#Fixing-the-issues" class="headerlink" title="Fixing the issues"></a>Fixing the issues</h3><p>These are the changes that mattered most, in order of impact.</p>
+<p>A row budget for URL lookups (October 14)</p>
+<p>We capped a single URL lookup at scanning 1,000,000 URL index rows. Lookups on huge releases now stop early instead of running until they’re killed and retried. The miss gets cached, avoiding doing the work again.</p>
+<p>Since the fix about 0.5% of URL lookups hit the cap. Those few lookups were driving roughly three-quarters of the CPU on our primary database hosts. Once the budget went live, CPU usage dropped from 76% to 19% on our busiest host. Symbolicator timeouts to Sentry went from constantly happening to sporadic.</p>
+<p><img src="/images/HXWGUEbWwAAdHk7.png" alt="HXWGUEbWwAAdHk7"></p>
+<p><img src="/images/HXWGXBLXMAAIzLV.png" alt="HXWGXBLXMAAIzLV"></p>
+<h3 id="Splitting-the-debug-ID-lookup-October-8"><a href="#Splitting-the-debug-ID-lookup-October-8" class="headerlink" title="Splitting the debug ID lookup (October 8)"></a>Splitting the debug ID lookup (October 8)</h3><p>One of our joins across the bundle, project, release, and debug ID tables got much heavier after the query plan shifted. We replaced it with three single-table queries that start from the debug ID. That prevents the planner from picking a bad plan.</p>
+<p><img src="/images/HXWGcfEWIAAZq0o.png" alt="HXWGcfEWIAAZq0o"></p>
+<h3 id="Keeping-dates-on-the-bundle-row-only-October-9"><a href="#Keeping-dates-on-the-bundle-row-only-October-9" class="headerlink" title="Keeping dates on the bundle row only (October 9)"></a>Keeping dates on the bundle row only (October 9)</h3><p>Re-uploading an existing bundle used to rewrite the date on every one of its debug ID and URL index rows. Running that update was slow enough that the query timeout could cancel it. The whole upload then failed along with it. Now only the bundle row’s date changes, and if that update gets cancelled, the upload still goes through.</p>
+<p>Before the fix, uploads hit this error about 32,000 times in 18 days. Since then, none. The tables now collect 110 to 210 million fewer dead rows a day.</p>
+<p><img src="/images/HXWGesaXwAEnvvI.jpg" alt="HXWGesaXwAEnvvI"></p>
+<p><img src="/images/HXWGgG0WoAE_pzk.png" alt="HXWGgG0WoAE_pzk"></p>
+<h3 id="Stop-indexing-generated-file-names-October-8–9"><a href="#Stop-indexing-generated-file-names-October-8–9" class="headerlink" title="Stop indexing generated file names (October 8–9)"></a>Stop indexing generated file names (October 8–9)</h3><p>Files named after their own debug ID can never match a URL lookup, but we were writing them into the URL index anyway. They made up about a third of all its rows, so we stopped writing them. URL index inserts dropped by about 35% in both regions, roughly 170 million fewer rows a day in the US alone.</p>
+<h3 id="Turning-off-Postgres-JIT-October-7"><a href="#Turning-off-Postgres-JIT-October-7" class="headerlink" title="Turning off Postgres JIT (October 7)"></a>Turning off Postgres JIT (October 7)</h3><p>Postgres can compile expensive queries to machine code right before running them. That’s called just-in-time (JIT) compilation. It does this by default for any query with an estimated cost above 100,000. For one of our legacy release file lookups, compiling took longer than it saved every single time.</p>
+<p>JIT is now off permanently in our database configuration: latency per call fell from 14.5 ms to 0.12 ms, and busy database sessions from about 7.5 to 0.06.</p>
+<p><img src="/images/HXWGjbPXAAAeelE.png" alt="HXWGjbPXAAAeelE"></p>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p>Weekday-morning load on our busiest database host fell from 104 active sessions to 24 (−77%), while serving 10% more queries. Symbolicator lookups that timed out per hour fell from 3,250 to 80 (−98%).</p>
+<p><img src="/images/HXWGlF9WMAAB87Z.jpg" alt="HXWGlF9WMAAB87Z"></p>
+<h3 id="Lessons"><a href="#Lessons" class="headerlink" title="Lessons"></a>Lessons</h3><ul>
+<li><strong>Customer data can have an outsized effect on system load.</strong> Our tables were designed around releases with a reasonable number of builds. A few releases with broken names built up a huge amount of data. We had an unbounded query that tried to scan all of it.</li>
+<li><strong>Don’t retry things that can never succeed.</strong> Postgres would happily run these queries, our timeout would happily kill them, and Symbolicator would happily retry them, multiplying the load.</li>
+<li><strong>Limits are good.</strong> Bounding the work per request fixed what extra capacity couldn’t. The releases that hit the cap were already failing on timeouts, so they don’t lose anything.</li>
+</ul>
+<h3 id="Check-your-own-release-names"><a href="#Check-your-own-release-names" class="headerlink" title="Check your own release names"></a>Check your own release names</h3><p>If you deploy a continuous integration (CI) system that sets your release from an environment variable, it’s worth a quick look.</p>
+<ul>
+<li>Open Releases in Sentry and look at the names (or just ask your agent to do it with the Sentry MCP)</li>
+<li>If you see a release named after a variable (like VERCEL_GIT_COMMIT_SHA), or undefined, your build is passing the variable’s name or an empty value instead of the commit.</li>
+<li>Make sure the variable is set and expanded in your build before it’s passed to Sentry. Your source maps will match more often, and our database will thank you.</li>
+</ul>
+<p>We’ve also fixed this on our side. Starting in 11.9.0, the Sentry JavaScript SDK ignores a commit variable whose value is its own name, so upgrading helps too.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/sentry-2122751213749858605/">https://yaoav.github.io/2026/11/18/sentry-2122751213749858605/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/sentry/">@sentry</a></div><div class="post-share"><div class="social-share" data-image="/images/2122751213749858605-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Why I hate GPT-6.2 Astra</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yifanxu_ephai（Yifan Xu） 的长文，原文链接，版权归原作者所有。  During early testing, I found myself so frustrated with this model that I spent a day writing a letter to OpenAI about it. They fixed a small handful of my complaints, but not enough for me to recommend using it. I’m currently sick in bed and I’m not gonna be able to film a video about it today, so I’ve chosen to post the letter in full.  I feel bad about this, but I know you guys will listen and use this feedback to make a better model...</div></div></div></a><a class="pagination-related" href="/2026/11/18/nataliexbz-2122726493935612251/" title="My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)"><img class="cover" src="/images/2122726493935612251-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">My AI Employee Works Almost for Free. Here’s How to Set Yours Up the Same Way (Full Guide)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @nataliexbz（natalie） 的长文，原文链接，版权归原作者所有。  6 repos, one maintainer, and no idea which job was eating my credits. I had a theory, though. Like most people, I assumed the model was the expensive part. Use the smartest one, pay the most. Use a lighter one, pay less. So the whole game is picking the right model, right? Then I opened Viktor’s Usage page and read it line by line. The check that reads all my repos twice a day, every single day? 18 credits for the whole month. Most of its r...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">282</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">152</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#How-Sentry-finds-your-source-maps"><span class="toc-number">1.</span> <span class="toc-text">How Sentry finds your source maps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-problematic-database"><span class="toc-number">2.</span> <span class="toc-text">The problematic database</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Investigating-the-issues"><span class="toc-number">3.</span> <span class="toc-text">Investigating the issues</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fixing-the-issues"><span class="toc-number">4.</span> <span class="toc-text">Fixing the issues</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Splitting-the-debug-ID-lookup-October-8"><span class="toc-number">5.</span> <span class="toc-text">Splitting the debug ID lookup (October 8)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Keeping-dates-on-the-bundle-row-only-October-9"><span class="toc-number">6.</span> <span class="toc-text">Keeping dates on the bundle row only (October 9)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stop-indexing-generated-file-names-October-8%E2%80%939"><span class="toc-number">7.</span> <span class="toc-text">Stop indexing generated file names (October 8–9)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Turning-off-Postgres-JIT-October-7"><span class="toc-number">8.</span> <span class="toc-text">Turning off Postgres JIT (October 7)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Results"><span class="toc-number">9.</span> <span class="toc-text">Results</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lessons"><span class="toc-number">10.</span> <span class="toc-text">Lessons</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Check-your-own-release-names"><span class="toc-number">11.</span> <span class="toc-text">Check your own release names</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"><img src="/images/2123094647241089056-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123094647241089056/" title="中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）">中文区流量要回来了！X 把复制链接改回 20 分，各动作值几分全在这（必存）</a><time datetime="2026-11-19T00:43:03.000Z" title="发表于 2026-11-19 00:43:03">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"><img src="/images/2123065843244494875-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略"/></a><div class="content"><a class="title" href="/2026/11/18/leo_xiaolei-2123065843244494875/" title="事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略">事关每一位蓝v ｜ 关于港卡收益无损提现和消费全攻略</a><time datetime="2026-11-18T22:48:36.000Z" title="发表于 2026-11-18 22:48:36">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews."><img src="/images/2123046178975891883-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Use this skill to land you more interviews."/></a><div class="content"><a class="title" href="/2026/11/18/ridd_design-2123046178975891883/" title="Use this skill to land you more interviews.">Use this skill to land you more interviews.</a><time datetime="2026-11-18T21:30:27.000Z" title="发表于 2026-11-18 21:30:27">2026-11-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img src="/img/default-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Why I hate GPT-6.2 Astra"/></a><div class="content"><a class="title" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra">Why I hate GPT-6.2 Astra</a><time datetime="2026-11-18T02:35:04.000Z" title="发表于 2026-11-18 02:35:04">2026-11-18</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
