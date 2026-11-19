@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！ | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这篇文章，其实是想写给一个朋友！！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/19/yyyole-2123237547728118103/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="这篇文章，其实是想写给一个朋友！！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123237547728118103-cover.jpg">
+<meta property="article:published_time" content="2026-11-19T10:10:53.000Z">
+<meta property="article:modified_time" content="2026-11-19T11:53:31.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@yyyole">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123237547728118103-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！",
+  "url": "https://yaoav.github.io/2026/11/19/yyyole-2123237547728118103/",
+  "image": "https://yaoav.github.io/images/2123237547728118103-cover.jpg",
+  "datePublished": "2026-11-19T10:10:53.000Z",
+  "dateModified": "2026-11-19T11:53:31.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/19/yyyole-2123237547728118103/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">318</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">163</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123237547728118103-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-19T10:10:53.000Z" title="发表于 2026-11-19 10:10:53">2026-11-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@yyyole（沐阳）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123237547728118103">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>这篇文章，其实是想写给一个朋友！！</p>
+<p>一个想做自媒体有些畏难的朋友，也是一个总是想做但迟迟不敢去做的朋友，一个把副业挂在口上却始终没有付诸实践的朋友！</p>
+<p>前两天和他聊起副业，聊着聊着，突然意识到一件挺可怕的事！</p>
+<p><strong>AI时代最大的机会，可能就摆在我们眼前，但绝大多数人还在观望，甚至根本不知道能用AI做些什么！</strong></p>
+<p><strong>每天刷着AI新闻，感叹技术进步得太快，却从来没想过，自己也能借着这波东风，打造影响力，赚到一桶金！</strong></p>
+<p>没错，这位朋友就是这样的一个人。</p>
+<p>其实，如果普通人想抓住这一轮AI红利，<strong>自媒体绝对是门槛最低、最值得切入的方向之一。</strong></p>
+<p><img src="/images/HXamAhJbMAAYrUb.jpg" alt="HXamAhJbMAAYrUb"></p>
+<h3 id="为什么AI彻底改变了做自媒体的逻辑？"><a href="#为什么AI彻底改变了做自媒体的逻辑？" class="headerlink" title="为什么AI彻底改变了做自媒体的逻辑？"></a>为什么AI彻底改变了做自媒体的逻辑？</h3><p>以前做视频自媒体，写稿、拍摄、剪辑、运营全得自己来。</p>
+<p>一个人的精力有限，能维持1—2个账号已是极限。</p>
+<p>这带来了一个极其现实的问题：<strong>试错成本太高。</strong></p>
+<p>新人做号，最难的不是执行，而是“不知道什么能火”。辛辛苦苦熬夜三个月，播放量却始终只有几百，你甚至不知道是赛道选错了、内容不够好，还是表现形式不对。</p>
+<p>一旦想换赛道，之前的积累几乎清零，绝大多数人都在这个阶段耗光了热情。</p>
+<p>而AI对普通人最大的价值，<strong>绝不仅仅是提高制作效率，而是把“试错成本”打到了地板价。</strong></p>
+<ul>
+<li><strong>过去是“单点押注”：</strong> 只能把时间赌在一两个账号上，选错全盘皆输。</li>
+<li><strong>现在是“矩阵测试”：</strong> AI能接管大量重复性的生产工作，你可以用极低的成本同时跑几个不同赛道、不同人设，用真实数据去验证哪个方向能跑出来。</li>
+</ul>
+<p>更夸张的是，以前需要一个团队才能撑起来的内容生产线，现在<strong>只需要一部手机</strong>就能跑通！</p>
+<p>从选题策划、数字人出镜，到视频生成、剪辑包装，<strong>一个人，就是一支自媒体矩阵。</strong></p>
+<p>所以今天，想分享一套真正能落地的实操方案。</p>
+<p>如何用一部手机，从零搭建自己的自媒体矩阵？</p>
+<p>从赛道选择、账号定位、爆款拆解，到数字人创建、AI视频生成、自动剪辑和批量生产，全部拆开讲。</p>
+<p><strong>希望能给到一点点启发。</strong></p>
+<p><img src="/images/HXamTrBaQAA3xVU.jpg" alt="HXamTrBaQAA3xVU"></p>
+<h3 id="一、先选赛道：别做“无头苍蝇”"><a href="#一、先选赛道：别做“无头苍蝇”" class="headerlink" title="一、先选赛道：别做“无头苍蝇”"></a>一、先选赛道：别做“无头苍蝇”</h3><p>很多人做自媒体第一步就走偏了：今天看AI火就注册AI号，明天看萌宠流量大又去剪猫狗，折腾半个月，连账号面向谁都说不清。</p>
+<p>一个人运营多个账号，必须选择<strong>能持续生产、易标准化、受众明确</strong>的方向。</p>
+<p>以下5个赛道非常适合AI辅助生产，且变现路径清晰：</p>
+<ol>
+<li><strong>AI工具号：</strong> 工具实测、效率教程（精准吸引职场人与创作者）。</li>
+<li><strong>商业认知号：</strong> 商业案例拆解、搞钱逻辑分析（高净值粉丝，变现强）。</li>
+<li><strong>冷知识号：</strong> 科学、历史、趣味科普（受众广，极易出大爆款）。</li>
+<li><strong>宠物IP号：</strong> 萌宠故事、拟人化搞笑剧情（情绪价值高，完播率好）。</li>
+<li><strong>好物测评号：</strong> 产品推荐、痛点解决与使用教程（带货转化直接）。</li>
+</ol>
+<p>这5个方向有一个共同优势：<strong>不强依赖真人出镜</strong>，非常适合用数字人、AI动画和混剪素材来批量制作。</p>
+<p>当然，还是建议优先集合你现有的行业积累。</p>
+<p>比如你本身做外贸，就可以切入“跨境知识号”或“产品英文介绍号”。</p>
+<p><strong>AI能补齐你拍摄剪辑的短板，但你对行业的认知，才是内容真正的护城河。</strong></p>
+<p><img src="/images/HXamZt9awAQxEnt.jpg" alt="HXamZt9awAQxEnt"></p>
+<h3 id="二、建立选题库：用数据代替“拍脑袋”"><a href="#二、建立选题库：用数据代替“拍脑袋”" class="headerlink" title="二、建立选题库：用数据代替“拍脑袋”"></a>二、建立选题库：用数据代替“拍脑袋”</h3><p>定位定好后，千万别急着做视频。先做一件事：<strong>去小红书、B站、X（Twitter）、TikTok、YouTube上，找20条对标爆款。</strong></p>
+<p>这里有一个核心技巧：<strong>不要只盯大V的百万播放，要重点找“低粉爆款”。</strong> 比如一个平时只有3000播放的账号，突然爆了一条30万播放的视频。这种内容含金量极高，说明它的<strong>选题切入点或开头结构</strong>精准踩中了大众情绪。</p>
+<p>拆解爆款时，重点看这5个维度：</p>
+<ol>
+<li><strong>选题：</strong> 解决了什么痛点，或满足了什么好奇心？</li>
+<li><strong>Hook（钩子）：</strong> 前3秒凭什么让人停下划动的手指？</li>
+<li><strong>结构：</strong> 信息是如何铺排的？中间有没有设置悬念或反转？</li>
+<li><strong>节奏：</strong> 镜头切换、字幕花字、BGM变化有什么规律？</li>
+<li><strong>互动：</strong> 评论区在吵什么、聊什么？用户为什么愿意点赞收藏？</li>
+</ol>
+<p>为了避免盲目跟风，你可以用这套“选题三维评分法”筛选选题（每项1-5分，<strong>只做12分以上的选题</strong>）：</p>
+<ul>
+<li><strong>需求强度：</strong> 目标人群是不是真的关心？（1-5分）</li>
+<li><strong>传播潜力：</strong> 有没有反差、悬念或社交货币属性？（1-5分）</li>
+<li><strong>制作可行性：</strong> 手头有没有资料，AI能否高效生成画面？（1-5分）</li>
+</ul>
+<h3 id="三、一部手机解放生产力：跑通全流程"><a href="#三、一部手机解放生产力：跑通全流程" class="headerlink" title="三、一部手机解放生产力：跑通全流程"></a>三、一部手机解放生产力：跑通全流程</h3><p>接下来就是最核心的环节了。</p>
+<p>很多人畏难，其实是觉得做一个视频要用电脑，还要会用很多专业软件，其实不然，有了AI，所有事情，你只需要一个对话窗口就行。</p>
+<p>也就说，一个手机APP也能搞定，这应该就是一个信息差！</p>
+<p>最近我发现一个很适合这种场景的AI工具：<strong>Renoise App。</strong></p>
+<p>之前有介绍过<strong>Renoise，没想到他们居然出了手机版APP，真的是解放生产力了！！</strong></p>
+<p>随时随地都能用的视频Agent，简单点说，就是把视频策划、生成、剪辑等环节，整合成一个手机端AI Agent工作流。</p>
+<p>你只需要告诉它想做什么，它就能围绕这个需求生成制作方案，调用相关能力完成后续任务。</p>
+<p>据说平台整合了43个视频、图片和音频模型，包括Seedance 2.5、Kling 4.0、Wan 3.0、GPT Image 2.6等。</p>
+<p>这都不是最重要的，我觉得真正的爽点是它不止是生成视频，而是<strong>策划、生成、剪辑、包装一条龙！！</strong></p>
+<p><strong>全程你只需要对话即可，文字或者语音给指令，这简直是自媒体人的“天命工具”！！</strong></p>
+<p>下面是几个最实用的玩法！！</p>
+<p><img src="/images/HXamtozbkAA3L1q.jpg" alt="HXamtozbkAA3L1q"></p>
+<h3 id="1、创建固定“数字人主播”"><a href="#1、创建固定“数字人主播”" class="headerlink" title="1、创建固定“数字人主播”"></a>1、创建固定“数字人主播”</h3><p>做知识、商业或资讯号等口播账号，每天录几个小时是不现实的。</p>
+<p>最近大家都在折腾数字人，在Renoise App里，这个过程非常简单：</p>
+<p>只需上传一张自拍（或一段旧视频）加声音素材，就能克隆出专属数字人，也可以直接捏一个原创虚拟形象。</p>
+<p>建议为矩阵里的每个账号绑定一个固定人设（如：AI工具号用理性干练的科技博主；商业号用沉稳犀利的职场导师），增强账号的视觉辨识度。</p>
+<p><img src="/images/HXamyWgbkAA1R7m.jpg" alt="HXamyWgbkAA1R7m"></p>
+<p><strong>可直接复制的「数字人创建提示词」：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">使用「数字人口播」Skill。</span><br><span class="line">根据我上传的人物照片（和声音），创建一个适合长期使用的数字人主播。</span><br><span class="line">账号定位：【AI工具教程】</span><br><span class="line">目标人群：【20—40岁的职场人士】</span><br><span class="line">人物气质：【专业、自然、理性、有亲和力】</span><br><span class="line">画面比例：9:16竖屏。</span><br><span class="line">镜头：中近景，背景简洁。</span><br><span class="line">表达：语速稍快，发音清晰，适合短视频平台。</span><br><span class="line">后续制作时尽量保持人物外貌、声音、服装和整体视觉风格一致。</span><br></pre></td></tr></table></figure>
+
+<p><video controls preload="metadata" poster="/images/2123068712379097088-poster.jpg" src="/videos/2123068712379097088.mp4"></video></p>
+<h3 id="第二步：刷到爆款，复制链接直接“洗稿改编”"><a href="#第二步：刷到爆款，复制链接直接“洗稿改编”" class="headerlink" title="第二步：刷到爆款，复制链接直接“洗稿改编”"></a>第二步：刷到爆款，复制链接直接“洗稿改编”</h3><p>起号最快的方式是“像素级学习爆款结构”。</p>
+<p>Renoise App内置了「爆款复刻」Skill，支持小红书、B站、X、TikTok、Instagram、YouTube等主流平台链接。</p>
+<p>看到好视频，复制链接或者直接把视频丢给Agent，让它拆解结构并结合你的素材二创：</p>
+<p><strong>可直接复制的「爆款改编提示词」：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">使用「爆款复刻」Skill，分析这条视频：</span><br><span class="line">【粘贴视频链接】</span><br><span class="line">请重点参考它的开场结构、信息安排、镜头节奏和字幕表现。</span><br><span class="line">我想把内容改成：【你的新主题】</span><br><span class="line">使用我的数字人主播。</span><br><span class="line">重新撰写原创文案，使用我提供的工具资料和演示素材。</span><br><span class="line">开头3秒制造反差，正文展示具体操作，结尾引导评论。</span><br><span class="line">先提供创意方案，确认后再制作。</span><br></pre></td></tr></table></figure>
+
+<p>当然，你也可以完全复刻爆款视频的动效和创意，而只替换某些部分。</p>
+<p><video controls preload="metadata" poster="/images/2123068943434977280-poster.jpg" src="/videos/2123068943434977280.mp4"></video></p>
+<h3 id="第三步：用结构化Brief，一句话生成完整成片"><a href="#第三步：用结构化Brief，一句话生成完整成片" class="headerlink" title="第三步：用结构化Brief，一句话生成完整成片"></a>第三步：用结构化Brief，一句话生成完整成片</h3><p>很多人觉得AI视频不好用，是因为指令太模糊（比如“帮我做个AI视频”）。</p>
+<p>把Agent当成你的专属剪辑师，给它一份完整的Brief，效果会天差地别：</p>
+<p><strong>可直接复制的「万能短视频制作提示词」：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">使用「数字人口播」和「口播剪辑」Skill，帮我制作一条完整短视频。</span><br><span class="line"></span><br><span class="line">【账号信息】</span><br><span class="line">账号定位：【填写领域】</span><br><span class="line">目标受众：【填写人群】</span><br><span class="line">视频主题：【填写主题】</span><br><span class="line">视频时长：45秒左右</span><br><span class="line">画面比例：9:16</span><br><span class="line"></span><br><span class="line">【脚本结构】</span><br><span class="line">0—3秒：强Hook，优先使用痛点、反差或悬念。</span><br><span class="line">3—8秒：交代背景和观看价值。</span><br><span class="line">8—35秒：讲解3个核心信息点，每个信息点都要有具体案例。</span><br><span class="line">35—42秒：总结关键结论。</span><br><span class="line">42—45秒：用问题引导评论。</span><br><span class="line"></span><br><span class="line">【视频制作】</span><br><span class="line">使用指定数字人主播。</span><br><span class="line">自动生成口播与辅助画面。</span><br><span class="line">自动剪辑，删去无效停顿。</span><br><span class="line">添加中文字幕、关键词花字、背景音乐和必要转场。</span><br><span class="line">重点内容使用特写或辅助画面强化表达。</span><br><span class="line"></span><br><span class="line">【执行流程】</span><br><span class="line">先输出完整脚本和镜头方案。</span><br><span class="line">等我确认之后，再开始生成视频和剪辑。</span><br><span class="line">最后输出可以直接下载发布的完整成片。</span><br></pre></td></tr></table></figure>
+
+<p>Renoise APP还有个很炸裂的地方：<strong>讨论创意、修改文字方案完全不消耗积分！</strong></p>
+<p>也就是说，你可以完全无忧的和agent讨论和完善脚本，这个真的很重要，而且真的会很省钱！！</p>
+<p>磨刀不误砍柴工，等内容、节奏、镜头方案都确认了，再进入生成阶段，减少视频模型反复抽卡！</p>
+<p><img src="/images/HXaocYwbkAE5npf.jpg" alt="HXaocYwbkAE5npf"></p>
+<p>另外，Renoise很实用的<strong>标记修改</strong>功能，这个功能在APP端也能用！！</p>
+<p>你可以在成片里指出具体位置，直接告诉Agent要怎么改，用文字，或者直接用语音都行。</p>
+<p>这样，修改视频的方式就无限接近于跟真实的剪辑师在沟通。</p>
+<p>这种体验，真的会让你找到一种和团队协作的感觉！</p>
+<p>以前用AI生成视频，只要有一个镜头不满意就得重新生成，非常烧钱。</p>
+<p>现在在手机端成片里，你可以直接<strong>标记具体时间点&#x2F;位置</strong>，用文字或语音告诉Agent怎么改（例如“把第10秒的空镜换成软件操作录屏”），就像在微信上跟真人剪辑师沟通一样顺滑。</p>
+<p><video controls preload="metadata" poster="/images/2123069602494390272-poster.jpg" src="/videos/2123069602494390272.mp4"></video></p>
+<h3 id="四、进阶矩阵玩法：一鱼多吃，批量延展内容"><a href="#四、进阶矩阵玩法：一鱼多吃，批量延展内容" class="headerlink" title="四、进阶矩阵玩法：一鱼多吃，批量延展内容"></a>四、进阶矩阵玩法：一鱼多吃，批量延展内容</h3><p>单条视频跑通后，矩阵的核心在于“同一个热点&#x2F;素材，裂变成多条不同角度的原创视频”。</p>
+<p>假设今天发布了一款新AI工具，你收集了资料并做了实测，完全可以一次分发给5个不同定位的账号。</p>
+<p>可以用Renoise APP一次性搞定五条内容！！</p>
+<p>我自己实测了一下，成本并没有想象中那么高，它会智能选择性价比更高的视频模型。</p>
+<p><strong>可直接复制的「一鱼多吃批量规划提示词」：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">我有一份关于【某个主题】的完整资料。</span><br><span class="line">请帮我设计5条不同定位的原创短视频方案，分别面向：</span><br><span class="line"><span class="bullet">1.</span> AI工具爱好者</span><br><span class="line"><span class="bullet">2.</span> 普通职场人士</span><br><span class="line"><span class="bullet">3.</span> 创业者和小商家</span><br><span class="line"><span class="bullet">4.</span> 科技资讯用户</span><br><span class="line"><span class="bullet">5.</span> 潜在产品购买者</span><br><span class="line"></span><br><span class="line">每条视频分别提供：独立标题、前3秒Hook、核心内容结构、推荐表现形式、所需素材、建议时长、目标用户行为。</span><br><span class="line">避免五条视频内容高度重复，优先利用我提供的事实和素材。先输出规划表，确认后再逐条制作。</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HXao-2CbcAAsB_T.jpg" alt="HXao-2CbcAAsB_T"></p>
+<h3 id="五、除了起号，还能接单变现"><a href="#五、除了起号，还能接单变现" class="headerlink" title="五、除了起号，还能接单变现"></a>五、除了起号，还能接单变现</h3><p>当你掌握了这套手机端矩阵工作流，除了赚平台流量费和带货佣金，还有一个极佳的B端变现方向：</p>
+<p><strong>帮本地门店、小品牌或外贸企业做短视频获客。</strong></p>
+<p>他们迫切需要视频引流，但养不起专业运营团队。</p>
+<p>以一家小酒馆为例，你只需要拍几张门店图和产品图，就能帮老板同时运营3个账号：</p>
+<ul>
+<li><strong>门店号（15秒）：</strong> 展示环境、周末活动，吸引同城打卡。</li>
+<li><strong>产品号（30秒）：</strong> 展示特调酒细节、新品。</li>
+<li><strong>老板IP号（45秒）：</strong> 分享《调酒知识》，建立专业信任感。</li>
+</ul>
+<p>在Renoise里同样可以用一段指令，直接出片！</p>
+<p><strong>可直接复制的「商家矩阵制作提示词」：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">我经营一家【小酒馆】，已上传门店照片、产品图片和品牌信息。</span><br><span class="line">请为三个不同定位的账号设计短视频：</span><br><span class="line">A：门店号，15秒，重点展示环境和到店理由。</span><br><span class="line">B：产品号，30秒，介绍一款特调的真实特点和调酒方式。</span><br><span class="line">C：老板IP号，45秒，主题为《基酒应该怎么选》</span><br><span class="line">三条视频采用不同的开头和叙事结构。使用我提供的真实产品信息，不编造功效、价格或客户评价。先生成各自脚本，确认后再制作完整视频。</span><br></pre></td></tr></table></figure>
+
+<h3 id="六、必看的5个提效秘籍！"><a href="#六、必看的5个提效秘籍！" class="headerlink" title="六、必看的5个提效秘籍！"></a>六、必看的5个提效秘籍！</h3><ol>
+<li><strong>固化成功模板：</strong> 一旦某条视频爆了，立刻把它的结构（如：痛点→产品亮相→实测演示→优缺点→适用人群）固定下来，下次直接套用，不要每次从零发明轮子。</li>
+<li><strong>统一视觉SOP：</strong> 提前定死每个账号的主播形象、字体样式、BGM风格和片尾引导语，把沟通成本降到最低。</li>
+<li><strong>模型分级使用，省钱第一：</strong> 常规口播和日常视频优先用 <strong>Wan 3.0</strong>（性价比高）；追求极致的物理真实感和大场面，再上 <strong>Seedance 2.5</strong>（建议先出480P小样确认动作，满意后再超分放大）。</li>
+<li><strong>碎片时间做决策，AI负责干重活：</strong> 通勤时刷选题、在手机上审脚本、确认生成，晚上集中检查成片并发布。如果需要极其精细的微调，Renoise APP也支持手机与电脑端云同步无缝衔接。</li>
+</ol>
+<h3 id="写在最后：AI时代，普通人最应该抓住什么机会？"><a href="#写在最后：AI时代，普通人最应该抓住什么机会？" class="headerlink" title="写在最后：AI时代，普通人最应该抓住什么机会？"></a>写在最后：AI时代，普通人最应该抓住什么机会？</h3><p>回到文章开头。</p>
+<p>为什么我觉得，每个人都应该认真尝试一下AI时代的自媒体？</p>
+<p>因为这一轮技术变化，正在让个人拥有越来越强的内容生产能力。</p>
+<p>尤其是Agent出现之后，我们甚至可以用自然语言组织整条视频生产流程。</p>
+<p>从选题、脚本、数字人，到生成、剪辑和包装。</p>
+<p>再加上Renoise APP这样的移动端应用，一部手机就能够承担几乎全部的制作任务。</p>
+<p>不过，工具把视频生产变得简单，并不意味着做自媒体就一定能赚钱。</p>
+<p>真正有价值的，依然是你的<strong>内容判断、用户理解，以及不断验证和改进的能力。</strong></p>
+<p>只是现在，普通人终于有机会用更低的投入，尝试过去门槛很高的内容项目。</p>
+<p><img src="/images/HXapO6ZbcAAieCe.jpg" alt="HXapO6ZbcAAieCe"></p>
+<p>如果你也想尝试本文介绍的手机端AI视频制作流程，可以体验一下Renoise APP。</p>
+<p>官方APP刚上线+黑五活动，骨折级优惠直接拉满，月付首月最高7折，年付首年最高5折。<br><a target="_blank" rel="noopener" href="https://renoise.onelink.me/Gxyb?pid=xcom&c=yyyole-aini-202611&af_web_dp=https://renoise.ai/?utm_medium=xcom&utm_source=yyyole-aini-202611">https://renoise.onelink.me/Gxyb?pid=xcom&amp;c=yyyole-aini-202611&amp;af_web_dp=https%3A%2F%2Frenoise.ai%2F%3Futm_medium%3Dxcom%26utm_source%3Dyyyole-aini-202611</a></p>
+<p>目前，ios用户只能在外区APP Store里下载，外区ID注册教程：<br> <a target="_blank" rel="noopener" href="https://glossy-jackrabbit-bac.notion.site/ID-41b3d6da5cc78153832dcbc47689e90f">https://glossy-jackrabbit-bac.notion.site/ID-41b3d6da5cc78153832dcbc47689e90f</a></p>
+<p>以上就是这篇文章的全部内容，感谢你看到这里，希望对你能有一点点用处。</p>
+<p>如果你觉得文章不错，欢迎点赞、收藏和转发，这对我是非常非常大的鼓励。</p>
+<p>再次感谢，持续学习，无线进步！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/19/yyyole-2123237547728118103/">https://yaoav.github.io/2026/11/19/yyyole-2123237547728118103/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/yyyole/">@yyyole</a></div><div class="post-share"><div class="social-share" data-image="/images/2123237547728118103-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/19/Sukiea1008-2123238639983620331/" title="主流 Agent /斜杠命令全览"><img class="cover" src="/images/2123238639983620331-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">主流 Agent /斜杠命令全览</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Sukiea1008（Su） 的长文，原文链接，版权归原作者所有。  这篇收录整理了 Claude Code、Codex、Grok Build、Cursor 和 Antigravity 的斜杠命令。 我把各家都通用的放在最前面，后面按 Agent 分开，你可以快速查漏补缺你常用 Agent 里一些你可能需要但是之前都疏漏了的斜杠命令。 01｜跨工具常用命令同名命令在各家的细节不完全相同，以各家完整表为准。  /goal：一直做到目标完成（五家都有，Cursor 正在逐步放开） /plan：先做规划再开始改（五家都有，Cursor 仅 CLI） /model：切换或选择当前模型（Cursor、Antigravity 仅 CLI） /btw：旁路问一句，少打断主对话（Codex 桌面&#x2F;IDE 用 &#x2F;side，Cursor 仅编辑器） /compact：压缩上下文（Cursor 用 &#x2F;summarize，Antigravity 没有） /clear 或 /new：清空或新开一场对话（名字不统一，Codex IDE 没有） /res...</div></div></div></a><a class="pagination-related" href="/2026/11/19/KinGao476942-2123237260812501212/" title="【译文】用 Grok Bot 自动化任何事"><img class="cover" src="/images/2123237260812501212-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">【译文】用 Grok Bot 自动化任何事</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinGao476942（Kin） 的长文，原文链接，版权归原作者所有。   作者　Lauren Tan（@poteto）译文说明　正文中的「我」指原作者，插图来自原文。英文原文 Automate Anything with Grok Bot  把自动化做好，比想象中难，哪怕你天天都在做。我想分享一下，我在工作和生活里是怎么做自动化的，以及 Grok Bot 怎么帮你接下更有挑战的任务。 一、自动化是一种思考方式自动化其实就是一种思考方式，谁都能学会。你要有条理地把事情拆成小步骤，每一步都朝着同一个目标。 做自动化要想清楚两件事。一个是目标，一个是流程。 比如，烤好一个苹果派是目标。照着食谱一步步做，就是流程。买齐食材，处理好派皮和馅料，做好装饰，烤好后放凉。换掉一条漏气的轮胎也是个目标。你得先用千斤顶把车顶起来，找到合适的工具，拆下旧胎、装上新胎，再把拆下的部件装回去。 目标是你想得到的结果，流程是达成目标的步骤。  烤好的苹果派是目标，食谱上的步骤是流程。 做自动化也是这套思路。先把达成目标的步骤拆清楚，再借助机器或代码来执行。比如，面包房用设备大批...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">318</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">163</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88AI%E5%BD%BB%E5%BA%95%E6%94%B9%E5%8F%98%E4%BA%86%E5%81%9A%E8%87%AA%E5%AA%92%E4%BD%93%E7%9A%84%E9%80%BB%E8%BE%91%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">为什么AI彻底改变了做自媒体的逻辑？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E9%80%89%E8%B5%9B%E9%81%93%EF%BC%9A%E5%88%AB%E5%81%9A%E2%80%9C%E6%97%A0%E5%A4%B4%E8%8B%8D%E8%9D%87%E2%80%9D"><span class="toc-number">2.</span> <span class="toc-text">一、先选赛道：别做“无头苍蝇”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BB%BA%E7%AB%8B%E9%80%89%E9%A2%98%E5%BA%93%EF%BC%9A%E7%94%A8%E6%95%B0%E6%8D%AE%E4%BB%A3%E6%9B%BF%E2%80%9C%E6%8B%8D%E8%84%91%E8%A2%8B%E2%80%9D"><span class="toc-number">3.</span> <span class="toc-text">二、建立选题库：用数据代替“拍脑袋”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%80%E9%83%A8%E6%89%8B%E6%9C%BA%E8%A7%A3%E6%94%BE%E7%94%9F%E4%BA%A7%E5%8A%9B%EF%BC%9A%E8%B7%91%E9%80%9A%E5%85%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">三、一部手机解放生产力：跑通全流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E5%9B%BA%E5%AE%9A%E2%80%9C%E6%95%B0%E5%AD%97%E4%BA%BA%E4%B8%BB%E6%92%AD%E2%80%9D"><span class="toc-number">5.</span> <span class="toc-text">1、创建固定“数字人主播”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%88%B7%E5%88%B0%E7%88%86%E6%AC%BE%EF%BC%8C%E5%A4%8D%E5%88%B6%E9%93%BE%E6%8E%A5%E7%9B%B4%E6%8E%A5%E2%80%9C%E6%B4%97%E7%A8%BF%E6%94%B9%E7%BC%96%E2%80%9D"><span class="toc-number">6.</span> <span class="toc-text">第二步：刷到爆款，复制链接直接“洗稿改编”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E7%94%A8%E7%BB%93%E6%9E%84%E5%8C%96Brief%EF%BC%8C%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%94%9F%E6%88%90%E5%AE%8C%E6%95%B4%E6%88%90%E7%89%87"><span class="toc-number">7.</span> <span class="toc-text">第三步：用结构化Brief，一句话生成完整成片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%BF%9B%E9%98%B6%E7%9F%A9%E9%98%B5%E7%8E%A9%E6%B3%95%EF%BC%9A%E4%B8%80%E9%B1%BC%E5%A4%9A%E5%90%83%EF%BC%8C%E6%89%B9%E9%87%8F%E5%BB%B6%E5%B1%95%E5%86%85%E5%AE%B9"><span class="toc-number">8.</span> <span class="toc-text">四、进阶矩阵玩法：一鱼多吃，批量延展内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%99%A4%E4%BA%86%E8%B5%B7%E5%8F%B7%EF%BC%8C%E8%BF%98%E8%83%BD%E6%8E%A5%E5%8D%95%E5%8F%98%E7%8E%B0"><span class="toc-number">9.</span> <span class="toc-text">五、除了起号，还能接单变现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%BF%85%E7%9C%8B%E7%9A%845%E4%B8%AA%E6%8F%90%E6%95%88%E7%A7%98%E7%B1%8D%EF%BC%81"><span class="toc-number">10.</span> <span class="toc-text">六、必看的5个提效秘籍！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9AAI%E6%97%B6%E4%BB%A3%EF%BC%8C%E6%99%AE%E9%80%9A%E4%BA%BA%E6%9C%80%E5%BA%94%E8%AF%A5%E6%8A%93%E4%BD%8F%E4%BB%80%E4%B9%88%E6%9C%BA%E4%BC%9A%EF%BC%9F"><span class="toc-number">11.</span> <span class="toc-text">写在最后：AI时代，普通人最应该抓住什么机会？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/Sukiea1008-2123238639983620331/" title="主流 Agent /斜杠命令全览"><img src="/images/2123238639983620331-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="主流 Agent /斜杠命令全览"/></a><div class="content"><a class="title" href="/2026/11/19/Sukiea1008-2123238639983620331/" title="主流 Agent /斜杠命令全览">主流 Agent /斜杠命令全览</a><time datetime="2026-11-19T10:15:14.000Z" title="发表于 2026-11-19 10:15:14">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yyyole-2123237547728118103/" title="全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！"><img src="/images/2123237547728118103-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！"/></a><div class="content"><a class="title" href="/2026/11/19/yyyole-2123237547728118103/" title="全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！">全程只用手机，从0-1搞定自媒体矩阵！保姆级实操教程！</a><time datetime="2026-11-19T10:10:53.000Z" title="发表于 2026-11-19 10:10:53">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123237260812501212/" title="【译文】用 Grok Bot 自动化任何事"><img src="/images/2123237260812501212-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【译文】用 Grok Bot 自动化任何事"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123237260812501212/" title="【译文】用 Grok Bot 自动化任何事">【译文】用 Grok Bot 自动化任何事</a><time datetime="2026-11-19T10:09:45.000Z" title="发表于 2026-11-19 10:09:45">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/PengP66810-2123231808674566514/" title="马化腾的手术刀，黄仁勋的六十个直管"><img src="/images/2123231808674566514-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马化腾的手术刀，黄仁勋的六十个直管"/></a><div class="content"><a class="title" href="/2026/11/19/PengP66810-2123231808674566514/" title="马化腾的手术刀，黄仁勋的六十个直管">马化腾的手术刀，黄仁勋的六十个直管</a><time datetime="2026-11-19T09:48:05.000Z" title="发表于 2026-11-19 09:48:05">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚"><img src="/images/2123218961776906410-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FDE 大家最关心的 10 个问题，一次性讲清楚"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚">FDE 大家最关心的 10 个问题，一次性讲清楚</a><time datetime="2026-11-19T08:57:02.000Z" title="发表于 2026-11-19 08:57:02">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
