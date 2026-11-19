@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="周二晚，WayToBot 社区举办了成立后的首场 X Space。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/19/0xlangeai-2123390731142524948/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="周二晚，WayToBot 社区举办了成立后的首场 X Space。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123390731142524948-cover.jpg">
+<meta property="article:published_time" content="2026-11-19T20:19:35.000Z">
+<meta property="article:modified_time" content="2026-11-20T03:58:11.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@0xlangeai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123390731142524948-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法",
+  "url": "https://yaoav.github.io/2026/11/19/0xlangeai-2123390731142524948/",
+  "image": "https://yaoav.github.io/images/2123390731142524948-cover.jpg",
+  "datePublished": "2026-11-19T20:19:35.000Z",
+  "dateModified": "2026-11-20T03:58:11.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/19/0xlangeai-2123390731142524948/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">332</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">166</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123390731142524948-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-19T20:19:35.000Z" title="发表于 2026-11-19 20:19:35">2026-11-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@0xlangeai（蓝哥AI）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123390731142524948">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>周二晚，<strong>WayToBot 社区</strong>举办了成立后的首场 X Space。</p>
+<p>说实话，最开始我们只是想开个语音局，跟大家聊聊“为什么要做这个社区”，顺便回答几个群里高频问到的问题。结果没想到，大家的参与热情远超预期，开麦席位一直满着，硬生生聊了 **2 小时 13 分钟 、 790 多人收听、 最高在线 200 多人 **</p>
+<p>在复盘 Space 的干货之前，我们想先认真回答第一个问题——这也是这场 Space 最核心的主题：<strong>我们为什么要成立 WayToBot 社区？</strong></p>
+<h3 id="一、为什么我们要成立-WayToBot-社区？"><a href="#一、为什么我们要成立-WayToBot-社区？" class="headerlink" title="一、为什么我们要成立 WayToBot 社区？"></a>一、为什么我们要成立 WayToBot 社区？</h3><p>这件事的起因其实很自然。</p>
+<p>从今年 8 月 Grok Bot 发布，到 9 月 Muse 上线，再到 OpenAI Dots 接连出来，Personal Agent（个人智能体）这个赛道在短短几个月里突然井喷了。每天时间线上都有新产品、新教程刷屏。但我们发现一个很现实的问题：<strong>产品太多、信息太杂，普通人根本没精力把每个工具都测一遍，很容易踩坑，甚至被各种噪音带偏</strong>。</p>
+<p>Kin @KinGao476942 、蓝哥  @0xlangeai、铁柱 @cgnot996 三个人算是国内最早把 Grok Bot 和 Muse 深度用起来的一批创作者，平时经常在小群里交流踩坑经验，在推特上写的教程也累计跑出了几百万的阅读量。有一天我们三个聊天时突然想到：<strong>既然我们自己每天都在测、都在用，为什么不把小群的聊天范围扩大，拉上十位早期重度玩家（韭二 <strong>@li9292、<strong>文哥 <strong>@MaiYangAI、</strong> Chris <strong>@ChrisHKAI 、木渡川 @tanglele0318 、<strong>麦当</strong>@czzzzzzJ_、<strong>小晚</strong>@bbkirstry</strong> 、JKL</strong>@jklthinking</strong>等），一起建一个交流社区呢？</strong></p>
+<p>所以，<strong>WayToBot 的定位非常朴素，就做三件实实在在的事</strong>：</p>
+<ol>
+<li><strong>帮大家过滤噪音、提前排雷</strong>：我们自己先去测，把真正好用、能提效的东西留下来，把没必要花冤枉钱的坑帮大家避开。</li>
+<li><strong>定期做高质量的分享和答疑</strong>：每周或每两周开一次 Space，邀请真正在业务一线把 PersonalAgent 用起来的人做实战分享，并留出充足的连麦答疑时间。</li>
+<li><strong>建一个免费的交流阵地与新手导航</strong>：我们在微信建了十几个免费交流群，也上线了配套官网，持续整理新手入门教程和优质长文。因为是免费的，我们不承诺一对一的保姆式答疑，但我们希望这里能成为大家入门 Personal Agent 最靠谱的起点。</li>
+</ol>
+<h3 id="二、一场-2-小时的-Space，炸出了哪些意想不到的“新发现”？"><a href="#二、一场-2-小时的-Space，炸出了哪些意想不到的“新发现”？" class="headerlink" title="二、一场 2 小时的 Space，炸出了哪些意想不到的“新发现”？"></a>二、一场 2 小时的 Space，炸出了哪些意想不到的“新发现”？</h3><p><img src="/images/HXfHcFyawAA5gkZ.jpg" alt="HXfHcFyawAA5gkZ"></p>
+<p>原本以为是一场偏入门的科普局，结果在下半场的自由连麦里，直接把隐藏在群里的实战派全炸出来了——有在深圳、佛山用 Bot 管工厂的小老板，有做独立站出海的卖家，有跑通 AI 自动接单的开发者，还有自己改逆向协议搞多群机器人的极客。</p>
+<p>正是这种面对面的碰撞，让我们在现场挖到了很多平时刷推很难看到的<strong>真实信息差</strong>：</p>
+<h3 id="⁠1-4-款主流-Personal-Agent-的真实体感（没有滤镜版）"><a href="#⁠1-4-款主流-Personal-Agent-的真实体感（没有滤镜版）" class="headerlink" title="⁠1. 4 款主流 Personal Agent 的真实体感（没有滤镜版）"></a>⁠1. 4 款主流 Personal Agent 的真实体感（没有滤镜版）</h3><p>几位同时重度使用多款工具的嘉宾，给出了非常坦诚的对比：</p>
+<ul>
+<li><strong>Grok Bot（偏商务的“虚拟员工团队”）</strong>：处于个人助理和团队协作者之间，最适合用来搭复杂工作流、多角色分工，甚至直接当成一台云电脑来跑测试环境，属于**“真能帮你干活”**的类型。<strong>但缺点也很明显</strong>：主控模型没法自己选，路由机制比较黑箱，导致偶尔“智商忽高忽低”；而且深度用起来 Token 消耗非常快。</li>
+<li><strong>Muse（轻量级生活与社交管家）</strong>：跟 Meta 生态绑得很深，做好视频可以直接发 Instagram 和 Facebook。它最大的优点是<strong>做真人感视频的效果很自然，AI 味没那么重，而且额度极其耐用</strong>（邀请机制下给的 Token 基本用不完）。<strong>现场排雷技巧</strong>：Muse 的内容审核比较严，用“角色三视图或参考图”代替纯文字提示词去生成视频，通过率会高很多；另外网络路由记得切到美国节点，不然容易遇到地区限制。</li>
+<li><strong>OpenAI Dots（移动端语音助理）</strong>：在 iPhone 上的原生弹窗通知体验很好，适合在手机上直接用语音让它去分析 GitHub 代码仓库。但问题在于太贵（需要 100 美元套餐），而且不少群友实际用下来的体感是“智商偏低”，把任务交接给 Codex 时也没法指定模型和插件。</li>
+<li><strong>Hark &#x2F; 浩克（连麦挖出的信息差黑马）</strong>：就在大家讨论 Grok Bot 和 Muse 的视频短板时，赛博 Frank 等几位连麦嘉宾抛出了 <strong>Hark</strong>。大家实测下来发现，它界面很轻量化，但生成的无真人独白演示视频质量非常高，接近 Opus 5.5 的水准；更贴心的是，它配乐时会自动去全网找公版无版权或者 CC 协议的音乐，还会在片尾自动帮你加上规范的版权署名。缺点是免费额度比较少（每天重置一次），有玩家是用多浏览器注册多个账号轮换来解决的。</li>
+</ul>
+<p><strong>现场共识</strong>：目前没有哪一款工具能通吃所有场景，每个 Agent 都跟它背后的大厂生态绑得很死。最务实的做法是<strong>搭配着用</strong>——重度工作流和统筹交给 Grok Bot，做视频交给 Muse 或 Hark，本地文件处理交给开源的 Hermes。</p>
+<h3 id="三、告别额度焦虑：Grok-Bot-省-Token-的-6-个硬核实操"><a href="#三、告别额度焦虑：Grok-Bot-省-Token-的-6-个硬核实操" class="headerlink" title="三、告别额度焦虑：Grok Bot 省 Token 的 6 个硬核实操"></a>三、告别额度焦虑：Grok Bot 省 Token 的 6 个硬核实操</h3><p><img src="/images/HXfHjABa4AAA7PU.jpg" alt="HXfHjABa4AAA7PU"></p>
+<p>“Grok Bot 额度烧得太快”是群里大家吐槽最多的问题。昨晚铁柱和 JKL 结合后台最新的用量面板，把省额度的实操经验拆成了 6 条非常具体的建议，照着改就能立竿见影地省下不少 Token：</p>
+<ol>
+<li><strong>能用脚本解决的，千万别开浏览器</strong>让 Bot 操作浏览器去网页上点点点，它每一步都要截图再做视觉识别，极其耗费额度。凡是能通过 CLI 命令行、API 或者写个小脚本搞定的任务，坚决不要让它走浏览器。</li>
+<li><strong>“小马拉大车”，把重活分摊出去</strong>像视频拉片、大量图片识别、代码编写和视频渲染，都属于高耗能重任务。可以在 Grok Bot 的虚拟机里装上 Codex、DeepSeek 等其他 Agent，让 Grok Bot 只当“指挥官”（负责理解需求、拆解派单、验收结果），把重体力活分摊到其他订阅账号的额度上去。</li>
+<li><strong>检查定时任务，给高频轮询降频</strong>很多人设了定时任务，比如“每 5 分钟检查一次某个数据”。如果这个数据一天只变一次，那前面几百次唤醒全是在空转——而它每次唤醒都要重新读一遍记忆和上下文，白白烧掉大量额度。把没必要的定时任务删掉，或者把频率调低，能省出一大块额度。</li>
+<li><strong>能私聊就别拉群，临时群用完就解散</strong>Bot 之间本身可以直接点对点传话，很多任务根本没必要拉群聊。如果确实需要多个 Bot 协同，建议针对单个任务建一个临时群，等任务跑完、结果回收之后，立刻把这个群解散，减少冗余的上下文同步。</li>
+<li><strong>改变 Bot 的拆分思路，别拆得太碎</strong>早期大家流行“一个 Bot 只干一件事”的原子化拆分，但最新的用量面板暴露了一个大坑：<strong>Bot 之间的来回沟通，同样会消耗巨额 Token</strong>。现在的最佳实践是：尽量让一个功能完整的 Bot 自己闭环把一件事做完，减少内部沟通的来回损耗。</li>
+<li><strong>把第三方工具注册成“公共服务”，别单独配 Bot</strong>比如你把 Codex 接进来了，不要专门建一个“管 Codex 的 Bot”去维护它。直接把它注册成一个公共服务，写进所有 Bot 的配置里，让它们需要时自己直接去调用，省去中间多一道“传话 Bot”的开销。</li>
+</ol>
+<h3 id="四、大家到底怎么用它落地和赚钱？5-个真实业务场景"><a href="#四、大家到底怎么用它落地和赚钱？5-个真实业务场景" class="headerlink" title="四、大家到底怎么用它落地和赚钱？5 个真实业务场景"></a>四、大家到底怎么用它落地和赚钱？5 个真实业务场景</h3><p>在 WayToBot 的社区接龙里，大家最关心的还是“怎么用这些工具结合业务搞钱”。昨晚多位嘉宾直接分享了自己正在跑的真实工作流：</p>
+<ul>
+<li><strong>自媒体低门槛起号与内容矩阵</strong>：发起人团队凭借早期写出的保姆级教程，在两三个月内实现 X 账号涨粉破万，创作者收益每两周接近破千美元。嘉宾 JKL 分享了一个非常适合普通人的工作流：他平时办线下活动，对视频剪辑一窍不通，现在他把手机照片视频设为自动上传百度网盘，直接让 Grok Bot 去网盘里下载素材、自己筛选并剪出活动宣传片。另一位嘉宾木渡川则把“公众号 + 推特长文”整合成了一套自动工作流，从写提纲、写文案、调工具配图到套好 HTML 格式存入草稿箱，全程自动跑通，人只需要在提纲和文案阶段把把关。</li>
+<li><strong>跨境电商全链路提效</strong>：在选品、抓竞品数据、分析买家评论以及批量上架环节，直接用 Bot 军团代替人工。以前人工两天才能上 100 个链接，借助自动化工作流两天能上 1000 个，效率直接翻了十倍。</li>
+<li><strong>出海独立站与海外社媒引流</strong>：独立开发者用 Bot 自动去挖掘海外搜索新词、快速建站以及定时发外链；做实体工厂的卖家则用 Muse 配合操控手机的工具，全自动往 TikTok、Facebook 和 Instagram 发内容，给独立站和私域引流。</li>
+<li><strong>ToB 与小微企业数字管理</strong>：在深圳和佛山，已经有小老板把企业的日常资料全丢进 Grok Bot，当成自己的“数字管理团队”来调度。还有技术开发者切入企业级服务，用开源 Agent 帮中小企业做税务自动申报，或者直接搭建一套由 AI 自主运营迭代的 CRM 和客户工单系统，让 AI 自己根据获客反馈去修改系统字段。</li>
+<li><strong>垂直领域视频矩阵</strong>：有嘉宾用 Hark 批量生产产品演示视频，或者结合自己的国学八字知识，批量制作视频同步分发到 YouTube、视频号、抖音和快手，已经跑出了稳定的播放量。</li>
+</ul>
+<h3 id="五、连麦现场解决的-3-个工程难题与未来趋势"><a href="#五、连麦现场解决的-3-个工程难题与未来趋势" class="headerlink" title="五、连麦现场解决的 3 个工程难题与未来趋势"></a>五、连麦现场解决的 3 个工程难题与未来趋势</h3><p>这场 Space 让我们觉得最有价值的地方，是很多平时一个人憋很久的技术卡点，在现场几句话就被大家接力解决了：</p>
+<h3 id="⁠1-多微信群接入-Bot-的并发冲突怎么解？"><a href="#⁠1-多微信群接入-Bot-的并发冲突怎么解？" class="headerlink" title="⁠1. 多微信群接入 Bot 的并发冲突怎么解？"></a>⁠1. 多微信群接入 Bot 的并发冲突怎么解？</h3><p>做项目管理的张坤在连麦时提出了一个很痛的问题：他把多个客户微信群通过 Hook 接进了 Grok Bot，但客户一多，单队列的 Bot 根本回复不过来。 紧接着，月明水净深、铁柱、goodhark 三位开发者接力上麦，直接给出了三种递进的解法：</p>
+<ul>
+<li><strong>协议层隔离</strong>：自己搭一层轻量服务做多个 Webhook 分流，把不同的群隔离开，各自匹配独立的知识库和回复逻辑。</li>
+<li><strong>统一聚合入口（ADE）</strong>：针对多工具、多任务频繁切换导致的注意力分散和上下文割裂，可以尝试新一代的 <strong>ADE（Agent 开发环境，如 ORCA 等）</strong>，把本机和云端的所有 Agent 聚合在一个面板里统一调度；或者用 <strong>Obsidian + GitHub 私有仓库</strong>、<strong>Notion</strong> 作为所有 Agent 的“唯一真源”知识库，并做好写入权限隔离，防止不同 Bot 互相覆盖记忆。</li>
+<li><strong>接入工单系统</strong>：直接用开源 Agent（如 Pi 或 RAKAGO）配合独立的记忆系统部署，或者接一套工单系统，把群消息自动转化为结构化数据再交由 AI 处理。</li>
+</ul>
+<h3 id="⁠2-血泪换来的“自动化防封红线”"><a href="#⁠2-血泪换来的“自动化防封红线”" class="headerlink" title="⁠2. 血泪换来的“自动化防封红线”"></a>⁠2. 血泪换来的“自动化防封红线”</h3><p>很多朋友想用 Bot 自动运营推特账号，铁柱、蓝哥和 JKL 结合自己亲身被封号的经历给大家提了个醒：<strong>千万不要用 Computer Use 或 RPA 操控浏览器去自动发推，更不要用 AI 去别人评论区自动刷回复</strong>。技术上发推必须走官方 API，但更重要的是，推特本身是一个重真人社交连接的平台，全自动发帖不仅没有流量，还极易触发影子封禁甚至直接封号。同理，在第三方平台跑自动化生图时也要控制并发量——现场有嘉宾因为一次性让 Agent 开 4 个浏览器窗口并发跑 500 张图，直接导致账号被临时封禁。</p>
+<h3 id="⁠3-国内-PA-生态与“Bot-硬件”的新动向"><a href="#⁠3-国内-PA-生态与“Bot-硬件”的新动向" class="headerlink" title="⁠3. 国内 PA 生态与“Bot + 硬件”的新动向"></a>⁠3. 国内 PA 生态与“Bot + 硬件”的新动向</h3><p>大家也很关心国内什么时候有好用的 Personal Agent。Kin 在现场盘点了三个已经跑出不错成绩的国内产品：软件端有融资近 10 亿人民币的 <strong>Today</strong>；也有硬件端则有众筹超百万美元的本地品牌，以及插上电脑免驱动就能读屏幕、众筹超 2000 万的桌面盒子 。</p>
+<p>同时，铁柱也在现场透露了一个好消息：<strong>他最近即将开源一套专门连接 ESP32 硬件与 Grok Bot 的语音交互 SDK</strong>。到时候大家只要把硬件连上电脑，就能低成本实现对着硬件说话、直接调用 Bot 并接收语音回复的玩法。</p>
+<h3 id="写在最后：欢迎加入-WayToBot，一起折腾、一起分享"><a href="#写在最后：欢迎加入-WayToBot，一起折腾、一起分享" class="headerlink" title="写在最后：欢迎加入 WayToBot，一起折腾、一起分享"></a>写在最后：欢迎加入 WayToBot，一起折腾、一起分享</h3><p>回过头看，这场 2 小时的首场 Space 之所以能聊得这么透，不是因为我们几个发起人有多厉害，而是因为<strong>把一群真正愿意在一线动手折腾的人聚在了一起</strong>。</p>
+<p>在 WayToBot，我们不想做那种高高在上的“专家布道”，也不卖焦虑。**只要你对 Personal Agent 感兴趣，不管你是刚入门的新手，还是已经在某个业务里跑通了独特玩法的实战派，这里都有你的位置。**昨晚连麦中，好几位原本在群里默默潜水的小伙伴，因为分享了特别扎实的实操经验，已经被我们当场邀请为后续 Space 的分享嘉宾和深圳线下活动的讲师。</p>
+<p>接下来，社区有三件事已经排上了日程，欢迎大家一起来参与：</p>
+<ol>
+<li><strong>下期 Space 预告（下周一）</strong>：我们将邀请一位已经把全流程打通的跨境电商实战嘉宾，专门聊聊 <strong>《Grok Bot + 电商全流程实战》</strong>。</li>
+<li><strong>社区官网 &amp; 分享嘉宾招募</strong>：WayToBot 的官网（<a target="_blank" rel="noopener" href="https://waytobot.com/%EF%BC%89%E5%B7%B2%E7%BB%8F%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%EF%BC%8C%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%E5%92%8C%E6%98%A8%E6%99%9A%E6%8F%90%E5%88%B0%E7%9A%84%E5%90%84%E7%B1%BB%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%E9%83%BD%E4%BC%9A%E9%99%86%E7%BB%AD%E6%95%B4%E7%90%86%E6%94%BE%E4%B8%8A%E5%8E%BB%E3%80%82%E5%A6%82%E6%9E%9C%E4%BD%A0%E4%B9%9F%E5%9C%A8%E7%94%A8">https://waytobot.com/）已经正式上线，新手教程和昨晚提到的各类实战案例都会陆续整理放上去。如果你也在用</a> Personal Agent 解决工作或赚钱中的实际问题，<strong>非常欢迎联系我们申请成为后续 Space 的分享嘉宾</strong>，借助社区的力量让更多人看到你的实践！</li>
+</ol>
+<p>👉 **想进免费微信交流群、查看新手教程，或者报名当分享嘉宾？欢迎在评论区留言或直接私信我们，我们群里见( 扫码:  **<a target="_blank" rel="noopener" href="https://wtb.fmcat.top/">https://wtb.fmcat.top/</a>)</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/19/0xlangeai-2123390731142524948/">https://yaoav.github.io/2026/11/19/0xlangeai-2123390731142524948/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/0xlangeai/">@0xlangeai</a></div><div class="post-share"><div class="social-share" data-image="/images/2123390731142524948-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/19/0xlangeai-2123394871222485023/" title="超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你"><img class="cover" src="/images/2123394871222485023-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  大家好，我是想风！今天来看建站这件事，100 种方式一次摊开！ 想做个网站，搜一圈下来，WordPress、Hugo、Next.js、Notion、Webflow……名字一个比一个多。 选择太多，最后可能一个都没开始。 这篇把 100 种建站方式分成九类，从拖拖拽拽的零代码，到笔记一键发布，再到用 Go、Python、Rust 手写，每一种讲清是什么、适合谁。 不用全看。可以先看第一节的选择表，找到自己那一格，再跳到对应章节。  目录：  一、先说结论：按需求挑 二、零代码平台（1-12） 三、AI 建站（13-20） 四、笔记建站（21-30） 五、开源 CMS·自己部署（31-42） 六、静态站点生成器：按编程语言分（43-62） 七、前端框架（63-74） 八、后端语言（75-88） 九、电商·单页·链接页（89-94） 十、极客玩法（95-100） 十一、建好了放哪：上线方式 十二、常见坑 最后  一、先说结论：按需求挑 建站方式没有好坏，只有合不合适，适合自己的才是最好的。...</div></div></div></a><a class="pagination-related" href="/2026/11/19/lemomo_ai-2123385975221235798/" title="Open-sourcing lemo-animi, a stop-motion skill: one sentence, and Codex makes the film"><img class="cover" src="/images/2123385975221235798-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Open-sourcing lemo-animi, a stop-motion skill: one sentence, and Codex makes the film</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lemomo_ai（Lemomo） 的长文，原文链接，版权归原作者所有。  “Make a 40-second claymation: a little penguin learns to make pancakes.” That’s the whole prompt. The agent writes the story and the shot list, uses an image model to make the characters, sets and action sheets, then brings them to life frame by frame in code. It scores the film with real instrument samples, adds foley, and finally opens a local review desk where you give notes until the film is done. This is lemo-animi, the open-source proje...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img class="cover" src="/images/2122708521959706960-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  领取链接：https://tokenized.play.google.com/eacquire/multiline?authuser=0&amp;ear=%5Bnull%2Cnull%2C%5Bnull%2Cnull%2C%22%2Fplans%3Fg1_last_touchpoint%3D37%26g1_landing_page%3D1%26otzr%3D1%22%5D%2Cnull%2C%5B%22W1tudWxsLG51bGwsbnVsbCxbbnVsbCxbIlJzMi4wLjY6OjpzMTEsMiwyNmI1ZTE5LDAsNzY5LGEwNjNlYmU5LDAsNGEyLGVkZDk4YmFjLDAsMTgsNDg2M2ZkMzUsMCw3NjksY2IyZDVjNmYsMCw0N2UsNmFkNDdjNmMsMCw1M2UsN2JkYjQ5ZjYsMCw0MjgsYjY1NDAyMDAsMCw3NjksZWVhODIwYjYsMCw0N2UsMWFhNDMzMSwwL...</div></div></div></a><a class="pagination-related" href="/2026/11/19/0xlangeai-2123394871222485023/" title="超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你"><img class="cover" src="/images/2123394871222485023-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  大家好，我是想风！今天来看建站这件事，100 种方式一次摊开！ 想做个网站，搜一圈下来，WordPress、Hugo、Next.js、Notion、Webflow……名字一个比一个多。 选择太多，最后可能一个都没开始。 这篇把 100 种建站方式分成九类，从拖拖拽拽的零代码，到笔记一键发布，再到用 Go、Python、Rust 手写，每一种讲清是什么、适合谁。 不用全看。可以先看第一节的选择表，找到自己那一格，再跳到对应章节。  目录：  一、先说结论：按需求挑 二、零代码平台（1-12） 三、AI 建站（13-20） 四、笔记建站（21-30） 五、开源 CMS·自己部署（31-42） 六、静态站点生成器：按编程语言分（43-62） 七、前端框架（63-74） 八、后端语言（75-88） 九、电商·单页·链接页（89-94） 十、极客玩法（95-100） 十一、建好了放哪：上线方式 十二、常见坑 最后  一、先说结论：按需求挑 建站方式没有好坏，只有合不合适，适合自己的才是最好的。...</div></div></div></a><a class="pagination-related" href="/2026/09/25/0xlangeai-2103300004966478284/" title="Muse 上手保姆级教程：从登录到完成第一个任务"><img class="cover" src="/images/2103300004966478284-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-25</div><div class="info-item-2">Muse 上手保姆级教程：从登录到完成第一个任务</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。 第一次用，先让它把几个链接整理成资料表：下任务、打开文件、核对来源，再改一版。 这不是功能清单。按顺序做完，就能让 Muse 在你看得见的范围内把一件事做完。 连接器、记忆和长期目标，用到再加。  1. 从哪里开始？先登录，再看可用范围打开 muse.ai，按页面提示登录 也可以从 muse 桌面端登陆 还可以从 muse 手机应用登陆 开始前知道这几件事就够了：  官方 9 月 8 日的公告宣布首发面向美国，支持 iOS、Android 和网页端。你的账号当前能否使用，以注册页面为准。 官方提供免费使用与付费订阅，具体额度和价格看账号内的说明。先试一个任务，再决定是否订阅。 本文用 Muse 桌面端做示范，先选一个设备跟着做即可。  如果进不去，先看页面具体提示。地区未开放、账号不符合条件和网络连接失败，需要分别处理。 2. 登录后，先告诉它怎么和你合作按引导完成命名等初...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">332</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">166</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E8%A6%81%E6%88%90%E7%AB%8B-WayToBot-%E7%A4%BE%E5%8C%BA%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一、为什么我们要成立 WayToBot 社区？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%80%E5%9C%BA-2-%E5%B0%8F%E6%97%B6%E7%9A%84-Space%EF%BC%8C%E7%82%B8%E5%87%BA%E4%BA%86%E5%93%AA%E4%BA%9B%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0%E7%9A%84%E2%80%9C%E6%96%B0%E5%8F%91%E7%8E%B0%E2%80%9D%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">二、一场 2 小时的 Space，炸出了哪些意想不到的“新发现”？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%81%A01-4-%E6%AC%BE%E4%B8%BB%E6%B5%81-Personal-Agent-%E7%9A%84%E7%9C%9F%E5%AE%9E%E4%BD%93%E6%84%9F%EF%BC%88%E6%B2%A1%E6%9C%89%E6%BB%A4%E9%95%9C%E7%89%88%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">⁠1. 4 款主流 Personal Agent 的真实体感（没有滤镜版）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%91%8A%E5%88%AB%E9%A2%9D%E5%BA%A6%E7%84%A6%E8%99%91%EF%BC%9AGrok-Bot-%E7%9C%81-Token-%E7%9A%84-6-%E4%B8%AA%E7%A1%AC%E6%A0%B8%E5%AE%9E%E6%93%8D"><span class="toc-number">4.</span> <span class="toc-text">三、告别额度焦虑：Grok Bot 省 Token 的 6 个硬核实操</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%A4%A7%E5%AE%B6%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E7%94%A8%E5%AE%83%E8%90%BD%E5%9C%B0%E5%92%8C%E8%B5%9A%E9%92%B1%EF%BC%9F5-%E4%B8%AA%E7%9C%9F%E5%AE%9E%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF"><span class="toc-number">5.</span> <span class="toc-text">四、大家到底怎么用它落地和赚钱？5 个真实业务场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%BF%9E%E9%BA%A6%E7%8E%B0%E5%9C%BA%E8%A7%A3%E5%86%B3%E7%9A%84-3-%E4%B8%AA%E5%B7%A5%E7%A8%8B%E9%9A%BE%E9%A2%98%E4%B8%8E%E6%9C%AA%E6%9D%A5%E8%B6%8B%E5%8A%BF"><span class="toc-number">6.</span> <span class="toc-text">五、连麦现场解决的 3 个工程难题与未来趋势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%81%A01-%E5%A4%9A%E5%BE%AE%E4%BF%A1%E7%BE%A4%E6%8E%A5%E5%85%A5-Bot-%E7%9A%84%E5%B9%B6%E5%8F%91%E5%86%B2%E7%AA%81%E6%80%8E%E4%B9%88%E8%A7%A3%EF%BC%9F"><span class="toc-number">7.</span> <span class="toc-text">⁠1. 多微信群接入 Bot 的并发冲突怎么解？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%81%A02-%E8%A1%80%E6%B3%AA%E6%8D%A2%E6%9D%A5%E7%9A%84%E2%80%9C%E8%87%AA%E5%8A%A8%E5%8C%96%E9%98%B2%E5%B0%81%E7%BA%A2%E7%BA%BF%E2%80%9D"><span class="toc-number">8.</span> <span class="toc-text">⁠2. 血泪换来的“自动化防封红线”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%81%A03-%E5%9B%BD%E5%86%85-PA-%E7%94%9F%E6%80%81%E4%B8%8E%E2%80%9CBot-%E7%A1%AC%E4%BB%B6%E2%80%9D%E7%9A%84%E6%96%B0%E5%8A%A8%E5%90%91"><span class="toc-number">9.</span> <span class="toc-text">⁠3. 国内 PA 生态与“Bot + 硬件”的新动向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5-WayToBot%EF%BC%8C%E4%B8%80%E8%B5%B7%E6%8A%98%E8%85%BE%E3%80%81%E4%B8%80%E8%B5%B7%E5%88%86%E4%BA%AB"><span class="toc-number">10.</span> <span class="toc-text">写在最后：欢迎加入 WayToBot，一起折腾、一起分享</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img src="/images/2123480803850035284-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"/></a><div class="content"><a class="title" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</a><time datetime="2026-11-20T02:17:30.000Z" title="发表于 2026-11-20 02:17:30">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"><img src="/images/2123424422396608909-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了">卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了</a><time datetime="2026-11-19T22:33:28.000Z" title="发表于 2026-11-19 22:33:28">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"><img src="/images/2123419503417544831-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️">ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️</a><time datetime="2026-11-19T22:13:55.000Z" title="发表于 2026-11-19 22:13:55">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/conso_zh-2123410657995628835/" title="中文 meme 的钱，最后被谁赚走了？ "><img src="/images/2123410657995628835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文 meme 的钱，最后被谁赚走了？ "/></a><div class="content"><a class="title" href="/2026/11/19/conso_zh-2123410657995628835/" title="中文 meme 的钱，最后被谁赚走了？ ">中文 meme 的钱，最后被谁赚走了？ </a><time datetime="2026-11-19T21:38:46.000Z" title="发表于 2026-11-19 21:38:46">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
