@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="You see a feature in an app and immediately think:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide)">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/23/lessnnay-2113332023431405772/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="You see a feature in an app and immediately think:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2113332023431405772-cover.jpg">
+<meta property="article:published_time" content="2026-10-23T02:09:52.000Z">
+<meta property="article:modified_time" content="2026-11-20T05:29:21.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@lessnnay">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2113332023431405772-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide)",
+  "url": "https://yaoav.github.io/2026/10/23/lessnnay-2113332023431405772/",
+  "image": "https://yaoav.github.io/images/2113332023431405772-cover.jpg",
+  "datePublished": "2026-10-23T02:09:52.000Z",
+  "dateModified": "2026-11-20T05:29:21.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/23/lessnnay-2113332023431405772/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">338</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">170</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2113332023431405772-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">REA + GrokBot: Reverse Engineer Apps and Build Your Own Features (Full Guide)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-23T02:09:52.000Z" title="发表于 2026-10-23 02:09:52">2026-10-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@lessnnay（lessnay）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2113332023431405772">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>You see a feature in an app and immediately think:</p>
+<blockquote>
+<p>“I wish I could build that”</p>
+</blockquote>
+<p>So you send AI a screenshot. It recreates the layout. Then you click something and discover how much it guessed.</p>
+<p><strong>The screenshot showed the interface. It never showed the rules.</strong></p>
+<p>This is where GrokBot + REA gets interesting. Give the agent something it can inspect, ask one precise question, and make it connect the explanation to evidence.</p>
+<p>Then decide what your own version should do.</p>
+<p>This guide uses three official REA case studies to explain the method, followed by GrokBot-specific connection instructions and a reusable build workflow. The published examples are credited to their sources; they are not presented as experiments I ran with GrokBot.</p>
+<h3 id="First-see-the-idea"><a href="#First-see-the-idea" class="headerlink" title="First, see the idea"></a>First, see the idea</h3><p>This video post introduces REA and the kinds of questions people bring to it. Treat it as an introduction, then use the primary-source examples below for the technical detail.</p>
+<h3 id="Three-doors-into-an-application"><a href="#Three-doors-into-an-application" class="headerlink" title="Three doors into an application"></a>Three doors into an application</h3><p>Different targets need different evidence. A packaged desktop app, an Android APK and a native executable do not become understandable in exactly the same way.</p>
+<p>The useful question stays the same: <strong>which rule causes the behavior I can see?</strong></p>
+<p><img src="/images/HVQLw_qW4AAnKrC.jpg" alt="HVQLw_qW4AAnKrC"></p>
+<h3 id="01-The-feature-hiding-behind-“Copy”"><a href="#01-The-feature-hiding-behind-“Copy”" class="headerlink" title="01 &#x2F; The feature hiding behind “Copy”"></a>01 &#x2F; The feature hiding behind “Copy”</h3><p>Copying a block feels like one action. Internally, more than one representation can matter.</p>
+<p>REA’s Notion case study follows a clipboard request from the page-facing API through Electron’s process bridge to the clipboard writer. It also describes a local block-data mechanism tied to an identifier carried in HTML.</p>
+<p>That gives you a better investigation question than “clone this editor”: <strong>what is preserved when content crosses the clipboard boundary?</strong></p>
+<p><img src="/images/HVQLw__WEAAfqMT.jpg" alt="HVQLw__WEAAfqMT"></p>
+<p><img src="/images/HVQLxAHWMAEZl6z.jpg" alt="HVQLxAHWMAEZl6z"></p>
+<p>Your project could be a focused clipboard utility or an export helper. You choose the requirements after understanding the boundary.</p>
+<h3 id="02-The-hidden-rule-behind-a-changing-number"><a href="#02-The-hidden-rule-behind-a-changing-number" class="headerlink" title="02 &#x2F; The hidden rule behind a changing number"></a>02 &#x2F; The hidden rule behind a changing number</h3><p>The Aegis case study starts with a visible behavior: a six-digit login code changes with time.</p>
+<p>REA locates the generating methods in the Android APK. The official interactive demo lets you move a test clock and see the boundary between time blocks. It uses public test data, not a real account secret.</p>
+<p>The authors report 133 comparisons between selected REA-returned methods and an independent reconstruction. That validates the reported cases, not every possible app behavior.</p>
+<p><strong><a target="_blank" rel="noopener" href="https://rea.tools/showcase/aegis/">https://rea.tools/showcase/aegis/</a></strong></p>
+<p>Here is a tiny, original teaching example of the clock boundary alone:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">time_bucket</span>(<span class="params">seconds, period=<span class="number">30</span></span>):</span><br><span class="line">    <span class="keyword">if</span> seconds &lt; <span class="number">0</span> <span class="keyword">or</span> period &lt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">&quot;Use non-negative time and a positive period&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> seconds // period</span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> time_bucket(<span class="number">59</span>) == <span class="number">1</span></span><br><span class="line"><span class="keyword">assert</span> time_bucket(<span class="number">60</span>) == <span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The boundary changes the bucket, not every second&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>The general lesson applies far beyond authentication: when an output changes, find the input boundary that explains the change.</p>
+<p><img src="/images/HVQLxAnWEAA-rh7.jpg" alt="HVQLxAnWEAA-rh7"></p>
+<h3 id="03-When-the-first-answer-is-incomplete"><a href="#03-When-the-first-answer-is-incomplete" class="headerlink" title="03 &#x2F; When the first answer is incomplete"></a>03 &#x2F; When the first answer is incomplete</h3><p>Native software can produce a deceptively small decompiler result.</p>
+<p>In REA’s DX-Ball example, an initial view omitted useful details about the sound-pan calculation. Following instructions, a caller and stored constants exposed the relationship between horizontal position and the panning value.</p>
+<p>The reported reconstruction of that single function was checked against 3,205 input cases and 63 compiled bytes. Those numbers apply to the function, not a claim that the entire game was finished.</p>
+<p><strong>For an educational illustration of the recovered relationship:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">illustrative_pan</span>(<span class="params">x, scale=<span class="number">1.0</span></span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">int</span>((x * <span class="number">1.5625</span> - <span class="number">500.0</span>) * scale)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>([illustrative_pan(x) <span class="keyword">for</span> x <span class="keyword">in</span> (<span class="number">0</span>, <span class="number">320</span>, <span class="number">640</span>)])</span><br><span class="line"><span class="comment"># [-500, 0, 500]</span></span><br></pre></td></tr></table></figure>
+
+<p>The habit worth stealing: when pseudocode and instructions disagree, investigate the disagreement.</p>
+<p><img src="/images/HVQLxA3WMAA9oz7.jpg" alt="HVQLxA3WMAA9oz7"></p>
+<h3 id="Connect-the-investigation-to-GrokBot"><a href="#Connect-the-investigation-to-GrokBot" class="headerlink" title="Connect the investigation to GrokBot"></a>Connect the investigation to GrokBot</h3><p>GrokBot’s connector runs on the Bot’s hosted computer and belongs to the signed-in account. REA installed on your laptop does not automatically become available there.</p>
+<p>Follow the official Grok Bot client instructions. The documented custom MCP server name is rea, with this launch-command pattern:</p>
+<h3 id="Connect-the-investigation-to-GrokBot-1"><a href="#Connect-the-investigation-to-GrokBot-1" class="headerlink" title="Connect the investigation to GrokBot"></a>Connect the investigation to GrokBot</h3><p>GrokBot’s connector runs on the Bot’s hosted computer and belongs to the signed-in account. REA installed on your laptop does not automatically become available there.</p>
+<p>Follow the official Grok Bot client instructions. The documented custom MCP server name is** rea **, with this launch-command pattern:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx -y rea-agents@&lt;version&gt; mcp</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HVQLxBYXkAAdaf7.jpg" alt="HVQLxBYXkAAdaf7"></p>
+<p>Replace the placeholder with a verified published version. Keep credentials out of the command. The analysis target and required providers must be accessible on the machine running REA.</p>
+<h3 id="Turn-an-investigation-into-something-you-can-use"><a href="#Turn-an-investigation-into-something-you-can-use" class="headerlink" title="Turn an investigation into something you can use"></a>Turn an investigation into something you can use</h3><p>Finding an implementation gives you evidence. You still need to decide what to build.</p>
+<p>Specify the input your tool will accept, the output it should produce and the behavior you deliberately want to change. Keep those design choices separate from findings about the reference.</p>
+<p><strong>A useful specification can be compact:</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feature:</span> <span class="string">structured_export</span></span><br><span class="line"><span class="attr">input:</span> <span class="string">selected_records</span></span><br><span class="line"><span class="attr">output:</span> <span class="string">csv_file</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">retain</span> <span class="string">the</span> <span class="string">fields</span> <span class="string">listed</span> <span class="string">in</span> <span class="string">the</span> <span class="string">user</span> <span class="string">brief</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">preserve</span> <span class="string">Unicode</span> <span class="string">text</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">handle</span> <span class="string">commas,</span> <span class="string">quotes</span> <span class="string">and</span> <span class="string">newlines</span> <span class="string">explicitly</span></span><br><span class="line"><span class="attr">failure_behavior:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">return</span> <span class="string">a</span> <span class="string">visible</span> <span class="string">error</span> <span class="string">if</span> <span class="string">writing</span> <span class="string">fails</span></span><br><span class="line"><span class="attr">unknowns:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">list</span> <span class="string">any</span> <span class="string">unresolved</span> <span class="string">reference</span> <span class="string">behavior</span> <span class="string">here</span></span><br><span class="line"><span class="attr">acceptance:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">empty</span> <span class="string">dataset</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">one</span> <span class="string">record</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">embedded</span> <span class="string">punctuation</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">unavailable</span> <span class="string">destination</span></span><br></pre></td></tr></table></figure>
+
+<p>This is an authored example of a build contract. It is not an extracted specification from any of the applications above.</p>
+<h3 id="The-prompt-to-keep"><a href="#The-prompt-to-keep" class="headerlink" title="The prompt to keep"></a>The prompt to keep</h3><p>Use this once REA and the target are accessible. It ties the investigation to a deliverable you can inspect.</p>
+<p><img src="/images/HVQLxBjWAAAB9pS.jpg" alt="HVQLxBjWAAAB9pS"></p>
+<h3 id="Before-you-call-it-a-replacement"><a href="#Before-you-call-it-a-replacement" class="headerlink" title="Before you call it a replacement"></a>Before you call it a replacement</h3><p>Check a normal input, an empty input, a boundary and a failure. Make sure the comparison would catch an intentionally wrong result.</p>
+<p>Also check the boundary of your claim. Client inspection does not reveal a private server’s source. Three passing examples do not establish complete compatibility. A rebuilt feature does not mean a whole app has been recreated.</p>
+<p>REA is open source; agent usage, hosting and some providers can still cost money. Analysis results reach your agent and are subject to its model provider’s data policy. Use targets you own or are authorized to examine.</p>
+<blockquote>
+<p>Next time you want a feature, give GrokBot something to investigate before giving it something to build</p>
+</blockquote>
+<p><strong>One feature. An explanation you can check. A version you can test.</strong></p>
+<p>Save this before your next “can you build something like this?”</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/23/lessnnay-2113332023431405772/">https://yaoav.github.io/2026/10/23/lessnnay-2113332023431405772/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/lessnnay/">@lessnnay</a></div><div class="post-share"><div class="social-share" data-image="/images/2113332023431405772-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/24/chenke20266-2113664180385686006/" title="如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统"><img class="cover" src="/images/2113664180385686006-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  98% 的 pumpfun 代币从来没离开过联合曲线（bonding curve）。 大多数交易者亏在那里，原因只有一个：他们只有 4 秒做决定，一个人，K 线还在耳边尖叫。  Claude 治不好你的进场点，但它治得了那 4 秒。 它会读你跳过没看的持仓分布，会查你忘掉的 dev 钱包，会把你凌晨两点破的那条规矩写下来，周日再摆到你面前。  这是完整的搭建方法：终端、工作流、提示词、表格。全部抄走。 第一部分 为什么大多数终端玩家一直在流血标准配置长这样： 1 个终端。6 个标签页。3 个 Telegram 群。0 条写下来的规则。 一个币 11 分钟拉了 +300%，你在顶部买入。90 秒内砸掉 80%。你跟自己说：运气不好。 不是运气。是漏了 3 项检查：  速度不是你的问题，漏检才是。 第二部分 工具栈你需要 4 层。它们都不替 Claude 下单。Claude 永远碰不到你的私钥。 保住账户的那条规矩： Claude 负责分析，你负责点鼠标。 永远不要把助记词或私钥贴...</div></div></div></a><a class="pagination-related" href="/2026/10/22/chenke20266-2113293947422544121/" title="扫描 验证 执行 退出 构建一个GROK机器人交易平台"><img class="cover" src="/images/2113293947422544121-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">扫描 验证 执行 退出 构建一个GROK机器人交易平台</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  交易台上最好的BOT，从来不下单。它的唯一工作是说“不”。 大多数人第一次做交易机器人时，都会把所有事塞进一个提示词：找币、检查、买入、卖在高点。前几天可能有点效果，但很快就会买入一个已经死掉的币，然后你完全分不清是提示词哪一步出了问题。 真正的解决办法不是换更聪明的模型，而是把交易拆成一个“交易台”。每笔交易都必须走完四个固定步骤：SCAN（扫描）→ VERIFY（验证）→ EXECUTE（执行）→ EXIT（退出）。每个步骤由不同的角色负责，没有人能跳过，也没有“就这一次”的例外。 在一个正常运转的交易台上，绝大多数任务最终都会以“跳过”结束。扫描器每天能找到几百个交易对，验证环节会免费淘汰掉绝大部分，真正留下来的少数币再根据当前余额决定仓位大小。小交易始终保持小规模，赢的才会复利。 截图里那几笔交易只是结果。真正重要的是背后那套让大部分交易保持小规模、甚至直接跳过的系统。 怎么使用这套框架 打开你的 Grok Bot，把整篇文章贴进去，然后说：  在 &#x2F;work...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">338</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">170</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#First-see-the-idea"><span class="toc-number">1.</span> <span class="toc-text">First, see the idea</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Three-doors-into-an-application"><span class="toc-number">2.</span> <span class="toc-text">Three doors into an application</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#01-The-feature-hiding-behind-%E2%80%9CCopy%E2%80%9D"><span class="toc-number">3.</span> <span class="toc-text">01 &#x2F; The feature hiding behind “Copy”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-The-hidden-rule-behind-a-changing-number"><span class="toc-number">4.</span> <span class="toc-text">02 &#x2F; The hidden rule behind a changing number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-When-the-first-answer-is-incomplete"><span class="toc-number">5.</span> <span class="toc-text">03 &#x2F; When the first answer is incomplete</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-the-investigation-to-GrokBot"><span class="toc-number">6.</span> <span class="toc-text">Connect the investigation to GrokBot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-the-investigation-to-GrokBot-1"><span class="toc-number">7.</span> <span class="toc-text">Connect the investigation to GrokBot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Turn-an-investigation-into-something-you-can-use"><span class="toc-number">8.</span> <span class="toc-text">Turn an investigation into something you can use</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-prompt-to-keep"><span class="toc-number">9.</span> <span class="toc-text">The prompt to keep</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Before-you-call-it-a-replacement"><span class="toc-number">10.</span> <span class="toc-text">Before you call it a replacement</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img src="/images/2123480803850035284-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"/></a><div class="content"><a class="title" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</a><time datetime="2026-11-20T02:17:30.000Z" title="发表于 2026-11-20 02:17:30">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"><img src="/images/2123424422396608909-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了">卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了</a><time datetime="2026-11-19T22:33:28.000Z" title="发表于 2026-11-19 22:33:28">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"><img src="/images/2123419503417544831-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️">ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️</a><time datetime="2026-11-19T22:13:55.000Z" title="发表于 2026-11-19 22:13:55">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/conso_zh-2123410657995628835/" title="中文 meme 的钱，最后被谁赚走了？ "><img src="/images/2123410657995628835-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中文 meme 的钱，最后被谁赚走了？ "/></a><div class="content"><a class="title" href="/2026/11/19/conso_zh-2123410657995628835/" title="中文 meme 的钱，最后被谁赚走了？ ">中文 meme 的钱，最后被谁赚走了？ </a><time datetime="2026-11-19T21:38:46.000Z" title="发表于 2026-11-19 21:38:46">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
