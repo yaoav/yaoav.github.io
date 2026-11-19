@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How to Stay in the Game as a Creator on X | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="I&#39;ve been posting on X for 5 years, and lately I keep wondering: am I talking to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Stay in the Game as a Creator on X">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/16/auntiepaca-2122210705525055596/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="I&#39;ve been posting on X for 5 years, and lately I keep wondering: am I talking to">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122210705525055596-cover.jpg">
+<meta property="article:published_time" content="2026-11-16T14:10:35.000Z">
+<meta property="article:modified_time" content="2026-11-20T02:25:42.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@auntiepaca">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122210705525055596-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Stay in the Game as a Creator on X",
+  "url": "https://yaoav.github.io/2026/11/16/auntiepaca-2122210705525055596/",
+  "image": "https://yaoav.github.io/images/2122210705525055596-cover.jpg",
+  "datePublished": "2026-11-16T14:10:35.000Z",
+  "dateModified": "2026-11-20T02:25:42.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/16/auntiepaca-2122210705525055596/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to Stay in the Game as a Creator on X',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">326</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">166</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122210705525055596-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How to Stay in the Game as a Creator on X</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How to Stay in the Game as a Creator on X</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-16T14:10:35.000Z" title="发表于 2026-11-16 14:10:35">2026-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@auntiepaca（Lil Auntie 🌮）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122210705525055596">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>I’ve been posting on X for 5 years, and lately I keep wondering: am I talking to a person or a bot?</p>
+<p>Bear market is not new, fewer deals and a discouraged timeline are familiar. But feeling disconnected from the people I’m creating for is much harder.</p>
+<p>I’m still figuring parts of this out. But I’ve learned a few things about finding work, setting boundaries and giving people a reason to remember me.</p>
+<h2 id="1-Build-skills-people-can-recommend"><a href="#1-Build-skills-people-can-recommend" class="headerlink" title="1 Build skills people can recommend"></a>1 Build skills people can recommend</h2><p>One mistake I see newer creators make is putting too much energy into connections.</p>
+<p>They worry about getting close to the right people, keeping everyone happy, and looking successful. Developing their actual abilities can end up getting less attention.</p>
+<p>Most of my paid opportunities come from fellow creators and agencies. Some of the creators who recommend me aren’t particularly close friends. They’ve seen my work and think I could do a good job.</p>
+<p>That matters.** I want someone to recommend me because they can confidently explain what I bring to a project.**</p>
+<p>Relationships are valuable. I just don’t want my career to depend on someone feeling that they owe me a favour.</p>
+<p>Give people something clear to recommend. It might be your ability to explain a difficult subject, make a product video entertaining, or understand an audience a brand wants to reach.</p>
+<p>**Then make that ability visible. **Publish the work. Keep examples of what you’ve made and the feedback or results you can honestly show.</p>
+<p><strong>Ask yourself this question: If someone wanted to recommend you tomorrow, what would they say you’re good at?</strong></p>
+<h2 id="2-Handle-offers-according-to-your-circumstances"><a href="#2-Handle-offers-according-to-your-circumstances" class="headerlink" title="2 Handle offers according to your circumstances"></a>2 Handle offers according to your circumstances</h2><p>I’ve heard this line from collaboration managers plenty of times:</p>
+<blockquote>
+<p>If the project is happy with your work, they’re looking for a long-term partnership.</p>
+</blockquote>
+<p>Sometimes that comes with a request to start at a much smaller budget, or produce something for free.</p>
+<p>I used to feel pressure to accept an offer below my minimum because I wanted to build the relationship. I worried that saying no would close the door.</p>
+<p>Now I’m more comfortable being direct:</p>
+<blockquote>
+<p>I’d really love to work together, but this is my minimum for this scope. If the budget works, happy to discuss.</p>
+</blockquote>
+<p>I’ve declined offers and had managers come back later with a more suitable project and budget. Saying no to one offer didn’t end the relationship.</p>
+<p>A possible long-term partnership is encouraging. But I still need to understand what we’re agreeing to now: the work, the fee, the deadline, and what happens if more work is requested. A paid trial with a clear scope can make sense. The words “long term” alone aren’t a commitment.</p>
+<p><strong>But please don’t turn this into a rule that everyone must hold their rate no matter what.</strong></p>
+<p>If creating is your full-time income and you have bills or a family to support, your situation may be very different from someone else’s.</p>
+<p><strong>Nobody should judge you for taking a lower offer because you need the money.</strong></p>
+<p>Make the decision with your circumstances in mind. If you accept less, understand how much work you’re agreeing to. Where possible, discuss a smaller scope that fits the budget.</p>
+<p>You deserve respectful treatment at every experience level. You also get to make practical decisions about how you pay your bills.</p>
+<h2 id="3-Make-your-value-visible-on-your-timeline"><a href="#3-Make-your-value-visible-on-your-timeline" class="headerlink" title="3 Make your value visible on your timeline"></a>3 Make your value visible on your timeline</h2><p>Some project KOL managers, the people selecting creators for campaigns, have told me they scan roughly the first 10 posts when checking an account.</p>
+<p>They look at what the creator posts and what’s happening in the comments. Are people asking questions? Are the replies relevant? Does the creator answer their audience? Does the interaction seem natural, or does it look like an engagement group?</p>
+<p>That’s their screening approach, and it’s worth thinking about.</p>
+<p>Someone visiting your profile may be trying to work out whether you understand their niche and can make something useful for them. Help them find the answer.</p>
+<p>Try looking at your recent posts as someone who has never heard of you:</p>
+<ul>
+<li>Can they tell what subjects you cover?</li>
+<li>Can they find an example of the work you want to be hired for?</li>
+<li>Can they get a sense of your personality?</li>
+<li>Are there conversations that show people understood or cared about the content?</li>
+<li>When someone asks a genuine question in the comment, do you respond?</li>
+</ul>
+<p>And yes, the bot situation makes judging comments more complicated. We can’t control every reply under our posts. Generic comments alone don’t prove someone is using an engagement group.</p>
+<p>What we can pay attention to is our own participation and the work people can see.</p>
+<p>A GM post is fine. I post tacos. Personal posts help people get to know you. Just make sure your recent work also gives a potential collaborator something relevant to assess.</p>
+<p>I mostly post naturally. Being more deliberate about my topics, timeline, and posting rhythm is something I’m working towards too.</p>
+<h2 id="4-Be-proactive-when-work-slows-down"><a href="#4-Be-proactive-when-work-slows-down" class="headerlink" title="4 Be proactive when work slows down"></a>4 Be proactive when work slows down</h2><p>When opportunities are quiet, there is room to knock on doors.</p>
+<p>Tell people you know what work you’re available for. Look at projects where your skills could be useful. Cold call. Be polite, respectful, and specific.</p>
+<p>First, make the message easy to assess. Show what you create, relevant work you’ve done, and how you could help this particular project.</p>
+<p>Include enough information in the message that they don’t have to open several links just to understand your offer. A short description, a screenshot of relevant work, and useful audience information can give them a starting point.</p>
+<p>Before you reach out, put these four things in one screenshot or a short message:</p>
+<p><img src="/images/HXOW9nqaQAAsREG.jpg" alt="HXOW9nqaQAAsREG"></p>
+<p>For example, if you cover crypto security and have made content about it, show that relevant work when approaching projects in the niche. Explain which audience you could help them reach and propose a specific content idea.</p>
+<p>A message could look like this:</p>
+<blockquote>
+<p>Hi [name], I saw your update about [specific launch or feature]. I create [type of content] for [audience], and I have an idea for explaining [specific benefit or topic].I’ve included two relevant examples below, with a short summary of the work and results. My audience includes [relevant audience information].Would a paid collab [specific deliverable] be useful for this launch?</p>
+</blockquote>
+<p>Fill that in with real work and relevant information. Share a useful initial idea, show some relevant work you’ve put out, then discuss the scope before putting days into unpaid production.</p>
+<p><strong>Meaningful replies are another way to get to know people.</strong> Read what they’re saying, contribute something relevant, and write the reply yourself. That is the kind of interaction I want more of on X.</p>
+<p>Also, pay attention to where money and activity are moving. A difficult market doesn’t mean every sector has the same budget.</p>
+<p>You could investigate AI, security, gaming, or another area you understand. Look for actual launches, campaigns, and teams with a need you can help address. A funding announcement is a reason to investigate further, not proof that there is a creator budget.</p>
+<p>The useful opportunity is where their needs and your abilities fit.</p>
+<h2 id="5-Give-people-something-to-remember-you-for"><a href="#5-Give-people-something-to-remember-you-for" class="headerlink" title="5 Give people something to remember you for"></a>5 Give people something to remember you for</h2><p>“Build a brand” sounds like vague advice until you ask what people actually associate with you.</p>
+<p>When people mention Lil Auntie, they often think of laughs, fun, and tacos. Many told me my videos make them laugh and that they enjoy how I explain educational topics.</p>
+<p>I also talk about crypto security. I’ve written about how to keep your cryptos safe and have collaborated with hardware wallet brands and regularly remind people to check their wallet security and avoid scams.</p>
+<p>For example, in my paid Trezor collaboration, I connected a product demonstration with a security lesson from my own experience. A potential collaborator can see the subject I cover, how I tell a story, and an actual example of my work.</p>
+<p>And then there are the tacos.</p>
+<p>I’ve posted taco pictures and talked about tacos for years. Now when my audiance see a taco and they think of me.</p>
+<p>I think that’s a pretty good example of being memorable.</p>
+<blockquote>
+<p>The humour gives people a reason to enjoy my content.<br>The security work shows a subject I care about and have experience covering.<br>The tacos give them an association they remember outside my posts.</p>
+</blockquote>
+<p>Think about what people already recognise in your work. What do they mention without being prompted? What do they ask you about? What do they recommend you for?</p>
+<p>Those answers can help you decide what to develop further. You can give your work a clearer direction while keeping the parts of your personality that people enjoy.</p>
+<h2 id="6-Keep-developing-your-own-creativity-while-using-AI"><a href="#6-Keep-developing-your-own-creativity-while-using-AI" class="headerlink" title="6 Keep developing your own creativity while using AI"></a>6 Keep developing your own creativity while using AI</h2><p>I use AI as a work partner. I’m happy to brainstorm with it, develop ideas together, and explore how an audience might respond.</p>
+<p>I still want to be involved in coming up with the ideas. I want to feel needed in my own creative process.</p>
+<p>That means having an opinion about the suggestions. Choosing what fits. Rejecting what doesn’t. Bringing experiences and observations that actually matter to me.</p>
+<p>If people come back because they enjoy my personality, I need to keep putting that personality into the work.</p>
+<p>For me, a useful check is whether I can explain why I chose an angle and what I personally think about it. Does the result sound like something I’d actually say? Have I added anything from my own experience?</p>
+<p>I’m still discouraged by the amount of automated interaction. I don’t have a neat solution for that.</p>
+<p>But I also believe this creates an opportunity for recognisable voices. I want to keep developing mine, and keep making the effort to speak to real people when they’re there.</p>
+<h2 id="A-review-for-your-next-quiet-week"><a href="#A-review-for-your-next-quiet-week" class="headerlink" title="A review for your next quiet week"></a>A review for your next quiet week</h2><p>If you’re feeling stuck, set aside some time to look at these questions:</p>
+<ul>
+<li><strong>Your circumstances:</strong> What paid work do you need, and what terms can you realistically accept?</li>
+<li><strong>Your skills:</strong> What can someone confidently recommend you for? Which part needs improvement?</li>
+<li><strong>Your timeline:</strong> Do your recent posts make that ability visible?</li>
+<li><strong>Your opportunities:</strong> Who has a relevant need, and what could you offer them?</li>
+<li><strong>Your audience:</strong> Which real conversations deserve more of your attention?</li>
+<li><strong>Your identity:</strong> What do you want people to remember about your work?</li>
+</ul>
+<p>Choose one thing you can act on this week.</p>
+<p>I’m writing this while I’m still working on parts of it myself. I want to be more deliberate about my content. I want to keep improving without losing the fun.</p>
+<p>I’ve spent years creating here. I still believe there is something worth building.</p>
+<p>Lil Auntie🌮</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/16/auntiepaca-2122210705525055596/">https://yaoav.github.io/2026/11/16/auntiepaca-2122210705525055596/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/auntiepaca/">@auntiepaca</a></div><div class="post-share"><div class="social-share" data-image="/images/2122210705525055596-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/16/lemomo_ai-2122239005723082848/" title="在 Opus 4.6 主 agent 下使用 Opus 5.5 subagent"><img class="cover" src="/images/2122239005723082848-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">在 Opus 4.6 主 agent 下使用 Opus 5.5 subagent</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @lemomo_ai（Lemomo） 的长文，原文链接，版权归原作者所有。  昨天我在 X 上分享了一篇帖子，展示了 multi-agent 系统里用 Claude Opus 4.6 主 agent 搭配 Claude Opus 5.5 subagent，是怎么引发经典的混淆代理人（Confused Deputy）问题的。评论区有读者问到了一个很实际的点。如果 Claude Code 的主 session 跑在 Opus 4.6 上，该怎么生成 Opus 5.5 subagent？ 想在 prompt 里让主 agent 临时生成 claude-opus-5-5，直接就会碰壁。Anthropic 收紧了 Claude Code 里 Agent 工具和 context forking 的模型选择规则。目前，要在 Opus 4.6 主 agent 下运行 Opus 5.5 subagent，唯一可靠的做法是在 .claude&#x2F;agents&#x2F; 下定义自定义 subagent，把 model 字段固定为 Model ID claude-opus...</div></div></div></a><a class="pagination-related" href="/2026/11/16/Gate-2122203179291156845/" title="Gate Ventures Weekly Crypto Recap (November 16, 2026)"><img class="cover" src="/images/2122203179291156845-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Gate Ventures Weekly Crypto Recap (November 16, 2026)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Gate（Gate） 的长文，原文链接，版权归原作者所有。  TL;DR U.S. equities posted broad-based gains for the week ending November 13, 2026, as early-week momentum offset Friday’s technology-sector weakness. The S&amp;P 500 advanced 2.51% to 7,561.67, the Nasdaq Composite gained 2.27% to 25,136.27, and the Dow Jones Industrial Average rose 2.07% to 52,347.55. Crude oil prices extended their decline as easing geopolitical tensions in the Middle East reduced supply risk premiums. Brent crude settled at US$9...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">326</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">166</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Build-skills-people-can-recommend"><span class="toc-number">1.</span> <span class="toc-text">1 Build skills people can recommend</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Handle-offers-according-to-your-circumstances"><span class="toc-number">2.</span> <span class="toc-text">2 Handle offers according to your circumstances</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Make-your-value-visible-on-your-timeline"><span class="toc-number">3.</span> <span class="toc-text">3 Make your value visible on your timeline</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Be-proactive-when-work-slows-down"><span class="toc-number">4.</span> <span class="toc-text">4 Be proactive when work slows down</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Give-people-something-to-remember-you-for"><span class="toc-number">5.</span> <span class="toc-text">5 Give people something to remember you for</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Keep-developing-your-own-creativity-while-using-AI"><span class="toc-number">6.</span> <span class="toc-text">6 Keep developing your own creativity while using AI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-review-for-your-next-quiet-week"><span class="toc-number">7.</span> <span class="toc-text">A review for your next quiet week</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"><img src="/images/2123424422396608909-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了">卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了</a><time datetime="2026-11-19T22:33:28.000Z" title="发表于 2026-11-19 22:33:28">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"><img src="/images/2123419503417544831-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️">ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️</a><time datetime="2026-11-19T22:13:55.000Z" title="发表于 2026-11-19 22:13:55">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/Suercha007-2123266426656210980/" title="科研 Skill 从夯到拉（纯主观）"><img src="/images/2123266426656210980-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="科研 Skill 从夯到拉（纯主观）"/></a><div class="content"><a class="title" href="/2026/11/19/Suercha007-2123266426656210980/" title="科研 Skill 从夯到拉（纯主观）">科研 Skill 从夯到拉（纯主观）</a><time datetime="2026-11-19T12:05:39.000Z" title="发表于 2026-11-19 12:05:39">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yaohui12138-2123263336783778030/" title="保姆喂饭级数字人教程：0门槛，不用Skills，直接手机 4 步出片，十几块一条口播，不信你学不会！"><img src="/images/2123263336783778030-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="保姆喂饭级数字人教程：0门槛，不用Skills，直接手机 4 步出片，十几块一条口播，不信你学不会！"/></a><div class="content"><a class="title" href="/2026/11/19/yaohui12138-2123263336783778030/" title="保姆喂饭级数字人教程：0门槛，不用Skills，直接手机 4 步出片，十几块一条口播，不信你学不会！">保姆喂饭级数字人教程：0门槛，不用Skills，直接手机 4 步出片，十几块一条口播，不信你学不会！</a><time datetime="2026-11-19T11:53:22.000Z" title="发表于 2026-11-19 11:53:22">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
