@@ -1,0 +1,433 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>一份可以照着做、也能自己迭代的精力管理攻略 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这几年谈精力管理的文章很多，多数停在几个动作上：早睡、运动、少刷手机。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一份可以照着做、也能自己迭代的精力管理攻略">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/KinhVujhfi-2122932981790876038/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="这几年谈精力管理的文章很多，多数停在几个动作上：早睡、运动、少刷手机。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122932981790876038-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T14:00:39.000Z">
+<meta property="article:modified_time" content="2026-11-19T10:05:22.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@KinhVujhfi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122932981790876038-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一份可以照着做、也能自己迭代的精力管理攻略",
+  "url": "https://yaoav.github.io/2026/11/18/KinhVujhfi-2122932981790876038/",
+  "image": "https://yaoav.github.io/images/2122932981790876038-cover.jpg",
+  "datePublished": "2026-11-18T14:00:39.000Z",
+  "dateModified": "2026-11-19T10:05:22.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/KinhVujhfi-2122932981790876038/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一份可以照着做、也能自己迭代的精力管理攻略',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">312</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122932981790876038-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">一份可以照着做、也能自己迭代的精力管理攻略</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">一份可以照着做、也能自己迭代的精力管理攻略</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T14:00:39.000Z" title="发表于 2026-11-18 14:00:39">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@KinhVujhfi（闲鱼梦想家）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122932981790876038">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>这几年谈精力管理的文章很多，多数停在几个动作上：<strong>早睡、运动、少刷手机。</strong></p>
+<p>这些都对，但它们更像退烧药，能压住症状，压不住原因。</p>
+<p>真正决定一个人能不能长期保持状态的，是四件事有没有被同时照顾到：</p>
+<ul>
+<li><strong>能量供给是否平稳</strong></li>
+<li><strong>恢复通道是否通畅</strong></li>
+<li><strong>神经系统的档位能不能自己切换</strong></li>
+<li><strong>你做的事值不值得你消耗</strong></li>
+</ul>
+<p>这份攻略不给你一张完美作息表。</p>
+<p>它先让你看懂精力怎么被花掉、怎么被补回来，再给一套能装进真实生活的操作。</p>
+<p><strong>你可以从头读，也可以直接跳到最卡住你的那一章。</strong></p>
+<h2 id="1-先拆掉三个误解"><a href="#1-先拆掉三个误解" class="headerlink" title="1 先拆掉三个误解"></a>1 先拆掉三个误解</h2><h3 id="1-1-精力不是意志力问题"><a href="#1-1-精力不是意志力问题" class="headerlink" title="1.1 精力不是意志力问题"></a>1.1 精力不是意志力问题</h3><p><strong>把精力问题当成意志力问题，是代价最高的一种误解。</strong></p>
+<p>意志力管的是“要不要开始”，像个调度员；</p>
+<p>精力管的是“能不能持续”，它是燃料和电压。</p>
+<p>调度员再强硬，电压不够，机器照样停。</p>
+<p>很多人早上列了6件事，下午只做完1件，然后开始自责，而自责本身又是一笔能量支出，形成一个越转越紧的圈。</p>
+<p>更有效的判断是：<strong>同一件事你反复“想做但做不动”，问题多半不在动机，而在燃料、节律或者恢复通道。这时候该做的不是再逼自己一把，而是回头查账。</strong></p>
+<h3 id="1-2-补品替代不了系统"><a href="#1-2-补品替代不了系统" class="headerlink" title="1.2 补品替代不了系统"></a>1.2 补品替代不了系统</h3><p>精力类商品大多在卖一种“缺失的单一元素”：某种维生素、某种氨基酸、某种号称抗疲劳的提取物。</p>
+<p>它们对确实缺乏的人有用，但对长期睡不够、久坐、三餐血糖大起大落的人来说，作用接近于往漏水的桶里加水。</p>
+<p>人体产能是一条链：氧气、葡萄糖、线粒体、激素信号、神经递质，任何一环出问题都表现为“没劲”，但补上其中一环不会自动修好整条链。</p>
+<p>顺序应该是先修系统——<strong>睡眠、饮食结构、活动量</strong>——再谈补充。</p>
+<h3 id="1-3-“睡够8小时”是个粗糙指标"><a href="#1-3-“睡够8小时”是个粗糙指标" class="headerlink" title="1.3 “睡够8小时”是个粗糙指标"></a>1.3 “睡够8小时”是个粗糙指标</h3><p><strong>8小时是人群平均值，不是个人标准。</strong></p>
+<p>更能解释第二天状态的是3件事：</p>
+<p>睡够了几个完整周期、时间点是否稳定、醒来时是否落在浅睡阶段。</p>
+<p>周期长度个体差异很大，但有一点普遍成立：</p>
+<p>前半夜深睡占比高，后半夜快速眼动占比高。</p>
+<p>所以 “凌晨2点睡到上午10点”和“11点睡到7点” ，时长相同，换回的恢复质量并不相同。</p>
+<p>还有一个更实用的结论：</p>
+<p><strong>固定起床时间比固定入睡时间有效得多。</strong></p>
+<p>入睡受情绪、光线、思绪影响，很难精确控制；</p>
+<p>起床可以被闹钟强制。把起床时间钉住，两周左右困意会自己前移，代价只是前几天难受。</p>
+<h2 id="2-精力的四个账户"><a href="#2-精力的四个账户" class="headerlink" title="2 精力的四个账户"></a>2 精力的四个账户</h2><blockquote>
+<p>把精力拆成4个账户，是这份攻略的框架。它们各自独立又互相拖累，一个账户透支，另外3个会被迫加班。判断自己卡在哪一层，比笼统地说“我最近很累”有用。</p>
+</blockquote>
+<h3 id="2-1-能量账户：血糖、氧气与线粒体"><a href="#2-1-能量账户：血糖、氧气与线粒体" class="headerlink" title="2.1 能量账户：血糖、氧气与线粒体"></a>2.1 能量账户：血糖、氧气与线粒体</h3><p>能量账户是底层，管的是细胞有没有拿到燃料、能不能把它烧掉。</p>
+<p>两个环节最容易坏。</p>
+<ol>
+<li>血糖的稳定性：高碳水、低蛋白的一餐会让血糖冲高，随后胰岛素把它压下去，人进入“餐后昏迷”——不是困，是脑子转不动、眼皮发沉、特别想吃甜的。</li>
+<li>输送和燃烧的效率：久坐让血流变慢，肌肉长期不用会降低对葡萄糖的摄取能力，线粒体数量和质量下降，同样的氧气和糖，产出的可用能量变少。</li>
+</ol>
+<p>这一层的典型信号是：<strong>饭后1小时特别困，下午三四点必须靠甜食或咖啡续命，爬两层楼心跳就快。</strong></p>
+<h3 id="2-2-恢复账户：睡眠与节律"><a href="#2-2-恢复账户：睡眠与节律" class="headerlink" title="2.2 恢复账户：睡眠与节律"></a>2.2 恢复账户：睡眠与节律</h3><p>恢复账户的核心不是睡多久，是恢复得深不深、准不准时。</p>
+<p>深睡阶段身体做修复：肌肉、免疫、激素；快速眼动阶段大脑处理情绪和白天的信息。</p>
+<p>两个阶段都依赖一个前提——节律没被打乱。</p>
+<p>节律的锚是光：早晨的自然光压制褪黑素、抬高皮质醇的晨间峰值，把白天模式打开；</p>
+<p><strong>晚上强光尤其是蓝光，会推迟褪黑素分泌，把入睡往后拖。</strong></p>
+<p>这也是熬一次夜要两三天才缓过来的原因：不是欠了几小时，是节律被推歪了。</p>
+<h3 id="2-3-调节账户：神经系统与压力激素"><a href="#2-3-调节账户：神经系统与压力激素" class="headerlink" title="2.3 调节账户：神经系统与压力激素"></a>2.3 调节账户：神经系统与压力激素</h3><p><strong>调节账户管的是“现在该加速还是该减速”。</strong></p>
+<p>交感神经负责动员，副交感负责回收，中间靠呼吸、心率、体温这些信号切换。</p>
+<p>现代生活的问题是档位卡在中高速：既没有真正紧张到能调动全部资源，也没有真正放松到能开始修复。</p>
+<p>表现就是“累但睡不着”“躺着也休息不回来”。</p>
+<p><strong>皮质醇</strong>长期偏高会压制免疫、影响睡眠深度；<strong>腺苷</strong>在清醒时持续堆积，是睡眠压力的来源，</p>
+<p><strong>咖啡因的作用其实是遮住腺苷的信号，而不是消除它——所以咖啡只能推迟困，不能替代睡。</strong></p>
+<h3 id="2-4-意愿账户：意义感与情绪"><a href="#2-4-意愿账户：意义感与情绪" class="headerlink" title="2.4 意愿账户：意义感与情绪"></a>2.4 意愿账户：意义感与情绪</h3><p>意愿账户最容易被忽略，却决定前面3个能撑多久。</p>
+<p>同样8小时的活，做一件你觉得值得的事，和做一件你认为毫无意义的事，收工时的疲惫完全不同。</p>
+<p>情绪消耗也很具体：反复揣摩别人的一句话、担心还没发生的事、在两个差不多的选项之间来回拉扯，这些都不产生任何外部成果，却实实在在消耗注意力和神经资源。</p>
+<p>这一层的信号是：体检没毛病但提不起劲；事情做完也不觉得轻松；周末休两天，周一还是空。</p>
+<p><img src="/images/HXYmirZa4AAp1Lx.png" alt="HXYmirZa4AAp1Lx"></p>
+<h2 id="3-把一天重新排一遍"><a href="#3-把一天重新排一遍" class="headerlink" title="3 把一天重新排一遍"></a>3 把一天重新排一遍</h2><blockquote>
+<p>一天的状态不是均匀的，它有一条可预测的曲线：上午爬升，午后下坠，傍晚回光，入夜下降。顺着这条曲线安排任务，比硬拗自己省力。下面的排法不是唯一答案，但骨架适用于多数白天工作的人。</p>
+</blockquote>
+<h3 id="3-1-起床后的90分钟"><a href="#3-1-起床后的90分钟" class="headerlink" title="3.1 起床后的90分钟"></a>3.1 起床后的90分钟</h3><p>醒来后的一段时间，身体还在从“夜间模式”往“白天模式”过渡。</p>
+<p>这段窗口里最值钱的3件事是：见光、喝水、别立刻接收信息。</p>
+<p>见光可以是拉开窗帘或者出门走几分钟，阴天在户外也比室内强；喝水补的是夜里呼吸和出汗丢掉的液体，轻度脱水本身就让人反应变慢；</p>
+<p>不立刻看手机，是为了不让别人的议程在你还没想清楚今天要干什么之前，先把注意力占满。</p>
+<p>3件事加起来不到20分钟，却决定你上午是主动的还是被动的。</p>
+<h3 id="3-2-上午攻坚，下午清障"><a href="#3-2-上午攻坚，下午清障" class="headerlink" title="3.2 上午攻坚，下午清障"></a>3.2 上午攻坚，下午清障</h3><p>多数人在起床后2到4小时会经历一个认知高峰：</p>
+<p>工作记忆、逻辑推理、抗干扰的能力都在这个区间偏好。</p>
+<p>把最难、最需要连续思考的事放在这里，效率可以是下午做同样事情的两倍。</p>
+<p>下午适合另一类事务：回复、整理、开会、推进流程，那些被打断也不影响质量的事情。</p>
+<p>很多人反着来——上午回消息、开短会，把最费脑的活拖到下午3点，然后在最差的状态里做最难的事，做完只剩挫败。</p>
+<h3 id="3-3-午后低谷不是意志薄弱"><a href="#3-3-午后低谷不是意志薄弱" class="headerlink" title="3.3 午后低谷不是意志薄弱"></a>3.3 午后低谷不是意志薄弱</h3><p>下午13点到15点之间的困倦有明确的生理基础：</p>
+<p>核心体温在这个时段小幅回落，叠加午餐后的血糖波动，两件事撞在一起。</p>
+<p>硬扛的代价是接下来两三个小时都在低效里磨。</p>
+<p>更划算的做法是给这个低谷一个出口：10到20分钟的短睡（不超过30分钟，避免进入深睡后被叫醒的那种昏沉），或者闭眼静坐、散步、把复杂任务换成机械任务。</p>
+<p>条件不允许时，哪怕用这段时间做不需要判断的整理，也比坐在屏幕前跟困意对抗要好。</p>
+<h3 id="3-4-晚上的降落程序"><a href="#3-4-晚上的降落程序" class="headerlink" title="3.4 晚上的降落程序"></a>3.4 晚上的降落程序</h3><p>入睡不是开关，是斜坡。</p>
+<p>从“高速”直接切到“关机”，多数人做不到。</p>
+<p>降落程序的作用是给身体一串递减信号：固定时间停止处理需要判断的事，把灯光调暗，把屏幕移开，让体温先升后降——洗澡、热水泡脚都会带来随后的一过性体温下降，这是促睡的生理信号。</p>
+<p>这段时间不要用来复盘白天的失误，也不要看需要情绪投入的内容，它们会把交感神经重新启动。</p>
+<p><img src="/images/HXYnMDLbwAAw2jv.png" alt="HXYnMDLbwAAw2jv"></p>
+<h2 id="4-吃：稳定血糖比补品重要"><a href="#4-吃：稳定血糖比补品重要" class="headerlink" title="4 吃：稳定血糖比补品重要"></a>4 吃：稳定血糖比补品重要</h2><blockquote>
+<p>关于吃与精力的关系，可以压成一句话：让血糖走得平，让蛋白质够用，让咖啡因用在刀刃上。这3件事的收益，远大于任何单一补充剂。</p>
+</blockquote>
+<h3 id="4-1-餐后昏迷是可以避免的"><a href="#4-1-餐后昏迷是可以避免的" class="headerlink" title="4.1 餐后昏迷是可以避免的"></a>4.1 餐后昏迷是可以避免的</h3><p><strong>同样的热量，不同的组合，餐后状态差别很大。</strong></p>
+<p>纯碳水——粥、面、面包、果汁——升糖快，胰岛素反应强，随后是明显的下坠。</p>
+<p>把蔬菜和蛋白质放在前面，主食减量并放到后面吃，能显著压平这一餐的血糖峰值。</p>
+<p>顺序这件事听起来琐碎，但它是成本最低的改动：不用换食材，只换吃的次序。</p>
+<h3 id="4-2-蛋白质是锚"><a href="#4-2-蛋白质是锚" class="headerlink" title="4.2 蛋白质是锚"></a>4.2 蛋白质是锚</h3><p>蛋白质不只修肌肉，它还提供更持久的饱腹感和更平稳的能量释放。</p>
+<p>一个粗略的经验值：每餐有1掌心大小的优质蛋白——蛋、鱼、禽、豆制品、瘦肉，早餐尤其要有。</p>
+<p>很多人的早餐是纯碳水，上午10点半就开始找东西吃，这不是自控力问题，是燃料结构问题。</p>
+<h3 id="4-3-咖啡因用在刀刃上"><a href="#4-3-咖啡因用在刀刃上" class="headerlink" title="4.3 咖啡因用在刀刃上"></a>4.3 咖啡因用在刀刃上</h3><p>咖啡因的半衰期在成年人中大约是5小时，个体差异可以从3小时到7小时。</p>
+<p>这意味着下午3点喝的那杯，到晚上8点还有大约1&#x2F;4留在体内。</p>
+<p>它会推迟困意、降低睡眠深度，而你往往察觉不到，只觉得“最近睡得浅”。</p>
+<p>合理的用法是：起床后1到2小时再用，避开刚醒来时的皮质醇高峰；下午2点以后不再摄入；需要提神时喝半杯而不是一整杯。</p>
+<p>咖啡因的价值在于“延后困”，所以它最适合放在确实需要撑住的关键时段，而不是当成日常饮料。</p>
+<h3 id="4-4-水和电解质容易被忽略"><a href="#4-4-水和电解质容易被忽略" class="headerlink" title="4.4 水和电解质容易被忽略"></a>4.4 水和电解质容易被忽略</h3><p>轻度脱水就足以让人反应变慢、头痛、注意力涣散，而口渴感往往滞后。</p>
+<p>自查很简单：尿色偏深、下午莫名头痛、坐着也觉得疲乏，先喝一杯水再看。</p>
+<p>出汗多、运动量大的人还要补钠和钾，只灌大量白水会稀释电解质，越喝越乏。</p>
+<h2 id="5-动：把身体练成一台省油的发动机"><a href="#5-动：把身体练成一台省油的发动机" class="headerlink" title="5 动：把身体练成一台省油的发动机"></a>5 动：把身体练成一台省油的发动机</h2><blockquote>
+<p>运动对精力的作用，常被理解成“练体力”。它真正在做的事，是提高身体把燃料转化成可用能量的效率，并扩大你的恢复容量。练得对，同样的睡眠能恢复得更多；练得错，运动本身会变成第二份工作。</p>
+</blockquote>
+<h3 id="5-1-有氧底盘"><a href="#5-1-有氧底盘" class="headerlink" title="5.1 有氧底盘"></a>5.1 有氧底盘</h3><p>底盘指的是低强度、长时间的有氧能力，业内常说的“二区”：</p>
+<p>能说话但稍微费劲的强度，大约是最大心率的60%到70%。</p>
+<p>这一区间训练的是心脏每搏输出量、毛细血管密度和脂肪氧化能力，也就是用更小的代价维持同样的输出。</p>
+<p>每周3到4次、每次30到60分钟，是多数人能承受的量。</p>
+<p>强度不用看设备：能完整说出一句话但不适合唱歌，基本就在这个区间。</p>
+<h3 id="5-2-力量训练是储能"><a href="#5-2-力量训练是储能" class="headerlink" title="5.2 力量训练是储能"></a>5.2 力量训练是储能</h3><p>肌肉是葡萄糖的主要去处，肌肉量越大、胰岛素敏感性越好，餐后血糖波动越小。</p>
+<p>力量训练还在分子层面改善线粒体功能，这是“产能”的硬件。</p>
+<p>每周2到3次，覆盖主要肌群，每组做到接近力竭前1到2下，比追求花哨动作更有意义。</p>
+<p>对长期疲惫的人来说，它还有一个隐性收益：日常动作更省力，爬楼、搬东西、久站都不再是消耗。</p>
+<h3 id="5-3-被低估的日常活动量"><a href="#5-3-被低估的日常活动量" class="headerlink" title="5.3 被低估的日常活动量"></a>5.3 被低估的日常活动量</h3><p>除了正式训练，一天里所有非运动性的活动——走路、站立、上下楼、做家务——加起来的代谢收益相当可观，</p>
+<p>而且它对血糖的作用是即时的：饭后10分钟散步就能明显削平餐后血糖峰值。</p>
+<p>这一点对久坐的人尤其重要，因为长时间静坐本身会降低肌肉对葡萄糖的摄取，而这件事不能完全靠“晚上去健身1小时”抵消。</p>
+<p>更实际的做法是把活动拆散：每小时起身2分钟，饭后走10分钟，能走楼梯就不坐电梯。</p>
+<h3 id="5-4-别把运动做成第二份工作"><a href="#5-4-别把运动做成第二份工作" class="headerlink" title="5.4 别把运动做成第二份工作"></a>5.4 别把运动做成第二份工作</h3><p>运动过量的信号很明确：</p>
+<p>静息心率升高、睡眠变差、情绪烦躁、同样的训练量感觉更吃力。</p>
+<p>这时候继续加量，只会把恢复账户也透支掉。</p>
+<p>以精力为目标而不是以成绩为目标的人，训练原则是留有余量：每次练完应该觉得“还能再来一点”，而不是“终于熬完了”。</p>
+<h2 id="6-神经系统：学会主动降档"><a href="#6-神经系统：学会主动降档" class="headerlink" title="6 神经系统：学会主动降档"></a>6 神经系统：学会主动降档</h2><blockquote>
+<p>前面几节在讲给多少燃料，这一节讲怎么切换档位。现代人最常见的问题不是不会加速，是不会减速——身体一直停在中高速，既消耗，又不修复。</p>
+</blockquote>
+<h3 id="6-1-呼吸是最快的开关"><a href="#6-1-呼吸是最快的开关" class="headerlink" title="6.1 呼吸是最快的开关"></a>6.1 呼吸是最快的开关</h3><p>在所有能主动控制的生理信号里，呼吸是唯一能直接影响自主神经的。</p>
+<p>延长呼气会激活副交感，缩短吸气会偏向交感。</p>
+<p>两个好用的做法：</p>
+<ul>
+<li>一是“生理性叹息”——2次短吸气（第2口补满），然后1次尽量长的呼气，重复3到5轮，能较快把心率降下来；</li>
+<li>二是4秒吸、6到8秒呼，做5分钟。它们的作用不是玄学，是把“紧张但无处释放”的状态切回可恢复的状态。</li>
+</ul>
+<p>开会前、睡前、情绪上来时都可以用。</p>
+<h3 id="6-2-冷与热的边界"><a href="#6-2-冷与热的边界" class="headerlink" title="6.2 冷与热的边界"></a>6.2 冷与热的边界</h3><p>冷水刺激会短暂提高去甲肾上腺素，带来清醒感；</p>
+<p>热水澡、桑拿则会先升体温再降，促进入睡。</p>
+<p>两者都有效，但都有边界：</p>
+<p>冷刺激不适合心血管有问题的人，也不该在极度疲劳时硬上；</p>
+<p>热水澡要放在睡前1到2小时，太晚反而让人清醒。</p>
+<p>用它们的原则是“用在节律的特定位置”，而不是“难受就来一下”。</p>
+<h3 id="6-3-屏幕、信息与注意力"><a href="#6-3-屏幕、信息与注意力" class="headerlink" title="6.3 屏幕、信息与注意力"></a>6.3 屏幕、信息与注意力</h3><p>大脑的疲劳有很大一部分不是来自工作本身，而是来自持续切换。</p>
+<p>每切换一次任务，都要重新加载上下文，这部分开销在一天里累积起来很惊人。</p>
+<p>比“少玩手机”更具体的目标是：</p>
+<p>给自己设置几段不被打断的时间，哪怕每段只有40分钟；</p>
+<p>把消息集中处理，而不是随收随回；</p>
+<p>把短视频、信息流这类没有终点的东西放在明确的时段里，而不是填满每一个空隙。</p>
+<p>空隙被填满，恢复就没有发生的地方。</p>
+<h3 id="6-4-情绪内耗是最贵的支出"><a href="#6-4-情绪内耗是最贵的支出" class="headerlink" title="6.4 情绪内耗是最贵的支出"></a>6.4 情绪内耗是最贵的支出</h3><p>反复想一件已经发生的事、预演一场还没发生的对话、在两个差不多的选项之间来回权衡，这些活动消耗的是同一套注意力资源，却不产生任何结果。</p>
+<p>处理它的办法不是“别想”，而是把它外化：</p>
+<p>写下来，给这件事一个明确的下一步和截止时间，然后关掉。</p>
+<p>多数内耗的根源是“未完成的决定”，而不是事情本身有多难。</p>
+<h2 id="7-意愿：让精力有地方可去"><a href="#7-意愿：让精力有地方可去" class="headerlink" title="7 意愿：让精力有地方可去"></a>7 意愿：让精力有地方可去</h2><blockquote>
+<p>前面是开源和节流，这一节决定这股劲往哪使。精力不会被“省”出来，它需要一个出口，否则会转成焦躁。</p>
+</blockquote>
+<h3 id="7-1-无聊的力量"><a href="#7-1-无聊的力量" class="headerlink" title="7.1 无聊的力量"></a>7.1 无聊的力量</h3><p>持续的高刺激会让阈值不断提高：刷完1小时短视频再读书，会觉得书太慢。</p>
+<p>这不是注意力变差，是对低刺激的耐受度下降了。</p>
+<p>恢复的办法很朴素：</p>
+<p>每天留一段时间做低刺激的事——散步不听播客、吃饭不看视频、洗澡不带手机。</p>
+<p>刚开始会难受，那是阈值在回落。</p>
+<h3 id="7-2-关系能量"><a href="#7-2-关系能量" class="headerlink" title="7.2 关系能量"></a>7.2 关系能量</h3><p>有些关系聊完让你想做事，有些关系聊完让你想躺下。</p>
+<p>这两种消耗是真实的，不需要用“我应该更包容”来否认它。</p>
+<p>可行的做法是给关系分类：哪些是滋养的，哪些是纯粹的义务，哪些是持续吸能量的。</p>
+<p>不一定要断，但可以减少频次和时长，把有限的社交预算放在前者。</p>
+<h3 id="7-3-意义感的换算"><a href="#7-3-意义感的换算" class="headerlink" title="7.3 意义感的换算"></a>7.3 意义感的换算</h3><p>同样一件事，“我必须做”和“我选择做”消耗的能量不同。</p>
+<p>这不是自我欺骗，而是把被动改成主动之后，大脑对同一份付出的定价变了。</p>
+<p>具体做法是给手上的事补一句为什么：它服务的是哪个更大的目标，做完之后会得到什么。</p>
+<p>如果一句都补不出来，那件事可能本来就该砍掉。</p>
+<h2 id="8-状态崩了怎么回来"><a href="#8-状态崩了怎么回来" class="headerlink" title="8 状态崩了怎么回来"></a>8 状态崩了怎么回来</h2><blockquote>
+<p>长期旺盛不等于从不下滑。真正稳的人不是不崩，是崩了能比别人快回来，而且不在同一个地方崩第二次。</p>
+</blockquote>
+<h3 id="8-1-睡眠债怎么还"><a href="#8-1-睡眠债怎么还" class="headerlink" title="8.1 睡眠债怎么还"></a>8.1 睡眠债怎么还</h3><p>补觉有个要点：不能一次性猛睡。</p>
+<p>周末睡到中午，会让起床时间后移，等于给自己制造了一次小时差，周一更难受。</p>
+<p>更有效的还债方式是：</p>
+<p>接下来几天提前30到60分钟入睡，起床时间保持不动；</p>
+<p>白天用20到30分钟的短睡补一部分；</p>
+<p>避免用长睡把节律拖歪。</p>
+<p>欠得多的时候，需要1到2周才能补回来，急不来。</p>
+<h3 id="8-2-三周重启"><a href="#8-2-三周重启" class="headerlink" title="8.2 三周重启"></a>8.2 三周重启</h3><p>如果你现在的状态是“常年低电量”，不要一次改10件事，那必然失败。按顺序来，每7天只加一层。</p>
+<ul>
+<li>第1周只做1件事：固定起床时间，误差不超过30分钟，起床后见光10分钟。这一周的目标不是变好，是让节律有个锚。</li>
+<li>第2周加第2层：早餐有蛋白质，午饭后走10分钟，每小时起身2分钟。这一层动的是血糖和活动量。</li>
+<li>第3周加第3层：每周3次运动（2次有氧、1次力量），睡前90分钟调暗并移开屏幕。这一层开始扩容量。</li>
+</ul>
+<p>3周之后，你会有两个变化：</p>
+<p>一天的曲线变得可预测，你知道自己什么时候最强、什么时候该退。有了这个，后面所有的调整才有依据。</p>
+<h3 id="8-3-五个常见的坑"><a href="#8-3-五个常见的坑" class="headerlink" title="8.3 五个常见的坑"></a>8.3 五个常见的坑</h3><p>第1个坑：用咖啡代替睡眠。它只推迟困，不偿还债，还会压低深睡，越用越欠。</p>
+<p>第2个：周末报复性补觉，等于每周给自己1次小时差。</p>
+<p>第3个：突然上大运动量，疲惫状态下的高强度训练通常换来1周低落。</p>
+<p>第4个：把休息做成任务，休息时还在想“我应该更高效地休息”，等于没休息。</p>
+<p>第5个：只调1件事。精力是4个账户的合力，单点改动常被其他3项抵消。</p>
+<h2 id="9-四个便宜指标"><a href="#9-四个便宜指标" class="headerlink" title="9 四个便宜指标"></a>9 四个便宜指标</h2><p>不需要买设备，也不需要天天测。</p>
+<p>4个便宜指标，够你判断方向对不对。</p>
+<ul>
+<li>每天固定两个时点给主观精力打0到10分，看两周趋势而不看单日；</li>
+<li>醒来未起床时测1分钟脉搏，比自己长期基线高5到10次并持续数日，通常意味着恢复不足；</li>
+<li>每周同一条件测1次腰围和体重，腰围缓慢下降、体重稳定，说明饮食结构在起作用；</li>
+<li>粗略记录关灯到睡着的时间，长期超过30分钟，先查光照、咖啡因时点和睡前情绪，而不是先怪压力。</li>
+</ul>
+<p>它们共同的特点是：便宜、可重复、看趋势。单日的数据没有意义，两周的曲线才能告诉你方法有效还是无效。</p>
+<p><img src="/images/HXYrS_HaAAAox1G.png" alt="HXYrS_HaAAAox1G"></p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>精力不是一种天赋，也不是靠咬牙维持的状态。它更像一套秩序：什么时候给能量，什么时候收回，什么时候加速，什么时候必须停。秩序建立起来之后，旺盛会变成一件不费力的事——不是因为你更能忍，而是因为该补的时候补上了，该停的时候停住了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/KinhVujhfi-2122932981790876038/">https://yaoav.github.io/2026/11/18/KinhVujhfi-2122932981790876038/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/KinhVujhfi/">@KinhVujhfi</a></div><div class="post-share"><div class="social-share" data-image="/images/2122932981790876038-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/answer007s-2122934277100998797/" title="第02期｜普通人用AI做 PPT 接单：不会设计也能赚钱？附完整教程、提示词和接单方法 "><img class="cover" src="/images/2122934277100998797-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">第02期｜普通人用AI做 PPT 接单：不会设计也能赚钱？附完整教程、提示词和接单方法 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @answer007s（阿翔在开工） 的长文，原文链接，版权归原作者所有。  《普通人副业的100个赚钱小项目》持续更新中。 📌 写在前面这是我准备长期更新的一个系列：普通人副业的100个赚钱小项目。 这个系列不讲一夜暴富，不卖课程，也不推荐需要投入几万块才能启动的生意。 每一期只研究一个普通人有机会尝试的小项目，尽可能把工具、操作步骤、素材网站、获客方式、报价参考和避坑方法全部整理出来。 我的标准很简单： ① 真实： 市场上确实存在对应的付费服务，不编造收益案例。 ② 低门槛： 利用现有设备和免费工具，不先投入资金。 ③ 可操作： 不是告诉你“可以做什么”，而是尽量教你“具体怎么做”。 ④ 有资源： 提供网站、提示词、话术和执行清单，方便直接上手。 ⑤ 不保证收益： 能否接到订单取决于作品质量、市场需求、获客能力和实际交付水平。 本期研究的项目是： 利用 GPT 制作 PPT，提供演示文稿制作与美化服务。 以前做一套 PPT，可能需要花大量时间整理内容、寻找模板、调整排版。 现在借助 GPT，我们可以把其中不少工作交给 AI。 甚至可以上传内容资料和参...</div></div></div></a><a class="pagination-related" href="/2026/11/18/criscxuan-2122930382471655838/" title="REA 靠边站，逆向圈又一新王诞生了 "><img class="cover" src="/images/2122930382471655838-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">REA 靠边站，逆向圈又一新王诞生了 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  最近逆向工程和 AI 编程圈又迎来了一个极其亮眼的开源新项目，这个 GitHub 项目就是 craft-anything。 它的定位非常硬核：帮工程师彻底搞懂手头任何网站、应用或软件的底层结构与运行逻辑，然后直接基于理解，重新构建出一套属于自己的原生版本。 你只需要把目标交给它，定好想要的技术栈。 然后，你就等着就行了。  还记得前段时间全网刷屏的 REA（逆向一切）吗？如果说 REA 开启了全民逆向的风潮，那 craft-anything 就像是它的纯 Rust 工程化进化版。 项目一开源热度就直接拉满了，GitHub Star 短短时间内就冲破了 35K star，而且整个引擎用纯 Rust 编写，内存占用极低，跨平台跑起来非常丝滑。  这篇就跟大家聊一聊 craft-anything，以及它到底强在哪里、该怎么上手玩起来。 它和传统逆向工具到底有什么不一样？提起逆向，很多人第一反应就是打开 Ghidra 或者 IDA Pro，对着满屏的汇编指令和反编译伪代码硬啃几天。 cra...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/16/KinhVujhfi-2122179442110038234/" title="懒人副业微信表情包变现，全方位实操攻略"><img class="cover" src="/images/2122179442110038234-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">懒人副业微信表情包变现，全方位实操攻略</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  前言（万字预警，建议收藏） 先说结论： 已经有小伙伴把微信表情包做成了副业，并且做到了一周躺赚1k。  把表情包当成低成本的内容资产入口，用来练手、攒粉、接单、孵化小IP，它确实是一条投产比很高的路。 提醒：微信表情包作为副业来说不错，但是想用来做主业，难度还是很大的。 这份攻略主要面向：没有绘画基础、没有设计团队、预算有限的普通人，怎样在三十天内做出一套规格达标、审核能过、有人愿意用的微信表情包，并让它尽可能多地产生收入。 平台参数、分成规则、审核要求以微信表情开放平台的公开规则为准，个人经验部分会明确标注；规则会变，本文同时给出自行核对的方法。 看的过程中如有什么不懂的地方，欢迎评论区提问。 第一章 到底能赚多少钱 谈方法之前先谈钱，因为大部分人的收入预期是失真的。  1.1 四种收入方式 赞赏：用户自愿打赏，平台不抽成，全额进入微信零钱，按天结算，单价最低、波动最大。 付费表情：用户必须付费才能下载，统一定价十个微信豆折合一元，平台扣百分之十技术服务费，创作者拿九成，按月结...</div></div></div></a><a class="pagination-related" href="/2026/11/13/KinhVujhfi-2120913957372453336/" title="2026新风口红果电商：从看懂逻辑到跑通第一笔收益"><img class="cover" src="/images/2120913957372453336-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">2026新风口红果电商：从看懂逻辑到跑通第一笔收益</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  开篇导读（万字预警，建议收藏） 这份教程回答三个具体问题： 这门生意靠什么赚钱；以你的资金、时间和能力，适合站在链条的哪一环；选定之后，第一个月每天做什么。 适用对象： 没有电商经验，没有拍摄团队，没有现成粉丝，有手机和电脑，每天能稳定投入一到三小时。这样的人在这条链条里有位置，位置在偏下游、偏执行，靠流程和量取胜，而不是靠一次爆款翻身。已有工厂、供应链或百万粉账号的读者，只有风险清单和 ROI 算法值得看。 建议先读第 5 章的路径对照表做定位，再回到对应章节逐条执行。前四章是判断依据，看着慢，但决定方向：方向错了，越勤奋亏得越快。 第1章 先看懂：红果电商是一门什么生意1.1 它不是一个新 App，而是装在短剧里的收银台🧐 很多人听到“红果电商”，第一反应是去找一个叫红果商城的 App。找不到，因为不存在。它指的是2026年4月抖音电商成立的独立部门，与行业产品部、用户产品部平级，负责把红果短剧的流量导向交易。这个部门没有独立入口，商品库、订单、支付、物流、售后全部复用抖音...</div></div></div></a><a class="pagination-related" href="/2026/11/15/KinhVujhfi-2121795126267986081/" title="普通人的被动收入攻略，从零搭建可持续现金流的12章系统教程"><img class="cover" src="/images/2121795126267986081-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">普通人的被动收入攻略，从零搭建可持续现金流的12章系统教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  前言：这份攻略写给谁（万字预警，建议收藏） 这份攻略写给没有资源背景、也没有大额本金的普通人。 它不承诺任何收益率，也不推荐具体平台， 只回答三个问题： 被动收入到底是怎么产生的，普通人能用哪些不违规、可持续的方式把它做出来，以及在做的过程中怎样避免亏掉本金和赔上时间。 全文按认知、资源盘点、四类收入路径、组合配置、风险合规、启动计划六个层次展开，十二章可以顺序读完，也可以按需查阅。如果你现在只有半小时，建议先读第一章、第二章和第十二章，把判断标准和九十天计划拿走，其余章节在动手时再回来对照。 第1章  什么是真正的被动收入1.1 被动收入的三个硬条件被动收入不是不劳而获，而是前期一次性或阶段性投入之后，收入与当期劳动时间脱钩的现金流。 判断一笔钱算不算被动收入，看三个条件：  收入在你不动手的那段时间里依然发生； 维持它只需要很少的边际劳动，通常是维护、客服和偶尔的更新，而不是每天重新生产； 它的来源是可以复制的资产，也就是本金、内容、产品、系统或者合约，而不是你的在场。  三...</div></div></div></a><a class="pagination-related" href="/2026/11/14/KinhVujhfi-2121464710088516066/" title="闲鱼倒卖（亲妈级攻略）新人也能轻松入手"><img class="cover" src="/images/2121464710088516066-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-14</div><div class="info-item-2">闲鱼倒卖（亲妈级攻略）新人也能轻松入手</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  导言（万字预警，建议收藏） 耐心看完下面内容，你将轻松上手闲鱼 闲鱼上把一件东西卖出去不难，难的是把它变成一门能持续、不封号、算得清账的小生意。 这份攻略面向没有货源、没有团队、也没有启动资金的普通人，把闲鱼倒卖拆成一条可以照着走的路径。哪些钱普通人能赚、每一步具体做什么、做到什么程度算做对了、什么情况下应该收手。 在动手之前，先把三条判断记住，后面所有章节都是它们的展开。  **闲鱼倒卖赚的是“筛选 + 服务 + 履约” 的钱，不是信息差暴利。**信息差存在，但会被大量同行迅速抹平；能长期留下来的，是把选品、拍摄、描述、回复、发货这些琐碎环节做得比别人稳的人。**新手亏钱的主因不是不会卖，而是选错品类、算错成本、踩平台红线。**这三件事都可以在动手前用半小时规避。**起步阶段最该做的不是囤货，而是把一单的完整闭环跑通。**从发布到签收的每个环节都标准化的那天，你才有资格谈加量。  全文按行动顺序组织：先算账和定模式，再开号、选品、找货，然后是拍照、标题、详情、定价、发布、履约、...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">312</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%88%E6%8B%86%E6%8E%89%E4%B8%89%E4%B8%AA%E8%AF%AF%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text">1 先拆掉三个误解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%B2%BE%E5%8A%9B%E4%B8%8D%E6%98%AF%E6%84%8F%E5%BF%97%E5%8A%9B%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 精力不是意志力问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%A1%A5%E5%93%81%E6%9B%BF%E4%BB%A3%E4%B8%8D%E4%BA%86%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 补品替代不了系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E2%80%9C%E7%9D%A1%E5%A4%9F8%E5%B0%8F%E6%97%B6%E2%80%9D%E6%98%AF%E4%B8%AA%E7%B2%97%E7%B3%99%E6%8C%87%E6%A0%87"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 “睡够8小时”是个粗糙指标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%B2%BE%E5%8A%9B%E7%9A%84%E5%9B%9B%E4%B8%AA%E8%B4%A6%E6%88%B7"><span class="toc-number">2.</span> <span class="toc-text">2 精力的四个账户</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%83%BD%E9%87%8F%E8%B4%A6%E6%88%B7%EF%BC%9A%E8%A1%80%E7%B3%96%E3%80%81%E6%B0%A7%E6%B0%94%E4%B8%8E%E7%BA%BF%E7%B2%92%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 能量账户：血糖、氧气与线粒体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%81%A2%E5%A4%8D%E8%B4%A6%E6%88%B7%EF%BC%9A%E7%9D%A1%E7%9C%A0%E4%B8%8E%E8%8A%82%E5%BE%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 恢复账户：睡眠与节律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E8%B0%83%E8%8A%82%E8%B4%A6%E6%88%B7%EF%BC%9A%E7%A5%9E%E7%BB%8F%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%8E%8B%E5%8A%9B%E6%BF%80%E7%B4%A0"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 调节账户：神经系统与压力激素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E6%84%8F%E6%84%BF%E8%B4%A6%E6%88%B7%EF%BC%9A%E6%84%8F%E4%B9%89%E6%84%9F%E4%B8%8E%E6%83%85%E7%BB%AA"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 意愿账户：意义感与情绪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%8A%8A%E4%B8%80%E5%A4%A9%E9%87%8D%E6%96%B0%E6%8E%92%E4%B8%80%E9%81%8D"><span class="toc-number">3.</span> <span class="toc-text">3 把一天重新排一遍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%B5%B7%E5%BA%8A%E5%90%8E%E7%9A%8490%E5%88%86%E9%92%9F"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 起床后的90分钟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%B8%8A%E5%8D%88%E6%94%BB%E5%9D%9A%EF%BC%8C%E4%B8%8B%E5%8D%88%E6%B8%85%E9%9A%9C"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 上午攻坚，下午清障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%8D%88%E5%90%8E%E4%BD%8E%E8%B0%B7%E4%B8%8D%E6%98%AF%E6%84%8F%E5%BF%97%E8%96%84%E5%BC%B1"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 午后低谷不是意志薄弱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%99%9A%E4%B8%8A%E7%9A%84%E9%99%8D%E8%90%BD%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 晚上的降落程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%90%83%EF%BC%9A%E7%A8%B3%E5%AE%9A%E8%A1%80%E7%B3%96%E6%AF%94%E8%A1%A5%E5%93%81%E9%87%8D%E8%A6%81"><span class="toc-number">4.</span> <span class="toc-text">4 吃：稳定血糖比补品重要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%A4%90%E5%90%8E%E6%98%8F%E8%BF%B7%E6%98%AF%E5%8F%AF%E4%BB%A5%E9%81%BF%E5%85%8D%E7%9A%84"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 餐后昏迷是可以避免的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E8%9B%8B%E7%99%BD%E8%B4%A8%E6%98%AF%E9%94%9A"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 蛋白质是锚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%92%96%E5%95%A1%E5%9B%A0%E7%94%A8%E5%9C%A8%E5%88%80%E5%88%83%E4%B8%8A"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 咖啡因用在刀刃上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%B0%B4%E5%92%8C%E7%94%B5%E8%A7%A3%E8%B4%A8%E5%AE%B9%E6%98%93%E8%A2%AB%E5%BF%BD%E7%95%A5"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 水和电解质容易被忽略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%8A%A8%EF%BC%9A%E6%8A%8A%E8%BA%AB%E4%BD%93%E7%BB%83%E6%88%90%E4%B8%80%E5%8F%B0%E7%9C%81%E6%B2%B9%E7%9A%84%E5%8F%91%E5%8A%A8%E6%9C%BA"><span class="toc-number">5.</span> <span class="toc-text">5 动：把身体练成一台省油的发动机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%9C%89%E6%B0%A7%E5%BA%95%E7%9B%98"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 有氧底盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%8A%9B%E9%87%8F%E8%AE%AD%E7%BB%83%E6%98%AF%E5%82%A8%E8%83%BD"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 力量训练是储能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E8%A2%AB%E4%BD%8E%E4%BC%B0%E7%9A%84%E6%97%A5%E5%B8%B8%E6%B4%BB%E5%8A%A8%E9%87%8F"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 被低估的日常活动量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E5%88%AB%E6%8A%8A%E8%BF%90%E5%8A%A8%E5%81%9A%E6%88%90%E7%AC%AC%E4%BA%8C%E4%BB%BD%E5%B7%A5%E4%BD%9C"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 别把运动做成第二份工作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%A5%9E%E7%BB%8F%E7%B3%BB%E7%BB%9F%EF%BC%9A%E5%AD%A6%E4%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E6%A1%A3"><span class="toc-number">6.</span> <span class="toc-text">6 神经系统：学会主动降档</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%91%BC%E5%90%B8%E6%98%AF%E6%9C%80%E5%BF%AB%E7%9A%84%E5%BC%80%E5%85%B3"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 呼吸是最快的开关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%86%B7%E4%B8%8E%E7%83%AD%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 冷与热的边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%B1%8F%E5%B9%95%E3%80%81%E4%BF%A1%E6%81%AF%E4%B8%8E%E6%B3%A8%E6%84%8F%E5%8A%9B"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 屏幕、信息与注意力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E6%83%85%E7%BB%AA%E5%86%85%E8%80%97%E6%98%AF%E6%9C%80%E8%B4%B5%E7%9A%84%E6%94%AF%E5%87%BA"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 情绪内耗是最贵的支出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%84%8F%E6%84%BF%EF%BC%9A%E8%AE%A9%E7%B2%BE%E5%8A%9B%E6%9C%89%E5%9C%B0%E6%96%B9%E5%8F%AF%E5%8E%BB"><span class="toc-number">7.</span> <span class="toc-text">7 意愿：让精力有地方可去</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E6%97%A0%E8%81%8A%E7%9A%84%E5%8A%9B%E9%87%8F"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 无聊的力量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%85%B3%E7%B3%BB%E8%83%BD%E9%87%8F"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 关系能量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E6%84%8F%E4%B9%89%E6%84%9F%E7%9A%84%E6%8D%A2%E7%AE%97"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 意义感的换算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%8A%B6%E6%80%81%E5%B4%A9%E4%BA%86%E6%80%8E%E4%B9%88%E5%9B%9E%E6%9D%A5"><span class="toc-number">8.</span> <span class="toc-text">8 状态崩了怎么回来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E7%9D%A1%E7%9C%A0%E5%80%BA%E6%80%8E%E4%B9%88%E8%BF%98"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 睡眠债怎么还</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E4%B8%89%E5%91%A8%E9%87%8D%E5%90%AF"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 三周重启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E4%BA%94%E4%B8%AA%E5%B8%B8%E8%A7%81%E7%9A%84%E5%9D%91"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 五个常见的坑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%9B%9B%E4%B8%AA%E4%BE%BF%E5%AE%9C%E6%8C%87%E6%A0%87"><span class="toc-number">9.</span> <span class="toc-text">9 四个便宜指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">10.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚"><img src="/images/2123218961776906410-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FDE 大家最关心的 10 个问题，一次性讲清楚"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚">FDE 大家最关心的 10 个问题，一次性讲清楚</a><time datetime="2026-11-19T08:57:02.000Z" title="发表于 2026-11-19 08:57:02">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System"><img src="/images/2123133742063706343-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Building an Autonomous Inference System"/></a><div class="content"><a class="title" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System">Building an Autonomous Inference System</a><time datetime="2026-11-19T03:18:24.000Z" title="发表于 2026-11-19 03:18:24">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

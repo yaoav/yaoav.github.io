@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>REA 靠边站，逆向圈又一新王诞生了  | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近逆向工程和 AI 编程圈又迎来了一个极其亮眼的开源新项目，这个 GitHub 项目就是 craft-anything。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="REA 靠边站，逆向圈又一新王诞生了 ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/criscxuan-2122930382471655838/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="最近逆向工程和 AI 编程圈又迎来了一个极其亮眼的开源新项目，这个 GitHub 项目就是 craft-anything。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122930382471655838-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T13:50:19.000Z">
+<meta property="article:modified_time" content="2026-11-19T10:05:26.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@criscxuan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122930382471655838-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "REA 靠边站，逆向圈又一新王诞生了 ",
+  "url": "https://yaoav.github.io/2026/11/18/criscxuan-2122930382471655838/",
+  "image": "https://yaoav.github.io/images/2122930382471655838-cover.jpg",
+  "datePublished": "2026-11-18T13:50:19.000Z",
+  "dateModified": "2026-11-19T10:05:26.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/criscxuan-2122930382471655838/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'REA 靠边站，逆向圈又一新王诞生了 ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">312</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122930382471655838-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">REA 靠边站，逆向圈又一新王诞生了 </span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">REA 靠边站，逆向圈又一新王诞生了 </h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T13:50:19.000Z" title="发表于 2026-11-18 13:50:19">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@criscxuan（cxuan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122930382471655838">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>最近逆向工程和 AI 编程圈又迎来了一个极其亮眼的开源新项目，这个 GitHub 项目就是 <strong>craft-anything</strong>。</p>
+<p>它的定位非常硬核：帮工程师彻底搞懂手头任何网站、应用或软件的底层结构与运行逻辑，然后直接基于理解，重新构建出一套属于自己的原生版本。</p>
+<p>你只需要把目标交给它，定好想要的技术栈。</p>
+<p>然后，你就等着就行了。</p>
+<p><img src="/images/HXYoqLLbkAAeUf7.jpg" alt="HXYoqLLbkAAeUf7"></p>
+<p>还记得前段时间全网刷屏的 REA（逆向一切）吗？如果说 REA 开启了全民逆向的风潮，那 <strong>craft-anything 就像是它的纯 Rust 工程化进化版</strong>。</p>
+<p>项目一开源热度就直接拉满了，GitHub Star 短短时间内就冲破了 35K star，而且整个引擎用<strong>纯 Rust</strong> 编写，内存占用极低，跨平台跑起来非常丝滑。</p>
+<p><img src="/images/HXYpCrEasAAeWHm.jpg" alt="HXYpCrEasAAeWHm"></p>
+<p>这篇就跟大家聊一聊 craft-anything，以及它到底强在哪里、该怎么上手玩起来。</p>
+<h3 id="它和传统逆向工具到底有什么不一样？"><a href="#它和传统逆向工具到底有什么不一样？" class="headerlink" title="它和传统逆向工具到底有什么不一样？"></a>它和传统逆向工具到底有什么不一样？</h3><p>提起逆向，很多人第一反应就是打开 Ghidra 或者 IDA Pro，对着满屏的汇编指令和反编译伪代码硬啃几天。</p>
+<p>craft-anything 的切入维度完全不同——它不只盯着单点代码，而是站在<strong>观测取证 → 拓扑梳理 → 原生重构</strong>的全局视角，把整套流程直接做成了自动化的流水线。</p>
+<p>你可以用非常自然的语言给它下达各种任务，比如：</p>
+<ul>
+<li>网站与前端应用 1:1 拆解与复刻：</li>
+</ul>
+<p>“帮我分析这个目标网站（<a target="_blank" rel="noopener" href="https://example.com)的页面布局、色彩字体、交互状态流与核心业务逻辑,使用现代/">https://example.com）的页面布局、色彩字体、交互状态流与核心业务逻辑，使用现代</a> React + Tailwind 从零构建一个干净可维护的原生版本，并自动校验不同屏幕宽度下的还原度。”</p>
+<ul>
+<li>桌面客户端与打包产物架构梳理：</li>
+</ul>
+<p>“对这个本地桌面应用包做结构与运行行为观测，梳理出它的模块划分、本地数据存储方式以及核心交互链路，输出一份结构清晰的模块化规范和骨架代码。”</p>
+<ul>
+<li>遗留系统与原生二进制深度分析：</li>
+</ul>
+<p>“开启深度分析模式，结合符号解析与反编译工具检查这个二进制文件的内部模块依赖与核心状态迁移逻辑，梳理出完整的业务交互说明，并用 Rust 帮我重写一个独立模块。”</p>
+<p>接到任务后，craft-anything 不会让大模型靠猜去脑补代码，而是严格按照官方设计的四步来执行：<strong>Study（观测取证）→ Build（动手构建）→ Check（比对校验）→ Ready &#x2F; Refine（就绪并迭代打磨）</strong>。</p>
+<p><img src="/images/HXYpF2MaAAAAexf.jpg" alt="HXYpF2MaAAAAexf"></p>
+<p>具体来说，它背后有三个优势：</p>
+<p><strong>第一，内置了 320+ 工具。</strong></p>
+<p>craft-anything 用纯 Rust 封装了超过 <strong>320 个</strong>专门的分析与检测工具，覆盖网站 DOM 与视觉测量、Electron、Apple 应用、Android、.NET、Java、数据库、固件乃至游戏资源。而且这 320 多个工具，<strong>每一个既是独立的 CLI 命令，又是标准的 MCP 工具</strong>，可以直接喂给 Claude Code 这类 Coding Agent 调度。</p>
+<p><strong>第二，默认 Clean-Room，也保留了 Deep（深度模式）。</strong></p>
+<p>这一点设计得非常聪明，也直接回应了之前 REA 容易踩红线的问题：</p>
+<ul>
+<li><strong>Clean-Room 模式（默认开启）</strong>：只观测外部用户可见的信息——截图、DOM 结构、排版尺寸、配色字体、可见文本、菜单与交互流程，直接屏蔽掉读取原软件源码和内部文件的工具。<strong>不看对方一行源码，也能把交互与逻辑复刻出来。</strong></li>
+<li><strong>Deep 模式（按需开启）</strong>：如果你分析的是自己团队的遗留系统、或者已获授权的私有软件，可以手动切到 Deep 模式。此时引擎会放开底层文件分析、ELF &#x2F; Mach-O &#x2F; PE 等可执行格式解析、符号解码，并支持联动本机 Ghidra 等反编译器做深度拆解（运行态隔离方面，Linux 上会配合 bwrap，Windows 上则用 Job Objects 来管住子进程）。</li>
+</ul>
+<p><strong>第三，看懂之后，直接帮你搞出来。</strong></p>
+<p>传统工具到出分析报告就结束了，但 craft-anything 会在 Study 阶段把散乱的页面信息、模块关系和交互事件流梳理成结构化证据链，再直接交给 Coding Agent 产出可运行的骨架与完整工程，最后还要回过头来自动 Check（比如对比多分辨率渲染效果、核对功能表现），有偏差就自动 Refine，把原本需要几天的分析 + 复现压缩到几分钟级别。</p>
+<p>值得一提的是，craft-anything 并不是一个孤立的小玩具，它背后其实是 <strong>ArtCraft（storytold）</strong> 正在推进的一整套<strong>纯 Rust 开源创意与办公软件全家桶（The Craft App Suite）</strong>。</p>
+<p><img src="/images/HXYpIe4bYAAHm9s.jpg" alt="HXYpIe4bYAAHm9s"></p>
+<p>这帮人野心非常大，直接用原生高性能架构把日常惯用的商业创作软件几乎拉了一遍平替。。。</p>
+<ul>
+<li><strong>平面设计与文档出版</strong>：PhotoCraft（支持图层、蒙版、文字与真实 PSD 文件编辑，对标 Photoshop）、VectorCraft（矢量插画）、LightCraft（照片库与 RAW 后期）、DesignCraft（版面排版与出版）、FigCraft（界面设计与原型，对标 Figma）、PdfCraft（PDF 阅读、整理与保护）。</li>
+<li><strong>音视频与动态特效</strong>：FilmCraft（视频剪辑、调色与音频）、EffectCraft（动态图形与视觉特效）、SoundCraft（音频录制与剪辑）。</li>
+<li><strong>3D 材质与 CAD 工程</strong>：CADCraft（CAD 辅助设计）、TextureCraft（3D 纹理绘制）、MaterialCraft（节点式程序化材质），再加上社区推出的参数化 3D CAD 应用 SolidCraft。</li>
+<li><strong>日常办公与数据</strong>：WordCraft（文档处理）、DeckCraft（幻灯片演示）、GridCraft（电子表格与数据）。</li>
+</ul>
+<p>而 <strong>Craft Anything</strong> 则是整套生态里最特别的那一个 meta tool ：前面十几款是官方亲自下场帮你把常用软件重做一遍；而 Craft Anything 直接把看懂软件并从零重造的引擎开源出来，让任何人都能自己上手去 Craft 一切。</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>下面讲一下怎么把 craft-anything 跑起来。</p>
+<p>它同时提供了<strong>桌面端 GUI</strong>、<strong>命令行工具（craft-anything-cli）</strong> 以及 <strong>MCP Server</strong> 三种形态，支持 macOS、Windows、Linux 和 FreeBSD，按自己习惯选就行。</p>
+<ol>
+<li>环境准备</li>
+</ol>
+<ul>
+<li><strong>Rust 工具链</strong>：需要 <strong>Rust 1.97 或更高版本</strong>（建议提前 rustup update 一下）</li>
+<li><strong>系统依赖（仅 Linux 编译桌面端需要）</strong>：Debian &#x2F; Ubuntu 用户需要先装一下窗口与图形开发包：</li>
+</ul>
+<p>sudo apt-get install build-essential libxkbcommon-dev libxkbcommon-x11-0 libwayland-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libgtk-3-dev</p>
+<ul>
+<li><strong>AI Coding Agent</strong>：本地提前配置并登录好支持接入的 Agent（比如 Claude Code）</li>
+</ul>
+<ol start="2">
+<li>下载安装包或源码编译</li>
+</ol>
+<p>如果只是想快速体验，最省事的方式是直接去 GitHub Releases（目前最新为 v0.6.1）下载对应平台的预编译包——macOS 用户直接下通用版 .dmg 或 CLI .zip（均已签名公证），Windows &#x2F; Linux &#x2F; FreeBSD 也都有现成安装包。</p>
+<p>如果你想从源码自己编译，再拉仓库执行下面的命令：</p>
+<p>git clone <a target="_blank" rel="noopener" href="https://github.com/storytold/craft-anything.git">https://github.com/storytold/craft-anything.git</a><br>cd craft-anything</p>
+<h1 id="方式-A：直接编译启动桌面端图形界面"><a href="#方式-A：直接编译启动桌面端图形界面" class="headerlink" title="方式 A：直接编译启动桌面端图形界面"></a>方式 A：直接编译启动桌面端图形界面</h1><p>cargo run –release -p craft-anything</p>
+<h1 id="方式-B：全局安装命令行工具-craft-anything-cli"><a href="#方式-B：全局安装命令行工具-craft-anything-cli" class="headerlink" title="方式 B：全局安装命令行工具 craft-anything-cli"></a>方式 B：全局安装命令行工具 craft-anything-cli</h1><p>cargo install –path apps&#x2F;craft-anything-cli</p>
+<ol start="3">
+<li>验证与上手实操</li>
+</ol>
+<p>装好之后，先跑一遍体检命令，检查 Rust 环境、反编译扩展以及本地连接的 Coding Agent 是否就绪：</p>
+<p>craft-anything-cli doctor</p>
+<p>体检全部通过后，你就可以直接开始手搓任何项目了。</p>
+<p>比如在命令行里查看它到底自带了多少工具：</p>
+<p>craft-anything-cli commands</p>
+<p>直接对着一个目标地址下达复刻 &#x2F; 改造指令：</p>
+<p>craft-anything-cli rebuild <a target="_blank" rel="noopener" href="https://example.com/">https://example.com</a> “用简洁的现代风格复刻这个页面，并把顶部导航改成深蓝色”</p>
+<p>如果你习惯在自己常用的 AI 助手（Claude Code、Cursor 等）里直接用对话驱动，只需要把它作为 MCP Server 拉起来就行：</p>
+<p>craft-anything-cli mcp</p>
+<p>或者更偷懒一点，直接把仓库丢给你的 Coding Agent：</p>
+<p>帮我检查本地 Rust 环境并编译安装 craft-anything（<a target="_blank" rel="noopener" href="https://github.com/storytold/craft-anything%EF%BC%89%EF%BC%8C%E5%AE%8C%E6%88%90%E5%90%8E%E8%BF%90%E8%A1%8C">https://github.com/storytold/craft-anything），完成后运行</a> craft-anything-cli doctor 帮我确认配置是否正常。</p>
+<p>直接丝滑搞定。</p>
+<p>我自己在 Mac 上实测跑了一下官方的 craft-anything-cli doctor 和 commands：</p>
+<p><img src="/images/HXYpL5yawAEORfd.jpg" alt="HXYpL5yawAEORfd"></p>
+<p>如果你打开的是桌面端，默认会进入非常直观的简单模式，选目标、选 Clean-Room 还是 Deep、填好需求点 Start 就行：</p>
+<p><img src="/images/HXYpOpYaEAAy9Qz.jpg" alt="HXYpOpYaEAAy9Qz"></p>
+<p>如果切到右上角的 <strong>Advanced</strong>，左边函数列表、中间伪 C &#x2F; 反汇编 &#x2F; 十六进制 &#x2F; 调用图、右边证据台账（Evidence ledger），再加上底部的 Agent 控制台，基本就是把传统逆向 IDE 和 AI 助手焊在了一起：</p>
+<p><img src="/images/HXYpRS-aIAAOH5R.jpg" alt="HXYpRS-aIAAOH5R"></p>
+<h3 id="真实体感"><a href="#真实体感" class="headerlink" title="真实体感"></a>真实体感</h3><p>如果拿它跟前段时间的 REA 放一起对比，我的感触是：</p>
+<p>REA 更像是一把手术刀，擅长把别人 App 的内部实现刨根问底给你讲明白；而 craft-anything 则是直接给你搭了一整座<strong>自动化重构工厂</strong>——用纯 Rust 把 320 多个探测工具打成底座，省资源、跨平台，还把 Clean-Room 净室复刻和 Deep 深度拆解分得清清楚楚。</p>
+<p>不过实际玩下来，也有几个细节值得注意：</p>
+<ol>
+<li><strong>编译门槛比 Node 套件稍高一点</strong>：需要较新的 Rust（1.97+），第一次 cargo 编译会花一点时间，但跑起来之后确实稳。</li>
+<li><strong>注意区分规则隔离和内核沙箱</strong>：官方自己也说，默认的 Clean-Room 模式主要是规则层的工具拦截（防止 Agent 去偷看源码），如果你真要拿来跑来路不明的高危二进制，还是老老实实放到虚拟机或独立沙箱里更稳妥。</li>
+<li><strong>如果你特别看重架构可视化</strong>：craft-anything 更偏重“取证 → 写代码 → 校验”，如果你希望把梳理出来的业务流、模块拓扑画成高颜值的交互式图表，依然可以配合像 archify 这类架构图工具一起用，一个负责拆解重构，一个负责把逻辑漂亮地画出来，体验会非常完整。</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>无论是学习优秀开源项目的设计思路、给老旧系统做私有接口兼容与协议对齐，还是看到一个惊艳的产品交互想用自己的技术栈重写一遍，它都能把原本动辄几天的分析与搭建工作，压缩到几分钟之内。</p>
+<p>工具开源地址放在这里，感兴趣的同学可以直接去折腾一下：</p>
+<ul>
+<li>GitHub：<a target="_blank" rel="noopener" href="https://github.com/storytold/craft-anything">https://github.com/storytold/craft-anything</a></li>
+</ul>
+<p>就像之前大家调侃的那样：以前是源码没公开就不算开源；现在有了 craft-anything，只要能运行、能被观测，几乎任何软件都能被你用自己的方式重新 Craft 一遍。</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/oqLURH_BAgIQfr7t6QG3bg">https://mp.weixin.qq.com/s/oqLURH_BAgIQfr7t6QG3bg</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/criscxuan-2122930382471655838/">https://yaoav.github.io/2026/11/18/criscxuan-2122930382471655838/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/criscxuan/">@criscxuan</a></div><div class="post-share"><div class="social-share" data-image="/images/2122930382471655838-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/KinhVujhfi-2122932981790876038/" title="一份可以照着做、也能自己迭代的精力管理攻略"><img class="cover" src="/images/2122932981790876038-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">一份可以照着做、也能自己迭代的精力管理攻略</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @KinhVujhfi（闲鱼梦想家） 的长文，原文链接，版权归原作者所有。  这几年谈精力管理的文章很多，多数停在几个动作上：早睡、运动、少刷手机。 这些都对，但它们更像退烧药，能压住症状，压不住原因。 真正决定一个人能不能长期保持状态的，是四件事有没有被同时照顾到：  能量供给是否平稳 恢复通道是否通畅 神经系统的档位能不能自己切换 你做的事值不值得你消耗  这份攻略不给你一张完美作息表。 它先让你看懂精力怎么被花掉、怎么被补回来，再给一套能装进真实生活的操作。 你可以从头读，也可以直接跳到最卡住你的那一章。 1 先拆掉三个误解1.1 精力不是意志力问题把精力问题当成意志力问题，是代价最高的一种误解。 意志力管的是“要不要开始”，像个调度员； 精力管的是“能不能持续”，它是燃料和电压。 调度员再强硬，电压不够，机器照样停。 很多人早上列了6件事，下午只做完1件，然后开始自责，而自责本身又是一笔能量支出，形成一个越转越紧的圈。 更有效的判断是：同一件事你反复“想做但做不动”，问题多半不在动机，而在燃料、节律或者恢复通道。这时候该做的不是再逼自己一把，而是回...</div></div></div></a><a class="pagination-related" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Why I hate GPT-6.2 Astra</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yifanxu_ephai（Yifan Xu） 的长文，原文链接，版权归原作者所有。  During early testing, I found myself so frustrated with this model that I spent a day writing a letter to OpenAI about it. They fixed a small handful of my complaints, but not enough for me to recommend using it. I’m currently sick in bed and I’m not gonna be able to film a video about it today, so I’ve chosen to post the letter in full.  I feel bad about this, but I know you guys will listen and use this feedback to make a better model...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/15/criscxuan-2121958702924312671/" title="腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了"><img class="cover" src="/images/2121958702924312671-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  前两天在 x 上分享的鹅次元没想到爆了，看来大家兴趣很高，于是我今天实测了一下。 这是腾讯 QQ 出的首款专属 AI 游戏陪伴 Agent。 面向端游玩家，提供拟人化 AI 陪伴和实时语音互动。  可以实现在 PC&#x2F;QQ 内部进行聊天。  还可以作为桌宠、一键换装、嘴替变声等有趣玩法。  最下面会有不同女生的介绍，而且每个女生性格不同，有 ENFP、INTP、INFJ 和 ESTP ，这个大家最好实际体验下哈哈哈。 目前只能使用 QQ 登录，而且只支持 Windows 版本，Mac 不支持。 猛的一看好像有点违和感，现在还有啥 Agent 能不支持 Mac ？但你细想一下好像也没错，你会用 Mac 来玩游戏吗？ 于是我就拿出来我那个积灰已久的 Windows 本了，终于有了用武之地。  客户端下载完了。 鹅次元我来了，哈哈哈。  我倒要看看你怎么懂我。 不过问题来了，为啥上面 QQ 登录之后 ，下载完成后又提供了两种登录方式，什么鬼？？？ 闹了半天我才明白，上面的 QQ ...</div></div></div></a><a class="pagination-related" href="/2026/11/02/criscxuan-2117139890957861046/" title="通了个宵，终于把 Super-Agent 架构玩明白了 "><img class="cover" src="/images/2117139890957861046-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">通了个宵，终于把 Super-Agent 架构玩明白了 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。 现在跟大家聊聊，应该还不算晚吧？ 主要是我把这篇文章仔细读了一遍，时间理解消化输出都是成本，于是今天才写出来。 而且我确实觉得此类文章要好好消化一下，不过我看到很多大号在官方发布之后半个小时甚至 1 个小时就把文章发出来了，emmm 这也许就是大佬吧 ：） DeepSeek Harness 团队（以下统称为 DSH 团队）首先解释了一下，这种解释和我们的预想是一样的：近一年里随着模型能力的增强，以及多 Agent 能力的提高，人类越来越少的参与底层中的执行，进而参与顶层的决策和验收工作了。 同样的随着模型能力的增强，今年早期的 OpenClaw 这类工具演变成了现在新的业态：Personal Agent。 我看到 DeepSeek 团队一直没有做 dsh bot ，目前流传出来的 bot 都是社区开发的，比如这个。  Personal Agent 我之...</div></div></div></a><a class="pagination-related" href="/2026/11/13/criscxuan-2121167803885457546/" title="离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 "><img class="cover" src="/images/2121167803885457546-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">离谱，Karpathy 顺手搓了个 YouTube ，而我顺手给他搓了个中文插件。 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  what ？？？ 某社交平台知名大佬 Andrej Karpathy 发帖称，由于他受不了 youtube 的推荐算法。 所以花了两个小时直接用 Opus 5.5 手搓了一个复刻版 youtube 出来。。。 名字叫 HackerTube 。  为了做这个 HackerTube ，Karpathy 从 20 年来 HN 的 4300 万条评论中筛选出了 6454 个持续被推荐的视频。 也就是说这个 HackerTube 都是精选中的精选，它过滤了很多带有噪声的视频。 但同时也可以说，由于它是被持续推荐的原因，所以大部分视频都已经很老旧了。  比如我随手刷新一下，几乎都是 10 几年前的，最近两年的都很少。 而且这个 HackerTube ，它是无需登录就能看。 在无论什么平台都需要登录的情况下，有一个无需登录就能看精选视频的平台简直就是赛博活菩萨了。 没错说的就是你，卡帕奇。  不过这些都是英文，为了表达我对卡帕奇老哥的尊敬和支持，我用 Opus5.5 和 Fable 5.2 一起...</div></div></div></a><a class="pagination-related" href="/2026/11/13/criscxuan-2121150349209948636/" title="讲真，智能路由这事儿，还得基元律动出手。"><img class="cover" src="/images/2121150349209948636-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">讲真，智能路由这事儿，还得基元律动出手。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 AI 这么久了，我突然意识到一个问题。 那就是 AI 厂商太多了，不管是大厂小厂都在发新模型，而且大多数模型发布都很集中，往往 DeepSeek 发完了，GLM 发，GLM 发了还没测，Qwen、Kimi 又杀出来了，几乎每个月都有新版本发布，每家都说自己代码能力又上了一个台阶。 但具体哪个模型干活好、哪个模型价格低，靠自己一个个去测的话根本测不过来。 最理想的状态当然是：简单的活交给便宜模型，难的活交给强模型，每个任务都用刚好够用的那个。但这个刚好够用如何判断、每个档位该配哪个模型，一般来说很难自己搞清楚。 我发现了一个 GitHub 项目，就专门干这事儿的。  这个 GitHub 的思路就是：不用你自己挑模型，他们每月把主流模型测一遍，把当月最合适的配置直接下发到你的客户端。 先简单说一下 OpenSquilla 是什么。它是基元律动开源的 Agent 框架，日常用起来和常见的 Agent 平台差不多：给它一个任务，它帮你拆解、调用工具、把活干完。 区别在背后的智能路由。一...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">312</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%83%E5%92%8C%E4%BC%A0%E7%BB%9F%E9%80%86%E5%90%91%E5%B7%A5%E5%85%B7%E5%88%B0%E5%BA%95%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E4%B8%80%E6%A0%B7%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">它和传统逆向工具到底有什么不一样？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">如何使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-A%EF%BC%9A%E7%9B%B4%E6%8E%A5%E7%BC%96%E8%AF%91%E5%90%AF%E5%8A%A8%E6%A1%8C%E9%9D%A2%E7%AB%AF%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="toc-number">3.</span> <span class="toc-text">方式 A：直接编译启动桌面端图形界面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-B%EF%BC%9A%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7-craft-anything-cli"><span class="toc-number">4.</span> <span class="toc-text">方式 B：全局安装命令行工具 craft-anything-cli</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9C%9F%E5%AE%9E%E4%BD%93%E6%84%9F"><span class="toc-number">4.1.</span> <span class="toc-text">真实体感</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.2.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚"><img src="/images/2123218961776906410-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FDE 大家最关心的 10 个问题，一次性讲清楚"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123218961776906410/" title="FDE 大家最关心的 10 个问题，一次性讲清楚">FDE 大家最关心的 10 个问题，一次性讲清楚</a><time datetime="2026-11-19T08:57:02.000Z" title="发表于 2026-11-19 08:57:02">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System"><img src="/images/2123133742063706343-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Building an Autonomous Inference System"/></a><div class="content"><a class="title" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System">Building an Autonomous Inference System</a><time datetime="2026-11-19T03:18:24.000Z" title="发表于 2026-11-19 03:18:24">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
