@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Why Specie Matters | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="By @mannyornothing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Specie Matters">
+<meta property="og:url" content="https://yaoav.github.io/2026/04/29/MattDMark-2049477753183862821/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="By @mannyornothing">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2049477753183862821-cover.jpg">
+<meta property="article:published_time" content="2026-04-29T21:15:48.000Z">
+<meta property="article:modified_time" content="2026-11-19T08:45:42.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@MattDMark">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2049477753183862821-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why Specie Matters",
+  "url": "https://yaoav.github.io/2026/04/29/MattDMark-2049477753183862821/",
+  "image": "https://yaoav.github.io/images/2049477753183862821-cover.jpg",
+  "datePublished": "2026-04-29T21:15:48.000Z",
+  "dateModified": "2026-11-19T08:45:42.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/04/29/MattDMark-2049477753183862821/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Why Specie Matters',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2049477753183862821-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Why Specie Matters</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Why Specie Matters</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-04-29T21:15:48.000Z" title="发表于 2026-04-29 21:15:48">2026-04-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@MattDMark（Matt）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2049477753183862821">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>By @mannyornothing</p>
+<p>There is a category of business that nearly every bank claims to support yet very few actually serve well in practice. These are companies that operate across borders as a default. An importer in Miami sourcing from Shenzhen, an exporter in Mexico City selling into Frankfurt, a services firm in Lagos working with clients across continents, or a SaaS company billing in multiple currencies all share the same underlying constraint. Their financial activity is global, but the infrastructure available to them is not.</p>
+<p>What they rely on today reflects that mismatch. On one side are legacy banking rails that were built decades ago and move slowly, often taking days to settle while layering fees at each step. On the other side are fintech tools that improve specific parts of the workflow but leave businesses stitching together multiple systems just to function. The result is not a single broken product but a fragmented stack that requires constant coordination.</p>
+<p>Specie is trying to collapse that stack into a single system. What makes it interesting is not just the breadth of features, but the way it rethinks the underlying economics of how global B2B banking should work.</p>
+<p><strong>The problem that hasn’t been fixed</strong></p>
+<p>Cross-border B2B payments exceed $150 trillion annually yet the experience for most businesses remains consistently inefficient. This is not a new issue, and that persistence is part of the signal.</p>
+<p>Transfers moving through the SWIFT system typically take between two and five business days to settle. Along the way, they pass through three to five intermediary banks, each taking a fee that is rarely visible upfront. Foreign exchange pricing compounds the problem with markups often ranging from 1% to 4% above mid-market rates depending on the corridor and the relationship with the bank.</p>
+<p>In practical terms, a business sending $100,000 from the US to a supplier in Vietnam can lose $3,000 to $4,000 in combined wire fees and FX spread without knowing the exact cost until after the transfer completes. Receiving payments creates a similar layer of friction. Companies invoicing across multiple countries either maintain accounts in different currencies, each with its own requirements and overhead or push FX costs onto their customers which weakens their competitive position.</p>
+<p>Treasury management adds another layer of complexity. Many businesses in the $5 million to $50 million revenue range still track cash positions across accounts and currencies using spreadsheets that are updated manually. This is less a failure of discipline and more a reflection of the tools available.</p>
+<p>Over time fintech companies have improved individual parts of this system. Wise made FX pricing more transparent. Mercury modernized US startup banking. Brex and Ramp focused on cards and spend. Each of these products works well in isolation, but for a business operating across borders, the experience is still fragmented.</p>
+<p>What remains missing is a system that treats global financial activity as the default case rather than an edge case.</p>
+<p><strong>Bringing the system into one place</strong></p>
+<p>Specie’s core insight is that the problem is not just about better tools, but about reducing the need for multiple tools altogether. For a finance team every additional platform introduces another login, another reconciliation step, and another point of failure.</p>
+<p>Instead of optimizing a single function, Specie covers the full workflow of how a global business moves and manages money:</p>
+<ul>
+<li>Payments across 124+ countries, using rails such as ACH, SEPA, PIX, SPEI, and SWIFT, with same-day settlement where supported</li>
+<li>Receiving through virtual accounts that allow businesses to accept payments as if they were local in each region</li>
+<li>FX conversion priced as low as 0.1% above mid-market rates, with transparent pricing rather than embedded spreads</li>
+<li>Treasury visibility across currencies in a single dashboard, replacing manual tracking across accounts</li>
+<li>Additional layers including corporate cards, invoicing, approval workflows, and integrations with systems like QuickBooks and Xero</li>
+</ul>
+<p>Individually, none of these features are entirely new. What changes is the experience of having them integrated into a single system rather than spread across separate tools.</p>
+<p>The more distinctive layer sits on top of this foundation.</p>
+<p><strong>Yield as a default, not a separate decision</strong></p>
+<p>Most B2B banking platforms treat yield as something separate from day-to-day operations. Businesses are typically required to move funds into dedicated accounts, accept constraints like minimum balances or lockups, and actively manage where idle cash sits.</p>
+<p>Specie removes that distinction by making yield a default property of holding cash. Balances earn over 3% APY automatically backed 1:1 by US treasury reserves managed by BlackRock, without requiring any additional action.</p>
+<p>The numbers are straightforward. A business holding $500,000 in working capital earns roughly $15,000 annually at a 3% yield. At $2 million, that increases to around $60,000. In traditional banking setups that same capital often generates little to no return.</p>
+<p>What matters more than the absolute numbers is how this changes behavior. In most systems, there is a constant tradeoff between liquidity and yield. Businesses either keep funds accessible and earn nothing or move them into yield-generating products and give up flexibility. Managing that tradeoff introduces additional processes including forecasting and periodic fund movement.</p>
+<p>By allowing cash to remain liquid while earning yield, Specie removes that layer entirely. The result is not just incremental income, but a simpler operating model for treasury.</p>
+<p>This also reflects a different alignment. Traditional banks rely on the spread between what they pay depositors and what they earn on those deposits. Offering higher yield directly compresses that margin. Specie, by sourcing yield from treasury-backed instruments and monetizing through payments and FX, operates under a different set of incentives.</p>
+<p><strong>The infrastructure shift underneath</strong></p>
+<p>While the product presents itself as a standard banking interface, the underlying system appears to rely on stablecoin-based infrastructure.</p>
+<p>References to private payment networks, regulated ramping partners, and treasury-backed yield linked to BlackRock suggest integration with tokenized treasury products such as BUIDL or similar instruments. This architecture is becoming more common among newer financial platforms.</p>
+<p>The shift matters because it changes the economics. Traditional correspondent banking involves multiple intermediaries and delayed settlement. Stablecoin-based systems allow for direct transfers, faster settlement, and significantly lower cost structures.</p>
+<p>This shows up clearly in the product. FX at around 0.1% compares to the typical 1% to 4% range in legacy systems. Settlement times move from multiple business days to same-day or near-instant in supported corridors. Yield becomes viable because the system does not carry the same overhead.</p>
+<p>From the user’s perspective, none of this requires interacting with crypto directly. The infrastructure changes, but the experience remains familiar. The benefit is expressed in cost, speed, and efficiency rather than technology.</p>
+<p><strong>The real challenge: 124 countries</strong></p>
+<p>Operating across more than 124 countries is not just a feature. It is the core execution challenge.</p>
+<p>Each country introduces its own regulatory requirements, payment systems, and compliance obligations. A transfer from the US to Nigeria operates under different conditions than one from Germany to Brazil, both technically and legally.</p>
+<p>Supporting this requires a network of:</p>
+<ul>
+<li>on and off-ramp partners across jurisdictions</li>
+<li>local payment rail integrations</li>
+<li>FX liquidity across multiple currency pairs</li>
+<li>compliance systems tailored to each market</li>
+</ul>
+<p>This is not a problem that scales purely through software. It resembles a logistics network, where each additional market requires incremental work and creates incremental value. Over time, the density and reliability of these connections become the real moat.</p>
+<p><strong>Positioning and competition</strong></p>
+<p>The B2B fintech space is crowded, with players like Mercury, Brex, Ramp, Wise, and Payoneer each owning part of the workflow.</p>
+<p>Specie’s position comes from combining these layers into a single system designed specifically for globally operating businesses. The bet is that integration across payments, banking, treasury, and yield is more valuable than best-in-class performance in any single category.</p>
+<p>That is a coherent thesis, but it shifts the challenge toward execution. Competing across multiple domains requires depth in each, and the question is whether a newer platform can match incumbents that have focused narrowly and built over longer periods.</p>
+<p><strong>What to watch</strong></p>
+<p>As the product develops, a few practical questions will determine whether the model holds:</p>
+<ul>
+<li>how consistent settlement speed and FX pricing are across different corridors</li>
+<li>how the treasury-backed yield behaves in practice, particularly under varying liquidity conditions</li>
+<li>how effectively compliance is managed across a large number of jurisdictions without adding friction</li>
+</ul>
+<p>These are operational questions, but they define whether the system works in reality.</p>
+<p><strong>The broader shift</strong></p>
+<p>Specie reflects a broader transition toward financial products built on stablecoin infrastructure while maintaining familiar interfaces. The underlying rails change, but the user experience remains aligned with traditional expectations.</p>
+<p>Regulatory frameworks such as the GENIUS Act in the US and MiCA in Europe are beginning to formalize this space. At the same time, stablecoin settlement volumes have already exceeded the combined volumes of Visa and Mastercard, and industry leaders have suggested that a significant share of new neobanks will be built on these rails.</p>
+<p>What has been missing is the application layer that translates these advantages into usable products for businesses that care about outcomes rather than underlying technology.</p>
+<p>Specie is one of the more complete attempts to build that layer for global B2B finance. The question is not whether the underlying economics are better, but whether the system can be executed reliably across 124 countries. If it can, the advantages in cost, speed, and capital efficiency are difficult for traditional models to replicate.</p>
+<p>That is what makes it worth watching closely.</p>
+<p>@speciefinance  @frankiedigiac</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/04/29/MattDMark-2049477753183862821/">https://yaoav.github.io/2026/04/29/MattDMark-2049477753183862821/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MattDMark/">@MattDMark</a></div><div class="post-share"><div class="social-share" data-image="/images/2049477753183862821-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/09/adamwathan-2053121182044451016/" title="Learning on the Shop floor "><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Learning on the Shop floor </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @adamwathan（Adam Wathan） 的长文，原文链接，版权归原作者所有。  Years ago I wrote about my apprenticeship in Germany. I dropped out of school at 16 and went to work at a Siemens subsidiary, where the most interesting people sat in the basement and used Delphi instead of the corporate-mandated Rosie SQL (both pretty much lost to time and progress). I learned to be a programmer by watching them. By making them coffee. By hanging around long enough that their judgment seeped into mine. I have been thin...</div></div></div></a><a class="pagination-related" href="/2026/04/28/SeismicSys-2049132919294251030/" title="Meet Sedona: The Neobank Built Around You"><img class="cover" src="/images/2049132919294251030-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Meet Sedona: The Neobank Built Around You</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @SeismicSys（Seismic） 的长文，原文链接，版权归原作者所有。  Crypto trading platforms and protocols have never been short on innovative ideas. New DeFi primitives, novel yield mechanisms, and increasingly complex onchain architectures have pushed the space forward. But what they have often lacked is the private, simplified, automated, and intuitive user experiences that traditional fintech platforms have spent massive amounts of time and resources streamlining and perfecting. Sedona was built to deli...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System"><img src="/images/2123133742063706343-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Building an Autonomous Inference System"/></a><div class="content"><a class="title" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System">Building an Autonomous Inference System</a><time datetime="2026-11-19T03:18:24.000Z" title="发表于 2026-11-19 03:18:24">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"><img src="/images/2123098569905516649-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"/></a><div class="content"><a class="title" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日">EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日</a><time datetime="2026-11-19T00:58:38.000Z" title="发表于 2026-11-19 00:58:38">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

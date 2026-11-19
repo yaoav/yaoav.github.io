@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>从赌场到股市，从破产到FIRE | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="记录我从追逐金钱到拥有选择权的财富觉醒之旅 点击标题看原贴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从赌场到股市，从破产到FIRE">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/17/ianxintx-2122697661081878747/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="记录我从追逐金钱到拥有选择权的财富觉醒之旅 点击标题看原贴">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122697661081878747-cover.jpg">
+<meta property="article:published_time" content="2026-11-17T22:25:34.000Z">
+<meta property="article:modified_time" content="2026-11-19T08:45:39.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@ianxintx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122697661081878747-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "从赌场到股市，从破产到FIRE",
+  "url": "https://yaoav.github.io/2026/11/17/ianxintx-2122697661081878747/",
+  "image": "https://yaoav.github.io/images/2122697661081878747-cover.jpg",
+  "datePublished": "2026-11-17T22:25:34.000Z",
+  "dateModified": "2026-11-19T08:45:39.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/17/ianxintx-2122697661081878747/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '从赌场到股市，从破产到FIRE',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122697661081878747-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">从赌场到股市，从破产到FIRE</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">从赌场到股市，从破产到FIRE</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-17T22:25:34.000Z" title="发表于 2026-11-17 22:25:34">2026-11-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@ianxintx（Ian X Shift to Wealth）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122697661081878747">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<h3 id="记录我从追逐金钱到拥有选择权的财富觉醒之旅"><a href="#记录我从追逐金钱到拥有选择权的财富觉醒之旅" class="headerlink" title="记录我从追逐金钱到拥有选择权的财富觉醒之旅"></a>记录我从追逐金钱到拥有选择权的财富觉醒之旅</h3><p>点击标题看原贴</p>
+<h3 id="2018年3月14日"><a href="#2018年3月14日" class="headerlink" title="2018年3月14日"></a>2018年3月14日</h3><p>2018年3月14日。</p>
+<p>我发了这辈子第一条推。写的啥，早忘了。</p>
+<p>我只记得，就是那一周，我差点没扛过去：</p>
+<p>• 被人告了，索赔 $4.5M。</p>
+<p>• 申请了破产。</p>
+<p>• 去 UPS 搬箱子，时薪 $10.25，就为了先把账单付上。</p>
+<p>8 年。</p>
+<h3 id="我可能真该谢谢那个每年都开除我的经理"><a href="#我可能真该谢谢那个每年都开除我的经理" class="headerlink" title="我可能真该谢谢那个每年都开除我的经理"></a>我可能真该谢谢那个每年都开除我的经理</h3><p>我可能真该谢谢那个老开除我的经理。</p>
+<p>我每次都是旺季缺人才被叫回去。货一少，她又有理由让我回家。年年这样。在家一待几个月，等下个旺季再回去。</p>
+<p>那时候我很恨这个，觉得她把我一年都搅黄了。</p>
+<p>可也就是那几个月，我第一次没累到脑子转不动。我是那会儿想明白的。干完 10 个小时回到家，人不会有什么雄心，只剩个空壳。往沙发上一坐，打开 TikTok，刷完又生自己的气。那不叫懒，是油箱真见底了。</p>
+<p>这份工作给的钱，刚好够付账单。给你剩的力气，刚好够你第二天再来上班。十二月他们需要你，到了二月你就成了麻烦。</p>
+<p>后来我不再为刷手机骂自己了。没活干的那几个月，我拿出一部分时间听点东西，一点点还欠的钱，不再每天晚上像盯股票一样盯着自己的日子。慢，也不好看，但一点点攒起来了。</p>
+<p>这个圈，我在 UPS 转了 8 年。我要下来了。</p>
+<p>你要是也在这个圈里转，不是你不行。这个圈本来就是这么设计的。先给自己垫个底。</p>
+<h3 id="发现这活没前途，就赶紧止损"><a href="#发现这活没前途，就赶紧止损" class="headerlink" title="发现这活没前途，就赶紧止损"></a>发现这活没前途，就赶紧止损</h3><p>发现这活没前途，就赶紧止损。</p>
+<p>我落地 LAX 的时候身上 $500，我的美国梦就这么开始了。</p>
+<p>第 3 天：坐 48 小时 Greyhound 去 Little Rock，在一家中餐馆洗碗。</p>
+<p>干了三天就辞了，回 LA。</p>
+<h3 id="500美金来美国第一天什么都不懂的时候，每道门都要收钱"><a href="#500美金来美国第一天什么都不懂的时候，每道门都要收钱" class="headerlink" title="500美金来美国第一天什么都不懂的时候，每道门都要收钱"></a>500美金来美国第一天什么都不懂的时候，每道门都要收钱</h3><p>什么都不懂的时候，每道门都要收钱。</p>
+<p>第 1 晚：LAX 接机、吃饭、住宿，$120。</p>
+<p>第 2 天：办社安号，$250。</p>
+<p>对，办社安号 $250，车钱 $50。</p>
+<p>找工作的中介，$150。</p>
+<p>介绍的活：去 Little Rock 洗碗。</p>
+<p>剩下的钱，买了张去阿肯色的 Greyhound 车票。</p>
+<p>落地时身上 $500，就是这么开始的。</p>
+<h3 id="自己没价值，就没得选"><a href="#自己没价值，就没得选" class="headerlink" title="自己没价值，就没得选"></a>自己没价值，就没得选</h3><p>自己没价值，就没得选。</p>
+<p>在 Little Rock 那个后厨我算明白了：就算洗一辈子碗，我英语还是一句不会说。</p>
+<p>干了三天，够买车票了，我就辞了回 LA。</p>
+<p>过了两天，房东带我去 Bakersfield 一家自助餐馆当 busboy。</p>
+<p>我的工资他先拿走了，抵房租和车费，一次扣清。</p>
+<p>我一句英语都不会，可这些都还不算难。</p>
+<p>最糟的还在后头……</p>
+<h3 id="快钱是最贵的钱"><a href="#快钱是最贵的钱" class="headerlink" title="快钱是最贵的钱"></a>快钱是最贵的钱</h3><p>快钱是最贵的钱。</p>
+<p>我住的地方附近有个赌场。</p>
+<p>大厨常去，就把身无分文的我也带上了。</p>
+<p>上了牌桌，我尝到了来钱又快又容易的那种刺激。</p>
+<p>我以为自己手气好，一直赢。</p>
+<p>输了就说是运气差，还能赢回来。</p>
+<p>结果正好反过来。</p>
+<p>那家餐馆我干了六个月。</p>
+<p>真正落到我自己手里的钱，只有最后两周的工资，$750。</p>
+<p>因为我算明白了：除非你能赢下整个赌场，不然早晚你会彻底输光。</p>
+<p>花 $500 买了辆车。</p>
+<p>离开加州，去了德州休斯顿。那儿没赌场。</p>
+<h3 id="先动起来，留好退路"><a href="#先动起来，留好退路" class="headerlink" title="先动起来，留好退路"></a>先动起来，留好退路</h3><p>先动起来，留好退路。</p>
+<p>到休斯顿第二天，我就开始给一家小中餐馆送外卖。</p>
+<p>一周干 6 天半，没空花钱，油比水还便宜。</p>
+<p>六个月后，我存了 $20,000 多。</p>
+<p>老板越来越难相处。可能是我挣得比他还多。</p>
+<p>我提前两周打了辞职……</p>
+<p>开始准备自己开餐馆。</p>
+<p>结果 56K 的猫上弹出来一条广告，把我勾进去了。</p>
+<p>FOREX，外汇。</p>
+<p>就这条广告，把我后半辈子拐了个弯。</p>
+<h3 id="我走运了"><a href="#我走运了" class="headerlink" title="我走运了"></a>我走运了</h3><p>我那是走运。</p>
+<p>走运不是方法。</p>
+<p>看到广告第二天，我就开了户。</p>
+<p>三台电视，一天到晚放财经新闻。</p>
+<p>大部分我都听不懂。</p>
+<p>八月，美元兑日元在 140 以上。</p>
+<p>我一直卖美元，白天卖，晚上也卖。</p>
+<p>两个月，一路跌到 110。</p>
+<p>$20,000 变成了 $200,000 多。</p>
+<p>1% 保证金。</p>
+<p>只做顺势。</p>
+<p>我以为自己摸到门道了。</p>
+<p>其实没有。</p>
+<p>就是价格一直没掉头。</p>
+<p>我是走运。</p>
+<p>运气不是方法。</p>
+<h3 id="泡沫"><a href="#泡沫" class="headerlink" title="泡沫"></a>泡沫</h3><p>泡沫。</p>
+<p>电视天天在说：互联网就是未来。</p>
+<p>名字里带 .com、.net 的都在猛涨，连个回调都没有。</p>
+<p>泡沫越吹越大。先是 B2C，后来是 B2B。</p>
+<p>每家公司都在卖未来，每个故事听着都像淘金。</p>
+<p>外汇我已经经历过了。运气不会来第二次。</p>
+<p>五个月后，我从外汇里退出来。</p>
+<p>$270K 进了股市。</p>
+<p>纳斯达克快到 2,000 点。</p>
+<p>全仓。</p>
+<p>我以为自己看懂了这个时代。</p>
+<p>未来好像伸手就能够着。</p>
+<p>那就伸手。</p>
+<p>一点没犹豫。</p>
+<h3 id="擦鞋的小孩都给你荐股了，就该走了"><a href="#擦鞋的小孩都给你荐股了，就该走了" class="headerlink" title="擦鞋的小孩都给你荐股了，就该走了"></a>擦鞋的小孩都给你荐股了，就该走了</h3><p>擦鞋的小孩都给你荐股了，就该走了。</p>
+<p>纳斯达克快到 2,000 点。</p>
+<p>哪个台都一个说法：今年上 4,000。</p>
+<p>Netscape、AOL、Yahoo。</p>
+<p>eToys、Pets、Theglobe，上市第一天就翻 5 倍、10 倍。</p>
+<p>几乎没回调。</p>
+<p>一开始我仓位放得小。</p>
+<p>后来笔笔都赚，风控就越看越碍事。</p>
+<p>于是加仓，加杠杆，一路往上压。</p>
+<p>差不多一年后，纳斯达克到了 5,100。</p>
+<p>6,000 好像是早晚的事。</p>
+<p>账户一直在滚。</p>
+<p>我想要七位数。</p>
+<p>我以为，这回我是真搞明白了。</p>
+<h3 id="仓位管理：先看风险，再看利润"><a href="#仓位管理：先看风险，再看利润" class="headerlink" title="仓位管理：先看风险，再看利润"></a>仓位管理：先看风险，再看利润</h3><p>仓位管理：先看风险，再看利润。</p>
+<p>两个月，5,100 跌到 3,000。</p>
+<p>我跟自己说：拿住，只是回调。</p>
+<p>不是。</p>
+<p>追加保证金的通知来了，我往里补钱，补到没钱可补。</p>
+<p>券商把我的账户强平了。</p>
+<p>没仓位了，也没什么好决定的，就剩一个数字。</p>
+<p>不是七位数。</p>
+<p>我在床上躺了两天。</p>
+<p>后来饿了。</p>
+<p>回餐馆，送外卖，回到起点。</p>
+<h3 id="永远别跟朋友合伙做生意"><a href="#永远别跟朋友合伙做生意" class="headerlink" title="永远别跟朋友合伙做生意"></a>永远别跟朋友合伙做生意</h3><p>永远别跟朋友合伙做生意。</p>
+<p>现在回头看，自己都不太敢信。</p>
+<p>股票、外汇，跟我现在的生活一点关系都没有了。</p>
+<p>我亏光了。</p>
+<p>不过也落下一样好处：英语好了很多。</p>
+<p>没上过学，就是三台电视，一天到晚财经新闻。</p>
+<p>我从送外卖干起，一路做到经理，帮老板开了十几家餐馆。</p>
+<p>选址、装修、招人、培训。一家做起来，再去下一家。</p>
+<p>干了八年。</p>
+<p>后来国内一个朋友叫我去上海，跟他一起开餐馆。</p>
+<p>还是那一套。</p>
+<p>一年多，店开起来了。</p>
+<p>接着要做营销，我们意见不合。</p>
+<p>我退出来，认了亏，回了美国。</p>
+<p>他们照着原来的方案接着做，生意起来了。</p>
+<p>可已经跟我没关系了。</p>
+<p>那时候我才明白：不想丢掉好朋友，就别跟他合伙做生意。</p>
+<h3 id="越想做成的生意，越要去找它会砸在哪"><a href="#越想做成的生意，越要去找它会砸在哪" class="headerlink" title="越想做成的生意，越要去找它会砸在哪"></a>越想做成的生意，越要去找它会砸在哪</h3><p>越想做成的生意，越要去找它会砸在哪。</p>
+<p>回美国以后，我还在做餐饮。</p>
+<p>过了几年，我有机会接手一家有名的餐厅，很大的一家。</p>
+<p>我花了三个月研究这笔交易，觉得功课做够了。</p>
+<p>其实我很急。急着赢，急着证明自己，急着当老板。</p>
+<p>销售报表我看了，卖家的话我也听了。</p>
+<p>完整的银行流水我没拿到，资产负债表也没拿到。</p>
+<p>我就签了。</p>
+<p>眼前那份风光，大半是做给人看的。</p>
+<p>后来靠这么多年的经验，才把店做到赚钱。</p>
+<p>那是经验救回来的，跟尽调没关系。</p>
+<h3 id="好日子把人招来"><a href="#好日子把人招来" class="headerlink" title="好日子把人招来"></a>好日子把人招来</h3><p>好日子把人招来，难的时候才看得出谁是真的。</p>
+<p>生意好的时候，身边到处是人。</p>
+<p>社团、各种组织、商界的老板，谁都想认识你。</p>
+<p>后来油价崩了，休斯顿一下子变了。</p>
+<p>石油公司裁员，写字楼关门，没人花钱了。</p>
+<p>我的餐厅是高端的，挨得最狠。</p>
+<p>我想尽办法撑着。不光为我自己，还为 40 个员工和他们的家。</p>
+<p>2017 年，我关了门。</p>
+<p>员工工资一分没欠，供应商的钱也全付清了。</p>
+<p>租约还剩七年多。</p>
+<p>人都散了。账单还在。</p>
+<h3 id="以前的日子没了，也得重新开始"><a href="#以前的日子没了，也得重新开始" class="headerlink" title="以前的日子没了，也得重新开始"></a>以前的日子没了，也得重新开始</h3><p>以前的日子没了，也得重新开始。</p>
+<p>租约还剩 7 年多。</p>
+<p>我签过个人担保。</p>
+<p>房东告我，索赔 $4.5 million。</p>
+<p>那几年，我把手里所有的都砸进去了，就为了让餐厅开着，让 40 个家庭有工资拿。</p>
+<p>没别的路了。</p>
+<p>我申请了破产。</p>
+<p>餐厅没了，一夜暴富的梦也没了。</p>
+<p>UPS 在招人。装车，时薪 $11.25，凌晨 4:30 上班。</p>
+<p>没人问我以前是干什么的。</p>
+<p>两个月后，我当上了司机，时薪 $18.75。</p>
+<p>纸的一边是 $4.5 million，另一边是 $11.25。</p>
+<p>摔得很深。往前也还有路。</p>
+<h3 id="先搞懂规则，再往里冲"><a href="#先搞懂规则，再往里冲" class="headerlink" title="先搞懂规则，再往里冲"></a>先搞懂规则，再往里冲</h3><p>先搞懂规则，再往里冲。</p>
+<p>UPS 是家好公司。</p>
+<p>刚进去的时候，我以为闷头苦干、不抱怨，就能往上走。</p>
+<p>这里不是这么算的。</p>
+<p>这里什么都看资历。</p>
+<p>新人越卖力，活越多。钱不会多，线路也不会变好。</p>
+<p>那几年我没搞懂这套规矩，跟经理也没少争。</p>
+<p>工作、家里，还有这活对身体的消耗，那几年把我耗得差不多了。</p>
+<p>我以前觉得拼命干就够了。</p>
+<p>不够。</p>
+<p>不懂规则，再使劲也是白忙。</p>
+<h3 id="工资停了，脑子转起来了"><a href="#工资停了，脑子转起来了" class="headerlink" title="工资停了，脑子转起来了"></a>工资停了，脑子转起来了</h3><p>工资停了，脑子转起来了。</p>
+<p>那年，我被停工了。</p>
+<p>后来几乎年年都这样。春天一过就停，到了旺季，工会再把我们叫回去。</p>
+<p>上班的日子，加上通勤，一天在外面 14 个多小时。</p>
+<p>回到家累得只能躺沙发上刷手机。</p>
+<p>我以前管这叫懒。</p>
+<p>后来我看了《认知觉醒》。</p>
+<p>很多焦虑、拖延、逃避，其实就是大脑碰上压力和不确定时的反应。</p>
+<p>先看见它，才能开始改。</p>
+<p>停工以后，我总算有时间看书了。投资、税、资产配置。</p>
+<p>存钱的办法也改了。</p>
+<p>以前：先花，剩下的拿去投。</p>
+<p>后来：先投一半，剩下的过日子。</p>
+<p>投资给我留的伤还在。</p>
+<p>外汇让我见识了杠杆有多狠，股票已经让我归过一次零。</p>
+<p>比特币跌破 $5,000 的时候，我一直在买。</p>
+<p>停工拿走了我的工资，给了我一直不够用的东西：时间。</p>
+<p>工资停了，我的脑子才真正开始干活。</p>
+<h3 id="把杯子倒空，低谷就是干这个用的"><a href="#把杯子倒空，低谷就是干这个用的" class="headerlink" title="把杯子倒空，低谷就是干这个用的"></a>把杯子倒空，低谷就是干这个用的</h3><p>把杯子倒空，低谷就是干这个用的。</p>
+<p>杯子满了，新东西倒不进去。</p>
+<p>脑子也一样。</p>
+<p>满脑子委屈、火气和以前的失败，就没地方装新东西了。</p>
+<p>所以每年停工那几个月，我开始倒杯子。</p>
+<p>看书。投资、房地产、税。</p>
+<p>把以前走错的路一条条翻出来，再过一遍。</p>
+<p>后来疫情来了，利率暴跌。</p>
+<p>我判断便宜的钱会把房价推上去。</p>
+<p>破产记录还在，长期房贷我贷不了。</p>
+<p>那就换个办法。</p>
+<p>我不打算长期拿着，交房以后就用不着贷款。</p>
+<p>我卖了一半比特币，那时候已经涨了大概 10 倍。</p>
+<p>拿这笔现金付定金，签了几套新房。</p>
+<p>那时候新房要 14 个月甚至更久才交房。</p>
+<p>我要做的，就是在交钥匙之前找到买家。</p>
+<p>大部分都在 12 个月内加价卖掉了。</p>
+<p>那时候我才真懂：等机会来了再从头学，已经来不及了。</p>
+<p>真正的准备，在机会来之前。</p>
+<h3 id="机会偏爱有准备的头脑"><a href="#机会偏爱有准备的头脑" class="headerlink" title="机会偏爱有准备的头脑"></a>机会偏爱有准备的头脑</h3><p>机会偏爱有准备的头脑。</p>
+<p>市场降温以后，我差不多每晚都上 Zillow 看。</p>
+<p>不是为了买，是为了摸清行情。</p>
+<p>看久了，心里就有底价了：一块地值多少，哪种地几乎从来不挂出来。</p>
+<p>有一天我看到一块 3 英亩的地。</p>
+<p>位置对，大小对，价格也对。</p>
+<p>开发、分割、拿着不动，哪条路都走得通。</p>
+<p>土地本来就在我的配置里。</p>
+<p>备用的钱放在随时能卖的股票里，说打款就能打款。</p>
+<p>我打电话过去，已经签约了。</p>
+<p>两天后，挂牌又回来了。</p>
+<p>再打，又签了。</p>
+<p>这次我没等，直接出价，排了个备位。</p>
+<p>过了几天电话响了。第一份合同黄了，卖家想加点价。</p>
+<p>我重新算了一遍，底价还是划算。</p>
+<p>全现金，三天过户。</p>
+<p>有人会说这是运气，我不争。</p>
+<p>可要是我没下那些功夫看市场，没把钱备好，这单来了我可能都认不出来。</p>
+<p>巴斯德说过：“机会偏爱有准备的头脑。”</p>
+<h3 id="信任代替不了尽调"><a href="#信任代替不了尽调" class="headerlink" title="信任代替不了尽调"></a>信任代替不了尽调</h3><p>信任代替不了尽调。</p>
+<p>有一个短租开发项目，我太看重发起人的名气，还有募资材料里那份过往业绩。</p>
+<p>材料做得很漂亮，用途说得通，预测报表纸面上也算得过来。</p>
+<p>可我查发起人，没像查资产那样下狠功夫。</p>
+<p>后来项目开始走样。</p>
+<p>工期一拖再拖，保险有缺口，报告越来越薄，还在原计划之外要我们追加资金。</p>
+<p>我漏掉的不光是资产这一块，发起人这一块我也没查。</p>
+<p>账户和提款谁说了算？</p>
+<p>有限合伙人有什么检查权、知情权？</p>
+<p>他以前的项目，实际交出来的跟材料上写的差多少？</p>
+<p>他自己的钱，真的跟我绑在一起吗？</p>
+<p>计划崩了，有什么补救的办法？</p>
+<p>这些答案，钱打进托管账户之前就该在档案里。</p>
+<p>我的没有。</p>
+<p>我现在还在这个项目里。结果还没定，教训已经定了。</p>
+<p>查发起人，要跟查那块地一样狠。</p>
+<p>先保住本金。</p>
+<h3 id="我越急，亏得越多"><a href="#我越急，亏得越多" class="headerlink" title="我越急，亏得越多"></a>我越急，亏得越多</h3><p>我越急，亏得越多。</p>
+<p>年轻的时候，我什么都想快。</p>
+<p>外汇快，一分钟就是几千块。</p>
+<p>牛市里，我想一年做到七位数。</p>
+<p>开餐馆也一样，急着赢，急着证明自己，急着坐上老板那把椅子。</p>
+<p>外汇让我见识了杠杆有多狠，股票让我归了零。</p>
+<p>餐馆教会我一件事：越是指望一笔交易能成，越容易看漏它会砸在哪。</p>
+<p>急着要钱，就去追高回报。急着成功，就去买捷径。急着证明自己，事情还没准备好就动手了。</p>
+<p>快没用。后来能爬出来，靠的是我终于学会了等。</p>
+<p>等本事长出来，等门开。</p>
+<p>一急，十年就没了。</p>
+<h3 id="别再追钱了"><a href="#别再追钱了" class="headerlink" title="别再追钱了"></a>别再追钱了</h3><p>别再追钱了。</p>
+<p>我以前老问自己：怎么多挣点？怎么挣得更快？下一个机会在哪？</p>
+<p>后来问题变了：我能做出点什么？我到底擅长什么？什么东西值得花好几年去练？</p>
+<p>开餐馆那些年，靠多年的经验，我把一笔烂交易做到了赚钱。</p>
+<p>在 UPS，天天到岗、把活干好，养活了一家人。</p>
+<p>做投资，最好的机会从来不是一条小道消息给的，是靠对市场的了解。</p>
+<p>钱是结果。</p>
+<p>本事、价值、信任、经验，这些在前面。</p>
+<p>只顾着追钱，可能追一辈子。</p>
+<p>让自己更值钱，钱找上你的机会才更大。</p>
+<h3 id="学逻辑，别抄交易"><a href="#学逻辑，别抄交易" class="headerlink" title="学逻辑，别抄交易"></a>学逻辑，别抄交易</h3><p>学逻辑，别抄交易。</p>
+<p>疫情过后，房市那边我已经看明白了：钱便宜，房子少，价格肯定要动。</p>
+<p>后来我在皮卡上看到了一模一样的局面。</p>
+<p>利率低，需求旺，产量不够，经销商的停车场差不多空了。</p>
+<p>普通新车都要等好几个月，限量版更难拿。</p>
+<p>这款限量 702 台。</p>
+<p>前后我从外州经销商那里买了差不多十几台。</p>
+<p>德州几乎没库存，新车不光要等，还要加价。</p>
+<p>几个月后车到了，在德州很好卖。</p>
+<p>交车之前，每台只要交一点定金。</p>
+<p>那笔生意当时做得通，现在我不会再做了。</p>
+<p>市场变了，供给变了，利率也变了。</p>
+<p>车本身没什么好抄的。要学就学背后那套看法：看供给，看需求，看稀缺，看周期。</p>
+<p>然后去找下一个出现同样逻辑的地方。</p>
+<h3 id="在休息室里等不来出路"><a href="#在休息室里等不来出路" class="headerlink" title="在休息室里等不来出路"></a>在休息室里等不来出路</h3><p>在休息室里等不来出路。</p>
+<p>要是你觉得下面说的是你，就往下看。</p>
+<p>梭罗说过：“大多数人都活在平静的绝望里。”</p>
+<p>每天看主管脸色，看烦了。</p>
+<p>累到睡一觉也缓不过来。</p>
+<p>还是觉得自己停不下来。</p>
+<p>我以前就是这样。</p>
+<p>加上通勤一天 14 个小时。</p>
+<p>回家累得只能往沙发上一倒，刷手机。</p>
+<p>我管这叫懒。</p>
+<p>其实不是，是脑子一直在扛着压力。</p>
+<p>上班的时候，总觉得这辈子就这样了。</p>
+<p>多加点班，搞个副业，找个更热的消息。</p>
+<p>我也没一下子变成另一个人。</p>
+<p>我是从他们让我们回家的那几个月开始的。</p>
+<p>工资停了，我打开一本书，没去刷群聊。</p>
+<p>税、资产配置、房源。</p>
+<p>先投一半，剩下的过日子。</p>
+<p>这些看着一点都不像在赢。</p>
+<p>就是一个安静的房间，外加那天晚上我真看懂了的一件事。</p>
+<p>你要是还在上班，今晚用不着谁给你打鸡血。</p>
+<p>离开那些吵闹一小时就行。看一页书，弄懂一个数字。</p>
+<p>明天早上主管还在那儿。</p>
+<p>出路不在休息室里。</p>
+<h3 id="你们每天早上起来也疼吗（原帖已删除）"><a href="#你们每天早上起来也疼吗（原帖已删除）" class="headerlink" title="你们每天早上起来也疼吗（原帖已删除）"></a>你们每天早上起来也疼吗（原帖已删除）</h3><p>【代拟】UPS 给了我买断，我接了。</p>
+<p>不是冲着那张支票。</p>
+<p>我问过那些老员工：你们是不是也每天早上起来浑身疼？</p>
+<p>他们眼都没眨：“你要是留在 UPS，后半辈子都是这个感觉。”</p>
+<p>身体只是其中一部分。我……</p>
+<h3 id="最后一次打卡，滋味不一样"><a href="#最后一次打卡，滋味不一样" class="headerlink" title="最后一次打卡，滋味不一样"></a>最后一次打卡，滋味不一样</h3><p>最后一次打卡，滋味不一样。</p>
+<p>好多年前，我凌晨 4:30 走进 UPS。</p>
+<p>时薪 $11.25，装车。</p>
+<p>两个月后，当上司机，时薪 $18.75。</p>
+<p>4 年后，时薪 $46.98。</p>
+<p>可最大的变化从来不在工资上。</p>
+<p>后来有了线路，有了一天天的长班，有冲突，有停工，有看书，有投资，一年又一年。</p>
+<p>UPS 从来不是我的梦想，可它成了我过河的那座桥。</p>
+<p>从破产走到安稳。</p>
+<p>从一份工资走到资产。</p>
+<p>从离不开这份工作，走到终于能自己选。</p>
+<p>今天，我最后一次打卡。</p>
+<p>同一栋楼，同一身制服，人已经不一样了。</p>
+<p>有些工作会付你两次钱。一次是钱，一次是它逼你变成的那个人。</p>
+<h3 id="同样的工资，不同的结局"><a href="#同样的工资，不同的结局" class="headerlink" title="同样的工资，不同的结局"></a>同样的工资，不同的结局</h3><p>同样的工资，不同的结局。</p>
+<p>在 UPS，我从 $11.25 起步。</p>
+<p>这份工资让家里的账单付得上。</p>
+<p>干着干着，我不再把它当终点了。</p>
+<p>我拿它去攒资产，给自己多留几条路，自己决定时间怎么花。</p>
+<p>后来我看了看孩子们。</p>
+<p>老大已经上高中了，最小的还小。</p>
+<p>钱还能再挣，童年过去就没了。</p>
+<p>所以我打了最后一次卡。</p>
+<p>我还在这儿，是为了两个人：年轻时候的我，还有我的孩子。</p>
+<p>年轻时候的我，以为钱多了什么都能解决。</p>
+<p>风险、合同、税、投资，都是自己掏钱交学费学来的。</p>
+<p>我的孩子们，也许不用每一课都交全价。</p>
+<p>接下来，我写我现在在做什么。</p>
+<p>买什么，躲什么，还在哪儿犯错。</p>
+<p>我花了好多年攒自由。</p>
+<p>现在想把它教会我的东西传下去。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/17/ianxintx-2122697661081878747/">https://yaoav.github.io/2026/11/17/ianxintx-2122697661081878747/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ianxintx/">@ianxintx</a></div><div class="post-share"><div class="social-share" data-image="/images/2122697661081878747-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/17/rwayne-2122705419630219658/" title="零路考拿美国驾照！中国驾照换领新泽西州（NJ）驾照保姆级指南"><img class="cover" src="/images/2122705419630219658-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">零路考拿美国驾照！中国驾照换领新泽西州（NJ）驾照保姆级指南</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @rwayne（Roland.W） 的长文，原文链接，版权归原作者所有。  最近准备去美东一趟，顺便把新泽西州（New Jersey）的驾照搞定。至于美国驾照的用处，懂的都懂（无论是自驾、当身份证件还是日常使用都非常方便）。 目前来看，支持用中国驾照直接换领或免路考的州主要有华盛顿州、新墨西哥州和新泽西州。其中，新泽西州算是门槛相对最低的，持有中国驾照可以直接免去路考，只需通过笔试即可拿证。我结合了多位网友的实战经验，整理出这份完整攻略，希望对有需要的朋友有所帮助！ 一、 考前预约与准备 官网提前预约：一定要提前在新泽西州 MVC（机动车辆委员会）官网预约 “Initial Permit” 类别，能省去现场大量排队时间。考点推荐：根据网友反馈，Edison 或 Bayonne 考点的现场工作人员相对比较友好，推荐优先选择。    提前打印并填写表格：强烈建议提前在官网下载 BA-208 表格，在家里提前填好并打印出来。省时秘籍：建议直接提前填好并准备 2 份 BA-208 表格（办理 Permit 和正式驾照各需一份），现场预计能节省将近一半的时间！   ...</div></div></div></a><a class="pagination-related" href="/2026/11/17/EianLu-2122676987420623080/" title="How I got 3M views with AI slideshows and Fable 5.2"><img class="cover" src="/images/2122676987420623080-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How I got 3M views with AI slideshows and Fable 5.2</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  By the end of this guide you will have one finished 6-slide AI UGC slideshow, five variations of it and a full week of posts scheduled. It is a method you can repeat on any app or product, on any platform that supports slideshows. What you get is a repeatable way to make good slideshows fast. The slideshow comes out of one simple loop and the loop is what this article is about:  Find a slideshow format that is already working for someone else.  Ha...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E6%88%91%E4%BB%8E%E8%BF%BD%E9%80%90%E9%87%91%E9%92%B1%E5%88%B0%E6%8B%A5%E6%9C%89%E9%80%89%E6%8B%A9%E6%9D%83%E7%9A%84%E8%B4%A2%E5%AF%8C%E8%A7%89%E9%86%92%E4%B9%8B%E6%97%85"><span class="toc-number">1.</span> <span class="toc-text">记录我从追逐金钱到拥有选择权的财富觉醒之旅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2018%E5%B9%B43%E6%9C%8814%E6%97%A5"><span class="toc-number">2.</span> <span class="toc-text">2018年3月14日</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E5%8F%AF%E8%83%BD%E7%9C%9F%E8%AF%A5%E8%B0%A2%E8%B0%A2%E9%82%A3%E4%B8%AA%E6%AF%8F%E5%B9%B4%E9%83%BD%E5%BC%80%E9%99%A4%E6%88%91%E7%9A%84%E7%BB%8F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">我可能真该谢谢那个每年都开除我的经理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E7%8E%B0%E8%BF%99%E6%B4%BB%E6%B2%A1%E5%89%8D%E9%80%94%EF%BC%8C%E5%B0%B1%E8%B5%B6%E7%B4%A7%E6%AD%A2%E6%8D%9F"><span class="toc-number">4.</span> <span class="toc-text">发现这活没前途，就赶紧止损</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#500%E7%BE%8E%E9%87%91%E6%9D%A5%E7%BE%8E%E5%9B%BD%E7%AC%AC%E4%B8%80%E5%A4%A9%E4%BB%80%E4%B9%88%E9%83%BD%E4%B8%8D%E6%87%82%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%AF%8F%E9%81%93%E9%97%A8%E9%83%BD%E8%A6%81%E6%94%B6%E9%92%B1"><span class="toc-number">5.</span> <span class="toc-text">500美金来美国第一天什么都不懂的时候，每道门都要收钱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E6%B2%A1%E4%BB%B7%E5%80%BC%EF%BC%8C%E5%B0%B1%E6%B2%A1%E5%BE%97%E9%80%89"><span class="toc-number">6.</span> <span class="toc-text">自己没价值，就没得选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%92%B1%E6%98%AF%E6%9C%80%E8%B4%B5%E7%9A%84%E9%92%B1"><span class="toc-number">7.</span> <span class="toc-text">快钱是最贵的钱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E5%8A%A8%E8%B5%B7%E6%9D%A5%EF%BC%8C%E7%95%99%E5%A5%BD%E9%80%80%E8%B7%AF"><span class="toc-number">8.</span> <span class="toc-text">先动起来，留好退路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E8%B5%B0%E8%BF%90%E4%BA%86"><span class="toc-number">9.</span> <span class="toc-text">我走运了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A1%E6%B2%AB"><span class="toc-number">10.</span> <span class="toc-text">泡沫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%A6%E9%9E%8B%E7%9A%84%E5%B0%8F%E5%AD%A9%E9%83%BD%E7%BB%99%E4%BD%A0%E8%8D%90%E8%82%A1%E4%BA%86%EF%BC%8C%E5%B0%B1%E8%AF%A5%E8%B5%B0%E4%BA%86"><span class="toc-number">11.</span> <span class="toc-text">擦鞋的小孩都给你荐股了，就该走了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%93%E4%BD%8D%E7%AE%A1%E7%90%86%EF%BC%9A%E5%85%88%E7%9C%8B%E9%A3%8E%E9%99%A9%EF%BC%8C%E5%86%8D%E7%9C%8B%E5%88%A9%E6%B6%A6"><span class="toc-number">12.</span> <span class="toc-text">仓位管理：先看风险，再看利润</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B8%E8%BF%9C%E5%88%AB%E8%B7%9F%E6%9C%8B%E5%8F%8B%E5%90%88%E4%BC%99%E5%81%9A%E7%94%9F%E6%84%8F"><span class="toc-number">13.</span> <span class="toc-text">永远别跟朋友合伙做生意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%8A%E6%83%B3%E5%81%9A%E6%88%90%E7%9A%84%E7%94%9F%E6%84%8F%EF%BC%8C%E8%B6%8A%E8%A6%81%E5%8E%BB%E6%89%BE%E5%AE%83%E4%BC%9A%E7%A0%B8%E5%9C%A8%E5%93%AA"><span class="toc-number">14.</span> <span class="toc-text">越想做成的生意，越要去找它会砸在哪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%BD%E6%97%A5%E5%AD%90%E6%8A%8A%E4%BA%BA%E6%8B%9B%E6%9D%A5"><span class="toc-number">15.</span> <span class="toc-text">好日子把人招来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E5%89%8D%E7%9A%84%E6%97%A5%E5%AD%90%E6%B2%A1%E4%BA%86%EF%BC%8C%E4%B9%9F%E5%BE%97%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B"><span class="toc-number">16.</span> <span class="toc-text">以前的日子没了，也得重新开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E6%90%9E%E6%87%82%E8%A7%84%E5%88%99%EF%BC%8C%E5%86%8D%E5%BE%80%E9%87%8C%E5%86%B2"><span class="toc-number">17.</span> <span class="toc-text">先搞懂规则，再往里冲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E8%B5%84%E5%81%9C%E4%BA%86%EF%BC%8C%E8%84%91%E5%AD%90%E8%BD%AC%E8%B5%B7%E6%9D%A5%E4%BA%86"><span class="toc-number">18.</span> <span class="toc-text">工资停了，脑子转起来了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%8A%E6%9D%AF%E5%AD%90%E5%80%92%E7%A9%BA%EF%BC%8C%E4%BD%8E%E8%B0%B7%E5%B0%B1%E6%98%AF%E5%B9%B2%E8%BF%99%E4%B8%AA%E7%94%A8%E7%9A%84"><span class="toc-number">19.</span> <span class="toc-text">把杯子倒空，低谷就是干这个用的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E4%BC%9A%E5%81%8F%E7%88%B1%E6%9C%89%E5%87%86%E5%A4%87%E7%9A%84%E5%A4%B4%E8%84%91"><span class="toc-number">20.</span> <span class="toc-text">机会偏爱有准备的头脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E4%BB%BB%E4%BB%A3%E6%9B%BF%E4%B8%8D%E4%BA%86%E5%B0%BD%E8%B0%83"><span class="toc-number">21.</span> <span class="toc-text">信任代替不了尽调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E8%B6%8A%E6%80%A5%EF%BC%8C%E4%BA%8F%E5%BE%97%E8%B6%8A%E5%A4%9A"><span class="toc-number">22.</span> <span class="toc-text">我越急，亏得越多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%AB%E5%86%8D%E8%BF%BD%E9%92%B1%E4%BA%86"><span class="toc-number">23.</span> <span class="toc-text">别再追钱了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E9%80%BB%E8%BE%91%EF%BC%8C%E5%88%AB%E6%8A%84%E4%BA%A4%E6%98%93"><span class="toc-number">24.</span> <span class="toc-text">学逻辑，别抄交易</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E4%BC%91%E6%81%AF%E5%AE%A4%E9%87%8C%E7%AD%89%E4%B8%8D%E6%9D%A5%E5%87%BA%E8%B7%AF"><span class="toc-number">25.</span> <span class="toc-text">在休息室里等不来出路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E4%BB%AC%E6%AF%8F%E5%A4%A9%E6%97%A9%E4%B8%8A%E8%B5%B7%E6%9D%A5%E4%B9%9F%E7%96%BC%E5%90%97%EF%BC%88%E5%8E%9F%E5%B8%96%E5%B7%B2%E5%88%A0%E9%99%A4%EF%BC%89"><span class="toc-number">26.</span> <span class="toc-text">你们每天早上起来也疼吗（原帖已删除）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E6%89%93%E5%8D%A1%EF%BC%8C%E6%BB%8B%E5%91%B3%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="toc-number">27.</span> <span class="toc-text">最后一次打卡，滋味不一样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8C%E6%A0%B7%E7%9A%84%E5%B7%A5%E8%B5%84%EF%BC%8C%E4%B8%8D%E5%90%8C%E7%9A%84%E7%BB%93%E5%B1%80"><span class="toc-number">28.</span> <span class="toc-text">同样的工资，不同的结局</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System"><img src="/images/2123133742063706343-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Building an Autonomous Inference System"/></a><div class="content"><a class="title" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System">Building an Autonomous Inference System</a><time datetime="2026-11-19T03:18:24.000Z" title="发表于 2026-11-19 03:18:24">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"><img src="/images/2123098569905516649-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"/></a><div class="content"><a class="title" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日">EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日</a><time datetime="2026-11-19T00:58:38.000Z" title="发表于 2026-11-19 00:58:38">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

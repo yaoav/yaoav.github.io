@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="很多人第一次用 Reddit，要么发的帖子石沉大海，要么账号莫名被封，要么在某个版块被一群人踩到负分、永远不明白发生了什么。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操">
+<meta property="og:url" content="https://yaoav.github.io/2026/09/26/zuohai-2103817677219275125/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="很多人第一次用 Reddit，要么发的帖子石沉大海，要么账号莫名被封，要么在某个版块被一群人踩到负分、永远不明白发生了什么。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2103817677219275125-cover.jpg">
+<meta property="article:published_time" content="2026-09-26T20:03:15.000Z">
+<meta property="article:modified_time" content="2026-11-19T08:45:47.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@zuohai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2103817677219275125-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操",
+  "url": "https://yaoav.github.io/2026/09/26/zuohai-2103817677219275125/",
+  "image": "https://yaoav.github.io/images/2103817677219275125-cover.jpg",
+  "datePublished": "2026-09-26T20:03:15.000Z",
+  "dateModified": "2026-11-19T08:45:47.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/09/26/zuohai-2103817677219275125/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2103817677219275125-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Reddit 上手保姆级教程：从 0 到 1 搞懂规则与发帖实操</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-09-26T20:03:15.000Z" title="发表于 2026-09-26 20:03:15">2026-09-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@zuohai（左海）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2103817677219275125">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>很多人第一次用 Reddit，要么发的帖子石沉大海，要么账号莫名被封，要么在某个版块被一群人踩到负分、永远不明白发生了什么。</p>
+<p>读完这篇，你会知道：</p>
+<ul>
+<li>Reddit 的 Karma 怎么快速积累，从 0 到 100 的最短路径是什么？</li>
+<li>哪些行为会让你被平台「隐形封禁」，自己完全不知情？</li>
+<li>新账号第一天应该做什么、绝对不能做什么？</li>
+<li>常见术语是什么意思（Subreddit、NSFW、Shadowban……）？</li>
+<li>在 Reddit 发什么内容最容易拿高赞、什么样的帖子一发就死（高互动起号逻辑）？</li>
+</ul>
+<blockquote>
+<p>遇到不认识的术语（Subreddit、Karma、NSFW……）？直接跳到文末「<strong>附录一：名词速查表</strong>」查询，再回来读正文。</p>
+</blockquote>
+<h3 id="第一部分：平台认知与规则体系-Introduction-Rules"><a href="#第一部分：平台认知与规则体系-Introduction-Rules" class="headerlink" title="第一部分：平台认知与规则体系 (Introduction &amp; Rules)"></a>第一部分：平台认知与规则体系 (Introduction &amp; Rules)</h3><p><strong>1.1 核心骨架：什么是 Subreddit？为什么都以 “r&#x2F;“ 开头？</strong></p>
+<p>刚接触 Reddit 的新手最常有的疑问是：<strong>为什么大家都在聊什么 <code>r/AskReddit</code>、<code>r/gaming</code>？开头的 <code>r/</code> 到底是什么意思？</strong></p>
+<p>Reddit 并不是一个所有人挤在同一个广场发声的单一信息流平台，而是由数十万个垂直兴趣社区组成的<strong>联邦制大社区</strong>。这些社区被称为 <strong>Subreddit（子版块）</strong>，相当于贴吧里的各个“吧”或豆瓣的“小组”。</p>
+<ul>
+<li><strong>为什么以 <code>r/</code> 开头？</strong></li>
+</ul>
+<p>在 Reddit 的底层架构中，每个子版块在网址上的访问路径都是 <code>reddit.com/r/版块名</code>（这里的 <code>r</code> 就是 <strong>Reddit &#x2F; Subreddit</strong> 的首字母缩写）。久而久之，<code>r/</code> 就演变成了全站通用的子版块前缀代号。</p>
+<blockquote>
+<p><strong>直接访问技巧（拼接域名直达）</strong>：在网上看到别人推荐某个版块（例如 <code>r/AskReddit</code> 或 <code>r/funny</code>），你<strong>完全不需要在站内搜索框费劲翻找</strong>，直接在浏览器地址栏输入 <strong><code>reddit.com/r/版块名</code></strong>（如 <code>reddit.com/r/AskReddit</code>）敲回车，就能瞬间直达该版块首页。<br><strong>站内自动超链接</strong>：在 Reddit 官方 App 或网页的任何帖子、评论中，只要你输入 <code>r/版块名</code>（如 <code>r/technology</code>），系统都会自动把它变成一个可点击的蓝色超链接，读者点击即可无缝跳转。</p>
+</blockquote>
+<ul>
+<li><strong>顺带认知：什么是 <code>u/</code>？</strong></li>
+</ul>
+<blockquote>
+<p>既然 <code>r/</code> 代表版块，那 **<code>u/</code>**就代表用户（User）。<br>每一个用户的个人主页路径就是 <strong><code>reddit.com/u/用户名</code></strong>。在评论区只要打出 <code>u/用户名</code>，不仅会生成该用户的个人主页链接，还会像微信、微博的 <code>@</code> 功能一样向对方发送一条站内强提醒（Reddit 称为“Ping”）。</p>
+</blockquote>
+<p><strong>1.2  账号”试用期”认知</strong></p>
+<p>新注册或低 Karma 账号会自动处于平台的”缓刑&#x2F;试用期（Probationary Period）”。在此期间，发帖、评论可能被系统过滤，且<strong>私信功能（Direct Messaging）受限</strong>。这不是针对个人的封禁，而是全站反垃圾机制。</p>
+<p><strong>1.3  双层规则体系</strong></p>
+<ul>
+<li><strong>全站规则</strong>：所有人必须严格遵守以下三份官方文件：</li>
+</ul>
+<blockquote>
+<p><strong>用户协议（User Agreement）</strong>：规定用户在 Reddit 上的基本权利与义务，包括内容所有权、账号使用限制和平台的免责条款。→ 参见 [链接 1]<br><strong>内容政策（Content Policy）</strong>：列出平台明确禁止的内容类型，如仇恨言论、骚扰、未经授权的色情内容等，是判断内容是否违规的核心依据。→ 参见 [链接 2]<br><strong>社区礼仪准则（Reddiquette）</strong>：Reddit 非官方但被广泛认可的行为规范，涵盖如何投票、如何评论、如何与他人互动等软性礼仪要求。→ 参见 [链接 3]</p>
+</blockquote>
+<ul>
+<li><strong>版块自治规则</strong>：每个 Subreddit 都是独立自治的。版块规则通常位于桌面端的侧边栏（Sidebar）-&gt; 右侧面板中标有”About Community”或”Rules”的区域 或移动端点击版块名称后弹出的「查看社区信息（See community info）」菜单中（部分版块还设有专属 FAQ 或 Wiki）。→ 桌面侧边栏示意图，移动端示意图。不同版块对规则的执行尺度差异极大。</li>
+</ul>
+<p><img src="/images/HTExFeBakAEwI09.jpg" alt="HTExFeBakAEwI09"></p>
+<p><img src="/images/HTExZYnbUAAybMB.png" alt="HTExZYnbUAAybMB"></p>
+<p><strong>1.4  举个规则例子：r&#x2F;NewToReddit 版块自身的 11 条红线（典型严管版块参考）</strong></p>
+<ol>
+<li>保持礼貌友善，仅限 SFW 内容；若个人主页含成人内容，发帖须标记 NSFW。</li>
+<li>每 72 小时限发一帖。</li>
+<li>严禁索要 Karma 或点赞，禁止提及任何免费刷分版块。</li>
+<li>版块推荐与闲聊须使用每周专属汇总帖。</li>
+<li>严禁询问或公开其他版块具体的账号年龄或 Karma 阈值。</li>
+<li>回答问题务必准确、有同理心。</li>
+<li>面对负面情境保持体谅。</li>
+<li>严禁在此推广或营销。</li>
+<li>严禁发泄抱怨、讨论政治或带有特定目的性话题。</li>
+<li>紧扣主题：仅限讨论 Reddit 使用帮助。</li>
+<li><strong>严禁使用 ChatGPT 等大语言模型生成的内容在此回答</strong>。</li>
+</ol>
+<h3 id="第二部分：Karma（经验值）与负分机制-Karma-The-Risky-Bit"><a href="#第二部分：Karma（经验值）与负分机制-Karma-The-Risky-Bit" class="headerlink" title="第二部分：Karma（经验值）与负分机制 (Karma &amp; The Risky Bit)"></a>第二部分：Karma（经验值）与负分机制 (Karma &amp; The Risky Bit)</h3><p><strong>2.1  运作原理与模糊机制</strong></p>
+<ul>
+<li><strong>Karma 定义</strong>：反映用户对平台的积极贡献度，大致等于帖子和评论收到的 Upvotes（赞）减去 Downvotes（踩）。</li>
+<li><strong>非 1:1 计算与投票模糊 (Vote Fuzzing)</strong>：真实投票与 Karma 并非绝对一一对应。Reddit 后台使用防刷分算法，每次刷新页面时显示的票数会轻微上下浮动，属于正常现象。</li>
+<li><strong>默认初始赞</strong>：自己发布的内容系统默认带 1 赞，不增加自身 Karma，仅防止内容初始显示为 0 或负数，<strong>切勿手动取消</strong>。</li>
+<li><strong>分数查看</strong>：通过访问旧版个人明细页面（old.reddit.com&#x2F;user&#x2F;me）可分别查看 Comment Karma（评论分）与 Post Karma（发帖分），以及在各版块的分布。→ 参见 [链接 6]</li>
+</ul>
+<p><strong>2.2  负 Karma 的致命风险</strong></p>
+<ul>
+<li><strong>群体思维点踩 (Hivemind Downvoting)</strong>：Reddit 存在严重的从众跟风点踩现象，有一个专门收录被踩帖子的版块 r&#x2F;DownvotedToOblivion，顾名思义，「被踩进遗忘」：专门汇集那些被集体踩到极低分的内容，既是猎奇区，也是典型反面教材。一旦一条内容开始被踩，路过用户往往会顺手跟踩。</li>
+</ul>
+<p><img src="/images/HTEyG_7a8AA9r31.jpg" alt="HTEyG_7a8AA9r31"></p>
+<ul>
+<li><strong>显示上限与真实负分</strong>：个人主页显示的评论负分上限为 -100（发帖分最低为 0）。但这仅是前台显示上限，后台实际负分可能更深，后续即使获得大量点赞也极难转正。</li>
+<li><strong>负分后果</strong>：大多数正常版块的自动化系统会自动屏蔽或折叠负 Karma 账号的发言。</li>
+<li><strong>止损策略</strong>：一旦发现自己的帖子或评论被连续点踩，<strong>果断直接删除</strong>。虽然已扣掉的分数无法恢复，但能切断从众跟踩链条。</li>
+</ul>
+<p><strong>2.3  避免被点踩与处罚的准则</strong></p>
+<ul>
+<li><strong>严禁滥用 Emoji</strong>：Reddit 传统文化极其反感 Emoji，滥用极易招致无差别点踩。新手期仅允许使用字符表情（如 :) 或 ¯_(ツ)_&#x2F;¯）。</li>
+<li><strong>切勿与人争吵，更绝对不能顶撞版主</strong>：争论只会引来集火点踩；攻击版主会导致直接封禁。</li>
+<li><strong>禁止人身攻击与咒骂</strong>。</li>
+<li><strong>绝对远离 Karma Farms（互赞农场）</strong>：带有 FreeKarma、Karma4Free 标识的版块聚集了大量 Spambot。Reddit 百科全书（r&#x2F;EncyclopaediaOfReddit）中对「用户历史审查机制（User-History Based Moderation）」有详细解释，该机制指版主通过查阅用户在其他版块的发言记录来判断是否为 Spam 账号，在 Karma Farm 版块的记录会被主流版块直接视为红旗，导致全站性封禁。→ 参见 [链接 8]。若情节严重，Reddit 官方还会施加「影子封禁（Shadowban）」：一种账号本人浑然不觉、但所有发言对外人完全不可见的隐形惩罚机制。→ 参见 [链接 9]。除特定求助区外，在普通版块直接讨论或索要 Karma 也会被视为违规。</li>
+</ul>
+<h3 id="第三部分：评论实操与字数规范-Participating-Commenting"><a href="#第三部分：评论实操与字数规范-Participating-Commenting" class="headerlink" title="第三部分：评论实操与字数规范 (Participating: Commenting)"></a>第三部分：评论实操与字数规范 (Participating: Commenting)</h3><p><strong>3.1 进入新版块的观察流程</strong></p>
+<ul>
+<li>浏览前排评论，观察该版块是否接受网络缩写、俚语或特定排版风格。</li>
+<li>检查是否存在<strong>禁用词表</strong>（例如 r&#x2F;AVoid5，一个以「避开字母 E」为唯一规则的极端文字游戏版块，所有帖子和评论中不得出现字母 E，或特定的首层评论格式要求（如 r&#x2F;OutOfTheLoop，所有求解释的帖子必须以标准模板提问）。</li>
+</ul>
+<p><img src="/images/HTEygDuaUAE1oJA.jpg" alt="HTEygDuaUAE1oJA"></p>
+<ul>
+<li>警惕版主审查：版主通常会通过用户历史发言与发帖画像快速判断是否属于水军或捣乱者。</li>
+</ul>
+<p><strong>3.2  评论层级与字符限制</strong></p>
+<ul>
+<li><strong>Parent Comment（父级&#x2F;一级评论）</strong>：在帖子底部的回复框（移动端输入框在屏幕底部悬浮栏，电脑端位于评论区顶部）回复发帖人（OP），OP 会收到系统通知。</li>
+</ul>
+<p><img src="/images/HTEyx2CbEAACZHV.jpg" alt="HTEyx2CbEAACZHV"></p>
+<ul>
+<li><strong>Child Comment（子级评论&#x2F;楼中楼）</strong>：点击某条评论下方的回复箭头，仅被回复的层主会收到通知，OP 不会收到提醒。</li>
+<li><strong>字数限制</strong>：全站单条评论通常上限约为 <strong>6800 个字符</strong>（含隐式 Markdown 语法、标点与空格；部分版块如 r&#x2F;AmItheAsshole：一个专门讨论「我是不是那个混蛋」道德争议帖的社区，设有更低的限制）。长文建议在外部文档写完并核对字数后再粘贴。</li>
+</ul>
+<p><strong>3.3  新手起步实操技巧</strong></p>
+<ul>
+<li><strong>时机筛选</strong>：将版块排序切换为「New（最新）」或「Rising（上升中）」，指正在快速获赞、有潜力冲上首页的帖子，→ 排序按钮位置示意图参见 [链接 15]。在刚发布不久且有潜力的帖子里抢先留下幽默、带梗（双关语 Pun &#x2F; 流行文化梗）或有实质见解的评论，曝光与获赞率最高。</li>
+<li><strong>警惕商品托儿陷阱</strong>：在展示炫酷商品（T恤、马克杯、海报、贴纸）的帖子下<strong>严禁留言互动或询问购买链接</strong>，此类帖子多为恶意诈骗机器人，互动者极易被系统一并判定为同伙封禁。</li>
+</ul>
+<p><img src="/images/HTEzHcxasAAVt8L.png" alt="HTEzHcxasAAVt8L"></p>
+<h3 id="第四部分：低门槛版块过渡-NUFS-List"><a href="#第四部分：低门槛版块过渡-NUFS-List" class="headerlink" title="第四部分：低门槛版块过渡 (NUFS List)"></a>第四部分：低门槛版块过渡 (NUFS List)</h3><p>为解决新账号因没有 Karma 而无法在多数社区发言的矛盾，可通过官方整理的低门槛&#x2F;零门槛新手友好清单（NUFS，New User Friendly Subs）过渡积累基础分：</p>
+<ul>
+<li><strong>官方清单与合集</strong>：r&#x2F;NewToReddit 的 Wiki 页面维护了一份「新用户友好版块」清单，收录了数十个对新账号友好、无 Karma 门槛的版块（→ 参见 [链接 16]），官方还制作了两个可直接订阅的自定义订阅源（Custom Feed，类似精选合集）。</li>
+<li><strong>实操训练地推荐</strong>：</li>
+</ul>
+<blockquote>
+<p><strong>r&#x2F;LearnToReddit</strong>：用于零风险测试发帖、图片上传、投票及 Markdown 排版（粗体、斜体、删除线、剧透文本），社区会有专人指出排版错误。<br><strong>r&#x2F;mildlyinteresting</strong>：分享或评论日常生活中轻度有趣的生活细节，门槛低且氛围友好。<br><strong>r&#x2F;AskReddit</strong>：超大型问答社区。注意其新帖的票数会在前几个小时保持隐藏以避免跟风效应；评论适合使用幽默双关语。<br><strong>r&#x2F;CasualConversation</strong>：生活闲聊区，鼓励真诚、善意的日常交流。</p>
+</blockquote>
+<h3 id="第五部分：发帖规范与格式进阶-Participating-Posting"><a href="#第五部分：发帖规范与格式进阶-Participating-Posting" class="headerlink" title="第五部分：发帖规范与格式进阶 (Participating: Posting)"></a>第五部分：发帖规范与格式进阶 (Participating: Posting)</h3><p><strong>5.1  四类发帖模式与防封红线</strong></p>
+<ul>
+<li><strong>OC (Original Content)</strong>：本人原创内容。</li>
+<li><strong>Repost（转帖&#x2F;重发）</strong>：将旧内容重新发到同一版块。多数社区对短期内的重复发帖容忍度极低，发帖前应通过搜索或 RepostSleuth（一个第三方查重工具，输入帖子链接即可检测是否曾在 Reddit 上出现过，→ 参见 [链接 23]）查重。</li>
+<li><strong>Crosspost (X-post，交叉转发)</strong>：将某版块的帖子通过系统转发到另一版块，规范做法是在标题中明确注明。部分版块禁止转发。</li>
+<li><strong>Multipost（多版同步分发）</strong>：<strong>高危操作</strong>。将完全相同的内容连续群发到多个关联版块，极易触发系统的垃圾邮件过滤并招致全站封号。如需在多个版块讨论同一问题，必须错开发帖时间，并针对各版块调整标题与正文措辞。</li>
+</ul>
+<p><strong>5.2  版块特定标题与标签约束</strong></p>
+<ul>
+<li><strong>标题格式约束</strong>：</li>
+</ul>
+<blockquote>
+<p>r&#x2F;spotted：专门分享「在街头偶遇」某款车的版块，要求标题中的车型名称必须置于方括号 [ ] 内，如 [Toyota Supra] spotted in downtown Tokyo。<br>r&#x2F;tipofmytongue：帮人找「那个叫什么来着」的影视&#x2F;歌曲&#x2F;书籍的版块，仅限纯文本且标题强制包含 [TOMT] 前缀。<br>r&#x2F;news：强制要求发帖标题必须与新闻原文完全一致，严禁二次加工（No editorialized titles）。</p>
+</blockquote>
+<ul>
+<li><strong>标签规范</strong>：</li>
+</ul>
+<blockquote>
+<p><strong>Post Flair</strong>：如 r&#x2F;whereintheworld，一个让人猜照片拍摄地点的版块——强制发帖时必须从下拉菜单选择对应分类标签，未加标签的帖子会被系统秒删。<br><strong>[Serious] 标签</strong>：在 r&#x2F;AskReddit 发帖时，标题加入 [Serious] 会触发 AutoMod 强监管，自动过滤掉所有玩梗和调侃评论。<br><strong>字数上限</strong>：主贴单篇正文字数上限通常为 40,000 个字符。</p>
+</blockquote>
+<p><strong>5.3  高互动起号逻辑：什么样的内容最容易拿高赞？什么样的帖子一发就死？</strong></p>
+<p>在 Reddit 发帖与在传统社交平台完全不同：<strong>用户不是来看你表演的，而是来参与讨论的</strong>。高赞内容本质上是一个个“小型互动装置”——要么给读者一个表达观点的立场，要么给他们留出纠错、帮忙或大笑的空间。</p>
+<p><strong>5.4  7 类最容易拿高赞的起号内容模板</strong></p>
+<ol>
+<li><strong>真实经历帖（具体冲突 &gt; 抽象道理）</strong></li>
+</ol>
+<blockquote>
+<p><strong>核心逻辑</strong>：具体场景 + 具体人物 + 具体冲突。不要发“坚持就会成功”，而是讲一个“我原本只想解决一个小问题，结果引发了大争吵”的真实故事，把结论留给读者。<br><strong>适合版块</strong>：r&#x2F;tifu（搞砸的事）、r&#x2F;offmychest（倾诉）、r&#x2F;relationship_advice（人际关系冲突）。</p>
+</blockquote>
+<p><strong>2.  争议评判帖（AITA 格式：让读者当陪审团）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：以“这件事，是我的问题吗？”为核心。给出双方冲突的理由，邀请社区公开评理。人一旦有了“我要发表意见”的冲动，评论和点赞就会暴涨。<br><strong>直接套用模板</strong>：“我做了 X，理由是 Y，对方觉得我不该这样。你们觉得我过分了吗？”（微小争议往往比绝对正确更容易跑出大流量）。<br><strong>适合版块</strong>：r&#x2F;AmItheAsshole、r&#x2F;AITAH、r&#x2F;AmIOverreacting。</p>
+</blockquote>
+<p><strong>3.  求纠错&#x2F;求优化的实用帖（调动用户的“好为人师”）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：Reddit 用户极度热衷于在专业领域纠错与给出建议。把自己的真实处境、具体数字和背景写出来，把“可以帮你优化”的空间留给评论区。<br><strong>直接套用模板</strong>：“我 28 岁，手里有 8000 美元，每月支出 X，负债 Y，该先还债还是先投资？”（背景和数字越具体，帮你的人越多；空泛提问反而没人理）。<br><strong>适合版块</strong>：r&#x2F;personalfinance（理财）、r&#x2F;fitness（健身）、r&#x2F;learnprogramming（编程）。</p>
+</blockquote>
+<p><strong>4.  展露脆弱的真实瞬间（用生活细节唤起同理心）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：Reddit 是匿名社区，越是真实、甚至普通到有点难堪的瞬间，越容易打动人。删掉“必须自律”的口号，写“我跟着软件打卡一周，站上体重秤发现毫无变化，第一反应不是沮丧而是想把软件卸了”。<br><strong>适合版块</strong>：r&#x2F;loseit（减重打卡）、r&#x2F;solotravel（独自旅行）、r&#x2F;Anxiety。</p>
+</blockquote>
+<p><strong>5.  轻度反常识与争议（Hot take：主动挑起两派辩论）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：抛出一个你真实持有但“大多数人未必认同”的观点。在标题开头直接加上 Hot take: 或 Unpopular opinion:，这是全站通用的辩论信号，读者看到就知道可以进来反驳或站队。<br><strong>标题示例</strong>：“Hot take: most people fail at side hustles because of product selection, not execution.”<br><strong>适合版块</strong>：r&#x2F;unpopularopinion、r&#x2F;changemyview，或任何垂直专业版块。</p>
+</blockquote>
+<p><strong>6. 垂直领域经验问答（AMA：靠高频互动持续顶帖）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：Ask Me Anything（问我任何事）。无需是名人，普通人在垂直领域的特殊经历同样受欢迎（“我在某行业做了 10 年，AMA”、“我裸辞后踩了 3 个坑，AMA”）。通过在评论区高频、真诚地回复每一个提问，算法会把帖子不断推向高热度。<br><strong>适合版块</strong>：r&#x2F;IAmA，或直接在对应的垂直专业版块发布。</p>
+</blockquote>
+<p><strong>7.  反差感极强的梗图 &#x2F; Meme（决策成本最低的吸分利器）</strong></p>
+<blockquote>
+<p><strong>核心逻辑</strong>：图片浏览不需要花时间读长文，只要好笑或扎心，用户划到就会顺手点赞。最好用的是“预期 vs 现实”的双格反差对比图（如 Vibe Coding vs Vibe Debugging）。<br><strong>适合版块</strong>：r&#x2F;memes、r&#x2F;funny，以及各垂直领域的幽默版块（如 r&#x2F;ProgrammerHumor）。</p>
+</blockquote>
+<p><strong>5.5  ❌ 什么样的帖子一发就死？（新手必避的三大雷区）</strong></p>
+<ul>
+<li>| 暴死类型 | 典型表现 | 社区反应与平台后果 |</li>
+<li>| :— | :— | :— |</li>
+<li>| <strong>硬广与营销口吻</strong> | 一上来就推产品链接、用词充满商业吹捧、缺乏个人真实使用场景 | 被用户火速识破并贴上 Shill（托儿）标签，遭遇集中踩入地心并被版主永久封禁。 |</li>
+<li>| <strong>爹味说教与空洞大话</strong> | 居高临下指导读者、“教大家如何做人”、通篇假大空的成功学口号 | 严重违背 Reddit 平等自治与反权威文化，直接被反感嘲讽并折叠。 |</li>
+<li>| <strong>AI 味过浓的机器灌水</strong> | 结构极度死板、排比句泛滥、充斥 ChatGPT 常见句式的长篇套话 | 绝大多数活跃版块明文禁止 AI 生成内容，会被 AutoMod 秒删甚至全站拉黑。 |</li>
+</ul>
+<h3 id="第六部分：社区发现、文化与安全设置-Navigating-Subreddit-Culture"><a href="#第六部分：社区发现、文化与安全设置-Navigating-Subreddit-Culture" class="headerlink" title="第六部分：社区发现、文化与安全设置 (Navigating &amp; Subreddit Culture)"></a>第六部分：社区发现、文化与安全设置 (Navigating &amp; Subreddit Culture)</h3><p><strong>6.1  快速定位垂直社区的官方工具</strong></p>
+<ul>
+<li><strong>精准找版块专区</strong>：</li>
+<li>r&#x2F;findareddit（→ 参见 [链接 28]）：发帖描述你的需求，社区会帮你推荐合适的版块；配套还有一份按主题分类整理的「版块目录（Directory）」（→ 参见 [链接 29]）和「如何找版块指南」（→ 参见 [链接 30]）。</li>
+<li>r&#x2F;findasubreddit（→ 参见 [链接 31]）和 r&#x2F;listofsubreddits（→ 参见 [链接 32]）：功能类似，可互补使用。</li>
+<li><strong>数据与地区导航</strong>：redditlist.com（→ 参见 [链接 33]）按活跃度与增长率列出 Reddit 版块排行榜；r&#x2F;LocationReddits（→ 参见 [链接 34]）按国家、省州、城市索引全球各地的地区专属社区。</li>
+<li><strong>外部检索语法</strong>：在 Google 等引擎中善用修饰符语法定向寻找隐藏版块：</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site:reddit.com + [具体主题关键词]</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.2  社区独特的”文字游戏与误导性命名”文化 (Subreddit Silliness)</strong></p>
+<p>Reddit 拥有大量无法从字面直接理解的特异社区，进入前须核对其实际主题：</p>
+<ul>
+<li><strong>字面拆分&#x2F;双关</strong>：r&#x2F;Superbowl，并非讨论超级碗体育赛事（Super Bowl），而是讨论猫头鹰（Superb Owl，即「极好的猫头鹰」）。</li>
+<li><strong>反向互换</strong>：r&#x2F;trees，是大麻讨论区，而真正的树木园艺讨论区被迫改为了 r&#x2F;marijuanaenthusiasts（→ 参见 [链接 37]）。</li>
+<li><strong>完全反讽&#x2F;字面梗</strong>：r&#x2F;JohnCena，发的全是土豆沙拉图片（因为 John Cena 经典梗是「你看不见我」，土豆沙拉是无厘头延伸）；r&#x2F;bugs（→ 参见 [链接 39]）是 Reddit 官方代码漏洞反馈区，而非昆虫讨论区；r&#x2F;PeopleFuckingDying，并非死亡现场，而是调侃人们内心尴尬与无奈的搞笑动图。</li>
+</ul>
+<p><strong>6.3  敏感内容防护与设置 (NSFW &#x2F; NSFL)</strong></p>
+<ul>
+<li><strong>NSFW 与 NSFL</strong>：</li>
+<li><strong>NSFW (Not Safe For Work)</strong>：涉及裸露、成人内容或粗口。与 NSFW 版块频繁互动会导致个人 Profile 被全局打上 NSFW 标记；NSFW 帖子无法使用原生音视频直传，且上传的图片默认会被强制打码（Blur）。</li>
+<li><strong>NSFL (Not Safe For Life)</strong>：极度令人不适、血腥或极端危险内容（目前平台未设官方独立标签，多以文字警示）。</li>
+<li><strong>浏览安全设置</strong>：在个人 Feed 设置页面（→ 参见 [链接 41]）（或移动端设置中的 Safe Browsing Mode）可自由开启或关闭成人内容显示，以及是否对敏感缩略图开启自动模糊保护。</li>
+</ul>
+<h3 id="第七部分：新手第一天行动清单-Day-1-Checklist"><a href="#第七部分：新手第一天行动清单-Day-1-Checklist" class="headerlink" title="第七部分：新手第一天行动清单 (Day 1 Checklist)"></a>第七部分：新手第一天行动清单 (Day 1 Checklist)</h3><p>前六部分是规则和理论，这一部分是<strong>你打开 Reddit 后实际应该做什么</strong>，按顺序执行，绕过 99% 的新手坑。</p>
+<p><img src="/images/HTE-k-6bQAAgbLc.jpg" alt="HTE-k-6bQAAgbLc"></p>
+<p><strong>✅ 第一步：注册账号（约 5 分钟）</strong></p>
+<ol>
+<li>前往 reddit.com 点击右上角 <strong>Sign Up</strong></li>
+<li>填写用户名（一旦注册无法更改，建议选中性、无个人信息的名字）、邮箱和密码，注意用户名不能取这种格式：<code>xxx_xxx_数字</code>，因为老外已经认定这种就是机器人账号</li>
+<li>完成邮箱验证——这一步非常重要，未验证邮箱的账号在很多版块会被直接屏蔽</li>
+<li>头像和个人简介可以之后再填，但填了有助于降低被版主怀疑是机器人账号的概率</li>
+</ol>
+<blockquote>
+<p>用户名一旦注册无法修改。如果你不知道取什么名字，可以随机生成一个，日后想要新身份直接注册新号即可。</p>
+</blockquote>
+<p><strong>✅ 第二步：前 3 天，只看不发（潜水期）</strong></p>
+<p>新账号没有 Karma，在大多数版块没有发言权。这段时间的任务是：</p>
+<ul>
+<li><strong>订阅 3~5 个你真正感兴趣的版块</strong>（用 r&#x2F;findareddit 搜你想找的主题）</li>
+<li><strong>把版块排序切换到「Hot」</strong>，读前 20 条帖子，感受这个社区的氛围和语气</li>
+<li><strong>阅读版块侧边栏的规则</strong>（Rules），找到会被秒删或封号的红线</li>
+<li><strong>不要急着发帖或评论</strong>，先观察版块里什么内容能获赞，什么内容会被踩到消失</li>
+</ul>
+<p><strong>✅ 第三步：从评论开始积累 Karma</strong></p>
+<p>比发帖风险低得多，是新手最快的起步方式：</p>
+<ol>
+<li>打开 <strong>r&#x2F;AskReddit</strong> 或 <strong>r&#x2F;CasualConversation</strong></li>
+<li>排序切换到 <strong>「Rising（上升中）」</strong>，找刚发不久、评论还不多的帖子</li>
+<li>留一条<strong>有实质内容</strong>的评论：回答问题、分享经历、讲一个相关故事</li>
+<li>避免只说「Great post!」「I agree」等空话，这类评论会被踩</li>
+</ol>
+<blockquote>
+<p>**[重要] **第一条评论后，等获得至少 1~2 个赞再继续发下一条。别在短时间内高频发送大量评论，会触发反垃圾机制。</p>
+</blockquote>
+<p><strong>✅ 第四步：在零门槛版块练手</strong></p>
+<p>去 <strong>r&#x2F;LearnToReddit</strong> 练习：</p>
+<ul>
+<li>发一条测试帖，测试 Markdown 排版（粗体、斜体、链接）</li>
+<li>上传一张图片</li>
+<li>给别人的帖子点赞和踩</li>
+<li>如果排版有问题，社区里的热心用户会直接指出来</li>
+</ul>
+<p><strong>✅ 第五步：攒到 50~100 Karma 后，开始正式参与</strong></p>
+<p>有了基础 Karma 之后：</p>
+<ul>
+<li>可以在大多数普通版块正常评论和发帖</li>
+<li>进入你感兴趣的垂直社区（如摄影、编程、某个游戏），用真实经验和见解参与讨论</li>
+<li>发帖时检查版块规则，选对 Flair，标题写清楚</li>
+</ul>
+<p><strong>❌ 新手最常见的致命错误（避开这些）</strong></p>
+<ul>
+<li>| 错误行为 | 后果 |</li>
+<li>| ———- | —— |</li>
+<li>| 第一天就大量发帖 | 触发反垃圾系统，帖子被自动过滤，可能 Shadowban |</li>
+<li>| 去 Karma Farm 版块刷分 | 被主流版块用户历史检查机制全站拉黑 |</li>
+<li>| 在帖子里放 Emoji 🎉🔥 | 被集体点踩，Karma 快速归零 |</li>
+<li>| 与版主争论 | 直接封禁，无上诉余地 |</li>
+<li>| 相同内容同时发到多个版块 | 触发 Spam 过滤，全站封号 |</li>
+</ul>
+<h3 id="附录一：名词速查表"><a href="#附录一：名词速查表" class="headerlink" title="附录一：名词速查表"></a>附录一：名词速查表</h3><p>打开 Reddit 会频繁看到以下术语，遇到不认识的词直接来这里查。</p>
+<ul>
+<li>| 术语 | 全称 &#x2F; 来源 | 一句话解释 |</li>
+<li>| —— | ———— | ———— |</li>
+<li>| <strong>Subreddit（子版块）</strong> | Sub &#x3D; 子，Reddit &#x3D; 社区 | Reddit 是由无数个独立版块组成的平台，每个版块聚焦一个主题，命名格式为 <code>r/版块名</code>，如 <code>r/gaming</code>（游戏）、<code>r/China</code>（中国话题）。可以把它理解成微博的超话或贴吧的某个吧。 |</li>
+<li>| <strong>Karma（经验值）</strong> | 梵文「业力」，在 Reddit 中代指贡献值 | 你发的帖子和评论每收到一个赞（Upvote）+1，每收到一个踩（Downvote）-1。Karma 是平台信任度的核心指标，很多版块要求账号达到一定 Karma 才能发言。分为 Post Karma（发帖分）和 Comment Karma（评论分）两类。 |</li>
+<li>| <strong>Upvote &#x2F; Downvote</strong> | Up &#x3D; 向上，Down &#x3D; 向下 | 赞 &#x2F; 踩。Reddit 没有「转发」，投票是内容传播的唯一驱动力。高赞内容会被算法推到版块首页。 |</li>
+<li>| <strong>NSFW</strong> | Not Safe For Work（上班不宜观看） | 标记含有裸露、成人内容或粗口的帖子，相当于「18+ 警告」。点进 NSFW 内容前平台会弹出确认提示。 |</li>
+<li>| <strong>NSFL</strong> | Not Safe For Life（不适宜任何人观看） | 比 NSFW 更极端，指血腥、暴力或极度令人不适的内容，平台无官方独立标签，通常用文字警告代替。 |</li>
+<li>| <strong>OP</strong> | Original Poster（原帖发布者） | 评论区里的「楼主」，即发出该帖子的那个人。 |</li>
+<li>| <strong>OC</strong> | Original Content（原创内容） | 强调内容是本人原创，非转载搬运，通常会附上 <code>[OC]</code> 标签。 |</li>
+<li>| <strong>Flair（标签 &#x2F; 标记）</strong> | 英文「装饰」 | 版块给帖子或用户打的分类标签。帖子 Flair 用于分类（如「[问题]」「[教程]」），用户 Flair 则显示在用户名旁边，由版主自定义设置。部分版块强制要求发帖时必须选择 Flair。 |</li>
+<li>| <strong>Shadowban（影子封禁）</strong> | Shadow &#x3D; 影子，Ban &#x3D; 封禁 | 一种隐形封禁。被 Shadowban 的账号本人看上去一切正常，但发的内容对其他所有人不可见，系统不会任何通知。可通过无痕窗口或退出登录后查看自己主页来检测是否中招。 |</li>
+<li>| <strong>Mod &#x2F; Moderator（版主）</strong> | Moderator &#x3D; 管理员 | 各版块的志愿者管理员，拥有删帖、封人、设定版块规则的权力。与 Reddit 官方员工（Admin）不同，Mod 是普通用户担任的角色。 |</li>
+<li>| <strong>AutoMod</strong> | AutoModerator（自动化版主机器人） | 版主配置的自动化脚本，负责自动过滤违规内容、发欢迎帖、检查 Karma 门槛等，是版块的第一道防线。 |</li>
+<li>| <strong>Crosspost（交叉转发）</strong> | Cross &#x3D; 跨越，Post &#x3D; 帖子 | 将某版块的帖子通过 Reddit 自带功能正式转发到另一个版块，源帖链接会被保留。 |</li>
+<li>| <strong>AMA</strong> | Ask Me Anything（问我任何问题） | Reddit 特有的公开问答活动，由名人、专家或有趣经历的普通人开帖，邀请所有人提问。 |</li>
+<li>| <strong>TIL</strong> | Today I Learned（今天我学到了） | 常见于 <code>r/todayilearned</code>，分享刚知道的冷知识或有趣事实。 |</li>
+<li>| <strong>Repost（重复帖）</strong> | Re &#x3D; 再次，Post &#x3D; 发帖 | 将已有内容重新发到同一版块，大多数社区对此容忍度极低，发帖前建议先搜索查重。 |</li>
+<li>| <strong>SFW</strong> | Safe For Work（上班可以看） | NSFW 的反义词，指内容安全、无成人元素，适合在公共场合浏览。 |</li>
+<li>| <strong>Karma Farm &#x2F; 互赞农场</strong> | — | 专门靠相互点赞快速刷分的版块，聚集大量机器人账号。在此类版块活动会被主流版块列入黑名单。 |</li>
+</ul>
+<h3 id="附录二：来源与参考链接"><a href="#附录二：来源与参考链接" class="headerlink" title="附录二：来源与参考链接"></a>附录二：来源与参考链接</h3><blockquote>
+<p>以下链接按正文出现顺序编号。部分链接为 Reddit 站内图片，用于说明界面位置。</p>
+</blockquote>
+<ul>
+<li>| 编号 | 说明 | 链接 |</li>
+<li>| —— | —— | —— |</li>
+<li>| [链接 1] | Reddit 用户协议（User Agreement） | <a target="_blank" rel="noopener" href="https://www.redditinc.com/policies/user-agreement">https://www.redditinc.com/policies/user-agreement</a> |</li>
+<li>| [链接 2] | Reddit 内容政策（Content Policy） | <a target="_blank" rel="noopener" href="https://www.redditinc.com/policies/content-policy">https://www.redditinc.com/policies/content-policy</a> |</li>
+<li>| [链接 3] | Reddit 社区礼仪准则（Reddiquette） | <a target="_blank" rel="noopener" href="https://reddit.zendesk.com/hc/en-us/articles/205926439-Reddiquette">https://reddit.zendesk.com/hc/en-us/articles/205926439-Reddiquette</a> |</li>
+<li>| [链接 4] | 桌面端侧边栏位置示意图 | <a target="_blank" rel="noopener" href="https://i.redd.it/oo387umxmbfb1.jpg">https://i.redd.it/oo387umxmbfb1.jpg</a> |</li>
+<li>| [链接 5] | 移动端「查看社区信息」示意图 | <a target="_blank" rel="noopener" href="https://i.redd.it/4efgsk49jbfb1.jpg">https://i.redd.it/4efgsk49jbfb1.jpg</a> |</li>
+<li>| [链接 6] | 旧版 Reddit 个人 Karma 明细页 | <a target="_blank" rel="noopener" href="https://old.reddit.com/user/me/">https://old.reddit.com/user/me/</a> |</li>
+<li>| [链接 7] | r&#x2F;DownvotedToOblivion（被踩帖合集） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/DownvotedToOblivion/">https://www.reddit.com/r/DownvotedToOblivion/</a> |</li>
+<li>| [链接 8] | 用户历史审查机制说明（r&#x2F;EncyclopaediaOfReddit） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/EncyclopaediaOfReddit/comments/110nh0k/userhistory_based_moderation/">https://www.reddit.com/r/EncyclopaediaOfReddit/comments/110nh0k/userhistory_based_moderation/</a> |</li>
+<li>| [链接 9] | 影子封禁说明（r&#x2F;EncyclopaediaOfReddit） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/EncyclopaediaOfReddit/comments/110nafl/shadowban/">https://www.reddit.com/r/EncyclopaediaOfReddit/comments/110nafl/shadowban/</a> |</li>
+<li>| [链接 10] | r&#x2F;AVoid5（禁用字母 E 的文字游戏版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/AVoid5/">https://www.reddit.com/r/AVoid5/</a> |</li>
+<li>| [链接 11] | r&#x2F;OutOfTheLoop（求解释热点事件版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/OutOfTheLoop/">https://www.reddit.com/r/OutOfTheLoop/</a> |</li>
+<li>| [链接 12] | 移动端评论输入框示意图 | <a target="_blank" rel="noopener" href="https://i.redd.it/aflunndmqvfb1.jpg">https://i.redd.it/aflunndmqvfb1.jpg</a> |</li>
+<li>| [链接 13] | 电脑端评论输入框示意图 | <a target="_blank" rel="noopener" href="https://i.redd.it/7sa0cd2ksvfb1.jpg">https://i.redd.it/7sa0cd2ksvfb1.jpg</a> |</li>
+<li>| [链接 14] | r&#x2F;AmItheAsshole（道德争议问答版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/AmItheAsshole/">https://www.reddit.com/r/AmItheAsshole/</a> |</li>
+<li>| [链接 15] | 版块排序按钮（New&#x2F;Rising）位置示意图 | <a target="_blank" rel="noopener" href="https://i.redd.it/hi4w88migjq81.jpg">https://i.redd.it/hi4w88migjq81.jpg</a> |</li>
+<li>| [链接 16] | r&#x2F;NewToReddit 新用户友好版块 Wiki 清单 | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/NewToReddit/wiki/index/newusersubs">https://www.reddit.com/r/NewToReddit/wiki/index/newusersubs</a> |</li>
+<li>| [链接 17] | 官方新手友好自定义订阅源 1 | <a target="_blank" rel="noopener" href="https://www.reddit.com/user/solariahues/m/newuser_friendly_subs/">https://www.reddit.com/user/solariahues/m/newuser_friendly_subs/</a> |</li>
+<li>| [链接 18] | 官方新手友好自定义订阅源 2 | <a target="_blank" rel="noopener" href="https://www.reddit.com/user/solariahues/m/newuser_friendly_subs_2/">https://www.reddit.com/user/solariahues/m/newuser_friendly_subs_2/</a> |</li>
+<li>| [链接 19] | r&#x2F;LearnToReddit（新手练习区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/LearnToReddit/">https://www.reddit.com/r/LearnToReddit/</a> |</li>
+<li>| [链接 20] | r&#x2F;mildlyinteresting（轻度有趣内容区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/mildlyinteresting/">https://www.reddit.com/r/mildlyinteresting/</a> |</li>
+<li>| [链接 21] | r&#x2F;AskReddit（超大型问答社区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/AskReddit/">https://www.reddit.com/r/AskReddit/</a> |</li>
+<li>| [链接 22] | r&#x2F;CasualConversation（生活闲聊区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/CasualConversation/">https://www.reddit.com/r/CasualConversation/</a> |</li>
+<li>| [链接 23] | RepostSleuth（第三方 Reddit 查重工具） | <a target="_blank" rel="noopener" href="https://repostsleuth.com/">https://repostsleuth.com</a> |</li>
+<li>| [链接 24] | r&#x2F;spotted（街头偶遇车辆分享版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/spotted/">https://www.reddit.com/r/spotted/</a> |</li>
+<li>| [链接 25] | r&#x2F;tipofmytongue（帮找「那个叫什么来着」版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/tipofmytongue/">https://www.reddit.com/r/tipofmytongue/</a> |</li>
+<li>| [链接 26] | r&#x2F;news（新闻版块，标题须原文照搬） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/news/">https://www.reddit.com/r/news/</a> |</li>
+<li>| [链接 27] | r&#x2F;whereintheworld（猜照片拍摄地点版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/whereintheworld/">https://www.reddit.com/r/whereintheworld/</a> |</li>
+<li>| [链接 28] | r&#x2F;findareddit（帮找合适版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/findareddit/">https://www.reddit.com/r/findareddit/</a> |</li>
+<li>| [链接 29] | r&#x2F;findareddit 版块主题目录 | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/findareddit/wiki/directory">https://www.reddit.com/r/findareddit/wiki/directory</a> |</li>
+<li>| [链接 30] | 如何找到合适版块的官方指南 | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/findareddit/wiki/howtofindasubreddit/">https://www.reddit.com/r/findareddit/wiki/howtofindasubreddit/</a> |</li>
+<li>| [链接 31] | r&#x2F;findasubreddit（找版块辅助区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/findasubreddit/">https://www.reddit.com/r/findasubreddit/</a> |</li>
+<li>| [链接 32] | r&#x2F;listofsubreddits（版块列表汇总） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/listofsubreddits/">https://www.reddit.com/r/listofsubreddits/</a> |</li>
+<li>| [链接 33] | redditlist.com（版块活跃度排行榜） | <a target="_blank" rel="noopener" href="http://www.redditlist.com/">http://www.redditlist.com/</a> |</li>
+<li>| [链接 34] | r&#x2F;LocationReddits 地区社区索引 | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/LocationReddits/wiki/index">https://www.reddit.com/r/LocationReddits/wiki/index</a> |</li>
+<li>| [链接 35] | r&#x2F;Superbowl（猫头鹰版块，非超级碗） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/Superbowl/">https://www.reddit.com/r/Superbowl/</a> |</li>
+<li>| [链接 36] | r&#x2F;trees（大麻讨论区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/trees/">https://www.reddit.com/r/trees/</a> |</li>
+<li>| [链接 37] | r&#x2F;marijuanaenthusiasts（树木园艺讨论区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/marijuanaenthusiasts/">https://www.reddit.com/r/marijuanaenthusiasts/</a> |</li>
+<li>| [链接 38] | r&#x2F;JohnCena（土豆沙拉版块） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/JohnCena/">https://www.reddit.com/r/JohnCena/</a> |</li>
+<li>| [链接 39] | r&#x2F;bugs（Reddit 官方代码漏洞反馈区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/bugs/">https://www.reddit.com/r/bugs/</a> |</li>
+<li>| [链接 40] | r&#x2F;PeopleFuckingDying（尴尬搞笑动图区） | <a target="_blank" rel="noopener" href="https://www.reddit.com/r/PeopleFuckingDying/">https://www.reddit.com/r/PeopleFuckingDying/</a> |</li>
+<li>| [链接 41] | Reddit 个人 Feed 安全设置页 | <a target="_blank" rel="noopener" href="https://www.reddit.com/settings/feed">https://www.reddit.com/settings/feed</a> |</li>
+</ul>
+<p><strong>另外我的个人主页还有好多运营Reddit 平台的干货，进来看看吧：</strong></p>
+<p><strong>1、 如果你需要了解，如何从 0 到 1 用 Reddit 10 分钟挖出海外真实需求与选品机会，可以查看这篇：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2100578940054294911">https://x.com/heizolshao/status/2100578940054294911</a></p>
+<p><strong>2、如果你发帖全被秒删？或者想快速把 Reddit 账号的 CQS 提升起来。可以查看这篇：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2100083029662367901">https://x.com/heizolshao/status/2100083029662367901</a></p>
+<p><strong>3、如果你看不懂 Reddit 标题的上的短语，可以查看这篇文章：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2099470014193836210">https://x.com/heizolshao/status/2099470014193836210</a></p>
+<p><strong>4、如果你想看看我的近万 Karma 账号被封的经验，可以查看这篇文章：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2099164807748575422">https://x.com/heizolshao/status/2099164807748575422</a></p>
+<p><strong>5. 如果你想知道如何快速增长 Karma值，可以查看这篇文章：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2101454181685178415">https://x.com/heizolshao/status/2101454181685178415</a></p>
+<p><strong>6. 如果你知道为什么你在 Reddit 自导自演推广产品，老外一眼就能看出来？，可以查看这篇文章：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2102678302284747009">https://x.com/heizolshao/status/2102678302284747009</a></p>
+<ol start="7">
+<li>运营案例：<strong>一个空气炸锅独立站，怎么靠 Reddit 和 AI 搜索把日单从30做上210？可以查看这篇文章：</strong></li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://x.com/heizolshao/status/2103130112334160020">https://x.com/heizolshao/status/2103130112334160020</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/09/26/zuohai-2103817677219275125/">https://yaoav.github.io/2026/09/26/zuohai-2103817677219275125/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/zuohai/">@zuohai</a></div><div class="post-share"><div class="social-share" data-image="/images/2103817677219275125-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/26/leaf_sanren-2103835904670658995/" title="7 万人围观的 AI 剪辑片子：教程 + 开源都在这"><img class="cover" src="/images/2103835904670658995-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">7 万人围观的 AI 剪辑片子：教程 + 开源都在这</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @leaf_sanren（Leaf Yeah!） 的长文，原文链接，版权归原作者所有。  前两天我发的那条 AI 剪辑 demo，比我预想的火多了。7.5w人浏览，给我这小破号涨了400粉。 评论问得最多的就两句：怎么做的？能不能开源？ 能！！ 整套流程我做成了开源项目 SeeCut，一句话就能装。 小目录  1｜为什么自己做：AI 剪辑都停在粗剪 2｜一句话安装，剩下的 AI 带你走 3｜为什么它能剪出网感：4 个关键设计 4｜三步流水线：数字人 → 网感精剪 → 剪映草稿 5｜还不够好的地方  ⭐ 开源地址：github.com&#x2F;YeJe-cpu&#x2F;SeeCut ─── 1. 为什么自己做：AI 剪辑都停在粗剪我想要的，是 AI 自动化的网感精剪。 注意，是精剪，不是粗剪。 剪气口、去口癖的工具，网上一大把。我要的是知识区那种口播：画面有料，每句话都有东西跟着动，讲到哪个产品，就出现哪个产品的真界面。 过去 3 周，我把能找到的 AI 剪辑开源项目几乎试了个遍。 结果很扎心：  效果到不了。 大多停在粗剪，动效谈不上丰富完整。 样片复...</div></div></div></a><a class="pagination-related" href="/2026/09/26/alexandr_wang-2103551714536439951/" title="Why We're Building Muse"><img class="cover" src="/images/2103551714536439951-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Why We're Building Muse</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @alexandr_wang（Alexandr Wang） 的长文，原文链接，版权归原作者所有。  Most people never say what they want. It’s not because we don’t want. We want fiercely and constantly. It happens in the moments before falling asleep or while daydreaming on the car ride home. We want to spend more time with our families, overcome social anxiety, eat healthier food, open a bakery, build an app, or just find a few more moments of calm in a hectic life. But rarely do we get to even express these dreams, and even mor...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">306</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">162</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E5%B9%B3%E5%8F%B0%E8%AE%A4%E7%9F%A5%E4%B8%8E%E8%A7%84%E5%88%99%E4%BD%93%E7%B3%BB-Introduction-Rules"><span class="toc-number">1.</span> <span class="toc-text">第一部分：平台认知与规则体系 (Introduction &amp; Rules)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9AKarma%EF%BC%88%E7%BB%8F%E9%AA%8C%E5%80%BC%EF%BC%89%E4%B8%8E%E8%B4%9F%E5%88%86%E6%9C%BA%E5%88%B6-Karma-The-Risky-Bit"><span class="toc-number">2.</span> <span class="toc-text">第二部分：Karma（经验值）与负分机制 (Karma &amp; The Risky Bit)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A%E8%AF%84%E8%AE%BA%E5%AE%9E%E6%93%8D%E4%B8%8E%E5%AD%97%E6%95%B0%E8%A7%84%E8%8C%83-Participating-Commenting"><span class="toc-number">3.</span> <span class="toc-text">第三部分：评论实操与字数规范 (Participating: Commenting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%EF%BC%9A%E4%BD%8E%E9%97%A8%E6%A7%9B%E7%89%88%E5%9D%97%E8%BF%87%E6%B8%A1-NUFS-List"><span class="toc-number">4.</span> <span class="toc-text">第四部分：低门槛版块过渡 (NUFS List)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%EF%BC%9A%E5%8F%91%E5%B8%96%E8%A7%84%E8%8C%83%E4%B8%8E%E6%A0%BC%E5%BC%8F%E8%BF%9B%E9%98%B6-Participating-Posting"><span class="toc-number">5.</span> <span class="toc-text">第五部分：发帖规范与格式进阶 (Participating: Posting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E9%83%A8%E5%88%86%EF%BC%9A%E7%A4%BE%E5%8C%BA%E5%8F%91%E7%8E%B0%E3%80%81%E6%96%87%E5%8C%96%E4%B8%8E%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE-Navigating-Subreddit-Culture"><span class="toc-number">6.</span> <span class="toc-text">第六部分：社区发现、文化与安全设置 (Navigating &amp; Subreddit Culture)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E9%83%A8%E5%88%86%EF%BC%9A%E6%96%B0%E6%89%8B%E7%AC%AC%E4%B8%80%E5%A4%A9%E8%A1%8C%E5%8A%A8%E6%B8%85%E5%8D%95-Day-1-Checklist"><span class="toc-number">7.</span> <span class="toc-text">第七部分：新手第一天行动清单 (Day 1 Checklist)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95%E4%B8%80%EF%BC%9A%E5%90%8D%E8%AF%8D%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="toc-number">8.</span> <span class="toc-text">附录一：名词速查表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95%E4%BA%8C%EF%BC%9A%E6%9D%A5%E6%BA%90%E4%B8%8E%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">附录二：来源与参考链接</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"><img src="/images/2123160014722416933-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？"/></a><div class="content"><a class="title" href="/2026/11/19/coldsake_-2123160014722416933/" title="Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？">Research Proposal 怎么写？ 你的潜在导师们究竟想看到什么？</a><time datetime="2026-11-19T05:02:48.000Z" title="发表于 2026-11-19 05:02:48">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry "><img src="/images/2123134635844518242-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Monitor your CI performance using Sentry "/></a><div class="content"><a class="title" href="/2026/11/19/sentry-2123134635844518242/" title="Monitor your CI performance using Sentry ">Monitor your CI performance using Sentry </a><time datetime="2026-11-19T03:21:57.000Z" title="发表于 2026-11-19 03:21:57">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System"><img src="/images/2123133742063706343-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Building an Autonomous Inference System"/></a><div class="content"><a class="title" href="/2026/11/19/lrzneedresearch-2123133742063706343/" title="Building an Autonomous Inference System">Building an Autonomous Inference System</a><time datetime="2026-11-19T03:18:24.000Z" title="发表于 2026-11-19 03:18:24">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img src="/images/2123114718378529265-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nvidia Q3 Earnings Report: Reading Between the Lines  "/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  ">Nvidia Q3 Earnings Report: Reading Between the Lines  </a><time datetime="2026-11-19T02:02:49.000Z" title="发表于 2026-11-19 02:02:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"><img src="/images/2123098569905516649-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日"/></a><div class="content"><a class="title" href="/2026/11/19/Sophie06344746-2123098569905516649/" title="EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日">EP41 【 不做文憑的奴隸：用投資贖回自由，給孩子真正快樂的未來！ 】2026年11月18日</a><time datetime="2026-11-19T00:58:38.000Z" title="发表于 2026-11-19 00:58:38">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
