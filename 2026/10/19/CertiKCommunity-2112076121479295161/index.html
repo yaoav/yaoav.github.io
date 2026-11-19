@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PopDEX Open Beta Is Live: The Trader-First Perp DEX | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Built for real trading: execution, transparency, and value that work for the tra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PopDEX Open Beta Is Live: The Trader-First Perp DEX">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/19/CertiKCommunity-2112076121479295161/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Built for real trading: execution, transparency, and value that work for the tra">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2112076121479295161-cover.jpg">
+<meta property="article:published_time" content="2026-10-19T14:59:22.000Z">
+<meta property="article:modified_time" content="2026-11-20T07:12:34.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@CertiKCommunity">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2112076121479295161-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PopDEX Open Beta Is Live: The Trader-First Perp DEX",
+  "url": "https://yaoav.github.io/2026/10/19/CertiKCommunity-2112076121479295161/",
+  "image": "https://yaoav.github.io/images/2112076121479295161-cover.jpg",
+  "datePublished": "2026-10-19T14:59:22.000Z",
+  "dateModified": "2026-11-20T07:12:34.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/19/CertiKCommunity-2112076121479295161/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PopDEX Open Beta Is Live: The Trader-First Perp DEX',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">344</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">176</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2112076121479295161-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">PopDEX Open Beta Is Live: The Trader-First Perp DEX</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">PopDEX Open Beta Is Live: The Trader-First Perp DEX</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-19T14:59:22.000Z" title="发表于 2026-10-19 14:59:22">2026-10-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@CertiKCommunity（CertiK Skynet）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2112076121479295161">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<blockquote>
+<p><strong>Built for real trading: execution, transparency, and value that work for the traders who make the market.</strong></p>
+</blockquote>
+<p>An exchange ultimately earns its place through every trade it executes. For traders, competitive fees are only part of the equation. What matters is the price they actually get, whether execution remains reliable during volatile markets, how efficiently their capital can be deployed, and whether they can verify what actually happened. These are the fundamentals of trading. Rewards matter too, but they should be built on these fundamentals, not used to replace them.</p>
+<p><strong>PopDEX starts with the trader.</strong> <strong>Trader-first shows up in two places: how the product is built, and how trading is rewarded.</strong></p>
+<p>**In product design, **every feature answers to those fundamentals: low fees and deep liquidity, so traders get better prices even on size; a fully on-chain order book, so every trade can be verified; high-performance execution, so orders hold up when markets move fast; and a unified account across crypto, equities, and commodities, so capital works across markets instead of sitting idle.</p>
+<p><strong>In incentive design</strong>, PopDEX returns value to the people who create it, not to token holders who don’t trade. Through our 100% Value Return framework, all distributable value from trading fees flows back to traders and ecosystem contributors. That includes MegaPop, a weekly USDT prize pool for real traders, with every draw verifiable on Bitcoin.</p>
+<p><strong>PopDEX enters Open Beta with approximately $70M in TVL, $4.5B in cumulative Closed Beta trading volume, and 66 markets.</strong></p>
+<h3 id="Fully-On-Chain-Built-for-Speed"><a href="#Fully-On-Chain-Built-for-Speed" class="headerlink" title="Fully On-Chain. Built for Speed."></a>Fully On-Chain. Built for Speed.</h3><p>Decentralization should go beyond self-custody. On many DEXs, order books and matching engines run off-chain, while only final settlement reaches the blockchain. Order processing, cancellations, and matching remain in the venue’s own records. Traders can verify the outcome, but not necessarily the process.</p>
+<p><strong>Every order on-chain. Every fill verifiable</strong>. Built on Morph Tachyon, a purpose-built high-performance trading Layer 1 developed by the Morph team, PopDEX operates a fully on-chain Central Limit Order Book (CLOB). Order submission, cancellation, matching, and settlement all happen on-chain. Every order, fill, and reward distribution leaves a traceable record that traders can independently inspect through the PopDEX Block Explorer. Whether you’re reviewing an execution or tracing activity during volatile markets, the underlying record is there.</p>
+<p><strong>Built for speed. No trade-off on transparency.</strong> Morph Tachyon targets 100ms block times, up to 200,000 TPS, and instant finality. Combined with PopDEX’s sub-second execution, this architecture brings professional trading performance and on-chain verifiability into the same system.</p>
+<p><strong>Traders should never have to choose between execution performance and on-chain transparency.</strong></p>
+<h3 id="Competitive-Costs-Reliable-Execution"><a href="#Competitive-Costs-Reliable-Execution" class="headerlink" title="Competitive Costs. Reliable Execution."></a>Competitive Costs. Reliable Execution.</h3><p>For an active trader, the cost of a trade is never just the fee on a pricing page. It is the fee, the depth available when an order reaches the book, and the slippage incurred during execution. <strong>A low fee means little if the order hits a thin book.</strong></p>
+<p><strong>Lower fees through trading. Zero additional liquidation fees.</strong> PopDEX offers trading fees nearly <strong>30% lower than leading Perp DEXs</strong>, with VIP volume thresholds approximately <strong>40% lower than comparable platforms</strong>. Active traders can unlock and keep lower fees through trading alone, without buying or staking a platform token. Positions liquidated through the order book incur standard trading fees only, with no additional liquidation surcharge.</p>
+<p><strong>Deep liquidity. Built for real execution.</strong> Liquidity has been central to PopDEX’s market design from day one. Transaction sequencing, fee structures, and rate limits on the trading L1 are designed to support continuous quoting and meaningful order book depth, enabling competitive execution costs even for large orders.</p>
+<p><strong>These are the costs traders feel in every fill. That is where PopDEX competes.</strong></p>
+<h3 id="One-Account-More-Markets-Greater-Capital-Efficiency"><a href="#One-Account-More-Markets-Greater-Capital-Efficiency" class="headerlink" title="One Account. More Markets. Greater Capital Efficiency."></a>One Account. More Markets. Greater Capital Efficiency.</h3><p>Trading opportunities don’t stay within a single market. Yet capital is often fragmented across accounts, assets, and venues. Moving funds, managing separate collateral balances, and switching between platforms add friction when traders need to act quickly.</p>
+<p><strong>PopDEX brings crypto and RWA perpetuals together under a unified trading account</strong>, allowing traders to manage positions across supported markets in one trading environment. Whether the opportunity is in crypto, equities, or commodities, traders can follow the markets that matter without constantly switching between separate trading systems.</p>
+<p>Capital access is part of that experience. <strong>PopDEX supports USDT deposits and withdrawals through Arbitrum</strong>, connecting traders from one of DeFi’s most established ecosystems to PopDEX’s crypto and RWA perpetual markets. Users can fund their PopDEX accounts directly from Arbitrum, making it easier to put existing on-chain capital to work.</p>
+<p>USDT deposits and withdrawals are also supported through Morph, with USDC support and additional networks planned.</p>
+<p><strong>The unified account is also the foundation for greater capital efficiency ahead.</strong> Planned developments include spot trading, multi-collateral support that allows more assets to serve as margin, and new ways for idle capital to stay productive, so less of it sits unused.</p>
+<p><strong>Our long-term goal is simple: traders should spend less time managing fragmented accounts and more time acting on market opportunities.</strong></p>
+<h3 id="Risk-Controls-Built-for-Volatile-Markets"><a href="#Risk-Controls-Built-for-Volatile-Markets" class="headerlink" title="Risk Controls Built for Volatile Markets"></a>Risk Controls Built for Volatile Markets</h3><p>The differences between trading venues are not always obvious when markets are calm. <strong>The real test comes when prices move sharply, liquidity shifts quickly, and traders need reliable execution the most.</strong></p>
+<p><strong>Protection against abnormal prices.</strong> PopDEX integrates risk controls into its protocol design. Its oracle, index-price, and mark-price systems include safeguards** designed to **reduce the impact of unreliable or dislocated price inputs on position valuations and liquidation decisions. A short-lived price anomaly alone should not be enough to trigger liquidation.</p>
+<p>These safeguards mitigate unintended risks, not eliminate market risk or guarantee protection against liquidation. As PopDEX expands into more markets, its pricing protections and risk management mechanisms will continue to evolve.</p>
+<p><strong>Transparent risk management, verifiable on-chain.</strong> Through the PopDEX Block Explorer, traders can inspect not only orders and fills, but also risk management actions, including liquidations and auto-deleveraging (ADL). These on-chain records allow users to independently review how the protocol responds during volatile markets, rather than relying solely on the platform’s own reporting.</p>
+<p><strong>Risk management should not be a black box. At PopDEX, transparency extends from trade execution to the actions that protect the market.</strong></p>
+<h3 id="MegaPop-Real-Trading-Real-Rewards"><a href="#MegaPop-Real-Trading-Real-Rewards" class="headerlink" title="MegaPop: Real Trading. Real Rewards."></a>MegaPop: Real Trading. Real Rewards.</h3><p>On many Perp DEXs, trading fees fund token buybacks. That rewards token holders, not necessarily the traders who paid the fees. <strong>MegaPop takes a different approach.</strong> It is PopDEX’s fully on-chain, automated weekly rewards system, built to reward real trading activity rather than token ownership or promises of future airdrops.</p>
+<p><strong>Trade to earn. Draw every week.</strong> Eligible trading activity builds progress toward Pop Tickets. Once issued, each Ticket automatically enters the weekly Pop Draw. The USDT prize pool grows with trading activity, featuring multiple prize tiers, including the Mega Prize and Super Prize. Every valid Ticket carries a chance to win big.</p>
+<p><strong>Funded by fees. Verified by Bitcoin.</strong> MegaPop is part of PopDEX’s 100% Value Return framework: all distributable value from trading fees flows back to traders and ecosystem contributors. 40% funds the weekly MegaPop pool, and 60% funds ecosystem incentives, from trading competitions to referral and affiliate programs.</p>
+<p><strong>From Ticket issuance to weekly draws and reward distributions, the entire process is automated on-chain.</strong> Each Pop Draw uses a predetermined Bitcoin block hash to generate a six-digit Pop Hash, matched against valid Pop Tickets. All records are publicly verifiable.</p>
+<p>More Tickets mean more chances to win, but trading volume alone does not decide the prize. Traders of different sizes have a shot at the top tiers.</p>
+<p><strong>This is what “Trade. Pop. Repeat.” stands for: trade to earn Tickets, experience the excitement of a weekly draw, and return for the next cycle of trading and rewards.</strong></p>
+<p><strong>PopDEX Open Beta is now live.</strong> Trade now in your browser on desktop or mobile, or download the Android app on Google Play. iOS is coming soon.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/19/CertiKCommunity-2112076121479295161/">https://yaoav.github.io/2026/10/19/CertiKCommunity-2112076121479295161/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/CertiKCommunity/">@CertiKCommunity</a></div><div class="post-share"><div class="social-share" data-image="/images/2112076121479295161-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/19/coldsake_-2112147057993457757/" title="无痛发paper——毕业其实很简单"><img class="cover" src="/images/2112147057993457757-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">无痛发paper——毕业其实很简单</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @coldsake_（Linote 🎃🍷🥃🍸🍹🍶） 的长文，原文链接，版权归原作者所有。  高校扩招硕博，绕不开写论文。 发paper其实也不难，只是没人实打实的教你怎么写 很少有导师实打实地带你走一遍：先写什么，为什么这样写，写完以后怎么看哪里有问题。 所以我整理了一个学术写作指南：  https://github.com/NoNightWatch/EZ-to-write-a-paper 省流版：下载完整文件夹，解压，放到 Codex、Claude Code 或其他能读取本地文件的 AI 助手的工作目录里，让它读取中文启动页。 然后把你卡住的地方直接告诉它：  我第一次写论文。这是我的实验记录和结果，先帮我判断哪一部分可以开始写。每次示范一小段，解释为什么这样写。  不一定要先交出一份完整初稿。一段中文、几句笔记，也可以开始。 （商科、经济学的水太深，我没有能帮上忙的信心） 1.首先是这样这样、那样那样 （Methodology）先准备好实验对象、处理设置、操作步骤、测量方法和数据分析过程。 这一部分比较适合先写，因为事情已经做完了，有记录可...</div></div></div></a><a class="pagination-related" href="/2026/10/18/0xNotFounder-2111796748678988027/" title="Secrets for Grok Bot everyone talking about"><img class="cover" src="/images/2111796748678988027-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Secrets for Grok Bot everyone talking about</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xNotFounder（Kai Milstein） 的长文，原文链接，版权归原作者所有。  I am not the person to teach you how to build bots. I have never shipped 2,500 PRs in a month and I will not pretend to. What I am good at is digging. So for one week in October 2026 I read everything about Grok Bot on X, Reddit, YouTube and Instagram: 600-plus posts, 300 reels, 60 hours of video, two Reddit threads and the docs. Then I checked every claim the same way: does the docs page say the same, is the number in the original p...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">344</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">176</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fully-On-Chain-Built-for-Speed"><span class="toc-number">1.</span> <span class="toc-text">Fully On-Chain. Built for Speed.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Competitive-Costs-Reliable-Execution"><span class="toc-number">2.</span> <span class="toc-text">Competitive Costs. Reliable Execution.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Account-More-Markets-Greater-Capital-Efficiency"><span class="toc-number">3.</span> <span class="toc-text">One Account. More Markets. Greater Capital Efficiency.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Risk-Controls-Built-for-Volatile-Markets"><span class="toc-number">4.</span> <span class="toc-text">Risk Controls Built for Volatile Markets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MegaPop-Real-Trading-Real-Rewards"><span class="toc-number">5.</span> <span class="toc-text">MegaPop: Real Trading. Real Rewards.</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img src="/images/2123480803850035284-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"/></a><div class="content"><a class="title" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</a><time datetime="2026-11-20T02:17:30.000Z" title="发表于 2026-11-20 02:17:30">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"><img src="/images/2123432312583127318-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"/></a><div class="content"><a class="title" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？">海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？</a><time datetime="2026-11-19T23:04:49.000Z" title="发表于 2026-11-19 23:04:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"><img src="/images/2123424422396608909-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了"/></a><div class="content"><a class="title" href="/2026/11/19/yangleiocx3-2123424422396608909/" title="卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了">卧槽，我捏的AI美女已经会喊榜一大哥了！247万粉那种号怎么做，全给你拆了</a><time datetime="2026-11-19T22:33:28.000Z" title="发表于 2026-11-19 22:33:28">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"><img src="/images/2123419503417544831-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️"/></a><div class="content"><a class="title" href="/2026/11/19/KinGao476942-2123419503417544831/" title="ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️">ChatGPT 保姆级写作教程｜从源头解决人机感和 AI 味 ✏️</a><time datetime="2026-11-19T22:13:55.000Z" title="发表于 2026-11-19 22:13:55">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
