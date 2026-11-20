@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hi. Im Luciano. I Co-Founded a startup called Kairon. Yet another Go-To-Market S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/19/LuTrujilloAR-2123179788202594751/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Hi. Im Luciano. I Co-Founded a startup called Kairon. Yet another Go-To-Market S">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123179788202594751-cover.jpg">
+<meta property="article:published_time" content="2026-11-19T06:21:22.000Z">
+<meta property="article:modified_time" content="2026-11-21T02:39:43.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@LuTrujilloAR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123179788202594751-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook",
+  "url": "https://yaoav.github.io/2026/11/19/LuTrujilloAR-2123179788202594751/",
+  "image": "https://yaoav.github.io/images/2123179788202594751-cover.jpg",
+  "datePublished": "2026-11-19T06:21:22.000Z",
+  "dateModified": "2026-11-21T02:39:43.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/19/LuTrujilloAR-2123179788202594751/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">376</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">188</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123179788202594751-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">We grew from 0 to 5k MRR and +70 clients in 3 months using exactly this outbound playbook</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-19T06:21:22.000Z" title="发表于 2026-11-19 06:21:22">2026-11-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@LuTrujilloAR（Luciano Trujillo）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123179788202594751">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Hi. Im Luciano. I Co-Founded a startup called <strong>Kairon</strong>. Yet another Go-To-Market SaaS tool.</p>
+<p>“But… Bro, SaaS is dead ☠️☠️☠️ Didn’t you see the new ChatGPT for sales feature?”</p>
+<p>I used to think that. But <strong>we’ve grown to +70 clients in 3 months.</strong> So I hand-wrote this <strong>playbook</strong> to give some hope to builders out there. Explaining **step by step **how we did it, so you can copy it, for <strong>free</strong>.</p>
+<p> But not only that. By the end, you will find a link to a **skills repository **that you can give to your agent to implement this for you.</p>
+<p>Most people go about doing outreach in the wrong way. They create lists in tools like Clay, Apollo, and then mass outreach the fuck out of them offering a quick call. And when that doesn’t work, they blaim the market, linkedin, the tools, etc. The problem is a lot deeper.</p>
+<p>Doesn’t matter if you are trying to get your first customers, or you are leading a sales team of a series A scale up. Im 100% sure you will learn something new. **I will share 9 steps you can follow in order **so you can finally unlock sales meetings in 2027.</p>
+<p>This isn’t one of those articles that you read through and forget about.</p>
+<p>This is something you will want to bookmark, come back to, and set aside time to think about.</p>
+<p>Let’s begin.</p>
+<h2 id="Step-1-Write-down-who-you-are-and-what-you-promise"><a href="#Step-1-Write-down-who-you-are-and-what-you-promise" class="headerlink" title="Step 1: Write down who you are and what you promise"></a>Step 1: Write down who you are and what you promise</h2><p>Before you send anything, write three on one page.</p>
+<ul>
+<li><strong>Who you are:</strong> your background and the groups of people you already belong to. Your school, university, jobs, fraternities, sports, church, volunteering, are all valid examples.</li>
+<li><strong>How you write:</strong> copy it from messages you’ve actually sent. (tell you LLM to extract this from your iMessage&#x2F;whatsapp chats).</li>
+<li>**What you promise: **where the customer is before working with you, and where they are after.</li>
+</ul>
+<p>Write the promise as the result the customer gets. “Collect 18 days sooner” is clearer than “collections software”. I like Alex Hormozi’s test for this: how big the result is, how sure they can be they’ll get it, how fast, and how little effort it takes. Add the doubts people usually raise, and why they should trust you, with proof you can stand behind.</p>
+<p>Putting the in a simple readme.MD file is fine:</p>
+<p><img src="/images/HXbLMCBWsAApzMj.jpg" alt="HXbLMCBWsAApzMj"></p>
+<h2 id="Step-2-Decide-who-your-customer-is"><a href="#Step-2-Decide-who-your-customer-is" class="headerlink" title="Step 2: Decide who your customer is"></a>Step 2: Decide who your customer is</h2><p>People call this the ICP, your <strong>ideal customer profile.</strong> It’s the kind of company, and the person inside it, that gets the most out of what you sell.</p>
+<p>If you have customers, <strong>rank them by revenue</strong>, or by whatever makes a customer great for you. Take the top 10 and write down the 3 to 5 things they have in common. <strong>Don’t delegate this to an LLM</strong>. Use your own judgement. Don’t do typical industry, size, country thing. Go as deep as possible. What are they trying to achieve? Why do they buy from you instead of anyone else? What results do you bring to them?</p>
+<p>If you have no customers yet, pick 2 to 5 companies you would love to have and describe what they share. Treat it as a guess you’ll test.</p>
+<p>An example of my real ICP:</p>
+<p><img src="/images/HXbe5NaWkAAF_Vp.jpg" alt="HXbe5NaWkAAF_Vp"></p>
+<h2 id="Step-3-Turn-it-into-one-experiment-with-a-date"><a href="#Step-3-Turn-it-into-one-experiment-with-a-date" class="headerlink" title="Step 3: Turn it into one experiment with a date"></a>Step 3: Turn it into one experiment with a date</h2><p>Most people view sales process like something static. You set it, and that’s it. But Its quite the opposite. You need a **scientific experimentation! **</p>
+<p>You are probably not targeting the best buyer in the best channel with the best offer at the best time to maximize the amount of meetings booked.</p>
+<p>It’s as crazy as assuming you will start searching for gold and expect to find it in the first hole you dig.</p>
+<p>So, do a <strong>systematic approach</strong>: one type of customer, one offer, an end date, what results you expect, based on what volume and rates.</p>
+<p>Lets say we want to achieve <strong>5 meetings in the next 30 days</strong>. Here’s the math, assuming certain rates between steps of the funnel:</p>
+<ul>
+<li>To get 5 meetings, you need <strong>20 people interested</strong> in what you offer (25% interested to meeting booked rate)</li>
+<li>To get 20 people interested, you need **100 replies **(20% reply to interested rate)</li>
+<li>To get 100 replies, you need to send** 300 messages** (30% message to reply rate)</li>
+<li>To send 300 messages, you need to send <strong>1000 linkedin invites</strong> (%30 invites to accepted rate)</li>
+</ul>
+<p>Now, linkedin allows 30 invites per day. at most **150 invites per week approx. **</p>
+<p>This means you need <strong>~6.7 weeks to get to that volume</strong>. But you need a to make it happen in 4 weeks (a month). Then, you figure out you need <strong>2 linkedin seats,</strong> each sending 30 invites per day. That <strong>will give you 1200 invites per month.</strong></p>
+<p>Good job! Now you have realistic objectives, based on numbers.</p>
+<p>Check it once a week: what you did, what’s next, and whether you’ll hit the number. When it ends, write down what happened, so you don’t quietly repeat what failed.</p>
+<p>Now, you may not get those 5 meetings booked, but at least you got more INFORMATION. ACTION GENERATES INFORMATION. You can’t learn if you don’t message people. With that information, you will iterate until PMF or you run out of money (maybe your business doesn’t solve a strong enough problem. Pivot!)</p>
+<h2 id="Step-4-Pick-people-most-likely-to-accept"><a href="#Step-4-Pick-people-most-likely-to-accept" class="headerlink" title="Step 4: Pick people most likely to accept"></a>Step 4: Pick people most likely to accept</h2><p>Okay so you got the experiment, but who do you actually talk to??</p>
+<p>I think who you write to decides about 90% of the outcome. But <strong>people get VERY wrong how to make those lists</strong>. In general, they just use a database tool like Clay or Apollo and search based on common filters. That is NOT how you sell. We are animals. <strong>We need some sort of trust before taking risks.</strong> How do we trust more? A complete stranger or someone you went to the same school with? Then WHY are we not using this to your advantage?!!</p>
+<p>Introducing the concept of sources. A source is where the people on a list come from. The same ICP answers very differently depending on the source, so each ICP lists its own sources, closest first. There are six I can think of:</p>
+<ul>
+<li>| Priority | Source | Who |</li>
+<li>| — | — | — |</li>
+<li>| 1 | They already know you | People the user already talked to, where it stopped halfway: ex-customers, conversations that went quiet, demos that went nowhere, contacts in their CRM. The easiest list, because the context is already there and unused. |</li>
+<li>| 2 | Network and tribes | 1st-degree connections who fit the ICP, the sender’s close circles, and people who share something with the sender: a university, a school, a past employer, a community, a country. Take them from the sender’s identity. |</li>
+<li>| 3 | They come to you | People who reacted to the sender’s posts, visited the profile, sent an invitation, follow them or subscribe to their newsletter. |</li>
+<li>| 4 | Warm intros | Someone the sender knows introduces them: a customer who refers, an investor, a friend. |</li>
+<li>| 5 | Signals | Something happened, with a date, or there is a public trace: hiring the role, a funding round, a new job, a post about the problem, going to an event, following or reacting to a competitor, being on a public list (an exhibitor list, a directory, a registry). |</li>
+<li>| 6 | Lookalike | A search for the ICP’s roles at companies like the best customers. The coldest source: nobody there knows the sender. |</li>
+</ul>
+<p>Start from top to bottom, making sure you exhaust each source before going to the next once, as each new source becomes less and less familiar to you.</p>
+<p>For your first list, pick about 50 companies&#x2F;people by hand, so you have a clear excuse of why you are talking to them specifically.</p>
+<p>Then start with the people most likely to accept. Two things makes a big difference:</p>
+<ul>
+<li><strong>Mutual connections,</strong> meaning people you both know on LinkedIn. With none, 6% accepted. With 3 to 10, about 32% did. That’s 5x more likely. THATS IS A LOT. Its the difference between needing 1 people sending invites or 5.</li>
+<li><strong>Being active</strong>. People who posted, reposted or commented 3 to 10 times in the last month accepted about 35%, against 21% for people who did nothing.</li>
+</ul>
+<p>Here is a chart based on real data from Hundreds of Kairon’s campaigns:</p>
+<p><img src="/images/HXcCey4XIAA3KAr.png" alt="HXcCey4XIAA3KAr"></p>
+<p>And here you can see how much each metric moves the needle almost linearly in terms of amount of people in common, years in current position, linkedIn activity, and years of career.</p>
+<p><img src="/images/HXcC198XsAAIfpW.png" alt="HXcC198XsAAIfpW"></p>
+<p>This is a real example of how to search for founders I have people in common with:</p>
+<p><img src="/images/HXb8ki2X0AAfCD0.jpg" alt="HXb8ki2X0AAfCD0"></p>
+<p>So, start creating them lists!</p>
+<h2 id="Step-5-Choose-the-offer-before-you-write"><a href="#Step-5-Choose-the-offer-before-you-write" class="headerlink" title="Step 5: Choose the offer before you write"></a>Step 5: Choose the offer before you write</h2><p>The offer is the thing you ask them to say yes to in your first message. I think selling your product directly should be the last resort.</p>
+<p>Here’s some analysis from Kairon’s database:</p>
+<p><img src="/images/HXcGwZTWkAA1j9t.png" alt="HXcGwZTWkAA1j9t"></p>
+<p><strong>A lead magnet is something useful you give away for free.</strong> Doing a personalized video works because it was “already made” (or so they think. Create it only when they say yes, so you don’t waste effort), so all they had to do was say yes to get the value.</p>
+<p>**Make the offer concrete: what, when, where, and with whom. **”Wednesday the 21st, 4 pm, one hour, webinar online, about what paying people abroad really costs” is an offer.</p>
+<p>Here are 2 examples of offers:</p>
+<p><img src="/images/HXcHXTyW0AALNOR.jpg" alt="HXcHXTyW0AALNOR"></p>
+<h2 id="Step-6-Write-the-note-the-first-message-and-the-follow-up"><a href="#Step-6-Write-the-note-the-first-message-and-the-follow-up" class="headerlink" title="Step 6: Write the note, the first message and the follow-up"></a>Step 6: Write the note, the first message and the follow-up</h2><p>Writing the actual message.** People are terrified of DMs copies**. <strong>It’s like they forgot how to write to a human.</strong> All of a sudden we are all out here speaking like robots to people just because we don’t know them. Thats the opposite! Y<strong>ou need to create warmth. You do that by letting your guard down</strong>. Talk like you are speaking to a friend over text message.</p>
+<p>Once they accept, send the first message, in this order:</p>
+<ol>
+<li>A greeting. “Hi [name], how are you?”</li>
+<li>One line on why them, if there’s a relevant reason you are choosing them.</li>
+<li>The offer, tied to their case.</li>
+<li>One question they can answer with a yes, like whether they want it.</li>
+</ol>
+<p>Keep it to 40 to 59 words, and write in their language.</p>
+<p>Here are a few of examples:</p>
+<p><strong>1) Asking for help</strong></p>
+<blockquote>
+<p>“Hi ｛｛their first name｝｝, how are you?</p>
+</blockquote>
+<p>[one sentence on the signal that found them, or nothing]</p>
+<p>I’m trying to make [[the problem, e.g. office rental]] less of a pain for [[who, e.g. new businesses]]. We’re just starting out and don’t have anything to sell, but want to make sure we’re building something that actually helps.</p>
+<p>I’ve only ever come at it from the [[your side, e.g. tenant’s]] side, and I’m having a hard time understanding how it all works from the [[their side, e.g. landlord’s]] perspective. I saw you’ve been [[what people on their side do, e.g. renting out workspaces]] at ｛｛their current company｝｝ for ｛｛how many years they have been in their current role, from their profile, in words, e.g. over five years｝｝, so you could really help me cut through the fog.</p>
+<p>I know your calendar is probably packed, but if you happen to have 15 minutes to give me some feedback, I’d be truly grateful”</p>
+<p><strong>2) Showing a signal + asking to send a video</strong></p>
+<blockquote>
+<p>“Hi [name], I saw a Business Development role for DACH, remote in Spain.</p>
+</blockquote>
+<p>I’m building heykairon.com, a product that finds companies in your market with buying signals and writes to them with a real reason, using Claude or ChatGPT. For a team that’s adding a salesperson, it keeps the top of the pipeline running from day one.</p>
+<p>We’re in beta and offering free trials. Can I send you a short video of how it would work for you?”</p>
+<p><strong>3) Inviting to an event</strong></p>
+<blockquote>
+<p>“Hi ｛｛first name｝｝, how are you?</p>
+</blockquote>
+<p>[one sentence on the signal that found them, or nothing]</p>
+<p>On [[day and time, e.g. Thursday Nov 19 at 5pm]] we’re hosting [[the event]] at [[place]]. [[who comes and what it’s like, e.g. A small group of CMOs, good good, relaxed evening]].</p>
+<p>Would you like to come? Happy to send the details, and no worries at all if the date doesn’t work.”</p>
+<p>If they don’t answer, send a few follow-ups, that are short and sweet, to the point. People usually miss the first time you message them cause obviously answering linkedin DMs is not on their priority bucket list.</p>
+<p><img src="/images/HXcIFzFXEAAgFeB.png" alt="HXcIFzFXEAAgFeB"></p>
+<h2 id="Step-7-When-it’s-not-working-find-where-it-broke"><a href="#Step-7-When-it’s-not-working-find-where-it-broke" class="headerlink" title="Step 7: When it’s not working, find where it broke"></a>Step 7: When it’s not working, find where it broke</h2><p>When someone tells me outbound doesn’t work for them, I ask for their numbers first.</p>
+<p>Count four things: invitations sent, accepted, replied, and interested. Compare each step with the table at the top, and look for the first one that’s far below.</p>
+<ul>
+<li><strong>Few people accept:</strong> the list is the problem.</li>
+<li>**They accept but don’t reply: **the message is the problem.</li>
+<li><strong>They reply but aren’t interested:</strong> the offer is the problem.</li>
+<li><strong>You sent 40 invitations in a month:</strong> you just haven’t sent enough.</li>
+</ul>
+<p>Fix one thing at a time, so you know what worked.</p>
+<h2 id="Step-8-Post-so-people-come-to-you"><a href="#Step-8-Post-so-people-come-to-you" class="headerlink" title="Step 8: Post, so people come to you"></a>Step 8: Post, so people come to you</h2><p>You can only send so many invitations a week. <strong>Posts don’t have that limit</strong>, and someone who read your post before you write already knows what you do.</p>
+<p>First, fix your profile for the customer from Step 2: photo, banner, headline, and about.</p>
+<p>Pick one subject where what your customer cares about meets what you sell, and rotate four kinds of posts:</p>
+<ul>
+<li><strong>A how-to</strong>: a step the reader can use today.</li>
+<li><strong>A result:</strong> a real customer’s, or your own, and how it happened.</li>
+<li><strong>A personal story</strong>: a hard moment and how you got through it.</li>
+<li><strong>An opinion:</strong> what you really think about news in your field.</li>
+</ul>
+<p>Once a week is enough. After each post, count saves, profile visits, new connections, and conversations it started. Likes tell you little. When someone who fits your customer profile comments or saves it, write to them.</p>
+<p>Now, how to structure a post? Super simple:</p>
+<p>LinkedIn cuts the post at about 200 characters, behind “see more”. The hook has to stop the scroll and earn the click inside that space.</p>
+<p><strong>Spend 95% of the work on the hook.</strong> If nobody clicks “see more”, the rest of the post doesn’t exist. Write many hooks, and keep the best one.</p>
+<p><strong>Two lines:</strong></p>
+<ol>
+<li><strong>A concrete anchor plus proof only the user could give:</strong> a real number, name, date or place, from their own story. No warm-up sentence.</li>
+<li><strong>What the reader gets:</strong> exactly what the post will give them.</li>
+</ol>
+<p><strong>By pillar:</strong></p>
+<ul>
+<li><strong>Tactical:</strong> your own experience, or a real person’s, then how they did it. Open with the moment: what happened, the number it got, who was there. “Two founders cold-messaged 507 supply chain people with nothing to sell, and got ~35 calls.” The steps come inside the story, not as the promise. Show the thing itself: a photo of the people, a screenshot of the message.</li>
+<li><strong>Aspirational:</strong> “X went from A to B.” Then what changed for them, and how it feels now. A photo of the result or the people.</li>
+<li><strong>Personal:</strong> “[A concrete time] ago, [this happened].” Hold back enough that they want the rest. A real photo or video.</li>
+<li><strong>Insight:</strong> “X is happening.” Your proof. Then the curiosity. A screenshot of the source.</li>
+</ul>
+<p><strong>Add media as much as you can:</strong> a photo, a video, a screenshot. It is proof that the thing really happened, and it says so faster than any sentence.</p>
+<p>Here’s a real example:</p>
+<p><img src="/images/HXcKSbvW0AALsDP.png" alt="HXcKSbvW0AALsDP"></p>
+<h2 id="Step-9-Your-first-30-days"><a href="#Step-9-Your-first-30-days" class="headerlink" title="Step 9: Your first 30 days"></a>Step 9: Your first 30 days</h2><p>Here’s the whole thing as four weeks on one LinkedIn account.</p>
+<h3 id="Week-1-set-everything-up-and-start-sending"><a href="#Week-1-set-everything-up-and-start-sending" class="headerlink" title="Week 1: set everything up and start sending"></a>Week 1: set everything up and start sending</h3><ul>
+<li>Write your one page: who you are, how you write, and what you promise.</li>
+<li>Describe your customer, from your best clients or from 2 to 5 companies you want.</li>
+<li>Set one experiment: one customer, one offer, an end date, and the meetings you want. Do the math backwards.</li>
+<li>Choose the offer, and make sure it exists.</li>
+<li>Fix your LinkedIn profile for that customer.</li>
+<li>Pick your first 50 companies by hand, with one checkable fact each.</li>
+<li>Write the note, the first message in 40 to 59 words, and the follow-up.</li>
+<li>Send your first invitations before the week ends.</li>
+</ul>
+<h3 id="Weeks-2-and-3-keep-sending"><a href="#Weeks-2-and-3-keep-sending" class="headerlink" title="Weeks 2 and 3: keep sending"></a>Weeks 2 and 3: keep sending</h3><ul>
+<li>Send about 150 invitations a week, with no pitch in the note.</li>
+<li>Send the first message when they accept, then the follow-up.</li>
+<li>Save every reply next to the message it answered.</li>
+<li>Post twice, and write to people who fit your customer and react.</li>
+</ul>
+<h3 id="Week-4-find-what-broke"><a href="#Week-4-find-what-broke" class="headerlink" title="Week 4: find what broke"></a>Week 4: find what broke</h3><ul>
+<li>Count invitations, accepted, replied, and interested.</li>
+<li>Find the first step that’s far below the table at the top.</li>
+<li>Read your last 20 replies.</li>
+<li>Change one thing: who you write to, the offer, the message, or how many you send.</li>
+</ul>
+<p>If you use Claude, Codex or Cursor, the same playbook is free at github.com&#x2F;heykairon&#x2F;outbound-skills.</p>
+<p>Bookmark the article so you can run it step by step. Come back when you write your first messages, and again in week 4. You can follow me if you want more as we keep publishing what we measure.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/19/LuTrujilloAR-2123179788202594751/">https://yaoav.github.io/2026/11/19/LuTrujilloAR-2123179788202594751/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/LuTrujilloAR/">@LuTrujilloAR</a></div><div class="post-share"><div class="social-share" data-image="/images/2123179788202594751-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/19/leaf_sanren-2123203316897509861/" title="深度拆解 2027 企业 AI 服务的 10 类生意：哪个好入门，哪个做苦力，哪个能赚长钱"><img class="cover" src="/images/2123203316897509861-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">深度拆解 2027 企业 AI 服务的 10 类生意：哪个好入门，哪个做苦力，哪个能赚长钱</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @leaf_sanren（Leaf Yeah!） 的长文，原文链接，版权归原作者所有。  大家好，我是司徒K。 现在满大街都在聊企业 AI 落地，可一问报价，差得像两个世界。 小的订单几千块起，大的像四川银行 2026 年 8 月那个大模型项目，一单直接干到 88 万。 同样挂着“AI 陪跑”的名头，一家每月收 2.5 万到 5 万，出建议、做评审；另一家每月 5 万起，围着一个岗位跟企业一起搭，最后交出一个能干活的 AI 员工。前一家卖的是嘴，后一家卖的是手。  就连最火的 FDE，在阿里云同一份文档里，数据清洗一套 2.5 万，模型后训练一套就要 20 万，足足差了 8 倍。 我扒了一圈云厂商价目表、招投标公告和一线服务商报价，按到底交付什么，把企业 AI 服务拆成三个段位、10 类生意。 拆完一看，单子最大的往往最不赚钱。像定制开发，一单几十万，如果需要驻场，大头都花在人工上，交完活还得接着找下一单。2027 年真正能赚长钱的，反而是现在谁都看不上眼的售后。 第一段位：几千到十几万，好入门的敲门砖这三类服务都不用触碰企业原有老旧业务系统，交付周期短、...</div></div></div></a><a class="pagination-related" href="/2026/11/19/ihavenliu-2123175399681057008/" title="What's on Robinhood Chain? Hooks, perps, and Stock Tokens "><img class="cover" src="/images/2123175399681057008-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">What's on Robinhood Chain? Hooks, perps, and Stock Tokens </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ihavenliu（𝙃𝙖𝙫𝙚𝙣） 的长文，原文链接，版权归原作者所有。  Welcome back to our roundup of what’s happening on Robinhood Chain: who’s building, what’s shipping, and what’s getting tokenized. To everyone in the trenches, 🫡 Under the hood 🚄 🔹Top protocols by TVL: @Morpho $598.51M, @Uniswap $217.05M, @Lighter_xyz $101.02M, @arcus_xyz $57.9M, @PancakeFi $6.01M🔹Robinhood Chain TVL: $1B🔹Cumulative DEX volume: $132.17B.🔹 Robinhood Chain hit its 7th consecutive weekend with &gt;$1B in perps trading ...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">376</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">188</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-Write-down-who-you-are-and-what-you-promise"><span class="toc-number">1.</span> <span class="toc-text">Step 1: Write down who you are and what you promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-Decide-who-your-customer-is"><span class="toc-number">2.</span> <span class="toc-text">Step 2: Decide who your customer is</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-Turn-it-into-one-experiment-with-a-date"><span class="toc-number">3.</span> <span class="toc-text">Step 3: Turn it into one experiment with a date</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-Pick-people-most-likely-to-accept"><span class="toc-number">4.</span> <span class="toc-text">Step 4: Pick people most likely to accept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-5-Choose-the-offer-before-you-write"><span class="toc-number">5.</span> <span class="toc-text">Step 5: Choose the offer before you write</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-6-Write-the-note-the-first-message-and-the-follow-up"><span class="toc-number">6.</span> <span class="toc-text">Step 6: Write the note, the first message and the follow-up</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-7-When-it%E2%80%99s-not-working-find-where-it-broke"><span class="toc-number">7.</span> <span class="toc-text">Step 7: When it’s not working, find where it broke</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-8-Post-so-people-come-to-you"><span class="toc-number">8.</span> <span class="toc-text">Step 8: Post, so people come to you</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-9-Your-first-30-days"><span class="toc-number">9.</span> <span class="toc-text">Step 9: Your first 30 days</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Week-1-set-everything-up-and-start-sending"><span class="toc-number">9.1.</span> <span class="toc-text">Week 1: set everything up and start sending</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Weeks-2-and-3-keep-sending"><span class="toc-number">9.2.</span> <span class="toc-text">Weeks 2 and 3: keep sending</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Week-4-find-what-broke"><span class="toc-number">9.3.</span> <span class="toc-text">Week 4: find what broke</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/haeinej-2123665813680894161/" title="Where is your home address on the internet?"><img src="/images/2123665813680894161-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Where is your home address on the internet?"/></a><div class="content"><a class="title" href="/2026/11/20/haeinej-2123665813680894161/" title="Where is your home address on the internet?">Where is your home address on the internet?</a><time datetime="2026-11-20T14:32:40.000Z" title="发表于 2026-11-20 14:32:40">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/lifesinger-2123643556044607930/" title="Dario 自述：我为什么讨厌中国"><img src="/images/2123643556044607930-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Dario 自述：我为什么讨厌中国"/></a><div class="content"><a class="title" href="/2026/11/20/lifesinger-2123643556044607930/" title="Dario 自述：我为什么讨厌中国">Dario 自述：我为什么讨厌中国</a><time datetime="2026-11-20T13:04:13.000Z" title="发表于 2026-11-20 13:04:13">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
