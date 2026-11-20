@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>自媒体创作不完全指南：如何拆解爆款视频「附在线工具 &amp; 源码部署」 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Hello，第一篇讲了怎么起号，也给大家做了一个找对标的 Skill。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自媒体创作不完全指南：如何拆解爆款视频「附在线工具 &amp; 源码部署」">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/Lonely__MH-2123710962570289446/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Hello，第一篇讲了怎么起号，也给大家做了一个找对标的 Skill。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123710962570289446-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T17:32:04.000Z">
+<meta property="article:modified_time" content="2026-11-21T05:52:52.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Lonely__MH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123710962570289446-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "自媒体创作不完全指南：如何拆解爆款视频「附在线工具 & 源码部署」",
+  "url": "https://yaoav.github.io/2026/11/20/Lonely__MH-2123710962570289446/",
+  "image": "https://yaoav.github.io/images/2123710962570289446-cover.jpg",
+  "datePublished": "2026-11-20T17:32:04.000Z",
+  "dateModified": "2026-11-21T05:52:52.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/Lonely__MH-2123710962570289446/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '自媒体创作不完全指南：如何拆解爆款视频「附在线工具 & 源码部署」',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">388</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">190</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123710962570289446-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">自媒体创作不完全指南：如何拆解爆款视频「附在线工具 &amp; 源码部署」</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">自媒体创作不完全指南：如何拆解爆款视频「附在线工具 &amp; 源码部署」</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T17:32:04.000Z" title="发表于 2026-11-20 17:32:04">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Lonely__MH（Lonely）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123710962570289446">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Hello，第一篇讲了怎么起号，也给大家做了一个找对标的 Skill。</p>
+<p>这一篇接着往下讲，找到对标后，怎么一步步拆解一条爆款视频。</p>
+<p>第一篇文章👇🏻</p>
+<p>为了方便大家上手，我把这套方法做成了网页工具</p>
+<p>代码已经开源，🔥文末有体验入口</p>
+<p>平时我刷到爆款，第一反应是「哇塞，好牛逼」，但真照着拍一条，发出去却没人看💔</p>
+<p>So，动手前先问自己一句：<strong>你到底想学它什么？</strong> 是开头怎么抓人，内容怎么往下讲，还是某一幕怎么拍？</p>
+<p>这些问题想清楚了，再看下手里的素材，如何利用，拍出爆款</p>
+<p>废话不多说，直接上干货（在线工具在文末）</p>
+<p><video controls preload="metadata" poster="/images/2123449336470392832-poster.jpg" src="/videos/2123449336470392832.mp4"></video></p>
+<h3 id="01｜拆解方法"><a href="#01｜拆解方法" class="headerlink" title="01｜拆解方法"></a>01｜拆解方法</h3><p><strong>1. 定目标</strong></p>
+<ul>
+<li><strong>账号做什么</strong>：你拍给谁看，想让他们看完得到什么？</li>
+<li><strong>手里有什么</strong>：列一下现成的人物、场景和素材。</li>
+<li><strong>想学哪一块</strong>：同一条视频，做剧情号的人学它怎么反转，做带货号的人学它怎么把使用场景拍清楚。</li>
+</ul>
+<p>看视频之前，先说下：「我想学它怎么xxx，因为我手里有xxxxx」</p>
+<p>写得越具体，越容易挑出用得上的部分。</p>
+<p><strong>2. 筛视频</strong></p>
+<p>点赞高的视频，不一定都值得花时间：</p>
+<ul>
+<li><strong>和账号平时比</strong>：找作者最近几条同类型的作品，取点赞数的中间值。如果这条明显高过平时，就值得优先拆解</li>
+<li><strong>看收藏</strong>：如果一条教程的收藏明显高过同类作品，看看观众想留下来的是哪一步、哪个技巧。（这一步是精华🔥）</li>
+<li><strong>找两条同类的对比看</strong>：挑两个账号做过的同类视频，先圈出重复出现的做法，再看它们各自起了什么作用。</li>
+<li><strong>换成你来拍</strong>：把人、场景换成自己的，看下原来吸引你的地方还在吗？如果爆款是靠博主本人颜值或经历火的，那你就直接Pass</li>
+</ul>
+<p><strong>3. 看开头</strong></p>
+<ul>
+<li><strong>找到第一个让你想看下去的地方</strong>：常见的有四种，一上来就有矛盾、做一件反常的事、先给结果、直接提问。记下是哪一秒、哪个画面、哪句话。</li>
+<li><strong>看它有没有接住预期</strong>：如果封面或标题先给了一个承诺，开头有没有接住？</li>
+<li><strong>写一句判断</strong>：「这里先给观众看了xxx，接下来他还想看xxxx」，以后你重写开头，就按照着这两部分准备素材即可</li>
+</ul>
+<p><strong>4. 看结构</strong></p>
+<ul>
+<li><strong>顺着变化标时间</strong>：剧情看事件和人物关系怎么变，教程看步骤，展示类看动作和细节，每段记一句它给观众看了什么。</li>
+</ul>
+<p><img src="/images/HXgDftPbwAEg2Pi.jpg" alt="HXgDftPbwAEg2Pi"></p>
+<ul>
+<li><strong>看每一段有什么用</strong>：试着拿掉一段，后面还看得懂吗？会少一个关键步骤、一个铺垫，还是少了一个能看清细节的画面？把少掉的东西记下来。</li>
+<li><strong>写出内容顺序</strong>：把几个关键段落串成一句话。比如反转剧情可以写成「先用一个反常的举动让观众产生误会，再用一句话揭开真相」。以后换成自己的故事，就知道哪里要铺垫，哪里该揭晓（这些都是靠自己的摸索慢慢积攒经验，孰能生巧🙂）</li>
+<li><strong>对照留存数据</strong>：如果能看到留存曲线，一定要仔细地分析一下降or上涨的原因，然后再结合当时的画面和内容去做调整。</li>
+</ul>
+<p><strong>5. 看拍法</strong></p>
+<ul>
+<li><strong>看镜头</strong>：停在最想学的那一幕，看用的是全身、半身还是特写，镜头动没动，什么时候拉近。</li>
+<li><strong>先静音看，再开声音听</strong>：静音时看视线被带到了哪里；开声音再听，那个变化是靠画面带出来的，还是靠一句话、音乐或音效。</li>
+<li><strong>把想学的拍法记下来</strong>：用我之前做的真人换装举例，重点关注「手一伸进画面就切近，拍清楚手上在做什么」</li>
+</ul>
+<p><strong>6. 看评论</strong></p>
+<ul>
+<li><strong>找反复出现的追问</strong>：都在问衣服在哪买，可以拍一条搭配分享；都在问效果怎么拍，可以拍一条幕后花絮。</li>
+</ul>
+<p><strong>【🚨重点】观众追问的，就是你下一条现成的选题</strong></p>
+<p><strong>7. 写方案</strong></p>
+<ul>
+<li><strong>借什么</strong>：原片里哪一部分放到你的内容里还管用？可以是动作顺序、机位，也可以是揭晓结果的时机。</li>
+<li><strong>换什么</strong>：用你手里的人物、衣服和场景重新想一遍。看过原片的人刷到你这条，还能看到什么新东西？</li>
+</ul>
+<p><img src="/images/HXgEZsrbwAY0bHu.jpg" alt="HXgEZsrbwAY0bHu"></p>
+<p>做好以上这些准备，就可以先拍一条发出去，把 MVP 跑通。</p>
+<p>然后留意评论和私信里反复出现的问题，下一条就挑一个地方改，再看反馈，如此往复！</p>
+<h3 id="02｜拆解工具"><a href="#02｜拆解工具" class="headerlink" title="02｜拆解工具"></a>02｜拆解工具</h3><p>其实选好爆款视频之后，手动拆解最费时间的是来回找镜头、记时间</p>
+<p>🎉So我做了个网页工具，叫「<strong>对标研究室」</strong></p>
+<p>帮你抽帧、整理时间线，再根据你想学的地方给几个拍摄思路。</p>
+<p><video controls preload="metadata" poster="/images/2123452811816189954-poster.jpg" src="/videos/2123452811816189954.mp4"></video></p>
+<ol>
+<li><strong>按你想学的方向拆解。</strong> 把视频拖进去，写一句你想学什么，比如开头、内容顺序，或者某个镜头的拍法。</li>
+<li><strong>自动抽帧，把整条视频摊开看。</strong> 视频拖进去后，网页会快速沿着时间轴抽出多张截图，覆盖开头、中段和结尾。画面按顺序排好，哪一段换了镜头、前后动作怎么接，可以对着看。想看某一段的完整动作，点报告里的时间就能跳回原片。</li>
+<li><strong>给你自己的拍摄思路。</strong> 报告会告诉你哪些做法可以借，换成自己的素材之后，有哪些选题可以试。</li>
+<li><strong>把报告下载下来。</strong> 导出成 Markdown，方便接着写分镜和拍摄清单。</li>
+</ol>
+<h3 id="03｜开发过程"><a href="#03｜开发过程" class="headerlink" title="03｜开发过程"></a>03｜开发过程</h3><p>这个网页工具，其实<strong>我一行代码都没写</strong>。我把蚂蚁百灵的 <strong>Ling-3.2-flash</strong> 接到 Pi 里，发了三张原型图，再把需求说清楚，大致就这三条：</p>
+<ol>
+<li>照着三张图做出未上传、待拆解和拆解中三个状态，把「你想做成什么样？」放在最显眼的位置。</li>
+<li>视频在浏览器里抽帧，右侧显示拆解报告。</li>
+<li>做完自己启动页面，截图和原型对照着改。</li>
+</ol>
+<p><video controls preload="metadata" poster="/images/2123454981630279680-poster.jpg" src="/videos/2123454981630279680.mp4"></video></p>
+<p>它把三张原型图的文字和布局基本都看对了，第一版做出来，样子和原型基本差不多，相似度90%左右</p>
+<p>实际跑起来，缩略图排乱了，剪辑点也没找出来。我把问题截图发回去，它来回改了几轮，把这两处修好了，后来还加了历史记录</p>
+<p>此外，工具里的核心功能👉🏻「画面分析」和「拆解报告」</p>
+<p>我也交给了 **Ling-3.2-flash，**它能把多张截图串起来，讲清楚内容怎么展开，调用成本不高，做这类任务性价比相当不错！👏🏻</p>
+<p><img src="/images/HXgIgpYbwAUbPkV.jpg" alt="HXgIgpYbwAUbPkV"></p>
+<h3 id="04｜开源部署"><a href="#04｜开源部署" class="headerlink" title="04｜开源部署"></a>04｜开源部署</h3><ol>
+<li>**在线体验，**打开网页，在右上角填入你的蚂蚁百灵 API Key，就可以上传视频开始拆解。Key 保存在当前浏览器，不会上传！</li>
+<li><strong>本地部署</strong>。前后端代码都已开源。部署后可以直接贴在线视频链接，工具会自动拉取视频并分析。</li>
+</ol>
+<p>🔥 **在线体验工具 👉🏻 ** zmt.aigce.com</p>
+<p>Github 👉🏻  <a target="_blank" rel="noopener" href="https://github.com/lonely-dance-lab/self-media-guide%EF%BC%88%E6%AC%A2%E8%BF%8E">https://github.com/lonely-dance-lab/self-media-guide（欢迎</a> Star）</p>
+<h3 id="05｜最后"><a href="#05｜最后" class="headerlink" title="05｜最后"></a>05｜最后</h3><p>现在能一键复刻爆款的 AI 工具其实已经不少了，那我为什么还要花这么大篇幅，一步步讲怎么拆？</p>
+<p>因为工具再好用，懂原理还是不一样的</p>
+<p>以后你完全可以不自己动手拆，交给工具就行</p>
+<p>但你知道它背后在做什么：为什么这条能火，开头为什么这么剪，节奏卡在哪儿。到了关键的时候，比如选哪条对标、复刻出来哪里不对劲，这些东西就派上用场了</p>
+<p> 还是那句话：你可以不做，但你不能真的菜🙂</p>
+<h3 id="📚-历史文章"><a href="#📚-历史文章" class="headerlink" title="📚 历史文章"></a>📚 历史文章</h3><ol>
+<li>自媒体创作不完全指南：如何打造数字人 🔥🔥🔥</li>
+<li>自媒体创作不完全指南：如何快速起号 🔥🔥🔥</li>
+<li>中推最强AI社区-L站注册教程</li>
+<li>无限画布，不止生图</li>
+<li>一部手机装下所有终端 Agent，是什么体验？</li>
+<li>大模型本地部署完整指南</li>
+<li>Hermes Agent 实战指南：从刷 X 焦虑到自动沉淀</li>
+<li>程序员防脱指南</li>
+<li>Hermes 接入 iMessage</li>
+<li>Hermes 接入 X Premium</li>
+<li>Hermes Agent 完全指南</li>
+<li>Hermes Agent 入门指南之辅助模型</li>
+<li>Hermes Agent 入门指南</li>
+<li>Hermes Agent 进阶指南</li>
+<li>Hermes Agent 不完全指南</li>
+<li>尼区 Claude Pro 订阅完全指南</li>
+<li>尼区 Apple ID 注册教程</li>
+<li>土区半价订阅 ChatGPT Plus</li>
+<li>美区 Apple ID 注册</li>
+<li>Claude&#x2F;ChatGPT&#x2F;Gemini 支付宝订阅</li>
+<li>Mac 本地部署大模型完整教程</li>
+<li>IP 质量检查</li>
+<li>为什么豆包不推荐你的品牌</li>
+<li>怎么和你奶奶解释豆包说的不是真的</li>
+</ol>
+<p>如果这篇教程对你有帮助，欢迎 关注 + 收藏 + 转发 👏🏻</p>
+<p>关注 @Lonely__MH，持续分享新手友好的教程和 AI 工具使用心得。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/Lonely__MH-2123710962570289446/">https://yaoav.github.io/2026/11/20/Lonely__MH-2123710962570289446/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Lonely-MH/">@Lonely__MH</a></div><div class="post-share"><div class="social-share" data-image="/images/2123710962570289446-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/yifanxu_ephai-2123712960069865699/" title="What Should a Personal Agent Remember About Me?"><img class="cover" src="/images/2123712960069865699-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">What Should a Personal Agent Remember About Me?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yifanxu_ephai（Yifan Xu） 的长文，原文链接，版权归原作者所有。  I can’t tell whether Astra 6.2 has gotten smarter. What I have noticed is how many turns it takes to get it to remove the extras. I’ll ask for a small change, and it’ll build in support for a few things I might want later. Then we spend the next several messages working our way back to the change I asked for. I’d love to skip that conversation next time. But what should the agent write in my profile? “Prefers simple designs” sounds reas...</div></div></div></a><a class="pagination-related" href="/2026/11/20/haeinej-2123665813680894161/" title="Where is your home address on the internet?"><img class="cover" src="/images/2123665813680894161-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Where is your home address on the internet?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @haeinej（haein） 的长文，原文链接，版权归原作者所有。  Why we need a PDS more than ever, and more than any agent, to survive in the agentic era.This morning my cousin Olivia asked for my address so she could send me a wedding invitation. Me, as a digital citizen, sent her my Gmail. She wrote back, “No sis, where is your home address?”  There is something unique about an address. It is tied to you, to your human identity, and it is yours alone. And it is not only physical. Think about an email accoun...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">388</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">190</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#01%EF%BD%9C%E6%8B%86%E8%A7%A3%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">01｜拆解方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02%EF%BD%9C%E6%8B%86%E8%A7%A3%E5%B7%A5%E5%85%B7"><span class="toc-number">2.</span> <span class="toc-text">02｜拆解工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03%EF%BD%9C%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">03｜开发过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04%EF%BD%9C%E5%BC%80%E6%BA%90%E9%83%A8%E7%BD%B2"><span class="toc-number">4.</span> <span class="toc-text">04｜开源部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05%EF%BD%9C%E6%9C%80%E5%90%8E"><span class="toc-number">5.</span> <span class="toc-text">05｜最后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0"><span class="toc-number">6.</span> <span class="toc-text">📚 历史文章</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"><img src="/images/2123789428862660980-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"/></a><div class="content"><a class="title" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?">-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?</a><time datetime="2026-11-20T22:43:52.000Z" title="发表于 2026-11-20 22:43:52">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
