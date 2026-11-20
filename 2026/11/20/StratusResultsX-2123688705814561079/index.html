@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="你肯定刷到过那种视频，一辆车、一块表、一台发动机，零件从四面八方飞过来，咔哒咔哒扣到一起，最后灯一亮，整机成型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/StratusResultsX-2123688705814561079/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="你肯定刷到过那种视频，一辆车、一块表、一台发动机，零件从四面八方飞过来，咔哒咔哒扣到一起，最后灯一亮，整机成型。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123688705814561079-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T16:03:38.000Z">
+<meta property="article:modified_time" content="2026-11-21T07:36:41.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@StratusResultsX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123688705814561079-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器",
+  "url": "https://yaoav.github.io/2026/11/20/StratusResultsX-2123688705814561079/",
+  "image": "https://yaoav.github.io/images/2123688705814561079-cover.jpg",
+  "datePublished": "2026-11-20T16:03:38.000Z",
+  "dateModified": "2026-11-21T07:36:41.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/StratusResultsX-2123688705814561079/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">394</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">191</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123688705814561079-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Codex + GPT-6.2 Astra 开启广州机甲模式，没用 Blender，直接手搓渲染器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T16:03:38.000Z" title="发表于 2026-11-20 16:03:38">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@StratusResultsX（Stratus Results | 层云结果）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123688705814561079">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>你肯定刷到过那种视频，一辆车、一块表、一台发动机，零件从四面八方飞过来，咔哒咔哒扣到一起，最后灯一亮，整机成型。</p>
+<p>看着特别解压，做起来特别贵。</p>
+<p>建模要人，拆件要人，一帧一帧摆动画要人，最后还得丢进渲染器跑上一宿。做一个产品都够呛，要是想做一座城，光列建模清单就够喝一壶的。😮‍💨</p>
+<p>我一直想看看，广州那几个地标要是也这么「自己拼起来」，会是什么样子。五羊石像、北京路骑楼、海心桥、广州塔，一个比一个难拆。羊是曲面，骑楼全是拱，桥没有一根直线，塔还拧着腰。</p>
+<p>这活直接交给了 Codex。</p>
+<p>模型我选的是 GPT-6.2 Astra，推理档位拉到「极高」。活这么重，就别让它省着想了。另外我给它装了一个叫 perspective-illusion 的 skill，出自 GitHub 上的 simcraft 仓库，MIT 协议，讲的是怎么靠摄影机的移动，把一个空间一点点揭开给观众看。</p>
+<p>我给它的需求，是把这几个地标做成微缩沙盘，零件按真实结构的顺序一块块装上去，再串成一条从越秀山走到珠江边的夜游线。</p>
+<p>最后交回来的是一支 80 秒的片子。1280×720，每秒 24 帧，一共 1920 帧。</p>
+<p><video controls preload="metadata" poster="/images/2123684673524293632-poster.jpg" src="/videos/2123684673524293632.mp4"></video></p>
+<p>四个地标加起来，一共 2099 组会动的零件，静态的三角面有 51 万多个。</p>
+<p>片子开头 2 秒先给一个实景。越秀公园里树影绿油油的，五羊石像立在中间，周围有游客、有路灯、有花坛，画面一角写着「先看实景造型，再进入微缩装配」。</p>
+<p><img src="/images/HXjYX37a8AAzt31.jpg" alt="HXjYX37a8AAzt31"></p>
+<p>下一秒，镜头切进一块悬浮在半空的展示底台。石像碎成了一地。</p>
+<p>碎得这么彻底，怎么拼回去还能是原来那五只羊？</p>
+<h3 id="五羊石像碎成-123-块，又一块不少地拼回去"><a href="#五羊石像碎成-123-块，又一块不少地拼回去" class="headerlink" title="五羊石像碎成 123 块，又一块不少地拼回去"></a>五羊石像碎成 123 块，又一块不少地拼回去</h3><p>五羊是这四个里最难搞的。</p>
+<p>羊身上全是曲面，主羊回头望，小羊屈着膝，形体差一点就不像了。这种东西要是让代码从零画，大概率画出一群表情迷茫的羊驼。🐑</p>
+<p>Codex 在这一段没有自己造羊。它用的是 Giebel 在 Sketchfab 上发布的五羊石像扫描模型，扫的是按原石像做的青铜缩制品，许可协议是 CC BY-SA 4.0。原雕塑的作者是尹积昌、陈本宗、孔繁纬。</p>
+<p>这个选择我很认同。别人已经扫好的、授权写得清清楚楚的模型，比自己硬捏一个强太多了。署名它也处理得很规矩，直接烧进了这段画面的右下角，视频文件的信息里也写了一份。</p>
+<p>模型地址在这：<a target="_blank" rel="noopener" href="https://sketchfab.com/3d-models/five-rams-statue-0e20f25e95b540ac815af5e84eea403d">https://sketchfab.com/3d-models/five-rams-statue-0e20f25e95b540ac815af5e84eea403d</a></p>
+<p>拿到模型以后，它先做了几件装修。</p>
+<p>青铜色改成了灰暖色的石头色。比例重新调过，高度压了一点，宽度也收了一点，让整组雕塑稳稳坐在一块微缩底台上。周围的花坛和小树是它另外用代码生成的。</p>
+<p>为了让石头看着有分量，它还提前给石像描了一遍阴影。做法是从 26 个方向往石像上照，看每个地方被挡住多少次。羊腿交叠的地方、肚子底下、石座凹进去的角落，被挡得多，就压暗一点。</p>
+<p>这招在 3D 里叫环境遮蔽。你可以把它想成画素描时，先把褶子里和夹缝里的暗部铺一层。有了这层，羊身上的起伏一下就立起来了。</p>
+<p>接下来才是重头戏，拆。</p>
+<p>整个扫描模型是 29 万 9 千多个小三角面拼起来的一层壳。Codex 的拆法很直接，在空间里画一个看不见的立体格子，每个三角面看它的中心落在哪一格，落在同一格里的就归成一块。</p>
+<p>这么一刀切下去，正好切出 123 块，299992 个面一个都没丢。</p>
+<p>拼的顺序它是这么排的。每块什么时候出场，跟它的高度挂钩，低处的先回来，高处的后合拢，再加一点点错开的时间，免得一群碎块同时落地像下冰雹。</p>
+<p>每块飞 0.93 秒。飞的时候还带一点左右转、一点前后倾，快到位了才摆正。整段里最后一块大概在第 7.2 秒落位，剩下的几秒全留给整组雕塑亮相。</p>
+<p><img src="/images/HXjZAMfbgAAD0tA.jpg" alt="HXjZAMfbgAAD0tA"></p>
+<p><img src="/images/HXjZEvybcAA_ET-.jpg" alt="HXjZEvybcAA_ET-"></p>
+<p>这一段我最认可的，是它拆完还记得这是「一组」雕塑。</p>
+<p>五只羊没有被一只只拆开、随便堆在台子上。拼回来的姿态跟原作一模一样，主羊还在回头，小羊还在屈膝。字幕也写得很老实，保持主羊回望与幼羊屈膝的造型。</p>
+<p>不过你要是盯着第 3 秒那几帧细看，会发现那些碎块薄得像纸片，侧过来几乎没有厚度。这个毛病我放到后面一起说。</p>
+<p>五羊好歹有现成模型可以用。骑楼和海心桥就没这个好命了，网上找不到能直接拿来装配的。</p>
+<h3 id="骑楼和海心桥没现成模型，它就拿公式一根根画"><a href="#骑楼和海心桥没现成模型，它就拿公式一根根画" class="headerlink" title="骑楼和海心桥没现成模型，它就拿公式一根根画"></a>骑楼和海心桥没现成模型，它就拿公式一根根画</h3><p>没有模型怎么办？Codex 的办法是用代码画。</p>
+<p>它先写了一套最基础的「零件生成器」。方块、圆管、细管、椭球、三角片、带倒角的厚板、带定位销的销钉、立柱加横杆的栏杆、有背面的墙板。每一种都是一小段函数，你告诉它长宽厚，它就吐出一个有厚度、边角还带一圈倒角的零件。</p>
+<p>你可以把它想成一盒乐高的模具。模具开好了，想要几块就压几块。🧱</p>
+<p>这些零件最后统统变成三角形，交给后面的渲染器去画。</p>
+<p>先说北京路骑楼。</p>
+<p>Codex 搭了两排骑楼，每排 7 个开间，一共 14 个单元。每个单元又拆成柱脚、三段柱身、柱头、10 块拱券、两层楼板、窗盒、屋顶板、店面和招牌。</p>
+<p>整条街合计 550 组零件。光拱券就有 140 块，窗盒 168 组，屋顶 56 片。</p>
+<p>装的顺序是照着骑楼真实的结构走的。柱脚先落座，柱身一节一节往上长；然后拱券沿着半圆一块块围上去，骑楼最有辨识度的那排拱门就出来了；接着楼板和侧墙往上叠，窗盒、屋顶依次装好，最后招牌和路灯接通。</p>
+<p>550 组全部到位，大约用了 8.6 秒。</p>
+<p><img src="/images/HXjZTJXbQAAYWzJ.jpg" alt="HXjZTJXbQAAYWzJ"></p>
+<p>这段的机位我很喜欢。</p>
+<p>摄影机先从斜侧面看柱脚，然后慢慢转到街道的一头，压低高度，顺着长廊往里看。前后两排柱子一错开，纵深一下就出来了，有种站在骑楼底下躲雨的感觉。最后镜头升高、拉远，两排楼中间那条街整个露出来。</p>
+<p><img src="/images/HXjZZa2akAAFF6B.jpg" alt="HXjZZa2akAAFF6B"></p>
+<p>配色也是 Codex 定的。暖米、粉砂、灰绿，窗是蓝灰色，灯具点一点金。店面招牌用的是有厚度的彩色板，上面没写具体商户名字，算是给几家老字号留了点面子。</p>
+<p>再说海心桥。这座桥难在它浑身上下找不到一条直线。</p>
+<p>Codex 给桥面和拱各写了一条曲线。桥面从上往下看是弯的，从侧面看也拱起来一点；拱从桥面上方另走一条更高的弧线，两条线在空间里故意错开。等吊索把它们连起来，斜拱和弯桥面之间的那种层次感就出来了。</p>
+<p>曲线的公式看着唬人，意思其实很朴素。桥往前每走一步，往上抬多少、往旁边偏多少，都交给正弦波去控制。几个正弦波一叠，弯得自然又好看。</p>
+<p>拼的时候它切得很细。</p>
+<p>桥面纵向切 30 段，每段横向再分 3 块，一共 90 块桥面板。拱分 36 段，出场时间按离两端的远近排，两头先起拱，中间最后合拢，跟真实修桥「合龙」一个道理。</p>
+<p>吊索 31 根。它先根据每根索在拱上的位置，算出在桥面上对应的落点，保证上下两端对在同一条线上，然后先装锚座、再装索体。两侧栏杆一共 60 组，带立柱、横杆和下缘灯带，侧边还有 18 组雨棚板。最后放一艘游船从桥下开过去。</p>
+<p>277 组零件，大约 11.7 秒装完，留出 4 秒给整座桥亮相。</p>
+<p><img src="/images/HXjZhiuawAAyYpl.jpg" alt="HXjZhiuawAAyYpl"></p>
+<p><img src="/images/HXjZlUhb0AAnAzG.jpg" alt="HXjZlUhb0AAnAzG"></p>
+<p>两段拱从两头往中间够的那几秒，是我看片时最揪心的。总觉得差一口气就要对不上了。🤏 结果咔一声，严丝合缝。</p>
+<p>骑楼 550 组，海心桥 277 组，已经够忙了。接下来这位，一个人就要 1149 组。</p>
+<h3 id="小蛮腰-1149-块，所有零件都听同一个口令"><a href="#小蛮腰-1149-块，所有零件都听同一个口令" class="headerlink" title="小蛮腰 1149 块，所有零件都听同一个口令"></a>小蛮腰 1149 块，所有零件都听同一个口令</h3><p>广州塔，一般叫它小蛮腰。上下粗、中间细，整个塔身还拧着一股劲。</p>
+<p>Codex 画它的办法我觉得挺妙。</p>
+<p>它在塔底放一个椭圆，在塔顶放一个小一点的椭圆，然后把顶上那个转了大约 136 度。同一个角度上，底部的点和顶部的点连一条直线，一圈连下来，线和线自然就交叉出一个收腰的形状。</p>
+<p>你拿一把筷子竖着攥在手里，攥住底下，把顶上那头拧一下，中间是不是就细下去了？小蛮腰就是这么拧出来的。腰是转出来的，用不着一点点去捏。</p>
+<p>有了外形，它在不同的高度、不同的方向上取点，生成环梁、外柱和斜向网格。</p>
+<p>拆件拆得非常细。塔基分 8 片，内部支撑 15 段；环梁 31 层，每层分 8 段弧，一共 248 组；外柱按 6 个高度段、24 个方向排开，一共 144 组；斜向网格 720 组，是全塔最密的部分；再加上 6 段天线和顶部 8 个小构件，加起来正好 1149 组。</p>
+<p>装的顺序还是从里往外。</p>
+<p>先立中间的支撑，再一层层套环梁，每层错开 0.17 秒左右，同一层里也按方向错开，所以环梁是一圈圈「转着」套上去的，没有整圈哐当一下砸下来。然后外柱分段插上，斜网格最后一根根连起来，天线收顶。大约 13.5 秒全部到位。</p>
+<p>灯是这一段的高潮。✨</p>
+<p>塔身从下往上，是暖橙、粉红、紫、淡紫、蓝到青绿六种颜色渐变。这些颜色从装配一开始就在，等装到 12 秒多以后，彩色的部分在一秒多的时间里慢慢调亮，后期再叠一层更强的柔光，整座塔就像被一下子点亮了。</p>
+<p><img src="/images/HXjZytxbAAAOcTG.jpg" alt="HXjZytxbAAAOcTG"></p>
+<p><img src="/images/HXjZ2XubMAANnrV.jpg" alt="HXjZ2XubMAANnrV"></p>
+<p>讲到这你可能会问，四个地标加起来 2099 组零件，难道每一块都要单独写一段动画？</p>
+<p>不用，Codex 给所有零件定了同一套规矩。</p>
+<p>每块零件只记几样东西，什么时候出发，飞多长时间，绕哪个点转，从哪儿飞过来，带多少旋转和倾斜。每到一帧，它拿当前时间一算，就知道这块零件此刻该在哪、该转到什么角度。</p>
+<p>动作的快慢用的是一种叫 smoothstep 的缓动曲线，起步慢、中间快、快到了又慢下来，跟你把一块积木轻轻按进卡槽的手感差不多。</p>
+<p>这里面有几个小设计挺讲究。</p>
+<p>零件在前 86% 的时间里就基本对准了，剩下那点时间专门用来稳稳落座。出场的前 12% 时间，零件从 24% 的大小慢慢长到原尺寸，所以出场时一点都不突兀。落座那一下，还会往下轻轻压一点再弹回来，幅度很小，可那一下「咔」的手感全靠它。</p>
+<p>还有一个细节，我看完挺服气。零件最后停在哪，直接从静止模型里取位置，用不着一路累加着算过来。飞的过程中哪怕有一点误差，落地也不会歪。所以拼完的五羊，和原始扫描一模一样。</p>
+<p>机械臂也是 Codex 加的。</p>
+<p>一根横梁、两根手指、橙色的关节、一根伸缩杆。它跟着指定的零件一起移动，快到位时张开，然后抬起离开。机械臂只配给了少数几个关键动作，骑楼的拱券、海心桥的第一段拱、广州塔的内部支撑。片名里那两个字「机甲」，主要就是它撑起来的。</p>
+<p>四个地标中间，Codex 还插了一张立体路线图，标题叫「从越秀山走向珠江」。</p>
+<p>图上 11 个站点，五羊石像、越秀公园南口、纪念堂、公园前、北京路、天字码头、海印桥、二沙岛、广州大桥、海心桥、广州塔。陆路用暖橙色，江面用青绿色。</p>
+<p>一个小圆点从五羊出发，沿着老城往南走。走到天字码头，摇身一变，成了一艘小游船，顺着珠江往东一路开到广州塔。左下角的信息卡跟着一站站切换。</p>
+<p><img src="/images/HXjZ_WMbAAAtWUW.jpg" alt="HXjZ_WMbAAAtWUW"></p>
+<p>角落里还有一行小字，「地点顺序示意 · 距离与时间经压缩」。</p>
+<p>这行字加得好。免得哪位朋友当真照着它规划行程，从五羊石像走到天黑，还没看见海心桥。😂</p>
+<p>零件会动了，路线也画好了。可你有没有想过，这些画面到底是用什么软件画出来的？</p>
+<p>我没开 Blender，Codex 也没开。</p>
+<h3 id="没开-Blender，画面是它自己写的渲染器一个像素一个像素算出来的"><a href="#没开-Blender，画面是它自己写的渲染器一个像素一个像素算出来的" class="headerlink" title="没开 Blender，画面是它自己写的渲染器一个像素一个像素算出来的"></a>没开 Blender，画面是它自己写的渲染器一个像素一个像素算出来的</h3><p>这是整个项目里最硬核的一段。</p>
+<p>Codex 用 C++ 写了一个跑在 CPU 上的小渲染器，编译成一个本地程序，再用 Python 去调度它，最多同时开 3 个进程一起渲。</p>
+<p>整个装配画面没有用 Blender，没有用 Unreal、Unity，也没有用 GPU 光线追踪，更没有用文生视频模型。每一帧里的每一个像素，都是这个小程序自己算出来的。</p>
+<p>一个 Agent 自己手搓了一个渲染器出来，这件事我到现在想起来还觉得挺带劲。</p>
+<p>渲染器听着玄乎，它干的活拆开看就三件事。我用大白话翻译一下。</p>
+<p>第一件，算「东西在屏幕上哪儿」。</p>
+<p>摄影机站在某个位置，看向某个点。Codex 把世界里每个三角形的顶点，都换算到摄影机的视角里，再按视野角度投到一张画布上。离得近的大，离得远的小，透视感就是这一步做出来的。</p>
+<p>第二件，算「谁挡着谁」。</p>
+<p>屏幕上同一个像素，可能前面是栏杆、后面是树、再后面是楼。它给每个像素记一个深度，离镜头近的盖住离镜头远的。这样栏杆就不会跑到树后面去，楼也不会穿到桥前面来。</p>
+<p>第三件，算「这里亮还是暗」。</p>
+<p>一盏主光、一盏补光，再垫一层环境光。每个面朝向不同，挨到的光就不同。它还加了一点高光和边缘提亮，你在骑楼墙板上看到的那一圈细细的亮边，就是倒角在光线下反出来的。</p>
+<p>光有明暗还不够。零件飞在空中，看着还是像一张张贴纸。</p>
+<p>真正让它们「浮起来」的，是影子。</p>
+<p>Codex 每一帧都把当前所有的零件，从光的方向投一遍，记下每个位置上最高的那个面，存成一张 768×768 的「遮挡图」。画某个像素的时候，回头查一下它头顶有没有东西挡着，有就压暗一点。</p>
+<p>零件一动，地上的影子就跟着挪。你不用看零件本身，光看影子离它多远，就知道它离地还有多高。悬在半空的柱段、正在落座的拱券，全靠这一点立住了空间感。</p>
+<p>它还在屏幕上做了一层「缝隙压暗」。每个像素和旁边几个像素比一比深度，差了一截的地方就暗一点。板和板之间的接缝，零件和底台的接触面，就是这么显出来的。</p>
+<p>画质这块它也取了个巧。</p>
+<p>装配那五段，全部先按 1600×900 渲染，再用 ffmpeg 缩到 1280×720。大图缩成小图，细杆、拉索、倒角边上的锯齿会被磨掉不少。这五段加起来 1656 帧，没压缩的原始画面有 7 个多 G，它直接通过管道一帧帧喂给 ffmpeg，中间一张图片都没往硬盘上存。</p>
+<p>后期它再加一层柔光和暗角。广州塔亮灯的尾段，柔光调得更强，所以塔身会有一圈软软的光晕。字幕、路线标签和五羊的署名，用 Pillow 一帧帧写上去。最后封成 MP4，整片 40MB 左右。</p>
+<p>结尾那场船头夜游，水面倒影用的是另一招。</p>
+<p>它先把整个场景上下翻过来，画一张镜像图当倒影，再用三组正弦波去晃这张图的取样位置，倒影就有了波纹。摄影机跟着船往前走，还加了一点点上下起伏，假装船身在晃。抬头的角度从低头看江面，一路抬到仰望塔身，视野也跟着慢慢张开。</p>
+<p><img src="/images/HXjaVUqaAAAdiKQ.jpg" alt="HXjaVUqaAAAdiKQ"></p>
+<p><img src="/images/HXjaY0jbcAAhVEn.jpg" alt="HXjaY0jbcAAhVEn"></p>
+<p>声音也是 Codex 自己做的，一个外部音频文件都没用。</p>
+<p>它用 Python 和 NumPy 直接合成了整条 80 秒的音轨。底下是一段大约 128 BPM 的轻电子配乐，四组和弦循环，拨弦一样的主旋律带一点延迟。</p>
+<p>上面那层更有意思。每个零件在动画里都有一份记录，什么时候出发、飞多久、在画面左右哪个位置。Codex 就照着这份记录，在每块零件动作走到 87.5% 的那一刻放一声扣合。离得太近的就合并掉，免得一堆零件同时落地时，声音变成机关枪。</p>
+<p>最后全片能听到的扣合一共 246 下，另外还有 29 下伺服电机的嗡嗡声。每一下咔哒，还会按零件在画面里的左右位置，在左右声道之间偏一点。零件在左边落位，左耳先响。🎧</p>
+<p>音画能对得上，靠的就是声音和画面读同一份零件时间表，用不着后期一帧帧去对。</p>
+<p>它甚至给随机数定了一个固定的种子，所以同一套参数重新生成，声音会一模一样。</p>
+<p>这么一路看下来，好像挺完美？</p>
+<p>别急。80 秒我来回看了好几遍，毛病也挑了一箩筐。</p>
+<h3 id="80-秒看下来能打几分，毛病我也挑了一箩筐"><a href="#80-秒看下来能打几分，毛病我也挑了一箩筐" class="headerlink" title="80 秒看下来能打几分，毛病我也挑了一箩筐"></a>80 秒看下来能打几分，毛病我也挑了一箩筐</h3><p>先说我觉得做得好的地方。</p>
+<p>整支片子最打动我的，是它讲道理。每个地标都是从里往外、从下往上装，骑楼先柱后拱，大桥先面后拱再挂索，塔先立芯再套环最后织网。看着像上了一节结构科普课。</p>
+<p>每一步配一句短字幕，你不看画面、光读字幕，都能把结构顺一遍。</p>
+<p>「先实景、再拆解」的开头也好用。观众先认出这是五羊，再看它怎么碎、怎么拼，不会一上来就懵。中间那张路线图，把四个散落的地标串成了一条线，片子一下子有了「夜游」的意思，不再是四段独立的装配演示。</p>
+<p>然后是毛病。我看片时一条条记下来的，大概这么几个。</p>
+<p>机械臂是凭空出现、凭空消失的。没有支架，也没有进场退场的动画，像从天花板里直接长出来，干完活又原地蒸发。看多了有点出戏。</p>
+<p>五羊那段干脆连机械臂都没有，原因还有点好笑。</p>
+<p>Codex 给机械臂设了个出场条件，在某个时间点附近、某个位置上有零件落位，它才出来干活。五羊那段挑中的时间点上，偏偏一块零件都对不上，机械臂就一直在后台候场，到收工都没轮到它上台。😅</p>
+<p>骑楼有穿模。</p>
+<p>零件飞进来的路线没有做碰撞检测，也没有绕开障碍的规划，偶尔会直接从隔壁的板子里穿过去。楼板和侧墙又是大块件，个别时刻看着像一整面墙同时飞进来，空中悬着的东西一多，就有点乱。</p>
+<p><img src="/images/HXjahTTasAAAs5S.jpg" alt="HXjahTTasAAAs5S"></p>
+<p>五羊的碎块像纸片。</p>
+<p>前面说过，它是按三角面的中心去分组的，切的只是表面那层壳，扫描模型里头本来就是空的。所以每块拆下来只有一层皮，没有断面，侧着看就是一张薄壳。拼回去完全没问题，飞在空中的那几秒就露馅了。</p>
+<p>广州塔远景的细网会闪。</p>
+<p>720 组斜网格挤在 720p 的画面里，有些杆子比一个像素还细。镜头一动，它们就忽明忽暗地跳。先渲大图再缩小能磨掉一部分，磨不干净。</p>
+<p><img src="/images/HXjaoAvasAA3iqb.jpg" alt="HXjaoAvasAA3iqb"></p>
+<p>开头公园里的游客是静止的，一个个定在原地，像在玩一二三木头人，一点活人感都没有。结尾的江面也偏僵，和前面热热闹闹的装配戏一比，节奏一下子松下来了。</p>
+<p>最后说「机甲」这两个字。</p>
+<p>说实话，这些零件本身更像积木，没有活塞，没有关节，没有液压杆。机甲感主要靠那只机械臂和咔哒声在撑。「机甲积木精细装配版」这个片名豪意值拉满，实际看下来，积木的成分要多一点。</p>
+<p>我回头把这些毛病放在一起看，发现它们有个共同点。碰撞、退场动画、实心切块、细杆防闪，都是「需求里不写明，Agent 就按最省事的办法来」的东西。</p>
+<p>所以你要是想自己做一支，最好一开始就把这些坑写进需求里。</p>
+<h3 id="想自己做一支，照这个顺序来"><a href="#想自己做一支，照这个顺序来" class="headerlink" title="想自己做一支，照这个顺序来"></a>想自己做一支，照这个顺序来</h3><p>不一定非得是广州。</p>
+<p>你家楼下的老街，你们厂里那台设备，你店里卖得最好的那款产品，都能这么一块块拼出来。产品拆解、厂房介绍、门店开业，这种「零件飞过来拼成型」的画面放在哪都很抓眼球。🛠️</p>
+<p>下面是我觉得最顺的一套做法，你照着走一遍就行。</p>
+<p>第一步，先想好装什么。</p>
+<p>一支片子三到四个对象就够了，贪多反而每个都装不细。里面最好有一个结构清楚的，桥、塔、楼都行，装起来最有看头。</p>
+<p>曲面复杂的东西，比如雕塑、动物、人像，别让 Codex 从零画，先去 Sketchfab 这类平台找授权清楚的扫描模型。作者是谁、什么协议，记下来。CC BY-SA 4.0 这种协议，要求署名，改编后的作品也要按同样的协议分享，这个别漏。</p>
+<p>第二步，装 skill。</p>
+<p>在终端里跑下面这一行，perspective-illusion 就装进 Codex 了。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx skills add dotslashsimran/simcraft --skill perspective-illusion -a codex -g -y</span><br></pre></td></tr></table></figure>
+
+<p>仓库在这：<a target="_blank" rel="noopener" href="https://github.com/dotslashsimran/simcraft">https://github.com/dotslashsimran/simcraft</a></p>
+<p>这个 skill 你把它当成一个「运镜思路包」就好，核心就是靠摄影机的移动去揭示空间。我这次让 Codex 用的，也只是这个思路，skill 自带的 Three.js 模板没有直接跑，装配、阴影、渲染器都是它另外写的。所以你也不用被 skill 文档里的效果框住，它给的是方向，片子长什么样还得看你的需求。</p>
+<p>第三步，开 Codex，选模型和档位。</p>
+<p>我用的是 GPT-6.2 Astra，推理开到「极高」。这种要算几何、写渲染器、还要配声音的活，一口气要想的东西很多，档位别抠。</p>
+<p>第四步，提需求。</p>
+<p>画面风格、装配顺序、字幕、署名，最好一次说清楚。下面这段你可以把地标换成自己的，直接用。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">请参考 perspective-illusion 这个 skill 里「用摄影机移动揭示空间」的思路，帮我做一支约 80 秒、1280×720、24fps 的地标装配短片。</span><br><span class="line"></span><br><span class="line">对象：[对象 A]、[对象 B]、[对象 C]、[对象 D]。</span><br><span class="line">风格：微缩沙盘，哑光低多边形，深色摄影棚背景，模型放在一块展示底台上，有动态阴影。</span><br><span class="line"></span><br><span class="line">每个对象单独一段：</span><br><span class="line">1. 开场先给 2 秒能认出来的实景造型，再切到沙盘。</span><br><span class="line">2. 零件按真实结构顺序装配：基座 → 主体骨架 → 外围构件 → 细部 → 灯光。</span><br><span class="line">3. 每个装配步骤配一句不超过 15 个字的中文字幕，说明正在装什么。</span><br><span class="line">4. 装完后镜头拉远，留 3 到 4 秒展示整体。</span><br><span class="line"></span><br><span class="line">对象之间插一张立体路线图，标出游览顺序，画面上注明「距离与时间经压缩」。</span><br><span class="line">有现成授权模型的对象用授权模型，把原作者、扫描作者和许可协议写进画面和视频文件信息；其余用程序化生成的风格化模型。</span><br></pre></td></tr></table></figure>
+
+<p>第五步，先要清单和预览，再让它渲全片。</p>
+<p>这一步最省时间。全片渲完再发现骑楼的柱子装反了，那才叫欲哭无泪。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">先别渲染全片。</span><br><span class="line">1. 给我每个对象的拆件清单：分几组、每组是什么构件、按什么顺序装、大概几秒装完。</span><br><span class="line">2. 每段装配抽 4 帧预览图（开始、三分之一、三分之二、完成），我确认之后再渲染全片。</span><br></pre></td></tr></table></figure>
+
+<p>第六步，把我挑出来的那些毛病，提前写成要求。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">装配动画补充要求：</span><br><span class="line">1. 机械臂要有支架和进出场动画，从画外伸进来，放完零件再收回去，不要凭空出现或消失。每个对象段至少出现一次，渲染后抽帧确认它真的出场了。</span><br><span class="line">2. 零件飞入路径要避开已经装好的构件，同一时刻悬空的大块件不超过 3 个，不要整面墙同时飞入。</span><br><span class="line">3. 拆分扫描模型时，每块补上断面和厚度，不要只是一层表面薄壳。</span><br><span class="line">4. 远景里比 1 像素还细的杆件要加粗或合并，避免画面闪烁。</span><br><span class="line">5. 开场实景里的人物要有轻微走动；结尾水面要有持续的波动和灯影变化。</span><br></pre></td></tr></table></figure>
+
+<p>第七步，让声音跟着零件走。</p>
+<p>扣合声别让它后期手动对，直接按零件落位的时间自动生成，省事又准。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请根据每个零件的落位时间自动生成装配音效：</span><br><span class="line">1. 在零件动作走到约 87% 的时刻放一声短促的扣合声；零件太密时合并，相邻两声间隔不小于 0.1 秒。</span><br><span class="line">2. 扣合声按零件在画面中的左右位置做声像偏移。</span><br><span class="line">3. 底下配一段 120 到 130 BPM 的轻电子音乐，开头淡入、结尾淡出。</span><br><span class="line">4. 不使用任何外部音频素材，全部用代码合成，固定随机种子，保证重新生成结果一样。</span><br></pre></td></tr></table></figure>
+
+<p>第八步，验收。</p>
+<p>片子交回来，别光看第一遍爽不爽。我自己看片时会盯几个地方。机械臂每一段是不是都出场了；零件有没有从别的零件里穿过去；远景的细杆闪不闪；署名的名字和协议对不对；时长、帧数、分辨率是不是你要的。</p>
+<p>哪里不对，就记下是第几秒，截一帧丢回给 Codex，告诉它哪里要改。说「第 19 秒骑楼侧墙整面飞进来，拆细一点」，比说「感觉有点乱」好使一百倍。</p>
+<p>还有两个小提醒。</p>
+<p>比例和距离，它为了好看都会压缩，片子里老老实实写一句「经压缩」，比让懂行的人在评论区挑刺强。还有，模型是 CPU 一帧帧算出来的，物体越多、分辨率越高，等得越久，第一次做先用短一点、小一点的版本把流程跑通。</p>
+<p>……</p>
+<p>下次路过越秀公园，可以多看那几只羊一眼。</p>
+<p>在我的屏幕上，它们碎成 123 块，七秒多就拼了回去，一块都没少，比拼宜家的柜子靠谱多了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/StratusResultsX-2123688705814561079/">https://yaoav.github.io/2026/11/20/StratusResultsX-2123688705814561079/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/StratusResultsX/">@StratusResultsX</a></div><div class="post-share"><div class="social-share" data-image="/images/2123688705814561079-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/leo_xiaolei-2123695069580365974/" title="订阅 Google AI Ultra 的正确姿势 &amp; 回血大法"><img class="cover" src="/images/2123695069580365974-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">订阅 Google AI Ultra 的正确姿势 & 回血大法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @leo_xiaolei（刘老板） 的长文，原文链接，版权归原作者所有。  2026 年 11 月中旬之后，Google AI Ultra 依靠跨区捡漏的低价红利已经基本画上句号。面对动辄上千元的月费，直接硬扛美区正价成本太高，盲目去二手平台拼低价车又容易踩坑。 如果你正打算订阅 Google AI Ultra，或者已经独立上车、想把手里闲置的权益安全变现，这篇基于截至 2026 年 11 月 20 日官方文档与社区核实信息的实操指南，将帮你一次理清最新价格水位、家庭组共享真相、熟人拼车与买车位的取舍，以及最稳妥的“回血”方案。 一、先认清现实：土区红利退潮，现在订阅到底要花多少钱？在盘算怎么买之前，必须先看清涨价后的真实成本。2026 年 11 月中旬左右，由于大量跨区订阅涌入，Google 正式调整了土耳其区的低价通道。 涨价之前，通过 Apple Intro Offer 或礼品卡等方式订阅土区 20x 档位，实付最低可做到约 ¥410&#x2F;月；但涨价之后，土区正价已经非常接近美区水平，跨区套利空间大幅收窄。 Google AI Ultra 月费...</div></div></div></a><a class="pagination-related" href="/2026/11/20/OdailyChina-2123676984412868940/" title="“创始人资金池套现”、“朝鲜黑客洗钱”MakerDAO再现风波"><img class="cover" src="/images/2123676984412868940-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">“创始人资金池套现”、“朝鲜黑客洗钱”MakerDAO再现风波</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @OdailyChina（OdailyNews） 的长文，原文链接，版权归原作者所有。  加密市场再度急跌，老牌 DeFi 平台 Sky（原 MakerDAO）亦受波及。 一方面，SKY 代币价格的下跌牵扯出了一桩“借贷风波”，创始人 Rune Christensen 此前投入 1.85 亿美元的 SKY 代币借出了 7700 万美元 USDS 稳定币，引发市场讨论“创始人资金池套现”争议。Sky 旗下价格稳定模块（PSM）被指“变相为朝鲜黑客提供 USDC 出逃渠道”，遭到风控机构 Inca Digital 深入调查，并引发媒体跟踪报道。 一时间，Sky 深陷舆论漩涡。但就目前的情况来看，协议运转正常，USDS 稳定币保持超额抵押，且官方计划启动525 万美元 SKY 代币回购；PSM相关非法活动交易量占比仅有 0.03%，市场无需过度紧张。当然，保持警惕仍然是必要的，毕竟，SKY 作为老牌 DeFi 平台，如果出现任何闪失，破坏威力仍不容小觑。Sky 协议身陷“朝鲜黑客洗钱风波”：422 个关联地址，累计交易量约 5.18 亿美元 据风控机构 Inca...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">394</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">191</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E7%BE%8A%E7%9F%B3%E5%83%8F%E7%A2%8E%E6%88%90-123-%E5%9D%97%EF%BC%8C%E5%8F%88%E4%B8%80%E5%9D%97%E4%B8%8D%E5%B0%91%E5%9C%B0%E6%8B%BC%E5%9B%9E%E5%8E%BB"><span class="toc-number">1.</span> <span class="toc-text">五羊石像碎成 123 块，又一块不少地拼回去</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%91%E6%A5%BC%E5%92%8C%E6%B5%B7%E5%BF%83%E6%A1%A5%E6%B2%A1%E7%8E%B0%E6%88%90%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%AE%83%E5%B0%B1%E6%8B%BF%E5%85%AC%E5%BC%8F%E4%B8%80%E6%A0%B9%E6%A0%B9%E7%94%BB"><span class="toc-number">2.</span> <span class="toc-text">骑楼和海心桥没现成模型，它就拿公式一根根画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E8%9B%AE%E8%85%B0-1149-%E5%9D%97%EF%BC%8C%E6%89%80%E6%9C%89%E9%9B%B6%E4%BB%B6%E9%83%BD%E5%90%AC%E5%90%8C%E4%B8%80%E4%B8%AA%E5%8F%A3%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">小蛮腰 1149 块，所有零件都听同一个口令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E5%BC%80-Blender%EF%BC%8C%E7%94%BB%E9%9D%A2%E6%98%AF%E5%AE%83%E8%87%AA%E5%B7%B1%E5%86%99%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8%E4%B8%80%E4%B8%AA%E5%83%8F%E7%B4%A0%E4%B8%80%E4%B8%AA%E5%83%8F%E7%B4%A0%E7%AE%97%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-number">4.</span> <span class="toc-text">没开 Blender，画面是它自己写的渲染器一个像素一个像素算出来的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#80-%E7%A7%92%E7%9C%8B%E4%B8%8B%E6%9D%A5%E8%83%BD%E6%89%93%E5%87%A0%E5%88%86%EF%BC%8C%E6%AF%9B%E7%97%85%E6%88%91%E4%B9%9F%E6%8C%91%E4%BA%86%E4%B8%80%E7%AE%A9%E7%AD%90"><span class="toc-number">5.</span> <span class="toc-text">80 秒看下来能打几分，毛病我也挑了一箩筐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%B3%E8%87%AA%E5%B7%B1%E5%81%9A%E4%B8%80%E6%94%AF%EF%BC%8C%E7%85%A7%E8%BF%99%E4%B8%AA%E9%A1%BA%E5%BA%8F%E6%9D%A5"><span class="toc-number">6.</span> <span class="toc-text">想自己做一支，照这个顺序来</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"><img src="/images/2123789428862660980-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"/></a><div class="content"><a class="title" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?">-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?</a><time datetime="2026-11-20T22:43:52.000Z" title="发表于 2026-11-20 22:43:52">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
