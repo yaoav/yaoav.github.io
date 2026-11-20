@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="TL;DR: Replit launched Missions this week. You give it an outcome, a spending ca">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Replit&#39;s agent swarm built a monitoring tool in 2 days for $3,000. I&#39;d write the finish line first">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/X-2123507710801129530/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="TL;DR: Replit launched Missions this week. You give it an outcome, a spending ca">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123507710801129530-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T04:04:25.000Z">
+<meta property="article:modified_time" content="2026-11-20T08:47:35.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123507710801129530-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first",
+  "url": "https://yaoav.github.io/2026/11/20/X-2123507710801129530/",
+  "image": "https://yaoav.github.io/images/2123507710801129530-cover.jpg",
+  "datePublished": "2026-11-20T04:04:25.000Z",
+  "dateModified": "2026-11-20T08:47:35.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/X-2123507710801129530/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Replit\'s agent swarm built a monitoring tool in 2 days for $3,000. I\'d write the finish line first',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">178</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123507710801129530-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T04:04:25.000Z" title="发表于 2026-11-20 04:04:25">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123507710801129530">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>TL;DR: Replit launched Missions this week. You give it an outcome, a spending cap and a list of things it has to ask you about, then a swarm of agents works toward it. Replit says a mission built its own monitoring platform, DataCat, in 2 days inside a $3,000 budget. The part I’d copy isn’t the swarm. It’s the agreement you write before anything starts, because an AI judge grades the work against it and the work stops when the money runs out, finished or not.</p>
+<p>What Replit launched</p>
+<p>Missions went live on November 17. Replit’s DataCat post opened with “The leading observability platform wants $83,700&#x2F;yr just to monitor your app” and passed 50K views within hours. Amjad Masad’s post said Missions “can spin up a swarm of agents to replicate any type of software of any complexity.” That one picked up about 38K views and 180 bookmarks in a few hours.</p>
+<p>The setup is different from a normal agent chat. Before work starts you agree on a goal, success criteria, a spending limit and which actions need your permission. Then agents work in parallel and an independent AI judge checks results against your criteria.</p>
+<p>A mission keeps going until one of three things happens. The criteria are met. It needs your input. Or the budget runs out, and in Replit’s words, “work stops with the outcome still unresolved.”</p>
+<p><img src="/images/HXXX7E-aYAAYDje.jpg" alt="HXXX7E-aYAAYDje"></p>
+<p>The DataCat numbers, and what they don’t say</p>
+<p>Replit wanted to bring application monitoring in house. The mission built dashboards, alerts and tracing in 2 days with a $3,000 budget. When they planted a database bug, DataCat raised an alert in 38 seconds against a 60 second target. Over a 3 hour load test it stored 26 million activity records and 4.4 million log entries with no data loss, and passed all 51 correctness and alert checks.</p>
+<p>They also compared it to a build from the same starting prompt using &#x2F;goal in Claude Code. DataCat took in traces about 5x faster (49,000 a second vs 9,800) and passed 51 of 56 API compatibility checks vs 45. The Claude Code build covered more product areas and took in logs faster.</p>
+<p>Fair caveats, some from Replit itself: one run per setup, Replit testing Replit’s product, and no comparison against the hosted service they wanted to replace. So I read it as “this can work”, not “this always works”.</p>
+<p><img src="/images/HXXYFUcagAA9A8N.jpg" alt="HXXYFUcagAA9A8N"></p>
+<p>Why the agreement is the real product</p>
+<p>A swarm will happily spend money on the wrong goal. More agents in parallel just get you to the wrong place faster.</p>
+<p>If the goal is “win our first 10 paying enterprise customers”, setup asks what counts. Does a paid pilot count? Or only signed annual contracts above some minimum? That one answer changes which accounts the agents chase.</p>
+<p>And because the judge grades against your criteria, a line like “make it fast” gives it nothing to grade. “Alert within 60 seconds of a database failure” does.</p>
+<p>The approvals matter just as much. Replit’s example caps a mission at $1,000 and makes the agent ask before it contacts prospects, shares a proposal, changes customer facing sales material or makes product commitments. The product page also lists “Approve before publishing” and “Approve any budget increase”.</p>
+<p>How I’d write the finish line</p>
+<p>If we’re looking at handing something like this a real project at Channel Automation, say a reporting screen our home improvement customers keep asking for, I’d write the agreement before I pick a number:</p>
+<ol>
+<li><p>A one sentence goal a customer would recognise. Not “build reporting”. More like “an owner can see this month’s jobs by status in one screen”.</p>
+</li>
+<li><p>Three to five pass or fail checks with numbers. Load time, error rate, which data has to show up.</p>
+</li>
+<li><p>What it can’t touch. Live customer data, billing, anything that messages a homeowner.</p>
+</li>
+<li><p>What needs my OK. Publishing, any budget increase, anything a customer sees.</p>
+</li>
+<li><p>A budget I’m fine losing. If it stops at 80% done, is the 80% still useful to us? If not, the goal is too big.</p>
+</li>
+<li><p>Who signs off. The judge is an AI. Someone on our team still reads the result before it ships.</p>
+</li>
+</ol>
+<p><img src="/images/HXXZSANakAASllT.jpg" alt="HXXZSANakAASllT"></p>
+<p>What this means for you</p>
+<p>If you’re a solo builder: try it on something you’d never get to otherwise, like an internal tool. Keep the first cap small. Replit says messages you send during an active mission count toward its budget, so don’t chat with it all day.</p>
+<p>If you lead a team: the hard part moves from writing code to writing acceptance criteria. Whoever writes the clearest pass or fail checks just got more valuable.</p>
+<p>If you sell software: “replicate any type of software” is a bold claim, but it’s worth taking seriously. If a swarm can copy your product from the outside in two days, your moat is the customers, the data and the workflows people already trust.</p>
+<p>If you’re learning: practice writing success criteria in plain words. Every one of these tools leans on that.</p>
+<p>The line I’d save: a swarm doesn’t fix a vague goal, it just spends faster. Write the finish line before you write the budget.</p>
+<p>I write about AI, software, and building products. If that’s your world too, follow me for more practical takes like this.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/X-2123507710801129530/">https://yaoav.github.io/2026/11/20/X-2123507710801129530/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2123507710801129530-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/ihavenliu-2123566820250779955/" title="做过十几年快消批发，说说街边零食店到底谁在赚钱"><img class="cover" src="/images/2123566820250779955-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">做过十几年快消批发，说说街边零食店到底谁在赚钱</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ihavenliu（𝙃𝙖𝙫𝙚𝙣） 的长文，原文链接，版权归原作者所有。  我以前做了十几年快消批发和实体零售，今年刚转到这个圈子，每天接触 AI 和币圈这些新东西，说实话刚进来心里也有点茫然，很多玩法都还在一步步摸索。想了想，与其硬聊那些我刚入门的东西，不如先跟大伙儿唠唠我干了十几年的老本行——国内满大街开的量贩零食店。 一条街上隔百八十米就亮起一块招牌，开业头几天排长队、一天卖一万多，可转头七八个月拉卷帘门转让的也一抓一大把。这行外人看着热闹，里头的账其实全在暗处。 先说大家进门最直观感受到的便宜。早些年超市一包零食卖得贵，是因为从厂里出来要过好几层代理，进超市还得交进场费、条码费、堆头费，超市再压你几个月账期，整条链路加价能翻一倍。现在的连锁零食店换了打法，总部直接拿现金去工厂包货，把链路加价压到了三成五到四成，价格自然就打下来了。 但别真以为店里啥都在赔本甩卖。你进门一眼看见的门口堆头、收银台旁边摆的可乐、矿泉水、方便面，这些大牌子价格透明，全网都能比价，在店里其实只占一成五到两成五，毛利也就八个点到十五个点，有的甚至平进平出。它们压根不...</div></div></div></a><a class="pagination-related" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img class="cover" src="/images/2123480803850035284-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @JamalXBT（Jamal） 的长文，原文链接，版权归原作者所有。  A helicopter crew pours corn into a volcano. The volcano sends back popcorn. A fighter jet leaves a cinema screen and flies over the audience. A tower of people bends toward a balcony because somebody wants tea. Six AI clips in my research archive had accumulated 190,260,749 Instagram views when their counters were saved. The interesting part is how little explanation the scenes need. You understand the setup, anticipate a consequence, and stay...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/11/X-2120480271195910591/" title="AI 时代，90% 的项目都可以批量"><img class="cover" src="/images/2120480271195910591-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-11</div><div class="info-item-2">AI 时代，90% 的项目都可以批量</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  AI 时代，90% 的项目都可以批量我从 1 个号做到 2000 个号：任何跑通的项目，都能矩阵化 先看结果。 下面是我抖音上自己的号。一个号，累计收益 481713.71 元。基础收益 200279.2，精选收益 53465.85，签约收益 227869.41。签约收益占了接近一半。  这不是孤例。另外两个号，一个累计 13376.19，一个累计 8636.7。三个号加起来，50 万出头。   再看公众号。下面是我随手截的 7 个号，都是我自己的。  7 个号，昨日阅读加起来 407280 次，昨日广告收入加起来 3702.27 元。  我把这 7 个号的数字列出来：  · 阅读 75142，昨日广告收入 807.09  · 阅读 120070，昨日广告收入 888.51  · 阅读 50971，昨日广告收入 409.36 · 阅读 48747，昨日广告收入 223.29 · 阅读 24671，昨日广告收入 430.47 · 阅读 70181，昨日广告收入 774.04 · 阅读 17498，昨日广告收...</div></div></div></a><a class="pagination-related" href="/2026/11/12/X-2120783846253719901/" title="两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操"><img class="cover" src="/images/2120783846253719901-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">两千粉的视频号，怎么靠县城客户赚到大5位数｜个人 IP 小白实操</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我做视频号两年多，粉丝近2000。 这个数字放进任何一篇起号教程，都算还没起来。可我靠视频号赚到的钱，比不少几万粉的账号要多。我做的是个人 IP 口播，对着手机讲装修科普、孩子上学要注意的事、公文写作里常见的问题，都是身边的日常小问题。没有团队，客户大部分在县城。 这两天我把自己在视频号上走过的路理了一遍。两个平台差别挺大，有些地方我的做法跟小红书刚好反着来，后面会讲到。 这篇写给想做个人 IP、还没开始的人。我的经验只来自县城客户和私域成交，做纯流量号或者带货号的朋友，看的时候要打个折，我没有这样的经验。 一、视频号怎么把你送到别人面前在小红书，陌生人靠兴趣推荐和搜索看到你。抖音主要靠算法。视频号也有算法推荐，但它多了一条路，就是你的微信好友。 视频号里那颗爱心是“推荐”。一个人点了它，他的好友就有机会刷到这条视频，还能看到是谁推荐的。视频也能一键转进群、发朋友圈、私聊给某个人。一条视频就这样顺着人和人的关系往外走。 社交推荐和算法推荐各占多少，网上说法很多，有说五五开的，也有说社交占六成以上的。我没找...</div></div></div></a><a class="pagination-related" href="/2026/10/28/X-2115112687650709511/" title="How to give Claude a designer&#39;s taste and build your own landing page"><img class="cover" src="/images/2115112687650709511-cover.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-28</div><div class="info-item-2">How to give Claude a designer&#39;s taste and build your own landing page</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  A designer skill gets you a landing page that looks like a designer made it, in an afternoon, on your normal Claude plan. Anthropic built skills so Claude can carry a specialist’s rules into any chat. A skill is a folder with one main file, SKILL.md. Claude reads its name and description up front and pulls in the full instructions only when a task needs them. I’ve packed 20+ specialists into my own Claude skills bundle. If you sell anything online, a desi...</div></div></div></a><a class="pagination-related" href="/2026/11/16/X-2122272486750290313/" title="自媒体创作不完全指南：如何快速起号「附完整工作流 &amp; 对标 Skill」"><img class="cover" src="/images/2122272486750290313-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">自媒体创作不完全指南：如何快速起号「附完整工作流 &amp; 对标 Skill」</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。   🔥如果你想从零开始做自媒体、尽快起号，这篇可以当个参考。国内外平台都能用。这套方法是我自己边做边摸索出来的，分享给大家，希望能帮你少走点弯路。  hello，最近在研究国内的自媒体，我发现普通人做自媒体起号，大多卡在两件事上：  选题容易自嗨。 熬夜憋出个自以为绝妙的选题，发出去却无人问津，哭晕在厕所 做一条太费劲。 写稿、拍摄、剪辑，折腾半个月。发完还等不到正反馈，心态直接崩溃  硬想原创靠灵感撞大运，死磕剪辑容易陷入自嗨，纯搬运省事但平台分分钟限流。 既然从零猜选题的试错成本太高，自媒体最快的破局解法其实只有一条👇🏻： 找一个公域里已经被验证过的爆款形式，借助 AI 工具用自己的原创素材重新做一遍。 废话不多说，直接上干货。 文末我会拿一条我自己跑通的复刻案例，把从找对标到成片的实操全流程走一遍。 一、新号最缺的是确定性做自媒体的新手，最缺的不是创意，而是确定性。 比如短视频平台上最常见的品类之一，美女跳舞，不管是播放、点赞还是涨粉速度，天然就是公域流量里被反复验证过的硬通货。 一条在公域跑出...</div></div></div></a><a class="pagination-related" href="/2026/11/12/X-2120746927100715509/" title="Who Is Really Behind the Hunt for Jensen Huang?"><img class="cover" src="/images/2120746927100715509-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-12</div><div class="info-item-2">Who Is Really Behind the Hunt for Jensen Huang?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  “Doth our law judge any man, before it hear him, and know what he doeth?” (John 7:51, KJV) It is no secret that Jensen Huang and Anthropic CEO Dario Amodei are locked in an open clash over AI policy and chip exports, from heated disagreements in Washington to Huang publicly rejecting Amodei’s push for sweeping export bans. Yet look at who is suddenly piling on to drive Huang out. Anthropic’s people overlap with the think tanks, ex-officials and forums beh...</div></div></div></a><a class="pagination-related" href="/2026/09/13/X-2099080172603588786/" title="5 AI characters, 60 days, $91K, and the one SYSTEM under all of it"><img class="cover" src="/images/2099080172603588786-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-13</div><div class="info-item-2">5 AI characters, 60 days, $91K, and the one SYSTEM under all of it</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  Generating a convincing AI video stopped being difficult a while ago. The hard part is making the same face stay the same face across hundreds of clips without anyone noticing the seams. Over sixty days I stood up five fictional AI creators. No camera was switched on, no studio was booked, nobody was hired. The whole thing ran on five reference photos, three AI tools and a single content pipeline that does the repetitive work on its own. Month 1: $34K. Mo...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">178</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/ihavenliu-2123566820250779955/" title="做过十几年快消批发，说说街边零食店到底谁在赚钱"><img src="/images/2123566820250779955-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做过十几年快消批发，说说街边零食店到底谁在赚钱"/></a><div class="content"><a class="title" href="/2026/11/20/ihavenliu-2123566820250779955/" title="做过十几年快消批发，说说街边零食店到底谁在赚钱">做过十几年快消批发，说说街边零食店到底谁在赚钱</a><time datetime="2026-11-20T07:59:18.000Z" title="发表于 2026-11-20 07:59:18">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/X-2123507710801129530/" title="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first"><img src="/images/2123507710801129530-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first"/></a><div class="content"><a class="title" href="/2026/11/20/X-2123507710801129530/" title="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first">Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first</a><time datetime="2026-11-20T04:04:25.000Z" title="发表于 2026-11-20 04:04:25">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img src="/images/2123480803850035284-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"/></a><div class="content"><a class="title" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</a><time datetime="2026-11-20T02:17:30.000Z" title="发表于 2026-11-20 02:17:30">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"><img src="/images/2123432312583127318-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"/></a><div class="content"><a class="title" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？">海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？</a><time datetime="2026-11-19T23:04:49.000Z" title="发表于 2026-11-19 23:04:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

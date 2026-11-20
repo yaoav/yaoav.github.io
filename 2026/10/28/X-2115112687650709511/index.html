@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How to give Claude a designer's taste and build your own landing page | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="A designer skill gets you a landing page that looks like a designer made it, in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to give Claude a designer&#39;s taste and build your own landing page">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/28/X-2115112687650709511/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="A designer skill gets you a landing page that looks like a designer made it, in">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2115112687650709511-cover.png">
+<meta property="article:published_time" content="2026-10-28T00:05:36.000Z">
+<meta property="article:modified_time" content="2026-11-20T08:47:31.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@X">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2115112687650709511-cover.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to give Claude a designer's taste and build your own landing page",
+  "url": "https://yaoav.github.io/2026/10/28/X-2115112687650709511/",
+  "image": "https://yaoav.github.io/images/2115112687650709511-cover.png",
+  "datePublished": "2026-10-28T00:05:36.000Z",
+  "dateModified": "2026-11-20T08:47:31.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/28/X-2115112687650709511/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to give Claude a designer\'s taste and build your own landing page',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">178</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2115112687650709511-cover.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How to give Claude a designer's taste and build your own landing page</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How to give Claude a designer's taste and build your own landing page</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-28T00:05:36.000Z" title="发表于 2026-10-28 00:05:36">2026-10-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@X（X）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2115112687650709511">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>A designer skill gets you a landing page that looks like a designer made it, in an afternoon, on your normal Claude plan.</p>
+<p>Anthropic built skills so Claude can carry a specialist’s rules into any chat. A skill is a folder with one main file, SKILL.md. Claude reads its name and description up front and pulls in the full instructions only when a task needs them.</p>
+<p>I’ve packed 20+ specialists into my own Claude skills bundle. If you sell anything online, a designer skill is the one I’d build first, because a landing page is where a vague prompt costs you the most money.</p>
+<p>Below is how to build one from scratch with Claude, the five prompts that take you from an empty chat to a live link, and the check that makes the page work on your phone.</p>
+<p>Our designer skill is a rulebook Claude reads before it builds. You give it the brief, Claude builds against your rules, and it keeps fixing the page until it passes your checklist.</p>
+<h3 id="What-goes-inside-a-designer-skill"><a href="#What-goes-inside-a-designer-skill" class="headerlink" title="What goes inside a designer skill"></a>What goes inside a designer skill</h3><p>Every good designer skill has two halves and a checklist. The first half decides what the page says and how it’s laid out. The second half decides how it looks.</p>
+<p>As you can imagine, the checklist decides when the page is done.</p>
+<p><img src="/images/HVpi_jgX0AA8_-p.png" alt="HVpi_jgX0AA8_-p"></p>
+<p>The strategy half starts with an intake. Before writing a word, Claude asks for the one action you want visitors to take, the offer, the buyer, their top three objections, where your traffic comes from and what proof you have.</p>
+<p>Then it fixes the structure. Every page gets the same 12 sections in the same order, from a headline that names the outcome and the audience down to an FAQ, a guarantee and a final button that matches the first one.</p>
+<p><img src="/images/HVpjCuiWYAIjLQ6.png" alt="HVpjCuiWYAIjLQ6"></p>
+<p>The strategy half also sets the copy rules. One offer, one audience, one button, and real numbers in place of words like “streamline”. “Save time” becomes “cut your weekly reporting from 4 hours to 15 minutes”.</p>
+<p>The visual half is where your taste lives. It names your one font, your colors as hex codes, a short list of allowed spacing values, your corner style and one motion curve for every animation. Fixed values stop Claude from guessing a new look every time you ask.</p>
+<p>The checklist closes it out. Strategy, visuals and shipping basics like a 404 page, form validation and image alt text all get a tick before the page counts as done.</p>
+<h3 id="Build-your-designer-skill-with-one-prompt"><a href="#Build-your-designer-skill-with-one-prompt" class="headerlink" title="Build your designer skill with one prompt"></a>Build your designer skill with one prompt</h3><p>You don’t write the file yourself.</p>
+<p>Instead, Claude interviews you about your brand and writes it.</p>
+<p>Here’s the prompt I use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Interview me, then write a Claude skill called landing-page-design as a SKILL.md file I can download.</span><br><span class="line">Ask me everything in one batch. My brand colors as hex codes, one font I like, 3 websites whose look I love, my brand voice, and whether my pages should be dark or light.</span><br><span class="line">Start the file with a name and a one-line description of when to use it.</span><br><span class="line">Part A, strategy. An intake that asks for the one action, the offer, the buyer, their top three objections, the traffic source and the proof. A fixed 12-section page structure from headline to final call to action. Copy rules that ban vague words and require specific numbers.</span><br><span class="line">Part B, visual system. One font, my colors, a fixed spacing scale, one corner style, flat backgrounds and one motion curve. Keep every value in this one section so I can change my brand later in one place.</span><br><span class="line">End the file with a checklist for strategy, visuals and shipping basics like a 404 page, form validation and alt text.</span><br></pre></td></tr></table></figure>
+
+<p>If you don’t have brand colors yet, tell Claude so. Ask it to propose three palettes based on the 3 sites you named, render each one as a small sample, and pick the one that feels like you.</p>
+<p><img src="/images/HVpjF2-WAAAhrm3.png" alt="HVpjF2-WAAAhrm3"></p>
+<p>Save the file as SKILL.md. In Claude, create a Project, add SKILL.md to the project’s knowledge and start a chat inside it. Every chat in that project now follows your rules. If you use Claude Code, put the file in a folder called landing-page-design inside your project’s .claude&#x2F;skills folder, and Claude loads it whenever you ask for a page.</p>
+<p>Build one skill for one job. A landing page skill that does one thing well beats a giant brand file that also tries to cover your emails, decks and posts, because when a page comes out wrong you know which rule to fix.</p>
+<h3 id="Build-your-first-page"><a href="#Build-your-first-page" class="headerlink" title="Build your first page"></a>Build your first page</h3><p>Open a chat inside the Project and paste this prompt word for word:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Follow my landing-page-design skill.</span><br><span class="line">Build me a landing page for my offer. Run the intake first and ask every missing question in one batch. If I can&#x27;t answer one, make a reasonable assumption and tell me in one line.</span><br><span class="line">Before any code, give me the page outline, hero copy, benefits, how it works and the FAQ.</span><br><span class="line">Then build it as one HTML page, section by section, starting with the hero. Show it as an artifact I can click through and give me the HTML file to download.</span><br><span class="line">My offer: [WHAT YOU SELL, WHO IT&#x27;S FOR, THE ONE ACTION YOU WANT VISITORS TO TAKE]</span><br></pre></td></tr></table></figure>
+
+<p>In practice, the difference looks like this:</p>
+<p>Weak offer line: “My coaching business.”</p>
+<p>Strong offer line: “A 6-week LinkedIn coaching program for freelance designers who want 2 new clients a month. The one action is booking a free 20-minute call.”</p>
+<p>The second one answers half the intake before Claude asks a single question.</p>
+<p>Give the rest of the intake the same care. For objections, write the three reasons people hesitate in their own words, like “I tried a coach before and it didn’t work”. For proof, give one number or quote you can back up. For traffic, say where visitors come from, so the headline can match the post or ad they just clicked.</p>
+<p>Start with one page for your best offer and one button.</p>
+<p>Within a week you’ll know whether people click, and one page is quick to fix when they don’t.</p>
+<h3 id="Improve-one-section-at-a-time"><a href="#Improve-one-section-at-a-time" class="headerlink" title="Improve one section at a time"></a>Improve one section at a time</h3><p>Ask for changes one section at a time, in a fixed order.</p>
+<p>Never ask Claude to rebuild the whole page to change one part or you’ll spend days going back and forth with it.</p>
+<p>Working one section at a time keeps every change small enough to check. It’s more accurate and less time consuming.</p>
+<p>For the hero, give Claude three headline formulas to work from.</p>
+<p>“{Outcome} without {pain}”, “The {category} for {audience}” and “Get {result} in {time}”. Ask for one option from each and pick the one that sounds like you.</p>
+<p>Use this prompt:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Rewrite only the hero section of the page. Leave every other section exactly as it is.</span><br><span class="line">Give me 3 headline options using these formulas. &#123;Outcome&#125; without &#123;pain&#125;. The &#123;category&#125; for &#123;audience&#125;. Get &#123;result&#125; in &#123;time&#125;.</span><br><span class="line">Give each one a matching subheadline and a button label that starts with a verb.</span><br><span class="line">Show the 3 options stacked on one page so I can compare them, then wait for me to pick one.</span><br><span class="line">After I pick, update the hero and show it to me at phone and desktop width.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-the-browser-check-before-you-ship"><a href="#Add-the-browser-check-before-you-ship" class="headerlink" title="Add the browser check before you ship"></a>Add the browser check before you ship</h3><p>A page can look finished in the chat and still break on a phone. A button wraps onto two lines, the headline leaves one word alone on its last line and the signup form accepts an empty email field.</p>
+<p>Claude Code can open the page in a real browser at phone, tablet and desktop width, screenshot each one, then look at its own screenshots and fix what it sees.</p>
+<p><img src="/images/HVpjIu1W4AA5ivl.png" alt="HVpjIu1W4AA5ivl"></p>
+<p>The checklist takes more thought than the build.</p>
+<p>Claude writes a hero section in a minute but knowing the page works for a stranger on an old phone takes a list you wrote before the build started, which is why the checklist lives at the bottom of your skill.</p>
+<p>In Claude Code, paste this after the build. In a regular Claude chat, open the downloaded HTML file on your phone and go down the same list yourself:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Check the landing page you just built against the checklist in my landing-page-design skill.</span><br><span class="line">Open it at phone, tablet and desktop width and screenshot each one.</span><br><span class="line">List every item that fails, fix the top three problems and show me the new screenshots. Repeat for up to three rounds.</span><br><span class="line">Don&#x27;t publish anything or connect a domain. Show me the final page and wait for my yes.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Put-the-page-online"><a href="#Put-the-page-online" class="headerlink" title="Put the page online"></a>Put the page online</h3><p>Getting the page live takes about five minutes. Rename the downloaded file to index.html and put it in a folder on its own. Open Netlify Drop, log in and drag the folder onto the page. Netlify publishes it and gives you a free live link you can share right away. To update the page later, drag the new folder onto the same site’s deploys.</p>
+<p><img src="/images/HVpjL7tWYAA_Mgo.png" alt="HVpjL7tWYAA_Mgo"></p>
+<p>Before you share the link, run the shipping part of your checklist. Privacy and terms links in the footer, a custom 404 page, email validation on the form, a favicon, a page title and meta description, a social sharing image and alt text on every image.</p>
+<p>Decide on search too. A page for a time-limited ad campaign should carry a noindex tag so Google skips it. A page for an offer you’ll sell for years should be indexed, with a clear title, a meta description and the FAQ written as plain questions and answers.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Get this page ready to publish.</span><br><span class="line">Add privacy and terms links in the footer, a branded 404 page, email validation on the form, a favicon, a page title, a meta description, a social sharing image tag and alt text on every image.</span><br><span class="line">This offer is [A TIME-LIMITED CAMPAIGN OR AN EVERGREEN OFFER]. Add a noindex tag for a campaign, or a search-ready title, meta description and FAQ for an evergreen offer.</span><br><span class="line">Give me every file to download, with index.html as the main page, so I can drop the folder into Netlify Drop.</span><br></pre></td></tr></table></figure>
+
+<h3 id="What-your-job-becomes"><a href="#What-your-job-becomes" class="headerlink" title="What your job becomes"></a>What your job becomes</h3><p>You started with a brief and now you’ve ended with a fully fledged landing page.</p>
+<p>Moving forward, you’ll spend time on the decisions that need taste, you choose the offer, set the look and you approve or reject the final screenshots.</p>
+<p>That review takes about ten minutes, and it decides whether the page sells.</p>
+<p>Claude handles the spacing, the type sizes and the admin work.</p>
+<p>You handle the brief, the brand and the final yes.</p>
+<p>Write your rulebook once, and every page Claude builds follows it.</p>
+<p>Your first landing page can be live by Friday.</p>
+<p>LLMs don’t think, you do.</p>
+<p><strong>P.S. If you found this useful, subscribe to AI Superpowers newsletter</strong></p>
+<p>I share one, quick AI superpower per week, for free:</p>
+<p><a target="_blank" rel="noopener" href="https://aisuperpowers.co/">https://aisuperpowers.co</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/28/X-2115112687650709511/">https://yaoav.github.io/2026/10/28/X-2115112687650709511/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/X/">@X</a></div><div class="post-share"><div class="social-share" data-image="/images/2115112687650709511-cover.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/28/X-2115427239412351155/" title="别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！"><img class="cover" src="/images/2115427239412351155-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">别让电视继续吃灰，今天手把手教你安装电视盒子！畅想全网资源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  你是否也因为影视会员费用越来越高，渐渐不怎么看电视了？ 想看内容时，常常只能用手机投屏，步骤多、体验也打折，电视的使用率越来越低。今天就手把手教你安装电视盒子，让电视不再只能靠手机投屏，重新回到开机就能直接使用的状态。  第一步：先选适配的电视端软件下载地址：https://zoo.ink/tvbox.html 准备个U盘：电视端应用有不同品牌、版本和遥控器适配情况。选择前先看它是否标注 TV 版&#x2F;盒子版，核对系统要求、开发者信息与下载来源；安装电视 APK。  第二步：确认电视系统与安装入口电视系统决定了能否直接安装 Android APK。Android TV&#x2F;安卓电视通常可从系统自带应用商店安装应用；Samsung Tizen、LG webOS 等系统不能直接运行 Android APK，可先查看电视自带商店，或用 HDMI 外接 Android 电视盒子。 下图整理了小米&#x2F;红米、海信&#x2F;VIDAA、TCL&#x2F;雷鸟的常见入口参考。  图 2｜小米 &#x...</div></div></div></a><a class="pagination-related" href="/2026/10/27/xparamt-2115083713512091917/" title="Databricks &amp; the Future of the Firm "><img class="cover" src="/images/2115083713512091917-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Databricks & the Future of the Firm </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xparamt（Param） 的长文，原文链接，版权归原作者所有。  So many aspects of our lives are going to change over the next twenty years. And one that’s easily in the top five is the question: “What do you do at work all day?” Two massive breakthroughs are on the cusp of happening around this question. The first one is agentic automation: “describe a task that we currently do, and automate it.” The second one is employee empowerment to take initiative. People closest to the problem can increasingly invest...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/13/X-2121182184207700335/" title="矩阵化运营公众号：0-1 全思路拆解"><img class="cover" src="/images/2121182184207700335-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">矩阵化运营公众号：0-1 全思路拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  矩阵化运营公众号：0-1 全思路拆解 从第一个号，到上千个号，我是怎么一步步做起来的 我是生于，做了 3 年公众号矩阵，累计收益 100W+，最高峰同时运营 2000 个公众号，现在做 MCN。 这篇文章我只讲公众号。从第一个号该不该做，讲到上千个号怎么管，中间每一步我自己是怎么走的，都写出来。 先看一个数。下面是我矩阵后台的收益统计，2026 年 11 月 11 日到 13 日，三天：  三天，总收益 29881.44 元，总点击 25146 次，总曝光 8208698 次，平均 eCPM 3.64。 **这不是一个号爆出来的。**是一堆号，每天都在出钱，加在一起的结果。 一、先算清楚这笔账，再决定做不做 很多人一上来就问我：公众号矩阵还能做吗，现在入场晚不晚。 这个问题没有标准答案。我只让他先回答自己三个问题：你想赚的是什么钱，你愿意投多少钱进去，你愿意为此花多少时间。 赚钱的逻辑 公众号的钱从哪来，先搞明白。 一个号，粉丝到 100，就可以开通流量主。有流量主，文章里才能挂广告，才有钱赚。 广告的位...</div></div></div></a><a class="pagination-related" href="/2026/11/02/X-2117214577771311291/" title="中文推特值得关注的 100 人：从每个人的一篇作品读起"><img class="cover" src="/images/2117214577771311291-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">中文推特值得关注的 100 人：从每个人的一篇作品读起</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  我想知道一个 AI 工具能不能进企业，最想看的是它第一次出错的地方。比如有人请 AI 统计一瓶精华的差评，帖子里恰好提到两瓶，挨骂的是另一瓶。也有人用 AI 接婚礼视频订单，最费时间的一步，竟是跟新人问清楚两个人当年到底怎么认识的。 这类细节让我决定关注一个人。等我自己也碰到类似的问题，还能翻回去找他，看他当时怎么做。 我从自己的中文 X 关注列表里挑了 100 位作者，每人留一篇入门作品。做企业项目的，可以从第一组读起；正在做账号的，直接翻到第四组；已经做出了产品却还没找到客户的，我会先看第五组。文中涉及收入和流量的数字均为作者自述。 这份清单受司徒 K 的文章启发。司徒 K 的原帖 一、企业 AI 落地与 Agent 交付01｜Smartpig Smartpig 写企业里的 AI 分工，擅长把一个岗位拆成助手能接手的具体任务。他翻了 Grok Bot 场景库里的 56 个角色。费用助手要把收据、表格和系统记录对在一起，发票协调员要找出哪张单据还没人处理。给企业讲 Agent 时，这些例子能把“数字员工...</div></div></div></a><a class="pagination-related" href="/2026/11/18/X-2122975946039078923/" title="做探店博主5年：从置换免单到连续半年月入5W+"><img class="cover" src="/images/2122975946039078923-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">做探店博主5年：从置换免单到连续半年月入5W+</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  大家好，我是颖宝，在成都做探店博主，今年是第5年。  先说说我的起点。刚入行时，我不会拍摄、不会剪辑、不会写脚本，也没有商务资源，基本算是从零开始。唯一的优势，是之前做过抖音直播带货，有一点镜头表现力，敢开口、表达也比较顺。但探店这行真正需要的能力有六项：拍摄、剪辑、脚本、出镜、商务和运营。当时我也只占了一项。更重要的是，很多不出镜的博主一样做得很好，所以镜头表现力只是加分项，不是入场券。无论你有没有和我相似的起点，这篇文章里的路径都可以参考。 先报一下我的成绩单：  **累计发布作品1000+条，多条视频播放量超过100万，最高一条接近1000万；**主号20万粉，另一个50万+粉的账号由旅行号转型而来（助理出镜，我负责拍摄和操盘）。两个账号起步时间相差不多。 **进入成都本地带货榜Top 50；累计合作品牌200+个，其中60多个品牌复购过2次以上。**这个数字在我看来，比单纯的粉丝数更有价值，后面会具体讲原因。 **从今年3月开始，我连续半年实现月入5W+。收入结构：每月30多条商单是主要来源，占总...</div></div></div></a><a class="pagination-related" href="/2026/10/27/X-2114769129282601053/" title="The Rise of the Self-Driving Company "><img class="cover" src="/images/2114769129282601053-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-27</div><div class="info-item-2">The Rise of the Self-Driving Company </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  In 1937, British Nobel Prize-winning economist Ronald Coase asked, “Why do firms exist?” His answer was transaction costs. It’s often cheaper to organize economic activity inside a company than to coordinate it through markets. But companies have their own coordination costs: management, meetings, departments, reporting, and bureaucracy. For more than a century, we’ve accepted these costs as the price of doing business. In 2011, Marc Andreessen wrote that...</div></div></div></a><a class="pagination-related" href="/2026/11/16/X-2122272486750290313/" title="自媒体创作不完全指南：如何快速起号「附完整工作流 &amp; 对标 Skill」"><img class="cover" src="/images/2122272486750290313-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-16</div><div class="info-item-2">自媒体创作不完全指南：如何快速起号「附完整工作流 &amp; 对标 Skill」</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。   🔥如果你想从零开始做自媒体、尽快起号，这篇可以当个参考。国内外平台都能用。这套方法是我自己边做边摸索出来的，分享给大家，希望能帮你少走点弯路。  hello，最近在研究国内的自媒体，我发现普通人做自媒体起号，大多卡在两件事上：  选题容易自嗨。 熬夜憋出个自以为绝妙的选题，发出去却无人问津，哭晕在厕所 做一条太费劲。 写稿、拍摄、剪辑，折腾半个月。发完还等不到正反馈，心态直接崩溃  硬想原创靠灵感撞大运，死磕剪辑容易陷入自嗨，纯搬运省事但平台分分钟限流。 既然从零猜选题的试错成本太高，自媒体最快的破局解法其实只有一条👇🏻： 找一个公域里已经被验证过的爆款形式，借助 AI 工具用自己的原创素材重新做一遍。 废话不多说，直接上干货。 文末我会拿一条我自己跑通的复刻案例，把从找对标到成片的实操全流程走一遍。 一、新号最缺的是确定性做自媒体的新手，最缺的不是创意，而是确定性。 比如短视频平台上最常见的品类之一，美女跳舞，不管是播放、点赞还是涨粉速度，天然就是公域流量里被反复验证过的硬通货。 一条在公域跑出...</div></div></div></a><a class="pagination-related" href="/2026/10/26/X-2114602910797709607/" title="2.3万字长文｜FDE 百问百答：从入行求职、独立接单到进场交付"><img class="cover" src="/images/2114602910797709607-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-10-26</div><div class="info-item-2">2.3万字长文｜FDE 百问百答：从入行求职、独立接单到进场交付</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @X（X） 的长文，原文链接，版权归原作者所有。  大家好，我是司徒K，做企业服务十几年了，这几年一直把主要的精力放在企业 AI 落地业务里。我很看好这个方向，但对个人靠做 FDE 把它变成一门独立生意，并不太乐观。 FDE 这个词本身就没意义了，它被用得也太宽了，培训、咨询、定制开发、驻场交付，所有的这些业务都用 FDE 来定义。这些业务怎么服务？怎么收钱？怎么交付？差别特别大，所以我更喜欢用企业 AI 落地来介绍这个业务。 FDE 是个岗位，能把一个项目交付出来，和能把一门生意持续经营下去，完全是两回事。 把知识库建起来、把核心流程跑通，只是开始。客户从哪来、需求怎么梳理、成交成本多高、钱怎么收、交付后谁维护——这些经营上的问题，不会因为项目跑通了就自动解决。 如果只拿个人时间硬扛非标交付，结果往往是越做越忙，最后把自己困在项目里。 所以我把 FDE 从入行、求职，到独立接单、进场交付的 100 个具体问题整理成了这份百问百答。无论你是准备入行做 FDE 工程师，还是想自己接项目，把企业 AI 落地当成一门生意来做，都可以拿它对照着梳理、查漏补缺。在真...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">350</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">178</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-goes-inside-a-designer-skill"><span class="toc-number">1.</span> <span class="toc-text">What goes inside a designer skill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-your-designer-skill-with-one-prompt"><span class="toc-number">2.</span> <span class="toc-text">Build your designer skill with one prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-your-first-page"><span class="toc-number">3.</span> <span class="toc-text">Build your first page</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Improve-one-section-at-a-time"><span class="toc-number">4.</span> <span class="toc-text">Improve one section at a time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-the-browser-check-before-you-ship"><span class="toc-number">5.</span> <span class="toc-text">Add the browser check before you ship</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Put-the-page-online"><span class="toc-number">6.</span> <span class="toc-text">Put the page online</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-your-job-becomes"><span class="toc-number">7.</span> <span class="toc-text">What your job becomes</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/ihavenliu-2123566820250779955/" title="做过十几年快消批发，说说街边零食店到底谁在赚钱"><img src="/images/2123566820250779955-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做过十几年快消批发，说说街边零食店到底谁在赚钱"/></a><div class="content"><a class="title" href="/2026/11/20/ihavenliu-2123566820250779955/" title="做过十几年快消批发，说说街边零食店到底谁在赚钱">做过十几年快消批发，说说街边零食店到底谁在赚钱</a><time datetime="2026-11-20T07:59:18.000Z" title="发表于 2026-11-20 07:59:18">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/X-2123507710801129530/" title="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first"><img src="/images/2123507710801129530-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first"/></a><div class="content"><a class="title" href="/2026/11/20/X-2123507710801129530/" title="Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first">Replit's agent swarm built a monitoring tool in 2 days for $3,000. I'd write the finish line first</a><time datetime="2026-11-20T04:04:25.000Z" title="发表于 2026-11-20 04:04:25">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"><img src="/images/2123480803850035284-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook"/></a><div class="content"><a class="title" href="/2026/11/20/JamalXBT-2123480803850035284/" title="190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook">190M Views of Complete Insanity. Here’s My Picsart AI Video Playbook</a><time datetime="2026-11-20T02:17:30.000Z" title="发表于 2026-11-20 02:17:30">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"><img src="/images/2123432312583127318-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？"/></a><div class="content"><a class="title" href="/2026/11/19/JamsAaron76087-2123432312583127318/" title="海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？">海外 Mac mini + Claude：为什么有人嫌贵，有人却果断下单？</a><time datetime="2026-11-19T23:04:49.000Z" title="发表于 2026-11-19 23:04:49">2026-11-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img src="/images/2123426014412066923-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Longevity Escape Velocity: How Close Are We To Conquering Death?"/></a><div class="content"><a class="title" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?">Longevity Escape Velocity: How Close Are We To Conquering Death?</a><time datetime="2026-11-19T22:39:47.000Z" title="发表于 2026-11-19 22:39:47">2026-11-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
