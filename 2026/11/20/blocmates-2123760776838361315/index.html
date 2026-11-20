@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Paragon: Powering Power Perps on Hyperliquid | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="There’s an argument that perpetual futures are one of the greatest inventions to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Paragon: Powering Power Perps on Hyperliquid">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/blocmates-2123760776838361315/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="There’s an argument that perpetual futures are one of the greatest inventions to">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123760776838361315-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T20:50:01.000Z">
+<meta property="article:modified_time" content="2026-11-21T04:14:10.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@blocmates">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123760776838361315-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Paragon: Powering Power Perps on Hyperliquid",
+  "url": "https://yaoav.github.io/2026/11/20/blocmates-2123760776838361315/",
+  "image": "https://yaoav.github.io/images/2123760776838361315-cover.jpg",
+  "datePublished": "2026-11-20T20:50:01.000Z",
+  "dateModified": "2026-11-21T04:14:10.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/blocmates-2123760776838361315/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Paragon: Powering Power Perps on Hyperliquid',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">382</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">189</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123760776838361315-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Paragon: Powering Power Perps on Hyperliquid</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Paragon: Powering Power Perps on Hyperliquid</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T20:50:01.000Z" title="发表于 2026-11-20 20:50:01">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@blocmates（blocmates.）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123760776838361315">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>There’s an argument that perpetual futures are one of the greatest inventions to come out of the crypto industry.</p>
+<p>Access to leverage with no expiry on a single orderbook via dangerously intuitive interfaces has turned into a market that does roughly $80-$90 trillion in annual volume.</p>
+<p>However, as the industry has matured, there’s still been no major breakthrough from any other trading instrument, most notably options.</p>
+<p>Every asset class, from equities to commodities, started off as a spot-dominated market, but as it matured, options almost always became the dominant trading derivative.</p>
+<p>The reason is that options give traders flexibility. Traders can configure a whole suite of customized multi-leg strategies depending on their thesis. They get configurable convexity.</p>
+<p>But in crypto, this configurable convexity comes at a cost.</p>
+<p>First of all, options are complicated, especially for an average shitcoin trader like you or me. Straddles, covered calls, iron condors, butterflies, and the different Greek terms - it’s a bit too much.</p>
+<p><img src="/images/HXkUI-tbYAExbKe.png" alt="HXkUI-tbYAExbKe"></p>
+<p>But beyond the complexity is the technical design of the instrument. Options come with multiple expiries, something that’s been proven difficult to make sense of in a 24&#x2F;7 market. Plus, it comes with multiple strike prices.</p>
+<p>If I, as a trader, am looking to buy a call on ETH, I see a $1.5k strike, a $1.75k strike, and a $2k strike, with liquidity fragmented across these strike prices.</p>
+<p>Once you bring in more traders and more money to this fragmented environment, trade execution is almost always suboptimal, especially onchain.</p>
+<p>So okay, perps have the upper hand when it comes to simplicity and liquidity. However, when you’re looking to get higher upside on a high-conviction trade, perps are still limited.</p>
+<p>You may open a 2x long on ETH at $1.8k based on a certain thesis. Then you read a Vitalik blog post, for example, which only furthers your conviction in this trade. This is the trade that will finally get you out of the trenches, you think to yourself.</p>
+<p>Trying to increase your upside means adding more leverage. So you make this position a 3x or 5x leverage long.</p>
+<p>What is effectively happening is that you’re adding more risk to your trade for the same linear payoff. You aren’t increasing exposure, you’re simply increasing risk.</p>
+<p>If ETH pumps 20% from here, so does your ETH-PERP. But one bad wick and your liquidation price is now higher than before.</p>
+<p>So what’s the bottom line?</p>
+<p>Your convexity shouldn’t come with a deadline, and your thesis shouldn’t have an expiry date.</p>
+<p>What if there were a product that offered the simple, liquid, and continuous exposure of perps with the convexity of options? Does that sound like something you’re interested in? Well, I kinda am.</p>
+<p>So let’s dive into the ABCs of <strong>Power Perps.</strong></p>
+<h3 id="What-is-a-Power-Perp"><a href="#What-is-a-Power-Perp" class="headerlink" title="What is a Power Perp?"></a>What is a Power Perp?</h3><p><strong>Thesis: Power Perps give traders the convexity of options with the simplicity and enhanced liquidity of perps. No strikes, no expiries, one unified market.</strong></p>
+<p>A Power Perp is an instrument that trades similarly to a regular perp contract while simultaneously giving you option-like exposure without strike prices or expiries.</p>
+<p>It’s a contract where the payoff is non-linear because, instead of tracking the underlying asset’s price 1:1, it squares, cubes, or raises the underlying asset’s price to the fourth power, creating a completely new payoff and exposure dynamic.</p>
+<p>Allow me to elaborate with an example.</p>
+<p>If you’re trading a regular ETH-PERP, your payoff is linear. If ETH (the underlying) goes to 2x, your ETH-PERP goes 2x.</p>
+<p>With a Power Perp, you’re trading ETH², so if ETH (the underlying) pumps 2x, your Power Perp goes 4x, if ETH goes 3x, your Power Perp goes 9x, and so on.</p>
+<p>Higher powers make this effect even more extreme. A cubed Power Perp means a 2x pump is actually 8x, while a power of 4 turns the same move into a 16x.</p>
+<p><img src="/images/HXkUTVraoAAM6r8.png" alt="HXkUTVraoAAM6r8"></p>
+<p>It’s like auto-compounding exposure. As the price of the underlying increases, your exposure automatically increases, giving you higher upside via non-linear payoff. Thus, we say, Power Perps give you the convexity of options with the simplicity of perps.</p>
+<p>A product like this is perfectly suited for crypto’s volatile nature.</p>
+<p>It’s not benefiting from volatility in the same way an options straddle would, where the direction doesn’t matter (although you can mimic a straddle with a combination of Power Perps).</p>
+<p>You most certainly want to be correct on your thesis&#x2F;direction, but large, volatile moves perfectly interact with the convex payoff.</p>
+<ul>
+<li>ETH pumps 5%, ETH² Power Perp pumps 10.25%</li>
+<li>ETH pumps 20%, ETH² Power Perp pumps 44%</li>
+<li>ETH pumps 50%, ETH² Power Perp pumps 125%</li>
+</ul>
+<p>The larger the move, the more convexity helps you. So, if the move is in your direction, Power Perps offer significantly more upside in high-volatility environments.</p>
+<h3 id="How-does-the-market-actually-work"><a href="#How-does-the-market-actually-work" class="headerlink" title="How does the market actually work?"></a>How does the market actually work?</h3><p>Now that the scalability of onchain infrastructure has reached a point where orderbooks can function seamlessly, the game for derivatives has changed.</p>
+<p>The main benefit Power Perps have over options, especially onchain, is unified liquidity.</p>
+<p>As stated before, if you wanted convex exposure to ETH onchain, it would have to be through DeFi options, where liquidity would be in vaults or liquidity pools, and that already low liquidity would be fragmented across the various strike prices and expiries.</p>
+<p>With Power Perps, liquidity is concentrated into one orderbook. Everyone trades in one unified ETH² market.</p>
+<p>Plus, the orderbook gives you unified liquidity with familiarity.</p>
+<p>It trades in an orderbook just like any other ETH-PERP would, and the long&#x2F;short structure remains the same. If Alice is looking to long ETH2, her counterparty, Bob, will short ETH² in the same book.</p>
+<p>Things take a bit of a turn when it comes to funding.</p>
+<p>Like linear perps, funding for Power Perps will usually lean towards **longs paying shorts. **It can be thought of as the price for convexity, kinda like how option sellers collect premiums.</p>
+<p>The reason for this lean comes from the payoff itself. Let’s take a simple example:</p>
+<ul>
+<li>If ETH goes up 10%, ETH² goes up 21%</li>
+<li>If ETH goes down 10%, ETH² goes down 19%</li>
+</ul>
+<p>The long side has more value because the squared term is always positive. With larger upward moves, your exposure increases, and so do your gains. But someone has to be willing to provide that convexity.</p>
+<p>So the short is effectively saying, I’ll give you that convex exposure, but you have to pay me for it. You pay funding to own convexity, and you hope the move you receive is large enough to justify the cost.</p>
+<p>When the underlying is flat, for example, it’s the shorts collecting the funding that win, but if the long thesis plays out, then increased exposure and upside will be worth the cost.</p>
+<p>What all of this culminates in is Power Perps creating a <strong>new payoff shape.</strong></p>
+<p>As the image earlier in this article showed, Power Perps create a curved payoff rather than a linear one. This changes your exposure.</p>
+<p>A simple way to think of it is that a normal perp has a fixed exposure, while a Power Perp dynamically changes its exposure with the price of the underlying.</p>
+<p>For example:</p>
+<ul>
+<li>As price rises, your sensitivity to further upside increases. A +10% move produces +21%, +50% produces +125%, and +100% produces +300% - <strong>Upward moves compound exposure</strong></li>
+<li>As price falls, your sensitivity to further downside shrinks. A -10% move produces -19%, while -50% produces -75% rather than -100%. - <strong>Downward moves reduce your exposure</strong></li>
+</ul>
+<p>You automatically become more exposed as the market rises and less exposed as it falls, creating a completely unique payoff shape that the world of crypto derivatives hasn’t seen yet, at least at a highly scalable level.</p>
+<p>Any portfolio of assets with a payoff represented as a continuous function can be represented as a portfolio of Power Perpetuals.</p>
+<p>So instead of constructing a complicated portfolio of different derivatives, you can construct your desired payoff using Power Perps as the underlying building blocks.</p>
+<p>For example, you can:</p>
+<ul>
+<li>Long a Power Perp</li>
+<li>Long call options</li>
+<li>Create a straddle-like position</li>
+<li>Hedge for Uniswap LP</li>
+</ul>
+<p>Things get a lot more interesting if you conceptualize implementing Power Perps into the current onchain environment.</p>
+<p>Let’s take something like Hyperliquid, a mature onchain perp DEX with well-capitalized, sophisticated market makers and portfolio margin.</p>
+<p>Say a market maker has $10 million in BTC&#x2F;ETH as collateral or inventory already on Hyperliquid. That liquidity can be used to create a short Power Perp position without having to put up a completely separate pool of capital.</p>
+<p>With portfolio margin, the margin system considers the entire portfolio when assessing risk, so in this case, it will count BTC, ETH, and short Power Perp all in one, rather than as isolated risk positions.</p>
+<p>This, therefore, incentivizes market makers to short Power Perps as they can consistently collect funding from those looking for convex upside exposure.</p>
+<p>Even though the short side is naturally riskier, portfolio margin allows market makers to do it with existing capital, making their system more efficient.</p>
+<p>The result is creating natural short-side liquidity. This liquidity then makes it easier for all the longers willing to pay for convex exposure to trade.</p>
+<h3 id="This-product-probably-sounds-familiar…-ahem-ahem-Squeeth"><a href="#This-product-probably-sounds-familiar…-ahem-ahem-Squeeth" class="headerlink" title="This product probably sounds familiar… ahem ahem Squeeth"></a>This product probably sounds familiar… ahem ahem Squeeth</h3><p>Those of you who have been around for a while probably remember how big a rage Squeeth was in 2021, when DeFi activity was at its peak.</p>
+<p>Squeeth was a product from Opyn and the first Power Perp to hit the market. It worked much like what we described above in this article, but after launching in 2021 with some success, it was completely shut down by November 2024.</p>
+<p><img src="/images/HXkUksKa0AAEI4u.png" alt="HXkUksKa0AAEI4u"></p>
+<h3 id="So-what-happened"><a href="#So-what-happened" class="headerlink" title="So what happened?"></a>So what happened?</h3><p>The ultimate problem for Squeeth was that it was too illiquid and too DeFi-native, using AMMs (instead of CLOBs) and vaults. Too many derivative tokens and loops and pools to jump through.</p>
+<p>The primary trading venue for Squeeth’s tradable token oSQTH was the oSQTH&#x2F;ETH pool on Uniswap.</p>
+<p>To provide liquidity, you would of course need both tokens, which proved to be problematic for LPs as the payoff was non-linear.</p>
+<p>LPs would technically be accumulating the underperforming asset (ETH) mechanically and selling some of the outperforming asset (oSQTH). Your classic impermanent loss issue. Hence, low liquidity.</p>
+<p>Then there was the vault issue. Someone who wanted to mint&#x2F;short Squeeth could only do so by locking collateral in an Opyn vault.</p>
+<p>That capital would essentially become frozen and tedious to manage, something that would dissuade a lot of liquidity from entering the system.</p>
+<p>Then you have the funding issue. During major volatility events, like The Merge, for example, funding rates could spike to 0.4%-0.5%, making it difficult to use as a hedge.</p>
+<p>So ultimately, too complicated, too many loops, and an inefficient design made it difficult to attract liquidity at scale, which resulted in the product being subpar for traders, and therefore eventually led to Squeeth’s sunsetting.</p>
+<h3 id="What’s-different-this-time-around"><a href="#What’s-different-this-time-around" class="headerlink" title="What’s different this time around?"></a>What’s different this time around?</h3><p>You’ve probably heard the saying, “It’s not about who did it first, it’s about who did it right.” Well, that saying couldn’t be any more applicable here.</p>
+<p>Sometimes, an innovation is just too early. The underlying infrastructure may not be ready to support it at scale, and maybe the market just isn’t in the correct place for it to take off.</p>
+<p>Power Perps in 2021 were a cool innovation on an inefficient protocol design that wasn’t scalable. Now, the market is ripe for a product like this.</p>
+<p>Onchain orderbooks allow for unified liquidity on a familiar interface, solving the major user-facing hurdles. But beyond that, the crypto market has matured to a point where the surrounding use cases of Power Perps have genuine potential to attract users and liquidity.</p>
+<h3 id="1-Dynamic-exposure"><a href="#1-Dynamic-exposure" class="headerlink" title="1. Dynamic exposure"></a>1. Dynamic exposure</h3><p>Unlike normal perps, your exposure changes as the underlying moves. A squared underlying makes the instrument more sensitive to price moves.</p>
+<p>You have an ETH² Power Perp position. Let’s say the current ETH price is $1,000. At this point, your exposure to the Power Perp is 2x.</p>
+<p>Now ETH pumps to $1,500. Your exposure becomes 3x. Then it continues pumping to $2,000, your exposure becomes 4x. Your exposure grows as ETH’s price grows.</p>
+<p>But let’s look at the flipside. ETH is at $1,000, and you have 2x exposure. Then ETH falls to $500, and your exposure is 1x. As the price goes down, your exposure shrinks.</p>
+<p>This is the essence of dynamic exposure. It’s like having an auto-rebalancing position where, instead of constantly increasing or decreasing leverage manually, your exposure changes in line with the price movement of the underlying asset.</p>
+<h3 id="2-Different-liquidation-profile"><a href="#2-Different-liquidation-profile" class="headerlink" title="2. Different liquidation profile"></a>2. Different liquidation profile</h3><p>The dynamic exposure element directly correlates to how the liquidation profile for Power Perps is different.</p>
+<p>The best way to understand it is to compare it to a regular perp.</p>
+<p>Say you have a 3x long ETH-PERP. You enter at $1,500, and the price falls to $1,250, then $1,000, then $750, and then $500. Since leverage here is constant, every $250 drop in ETH will affect your position the same.</p>
+<p>With a Power Perp, this same drop in price causes the position’s delta to drop with it, so each additional dollar of ETH downside has a smaller effect on your position.</p>
+<p>You can think of it as a kind of self-deleveraging mechanism as the price moves down.</p>
+<p>This is not to say that you can’t get liquidated or that your downside is capped. You can very much get liquidated, depending on your margin, funding, entry price, and so on. But the exposure change makes liquidations a bit different here.</p>
+<h3 id="3-Concentrated-convexity"><a href="#3-Concentrated-convexity" class="headerlink" title="3. Concentrated convexity"></a>3. Concentrated convexity</h3><p>Another attractive feature comes from a simple and intuitive product design.</p>
+<p>Rather than trying to spread convexity across different strike prices, different expiries, multiple venues, and different pools, you get it all packaged under one roof.</p>
+<p>One market, one instrument, one orderbook. That’s concentrated convexity.</p>
+<h3 id="4-Funding"><a href="#4-Funding" class="headerlink" title="4. Funding"></a>4. Funding</h3><p>With Power Perps, funding is both a cost and a feature.</p>
+<p>It’s a cost, well, because longers must be willing to pay for the convexity, and they pay that cost through funding.</p>
+<p>It’s a feature because it attracts people who want to earn that carry.</p>
+<p>A market maker with idle collateral, or just another trader who may say, “I believe ETH is going to be stable through this period, and everyone else is wrong, so let me earn the funding through this Power Perp.”</p>
+<p>Not only is it a great trade, but it also acts as a great way to attract more liquidity for the longers.</p>
+<h3 id="5-Directional-conviction"><a href="#5-Directional-conviction" class="headerlink" title="5. Directional conviction"></a>5. Directional conviction</h3><p>As a trader, one of the most frustrating things is being correct about your thesis but still not making money on the trade.</p>
+<p>You had the conviction, but your option came with an expiry, and maybe you had to readjust your trade accordingly. Maybe your thesis is playing out slowly, but you aren’t well-capitalized, so you don’t want to keep adding risk through leverage to increase your exposure.</p>
+<p>Power Perps give you a little more freedom when you have directional conviction to not only let your trade play out, but also to get rewarded handsomely for it.</p>
+<h3 id="6-Capital-efficiency"><a href="#6-Capital-efficiency" class="headerlink" title="6. Capital efficiency"></a>6. Capital efficiency</h3><p>As an overall product, it’s simply more capital-efficient for everyone involved.</p>
+<p>On one side, Power Perps turn directional conviction into dynamically increasing exposure, while giving traders a single perpetual instrument with concentrated convexity.</p>
+<p>You don’t need to hop through pools or vaults, and you don’t need to worry about liquidity across different strikes.</p>
+<p>On the other hand, if we come back to the BTC&#x2F;ETH portfolio margin system, on the short side, it means Power Perps can interact with existing positions and don’t need a new pool of capital to be added.</p>
+<p>Everyone wins, capital efficiency at its finest.</p>
+<p>With all of that now said, let’s get into the actual practical implementation of bringing this product to market.</p>
+<p>The team best suited to pull this off is <strong>Paragon.</strong></p>
+<h3 id="Power-Perps-with-Paragon"><a href="#Power-Perps-with-Paragon" class="headerlink" title="Power Perps with Paragon"></a>Power Perps with Paragon</h3><p>@tradeparagon is a market-creation layer on top of Hyperliquid that lets people trade perps on things that normally aren’t directly tradable onchain, i.e., individual stocks, market indices, treasury yields, crypto indices, themes, and potentially other assets.</p>
+<p>Having facilitated more than $500 million in cumulative volume, Paragon is slowly establishing itself as a major up-and-comer among the Hyperliquid deployers.</p>
+<p>The great thing is that for you, as the user, nothing changes. You trade directly on the Hyperliquid interface, and your money stays where it is.</p>
+<p>The only thing is, Paragon is now set to differentiate itself significantly from the competition.</p>
+<p>Yes, things like a BTC.D market and treasury yield markets are a great step in that direction. But we believe that introducing Power Perps on Hyperliquid will really catapult them to the next level.</p>
+<p>So, how can you trade these Paragon Power Perps?</p>
+<p>Well, just like you would any other perp on Hyperliquid.</p>
+<ul>
+<li>Select the pair</li>
+<li>Input your desired amount to trade</li>
+<li>Make sure it’s the correct power</li>
+<li>Place a trade</li>
+</ul>
+<p>You will find all the options under the “para” subsection of the HIP-3 section of your Hyperliquid interface.</p>
+<p>To make things easier for you, we’re also building a custom payoff simulator for Power Perps, that we’ll soon launch, so you can play around and know what to expect by simulating your trade before actually opening it.</p>
+<h3 id="Why-now-Why-Paragon"><a href="#Why-now-Why-Paragon" class="headerlink" title="Why now? Why Paragon?"></a>Why now? Why Paragon?</h3><p>The Power Perps we’re talking about right now aren’t vastly different from the ones we saw in 2021, from a technical standpoint.</p>
+<p>The main difference is that we now have superior market infrastructure with the likes of Hyperledger to make such unique derivatives a widely traded market.</p>
+<p>Given that Hyperliquid has a massive user base, an efficient orderbook, proven scalability, market makers, high liquidity, a mature perps trading environment, and established infrastructure, the <strong>delivery mechanism</strong> is there. All that’s left is implementation.</p>
+<p>Hyperliquid has already proven that there is demand for novel onchain markets. Stocks, indices, ETFs, commodities, bonds, pre-IPO, and so on, all made possible by HIP-3.</p>
+<p>The current onchain environment creates the perfect storm for Paragon to come in with Power Perps.</p>
+<p>Paragon’s market curation thesis has always been offering traders the trades that they wish existed.</p>
+<p>Whether it be a major crypto indicator like BTC dominance, which you couldn’t really trade before, or US 10Y or 30Y as a perp, or real-world tech&#x2F;infra like Unitree. It’s all about turning what people wish into reality.</p>
+<p>They’ve already seen a lot of success with their HIP-3 market deployments, and now, the stage is set for Power Perps.</p>
+<p>Paragon will be the first to offer Hyperliquid traders Power Perps on majors like ETH and BTC, but this can eventually be applied to stocks, indices, indicators, macro assets, and so on.</p>
+<p>A massive wave is coming, and it’s going to be a powerful perpetual one.</p>
+<h3 id="Risks"><a href="#Risks" class="headerlink" title="Risks"></a>Risks</h3><p>Now, as good as this product is, nothing comes without risks.</p>
+<p>For starters, there’s the convexity angle. Yes, convexity on the upside is great, but it works both ways. Your exposure may technically decrease on the downside, but a large move against you can still result in large losses if not liquidation.</p>
+<p>On top of this, the convexity isn’t free. On the long side, you will be paying more than usual through funding. If the market stays flat, you may lose to funding, but even in high-volatility environments, that convexity becomes valuable, and you may have to pay more to hold that position.</p>
+<p>Then you have the question of leverage. Power Perps already have an element of embedded leverage through non-linear payoffs. On top of that, if some of you degens add more leverage to the position, it can become that much more sensitive.</p>
+<p>This increases your chances of liquidation and large losses in major moves against you.</p>
+<p>Another issue, at least early on, will be liquidity. Power Perps are relatively novel when compared to traditional perps.</p>
+<p>The books are not going to be anywhere near as liquid to start off. So things like wider spreads, slippage, and price impact are expected early teething issues to be wary of.</p>
+<p>As with perps and basically any other onchain product, oracle risk is always pertinent. The price of the underlying needs to be tracked accurately. Things like delayed oracle data feeds, oracle manipulation, incorrect data, oracle downtime, and so on could be potential problems.</p>
+<p>Lastly, we have the ever-present risk of smart contracts. Whether it’s Paragon or any other onchain product, smart contract risk is always present. There’s always a non-zero chance that a smart contract can get hacked or exploited, so it’s always wise to practice appropriate risk management.</p>
+<h3 id="Concluding-thoughts"><a href="#Concluding-thoughts" class="headerlink" title="Concluding thoughts"></a>Concluding thoughts</h3><p>With the regulatory side of things finally turning in the industry’s favor (somewhat), a lot of TradFi institutions have taken this as a green light and have started coming onchain with full force.</p>
+<p>Despite how dry the markets may seem, it genuinely feels like crypto is having its “coming of age” moment.</p>
+<p>Although it may take time, the market is responding well to novel products, and as the industry matures, these products will only continue to grow.</p>
+<p>It’s about time that perps got a real competitor, and Power Perps with Paragon could be the one.</p>
+<p>✍️ @LeftsideEmiri || 🔗 Website link to the article || 🔭 Link to the simulator</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/blocmates-2123760776838361315/">https://yaoav.github.io/2026/11/20/blocmates-2123760776838361315/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/blocmates/">@blocmates</a></div><div class="post-share"><div class="social-share" data-image="/images/2123760776838361315-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/rincyXIII-2123763307353923855/" title="Mode Engineering: Stop Paying a Top Model for Every Step"><img class="cover" src="/images/2123763307353923855-cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Mode Engineering: Stop Paying a Top Model for Every Step</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @rincyXIII（rincy） 的长文，原文链接，版权归原作者所有。  How to give every piece of work the right amount of intelligence: the mode per channel, the script for the fixed steps, and the run that never needed to happen In 2024 Sam Altman posted four words that every AI builder remembers Tokens did get cheaper Running AI every day did not get simple Because the price of a token was never the real problem The real problem is what you send to the most expensive model The daily report The ticket tagging T...</div></div></div></a><a class="pagination-related" href="/2026/11/20/Leviwoyun-2123754998467264624/" title="涨粉百万，单条视频报价8w！最吸金的“AI+萌宠”赛道现在一个skill就能搞定"><img class="cover" src="/images/2123754998467264624-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">涨粉百万，单条视频报价8w！最吸金的“AI+萌宠”赛道现在一个skill就能搞定</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  先藏后看：为什么想做 AI 视频起号变现的人都该收藏这篇指南？ 1、**赛道已被真实数据跑通：**下面直接拿 3 个同赛道抖音 3D 萌宠 AI 动画账号说话——有的 仅发 83 条作品就干到 23.5 万粉、单条合集 82.1 万赞，头部账号 39.1 万粉、213.6 万获赞，已经把商品橱窗、专属会员、实体玩偶和官方商单全吃上了。 2、**直击普通人起号最大的拦路虎：**看别人赚钱眼红，真轮到自己动手，90% 的人都会卡死在「角色跨镜头变脸」「手脚穿模重抽」「分镜&#x2F;配音&#x2F;配乐&#x2F;剪辑来回切软件」上，手搓一整天出不了一条片，根本扛不住日更。 3、**一套可照抄的 6 步工作流 + 独家防穿模经验：**本文把实测跑通的 1 个 Skill 6 步直出 15 秒有声 3D 动画全流程、局部精修防废片操作 以及 短手萌宠避坑实测经验 全部拆开讲透，文末还留了一个「一张图 + 一个声音做数字人」的下期王炸彩蛋。建议先点个「收藏 Bookmarks」备用！ ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/19/blocmates-2123114718378529265/" title="Nvidia Q3 Earnings Report: Reading Between the Lines  "><img class="cover" src="/images/2123114718378529265-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">Nvidia Q3 Earnings Report: Reading Between the Lines  </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  Nvidia just dropped its Q3 report. Unfortunately, there are no more affairs to report about, but there are some fascinating details in there that we promise are worth your attention. Let’s jump right in. The headlines:  Revenue has jumped from $96.2 billion in Q2 to $115.8 billion in Q3. A big 20% jump Data centers now account for 93% of Nvidia’s revenue. That’s $107.6 billion coming in from their data center business Shareholder returns:...</div></div></div></a><a class="pagination-related" href="/2026/11/18/blocmates-2123024198247579901/" title="The $900 Billion Problem Hiding in Anthropic’s IPO"><img class="cover" src="/images/2123024198247579901-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">The $900 Billion Problem Hiding in Anthropic’s IPO</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  The biggest IPO in history is just around the corner. Anthropic is targeting an IPO between $1 trillion and $1.5 trillion, which is an absolutely insane number. Just a few hours from now, and we’ll have the exact figure. Of course, with the official S-1 filings, I’m sure most of you have seen the headline stat of Anthropic reporting a net loss of $104 billion. Although there is more to this number than meets the eye, that’s not what we’re...</div></div></div></a><a class="pagination-related" href="/2026/11/17/blocmates-2122720869097296206/" title="A Deep Dive Into Outcome, HIP-4 &amp; Prediction Markets on Hyperliquid"><img class="cover" src="/images/2122720869097296206-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">A Deep Dive Into Outcome, HIP-4 &amp; Prediction Markets on Hyperliquid</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  The market is down, and as expected, everyone is overreacting again. Doom-posting is at an all-time high and Binance is on the onslaught this time around, to the relief of Wintermute. On the other side of the pandemonium are those calling for $5 HYPE - either for want of a generational buying opportunity, or just because they are simply perma-bears. Either way, it would be nice for both parties to put their money where their mouth is and ...</div></div></div></a><a class="pagination-related" href="/2026/11/19/blocmates-2123426014412066923/" title="Longevity Escape Velocity: How Close Are We To Conquering Death?"><img class="cover" src="/images/2123426014412066923-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">Longevity Escape Velocity: How Close Are We To Conquering Death?</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @blocmates（blocmates.） 的长文，原文链接，版权归原作者所有。  What if the first person to live for 300 years is already alive? It sounds absurd. But the idea isn’t confined to the biohacker fringe anymore, either. Researchers like Aubrey de Grey have spent decades arguing that radically longer human lives might become possible as we learn to intervene in the biological processes that cause us to age.  Their proposition isn’t that we’ll suddenly stumble upon immortality, but that we might gradually l...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">382</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">189</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-a-Power-Perp"><span class="toc-number">1.</span> <span class="toc-text">What is a Power Perp?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-does-the-market-actually-work"><span class="toc-number">2.</span> <span class="toc-text">How does the market actually work?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#This-product-probably-sounds-familiar%E2%80%A6-ahem-ahem-Squeeth"><span class="toc-number">3.</span> <span class="toc-text">This product probably sounds familiar… ahem ahem Squeeth</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#So-what-happened"><span class="toc-number">4.</span> <span class="toc-text">So what happened?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What%E2%80%99s-different-this-time-around"><span class="toc-number">5.</span> <span class="toc-text">What’s different this time around?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Dynamic-exposure"><span class="toc-number">6.</span> <span class="toc-text">1. Dynamic exposure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Different-liquidation-profile"><span class="toc-number">7.</span> <span class="toc-text">2. Different liquidation profile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Concentrated-convexity"><span class="toc-number">8.</span> <span class="toc-text">3. Concentrated convexity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Funding"><span class="toc-number">9.</span> <span class="toc-text">4. Funding</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Directional-conviction"><span class="toc-number">10.</span> <span class="toc-text">5. Directional conviction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Capital-efficiency"><span class="toc-number">11.</span> <span class="toc-text">6. Capital efficiency</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Power-Perps-with-Paragon"><span class="toc-number">12.</span> <span class="toc-text">Power Perps with Paragon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-now-Why-Paragon"><span class="toc-number">13.</span> <span class="toc-text">Why now? Why Paragon?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Risks"><span class="toc-number">14.</span> <span class="toc-text">Risks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Concluding-thoughts"><span class="toc-number">15.</span> <span class="toc-text">Concluding thoughts</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/Leviwoyun-2123781487103508731/" title="不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款"><img src="/images/2123781487103508731-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款"/></a><div class="content"><a class="title" href="/2026/11/20/Leviwoyun-2123781487103508731/" title="不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款">不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款</a><time datetime="2026-11-20T22:12:19.000Z" title="发表于 2026-11-20 22:12:19">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/rincyXIII-2123763307353923855/" title="Mode Engineering: Stop Paying a Top Model for Every Step"><img src="/images/2123763307353923855-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mode Engineering: Stop Paying a Top Model for Every Step"/></a><div class="content"><a class="title" href="/2026/11/20/rincyXIII-2123763307353923855/" title="Mode Engineering: Stop Paying a Top Model for Every Step">Mode Engineering: Stop Paying a Top Model for Every Step</a><time datetime="2026-11-20T21:00:04.000Z" title="发表于 2026-11-20 21:00:04">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
