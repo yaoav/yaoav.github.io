@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>How to Build a Second Brain with Karpathy's Method (Claude + Obsidian) | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="This is a complete A–Z breakdown of the knowledge system that Andrej Karpathy ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Build a Second Brain with Karpathy&#39;s Method (Claude + Obsidian)">
+<meta property="og:url" content="https://yaoav.github.io/2026/07/09/dablclub-2074905017983607081/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="This is a complete A–Z breakdown of the knowledge system that Andrej Karpathy ma">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2074905017983607081-cover.jpg">
+<meta property="article:published_time" content="2026-07-09T01:14:40.000Z">
+<meta property="article:modified_time" content="2026-11-21T09:32:53.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@dablclub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2074905017983607081-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Build a Second Brain with Karpathy's Method (Claude + Obsidian)",
+  "url": "https://yaoav.github.io/2026/07/09/dablclub-2074905017983607081/",
+  "image": "https://yaoav.github.io/images/2074905017983607081-cover.jpg",
+  "datePublished": "2026-07-09T01:14:40.000Z",
+  "dateModified": "2026-11-21T09:32:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/07/09/dablclub-2074905017983607081/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'How to Build a Second Brain with Karpathy\'s Method (Claude + Obsidian)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">400</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2074905017983607081-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">How to Build a Second Brain with Karpathy's Method (Claude + Obsidian)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">How to Build a Second Brain with Karpathy's Method (Claude + Obsidian)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-07-09T01:14:40.000Z" title="发表于 2026-07-09 01:14:40">2026-07-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@dablclub（Dabl Club🦞）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2074905017983607081">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>This is a complete A–Z breakdown of the knowledge system that Andrej Karpathy made famous — and how to build it yourself with Claude Code.</p>
+<blockquote>
+<p>Bookmark this before you forget.</p>
+</blockquote>
+<h3 id="The-Idea-That-Hit-21-Million-Views"><a href="#The-Idea-That-Hit-21-Million-Views" class="headerlink" title="The Idea That Hit 21 Million Views"></a>The Idea That Hit 21 Million Views</h3><p><strong>Andrej Karpathy</strong> — co-founder of OpenAI and Anthropic AI researcher— posted a simple idea that went massively viral.</p>
+<p>Stop using AI to write code. Use it to build a second brain.</p>
+<p>The concept sounds basic until you understand what makes it different. You don’t just store notes. You build a loop — a system where every source you add makes the entire system smarter, including the notes you added months ago.</p>
+<p>Most note-taking apps are storage. You put things in, they sit there, you search and hope.</p>
+<p>This method is different. It compounds. Like interest. The more you feed it, the more valuable everything already inside it becomes.</p>
+<p>Here’s how to build it with Claude Code.</p>
+<h3 id="What-This-Method-Actually-Is"><a href="#What-This-Method-Actually-Is" class="headerlink" title="What This Method Actually Is"></a>What This Method Actually Is</h3><p>Most people’s “second brain” is a graveyard.</p>
+<p>Notes go in. They never come out. The graph view looks impressive but you never actually use 95% of what’s in there. It’s a hoard, not a system.</p>
+<p>**Karpathy **framed the real distinction against RAG — the standard way people bolt AI onto their notes.</p>
+<p><img src="/images/HMs-gh7WMAAKWbH.jpg" alt="HMs-gh7WMAAKWbH"></p>
+<p>RAG re-searches your documents from scratch on every single question. Nothing accumulates. You ask, it retrieves, it answers, and then it forgets — the next question starts from zero. The knowledge is never actually compiled. It’s just searched, over and over.</p>
+<p>The wiki approach compiles knowledge once and maintains it. The AI reads a source, integrates it into a structured wiki, and links it to everything already there. The next time you ask a question, the answer is already half-built into the structure. And crucially: the answer itself can be filed back as a new page. The output becomes input.</p>
+<p>As Karpathy put it: <strong>Obsidian is the IDE, the LLM is the programmer, the wiki is the codebase.</strong></p>
+<p>**Check official link - **<a target="_blank" rel="noopener" href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f</a></p>
+<p>You’re not searching a pile of documents. You’re maintaining a living, compiled knowledge base — the way a codebase is maintained, not the way a folder of files just sits there.</p>
+<p><strong>That’s the loop. It has three operations, and each feeds the system:</strong></p>
+<p><strong>Ingest</strong> — you drop a source in. The AI reads it, breaks it into atomic pages, and integrates it into the wiki.</p>
+<p><strong>Query</strong> — you ask questions across everything. The AI answers from the compiled structure, and files the answer back as a new page.</p>
+<p><strong>Lint</strong> — periodically, the AI checks the wiki’s health: contradictions between pages, outdated claims, orphan pages with no links, gaps in coverage. This is the operation everyone skips and the one that actually keeps the system alive.</p>
+<p>The difference between storage and a loop: storage gets bigger. A loop gets smarter — and stays coherent.</p>
+<h3 id="Why-the-Loop-Compounds"><a href="#Why-the-Loop-Compounds" class="headerlink" title="Why the Loop Compounds"></a>Why the Loop Compounds</h3><p>Here’s the math that makes this work.</p>
+<p>A vault with 10 notes has, at most, 45 possible connections between them. A vault with 100 notes has 4,950. A vault with 500 notes has over 124,000 potential connections.</p>
+<p><img src="/images/HMtEbW4XIAAp2Hv.jpg" alt="HMtEbW4XIAAp2Hv"></p>
+<p>The value of your second brain isn’t in the notes. It’s in the connections between them. And connections grow quadratically while notes grow linearly.</p>
+<p>The problem: you can’t maintain 124,000 connections by hand. No human can. This is exactly why most second brains die — the maintenance cost grows faster than the human can keep up.</p>
+<p>Claude Code solves this. It maintains the connections for you. Every time you ingest a source, Claude re-links it against the entire existing vault. The maintenance that kills manual systems becomes automatic.</p>
+<p>That’s the whole trick. The loop only compounds if something maintains the connections. A human can’t. Claude can.</p>
+<h3 id="The-Setup-—-The-Structure-Karpathy-Uses"><a href="#The-Setup-—-The-Structure-Karpathy-Uses" class="headerlink" title="The Setup — The Structure Karpathy Uses"></a>The Setup — The Structure Karpathy Uses</h3><p>Karpathy’s structure is deliberately minimal. A few folders and a schema file.</p>
+<p><img src="/images/HMtAKEUWMAA7cnT.jpg" alt="HMtAKEUWMAA7cnT"></p>
+<ol>
+<li><strong>&#x2F;raw</strong> — your sources. Articles, transcripts, PDFs, anything. Unprocessed. This is the inbox.</li>
+<li><strong>&#x2F;wiki</strong> — the AI’s pages. The processed, linked, atomic notes generated from your raw sources. This is the actual second brain.</li>
+<li><strong>index.md</strong> — the catalog. A directory of every page in the wiki, so both you and the AI can navigate the whole structure at a glance.</li>
+<li><strong>log.md</strong> — the chronology. A running log of what got ingested and when. This is the history of the system’s growth.</li>
+<li><strong>CLAUDE.md</strong> (the schema) — the rules. A file the AI reads at the start of every session that defines exactly how to ingest, query, and lint the wiki. Karpathy calls this the schema — it’s the specification the AI follows to maintain the whole system consistently.</li>
+</ol>
+<p>That’s it. No plugins, no complex tooling. A few folders, a schema file, and an AI agent running in the terminal.</p>
+<h3 id="Step-1-—-Install-Obsidian-and-Claude-Code"><a href="#Step-1-—-Install-Obsidian-and-Claude-Code" class="headerlink" title="Step 1 — Install Obsidian and Claude Code"></a>Step 1 — Install Obsidian and Claude Code</h3><p><strong>Obsidian</strong> — free, from obsidian.md. Create a new vault. This is where your second brain lives.</p>
+<p><img src="/images/HMoVNX8XsAECBP6.jpg" alt="HMoVNX8XsAECBP6"></p>
+<p><strong>Claude Code</strong> — install via terminal:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @anthropic-ai/claude-code</span><br></pre></td></tr></table></figure>
+
+<p>Navigate to your vault folder and open Claude Code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd your-vault-folder</span><br><span class="line">claude</span><br></pre></td></tr></table></figure>
+
+<p>Claude Code is now running inside your vault, with direct read&#x2F;write access to every file.</p>
+<h3 id="Step-2-—-Create-the-CLAUDE-md-Engine"><a href="#Step-2-—-Create-the-CLAUDE-md-Engine" class="headerlink" title="Step 2 — Create the CLAUDE.md Engine"></a>Step 2 — Create the CLAUDE.md Engine</h3><p>This is the most important file in the entire system. It’s what makes the loop run.</p>
+<blockquote>
+<p><strong>Create a CLAUDE.md in your vault root. Paste this:</strong></p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Second Brain Schema</span></span><br><span class="line"></span><br><span class="line"><span class="section">## Structure</span></span><br><span class="line"><span class="bullet">-</span> /raw contains unprocessed sources</span><br><span class="line"><span class="bullet">-</span> /wiki contains processed atomic pages</span><br><span class="line"><span class="bullet">-</span> index.md is the catalog of all wiki pages</span><br><span class="line"><span class="bullet">-</span> log.md is the chronological ingest history</span><br><span class="line"><span class="bullet">-</span> This file is the schema that runs the system</span><br><span class="line"></span><br><span class="line"><span class="section">## INGEST — when I say &quot;ingest this&quot; or drop a file in /raw:</span></span><br><span class="line"><span class="bullet">1.</span> Read the source completely</span><br><span class="line"><span class="bullet">2.</span> Extract the core ideas as separate atomic pages</span><br><span class="line"><span class="bullet">3.</span> For each page: clear title, one-sentence summary, </span><br><span class="line">   the idea in my own words, source attribution</span><br><span class="line"><span class="bullet">4.</span> Link each new page to related existing pages in /wiki </span><br><span class="line">   using [[wikilinks]]</span><br><span class="line"><span class="bullet">5.</span> If a page connects to 3+ existing pages, flag it as a hub</span><br><span class="line"><span class="bullet">6.</span> Add each new page to index.md</span><br><span class="line"><span class="bullet">7.</span> Append an entry to log.md with date and source</span><br><span class="line"><span class="bullet">8.</span> Move the source to /raw/processed</span><br><span class="line"></span><br><span class="line"><span class="section">## QUERY — when I ask a question:</span></span><br><span class="line"><span class="bullet">-</span> Search the entire /wiki before answering</span><br><span class="line"><span class="bullet">-</span> Cite which pages support your answer</span><br><span class="line"><span class="bullet">-</span> If pages conflict, surface the conflict</span><br><span class="line"><span class="bullet">-</span> File the answer back as a new page if it&#x27;s worth keeping</span><br><span class="line"></span><br><span class="line"><span class="section">## LINT — when I say &quot;lint the wiki&quot;:</span></span><br><span class="line"><span class="bullet">-</span> Find contradictions between pages</span><br><span class="line"><span class="bullet">-</span> Flag outdated or superseded claims</span><br><span class="line"><span class="bullet">-</span> Find orphan pages with no incoming links</span><br><span class="line"><span class="bullet">-</span> Identify gaps: topics referenced but never developed</span><br><span class="line"><span class="bullet">-</span> Report everything; don&#x27;t auto-delete</span><br><span class="line"></span><br><span class="line"><span class="section">## Rules</span></span><br><span class="line"><span class="bullet">-</span> Every page is atomic: one idea per page</span><br><span class="line"><span class="bullet">-</span> Write in my voice, not the source&#x27;s voice</span><br><span class="line"><span class="bullet">-</span> Never lose source attribution</span><br><span class="line"><span class="bullet">-</span> Surface non-obvious connections aggressively</span><br></pre></td></tr></table></figure>
+
+<p>The AI reads this at the start of every session. You never explain the system again. The schema is the engine.</p>
+<p><img src="/images/HMpPl8RWkAIaOH_.jpg" alt="HMpPl8RWkAIaOH_"></p>
+<h3 id="Step-3-—-Feed-the-Loop"><a href="#Step-3-—-Feed-the-Loop" class="headerlink" title="Step 3 — Feed the Loop"></a>Step 3 — Feed the Loop</h3><p>Now the loop runs. Drop any source into <strong>&#x2F;raw</strong> and tell Claude:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ingest this</span><br></pre></td></tr></table></figure>
+
+<p>Claude reads the source, breaks it into atomic notes, links each one to your existing vault, flags potential hub notes, and files everything. What took you 30 minutes of manual processing now takes one command.</p>
+<p>Do this with everything. An article you read. A podcast transcript. A PDF of a paper. Meeting notes. Book highlights.</p>
+<p><video controls preload="metadata" poster="/images/2074563083150745600-poster.jpg" src="/videos/2074563083150745600.mp4"></video></p>
+<p>Every ingestion makes the whole system smarter — because Claude links the new material against everything already there.</p>
+<h3 id="Step-4-—-Query-Across-Everything"><a href="#Step-4-—-Query-Across-Everything" class="headerlink" title="Step 4 — Query Across Everything"></a>Step 4 — Query Across Everything</h3><p>This is where storage becomes a loop.</p>
+<p>Once you have material in the vault, you stop searching and start asking:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What do I know about [topic]? Pull from every relevant note </span><br><span class="line">and synthesize it into a coherent answer. Cite the notes.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HMtGE1bWIAAiWHz.jpg" alt="HMtGE1bWIAAiWHz"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What connects [concept A] and [concept B] in my vault? </span><br><span class="line">Find the non-obvious link.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Based on everything in my vault, what&#x27;s a question </span><br><span class="line">I should be asking that I&#x27;m not?</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">What are the gaps in my knowledge about [topic]? </span><br><span class="line">What should I read next?</span><br></pre></td></tr></table></figure>
+
+<p>That last one closes the loop. Claude identifies what’s missing, you find sources to fill the gap, you ingest them, and the system gets smarter. The output generates the next input.</p>
+<h3 id="Step-5-—-Lint-the-Wiki-The-Step-Everyone-Skips"><a href="#Step-5-—-Lint-the-Wiki-The-Step-Everyone-Skips" class="headerlink" title="Step 5 — Lint the Wiki (The Step Everyone Skips)"></a>Step 5 — Lint the Wiki (The Step Everyone Skips)</h3><p>This is the operation almost nobody does — and it’s the one that keeps the whole system from rotting.</p>
+<p>As your wiki grows, entropy creeps in. Two pages start contradicting each other. A claim you filed in March gets superseded by something you read in June, but the old page still says the old thing. Pages get orphaned with no links pointing to them. Topics get referenced but never actually developed.</p>
+<p>Left alone, the graph drifts. The connections that gave it value slowly go stale.</p>
+<p>Linting fixes this.</p>
+<p><strong>Once a week, run:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lint the wiki.</span><br><span class="line">1. Find any pages that contradict each other</span><br><span class="line">2. Flag claims that are outdated or superseded by newer notes</span><br><span class="line">3. Find orphan pages with no incoming links</span><br><span class="line">4. Identify gaps: topics I reference but never developed</span><br><span class="line">5. Report everything. Don&#x27;t delete anything — </span><br><span class="line">   just show me what needs attention.</span><br></pre></td></tr></table></figure>
+
+<p>Claude walks the entire wiki and reports what’s broken. You decide what to fix.</p>
+<p>This is what separates a second brain that stays sharp from one that quietly becomes a mess you stop trusting. Karpathy’s method treats lint as a core operation, not an optional extra — because a knowledge base you don’t trust is one you stop using.</p>
+<h3 id="Step-6-—-The-Weekly-Loop-Review"><a href="#Step-6-—-The-Weekly-Loop-Review" class="headerlink" title="Step 6 — The Weekly Loop Review"></a>Step 6 — The Weekly Loop Review</h3><p>Once a week, alongside your lint pass, run a review that keeps the loop pointed in the right direction:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Review everything I added this week.</span><br><span class="line">1. What are the 3 most important ideas I captured?</span><br><span class="line">2. What new connections emerged between old and new pages?</span><br><span class="line">3. What hub pages are forming — concepts that many </span><br><span class="line">   pages now link to?</span><br><span class="line">4. What am I clearly interested in based on what I&#x27;ve been </span><br><span class="line">   feeding the system?</span><br><span class="line">5. What should I explore next week to deepen the strongest threads?</span><br></pre></td></tr></table></figure>
+
+<p>This isn’t just review. It’s the loop becoming self-aware — the system telling you what you’re building toward before you consciously know it yourself.</p>
+<h3 id="Why-This-Beats-Every-Note-Taking-App"><a href="#Why-This-Beats-Every-Note-Taking-App" class="headerlink" title="Why This Beats Every Note-Taking App"></a>Why This Beats Every Note-Taking App</h3><p>Notion, Roam, standard Obsidian — they’re all storage with better UI.</p>
+<p>The Karpathy method is different in one specific way: the connections maintain themselves.</p>
+<p>In a normal vault, you’re the one who has to remember that the article you’re reading now relates to a note you wrote three months ago. You never remember. The connection never gets made. The knowledge stays siloed.</p>
+<p>In the loop, Claude makes that connection automatically, every time, across your entire vault, forever. The thing that kills every manual system — connection maintenance — is exactly what Claude Code automates.</p>
+<p>That’s why it compounds. And that’s why 21 million people stopped to read Karpathy’s idea.</p>
+<h3 id="Bonus-Run-Your-Second-Brain-24-7"><a href="#Bonus-Run-Your-Second-Brain-24-7" class="headerlink" title="Bonus: Run Your Second Brain 24&#x2F;7"></a>Bonus: Run Your Second Brain 24&#x2F;7</h3><p>Here’s the limitation nobody mentions.</p>
+<p>Running the loop on your laptop means it only works when your laptop is on. Close the lid, and your second brain stops thinking. You find a great article at 11pm on your phone, and it just sits in a tab until you’re back at your desk.</p>
+<p>You need a VPS — a cloud server that stays online 24&#x2F;7, executes without interruption, and reacts instantly to data changes.</p>
+<blockquote>
+<p>**I personally use 👉**<a target="_blank" rel="noopener" href="https://ishosting.com/affiliate/NzE0MiM2">https://ishosting.com/affiliate/NzE0MiM2</a></p>
+</blockquote>
+<p>They provide simple Linux environments with ready-to-use installation guides — easy even if you’re not technical.</p>
+<p><strong>My subscribers get a special discount.</strong></p>
+<p><img src="/images/HMpoxgXWIAAWftv.jpg" alt="HMpoxgXWIAAWftv"></p>
+<p>A cheap always-on server runs your second brain around the clock. Email yourself a link, drop a file in a synced folder, and the loop processes it automatically — even while your laptop is closed and you’re asleep.</p>
+<p>The setup:</p>
+<ol>
+<li>Get a basic Ubuntu VPS (<strong>Recommended:</strong> Start - Linux SSD, Ubuntu 22,04, Chicago location or another.)</li>
+</ol>
+<p><img src="/images/HMppKkvXIAAz-mV.jpg" alt="HMppKkvXIAAz-mV"></p>
+<blockquote>
+<p>$10.19&#x2F;month on the annual plan.</p>
+</blockquote>
+<p><strong>For more complex tasks, I recommend using:</strong> Medium or Premium</p>
+<p>Minimum server: Xeon 2x2.20GHz, 2GB RAM, 30GB SSD — the heavy lifting happens on Anthropic&#x2F;Moonshot servers via API. Your VPS just runs the agent and holds your text files, so you don’t need anything powerful. For heavy batch-ingesting, 4GB RAM is more comfortable.</p>
+<p>Recommended:</p>
+<ul>
+<li>4 vCPU</li>
+<li>8 GB RAM</li>
+<li>80 GB SSD</li>
+<li>Location: New York &#x2F; London &#x2F; Frankfurt (lower latency)</li>
+</ul>
+<p><img src="/images/HMppcfmXAAAeW5t.jpg" alt="HMppcfmXAAAeW5t"></p>
+<p>It’s more cost-effective to pay for a whole year up front</p>
+<p>You can run multiple bots on this single server simultaneously.  One VPS, unlimited strategies.</p>
+<h3 id="Connect-to-Your-VPS"><a href="#Connect-to-Your-VPS" class="headerlink" title="Connect to Your VPS"></a>Connect to Your VPS</h3><p>Check your email.</p>
+<p><img src="/images/HMprS7JWAAATnLw.jpg" alt="HMprS7JWAAATnLw"></p>
+<p><strong>Windows:</strong> Open Remote Desktop (RDP) → enter server IP → login with credentials. if you’ve chosen Windows hosting</p>
+<p><strong>Mac:</strong> Open Terminal →  paste IP → connect</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@SERVER_IP</span><br></pre></td></tr></table></figure>
+
+<p>You’re inside your cloud machine. This server runs your bot non-stop.</p>
+<h3 id="Install-Claude-Code-on-it"><a href="#Install-Claude-Code-on-it" class="headerlink" title="Install Claude Code on it"></a>Install Claude Code on it</h3><p><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/setup">https://code.claude.com/docs/en/setup</a> - Setup Claude</p>
+<p><a target="_blank" rel="noopener" href="https://obsidian.md/help/install">https://obsidian.md/help/install</a> - Install Obsidian</p>
+<ol>
+<li>Put your Obsidian vault folder on the server, synced to your local vault</li>
+<li>Set a cron job that runs “ingest this” on the &#x2F;raw folder every hour</li>
+</ol>
+<p>Now the loop never sleeps. Sources get ingested, linked, and filed the moment they land — no matter where you are or whether your computer is on.</p>
+<p>For a system whose entire value is that it compounds continuously, a server that never turns off is the difference between a second brain you use sometimes and one that’s always working in the background.</p>
+<h3 id="The-Cheaper-Alternative-Worth-Knowing"><a href="#The-Cheaper-Alternative-Worth-Knowing" class="headerlink" title="The Cheaper Alternative Worth Knowing"></a>The Cheaper Alternative Worth Knowing</h3><p>Claude Code is the tool Karpathy’s method spread on. But the exact same system runs on Kimi K2.7 — with a 256K context window that holds more of your vault at once, the ability to read up to 50 files simultaneously, and a fraction of the API cost.</p>
+<p>For a system that only gets bigger over time, where every ingestion re-reads against the whole vault, context size and cost matter. Kimi runs the same loop cheaper.</p>
+<p>Same three folders. Same config file. Same commands. Swap Claude Code for Kimi Code CLI and the loop is identical.</p>
+<p>Use whichever fits your budget. The method is what matters, not the model.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Karpathy’s insight wasn’t about note-taking. It was about loops.</p>
+<p>A second brain that just stores gets bigger and more useless over time. A second brain that compounds gets smarter with every source you add — because something is maintaining the connections that give knowledge its value.</p>
+<p>Three folders. One config file. One command: “ingest this.”</p>
+<p>Five minutes to set up. And you never start from a blank chat again.</p>
+<p>The knowledge you already have starts working for you, instead of sitting in a folder you forgot about.</p>
+<p>That’s the Karpathy method. That’s how a second brain is supposed to work.</p>
+<h3 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h3><ul>
+<li><strong>My Telegram</strong>: <a target="_blank" rel="noopener" href="https://t.me/kirillk_web3">https://t.me/kirillk_web3</a></li>
+<li><strong>My Twitter&#x2F;X</strong>: <a target="_blank" rel="noopener" href="https://x.com/kirillk_web3">https://x.com/kirillk_web3</a></li>
+<li><strong>Hosting</strong> (run it 24&#x2F;7): <a target="_blank" rel="noopener" href="https://ishosting.com/affiliate/NzE0MiM2">https://ishosting.com/affiliate/NzE0MiM2</a></li>
+</ul>
+<p>Follow for more Vibe Coding information. Thank you for reading!</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/07/09/dablclub-2074905017983607081/">https://yaoav.github.io/2026/07/09/dablclub-2074905017983607081/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/dablclub/">@dablclub</a></div><div class="post-share"><div class="social-share" data-image="/images/2074905017983607081-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/07/14/Hss1128_-2076705154364252494/" title="26岁我决定离职：关于AI、自媒体和奥德赛时期"><img class="cover" src="/images/2076705154364252494-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">26岁我决定离职：关于AI、自媒体和奥德赛时期</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Hss1128_（黄白） 的长文，原文链接，版权归原作者所有。   这篇文章是我在 6月末离职前在阿里内网发的帖子，当时还上了内网热榜第一，也有蛮多人说很有感触，所以分享出来，希望能帮助到一些处在迷茫中的朋友（我想在 X 起号。。。  如果你问18岁的我：以后想去哪里工作？ 我会回答：阿里巴巴。 那时候，我总会在作文里天真地写到马老师的创业故事。对当时的我来说，这是一个很遥远的目标。 如果你问22岁的我：以后想做什么？ 我会回答：做一名产品体验设计师。 为了这个目标在几家大厂实习。两年前，我拿到了现在岗位的 Offer。那时我觉得，一切都在按设想的路线发生。 如果你问现在26岁的我：接下来想做什么？ 我的回答变成了：我要离开这里。 听起来有点突然，也确实是一个沉没成本很高的选择。毕竟，这也是年前的我理想中的生活。 所以，这到底是为什么？？？！！！ 这究竟是人性的扭曲，还是道德的沦丧？？🫢 省流版（最直白最不绕弯子过去一年，我在业余时间做 AI 教程，全网增长了近30万关注。  到这里，其实就讲完了…… 但如果你对 AI、自媒体，或者年轻人的迷茫与思考感...</div></div></div></a><a class="pagination-related" href="/2026/07/08/vartekxx-2074864291568664646/" title="Context Engineering: the Karpathy-Cherny method that replaced prompting"><img class="cover" src="/images/2074864291568664646-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Context Engineering: the Karpathy-Cherny method that replaced prompting</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @vartekxx（vartekx） 的长文，原文链接，版权归原作者所有。   Prompt engineering is one instruction. Context engineering is the whole operating system.  The same model can score 0.637 or 0.488 on the same benchmark.Same weights. Same question. The only difference is what else was in the context window when the model answered. That gap is not a rounding error. It is the difference between a useful tool and an expensive autocomplete. Everyone is arguing about which model is best. GPT vs Claude vs Gemini....</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">400</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Idea-That-Hit-21-Million-Views"><span class="toc-number">1.</span> <span class="toc-text">The Idea That Hit 21 Million Views</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-This-Method-Actually-Is"><span class="toc-number">2.</span> <span class="toc-text">What This Method Actually Is</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-the-Loop-Compounds"><span class="toc-number">3.</span> <span class="toc-text">Why the Loop Compounds</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Setup-%E2%80%94-The-Structure-Karpathy-Uses"><span class="toc-number">4.</span> <span class="toc-text">The Setup — The Structure Karpathy Uses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-1-%E2%80%94-Install-Obsidian-and-Claude-Code"><span class="toc-number">5.</span> <span class="toc-text">Step 1 — Install Obsidian and Claude Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-2-%E2%80%94-Create-the-CLAUDE-md-Engine"><span class="toc-number">6.</span> <span class="toc-text">Step 2 — Create the CLAUDE.md Engine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-3-%E2%80%94-Feed-the-Loop"><span class="toc-number">7.</span> <span class="toc-text">Step 3 — Feed the Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-4-%E2%80%94-Query-Across-Everything"><span class="toc-number">8.</span> <span class="toc-text">Step 4 — Query Across Everything</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-5-%E2%80%94-Lint-the-Wiki-The-Step-Everyone-Skips"><span class="toc-number">9.</span> <span class="toc-text">Step 5 — Lint the Wiki (The Step Everyone Skips)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step-6-%E2%80%94-The-Weekly-Loop-Review"><span class="toc-number">10.</span> <span class="toc-text">Step 6 — The Weekly Loop Review</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-This-Beats-Every-Note-Taking-App"><span class="toc-number">11.</span> <span class="toc-text">Why This Beats Every Note-Taking App</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bonus-Run-Your-Second-Brain-24-7"><span class="toc-number">12.</span> <span class="toc-text">Bonus: Run Your Second Brain 24&#x2F;7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-to-Your-VPS"><span class="toc-number">13.</span> <span class="toc-text">Connect to Your VPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Claude-Code-on-it"><span class="toc-number">14.</span> <span class="toc-text">Install Claude Code on it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Cheaper-Alternative-Worth-Knowing"><span class="toc-number">15.</span> <span class="toc-text">The Cheaper Alternative Worth Knowing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conclusion"><span class="toc-number">16.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Links"><span class="toc-number">17.</span> <span class="toc-text">Links</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"><img src="/images/2123789428862660980-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"/></a><div class="content"><a class="title" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?">-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?</a><time datetime="2026-11-20T22:43:52.000Z" title="发表于 2026-11-20 22:43:52">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Shopify recently announced a significant technical change that affects how AI sh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/gmgnjordan-2122966247948349483/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Shopify recently announced a significant technical change that affects how AI sh">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122966247948349483-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T16:12:50.000Z">
+<meta property="article:modified_time" content="2026-11-21T09:33:00.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@gmgnjordan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122966247948349483-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ",
+  "url": "https://yaoav.github.io/2026/11/18/gmgnjordan-2122966247948349483/",
+  "image": "https://yaoav.github.io/images/2122966247948349483-cover.jpg",
+  "datePublished": "2026-11-18T16:12:50.000Z",
+  "dateModified": "2026-11-21T09:33:00.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/gmgnjordan-2122966247948349483/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">400</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122966247948349483-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Shopify Sunsets Storefront Policies Tool: What to Use Instead for Your FAQ</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T16:12:50.000Z" title="发表于 2026-11-18 16:12:50">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@gmgnjordan（JORDAN）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122966247948349483">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Shopify recently announced a significant technical change that affects how AI shopping assistants interact with your store. The platform is deprecating its <code>search_shop_policies_and_faqs</code> tool, a core component of the older Storefront Model Context Protocol (MCP). This change is part of a larger, platform-wide shift toward the more powerful and standardized Universal Commerce Protocol (UCP).</p>
+<p>For merchants, this is more than just technical jargon. It signals a new era where the clarity and accessibility of your store’s policy information are critical for being understood by AI agents. Getting this right means AI-powered shoppers can get accurate answers about your business, while getting it wrong could make your store less visible or lead to confused customers.</p>
+<h3 id="What-was-the-Storefront-MCP-search-shop-policies-and-faqs-tool"><a href="#What-was-the-Storefront-MCP-search-shop-policies-and-faqs-tool" class="headerlink" title="What was the Storefront MCP search_shop_policies_and_faqs tool?"></a>What was the Storefront MCP <code>search_shop_policies_and_faqs</code> tool?</h3><p>This tool was a specific command that AI agents and other automated systems could use to find and read a store’s policies, such as its return policy, shipping information, or frequently asked questions. It was part of Shopify’s earlier framework for AI interactions, known as Storefront MCP. Essentially, it provided a direct line for an AI to “read” the text on your policy pages.</p>
+<p>Think of it as a specialized search function designed for bots, not humans. When a shopper using an AI assistant asked, “What is this store’s return window?”, the assistant could use the <code>search_shop_policies_and_faqs</code> tool to query the store’s data, find the relevant text, and present it to the user. This allowed for quick, automated answers to common questions.</p>
+<p>However, this tool was limited. It primarily performed a text search, which could be imprecise. It was part of an older system that is now being replaced by a more sophisticated and universally adopted standard across the e-commerce industry.</p>
+<p>A worked example: one question, two possible answers</p>
+<p>Take a store that sells outdoor gear. Its return policy allows returns within 30 days on unused items. Two paragraphs lower, the same page says final-sale items cannot be returned at all. A shopper asks an assistant, “Can I return my tent?” A text search may pull the first phrase it finds, which is “30 days,” and stop there.</p>
+<p>The shopper buys a final-sale tent believing they have 30 days. The answer was on the page. It was just not the part the tool surfaced. When the store refuses the refund, the shopper blames the store, not the assistant. The store has lost a sale, a refund request, and some trust, all from one sentence sitting in the wrong place.</p>
+<p>The usual advice is to keep each policy short and put the exceptions near the top. That advice breaks down for stores selling into several countries. A 30-day window in one market may need to be 14 days in another for some products. Splitting policies by country sounds tidy, but it means maintaining several pages that can drift apart.</p>
+<h3 id="Why-is-Shopify-deprecating-this-tool"><a href="#Why-is-Shopify-deprecating-this-tool" class="headerlink" title="Why is Shopify deprecating this tool?"></a>Why is Shopify deprecating this tool?</h3><p>Shopify is deprecating the old policies tool to make way for a more intelligent and standardized system: the Universal Commerce Protocol (UCP). The move away from the isolated <code>search_shop_policies_and_faqs</code> tool is not about removing a feature, but about upgrading the entire foundation of how AI agents communicate with commerce platforms.</p>
+<p>The old tool was simply a search function. The new approach aims for comprehension. Instead of just finding keywords in a block of text, the new system is designed to understand the structure and meaning of the policies. This allows for more reliable and context-aware answers from AI agents.</p>
+<p>This change is part of a broader industry trend. Major players like Google, Microsoft, and Meta are all contributing to the UCP standard. By aligning with UCP, Shopify ensures that its merchants’ stores are compatible with the widest possible range of current and future AI shopping technologies.</p>
+<p>What a standard does not fix</p>
+<p>A better reader cannot repair a bad source. If your policy says “returns are handled case by case,” no protocol will turn that into a clear window. The standard improves how answers are found and phrased. It does not decide what your policy means, and it cannot guess the terms you left out.</p>
+<h3 id="What-is-the-new-UCP-MCP-ask-business-tool-that-replaces-it"><a href="#What-is-the-new-UCP-MCP-ask-business-tool-that-replaces-it" class="headerlink" title="What is the new UCP MCP ask_business tool that replaces it?"></a>What is the new UCP MCP <code>ask_business</code> tool that replaces it?</h3><p>The replacement is a new tool called <code>ask_business</code>. It is part of Shopify’s implementation of the UCP Ask specification. Instead of just searching text, <code>ask_business</code> is designed to provide a definitive, structured answer to a question, drawing from the store’s entire knowledge base, including policies, product information, and other business data.</p>
+<p>When an AI agent uses <code>ask_business</code>, it’s not just getting a chunk of your return policy text back. It receives a synthesized answer formulated by Shopify’s systems. For example, instead of the full page, the answer might be a direct, “The return window is 30 days.” This leads to more accurate and less ambiguous interactions for the end user.</p>
+<p>This new tool also allows for more context. An agent can ask a question and provide the shopper’s country or preferred language, allowing for a more relevant answer. It’s a shift from simple search to a structured question-and-answer dialogue between AI agents and the store’s data.</p>
+<p>A synthesized answer is only as good as its source</p>
+<p>Suppose your return policy says “contact us for exceptions” and never states a window. The synthesized answer may say the window is unclear. That is accurate, but it will not reassure a buyer. The fix is not to hide the gap. Write the window, then write the exception separately, so the answer has something firm to draw from.</p>
+<h3 id="What-is-the-deadline-for-migrating-to-the-new-tool"><a href="#What-is-the-deadline-for-migrating-to-the-new-tool" class="headerlink" title="What is the deadline for migrating to the new tool?"></a>What is the deadline for migrating to the new tool?</h3><p>The old <code>search_shop_policies_and_faqs</code> tool will be maintained until January 15, 2027. After this date, any application or AI agent still trying to use it will find that it no longer works. While this deadline primarily affects app developers and the creators of AI agents, it has indirect consequences for merchants.</p>
+<p>Shopify has already started updating all its developer documentation to refer to the new <code>ask_business</code> tool. This means that any new AI services or updated apps will be built exclusively using the new standard. Stores that are not correctly configured to be read by this new tool will effectively become less compatible with the modern e-commerce ecosystem.</p>
+<p>For merchants, the time to act is now. Waiting until the 2027 deadline means potentially missing out on traffic and sales from AI-powered shopping channels that are adopting the new standard today. The goal is to ensure your store’s information is accessible and accurate from this point forward.</p>
+<p>A dated checklist you can finish in an afternoon</p>
+<p>Start by copying every policy field from Settings &gt; Policies into one document. Add the text of each FAQ page. This gives you a single view of what a reader will find. Mark any sentence that depends on another page, because those links are where answers tend to break.</p>
+<p>Next, read each answer as a stranger would. Ask out loud: “What is the return window, and does it change for sale items?” If you need to scroll or guess, rewrite the sentence so the answer sits in its first line. Keep the window, the exceptions, and the contact route in separate, labelled sentences.</p>
+<p>Finally, set a reminder for early December 2026. Re-check the store’s public UCP profile at the address in the FAQ below, and confirm the pages still match your document. Doing this a month before the deadline leaves room to fix problems without a rush.</p>
+<h3 id="How-does-this-change-affect-AI-shopping-agents-interacting-with-your-store"><a href="#How-does-this-change-affect-AI-shopping-agents-interacting-with-your-store" class="headerlink" title="How does this change affect AI shopping agents interacting with your store?"></a>How does this change affect AI shopping agents interacting with your store?</h3><p>This change fundamentally improves the quality of interaction between AI agents and your store. Agents using the new <code>ask_business</code> tool can get more reliable answers, which translates to a better experience for the shoppers using them. It reduces the chance of an AI misinterpreting your policy page or giving a confusing answer.</p>
+<p>However, there’s a crucial detail: the answer provided by <code>ask_business</code> is considered indicative, not a binding contract. The authoritative sources of information remain the structured data in your store’s catalog, checkout, and order information. If an AI provides an answer that conflicts with the price at checkout, the checkout price is what matters.</p>
+<p>This makes it even more important for a store’s data to be consistent. Your written policies, product data, and shipping rules should all align. An AI agent is now better equipped to read and interpret this data, but it can only work with the information it is given. Inconsistent or missing information is a gap an agent cannot fill.</p>
+<p>What it costs when the answer and checkout disagree</p>
+<p>Consider a store that gets 300 AI-assisted questions a month. Assume 5 percent concern returns, which is 15 conversations. If one in five of those leads to a disputed return, that is three disputes a month. Each takes about 25 minutes of staff time, at a loaded cost of $30 an hour. That is roughly $37.50 a month, before any goodwill refunds.</p>
+<p>The real cost is often the goodwill refund. Say a shopper was told they had 30 days, and the store only allows 14 on that product. If the store honours the claim to keep the customer, a $180 order becomes $180 of lost margin on a sale it has already fulfilled. Those numbers are illustrative, but the pattern is common.</p>
+<h3 id="As-a-merchant-what-do-you-need-to-ensure-your-policies-and-FAQs-are-still-accessible"><a href="#As-a-merchant-what-do-you-need-to-ensure-your-policies-and-FAQs-are-still-accessible" class="headerlink" title="As a merchant, what do you need to ensure your policies and FAQs are still accessible?"></a>As a merchant, what do you need to ensure your policies and FAQs are still accessible?</h3><p>The good news is that for most merchants, no complex technical work is required. This change primarily affects how your data is read, not how you write it. The key is to ensure your policies and FAQ content are stored in the standard, appropriate sections of your Shopify admin.</p>
+<p>Use Shopify’s native tools for managing policies. Go to <code>Settings &gt; Policies</code> in your Shopify admin and fill out the fields for your refund policy, privacy policy, terms of service, and shipping policy. For FAQs, create a standard page within your theme (<code>Online Store &gt; Pages</code>).</p>
+<p>Avoid burying critical policy information in custom-coded sections of your theme, inside images, or in PDF downloads. The <code>ask_business</code> tool is designed to read the structured data and standard pages within your store. The more standard your setup, the more accurately and reliably AI agents will be able to interpret it.</p>
+<p>The trade-off: one long page or several short ones</p>
+<p>A single long policy page is easy to keep consistent. It is hard to scan, and a reader may miss the exception at the bottom. Several short pages are easier to read. They are harder to keep in sync, especially across countries and product types. Pick one structure and stick to it, then check it each time a term changes.</p>
+<h3 id="Does-this-impact-how-customers-see-policies-on-your-actual-storefront"><a href="#Does-this-impact-how-customers-see-policies-on-your-actual-storefront" class="headerlink" title="Does this impact how customers see policies on your actual storefront?"></a>Does this impact how customers see policies on your actual storefront?</h3><p>No, this change does not directly affect the visual presentation of your policy and FAQ pages to a human customer visiting your website. Your theme will continue to display these pages as it always has. This entire change happens on the backend, governing how machines and AI agents access your store’s data.</p>
+<p>The indirect impact, however, is significant. If a customer uses an AI shopping assistant to ask a question about your store, and your store’s data is not properly structured, the AI may fail to find an answer. This could lead the customer to believe you don’t have a return policy, for example, when it’s simply not accessible to the agent.</p>
+<p>Therefore, while the customer-facing website remains the same, ensuring your data is machine-readable is now a crucial part of the customer experience. It ensures consistency, whether the customer is reading the page themselves or asking an AI to do it for them.</p>
+<p>The edge case: when the theme shows it but the reader cannot see it</p>
+<p>Many themes hide policy text in accordions, tabs, or content loaded by script after the page opens. A human sees it with one click. A machine reader may not. If your return terms only appear after a tab is opened, treat that text as if it were invisible to agents, and move the key terms into a plain page.</p>
+<h3 id="How-does-this-reflect-the-broader-trend-towards-universal-commerce-protocols-UCP"><a href="#How-does-this-reflect-the-broader-trend-towards-universal-commerce-protocols-UCP" class="headerlink" title="How does this reflect the broader trend towards universal commerce protocols (UCP)?"></a>How does this reflect the broader trend towards universal commerce protocols (UCP)?</h3><p>This deprecation is a small but clear example of a massive shift in e-commerce: the move towards a universal language for online transactions. The Universal Commerce Protocol (UCP) is an open standard, co-developed by Shopify and Google, aimed at creating a single, shared way for any AI agent to interact with any business.</p>
+<blockquote>
+<p>Odera Joseph Echendu, Founder, TaceyThe future of e-commerce is not just about having a beautiful storefront. It’s about having a store that can clearly and accurately communicate with the growing ecosystem of AI agents that are helping people shop.</p>
+</blockquote>
+<p>Before UCP, every connection between an AI agent (like ChatGPT) and a commerce platform (like Shopify) required a custom integration. With UCP, they all agree to speak the same language for discovering products, managing carts, and checking out. This reduces complexity and opens the door for innovation, as new AI tools can instantly be compatible with millions of merchants.</p>
+<p>A shared standard also assumes that the business answers questions the same way everywhere. That assumption is where small stores can fall behind. A standard can carry an answer across platforms, but it cannot make a vague policy clear on every one of them.</p>
+<p>By adopting UCP for policy questions, Shopify is future-proofing its platform. It ensures that as agentic commerce grows, Shopify merchants will be ready. This change ensures your business’s fundamental rules are not lost in translation in an increasingly automated world.</p>
+<p>As AI agents become more adept at understanding your store’s rules, it’s a reminder to ensure your customer-facing tools are just as intelligent. When a customer makes a mistake, like entering a wrong address, the ideal solution is one that respects your operational constraints while empowering the customer. Tacey provides self-serve order editing that allows customers to fix their own orders after payment but before shipment, all within the rules you set. You can try Tacey from the Shopify App Store today.</p>
+<h3 id="Frequently-asked-questions"><a href="#Frequently-asked-questions" class="headerlink" title="Frequently asked questions"></a>Frequently asked questions</h3><p>What happens if I do nothing about this change?</p>
+<p>Your customer-facing website will not break. However, as AI agents increasingly adopt the new <code>ask_business</code> tool, your store may become less visible or provide incomplete answers to shoppers using those agents. This could result in a poor customer experience or lost sales through AI-driven channels.</p>
+<p>Do I need to hire a developer to update my store?</p>
+<p>For most merchants, no. The key action is to ensure your return policies, shipping information, and FAQs are entered using the standard sections of the Shopify admin, such as <code>Settings &gt; Policies</code> and <code>Online Store &gt; Pages</code>. If your policies are in standard locations, Shopify handles the rest.</p>
+<p>Will my current FAQ app stop working?</p>
+<p>It depends on how the app is built. If the app simply displays information on your storefront, it will likely be unaffected. If the app has its own integration with third-party AI agents that relied on the old <code>search_shop_policies_and_faqs</code> tool, then the app developer will need to update it before the January 15, 2027 deadline.</p>
+<p>Can I see what information AI agents can get from my store?</p>
+<p>Yes, to some extent. You can check your store’s public UCP profile by navigating to <code>yourstore.com/.well-known/ucp</code> in a browser. This will show a JSON file listing the capabilities your store offers to compatible agents, including whether it supports <code>dev.ucp.common.ask</code>.</p>
+<p>How do I test what an AI agent says about my store?</p>
+<p>Ask an AI assistant the same questions a real customer would. Use plain wording, such as “Can I return a sale item?” or “How long do I have to send something back?” Compare each answer with your policy page, word for word where it matters. Any gap tells you which sentence needs rewriting.</p>
+<p>Repeat the test with a different country or language if you sell there. A wrong window for one market is easy to miss when you only test from your own location. Keep a short log of the questions and answers, and rerun it after every policy change.</p>
+<p>Is this change related to Shopify Sidekick?</p>
+<p>Yes, conceptually. Shopify Sidekick is your personal AI assistant for managing your store. This UCP change is about external AI assistants that your <em>customers</em> use to shop. Both are part of Shopify’s broader strategy to integrate AI deeply into all aspects of commerce, from store management to customer interaction.</p>
+<p>Want more news like this? Read the Tacey blog  . <a target="_blank" rel="noopener" href="https://tacey.app/blog/shopify-sunsets-storefront-policies-tool-what-to-use-instead-for-your">https://tacey.app/blog/shopify-sunsets-storefront-policies-tool-what-to-use-instead-for-your</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/gmgnjordan-2122966247948349483/">https://yaoav.github.io/2026/11/18/gmgnjordan-2122966247948349483/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/gmgnjordan/">@gmgnjordan</a></div><div class="post-share"><div class="social-share" data-image="/images/2122966247948349483-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/zuohai-2122967477927682227/" title="扒了 Reddit  上黑五优惠VPS：最低年付 $12，终身同价续费"><img class="cover" src="/images/2122967477927682227-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">扒了 Reddit  上黑五优惠VPS：最低年付 $12，终身同价续费</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @zuohai（左海） 的长文，原文链接，版权归原作者所有。  微信交流群里呼声最高的就是黑五期间有没有 VPS 折扣信息。今天我把黑五期间已经公布优惠活动的几款 VPS 给大家整理出来了（最低年付 $12 起，带终身同价续费） 这几天 Reddit 的 r&#x2F;lowendbox 和各个主机版块基本被黑五大促刷屏了。我把目前讨论度最高、特价、且真实配置合理的几家套餐整理了出来。 所有套餐均标注了真实线路、硬件限制和续费锁价规则。优惠码和实际库存随时变动，请以结账页为准。 1. CloudCone 大容量存储款（超低价练手&#x2F;备份）  价格与续费：年付 $14.24（用码 PREBF26 后约 $12.24&#x2F;年，折合约 $1&#x2F;月，终身续费同价） 核心配置：1 vCPU &#x2F; 1 GB 内存 &#x2F; 55 GB SSD 缓存盘 &#x2F; 4 TB 月流量 &#x2F; 1 Gbps 端口 &#x2F; 1 个 IPv4 + 3 个 IPv6 机房线路：美国洛杉矶多机房 适用场景：预算极低、需要大硬盘放冷数据...</div></div></div></a><a class="pagination-related" href="/2026/11/18/zhuanfgghjnb-2122965020455678261/" title="你还在等，FTX已经在给别人打款"><img class="cover" src="/images/2122965020455678261-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">你还在等，FTX已经在给别人打款</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @zhuanfgghjnb（蜡币小鑫） 的长文，原文链接，版权归原作者所有。  Qredax · 2026年11月10日文中案件状态截至2026年11月9日 FTX已经开始还钱了。如果你很久没关注这个案子，可能还不知道，其他债权人已经收到了分配款。而住在中国大陆或澳门的你，可能连收款服务商都选不了。 你也在这家交易所损失了钱，也等了快四年。现在别人陆续到账，你却还被告知继续等，等所在地区获准接收分配款。什么时候能等到，没有日期。 你可能想，再忍一忍，限制解除了，钱就会来。可信托的钱不是无限的。你等着的时候，律师和管理人员的费用照付，其他债权人的分配款也在发。等限制终于解除，还能剩下足够的钱支付你的那一份吗？目前没有答案。更何况，有些分配款设有领取期限，错过了，可能连领取的权利都会失去。  为什么你至今还没收到钱负责处理债务、分配剩余资产的是FTX Recovery Trust，下文简称信托。你向FTX主张偿还的权利，叫作债权，也就是英文里的claim。 要收到分配款，需要先完成FTX债权门户里的几个步骤。到了第8步，也就是Step 8，你要选择分配服务商并...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">400</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">197</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-was-the-Storefront-MCP-search-shop-policies-and-faqs-tool"><span class="toc-number">1.</span> <span class="toc-text">What was the Storefront MCP search_shop_policies_and_faqs tool?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-is-Shopify-deprecating-this-tool"><span class="toc-number">2.</span> <span class="toc-text">Why is Shopify deprecating this tool?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-the-new-UCP-MCP-ask-business-tool-that-replaces-it"><span class="toc-number">3.</span> <span class="toc-text">What is the new UCP MCP ask_business tool that replaces it?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-the-deadline-for-migrating-to-the-new-tool"><span class="toc-number">4.</span> <span class="toc-text">What is the deadline for migrating to the new tool?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-does-this-change-affect-AI-shopping-agents-interacting-with-your-store"><span class="toc-number">5.</span> <span class="toc-text">How does this change affect AI shopping agents interacting with your store?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#As-a-merchant-what-do-you-need-to-ensure-your-policies-and-FAQs-are-still-accessible"><span class="toc-number">6.</span> <span class="toc-text">As a merchant, what do you need to ensure your policies and FAQs are still accessible?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Does-this-impact-how-customers-see-policies-on-your-actual-storefront"><span class="toc-number">7.</span> <span class="toc-text">Does this impact how customers see policies on your actual storefront?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-does-this-reflect-the-broader-trend-towards-universal-commerce-protocols-UCP"><span class="toc-number">8.</span> <span class="toc-text">How does this reflect the broader trend towards universal commerce protocols (UCP)?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Frequently-asked-questions"><span class="toc-number">9.</span> <span class="toc-text">Frequently asked questions</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import"><img src="/images/2123803001467056386-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your agent is now a link: introducing Agent Share &amp; Import"/></a><div class="content"><a class="title" href="/2026/11/20/MOJOAI_HQ-2123803001467056386/" title="Your agent is now a link: introducing Agent Share &amp; Import">Your agent is now a link: introducing Agent Share &amp; Import</a><time datetime="2026-11-20T23:37:48.000Z" title="发表于 2026-11-20 23:37:48">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"><img src="/images/2123789428862660980-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?"/></a><div class="content"><a class="title" href="/2026/11/20/Sophie06344746-2123789428862660980/" title="-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?">-$6 Trillion In 45 Days: Is This A &quot;Bubble&quot; Or An Opportunity?</a><time datetime="2026-11-20T22:43:52.000Z" title="发表于 2026-11-20 22:43:52">2026-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程"><img src="/images/2123784876189180204-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建 AI 时代的 e2e 测试实战教程"/></a><div class="content"><a class="title" href="/2026/11/20/leo_xiaolei-2123784876189180204/" title="搭建 AI 时代的 e2e 测试实战教程">搭建 AI 时代的 e2e 测试实战教程</a><time datetime="2026-11-20T22:25:47.000Z" title="发表于 2026-11-20 22:25:47">2026-11-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
