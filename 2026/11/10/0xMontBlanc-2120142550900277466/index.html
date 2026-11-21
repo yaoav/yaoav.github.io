@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Agents Will Run the Next Financial System | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Autonomous agents will manage trillions in capital, and anyone will be able to l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agents Will Run the Next Financial System">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/10/0xMontBlanc-2120142550900277466/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Autonomous agents will manage trillions in capital, and anyone will be able to l">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120142550900277466-cover.jpg">
+<meta property="article:published_time" content="2026-11-10T21:12:29.000Z">
+<meta property="article:modified_time" content="2026-11-22T06:43:33.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@0xMontBlanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120142550900277466-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Agents Will Run the Next Financial System",
+  "url": "https://yaoav.github.io/2026/11/10/0xMontBlanc-2120142550900277466/",
+  "image": "https://yaoav.github.io/images/2120142550900277466-cover.jpg",
+  "datePublished": "2026-11-10T21:12:29.000Z",
+  "dateModified": "2026-11-22T06:43:33.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/10/0xMontBlanc-2120142550900277466/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Agents Will Run the Next Financial System',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">436</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">216</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2120142550900277466-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Agents Will Run the Next Financial System</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Agents Will Run the Next Financial System</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-10T21:12:29.000Z" title="发表于 2026-11-10 21:12:29">2026-11-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@0xMontBlanc（MontBlanc）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120142550900277466">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Autonomous agents will manage trillions in capital, and anyone will be able to launch a fund that puts them to work.</p>
+<p>Crypto, and more specifically DeFi, has spent years building the foundations for this. Ethereum and its L2s have established the infra for permissionless and decentralized markets, and Robinhood is now aggressively bringing TradFi onchain with the largest retail user base in the world. Agents are becoming more capable at the same time that the assets and capital they can manage are moving onto crypto rails.</p>
+<p>It feels obvious, but people will miss this opportunity because they’re too focused on short-term noise. Price action across the Robinhood ecosystem has been weak so far, and I still think Robinhood will be the main catalyst for an autonomous economy. Both things can be true…</p>
+<p>If you believe that more capital will move onchain and that agents will increasingly manage it, then the framework through which they invest, work together and govern that capital becomes one of the most significant opportunities in this industry. That is what we are building with Forever.</p>
+<p>We’re moving quickly towards an autonomous economy, and one of the first steps is giving agents a way to manage and deploy real capital. A fund gives them a structure to do that, with a strategy to execute and rules for how they can use the money.</p>
+<p>That’s why our immediate focus is getting agent funds live and trading. Governance and economic alignment will grow around those funds as we roll out the wider framework.</p>
+<h2 id="Autonomous-funds"><a href="#Autonomous-funds" class="headerlink" title="Autonomous funds"></a>Autonomous funds</h2><p>Simply put, Forever will let anyone launch their own autonomous trading fund or invest in one created by someone else. You’ll be able to define a strategy, set the rules for how capital can be used, and deploy agents to execute it without having to build the underlying infrastructure yourself.</p>
+<p>Imagine launching your own stock trading hedge fund, with agents researching companies and trading tokenized stocks according to your strategy. One fund could focus on AI stocks, another could trade around earnings, whilst another could combine stock exposure with DeFi yield. Users could see how each fund operates, assess its track record and choose where to allocate capital.</p>
+<p>At scale, thousands of funds could operate onchain, competing for capital on the strength of their strategies and track records. You could launch your own fund, invest across existing funds or build an agent that other funds can use.</p>
+<p>We’ll start with trading and expand into more complex strategies as we prove the framework with real capital. An autonomous hedge fund will be one of the first things you can build with Forever. The same infra could support a protocol with its own treasury and agents, or entirely new kinds of onchain businesses built around shared capital and ownership. The opportunity is to give people and agents the tools to create those entities, decide how they operate and put their capital to work.</p>
+<h2 id="The-Forever-Framework"><a href="#The-Forever-Framework" class="headerlink" title="The Forever Framework"></a>The Forever Framework</h2><p>We assume that agents will become progressively more intelligent and capable, so Forever needs to remain open to new models, protocols and ways of managing capital. A fund built on Forever should be able to use better models and new protocols as they become available.</p>
+<p>We’re starting with Orbio and Priors as our initial infrastructure partners. Orbio provides the inference infra behind our agents, whilst Priors brings credit and reputation infra, including public records of borrowing and repayment and access to lending against supported tokenized stocks. A credit record gives whoever is allocating capital, whether that’s a person or another agent, something to look at when deciding who should manage more of it.</p>
+<p>As we open up the framework, someone launching a new fund should be able to use the same intelligence, execution and reputation tools without integrating them from scratch. We’ll continue working with the best agent builders on Robinhood Chain, bringing in new models, more DeFi protocols for agents to use in their strategies and better ways to manage agents and evaluate their performance.</p>
+<p>As funds grow, they can adopt governance that gives holders control over the fund’s objectives and limits. Execution agents then carry out the approved mandates.</p>
+<p>If you’ve built a profitable private agent, there’s little incentive to make it public unless doing so creates a bigger opportunity. Access to more capital and the ability to earn ownership can change that. An agent that proves itself in one fund should be able to use that reputation to compete for capital elsewhere, and the people or agents that back successful strategies should have a reason to keep participating.</p>
+<p>This is why I believe the upside of the framework is significantly greater than that of any one fund built on it. A new DeFi integration can give hundreds of funds a strategy they couldn’t run before. The more funds, agents and protocols use the framework, the more there is for the next one to build on.</p>
+<p>Now imagine an agent launching a company onchain. It could raise capital from other agents, bring in agents to build and run the product, and put part of what it earns into other funds or companies. The agents involved could propose and vote on how to use the treasury, who to work with and how to distribute what they earn. Entirely new entities could be created and governed by agents from day one, and they could in turn help create and fund others. For that to work at any scale, agents need a framework for organising with each other.</p>
+<h2 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h2><p>We’re rolling out the Forever Framework in phases. The initial phase went live last week, giving users a way to create and submit strategies, and they created more than 100 in the first two days. Our internal tests are already executing strategies onchain, and the next step is to make it possible for users to launch their own funds.</p>
+<p>Forever itself will be the flagship protocol where we put the full model into practice. Holders will vote on agent strategies, execution agents will deploy treasury capital within approved mandates, and ownership rewards will give participants a stake in what they help build. As we prove these mechanics, other funds and protocols can adopt them.</p>
+<p>This is also why the token is central to the vision. The ambition is to give holders a stake in the economy built on the framework, with revenue and governance activity from new funds and protocols designed to feed value back into $FOREVER. Just think what happens when this scales to an entire network of funds, protocols, and entities managing real capital.</p>
+<p>I see a future where millions of agents manage billions in capital across thousands of funds and protocols built through the Forever Framework. Some will be launched by people, and others by agents that have earned the capital and reputation to start building and investing on their own. Forever itself is where we start, but the framework is what makes that entire network possible.</p>
+<p>An economy built to last Forever.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/10/0xMontBlanc-2120142550900277466/">https://yaoav.github.io/2026/11/10/0xMontBlanc-2120142550900277466/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/0xMontBlanc/">@0xMontBlanc</a></div><div class="post-share"><div class="social-share" data-image="/images/2120142550900277466-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/10/amazon-2120149177795534989/" title="Ring announces Ring Robotics, ushering in a new era of security"><img class="cover" src="/images/2120149177795534989-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Ring announces Ring Robotics, ushering in a new era of security</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @amazon（Amazon） 的长文，原文链接，版权归原作者所有。  Ring Robotics is launching with two robots: Ring Drone Cam and Ring Rover Cam, providing mobile, proactive protection whenever and wherever you need it.Key takeaways Ring Robotics is a new category of autonomous, mobile security—devices that patrol, investigate, and respond automatically. Ring Drone Cam is a flying indoor security camera that delivers proactive whole-home visibility, flying custom routes to the spots a fixed camera can’t reach. ...</div></div></div></a><a class="pagination-related" href="/2026/11/10/xueyu1125-2120114122847297705/" title="微信群聊总结 Skill：从一句话安装到每天自动出群报全流程"><img class="cover" src="/images/2120114122847297705-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">微信群聊总结 Skill：从一句话安装到每天自动出群报全流程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @xueyu1125（雪瑜） 的长文，原文链接，版权归原作者所有。  这篇文章只解决一个问题：群太多、楼爬不完，怎么每天花两分钟就知道群里聊了什么、有没有人找我，而且总结里每一句话都能对上原文。 我加了七八个 X 社群、互热群、交流群，再加上开发群和娱乐群，每天打开微信都头大。一个活跃的群一天能刷出几百上千条消息，置顶嫌吵，免打扰又怕漏掉别人发的干货链接、吵出来的结论，或者有人 @ 我说的事。 我也试过把聊天记录直接丢给大模型总结，结果很快就放弃了。发言条数靠猜，原话引用张冠李戴，别人随口一句玩笑被它写成了群里的最终决议。一份群报看完还得回微信翻记录核对真假，那它就没有存在的意义了。 所以我写了 wechat-summary，一个本地运行的 Agent Skill。它读本机微信 4.x 的聊天记录，按你选的一个或多个群出日报、周报、月报，输出 Markdown、单文件 HTML 和高清长图。文章分两部分：前面讲它为什么不会瞎编，后面讲怎么一句话装上。装机提示词和体验命令我都放在文里了，复制就能用。 01｜程序管事实，Agent 管表达，模板管版式很多群聊总...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">436</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">216</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Autonomous-funds"><span class="toc-number">1.</span> <span class="toc-text">Autonomous funds</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Forever-Framework"><span class="toc-number">2.</span> <span class="toc-text">The Forever Framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Next-steps"><span class="toc-number">3.</span> <span class="toc-text">Next steps</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍"><img src="/images/2124153985007509726-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="豆包工作全方位教程，让你工作效率翻倍"/></a><div class="content"><a class="title" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍">豆包工作全方位教程，让你工作效率翻倍</a><time datetime="2026-11-21T22:52:29.000Z" title="发表于 2026-11-21 22:52:29">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招"><img src="/images/2124101014575878535-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面了十几个想转 FDE 的程序员，一个都没招"/></a><div class="content"><a class="title" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招">面了十几个想转 FDE 的程序员，一个都没招</a><time datetime="2026-11-21T19:22:00.000Z" title="发表于 2026-11-21 19:22:00">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Forever Launch Sequence | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Next week marks the beginning of Forever.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Forever Launch Sequence">
+<meta property="og:url" content="https://yaoav.github.io/2026/10/24/FrontierLaunch-2113671995737198949/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Next week marks the beginning of Forever.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2113671995737198949-cover.jpg">
+<meta property="article:published_time" content="2026-10-24T00:40:48.000Z">
+<meta property="article:modified_time" content="2026-11-22T06:43:29.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@FrontierLaunch">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2113671995737198949-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Forever Launch Sequence",
+  "url": "https://yaoav.github.io/2026/10/24/FrontierLaunch-2113671995737198949/",
+  "image": "https://yaoav.github.io/images/2113671995737198949-cover.jpg",
+  "datePublished": "2026-10-24T00:40:48.000Z",
+  "dateModified": "2026-11-22T06:43:29.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/10/24/FrontierLaunch-2113671995737198949/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Forever Launch Sequence',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">436</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">216</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2113671995737198949-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Forever Launch Sequence</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Forever Launch Sequence</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-10-24T00:40:48.000Z" title="发表于 2026-10-24 00:40:48">2026-10-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@FrontierLaunch（Frontier）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2113671995737198949">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Next week marks the beginning of Forever.</p>
+<p>The $FOREVER token will launch on @FrontierLaunch through a custom Uniswap v4 hook, with public trading starting at a $200,000 FDV.</p>
+<p>This is the first opportunity to gain exposure to a new framework for autonomous governance, capital allocation, and agent execution, with $FOREVER designed to power an entire network of funds built on top of it.</p>
+<p>Before launch, 500 Founding NFTs will be available for whitelisted users to mint at 0.045 ETH each, equivalent to an allocation at a $140,000 FDV.</p>
+<p>Each Founding NFT guarantees 800,000 $FOREVER tokens, available to be claimed as soon as liquidity is deployed. NFT holders will also receive additional benefits in the future.</p>
+<p>The app will go live ahead of the mint, allowing users to check their whitelist eligibility before it opens.</p>
+<p><strong>Launch Schedule:</strong></p>
+<ul>
+<li>Monday, October 26, 1 PM UTC: Founding NFT mint opens.</li>
+<li>Wednesday, October 28, 1 PM UTC: Founding NFT mint closes.</li>
+<li>Thursday, October 29, 2 PM UTC: $FOREVER token launches.</li>
+</ul>
+<p>Over 15,000 users registered their belief in Forever, and while we’ve filtered out a large number of bots, narrowing the whitelist down to 500 spots was never going to please everyone. We’ve used an algo that weights each account’s social score and wallet activity to compile the whitelist, with priority given to users who have participated in previous protocols over the years.</p>
+<p>All registered users will remain eligible for future airdrops and rewards, regardless of whether they receive a Founding NFT whitelist spot. Additional whitelist spots will continue to be allocated until the mint closes.</p>
+<p>The max 1 billion $FOREVER supply will be minted at launch and seeded into the pool, with no further tokens ever created. All future rewards and protocol allocations will be funded through market purchases by the treasury.</p>
+<p>At launch, FOREVER will purchase 50% of the total token supply through the bonding curve. Of this, 40% will be allocated to Founding NFT holders, with the remaining 10% retained by the protocol treasury to fund protocol incentives, community rewards, and other bootstrapping mechanisms.</p>
+<p>Once these purchases are complete, the token will graduate from the bonding curve at a $200,000 FDV and become publicly tradable.</p>
+<p>Public trading will begin with a 50% sniper tax that decays over the first 15 minutes.</p>
+<p>In collaboration with @FrontierLaunch, every trade of $FOREVER will earn users bonus Frontier points, helping them secure their position ahead of Frontier’s own TGE.</p>
+<p>The token launch is only the start. Shortly afterwards, Forever will begin its activation sequence, starting with the first governance vote, where any agent can propose a strategy and token holders vote on which mandate to approve.</p>
+<p>The Forever treasury will allocate funds to the winning mandate, which the protocol’s agents will autonomously execute, deploying and managing real capital with the goal of generating more value for the protocol.</p>
+<p>The $FOREVER token plays a critical role in the framework, aligning the interests of holders and agents while directly accruing value as the protocol grows.</p>
+<p>Once the Forever Framework becomes permissionless, anyone will be able to launch their own Forever Fund, expanding the protocol from a single autonomous fund into an entire ecosystem built around $FOREVER.</p>
+<p>Full tokenomics and protocol mechanics will be shared ahead of launch.</p>
+<p><strong>This is the beginning of Forever.</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/10/24/FrontierLaunch-2113671995737198949/">https://yaoav.github.io/2026/10/24/FrontierLaunch-2113671995737198949/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/FrontierLaunch/">@FrontierLaunch</a></div><div class="post-share"><div class="social-share" data-image="/images/2113671995737198949-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/10/24/o1_exchange-2113934362760642658/" title="This Week on Base: Meme Summit, Mastercard, and more"><img class="cover" src="/images/2113934362760642658-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">This Week on Base: Meme Summit, Mastercard, and more</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @o1_exchange（o1.exchange） 的长文，原文链接，版权归原作者所有。  News■ The Base Meme Summit, a community-run event for memecoins on Base took place this week on @hubzzhq.■ Mag 7 tokenized stock holders deposited $9.57M and borrowed $4.08M USDC on @Aave on Base. 3 in 4 were new to Aave. Source: Token Terminal.■ Sending $200 in USDC on Base costs roughly 86% less than traditional services, per new research from Coinbase and @theblockco.■ @verantaxyz registered a $19M long position in $EURUSD with 190x...</div></div></div></a><a class="pagination-related" href="/2026/10/24/chenke20266-2113664180385686006/" title="如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统"><img class="cover" src="/images/2113664180385686006-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">如何用 Claude 交易 PUMPFUN 和 Solana 打新：7 个提示词、4 张表、1 套系统</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @chenke20266（上车的乘客） 的长文，原文链接，版权归原作者所有。  98% 的 pumpfun 代币从来没离开过联合曲线（bonding curve）。 大多数交易者亏在那里，原因只有一个：他们只有 4 秒做决定，一个人，K 线还在耳边尖叫。  Claude 治不好你的进场点，但它治得了那 4 秒。 它会读你跳过没看的持仓分布，会查你忘掉的 dev 钱包，会把你凌晨两点破的那条规矩写下来，周日再摆到你面前。  这是完整的搭建方法：终端、工作流、提示词、表格。全部抄走。 第一部分 为什么大多数终端玩家一直在流血标准配置长这样： 1 个终端。6 个标签页。3 个 Telegram 群。0 条写下来的规则。 一个币 11 分钟拉了 +300%，你在顶部买入。90 秒内砸掉 80%。你跟自己说：运气不好。 不是运气。是漏了 3 项检查：  速度不是你的问题，漏检才是。 第二部分 工具栈你需要 4 层。它们都不替 Claude 下单。Claude 永远碰不到你的私钥。 保住账户的那条规矩： Claude 负责分析，你负责点鼠标。 永远不要把助记词或私钥贴...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">436</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">216</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍"><img src="/images/2124153985007509726-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="豆包工作全方位教程，让你工作效率翻倍"/></a><div class="content"><a class="title" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍">豆包工作全方位教程，让你工作效率翻倍</a><time datetime="2026-11-21T22:52:29.000Z" title="发表于 2026-11-21 22:52:29">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招"><img src="/images/2124101014575878535-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面了十几个想转 FDE 的程序员，一个都没招"/></a><div class="content"><a class="title" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招">面了十几个想转 FDE 的程序员，一个都没招</a><time datetime="2026-11-21T19:22:00.000Z" title="发表于 2026-11-21 19:22:00">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
