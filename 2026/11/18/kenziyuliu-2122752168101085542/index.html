@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>A Model of One’s Own | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Introducing Second by First Person Labs PBC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Model of One’s Own">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/18/kenziyuliu-2122752168101085542/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Introducing Second by First Person Labs PBC">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2122752168101085542-cover.jpg">
+<meta property="article:published_time" content="2026-11-18T02:02:10.000Z">
+<meta property="article:modified_time" content="2026-11-22T04:34:30.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@kenziyuliu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2122752168101085542-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A Model of One’s Own",
+  "url": "https://yaoav.github.io/2026/11/18/kenziyuliu-2122752168101085542/",
+  "image": "https://yaoav.github.io/images/2122752168101085542-cover.jpg",
+  "datePublished": "2026-11-18T02:02:10.000Z",
+  "dateModified": "2026-11-22T04:34:30.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/18/kenziyuliu-2122752168101085542/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'A Model of One’s Own',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">431</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">211</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2122752168101085542-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">A Model of One’s Own</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">A Model of One’s Own</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-18T02:02:10.000Z" title="发表于 2026-11-18 02:02:10">2026-11-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@kenziyuliu（Ken Liu）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2122752168101085542">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Introducing Second by First Person Labs PBC</p>
+<p>There’s nothing quite like feeling understood.</p>
+<p>A sibling who finishes your sentences. An artist who puts your feelings into words. Or a friend who hears “I’m fine” and knows you are not.</p>
+<p>The people who know us best are often the ones who can help us the most, because they see beneath the veil of what we say, to what we really mean. And that requires years if not a lifetime of accumulated knowledge and experiences together. They need to build a model of you: not just emails and messages; but who you are, what you do, your people, preferences, goals, commitments, and intent.  In other words, they need a whole lot of context.</p>
+<p>The same will be true for personal software, as software becomes agents. We believe the next leap in how we interact with machines will be unlocked by an infrastructure that serves full, up-to-the-minute context on us efficiently, securely, and ubiquitously, and that infrastructure is missing.</p>
+<p>We now have the tools to make this happen: agents that can watch and learn our every move, and distill our behaviors into re-usable context on an always-on basis. But who will do the watching? Will we be forced to sacrifice our privacy, in exchange? Who will own the model of you that results?</p>
+<p><strong>First Person Labs PBC</strong> is an applied AI lab founded on the principle that this model of you should belong to you, and it should empower you to do great things.</p>
+<h3 id="Your-Second-and-The-Model-of-You"><a href="#Your-Second-and-The-Model-of-You" class="headerlink" title="Your Second and The Model of You"></a>Your Second and The Model of You</h3><p>We’re excited to introduce <strong>Second</strong>, a self-sovereign infrastructure to autonomously build and serve your portable user model across your devices and agents.</p>
+<p>Second starts off as a streaming-state, portable context vault that builds itself. Second orchestrates perpetual background agents to continuously learn from your raw computer activity from the OS, up-to-the-minute. There is no action needed from you; your context just comes out. Memories of your recent projects, people, writing samples, or what you did just minutes ago.</p>
+<p>Over time, Second builds up a full model of you: your goals, priorities, style, preferences, commitments, and intent. Aspects of you that help you (and your agents) make decisions and drive outcomes. You can then serve Second over both local and cloud APIs or MCPs with your full control—creating “the API of you” for humans and machines alike.</p>
+<p>Then, next time you ask, inside Second or elsewhere, there’s no need to explain. Since Second was always with you, it already knows what likely prompted your question and can efficiently serve context around it.</p>
+<p>We’ve barely scratched the surface of what portable user models can unlock. Deep understanding of us, served at machine speeds, could drive the next leap in personal software, human-computer interaction, large-scale coordination of humans and agents, and more.</p>
+<h3 id="Privacy-and-Sovereignty-are-Paramount"><a href="#Privacy-and-Sovereignty-are-Paramount" class="headerlink" title="Privacy and Sovereignty are Paramount"></a>Privacy and Sovereignty are Paramount</h3><p>In many ways, a model of you is like a home. It holds your most personal things. You decide who comes in, what they see, and when they leave.</p>
+<p>Like a home, Second makes it simple to express access controls for your context across your apps, services, and agents. Some visitors get to stay, browse, and do things with you. Others never step inside: they knock, ask for something, and you decide what to share.</p>
+<p>Whoever holds our user models will steer what software does for us. We are not here to call out any one company’s agenda or behavior; it’s simply that their priorities and objectives are, naturally, different from yours. For example, narrow user models of our scrolls, swipes, and clicks gave us the feeds we have today, for better and for worse; general user models are far more powerful.</p>
+<p>We don’t know yet where this will lead. But we believe putting control into the hands of the people they describe, rather than any single company (including ours), will shape the incentives of the industry for the better.</p>
+<p>Holding to this commitment means taking on hard systems and security problems, and making sovereignty an invariant of Second from the ground up. In short:</p>
+<ul>
+<li><strong>Your model is yours, truly.</strong>  Second runs on your device by default. It lives in a folder on your computer, where you can inspect it, analyze it, edit it, back it up, or even move it to a USB stick. Maybe someday, you’ll even pass it on to your kids.</li>
+<li><strong>Bring-your-own intelligence.</strong> You can power Second with an existing subscription to Claude or ChatGPT, bring your own API key, use local inference, or buy private inference tokens from us, if you like.</li>
+<li><strong>We stay off the path</strong>. FPL does not see your data. Your data doesn’t pass through FPL, unless you choose our hosted private inference or Second Cloud. We don’t train on, log, or sell your data to anyone (unless you want us to!). If you choose your own hosting and inference provider, your data isn’t with us in the first place.</li>
+<li><strong>Confidential, from day one</strong>. We proudly support zero data retention (ZDR) and offer confidential computing with verifiable controls at every possible opportunity. We host confidential inference, and if you choose to enable Second Cloud, it can run inside a confidential VM.</li>
+<li><strong>You can run it all</strong>. We intend to open-source key components of Second, so you can self-host them right on your laptop, or from the cloud.</li>
+</ul>
+<p>As agents come to power all the software we use, your personal context will become ever more precious. With Second, you can create and run your own user model and the API of yourself, and permission access to your agents in a way that feels intuitive.</p>
+<h3 id="Who-we-are"><a href="#Who-we-are" class="headerlink" title="Who we are"></a>Who we are</h3><p>First Person Labs PBC is an applied research and product company studying how AI can understand us deeply, how to protect that understanding, and how we can use it to empower us to do great things.</p>
+<p>For decades, researchers have made progress in human-computer interaction, to reduce the latency between what we want to do and how quickly a computer can understand it. Most of these efforts have focused on self-expression: the mouse, the keyboard, the graphical user interface. While we can now type and dictate faster than we ever have, the understanding of us is still missing.</p>
+<p>Our vision is for a future where every person is more powerful, because they have the ultimate affordance: personal computers that fully understands them, on their own terms. In this future, there’s no need to explain what you mean or find the right words to explain what you want. Second already knows. It could help you remember what a friend is going through, revisit an idea you abandoned, or see how your priorities have changed over time.</p>
+<p>In truth, there’s so much research to do on how we can understand humans, and how we can use that understanding to empower them. We can’t yet imagine all the possibilities.</p>
+<p>For us, this vision is only possible when three things come together: empowerment, understanding, and ownership. Empowerment means expanding what people can do, in service of their own goals. Understanding means a detailed model of you, not just connecting data sources. Ownership means this model should be yours to own and control. We think this should define the next era of personal computing.</p>
+<h3 id="What-now"><a href="#What-now" class="headerlink" title="What now?"></a>What now?</h3><p>Second is available in early access today. We will open for general access soon, as we scale up compute and support. We’re excited to see what amazing things you’ll build on top of your Second.</p>
+<p>If the above resonates, we hope you’ll join us on this journey.</p>
+<p>Yours, truly.</p>
+<p>Ken Liu</p>
+<p>Founder, First Person Labs PBC</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/18/kenziyuliu-2122752168101085542/">https://yaoav.github.io/2026/11/18/kenziyuliu-2122752168101085542/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/kenziyuliu/">@kenziyuliu</a></div><div class="post-share"><div class="social-share" data-image="/images/2122752168101085542-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/18/yifanxu_ephai-2122760447103484410/" title="Why I hate GPT-6.2 Astra"><img class="cover" src="/img/default-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Why I hate GPT-6.2 Astra</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yifanxu_ephai（Yifan Xu） 的长文，原文链接，版权归原作者所有。  During early testing, I found myself so frustrated with this model that I spent a day writing a letter to OpenAI about it. They fixed a small handful of my complaints, but not enough for me to recommend using it. I’m currently sick in bed and I’m not gonna be able to film a video about it today, so I’ve chosen to post the letter in full.  I feel bad about this, but I know you guys will listen and use this feedback to make a better model...</div></div></div></a><a class="pagination-related" href="/2026/11/18/sentry-2122751213749858605/" title="How a broken release name overloaded our symbolication database "><img class="cover" src="/images/2122751213749858605-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How a broken release name overloaded our symbolication database </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @sentry（Sentry） 的长文，原文链接，版权归原作者所有。   TL;DR: A few releases with broken names had piled up tens of millions of rows, and one unbounded lookup kept trying to scan all of them. Capping how much work a single lookup can do cut database CPU from 76% to 19% and symbolication timeouts by 98%. Bigger hardware hadn’t managed either.  How Sentry finds your source mapsWhen a JavaScript error reaches Sentry, the stack trace points at minified code. Sentry finds the source map that was uploade...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">431</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">211</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Your-Second-and-The-Model-of-You"><span class="toc-number">1.</span> <span class="toc-text">Your Second and The Model of You</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Privacy-and-Sovereignty-are-Paramount"><span class="toc-number">2.</span> <span class="toc-text">Privacy and Sovereignty are Paramount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Who-we-are"><span class="toc-number">3.</span> <span class="toc-text">Who we are</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-now"><span class="toc-number">4.</span> <span class="toc-text">What now?</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍"><img src="/images/2124153985007509726-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="豆包工作全方位教程，让你工作效率翻倍"/></a><div class="content"><a class="title" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍">豆包工作全方位教程，让你工作效率翻倍</a><time datetime="2026-11-21T22:52:29.000Z" title="发表于 2026-11-21 22:52:29">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Leviwoyun-2124042711019966903/" title="不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频"><img src="/images/2124042711019966903-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频"/></a><div class="content"><a class="title" href="/2026/11/21/Leviwoyun-2124042711019966903/" title="不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频">不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频</a><time datetime="2026-11-21T15:30:19.000Z" title="发表于 2026-11-21 15:30:19">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
