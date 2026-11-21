@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yaoav.github.io/2026/11/21/Leviwoyun-2124042711019966903/</loc>
+    
+    <lastmod>2026-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yaoav.github.io/2026/11/05/Morry4AI-2118355780474937831/</loc>
+    
+    <lastmod>2026-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://yaoav.github.io/2026/11/20/github-2123539589017047373/</loc>
     
     <lastmod>2026-11-21</lastmod>
@@ -5206,6 +5224,13 @@
   
   <url>
     <loc>https://yaoav.github.io/tags/manikgupta/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://yaoav.github.io/tags/Morry4AI/</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
