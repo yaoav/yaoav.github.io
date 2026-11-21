@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Thank you | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Yesterday, we announced Applied Compute signed an agreement to be acquired by Pa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thank you">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/manikgupta-2123635201314283962/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Yesterday, we announced Applied Compute signed an agreement to be acquired by Pa">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123635201314283962-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T12:31:01.000Z">
+<meta property="article:modified_time" content="2026-11-21T12:59:15.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@manikgupta">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123635201314283962-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Thank you",
+  "url": "https://yaoav.github.io/2026/11/20/manikgupta-2123635201314283962/",
+  "image": "https://yaoav.github.io/images/2123635201314283962-cover.jpg",
+  "datePublished": "2026-11-20T12:31:01.000Z",
+  "dateModified": "2026-11-21T12:59:15.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/manikgupta-2123635201314283962/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Thank you',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">412</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">203</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123635201314283962-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Thank you</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Thank you</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T12:31:01.000Z" title="发表于 2026-11-20 12:31:01">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@manikgupta（Manik Gupta）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123635201314283962">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Yesterday, we announced Applied Compute signed an agreement to be acquired by Palo Alto Networks. There’ll be more to share soon, but for now we want to take a beat to thank the people who got us here: the team who built AC, the investors who backed a group of first-time founders, and the customers who trusted a young company with mission-critical work. We really would be nowhere without all of you.</p>
+<p><strong>To the Applied Compute team, thank you.</strong> Everything this company has achieved in a short time is due to you.</p>
+<p><strong>Core Platform</strong> built AC2, the product our customers use every day. Ben, our Head of Product, has shaped it since the first design doc. Vinjai and Rahil built much of the early product with him, including the demos that won our first enterprise customers. From there the team made it into something much larger. Aniruddh turned Ari, the assistant inside AC2, into something customers love. Allegra, Felix, and Jason took a tool made for our own researchers and made it one that customers can run themselves and trust to run securely. Camron and Benji keep it close to the people who use it most, our own researchers.</p>
+<p><strong>Research Systems</strong> built the foundation for the rest of our work. The team is led by Raymond, our Head of Research, who is one of the most talented researchers we’ve ever met. He is a force of nature, incredibly diligent, and a leader whose optimism (and enthusiasm for Snorlax slackmojis) is infectious. Chengyu, Andrew, Chang-Ning are big reasons our training stack is the best in the world for post-training open-weight models. They built much of the ML systems and research that our customers rely on, and they keep it at the frontier by integrating new research as it appears. Edward’s research has deepened our understanding of how models learn from real use. Brian and Aadit have extended our work to new models and made them safer to build on.</p>
+<p><strong>Platform Research</strong> is where our research becomes product. Sam built the team from scratch with Alex, Jaray, and Nathan. Alex led the research behind our most recent product launch - model routers - which lets customers spend less on AI without giving up quality. Jaray built autoresearch into Ari, so that Ari can run experiments for a customer by itself. Sam has a gift for making hard research clear to the people who need it, and we have yet to put him in front of a customer he did not impress.</p>
+<p><strong>Infrastructure</strong> keeps all of it running. It is hard to overstate how quickly this team built infrastructure this robust, or how much care they give every customer who runs on it. Margaret, our Infra Lead, has earned the trust of every customer she has worked with. Lucca, Emmanuel, and Michael are the reason new computing capacity works on day 0, remains secure, and our GPUs stay healthy. Bay, Roshan, and Angie serve our customers’ models to their users around the clock with state-of-the-art performance, and treat every customer’s problem as urgent.</p>
+<p><strong>Applied Research</strong> is the lifeblood of the company. This team works side by side with customers on post-training research for their hardest, most valuable problems. Jacob and Bryan set the standard for how we do that, and taught it to everyone who came after. Daniel, Nic, Pranav, Dylan, Dan, and Evan have carried out some of our largest partnerships. Yi, Ethan, Jason, and Alessandro took ownership of customer work from their first weeks and have quickly ramped up. David runs our most strategic accounts and makes sure they are set up to succeed. And the entire team has contributed back into AC2 so the platform better serves their needs.</p>
+<p><strong>Go-to-Market</strong> is how the world finds out what we do. Michael, our Chief Business Officer, has been behind many deals we’ve closed. He built our GTM from scratch with Max. Andy, our Head of Sales, now leads the team that brings Applied Compute to the companies that need it: Adam, Ben, Andrew, Courtney, Ryan, and Jacob. Aaron is building our product marketing from the ground up, and has already taken on far more than he was asked to.</p>
+<p><strong>Business Operations and Finance</strong> built the company around the company. Sahar, our Head of BizOps, is the glue that holds everything together. We can depend on her to fill any gap, and she will always roll up her sleeves for the good of the team. Grant, our Head of Finance, and Wilson built the financial and compute foundation that let us grow. Grant has flexed into whatever role the company needed, and he has brought operational rigor to everything we do. Albert, an engineer by background, is how we find unique and exceptional talent. Amy makes our office a place people want to be, surprising our team with freshly cut fruit, organizing our work trials, and throwing the best Thursday team dinners.</p>
+<p>Thank you all for everything you have given this company to set us up for the amazing future ahead.</p>
+<p><strong>To our investors, thank you.</strong></p>
+<p>We got so lucky with the people who chose to back us. You bet on us early, as young first-time founders, and you have been in our corner ever since.</p>
+<p><strong>Elad Gil</strong> is one of the clearest thinkers we know. Whenever we faced a hard question about strategy or product, he was the person we could depend on to think it through with us. We always came away seeing the problem more simply.</p>
+<p><strong>Victor Lazarte</strong> at Diffusion was our first believer. He led our seed round when Applied Compute was three people and an idea, and he has backed us at every step since. As a member of our board, he has helped us steer the business toward the most exciting opportunities, hire our founding team, and close our first customers.</p>
+<p><strong>Teddy Citrin</strong> at Definition has been an amazing partner on everything to do with customers. He helped us think through how to find them, how to win them, and how to serve them well.</p>
+<p><strong>Gaurav Ahuja</strong> at Timeless has been a great thought partner. We can bring him a half-formed idea and trust him to take it seriously, push on it, and make it better.</p>
+<p><strong>Anton Levy and Myriam Harrouche</strong> at Layer Global moved heaven and earth for us. They got us in front of customers we couldn’t have reached on our own, and they helped us recruit the best people.</p>
+<p><strong>Brandon Reeves and Lan Jiang</strong> at Lux Capital are some of the most loyal partners we have ever known. We’ve known Lan for many years now, and in every moment of crisis, Brandon and Lan were the people we knew we could depend on.</p>
+<p><strong>Mike Volpi and Ishani Thakur</strong> at Hanabi helped us navigate the compute landscape when capacity was very hard to find. They also helped us recruit top talent, and gave us the kind of seasoned advice very few people can give.</p>
+<p><strong>Leigh Marie Braswell</strong> at Kleiner Perkins drew on her experience at Scale AI to help us find the bottlenecks in our business and understand how to scale past them. It is rare to have an investor who has already lived the problems you’re facing.</p>
+<p><strong>Omri Casspi</strong> at Swish is one of the kindest and most generous people we know. He has connected us with customers, opened his remarkable network of CIOs to us, and hosted events with us. Whenever we have asked for help, he has gone out of his way to give it.</p>
+<p><strong>Artem Barsukov</strong> at NVentures helped us plug into NVIDIA and build a deep relationship there. For a company whose work runs on NVIDIA’s hardware, that relationship has mattered a great deal.</p>
+<p><strong>Ali Partovi</strong> at Neo believed in all of us early on. He brought us into a community that opened up opportunities and introduced us to people and candidates we would not otherwise have found. All of us are Neo Scholars, and we owe a lot to that community.</p>
+<p><strong>Ramtin Naimi and Andrei Kozyrev</strong> at Abstract run through walls for us. Whenever we needed an introduction, an answer, or just someone to move fast, they got it done.</p>
+<p><strong>Carlo Agostinelli</strong> at Nova is an amazing friend and shows more hustle than anyone we have ever met. We can bring Carlo anything and know that he will help.</p>
+<p><strong>Ali Rowghani and Amir Movafaghi</strong> at First Harmonic have been incredible coaches to us as first-time founders. They helped us grow into the leaders the company needed.</p>
+<p><strong>Ilya Kondrashov</strong> at Quantum Light Capital connected us to amazing customers, and was generous with every introduction.</p>
+<p><strong>Eric Vishria and Peter Fenton</strong> at Benchmark bet on us early and then went to work helping us recruit. When we were asking exceptional people to join a young company, it made a difference that Eric and Peter were behind us.</p>
+<p><strong>Alfred Lin</strong> at Sequoia has been one of the wisest voices we have on strategy and focus. He helped us decide what to do and, just as important, what not to do.</p>
+<p><strong>Neil Mehta</strong> at Greenoaks connected us to amazing customers and opened doors that would’ve taken us much longer to find and access on our own.</p>
+<p>**Lulu Cheng Meservey **is the person we turn to with any question on communications, and a dear friend. She has helped us strategize our positioning and what sets us apart since day one.</p>
+<p>Finally, <strong>Zach Frankel</strong>. Zach taught us what it takes to win. He has been a personal mentor to each of us, and he has consistently pushed us to be the best we could be. He held us to a higher standard than we held ourselves, and he put in the time to help us meet that standard. A great deal of what we got right, we got right because of him.</p>
+<p><strong>To our first customers, thank you.</strong></p>
+<p>Brendan Foody at Mercor, Scott Wu at Cognition, and Tony Xu and Andy Fang at DoorDash were our first customers. You entrusted real high-stakes problems to a company with no track record, and what we learned working with your world-class engineering teams has been invaluable.</p>
+<p>And thank you to every customer who has trusted us since.</p>
+<p><strong>To the team at Palo Alto Networks, thank you.</strong></p>
+<p>We’re grateful for your confidence in us and excited about our shared vision for the future. We’re looking forward to building with you!</p>
+<p>– Yash, Rhythm, and Linden</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/manikgupta-2123635201314283962/">https://yaoav.github.io/2026/11/20/manikgupta-2123635201314283962/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/manikgupta/">@manikgupta</a></div><div class="post-share"><div class="social-share" data-image="/images/2123635201314283962-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/JamsAaron76087-2123640496199451015/" title="中国市场这么大，为什么 Claude 还是不向中国大陆开放服务？"><img class="cover" src="/images/2123640496199451015-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">中国市场这么大，为什么 Claude 还是不向中国大陆开放服务？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @JamsAaron76087（张浩） 的长文，原文链接，版权归原作者所有。  我想了三天三夜，还是想不通。 中国拥有庞大的程序员群体、AI 爱好者和创业者，更不缺愿意为优质 AI 工具付费的人。 然而，对于不少中国用户来说，真正困难的不是订阅费用，而是能否持续使用自己喜欢的 AI 工具。 从网络环境到海外 Mac mini，从软件订阅到远程开发环境，越来越多的人愿意投入大量时间和金钱。 为什么？ 因为 Claude 对于部分用户而言，早已不是一个简单的聊天工具，而是实实在在的生产力工具。 01｜中国用户不是不愿意付费，而是希望获得可靠的服务 最近接触了不少客户。 10 个人来咨询，8 个人觉得贵，剩下两个人聊几句就果断下单。 这两类客户很有代表性。 一类是经历过多次封号、已经没有精力继续折腾的用户。 另一类是大厂程序员、专业开发者以及拥有 AI 工具采购预算的企业用户。 他们更关心的是工作效率、使用体验和售后服务。 当一个工具能够帮助你创造价值时，你考虑的就不只是它的购买价格，还有它带来的时间成本。 02｜为什么 Claude 的服务限制越来越受到关注？...</div></div></div></a><a class="pagination-related" href="/2026/11/20/0xlangeai-2123627885730951241/" title="DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。"><img class="cover" src="/images/2123627885730951241-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  很多人之前都跟我说，能不能分享一些DeepSeek Harness的好用的用法和插件，正好，前几天，DeepSeek限额冲上了热搜。  因为Deepseek大砍APP和网页版的额度，导致很多人直接失恋。 虽然可以在手机网页上接API接着聊，但很多朋友不会弄或者嫌麻烦。 所以，很多人又开始关注上了DSH。 官方也及时出了对应的插件，方便大家把DeepSeek上的会话导入到DSH里面接着用。 而且非常巧的是，今天正好是DeepSeek Harness发布的，第100天诞辰。 截止到我写下这段话的时候，GitHub上的星标数已经到了28.4万。 官方统计的第三方插件在11月4号已经有3.5万个左右了。 很多朋友，是真的把插件玩出了花。 比如，有人直接把页面爆改成了同花顺。  把里面的对话变成可拖拽的分支地图。  之前我也说了DSH是个二极管，喜欢的人会喜欢得不得了，不喜欢的人会觉得它毫无用户体验。 但现在我觉得，体验这玩意不一定需要DSH官方来做啊。 这100天，从大学生到极客，有一大堆人...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">412</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">203</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/ianxintx-2123957496553345186/" title="Your Stocks May Recover.  Your Bills Won’t Wait."><img src="/images/2123957496553345186-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your Stocks May Recover.  Your Bills Won’t Wait."/></a><div class="content"><a class="title" href="/2026/11/21/ianxintx-2123957496553345186/" title="Your Stocks May Recover.  Your Bills Won’t Wait.">Your Stocks May Recover.  Your Bills Won’t Wait.</a><time datetime="2026-11-21T09:51:42.000Z" title="发表于 2026-11-21 09:51:42">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/momo_peggy-2123950320648954267/" title="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的"><img src="/images/2123950320648954267-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的"/></a><div class="content"><a class="title" href="/2026/11/21/momo_peggy-2123950320648954267/" title="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的">补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的</a><time datetime="2026-11-21T09:23:12.000Z" title="发表于 2026-11-21 09:23:12">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/PengP66810-2123940391556919391/" title="高盛禁用了Claude，收回了AI的钥匙"><img src="/images/2123940391556919391-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高盛禁用了Claude，收回了AI的钥匙"/></a><div class="content"><a class="title" href="/2026/11/21/PengP66810-2123940391556919391/" title="高盛禁用了Claude，收回了AI的钥匙">高盛禁用了Claude，收回了AI的钥匙</a><time datetime="2026-11-21T08:43:44.000Z" title="发表于 2026-11-21 08:43:44">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

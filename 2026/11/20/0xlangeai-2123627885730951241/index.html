@@ -1,0 +1,430 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="很多人之前都跟我说，能不能分享一些DeepSeek Harness的好用的用法和插件，正好，前几天，DeepSeek限额冲上了热搜。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/20/0xlangeai-2123627885730951241/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="很多人之前都跟我说，能不能分享一些DeepSeek Harness的好用的用法和插件，正好，前几天，DeepSeek限额冲上了热搜。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2123627885730951241-cover.jpg">
+<meta property="article:published_time" content="2026-11-20T12:01:57.000Z">
+<meta property="article:modified_time" content="2026-11-21T12:59:24.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@0xlangeai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2123627885730951241-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。",
+  "url": "https://yaoav.github.io/2026/11/20/0xlangeai-2123627885730951241/",
+  "image": "https://yaoav.github.io/images/2123627885730951241-cover.jpg",
+  "datePublished": "2026-11-20T12:01:57.000Z",
+  "dateModified": "2026-11-21T12:59:24.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/20/0xlangeai-2123627885730951241/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">412</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">203</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2123627885730951241-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-20T12:01:57.000Z" title="发表于 2026-11-20 12:01:57">2026-11-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@0xlangeai（蓝哥AI）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2123627885730951241">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>很多人之前都跟我说，能不能分享一些DeepSeek Harness的好用的用法和插件，正好，前几天，DeepSeek限额冲上了热搜。</p>
+<p><img src="/images/HXii57ybAAA1NTC.png" alt="HXii57ybAAA1NTC"></p>
+<p>因为Deepseek大砍APP和网页版的额度，导致很多人直接失恋。</p>
+<p>虽然可以在手机网页上接API接着聊，但很多朋友不会弄或者嫌麻烦。</p>
+<p>所以，很多人又开始关注上了DSH。</p>
+<p>官方也及时出了对应的插件，方便大家把DeepSeek上的会话导入到DSH里面接着用。</p>
+<p>而且非常巧的是，今天正好是DeepSeek Harness发布的，第100天诞辰。</p>
+<p>截止到我写下这段话的时候，GitHub上的星标数已经到了28.4万。</p>
+<p>官方统计的第三方插件在11月4号已经有3.5万个左右了。</p>
+<p>很多朋友，是真的把插件玩出了花。</p>
+<p>比如，有人直接把页面爆改成了同花顺。</p>
+<p><img src="/images/HXii6WKaMAAHmV6.jpg" alt="HXii6WKaMAAHmV6"></p>
+<p>把里面的对话变成可拖拽的分支地图。</p>
+<p><img src="/images/HXii61-b0AAoSkE.jpg" alt="HXii61-b0AAoSkE"></p>
+<p>之前我也说了DSH是个二极管，喜欢的人会喜欢得不得了，不喜欢的人会觉得它毫无用户体验。</p>
+<p>但现在我觉得，体验这玩意不一定需要DSH官方来做啊。</p>
+<p>这100天，从大学生到极客，有一大堆人，自发给DSH搓插件。</p>
+<p>所以，我也挑了一共13个有用和好玩，并且相对比较通用的插件，跟大家分享。</p>
+<p>希望大家能在用DSH的时候，能用得顺手。</p>
+<p>那我们正式开始。</p>
+<h2 id="DSH安装"><a href="#DSH安装" class="headerlink" title="DSH安装"></a>DSH安装</h2><p>避免有些朋友还没有安装DSH，我们来快速过一遍过程。</p>
+<p>可以直接让你电脑上的其他Agent去帮你安装，也可以手动到下面的链接。</p>
+<p><a target="_blank" rel="noopener" href="https://www.deepseek.com/harness/">https://www.deepseek.com/harness/</a></p>
+<p><img src="/images/HXii7XobsAA_e-1.jpg" alt="HXii7XobsAA_e-1"></p>
+<p>双击安装包，安装之后，你就能看到这只黑色大鲸鱼了。</p>
+<p>第一次打开，会需要进行一些设置。</p>
+<p>点击开始设置。用DSH需要付费，但新用户首次登录大概率会送点赠金给你体验，所以这里我们先点继续，不够用再充。</p>
+<p>接下来是使用习惯的设置，大家根据自己的偏好来选就行。</p>
+<p>然后我们就能和它对话了。</p>
+<h2 id="插件市场：dshmarket"><a href="#插件市场：dshmarket" class="headerlink" title="插件市场：dshmarket"></a>插件市场：dshmarket</h2><p>有了DSH，再来看看插件怎么装。</p>
+<p>DSH官方自己提供了一些插件，点侧边栏的插件就能看到。</p>
+<p>点右上角，添加插件。</p>
+<p>输入你想装的插件包名、GitHub链接，或者本地电脑上的路径，再点安装就行。</p>
+<p>还有一种最直白、最不绕圈子、最稳稳接住你的装法，想要哪个插件，直接给DSH说，让它自己给你装。</p>
+<p>不过这种方式，就要花Token了。</p>
+<p>比如我装上面这个插件，就花了非常宝贵的2分钱。</p>
+<p>除了这两种，还有一种我比较推荐的方式：先装一个插件市场，dsh-market。</p>
+<p>这个插件市场本身也是个插件，按上面第一种方式，在添加插件的地方，包名填dshmarket，点安装和启用就行。</p>
+<p><img src="/images/HXii71FacAAEgQx.jpg" alt="HXii71FacAAEgQx"></p>
+<p>启用之后，插件页里就能看到这个第三方的插件市场了。</p>
+<p>它收录的是社区列表awesome-dsh-plugin里的插件，目前已经快1万2千个了。</p>
+<p>你可以非常方便地按照种类去筛选以及搜索，还能看到各个插件的详细介绍、下载和收藏量。</p>
+<p>也可以看到你装了哪些插件，什么版本，哪些该更新了。</p>
+<p>推荐用这个插件市场还有一个点是，网上现在有一些恶意插件。</p>
+<p>比如有人下了假的DSH插件之后，电脑直接被远程操控了。</p>
+<p>因为插件这东西，其实就是别人写的代码，装进来之后，在你的电脑上跑。而且很多插件还能直接在你电脑上执行命令。</p>
+<p>在这个插件市场上，每个插件详情页里都能看到一份扫描结果，是一个叫dsh-trust-check的插件，当天对这个插件做的扫描。</p>
+<p>dsh-trust-check这个插件是用来扫描插件具体会做些什么。</p>
+<p><img src="/images/HXii8SDagAADV3k.jpg" alt="HXii8SDagAADV3k"></p>
+<p>像会访问你的密钥、会调用模型这种，在插件里比较少见的能力，会专门标出来提醒你。</p>
+<p>后面推荐的所有插件，在这个市场里搜名字都能搜到，点安装就行，就不重复安装过程了。</p>
+<h3 id="DeepSeek会话导入"><a href="#DeepSeek会话导入" class="headerlink" title="DeepSeek会话导入"></a>DeepSeek会话导入</h3><p>接着，我们一起来看怎么把DeepSeek的会话导入到DSH。</p>
+<p>这也是官方前两天刚推出的插件，DeepSeek会话导入。</p>
+<p>这个插件不需要安装，官方自带的，打开就行了。</p>
+<p>我们在侧边栏进入插件页，然后找到实验性插件，点击更多。</p>
+<p>就能看到Deepseek会话导入插件，我们把它打开。</p>
+<p>打开之后，侧边栏就多了一个导入Deepseek会话的按钮。</p>
+<p><img src="/images/HXii8uRbkAAuXUF.png" alt="HXii8uRbkAAuXUF"></p>
+<p>这里我们需要去Deepseek网页版，把我们的会话记录导出。</p>
+<p>点击左下角的头像，打开系统设置。</p>
+<p>点数据管理，导出所有历史对话。导出之后会得到一个压缩包。</p>
+<p>然后我们回到DSH，这里建议大家先建一个空白文件夹专门用来存放和DeepSeek的对话。</p>
+<p>点击导入DeepSeek会话。</p>
+<p>选择刚刚导出的压缩包和要导入的工作区，点击导入。</p>
+<p><img src="/images/HXii9FdbMAACNuD.png" alt="HXii9FdbMAACNuD"></p>
+<p>导入完成之后，就能在侧边栏看到之前和DeepSeek的对话，就能接着聊了。</p>
+<h3 id="上下文和费用明细"><a href="#上下文和费用明细" class="headerlink" title="上下文和费用明细"></a>上下文和费用明细</h3><p>再给大家推荐两个我觉得很有用，可以联动的插件。也是安装量非常高的。</p>
+<p>dsh-context和dsh-cost-meter。</p>
+<p>举个例子。</p>
+<p>最近《后会友期》挺火的，全网都在画地为牢啊，厉娜。</p>
+<p>那秉持着吃瓜就要吃明白的原则，我也让DSH帮我把这件事的来龙去脉，尽可能全面地搜了一遍。</p>
+<p>跑完之后，点击页面顶部的上下文。</p>
+<p>你就能看到针对这轮对话非常详细的上下文统计、Token统计，以及跑了这20来分钟，每一个阶段都在干嘛，花多少时间。</p>
+<p><img src="/images/HXii9eOb0AAyL0o.jpg" alt="HXii9eOb0AAyL0o"></p>
+<p>这就是dsh-context最主要的功能，用来看模型的上下文都是什么东西，像系统提示词、历史消息、工具调用的网页和文件等等等等，都分别占了上下文的多少。</p>
+<p>除了看单个对话，点击侧边栏的上下文洞察，你还能看到按时间窗口统计的，某一个时间段的上下文数据。</p>
+<p>如果你把第二个插件dsh-cost-meter也装上了，那在上下文页面里面，你还能看到上下文的费用构成，这也是这两个插件所谓的联动了。</p>
+<p>dsh-cost-meter是一个究极详细的费用明细工具。它能够让你从各个维度去看你的钱花了多少，花在哪里。</p>
+<p>还是许飞厉娜这个会话的例子。</p>
+<p>你也可以点击对话顶部的费用明细，更详细的查看这个会话的费用消耗情况。</p>
+<p><img src="/images/HXii99yawAAC5MO.jpg" alt="HXii99yawAAC5MO"></p>
+<p>还有每一轮每一步的费用。</p>
+<p>以及各个子Agent的费用。</p>
+<p>除了看某一个具体的对话，你也可以看到整体的费用统计，可以点击左下角头像进入设置。</p>
+<p>点击费用，然后你就能看到非常详细的计费统计、额度消耗、模型定价、计费规则等等等等。</p>
+<p>你还可以在这里自定义各个地方显示的费用卡片。快要切换到峰时、谷时计价的时候，它也会弹个卡片提醒你，非常贴心。</p>
+<h3 id="上下文压缩：billion-context"><a href="#上下文压缩：billion-context" class="headerlink" title="上下文压缩：billion-context"></a>上下文压缩：billion-context</h3><p>然后是一个特别适合用来在长任务节省Token的插件，billion-context。</p>
+<p>这个插件的功能主要是在长任务中把之前的上下文压缩成摘要。并且被压缩的摘要是可以恢复的。</p>
+<p>原来的对话历史仍然保存在本地。模型需要某段细节的时候，可以先搜一下上下文，定位到那块历史，然后只把需要的那一段展开。</p>
+<p>我让DSH全网尽可能详细的搜集黄仁勋从出生到现在的所有经历。</p>
+<p>主会话一共调用了10个子Agent，5个分年代写传记，2个分别查中文和英文报道，3个负责编辑和校对。整个任务跑了两个多小时，最后输出了一份近4万字的人物传和一份2万字的时间线。</p>
+<p>要想看到这个插件的效果，我们点会话顶部的第二个上下文。它和前面dsh-context的入口重名了，但功能不冲突。</p>
+<p>点击打开Web UI，就能一览这个插件使用下来的上下文压缩情况。</p>
+<p>我们还能在会话页里面单独看某一个会话的压缩情况，比如刚刚黄仁勋的这个调研任务。</p>
+<p>算上主会话和10个子Agent，一共压缩了48次，生成了116个摘要块。</p>
+<p>拿其中一个负责整理英文报道的子Agent举例。它在一个多小时里发了353次请求，上下文一涨到10万以上，就会被压回4万到8万，前后一共压缩了8次。</p>
+<p>图里的蓝线是每次请求的输入量，竖着的红色虚线是指压缩了一次上下文。</p>
+<p><img src="/images/HXii-eybEAAUot8.jpg" alt="HXii-eybEAAUot8"></p>
+<p>点开压缩结构，能看到这几次压缩一共压缩出了21个摘要块。本来是35万Token的历史，最后变成了1.3万Token的摘要，只有原来的3.8%。</p>
+<h3 id="桌宠、皮肤、开机动画"><a href="#桌宠、皮肤、开机动画" class="headerlink" title="桌宠、皮肤、开机动画"></a>桌宠、皮肤、开机动画</h3><p>这一部分是我觉得最好玩的。</p>
+<p>之前全网特别火的皮肤、桌宠、开机动画这些DSH外观设置，大家也都可以自己去插件市场，按照自己的喜好挑选，安装之后，重启DSH启用就行了。</p>
+<p>dshmarket也专门在插件弄了一个主题种类，方便你快速找到你喜欢的主题。</p>
+<p>比如之前，特别火的，鲸鱼娘皮肤。</p>
+<p>插件：dsh-client-ui-skin-maid-atelier</p>
+<p>还有这种很温馨的，猫狗双全，人生理想。</p>
+<p>插件：my-cozy-dsh</p>
+<p><img src="/images/HXii-_vbEAAZFPI.jpg" alt="HXii-_vbEAAZFPI"></p>
+<p>还可以配上一个桌宠。</p>
+<p>比如，还是我们非常可爱的鲸鱼娘。</p>
+<p>插件：dsh-pet。这个插件因为有重名的，所以我也把作者的名字放上来了。</p>
+<p>它可以根据不同的工作状态，有不同的表现，平常也会给你发一些小对话，还挺有意思的。</p>
+<p><img src="/images/HXijAb2bgAARBf-.jpg" alt="HXijAb2bgAARBf-"></p>
+<p>你也可以给自己弄一个牛来当宠物，它会在每次任务完成之后，大声的叫你妈妈。</p>
+<p>插件：dsh-niulai-pet。</p>
+<p>相信我，设置成这个之后，你一定能第一时间知道任务完成了。</p>
+<p><video controls preload="metadata" poster="/images/2123626521286025216-poster.jpg" src="/videos/2123626521286025216.mp4"></video></p>
+<p>还有抖音上很火的开机动画。</p>
+<p>插件：dsh-startup-screen。</p>
+<p><video controls preload="metadata" poster="/images/2123626537262125056-poster.jpg" src="/videos/2123626537262125056.mp4"></video></p>
+<p>鲸鱼娘的专属开机动画。</p>
+<p>插件：dsh-video-skin</p>
+<p><video controls preload="metadata" poster="/images/2123626566660059136-poster.jpg" src="/videos/2123626566660059136.mp4"></video></p>
+<h3 id="手机远程：dsh-pocket"><a href="#手机远程：dsh-pocket" class="headerlink" title="手机远程：dsh-pocket"></a>手机远程：dsh-pocket</h3><p>还有个插件，我觉得对高密度使用Agent的朋友很有用，就是dsh-pocket。</p>
+<p>它是用来在手机上，给你电脑里的DSH派活的。</p>
+<p>连接起来很简单。</p>
+<p>首先，如果手机和电脑是在同一个WiFi下，我们还是点击右下角头像进入设置之后，点击左侧手机访问，然后用手机扫码连接。</p>
+<p><img src="/images/HXijA8ubIAAd216.jpg" alt="HXijA8ubIAAd216"></p>
+<p>第一次连接的时候，需要输入局域网访问密码。后续连接就只需要扫码，不需要输入密码。</p>
+<p>密码输入之后就连上了。</p>
+<p>历史的对话记录都有，你可以接着聊，也可以发起新的对话。</p>
+<p>比如，我一开始在电脑上拿它做了一个DSH 100天的庆祝视频。</p>
+<p>但是跑出来，DSH全称的发音非常奇怪，大家可以点开听一下，在开头7秒左右。和我小学学的英语一个水平，就是那种用中文给英文标注音，然后照着念出来的发音。。。</p>
+<p><video controls preload="metadata" poster="/images/2123626610456920064-poster.jpg" src="/videos/2123626610456920064.mp4"></video></p>
+<p>这时候如果你正好要去会议室开个会，就可以直接拿手机让它改。</p>
+<p>中途如果它需要给权限或者有问题要问你，在手机上就可以操作。</p>
+<p>手机和电脑两端的页面也是完全同步的。</p>
+<p><img src="/images/HXijBalaMAI8w5D.jpg" alt="HXijBalaMAI8w5D"></p>
+<p>改完之后，DSH的发音就好多了，不过视觉画面基本算是一轮出的，效果还是有点拉了。</p>
+<p><video controls preload="metadata" poster="/images/2123626730862899200-poster.jpg" src="/videos/2123626730862899200.mp4"></video></p>
+<p>如果你要出门，不在同一个WiFi下，你也能通过开公网访问进行远程连接。</p>
+<p>第一次开公网连接的时候，会先弹一个免责声明。毕竟这玩意还是有风险的。万一公网链接和密码泄露，你的电脑基本就完完全全向别人敞开了。</p>
+<p><img src="/images/HXijB4LaMAAMBe-.jpg" alt="HXijB4LaMAAMBe-"></p>
+<p>然后同样是拿手机扫码，第一次连接同样需要输入密码。</p>
+<p>它的公网密码默认是随机生成的，每次开启公网访问都会换一个新的。</p>
+<p>输完密码等一会儿，就连上了，一样可以接着之前的对话聊。</p>
+<p>不需要的时候，记得及时把公网访问关掉，避免不必要的风险。</p>
+<h3 id="记忆：dsh-mnemon"><a href="#记忆：dsh-mnemon" class="headerlink" title="记忆：dsh-mnemon"></a>记忆：dsh-mnemon</h3><p>对于长期使用DSH的朋友，我建议可以装一个记忆插件，dsh-mnemon。</p>
+<p>这个插件主要是用来持久性的让Agent记住你的信息、偏好和使用习惯。</p>
+<p>装好之后，侧边栏会多出一个记忆系统。</p>
+<p><img src="/images/HXijCW-akAA-n14.jpg" alt="HXijCW-akAA-n14"></p>
+<p>它的记忆主要有3部分。</p>
+<p>第一个是运行时记忆。它会记住你的身份、习惯、协作偏好，还有踩过的坑。</p>
+<p>比如上面那个DSH发音的例子中，我嫌它的英文发音太奇怪了。提了一嘴后它就记住了，之后英文配音不要通过标中文谐音这样的方式去配。</p>
+<p>第二个是项目档案。它会有针对性的选择一些项目进行整理，比如流程、输出文档等等，生成一份对应的项目文档。</p>
+<p>第三层是记忆空间。放更长期的经验和决策依据。</p>
+<h3 id="自己搓一个"><a href="#自己搓一个" class="headerlink" title="自己搓一个"></a>自己搓一个</h3><p>说完了上面这些，那还有一些插件，比如养鱼的、接入QQ、微信、飞书的，等等等等，我之前专门写过一篇教程。</p>
+<p>还有让DSH看图，把侧边栏改工作台等等，这些插件，从0到1带你速通DeepSeek Harness。也都有推荐过了，这里就不重复了，感兴趣的朋友可以翻一下之前的文章。</p>
+<p>如果你还有一些比较小众、别人还没做过的需求，那完全可以自己搓一个。</p>
+<p>比如，平常我有很多测试的提示词希望能整理起来，用的时候能直接在输入框里复用。</p>
+<p>我也拿DSH简单搓了一个自己用。</p>
+<p>新建一个对话，然后把对话框上面的模式设置成创造模式。</p>
+<p>然后把我们的需求发过去。</p>
+<p><img src="/images/HXijCx9aYAA5eG7.jpg" alt="HXijCx9aYAA5eG7"></p>
+<p>然后就是和它反复沟通打磨想要实现的效果。</p>
+<p>初步改了几轮之后，这个插件就可用了。</p>
+<p>在任一轮会话下面，点击存为提示词卡。</p>
+<p>它就会弹出收藏提示词的页面。</p>
+<p>点击保存。</p>
+<p>之后想复用这个提示词，就可以直接点击对话框的提示词卡。</p>
+<p>弹出收藏的提示词列表后，选择想要复用的提示词。</p>
+<p>点击填入对话。</p>
+<p><img src="/images/HXijDNCaAAANXL_.jpg" alt="HXijDNCaAAANXL_"></p>
+<p>提示词就会自动复制到输入框里。</p>
+<p>我们自己搓的插件，也可以在插件页里面管理。</p>
+<p>写在最后</p>
+<p>最后需要提一嘴，插件不是越多越好。</p>
+<p>一个是插件和插件之间可能会打架。</p>
+<p>比如，我们有个小伙伴的壁纸现在是这样的。</p>
+<p>DSH一旦更新，有些插件也可能直接用不了，还有些插件会往上下文里塞东西，白白浪费掉大肥鱼的Token。</p>
+<p>而且DSH到今天，也还是开发者预览版。</p>
+<p>所以我的建议是，插件按需精装，不要图多，用不上的就关掉。</p>
+<p>在折腾这一堆插件的时候，我一直在想App Store 2008年刚上线的时候，只有500来个App。</p>
+<p>那一年最出圈的，是一个叫iBeer的 App，把手机一歪，屏幕里的啤酒就跟着倒进你嘴里。</p>
+<p><img src="/images/HXijDpEbIAAJ4Ba.jpg" alt="HXijDpEbIAAJ4Ba"></p>
+<p>还有一堆放屁App。。。</p>
+<p>这些东西说到底也只是一堆玩具。</p>
+<p>但就是在这堆玩具中，长出了非常多我们每天都在用的App。</p>
+<p>生态这个东西，好像从来都是从玩具开始的。</p>
+<p>先有一大堆人觉得好玩，愿意折腾。搓着搓着，有用的东西就冒出来了。</p>
+<p>DSH这100天，其实也有点这个意思。</p>
+<p>换皮肤、养桌宠、、养大肥鱼，看着花里胡哨。但也已经有上下文管理、记忆、爆改工作台等非常有用的东西做出来。</p>
+<p>我不知道再过100天，DSH的插件生态会长成什么样。</p>
+<p>但我挺期待的。</p>
+<p><strong>以上，既然看到这里了，如果觉得不错，随手点个赞、评论、转发三连吧，这对我们有特别大的帮助~</strong></p>
+<p><strong>谢谢你看我的文章，我们，下次再见。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/20/0xlangeai-2123627885730951241/">https://yaoav.github.io/2026/11/20/0xlangeai-2123627885730951241/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/0xlangeai/">@0xlangeai</a></div><div class="post-share"><div class="social-share" data-image="/images/2123627885730951241-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/20/manikgupta-2123635201314283962/" title="Thank you"><img class="cover" src="/images/2123635201314283962-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Thank you</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @manikgupta（Manik Gupta） 的长文，原文链接，版权归原作者所有。  Yesterday, we announced Applied Compute signed an agreement to be acquired by Palo Alto Networks. There’ll be more to share soon, but for now we want to take a beat to thank the people who got us here: the team who built AC, the investors who backed a group of first-time founders, and the customers who trusted a young company with mission-critical work. We really would be nowhere without all of you. To the Applied Compute team, thank yo...</div></div></div></a><a class="pagination-related" href="/2026/11/20/ItsCloRizz-2123627615747727688/" title="巴菲特的价投 VS ANT的邪修/38.7%开17.1%收/ 当西毒接管美股，谁还在为美国的未来定价？"><img class="cover" src="/images/2123627615747727688-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">巴菲特的价投 VS ANT的邪修/38.7%开17.1%收/ 当西毒接管美股，谁还在为美国的未来定价？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ItsCloRizz（Clo（硅谷小娇妻版） 的长文，原文链接，版权归原作者所有。  从Anthropic&#x2F;OpenAI的商业模式，到美国的AI国家战略：一场关于技术、资本、权力与人类未来的战争。 序章：2026年11月20日，华尔街最荒诞的一天也是鹦鹉哥觉得值得长文祭奠的一篇文章。这是鹦鹉哥古早对ANT流血上市背后的机构和背景的文章26&#x2F;10&#x2F;27｜鹦鹉哥深度剖析Anthropic：一级市场资本、股东结构与AI狂欢背后的拉盘逻辑 美国东部时间11月19日。大家见证了最荒诞的美股交易日。 Anthropic以ANT为代码登陆纳斯达克。上市之前，整个华尔街都在为这场IPO造势。美股开盘后，市场迅速拉升，标普500一度上涨约1.3%，纳指一度上涨约2%。美光、英伟达、CoreWeave等AI相关股票集体上涨。市场似乎突然重新相信了AI，相信美国AI产业的繁荣还会继续。 ANT发行价83美元。正式交易后，首笔成交价111.50美元，盘中最高冲到115.10美元，较发行价上涨约38.7%。一场资本市场的狂欢就此展开。 但这场狂欢迅速...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img class="cover" src="/images/2122708521959706960-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  领取链接：https://tokenized.play.google.com/eacquire/multiline?authuser=0&amp;ear=%5Bnull%2Cnull%2C%5Bnull%2Cnull%2C%22%2Fplans%3Fg1_last_touchpoint%3D37%26g1_landing_page%3D1%26otzr%3D1%22%5D%2Cnull%2C%5B%22W1tudWxsLG51bGwsbnVsbCxbbnVsbCxbIlJzMi4wLjY6OjpzMTEsMiwyNmI1ZTE5LDAsNzY5LGEwNjNlYmU5LDAsNGEyLGVkZDk4YmFjLDAsMTgsNDg2M2ZkMzUsMCw3NjksY2IyZDVjNmYsMCw0N2UsNmFkNDdjNmMsMCw1M2UsN2JkYjQ5ZjYsMCw0MjgsYjY1NDAyMDAsMCw3NjksZWVhODIwYjYsMCw0N2UsMWFhNDMzMSwwL...</div></div></div></a><a class="pagination-related" href="/2026/09/25/0xlangeai-2103300004966478284/" title="Muse 上手保姆级教程：从登录到完成第一个任务"><img class="cover" src="/images/2103300004966478284-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-25</div><div class="info-item-2">Muse 上手保姆级教程：从登录到完成第一个任务</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。 第一次用，先让它把几个链接整理成资料表：下任务、打开文件、核对来源，再改一版。 这不是功能清单。按顺序做完，就能让 Muse 在你看得见的范围内把一件事做完。 连接器、记忆和长期目标，用到再加。  1. 从哪里开始？先登录，再看可用范围打开 muse.ai，按页面提示登录 也可以从 muse 桌面端登陆 还可以从 muse 手机应用登陆 开始前知道这几件事就够了：  官方 9 月 8 日的公告宣布首发面向美国，支持 iOS、Android 和网页端。你的账号当前能否使用，以注册页面为准。 官方提供免费使用与付费订阅，具体额度和价格看账号内的说明。先试一个任务，再决定是否订阅。 本文用 Muse 桌面端做示范，先选一个设备跟着做即可。  如果进不去，先看页面具体提示。地区未开放、账号不符合条件和网络连接失败，需要分别处理。 2. 登录后，先告诉它怎么和你合作按引导完成命名等初...</div></div></div></a><a class="pagination-related" href="/2026/11/20/0xlangeai-2123597186122621165/" title="Muse进阶实战：从脚本到成片，全自动视频号工作流拆解"><img class="cover" src="/images/2123597186122621165-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">Muse进阶实战：从脚本到成片，全自动视频号工作流拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  很多人做视频号，卡死在三件事上：每天找选题找的头痛、剪辑配音耗掉两三个小时、好不容易做完还要守着电脑传后台。坚持不到两周就断更了。 最近社区里跑通了一套很野的玩法：把 Meta Muse 当「云端包工头」，串起 Gemini、Google Flow、豆包语音和 Hark，把「对标拆解 → 写脚本 → 生视频 → 配音剪辑 → 传草稿箱」整条链路交给云端自动跑。原方案单条最高播放跑到 1W+，转化率做到 1%，而且核心额度靠每天刷新的免费点数就能撑住。 我自己按这套思路完整实操跑了一遍：拿 YouTube AI 博主 Matt Wolfe (@mreflow) 的 Shorts 做对标，全程没开剪映、没自己配音，直接跑出了一条 21 秒的竖屏成片《GPT-6.2跑分第一却翻车》。实测 3 段电影感画面一共只扣了 60 个 Flow 点数，还意外测出了 Muse 自己抽帧修字幕、以及云浏览器卡在视频号二维码的真实边界。  这篇文章把整套架构、实测跑通的中文提示词、通用视频制作 Skill...</div></div></div></a><a class="pagination-related" href="/2026/11/19/0xlangeai-2123394871222485023/" title="超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你"><img class="cover" src="/images/2123394871222485023-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">超全 100 种建站方式，从零代码、笔记建站到 Rust，总有一种适合你</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  大家好，我是想风！今天来看建站这件事，100 种方式一次摊开！ 想做个网站，搜一圈下来，WordPress、Hugo、Next.js、Notion、Webflow……名字一个比一个多。 选择太多，最后可能一个都没开始。 这篇把 100 种建站方式分成九类，从拖拖拽拽的零代码，到笔记一键发布，再到用 Go、Python、Rust 手写，每一种讲清是什么、适合谁。 不用全看。可以先看第一节的选择表，找到自己那一格，再跳到对应章节。  目录：  一、先说结论：按需求挑 二、零代码平台（1-12） 三、AI 建站（13-20） 四、笔记建站（21-30） 五、开源 CMS·自己部署（31-42） 六、静态站点生成器：按编程语言分（43-62） 七、前端框架（63-74） 八、后端语言（75-88） 九、电商·单页·链接页（89-94） 十、极客玩法（95-100） 十一、建好了放哪：上线方式 十二、常见坑 最后  一、先说结论：按需求挑 建站方式没有好坏，只有合不合适，适合自己的才是最好的。...</div></div></div></a><a class="pagination-related" href="/2026/11/19/0xlangeai-2123390731142524948/" title="为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法"><img class="cover" src="/images/2123390731142524948-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  周二晚，WayToBot 社区举办了成立后的首场 X Space。 说实话，最开始我们只是想开个语音局，跟大家聊聊“为什么要做这个社区”，顺便回答几个群里高频问到的问题。结果没想到，大家的参与热情远超预期，开麦席位一直满着，硬生生聊了 **2 小时 13 分钟 、 790 多人收听、 最高在线 200 多人 ** 在复盘 Space 的干货之前，我们想先认真回答第一个问题——这也是这场 Space 最核心的主题：我们为什么要成立 WayToBot 社区？ 一、为什么我们要成立 WayToBot 社区？这件事的起因其实很自然。 从今年 8 月 Grok Bot 发布，到 9 月 Muse 上线，再到 OpenAI Dots 接连出来，Personal Agent（个人智能体）这个赛道在短短几个月里突然井喷了。每天时间线上都有新产品、新教程刷屏。但我们发现一个很现实的问题：产品太多、信息太杂，普通人根本没精力把每个工具都测一遍，很容易踩坑，甚至被各种噪音带偏。 Kin @KinGao47...</div></div></div></a><a class="pagination-related" href="/2026/11/20/0xlangeai-2123699145193947369/" title="Hark Pro 上手保姆级指南：从入门到做出第一条视频"><img class="cover" src="/images/2123699145193947369-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">Hark Pro 上手保姆级指南：从入门到做出第一条视频</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  Hark Pro 是 Hark 推出的个人 AI Agent。由 Figure AI 创始人 Brett Adcock 创立，10 月 6 日正式上线。 它自带一台叫 Handoff 的云端独立虚拟机，不仅能帮你操控网页办杂事、整理资料，还能直接通过对话完成从写脚本、调动云端工具到输出成片的完整视频制作。 这篇我们直接从下载安装开始，带你做完一条 30 秒的动画视频。走完一遍，再看看如何让 Hark Pro 帮你处理日常任务、连接账号，以及搭建可以重复使用的工作流。  1. 从哪里开始？先注册 Hark ProHark Pro 目前支持 iOS、Android 和网页版，也提供 macOS 客户端。 官方入口：  官网：https://hark.com 网页版：https://app.hark.com iOS：https://apps.apple.com/us/app/hark-pro/id6772362941 Android：https://play.google.com/stor...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">412</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">203</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DSH%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">DSH安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%B8%82%E5%9C%BA%EF%BC%9Adshmarket"><span class="toc-number">2.</span> <span class="toc-text">插件市场：dshmarket</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DeepSeek%E4%BC%9A%E8%AF%9D%E5%AF%BC%E5%85%A5"><span class="toc-number">2.1.</span> <span class="toc-text">DeepSeek会话导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%92%8C%E8%B4%B9%E7%94%A8%E6%98%8E%E7%BB%86"><span class="toc-number">2.2.</span> <span class="toc-text">上下文和费用明细</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8E%8B%E7%BC%A9%EF%BC%9Abillion-context"><span class="toc-number">2.3.</span> <span class="toc-text">上下文压缩：billion-context</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%8C%E5%AE%A0%E3%80%81%E7%9A%AE%E8%82%A4%E3%80%81%E5%BC%80%E6%9C%BA%E5%8A%A8%E7%94%BB"><span class="toc-number">2.4.</span> <span class="toc-text">桌宠、皮肤、开机动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9C%E7%A8%8B%EF%BC%9Adsh-pocket"><span class="toc-number">2.5.</span> <span class="toc-text">手机远程：dsh-pocket</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%EF%BC%9Adsh-mnemon"><span class="toc-number">2.6.</span> <span class="toc-text">记忆：dsh-mnemon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%B7%B1%E6%90%93%E4%B8%80%E4%B8%AA"><span class="toc-number">2.7.</span> <span class="toc-text">自己搓一个</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/ianxintx-2123957496553345186/" title="Your Stocks May Recover.  Your Bills Won’t Wait."><img src="/images/2123957496553345186-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Your Stocks May Recover.  Your Bills Won’t Wait."/></a><div class="content"><a class="title" href="/2026/11/21/ianxintx-2123957496553345186/" title="Your Stocks May Recover.  Your Bills Won’t Wait.">Your Stocks May Recover.  Your Bills Won’t Wait.</a><time datetime="2026-11-21T09:51:42.000Z" title="发表于 2026-11-21 09:51:42">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/momo_peggy-2123950320648954267/" title="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的"><img src="/images/2123950320648954267-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的"/></a><div class="content"><a class="title" href="/2026/11/21/momo_peggy-2123950320648954267/" title="补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的">补一篇首单复盘：54 天、259 个注册、十几笔弃单，第一单到底是怎么来的</a><time datetime="2026-11-21T09:23:12.000Z" title="发表于 2026-11-21 09:23:12">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/PengP66810-2123940391556919391/" title="高盛禁用了Claude，收回了AI的钥匙"><img src="/images/2123940391556919391-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="高盛禁用了Claude，收回了AI的钥匙"/></a><div class="content"><a class="title" href="/2026/11/21/PengP66810-2123940391556919391/" title="高盛禁用了Claude，收回了AI的钥匙">高盛禁用了Claude，收回了AI的钥匙</a><time datetime="2026-11-21T08:43:44.000Z" title="发表于 2026-11-21 08:43:44">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"><img src="/images/2123833923549663633-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日"/></a><div class="content"><a class="title" href="/2026/11/21/Sophie06344746-2123833923549663633/" title="EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日">EP43 【意外總比明天早到：用平常心扛住裁員與股市大跌！ 】2026年11月20日</a><time datetime="2026-11-21T01:40:40.000Z" title="发表于 2026-11-21 01:40:40">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory "><img src="/images/2123812011171549655-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="We have a Slopware Factory "/></a><div class="content"><a class="title" href="/2026/11/21/sentry-2123812011171549655/" title="We have a Slopware Factory ">We have a Slopware Factory </a><time datetime="2026-11-21T00:13:36.000Z" title="发表于 2026-11-21 00:13:36">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
