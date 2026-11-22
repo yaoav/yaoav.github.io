@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词） | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Google 发了 Genie 4，主打一句话就能造出一个能走进去的世界。我一口气做了 18 组实测：御剑飞云海、逛山中宫殿、在老茶馆跟茶师聊天、撞钟、草原骑马">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/22/yanchuanlab-2124414024985325858/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Google 发了 Genie 4，主打一句话就能造出一个能走进去的世界。我一口气做了 18 组实测：御剑飞云海、逛山中宫殿、在老茶馆跟茶师聊天、撞钟、草原骑马">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124414024985325858-cover.jpg">
+<meta property="article:published_time" content="2026-11-22T16:05:47.000Z">
+<meta property="article:modified_time" content="2026-11-22T17:47:14.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@yanchuanlab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124414024985325858-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）",
+  "url": "https://yaoav.github.io/2026/11/22/yanchuanlab-2124414024985325858/",
+  "image": "https://yaoav.github.io/images/2124414024985325858-cover.jpg",
+  "datePublished": "2026-11-22T16:05:47.000Z",
+  "dateModified": "2026-11-22T17:47:14.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/22/yanchuanlab-2124414024985325858/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">466</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">222</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124414024985325858-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-22T16:05:47.000Z" title="发表于 2026-11-22 16:05:47">2026-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@yanchuanlab（言川）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124414024985325858">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Google 发了 Genie 4，主打一句话就能造出一个能走进去的世界。我一口气做了 18 组实测：御剑飞云海、逛山中宫殿、在老茶馆跟茶师聊天、撞钟、草原骑马、雨夜骑车逛夜市，想到的场景基本都试了一圈。</p>
+<p><strong>18 个世界，加起来差不多 6 分钟画面。</strong></p>
+<p><strong>说结论：比我预想的强。它现在很像一台听得懂人话的实时摄影机，画质已经够直接拿来用了。但更适合那种短平快、一路往前看风景的体验；真要当成一个能反复逛、哪儿都能去的完整世界，还差口气。</strong></p>
+<p>好用的地方和踩到的坑我都照实放出来，主要实验配了视频，18 组提示词也全附在下面，想玩可以直接抄作业。</p>
+<p>全文分四块：</p>
+<ol>
+<li><strong>Genie 4 是什么，怎么上手。</strong> 画质、时长、键位和试玩入口。</li>
+<li><strong>它已经能做到的 7 件事。</strong> 每项都带实测视频和提示词。</li>
+<li><strong>目前卡壳的 5 个地方。</strong> 哪些没做成，哪些效果打折。</li>
+<li><strong>7 条提示词写法。</strong> 测完 18 组攒下来的实用经验。</li>
+</ol>
+<h3 id="一、Genie-4-是什么，怎么玩"><a href="#一、Genie-4-是什么，怎么玩" class="headerlink" title="一、Genie 4 是什么，怎么玩"></a>一、Genie 4 是什么，怎么玩</h3><p>简单说，你给它一段文字，它就现场给你造一个带声音的世界。你可以用键盘在里面走动、转头看风景，玩到一半还能随时打句话，让画面里多出点东西，或者触发点什么事。</p>
+<p>它跟文生视频最大的区别在于，这不是提前渲染好一段片子播给你看，你每按一下键，接下来的画面都是现算出来的。</p>
+<p>先看几个基本参数：</p>
+<ul>
+<li><strong>画质：</strong> 720p，24 帧每秒。</li>
+<li><strong>声音：</strong> 随画面同步生成，不是后期配音。</li>
+<li><strong>时长：</strong> 单次上限 2 分钟，到点自动停。</li>
+<li><strong>操作：</strong> W A S D 控制移动，方向键转视角，中途随时可以输文字干预。</li>
+</ul>
+<p>想上手的话，直接去 Google AI Studio 里的 Genie 4 试玩页（目前要开通付费账号才能用），开发者也可以接官方 API 测。网页端操作三步搞定：</p>
+<ol>
+<li>填好世界描述点生成；如果想从某张图开局，顺手传一张 16:9 的起始图就行。</li>
+<li>点进画面，用 W A S D 和方向键就能走、能转头。</li>
+<li>想让场景里出点新花样，直接在输入栏打字；要跟里面的角色对话，把台词用引号包起来。</li>
+</ol>
+<p>顺便说下实际的生成和响应速度：只有少数情况下 2～3 秒就能出来，大多数时候会比较卡顿，需要等上一段时间。</p>
+<h3 id="二、它做得到的-7-件事"><a href="#二、它做得到的-7-件事" class="headerlink" title="二、它做得到的 7 件事"></a>二、它做得到的 7 件事</h3><ol>
+<li>往世界里加东西，7 次都有回应</li>
+</ol>
+<p>先放一段我最喜欢的：御剑飞行。脚踩飞剑掠过云海，两边是峭壁瀑布，远处山头立着金色宫殿。向右一转头，视野跟着切过去，新的山峰立马接上。大约第 7 秒，我顺手输了句“让一条金龙从前方云海升起”。过了两三秒，龙真就从云里钻了出来，一直盘旋到结束。说实话，那一刻我确实愣住了。</p>
+<p><video controls preload="metadata" poster="/images/2124399270707224577-poster.jpg" src="/videos/2124399270707224577.mp4"></video></p>
+<p>（注：实测时我大多用英文，下面提示词都翻成了中文，Genie 4 本身也听得懂中文；标出的秒数是我当时卡的点，你自己玩的时候看画面节奏输入就行。）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，站在一把发光的长飞剑上，画面下方能看到我的靴子和剑身。黎明时分，在一望无际的云海上空向前滑翔。两侧是刺破云层的陡峭花岗岩山峰，长着虬曲的松树，瀑布从崖壁倾泻进云雾里，远处最高的山顶上有一座金顶宫殿。史诗感的广角电影画面。声音：呼啸的风声、衣袍翻动声、远处的瀑布声、鹤鸣。</span><br><span class="line"></span><br><span class="line">大约第 7 秒，在输入栏输入：</span><br><span class="line">一条巨大的中国金龙从前方的云海里升起</span><br><span class="line"></span><br><span class="line">操作：一直按前进；大约第 4 秒向右转一两秒</span><br></pre></td></tr></table></figure>
+
+<p>这不是撞大运。后来在另外 5 个世界里，我又 6 次中途往里加东西：《千里江山图》里的白鹤、漓江竹筏上的月亮、草原野马、山中宫殿的孔明灯和烟花、江南水乡的烟花。<strong>算上金龙一共 7 次，次次都有回应。</strong></p>
+<p>我把这 6 次单独剪出来拼了个合集，每段都从输入指令的那一刻起播，左下角标了对应的中文指令：</p>
+<p><video controls preload="metadata" poster="/images/2124400309216919552-poster.jpg" src="/videos/2124400309216919552.mp4"></video></p>
+<p>不过东西虽然都出来了，数量、大小和位置不太听指挥。金龙给得又大又近，很给面子；白鹤就只有小小的一群；我让它放“成千上万盏”孔明灯，结果只飘起来几十盏；让“一大群”野马在左侧并排狂奔，它给我塞到了远处湖边一小撮。除了那条龙照着“巨大”来演，其他时候给多少、放哪儿，我还没摸出规律。</p>
+<p>顺带一提，月亮那次我原话写的是“入夜，天空变成深蓝色，一轮满月升起”——结果月亮升起来了，天没黑。</p>
+<ol start="2">
+<li>声音跟着画面同步长出来</li>
+</ol>
+<p>湖心亭这组，我让一位白衣女子坐在亭子里弹古筝，并在世界描述里加上了古筝声。点开听，拨弦的旋律很舒缓，和画面贴合得很自然。</p>
+<p><video controls preload="metadata" poster="/images/2124401873230954496-poster.jpg" src="/videos/2124401873230954496.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，黄昏时分，站在一座临湖的敞亭里，面对一位身穿飘逸白色汉服的年轻女子，她坐在古筝前弹奏，只说中文。她身后是一片宽阔的荷花湖，一直延伸到远处的宝塔和青山。声音：古筝拨弦的清响、湖水拍打亭基的声音、风铃声。</span><br><span class="line"></span><br><span class="line">操作：站着不动</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>能直接跟世界里的人对话</li>
+</ol>
+<p>老茶馆这组，对面坐着个白胡子老茶师。我在设定里加了句“他只说中文”，接着用中文打字问了两个问题：</p>
+<p>“师傅您好，今天您推荐喝什么茶？”</p>
+<p>“这茶是哪里产的？”</p>
+<p>两次都是问完大概两秒，他就开口接话了。直接生成的中文人声，全程稳稳保持第一人称视角。他回的是：</p>
+<p>“请坐，今日我们品一品武夷岩茶。”</p>
+<p>“此茶产自武夷山核心景区，岩骨花香，滋味醇厚。”</p>
+<p>答得对题，说话的腔调也真像个老茶师。18 组里，这一段我印象最深。</p>
+<p><video controls preload="metadata" poster="/images/2124402421808168960-poster.jpg" src="/videos/2124402421808168960.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，坐在一家中国老茶馆的木桌前，正对面是一位白胡子、穿灰色长袍的中国老茶师，他看着我，一直等到规则被触发。他只说中文。我们之间的桌上有一把陶土茶壶和两只小茶杯，冒着热气。温暖的窗光。声音：茶水倒进瓷杯的声音、炭火噼啪声、瓷器轻碰声。</span><br><span class="line"></span><br><span class="line">大约第 2.5 秒，在输入栏输入：</span><br><span class="line">“师傅您好，今天您推荐喝什么茶？”</span><br><span class="line"></span><br><span class="line">大约第 11 秒，在输入栏输入：</span><br><span class="line">“这茶是哪里产的？”</span><br><span class="line"></span><br><span class="line">操作：坐着不动</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>能走、能骑，还能切第三人称</li>
+</ol>
+<p>我在长城上把方向键挨个试了一遍：前进、向左平移、抬头低头都很跟手，后退和向右平移在这把里反应不太明显。</p>
+<p><video controls preload="metadata" poster="/images/2124402972214083584-poster.jpg" src="/videos/2124402972214083584.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，日出时分，站在长城顶上，脚下是两侧垛口之间宽阔的石砌步道。城墙沿着陡峭的青翠山脊蜿蜒到天边，前方远处有一座石砌敌楼，下方山谷里是一片雾海。写实的 35 毫米纪录片质感。声音：踩在石板上的脚步声、掠过垛口的风声、鸟叫声。</span><br><span class="line"></span><br><span class="line">操作：依次按：前进、后退、左移、右移各两三秒，再抬头、低头</span><br></pre></td></tr></table></figure>
+
+<p>换成第三人称也没问题。我让镜头跟在一位骑马的骑手后面追拍。第 8 秒试着加了一句“一大群野马在左侧并排跑”，画面里确实出来了，只是出现在远处湖边，数量也没那么多：</p>
+<p><video controls preload="metadata" poster="/images/2124403184349433856-poster.jpg" src="/videos/2124403184349433856.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第三人称视角，镜头紧跟在一位披红色斗篷、骑白马的骑手身后，在辽阔的金色草原上奔向巨大的雪山，右侧有一片碧蓝的湖，山脊上挂着经幡。史诗感的广角电影画面。声音：马蹄踏在草地上的声音、风声、马的响鼻、斗篷翻动声。</span><br><span class="line"></span><br><span class="line">大约第 8 秒，在输入栏输入：</span><br><span class="line">一大群野马在左侧并排奔跑</span><br><span class="line"></span><br><span class="line">操作：一直按前进；大约第 5 秒向右转一两秒</span><br></pre></td></tr></table></figure>
+
+<p>现代街景也一样稳。雨夜的夜市，骑着电动车往前走，仪表盘还亮着灯，往右一打把，车直接拐到小吃摊跟前。不过街边那些我没指定字样的招牌，远看像中文，凑近看单个字偶尔对得上，连起来就不成词了。</p>
+<p><video controls preload="metadata" poster="/images/2124404167347433472-poster.jpg" src="/videos/2124404167347433472.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，坐在一辆电动车上，双手握着车把，停在一座山城雨后湿漉漉的夜市街上。两旁是霓虹招牌、冒着热气的小吃摊、垂挂的电线和层层叠叠的居民楼，街道向前缓缓上坡。写实的 35mm 夜景摄影。声音：轮胎压过湿路面的沙沙声、雨点打在铁皮雨棚上的声音、炒锅的滋滋声。</span><br><span class="line"></span><br><span class="line">操作：一直按前进；大约第 4 秒向右转一两秒；大约第 9 秒松开前进、按后退</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>听得懂中文，还能用截图续上</li>
+</ol>
+<p>我用纯中文写了一段水墨山水的描述，它完全听得懂，出来的也确实是水墨味：远山、松树、茅屋、小溪，往前走时景物的远近透视也会跟着变。第 5 秒我顺手输了句“下起大雪”，不过只零星飘了点雪花。</p>
+<p><video controls preload="metadata" poster="/images/2124403595399569408-poster.jpg" src="/videos/2124403595399569408.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，站在一幅活的中国水墨山水画里的山间小路上。黑白水墨晕染的远山层层叠叠，近处有松树、茅屋和一条小溪，留白处是流动的云雾，整个画面始终保持水墨笔触和宣纸质感。声音：溪水流淌，松林里的风声，踩在碎石上的脚步声。</span><br><span class="line"></span><br><span class="line">大约第 5 秒，在输入栏输入：</span><br><span class="line">下起大雪，群山和松树都落满白雪</span><br><span class="line"></span><br><span class="line">操作：一直按前进</span><br></pre></td></tr></table></figure>
+
+<p>另外试出个取巧的玩法。单次最多 2 分钟，但我把快结束时的画面截了一帧，拿它当起始图重新开局，第一帧几乎无缝衔接，还能继续往前逛。当然得说明白，这其实是用截图另起了一个新世界，并不是真的“读档”，镜头外原有的东西它是不记得的。</p>
+<p><video controls preload="metadata" poster="/images/2124404654285160448-poster.jpg" src="/videos/2124404654285160448.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，黄昏时分，站在江南水乡一条窄河边的湿石板路上。两岸是白墙黑瓦的房子，前方有一座石拱桥，屋檐下挂着红灯笼。写实的 35mm 纪实画面。声音：河水拍打石阶的声音、踩在湿石板上的脚步声、树叶沙沙声。</span><br><span class="line"></span><br><span class="line">操作：第 2 秒起按前进（起始图：上一次水乡快结束时的一帧画面）</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>转身再回头，大件还在原地</li>
+</ol>
+<p>搭了个中式小院测空间记忆：正对面一面白墙，中间写着红色大“福”字，左边石桌上摆着青花茶壶，右边一盆竹子。我向左转开视野，停了 9 秒，再转回来。</p>
+<p>墙上的“福”字笔画完整，没写歪。它彻底离开画面七八秒、盆竹离开十二三秒，转回来时都稳稳还在原位，连字的笔势都对得上。中间有个小插曲：我还没按右转键，镜头自己就悄悄往回带了点，所以“福”字比我预想的更早回到画面里。</p>
+<p><video controls preload="metadata" poster="/images/2124404883789144064-poster.jpg" src="/videos/2124404883789144064.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，站在一个安静的中式小院里不动，正对着面前的一面白墙。墙的正中写着一个大大的红色汉字“福”。字的左边有一张圆石桌，桌上放着一把青花瓷茶壶；字的右边有一盆高高的竹子。柔和的日光。声音：树叶沙沙声、麻雀叫声、风铃轻响。</span><br><span class="line"></span><br><span class="line">操作：站着不动；大约第 3 秒向左转 4 秒，等 9 秒左右，再向右转 4 秒</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>指定写什么汉字，它能写对</li>
+</ol>
+<p>城门楼上的匾额，我指定写“天下太平”。它不仅四个字全写对了，还懂老规矩，乖乖从右往左排。</p>
+<p>后面我对着紧闭的城门按住前进键走了 11 秒，门越走越近，速度也跟着慢下来，到视频结束时离门大概还剩几步远。</p>
+<p><video controls preload="metadata" poster="/images/2124411713080721408-poster.jpg" src="/videos/2124411713080721408.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，日出时分，站在一条宽阔的石板大道上，面对一座高耸入天的巨型中国古代城门楼：高大的青砖城墙，上面是三层红金色木结构城楼，屋檐飞翘。巨大的红色木门紧闭，门上有成排的铜钉，离我大约二十步。城门上方的黑色门匾上写着四个金色大字“天下太平”。城墙上垂着长长的红色旗幡。声音：踩在石板上的脚步声、旗幡在风中翻动的声音、远处的鼓声。</span><br><span class="line"></span><br><span class="line">操作：一直按前进，直到结束</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、目前卡壳的-5-个地方"><a href="#三、目前卡壳的-5-个地方" class="headerlink" title="三、目前卡壳的 5 个地方"></a>三、目前卡壳的 5 个地方</h3><p>下面是我这轮实测里，没做成或者效果打折的地方。</p>
+<ol>
+<li>中途改天气和时间，不太听使唤</li>
+</ol>
+<p>往场景里塞个新东西很灵，但想在半路把整个天色或天气换掉，实测下来效果都很有限。</p>
+<p>先看漓江竹筏。我输了句“下大雪”，结果只零星飘了几点雪花，既不大也没积雪，离“大雪”差远了。接着我又输“入夜，天空变成深蓝色，一轮满月升起”，月亮倒是如期升起来了，可天色只稍微暗了一点点。</p>
+<p><strong>说白了，它把“入夜”理解成了“往天上加个月亮”。</strong></p>
+<p><video controls preload="metadata" poster="/images/2124405327819083776-poster.jpg" src="/videos/2124405327819083776.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，站在竹筏的船头，手里握着一根伸进水里的长竹篙，在碧绿的江面上向前漂流，江水在高耸的喀斯特山峰之间蜿蜒。晨雾挂在山峰之间，两岸是竹林，竹筏上站着鸬鹚。写实的 35mm 纪实画面。声音：水拍打竹筏的声音、竹篙滴水声、鸟鸣、竹叶间的风声。</span><br><span class="line"></span><br><span class="line">大约第 4 秒，在输入栏输入：</span><br><span class="line">让大雪落满江面和山峰</span><br><span class="line"></span><br><span class="line">大约第 12 秒，在输入栏输入：</span><br><span class="line">入夜，天空变成深蓝色，一轮明亮的满月从山峰上升起</span><br><span class="line"></span><br><span class="line">操作：一直按前进</span><br></pre></td></tr></table></figure>
+
+<p>江南水乡这组也一样。先后输了“下大雨”和“入夜”：雨丝全程没见着，就水面涟漪多了点（石板路是湿的，但那是我开场提示词里写好的，不算下雨的功劳）；入夜也没动静，天色照旧，灯笼一盏没亮。反倒是最后让它在屋顶放烟花，远处乖乖炸开了几朵。</p>
+<p><video controls preload="metadata" poster="/images/2124405504525094912-poster.jpg" src="/videos/2124405504525094912.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，黄昏时分，站在江南水乡一条窄河边的湿石板路上。两岸是白墙黑瓦的房子，前方有一座石拱桥，屋檐下挂着还没点亮的红灯笼，石阶旁系着一条木船。写实的 35mm 纪实画面。声音：河水拍打石阶的声音、踩在湿石板上的脚步声、树叶沙沙声。</span><br><span class="line"></span><br><span class="line">大约第 4 秒，在输入栏输入：</span><br><span class="line">让大雨倾盆而下，笼罩整个水乡</span><br><span class="line"></span><br><span class="line">大约第 11 秒，在输入栏输入：</span><br><span class="line">入夜，所有红灯笼都亮起来，发出温暖的光</span><br><span class="line"></span><br><span class="line">大约第 18 秒，在输入栏输入：</span><br><span class="line">屋顶上空绽放明亮的金色烟花</span><br><span class="line"></span><br><span class="line">操作：一直按前进</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>玩满两分钟，画面没糊但人走偏了</li>
+</ol>
+<p>为了看看 2 分钟上限到底什么表现，我挑了个大场景一口气玩到底。</p>
+<p>开局非常漂亮：人站在汉白玉长桥桥头，对面是依山叠起的红金宫殿群，楼阁间挂着瀑布。我按住前进键，原本打算顺着桥一路走进去；中途停下来向左看了一圈再转回来，最后又停下向左转了 10 秒环顾四周。</p>
+<p><video controls preload="metadata" poster="/images/2124405998496710656-poster.jpg" src="/videos/2124405998496710656.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，黄昏时分，站在一座汉白玉长桥的桥头，桥栏上雕着龙。长桥跨过云雾缭绕的峡谷，通向一片依山而建的巨型中国古代宫殿群：数百座红金色的殿宇和宝塔层层叠在平台上，有巨大的台阶，瀑布从建筑之间落进峡谷。史诗感的广角电影画面。声音：踩在大理石上的脚步声、瀑布的轰鸣、风声、低沉的寺庙鼓声。</span><br><span class="line"></span><br><span class="line">大约第 20 秒，在输入栏输入：</span><br><span class="line">成千上万盏发光的孔明灯从宫殿的平台上升起</span><br><span class="line"></span><br><span class="line">大约第 75 秒，在输入栏输入：</span><br><span class="line">大雪开始落下，把宫殿的屋顶盖成白色</span><br><span class="line"></span><br><span class="line">大约第 111 秒，在输入栏输入：</span><br><span class="line">宫殿屋顶上空绽放明亮的金色烟花</span><br><span class="line"></span><br><span class="line">操作：按住前进约 40 秒；停下，向左转约 5 秒，再向右转回来；继续按住前进到第 95 秒左右；停下，向左转约 10 秒</span><br></pre></td></tr></table></figure>
+
+<p>先夸一句，整整两分钟，画质一直很清晰，没有越往后越糊；中途加的孔明灯和烟花也都出来了（虽然孔明灯离“成千上万盏”还差一大截）。但清晰不代表路线稳，官方文档提过 60 到 90 秒后连贯性可能下降，我这把清晰度扛住了，路线却飘了。</p>
+<p>刚走了没几秒，人就直接飘出了桥面，悬在半空里慢慢贴向旁边的崖壁，压根没走到宫殿跟前。最后向左转那 10 秒，转出来一片全新的石峰，原来的长桥和宫殿全没了踪影。</p>
+<p>不过这把我也是一根筋按着前进，没用方向键随时微调方向。如果边走边修，说不定能离宫殿更近些。</p>
+<ol start="3">
+<li>规则结果兑现了，中间动作没演出来</li>
+</ol>
+<p>我试着给世界定了条因果规则：撞木撞上铜钟，钟响，屋顶的鸽子惊飞。这条规则我测了两次。</p>
+<p>第一次站得太近，大钟和撞木几乎怼满屏幕。输完“撞钟”，画面里伸出一只手去推撞木，撞木慢慢往钟上靠。因为离得太近看不全，不好下结论，我就换了个开阔点的场景重测。</p>
+<p><video controls preload="metadata" poster="/images/2124408282681069570-poster.jpg" src="/videos/2124408282681069570.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，站在一座云雾缭绕的山寺院子里，面对着远处木架上悬挂的一口巨大古铜钟，旁边吊着一根沉重的撞木。寺庙屋顶上停着鸽子。规则：撞木撞上铜钟，钟就会发出洪亮的响声，所有鸽子从屋顶惊飞。声音：松林间的风声、鸽子的咕咕声、木梁的吱呀声。</span><br><span class="line"></span><br><span class="line">大约第 5 秒，在输入栏输入：</span><br><span class="line">用撞木撞向铜钟</span><br><span class="line"></span><br><span class="line">操作：先往前走 4 秒，然后站定</span><br></pre></td></tr></table></figure>
+
+<p>第二次换到云海古寺，我特意站远了些，把铜钟、撞木和屋檐全收进画面。输完指令两秒多，钟声清亮地响了起来，余音拖了好几秒；再过两秒，屋顶一群白鸽惊飞。唯独撞木纹丝不动，看不出摆动。</p>
+<p><video controls preload="metadata" poster="/images/2124408503184019457-poster.jpg" src="/videos/2124408503184019457.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，站在一座崖顶山寺的院子里，寺庙高出一片辽阔的云海，寺庙后方是穿出云层的嶙峋花岗岩山峰。我面对着远处木架上悬挂的一口巨大古铜钟，旁边吊着一根沉重的撞木。钟正上方的屋脊上停着一排白鸽。规则：撞木撞上铜钟，钟就会发出洪亮的响声，所有鸽子从屋顶惊飞。声音：松林间的风声、鸽子的咕咕声、木梁的吱呀声。</span><br><span class="line"></span><br><span class="line">大约第 3 秒，在输入栏输入：</span><br><span class="line">用撞木撞向铜钟</span><br><span class="line"></span><br><span class="line">操作：先往前走一两秒，然后站定</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，规则里写的两个结果：钟响、鸽子飞。都兑现了，但最关键的中间过程“撞木撞钟”直接被跳过了。</p>
+<p>类似的情况也出现在毛笔写字上。我让它提笔在宣纸上写个“永”字，手倒是落下来了，轻轻点了一小笔，然后就定格在那儿不动了。</p>
+<p><video controls preload="metadata" poster="/images/2124408750043959296-poster.jpg" src="/videos/2124408750043959296.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，坐在一张木桌前，低头看着一张空白的宣纸，纸被两块石镇纸压平。我的右手握着一支蘸满墨的毛笔，悬在纸面上方，右边放着砚台。柔和的日光。声音：笔毛划过纸面的声音、纸张的沙沙声、钟表的滴答声。</span><br><span class="line"></span><br><span class="line">大约第 2.5 秒，在输入栏输入：</span><br><span class="line">用毛笔在纸上写一个大大的汉字“永”</span><br><span class="line"></span><br><span class="line">操作：不按键</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>画风稳住了，但没真走进去</li>
+</ol>
+<p>我拿了一张《千里江山图》的局部当起始图，想体验一把“人进画里游”。开场第一帧相当惊艳，石青石绿、绢本底色、细密勾线全保住了。中途加了一群飞过江面的白鹤，飞进来的鸟也是古画笔触，没有突然冒出写实照片的违和感。</p>
+<p>可惜往前走的时候，镜头更像是在对着一幅平面画慢慢推近，始终有种隔着看画的感觉，没能真正站进山里。</p>
+<p><video controls preload="metadata" poster="/images/2124408968206581761-poster.jpg" src="/videos/2124408968206581761.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">沉浸式第一人称视角，站在一幅活的中国青绿山水绢本画里的山间小路上。石青和石绿色的山峰耸立在雾气弥漫的宽阔江面上，画里有小亭子、松树和渔船，全部用细墨线勾勒、矿物颜料平涂，像画绢一样轻轻起伏。声音：松林间的风声、踩在土路上的脚步声、远处的水声。</span><br><span class="line"></span><br><span class="line">大约第 7 秒，在输入栏输入：</span><br><span class="line">一群白鹤从江面上飞过</span><br><span class="line"></span><br><span class="line">操作：一直按前进（起始图：《千里江山图》局部）</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>镜头偶尔会自己飘走</li>
+</ol>
+<p>同样的老茶馆，我还用英文试过一回。开场好好的第一人称，聊着聊着，镜头自己滑到了“我”的肩膀后面，画面里凭空多出个后脑勺；更离谱的是，“我”还自己伸手端起了茶杯，我可没让它动。不过 18 组里，这种视角自己飘走的情况也就撞上这一次。</p>
+<p><video controls preload="metadata" poster="/images/2124409180895461376-poster.jpg" src="/videos/2124409180895461376.mp4"></video></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">世界描述：</span><br><span class="line">第一人称视角，坐在一家中国老茶馆的木桌前，正对面是一位白胡子、穿灰色长袍的老茶师，他看着我，一直等到规则被触发。我们之间的桌上有一把陶土茶壶和两只小茶杯，冒着热气。温暖的窗光。声音：茶水倒进瓷杯的声音、炭火噼啪声、瓷器轻碰声。</span><br><span class="line"></span><br><span class="line">大约第 3 秒，在输入栏输入：</span><br><span class="line">“你好！今天你推荐喝什么茶？”</span><br><span class="line"></span><br><span class="line">操作：坐着不动</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、怎么写提示词：7-条实操经验"><a href="#四、怎么写提示词：7-条实操经验" class="headerlink" title="四、怎么写提示词：7 条实操经验"></a>四、怎么写提示词：7 条实操经验</h3><p><strong>1. 开头交代清楚“我”在哪、靠什么移动。</strong></p>
+<p>比如“第一人称，站在一把飞剑上，画面下方能看到靴子和剑身”。视角定好了，后面不容易飘。</p>
+<p><strong>2. 结尾补一句具体声音，别写抽象配乐。</strong></p>
+<p>直接写“声音：风声、衣袍翻动声、远处瀑布声”这种有实物的环境音，别写“史诗感配乐”。真想要音乐，干脆在场景里放个正在演奏的人。</p>
+<p><strong>3. 中途下指令，优先做“加法”。</strong></p>
+<p>让它“升起一条龙”“飞过一群白鹤”，成功率很高；至于天气和时间，最好一开始就写死在开场描述里。</p>
+<p><strong>4. 想跟角色对话，台词加引号，先让他“待命”。</strong></p>
+<p>引号里的内容它会自动识别成你说的话；开场描述里顺手加一句“他看着我，一直等到规则被触发”，角色就会先等着你开口。</p>
+<p><strong>5. 画面里要出文字，直接用引号指明。</strong></p>
+<p>比如墙上写着“福”，门匾上写着“天下太平”，指定了就能写对，不指定容易出乱码。</p>
+<p><strong>6. 想触发因果，直接把规则写明白。</strong></p>
+<p>套用“规则：做了什么，就会发生什么”的句式，比如“规则：撞木撞上铜钟，钟就会响，鸽子会惊飞”。</p>
+<p><strong>7. 嫌 2 分钟不够玩，用截图接力。</strong></p>
+<p>到点前把画面截下来，当成下一轮的起始图，就能顺着当前画面接着往前走。</p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>拉回来看，这 18 组实测其实就是三件事：</p>
+<ul>
+<li><strong>已经做得到的：</strong> 中途加东西、音画同步生成、跟角色中文对话、切视角走和骑、听懂中文、短时间转身大件不丢、写对指定汉字。</li>
+<li><strong>目前还做不好的：</strong> 半路改全局天气时间、按路线稳稳走到目的地、把物理动作过程演全、真正走进平面画，以及偶尔自己飘走的镜头。</li>
+<li><strong>最顺手的用法：</strong> 想要的环境开场一次写全，玩起来以后优先往里加元素。</li>
+</ul>
+<p>整体测下来，我是给好评的。一句话进一个有声有画、还能按键走动的世界，玩满两分钟画质不糊，打句字就能从云海里召出一条龙——放一年前真不敢想。而且规则、对话、起始图这些玩法，全都能直接写进提示词里，没什么上手门槛。</p>
+<p>如果拿它做氛围短片、场景概念预览，或者十几秒的互动 Demo，现在就已经够用了。但真要当成那种可以反复探索、哪儿都能去的游戏世界，还早。从这轮实测看，离那一步还差“走得到”和“改得动”；官方自己也老实提醒了第三点：离开视线太久的东西，它可能会忘。</p>
+<p>我是言川，会持续探索 AI 能力边界，希望这篇实测对你有帮助。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/22/yanchuanlab-2124414024985325858/">https://yaoav.github.io/2026/11/22/yanchuanlab-2124414024985325858/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/yanchuanlab/">@yanchuanlab</a></div><div class="post-share"><div class="social-share" data-image="/images/2124414024985325858-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/22/Kainative-2124414431287234578/" title="失业潮来临？这4门AI二道贩子生意，一台电脑就能起步"><img class="cover" src="/images/2124414431287234578-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">失业潮来临？这4门AI二道贩子生意，一台电脑就能起步</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Kainative（大宇） 的长文，原文链接，版权归原作者所有。  厂里减班，门店关门，工资一年比一年少，身边找工作的人越来越多。 在县城，好工作本来就少。这两年连”差一点的工作”都要抢。 但有一件事在悄悄变：很多以前要花钱请人干的活，现在 AI 几分钟就能干完。 请剪辑师，一个月七八千。请人整理资料，一套题几百块。请程序员改个工具，开口就是几万。 这些钱，花钱的人还在花。只是干活的人，可以换成”你 + AI”。 这就是我说的 AI 二道贩子： 找到一件还在靠人工做的活 → 用 AI 把它批量化 → 卖给原本花钱请人做的那个人。 你不需要会写代码，不需要囤货，不需要租门面。一台电脑，加上下班后的几个小时。 下面这 4 门生意，我把每一步都拆开了：去哪找客户、用什么模型、提示词直接复制、价格怎么定、哪里会踩坑、第一周怎么花最少的钱验证。 先说清楚：这不是躺赚。 每门生意都要你自己去找第一个客户。文章里没有”月入 X 万”的截图，只有能照着做的步骤。 建议先收藏，挑一个，照着做。 一张表看懂 4 门生意 |  | 卖给谁 | 启动花费 | 难度 | 来钱速度...</div></div></div></a><a class="pagination-related" href="/2026/11/22/Leviwoyun-2124406181896827189/" title="Antigravity 11 篇教程合集，从入门到多 Agent 实战"><img class="cover" src="/images/2124406181896827189-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Antigravity 11 篇教程合集，从入门到多 Agent 实战</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  gemini 最近更新太猛了，谷歌又频出 BUG 订阅，不少朋友都已上车 gemini，却又头疼 Antigravity，不知道正确的使用方式。   所以我把几位大佬写过的优质中文教程好好理了一遍：从安装、汉化、避坑，到偷懒指令和多 Agent 实战。不用一口气读完，找到你踩坑的地方，翻对应的那篇就行。（本文由 bot 与 Antigravity 参与整理编写） 一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇二、会员开了，Antigravity 还是登不上？看看这篇开通了 Google AI Pro，节点也换了，还是提示地区不支持，先别反复折腾网络 会员额度和地区限制：登不上，是和 Google 账号关联地区有关，不只是当前网络的问题。Antigravity 本身有免费档，想测试反重力能不能登上，可以先用免费账号去练手。文中给出了账号地区的查询方式、官方更正入口，以及后续网络设置的排查过程。 三、从下载安装到第一次跑通  刚接...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/09/yanchuanlab-2119785596273168892/" title="AI 视频Bot（2D&#x2F;3D）：从想法到成片一手实战全流程（附完整提示词）"><img class="cover" src="/images/2119785596273168892-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-09</div><div class="info-item-2">AI 视频Bot（2D&#x2F;3D）：从想法到成片一手实战全流程（附完整提示词）</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @yanchuanlab（言川） 的长文，原文链接，版权归原作者所有。  我做了五种风格完全不同的 AI 视频：史诗短片、3D 诗意短片、认知思维、剧情故事、vibe 知识大赏。这篇每种风格挑一条代表作，给你讲清楚一个想法怎么一步步做成片子：用了哪些 AI、分几步走、每一步的提示词，还有每条片子踩过的坑。2D、3D 都有。 从 10 月 20 日开始发短视频，截至 11 月 9 日，20 天左右，视频号加抖音累计 24300+ 粉丝，累计播放 70 万+。 视频号 20000+ 粉丝，抖音 4300+ 粉丝，两边累计播放 70 万+  截图里能看到的播放量只是部分片子的数据，仅作示意。 下面按这个顺序讲：  AI 视频制作 bot：一张图看懂全流程。 你、大脑规划层、能力层、反馈层、记忆层，五层各管什么。 从一个想法到成片的 6 步： 每一步都附提示词，复制就能用。 五个实战案例和经验： 每条片子怎么做、花了多少，怎么省钱，怎么把效果做好，以及我踩过的坑。  一、AI 视频制作 bot：一张图看懂全流程我一共用到 6 个主要制作工具：Claude Code...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">466</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">222</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Genie-4-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E6%80%8E%E4%B9%88%E7%8E%A9"><span class="toc-number">1.</span> <span class="toc-text">一、Genie 4 是什么，怎么玩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%83%E5%81%9A%E5%BE%97%E5%88%B0%E7%9A%84-7-%E4%BB%B6%E4%BA%8B"><span class="toc-number">2.</span> <span class="toc-text">二、它做得到的 7 件事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%AE%E5%89%8D%E5%8D%A1%E5%A3%B3%E7%9A%84-5-%E4%B8%AA%E5%9C%B0%E6%96%B9"><span class="toc-number">3.</span> <span class="toc-text">三、目前卡壳的 5 个地方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%80%8E%E4%B9%88%E5%86%99%E6%8F%90%E7%A4%BA%E8%AF%8D%EF%BC%9A7-%E6%9D%A1%E5%AE%9E%E6%93%8D%E7%BB%8F%E9%AA%8C"><span class="toc-number">4.</span> <span class="toc-text">四、怎么写提示词：7 条实操经验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">5.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/chasen_liao-2124424831211065438/" title="万字拆解 /swarm 功能，看 AGY 是怎么用一个黑板支撑起一个Agent蜂群的？"><img src="/images/2124424831211065438-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万字拆解 /swarm 功能，看 AGY 是怎么用一个黑板支撑起一个Agent蜂群的？"/></a><div class="content"><a class="title" href="/2026/11/22/chasen_liao-2124424831211065438/" title="万字拆解 /swarm 功能，看 AGY 是怎么用一个黑板支撑起一个Agent蜂群的？">万字拆解 /swarm 功能，看 AGY 是怎么用一个黑板支撑起一个Agent蜂群的？</a><time datetime="2026-11-22T16:48:44.000Z" title="发表于 2026-11-22 16:48:44">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Kainative-2124414431287234578/" title="失业潮来临？这4门AI二道贩子生意，一台电脑就能起步"><img src="/images/2124414431287234578-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="失业潮来临？这4门AI二道贩子生意，一台电脑就能起步"/></a><div class="content"><a class="title" href="/2026/11/22/Kainative-2124414431287234578/" title="失业潮来临？这4门AI二道贩子生意，一台电脑就能起步">失业潮来临？这4门AI二道贩子生意，一台电脑就能起步</a><time datetime="2026-11-22T16:07:24.000Z" title="发表于 2026-11-22 16:07:24">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/yanchuanlab-2124414024985325858/" title="Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）"><img src="/images/2124414024985325858-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）"/></a><div class="content"><a class="title" href="/2026/11/22/yanchuanlab-2124414024985325858/" title="Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）">Google 世界模型 Genie 4 深度实测：一句话造一个能进去的世界（附 18 组提示词）</a><time datetime="2026-11-22T16:05:47.000Z" title="发表于 2026-11-22 16:05:47">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Leviwoyun-2124406181896827189/" title="Antigravity 11 篇教程合集，从入门到多 Agent 实战"><img src="/images/2124406181896827189-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Antigravity 11 篇教程合集，从入门到多 Agent 实战"/></a><div class="content"><a class="title" href="/2026/11/22/Leviwoyun-2124406181896827189/" title="Antigravity 11 篇教程合集，从入门到多 Agent 实战">Antigravity 11 篇教程合集，从入门到多 Agent 实战</a><time datetime="2026-11-22T15:34:37.000Z" title="发表于 2026-11-22 15:34:37">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/StratusResultsX-2124398008657904102/" title="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉"><img src="/images/2124398008657904102-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉"/></a><div class="content"><a class="title" href="/2026/11/22/StratusResultsX-2124398008657904102/" title="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉">花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉</a><time datetime="2026-11-22T15:02:09.000Z" title="发表于 2026-11-22 15:02:09">2026-11-22</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
