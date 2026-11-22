@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>The AI Masterclass: Why the Best Model Is Rarely the Right One | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="How to build real things with AI, and which model to use for each job: from your">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The AI Masterclass: Why the Best Model Is Rarely the Right One">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/11/EnvolDev-2120258474831704390/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="How to build real things with AI, and which model to use for each job: from your">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2120258474831704390-cover.jpg">
+<meta property="article:published_time" content="2026-11-11T04:53:07.000Z">
+<meta property="article:modified_time" content="2026-11-22T14:07:30.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@EnvolDev">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2120258474831704390-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The AI Masterclass: Why the Best Model Is Rarely the Right One",
+  "url": "https://yaoav.github.io/2026/11/11/EnvolDev-2120258474831704390/",
+  "image": "https://yaoav.github.io/images/2120258474831704390-cover.jpg",
+  "datePublished": "2026-11-11T04:53:07.000Z",
+  "dateModified": "2026-11-22T14:07:30.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/11/EnvolDev-2120258474831704390/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'The AI Masterclass: Why the Best Model Is Rarely the Right One',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">457</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">221</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2120258474831704390-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">The AI Masterclass: Why the Best Model Is Rarely the Right One</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">The AI Masterclass: Why the Best Model Is Rarely the Right One</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-11T04:53:07.000Z" title="发表于 2026-11-11 04:53:07">2026-11-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@EnvolDev（Tony）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2120258474831704390">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>How to build real things with AI, and which model to use for each job: from your first prompt to your first app to a team of agents.</p>
+<p>I don’t write code. I build by directing AI agents: 3D films, SaaS tools (online software people subscribe to), iOS and Android apps, even the desktop app I run all my agents from and the benchmark app I test every model in.</p>
+<p>Six months ago, I couldn’t do any of this. In May 2026, I knew nothing about coding or AI agents. It took me less than three months to build my first app, Laeli, and I launched it on July 21. Today I work at a really advanced level. If I can do it, anyone can.</p>
+<blockquote>
+<p><strong>Not knowing is no longer an excuse.</strong> Don’t understand something? Ask your agent. It never sighs, never judges and never gets tired of explaining. If you remember one thing from this masterclass, remember that.</p>
+</blockquote>
+<p>An AI agent is an AI that doesn’t just chat: it works on the files on your computer, runs programs and checks its own work. You’ll meet them properly at level 3.</p>
+<p>This masterclass is for anyone who wants to do the same: learn to code with AI, vibe code your first app (build it by describing it in plain words), or just get real work done. It takes you step by step: which AI to use for each job, what it really costs, how to build without writing code, and how to run a team of AI agents. No experience needed.</p>
+<p>Everything in it comes from my own work. Since September I’ve given the same tasks to more than 12 AI models, over 70 runs. That’s what a benchmark is: the same test for every model. Most were short 3D films the model had to code in Three.js (3D code that runs in a web page) and then render in 4K (turn into finished video frames); some were video games. I kept track of what each one cost and how long it took.</p>
+<p>Why films and games? They’re the fastest way to compare quality, cost and time: one look shows which model did better. That’s how I learned which model to trust with what, and how to put each one to work on real tools, apps and everything else in this masterclass.</p>
+<p>Those runs taught me one thing above all: <strong>the best model and the right model are rarely the same one.</strong></p>
+<p>My main AI model is still Claude Opus 5.5 (@claudeai), even now that Fable 5.2 is out. Why, and when it shouldn’t be yours, is in here.</p>
+<p><strong>Just out: Fable 5.2.</strong> Anthropic, the company behind Claude, released Fable 5.2 yesterday, Nov 9: its most capable public model, faster and 20% cheaper than Fable 5.1. I tested it the same day. The last part of this masterclass puts it through everything you’re about to learn, with every result, cost and time, so it comes last.</p>
+<p><strong>And one more, just in:</strong> about two hours before I posted this, Google released Gemini 4 Carbon, its strongest model. It’s already running through my benchmark. More at the end.</p>
+<p><img src="/images/HWyiipyacAAa5y2.jpg" alt="HWyiipyacAAa5y2"></p>
+<h3 id="What-you’ll-learn-in-order"><a href="#What-you’ll-learn-in-order" class="headerlink" title="What you’ll learn, in order"></a>What you’ll learn, in order</h3><p>It’s one class, from start to finish. Each part builds on the one before, so read it in order, even the parts that look too basic or too advanced. Here’s the path:</p>
+<ol>
+<li><strong>Meet the models.</strong> Who makes which AI, and what each one is good at.</li>
+<li><strong>Climb the five levels.</strong> From your first good question to running a team of AI agents.</li>
+<li><strong>Build something real.</strong> Seven steps to your first app, even if you’ve never written code.</li>
+<li><strong>Understand the cost.</strong> The six words that decide your bill, and why the cheapest model isn’t always the cheapest job.</li>
+<li><strong>Know what to pay for.</strong> Which plan to buy, and when an upgrade is worth it.</li>
+<li><strong>Pick a model for each job.</strong> Design, coding, writing, research, data, images and video.</li>
+<li><strong>Test it yourself.</strong> Did a model get worse? How to check with your own prompts.</li>
+<li><strong>Write a brief that works.</strong> The one prompt I share, taken apart piece by piece.</li>
+<li><strong>Run a team.</strong> One lead model, cheap helpers and a fresh pair of eyes to check the work.</li>
+<li><strong>Avoid costly mistakes and keep up.</strong> Seven habits, and how to stay current when model names change every month.</li>
+<li><strong>Final test: Fable 5.2.</strong> Anthropic’s newest model, checked against the rules in this guide.</li>
+</ol>
+<p>Along the way, you’ll see what I saw: the same film costing $26 or $682 depending on one setting, a half-price model run up the bigger bill, a kart-racing game balloon to $154.83, and a top model skip the job and call its image generator in 81 seconds.</p>
+<p>The cheat sheet near the end, just before the final test, puts it all on one page. It’s a reminder, not a shortcut: it only makes sense once you’ve read the rest.</p>
+<h3 id="How-to-read-my-numbers"><a href="#How-to-read-my-numbers" class="headerlink" title="How to read my numbers"></a>How to read my numbers</h3><ul>
+<li><strong>Dollars:</strong> what each run would cost at the makers’ pay-as-you-go prices (their API, the pay-per-use way developers plug a model into their own software), not what I paid. I run my work on monthly subscriptions, and part 5 explains why that matters.</li>
+<li><strong>Time:</strong> how long each run took, from my logs.</li>
+<li><strong>Same prompt</strong> for every model on each film. Each model ran in a coding app, the agent apps you’ll meet at level 3: Claude in Claude Code, GPT models in Codex, most others in OpenCode. So every result is a model plus its app.</li>
+<li><strong>From scratch, every time.</strong> Every run starts in a fresh, empty folder, and my briefs forbid importing any existing film or prebuilt scene. The model builds everything itself.</li>
+<li><strong>One shot per film.</strong> One prompt, one run: the film you see is what that run made.</li>
+<li><strong>Quotes with no name</strong> are mine, from my posts and replies on X.</li>
+</ul>
+<h3 id="Before-we-start-talk-to-your-AI-don’t-type"><a href="#Before-we-start-talk-to-your-AI-don’t-type" class="headerlink" title="Before we start: talk to your AI, don’t type"></a>Before we start: talk to your AI, don’t type</h3><p>This one habit changed my work more than any model. I don’t type to my agents. I press a button and talk, the way I’d explain the job to a person. Speaking is much faster than typing, and you naturally give more detail. For me, it multiplies my speed 10 to 20 times.</p>
+<p>My agent workspace has voice input built in. You don’t need my app: a dictation app like Wispr Flow, one of the best out there, lets you talk into any chat or coding agent.</p>
+<p>Then let an AI write the prompt for you. I built an agent that takes my rough idea, spoken or typed, and gives me back the best vibe-coding prompt possible. Mine is much more detailed and advanced, but this one is a great place to start, in any chat:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Turn my idea into a clear, complete prompt for a coding agent.</span><br><span class="line">Ask me what you need first. Then give me the prompt, ready to</span><br><span class="line">paste.</span><br><span class="line">My idea: [say it out loud, in your own words]</span><br></pre></td></tr></table></figure>
+
+<p>There’s a real before-and-after later, in “how I brief a model”.</p>
+<p>Let’s start with the cast.</p>
+<p><strong>PART 1 OF 11</strong></p>
+<h2 id="Who-makes-what-in-30-seconds"><a href="#Who-makes-what-in-30-seconds" class="headerlink" title="Who makes what, in 30 seconds"></a>Who makes what, in 30 seconds</h2><p>Think of it as casting a film. You’re the director; each maker offers a lead, a workhorse and a budget hire. Facts and prices as of Oct 30, 2026 (Fable 5.2: Nov 9; Gemini 4 Carbon: Nov 10).</p>
+<p>A price like “$8 &#x2F; $40” is per million tokens, the small chunks of text an AI reads and writes: the first number is what it reads, the second what it writes. The cost section explains why that matters.</p>
+<p>One thing that confuses everyone: the model and the app aren’t the same. The model is the brain: Opus 5.5, GPT-6.1 Sol, Gemini 4 Argon. The app is where you talk to it: Claude, ChatGPT, Codex, Gemini. Most apps let you switch between their maker’s models.</p>
+<p><img src="/images/HWyipbtaQAAqt5F.jpg" alt="HWyipbtaQAAqt5F"></p>
+<ul>
+<li><strong>Anthropic</strong> (@AnthropicAI) makes Claude. <strong>Opus 5.5</strong> is the lead: “Opus 5.5 is definitely the main model to get things done!” <strong>Sonnet 5.5</strong> has half Opus’s token price and ties it for first on the 3D-scene board of Artificial Analysis (@ArtificialAnlys), an independent site that tests AI models, but on their tests it costs about the same per task. <strong>Haiku 5.5</strong> is the budget hire. <strong>Fable 5.2</strong>, out Nov 9, is Anthropic’s most capable public model and the priciest. Fable is Anthropic’s premium line: Opus 5.5 beat the older Fable 5.1 on Anthropic’s own tests, which is why Opus became the lead. Fable 5.2 costs $8 &#x2F; $40 per million tokens: 20% cheaper than Fable 5.1 ($10 &#x2F; $50), but still twice Opus’s price. My day-one results are at the end.</li>
+<li><strong>OpenAI</strong> (@OpenAI) makes ChatGPT (@ChatGPT) and Codex, its coding agent. <strong>GPT-6 Astra</strong> is the flagship, its top model. <strong>GPT-6.1 Sol</strong> offers “near-Astra performance for complex work at a lower cost,” in OpenAI’s words. <strong>GPT-6.1 Terra</strong>, the newest, costs half of Sol per token. <strong>GPT-6 Luna</strong> is the cheapest and runs free ChatGPT.</li>
+<li><strong>Google</strong> makes Gemini (@GeminiApp; developers, @googleaidevs). <strong>Gemini 4 Argon</strong> is the flagship most people get; from Dec 1 its token price matches Opus’s. <strong>Gemini 4 Carbon</strong>, Google’s strongest, was announced Oct 28 for a small group of cyber defenders and opened up today, Nov 10: in the API, and in the Gemini app for Google AI Ultra subscribers. It launches at Argon’s price, $2 &#x2F; $10, and like Argon it moves to Opus’s $4 &#x2F; $20 on Dec 1. On Oct 30 it already topped Artificial Analysis’s overall intelligence score.</li>
+<li><strong>SpaceX Super Intelligence</strong> (@SpaceXSI), formerly xAI, makes Grok (@grok). <strong>Grok 4.7</strong> had one run in my set, too little to judge.</li>
+<li><strong>DeepSeek V4.1 Flash 1017</strong> (@deepseek_ai) has open weights, so anyone can download it. It’s the best of the Chinese models I’ve tested, and for its price, it’s amazing. <strong>Moonshot AI</strong> (@Kimi_Moonshot) makes <strong>Kimi K3.1 Pro</strong>, <strong>MiniMax</strong> (@MiniMax_AI) makes <strong>M3.1 Flash</strong>, and <strong>Meta</strong> (@AIatMeta) makes <strong>Muse Spark 1.3</strong>, which made my first night-train film.</li>
+<li><strong>Open weights to run yourself:</strong> Qwen (@Alibaba_Qwen), GLM (@Zai_org), Mistral (@MistralAI) and Google’s Gemma 4.</li>
+</ul>
+<p><strong>Watch out:</strong> names change fast. GPT-6.1 Terra replaced GPT-5.6 Terra ($2 &#x2F; $12), and Fable 5.2 replaced Fable 5.1 on Nov 9, so older advice may mean the old ones.</p>
+<p>That’s the cast. You don’t need to remember it all: most of this guide comes down to two names, Claude Opus 5.5 for design and GPT-6.1 Sol in Codex for code. Next: where you are today, and how to level up.</p>
+<p><strong>PART 2 OF 11</strong></p>
+<h2 id="Five-levels-start-where-you-are-then-climb-step-by-step"><a href="#Five-levels-start-where-you-are-then-climb-step-by-step" class="headerlink" title="Five levels: start where you are, then climb step by step"></a>Five levels: start where you are, then climb step by step</h2><p>Level 1 is for complete beginners. Level 5 is advanced: it’s how I work every day. Start where you are, get comfortable there, then climb one step at a time.</p>
+<p><img src="/images/HWyitDGaUAA2jaA.jpg" alt="HWyitDGaUAA2jaA"></p>
+<h3 id="Level-1-Ask-well"><a href="#Level-1-Ask-well" class="headerlink" title="Level 1: Ask well"></a>Level 1: Ask well</h3><p>One task per chat. Say what you want, who it’s for and how you’ll judge the answer. Allow “I don’t know,” and check any fact that matters.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Before: Write a post about our new feature.</span><br><span class="line">After:  Write a 120-word LinkedIn post announcing [feature] to</span><br><span class="line">        [small-business owners].</span><br><span class="line">        Goal: get them to book a demo. Tone: plain, no hype.</span><br><span class="line">        Give me 3 versions.</span><br><span class="line">        If you need a fact you don&#x27;t have, ask me instead of</span><br><span class="line">        guessing.</span><br></pre></td></tr></table></figure>
+
+<p>Quick win: give the same small task to two free models and compare. That’s my method in miniature.</p>
+<h3 id="Level-2-Give-it-memory"><a href="#Level-2-Give-it-memory" class="headerlink" title="Level 2: Give it memory"></a>Level 2: Give it memory</h3><p>A short file of standing instructions the AI reads at the start of every session (each new conversation), so you never repeat yourself: CLAUDE.md for Claude Code, AGENTS.md for Codex and many others (coding agents like these are level 3). In a chat app, the same idea is called custom instructions, or a project. Claude Code’s docs say keep it under about 200 lines. Three are enough to start:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Explain what you change in plain words, for a beginner.</span><br><span class="line">Do not break any functional code. No regressions.</span><br><span class="line">Ask me before deleting anything or adding a paid service.</span><br></pre></td></tr></table></figure>
+
+<p>Pasting the same instructions again? Make them a skill, a saved recipe the agent loads when needed. My low-tech version: I ask an agent to “give me a prompt of what you’ve been doing exactly, so I can give it to another agent,” and paste the answer into the next one.</p>
+<h3 id="Level-3-Hand-an-agent-a-brief"><a href="#Level-3-Hand-an-agent-a-brief" class="headerlink" title="Level 3: Hand an agent a brief"></a>Level 3: Hand an agent a brief</h3><p>A brief is the written description of the job. Coding agents (Claude Code, Codex, Google Antigravity, OpenCode) work in your project folder, run commands and check their own work. Claude Code comes with every paid Claude plan; Codex with ChatGPT Plus. To start one: install the app, open it in an empty folder, and type what you want (step by step in part 3). Give the agent a pass&#x2F;fail check: a test (a small check it can run), a build (the app starts without errors), a screenshot to match. Without one, Claude Code’s docs warn, you become “the test suite”: the one checking everything by hand.</p>
+<h3 id="Level-4-Cast-each-job"><a href="#Level-4-Cast-each-job" class="headerlink" title="Level 4: Cast each job"></a>Level 4: Cast each job</h3><p>One model per job, chosen by what the finished job costs: Opus for the look, a GPT coder for the code, a cheap model for the bulk work. Part 6 casts every job.</p>
+<h3 id="Level-5-Run-a-team"><a href="#Level-5-Run-a-team" class="headerlink" title="Level 5: Run a team"></a>Level 5: Run a team</h3><p>A lead model plans and reviews, cheap models work in parallel, and a different model checks the result. That’s where I work, and where the two big reviews happen: the deep review and the completeness review (part 9).</p>
+<p><strong>PART 3 OF 11</strong></p>
+<h2 id="Build-something-real-vibe-coding-step-by-step"><a href="#Build-something-real-vibe-coding-step-by-step" class="headerlink" title="Build something real: vibe coding, step by step"></a>Build something real: vibe coding, step by step</h2><p>The levels are how you use AI. This is how you build with it.</p>
+<p>“Vibe coding” means telling an AI what you want in plain words and letting it write the code. Andrej Karpathy (@karpathy) named it in February 2025, and Collins Dictionary made it its 2025 word of the year. The vibes get you a demo. A loop gets you something people can actually use.</p>
+<h3 id="Where-to-build-four-ways-to-use-AI"><a href="#Where-to-build-four-ways-to-use-AI" class="headerlink" title="Where to build: four ways to use AI"></a>Where to build: four ways to use AI</h3><p>People mix these up all the time, so here they are, from simplest to most powerful:</p>
+<ol>
+<li><strong>The browser.</strong> ChatGPT or Claude on their websites. Great for questions, writing and ideas. Don’t build an app here: the chat can’t work on the files on your computer.</li>
+<li><strong>The desktop app.</strong> Claude, ChatGPT or Codex installed on your computer. You can build real things here: Claude Code and Codex both run inside their desktop apps, and you can accomplish a lot. The builds tend to be simpler, though. If you want to build a really great SaaS or something more advanced, and run many agents at once, you want the next one.</li>
+<li><strong>The terminal.</strong> The text window on your computer where coding agents like Claude Code, Codex and OpenCode live. You say what you want, and the agent works in your project folder: it writes the files, runs them and checks its own work. It looks scary at first, but it’s way better to work in, and easier than it looks. This is where you build.</li>
+<li><strong>A workspace.</strong> An app that runs many agents side by side, sometimes called an ADE (agentic development environment). That’s what my agent workspace is: many terminals in one window, each with its own agent and its own task.</li>
+</ol>
+<p>The terminal also lets you plug things in. An API key lets your agent use almost any model. MCP (Model Context Protocol) is a standard way to connect your agent to other tools, like GitHub, a database or your browser.</p>
+<p><strong>Real vibe coding is multitasking.</strong> It isn’t one chat doing one thing. It’s 15, 20, 30 tasks at once: one agent builds a feature, another fixes a bug, another reviews the code, another tests a different model. That means many terminals open at the same time, each on its own job. If you want to be a real vibe coder, that’s where you’re heading. No workspace app? Open two terminal windows, start an agent in each, and give each one its own task and its own files, so they never edit the same thing.</p>
+<p><img src="/images/HWyizdHawAAbwsA.jpg" alt="HWyizdHawAAbwsA"></p>
+<h3 id="Your-first-10-minutes"><a href="#Your-first-10-minutes" class="headerlink" title="Your first 10 minutes"></a>Your first 10 minutes</h3><ol>
+<li><strong>Pick one coding agent.</strong> Claude Code comes with any paid Claude plan, Codex with ChatGPT Plus. Install it from the maker’s official site and sign in with your plan.</li>
+<li><strong>Make an empty folder,</strong> called something like my-first-app, and open it in the app. In the terminal, you go into the folder and type “claude” or “codex”.</li>
+<li><strong>Type your first job:</strong> “Build a simple to-do list page I can open in my browser. Tell me how to open it.”</li>
+<li><strong>Read, then allow.</strong> The agent asks before it creates files or runs a command. Read what it wants to do, then allow it.</li>
+<li><strong>Stuck?</strong> Copy the exact error and paste it back: “What does this mean, and what do I do?”</li>
+</ol>
+<p>Start in the desktop app. Move to the terminal when you want several agents at once.</p>
+<h3 id="Seven-steps-from-idea-to-shipped"><a href="#Seven-steps-from-idea-to-shipped" class="headerlink" title="Seven steps from idea to shipped"></a>Seven steps from idea to shipped</h3><p><img src="/images/HWyi2okaoAA4nRv.jpg" alt="HWyi2okaoAA4nRv"></p>
+<ol>
+<li><strong>Pick one small, real problem.</strong> Yours or a friend’s: a tool for your job, a page for your business, a tracker, a small game. Small enough to finish in a weekend.</li>
+<li><strong>Write a one-page brief.</strong> What it does, who it’s for, what “done” looks like. A seven-line template, with an example, is in part 8.</li>
+<li><strong>Ask for the plan first.</strong> “Tell me your plan and which files you’ll create. Don’t build yet.” Fixing a plan is cheaper than fixing code.</li>
+<li><strong>Build one piece at a time.</strong> One feature, then open it and click everything yourself. If something breaks, paste the exact error back.</li>
+<li><strong>Save every working step.</strong> Ask the agent to commit (save a snapshot) to git each time something works. Git keeps every version on your computer, so any bad change can be undone in one step. GitHub is different: a website that keeps a copy online, private if you want, so nothing is lost if your computer dies. Ask: “Set up git and a private GitHub repository for this project.”</li>
+<li><strong>Have a different model review it.</strong> “You didn’t build this. Find the bugs, the security holes and anything that breaks with real users.” The full reviewer prompt is in “Run a team.” Only one plan? A fresh session of the same agent works too: it didn’t watch the build.</li>
+<li><strong>Put it online, then in front of one real person.</strong> Ask your agent: “Put this online so I can share a link. Use a free host, and walk me through every step.” Then watch someone’s first five minutes. You’ll learn more than from a week of prompting.</li>
+</ol>
+<p><strong>Protect what already works.</strong> Every time you ask for a change, add this line: “Do not break any functional code. No regressions.” A regression is when a new change breaks something that used to work. It’s one of my favorite lines to give an agent.</p>
+<p><strong>When it breaks, don’t panic.</strong> Paste the exact error, not “it doesn’t work.” If two fixes in a row fail, say: “Go back to the last version that worked.” That’s what the git snapshots are for. Then start a fresh chat and explain the problem from the beginning.</p>
+<p><strong>Learn to code while it builds.</strong> You don’t need to write code to start learning it. After each step, ask: “Explain what you changed and why, in plain words, for a beginner.” Read the answer every time, and code slowly stops looking like noise.</p>
+<p><strong>Keep secrets out of the chat.</strong> API keys (the passwords apps use to reach paid services), passwords and payment keys never go in a prompt. Keep them in a private settings file called .env, and make sure the agent lists it in .gitignore so it never gets uploaded to GitHub. Anything that takes logins or payments gets a security review from a fresh model before launch. Not sure what a .env file or .gitignore is? Ask your agent: “Explain .env and .gitignore to me like I’m a beginner.”</p>
+<p><strong>What I build this way:</strong> every film in this guide, my SaaS tools, my iOS and Android apps, and the two Mac apps I work in every day:</p>
+<ul>
+<li><strong>My agent workspace,</strong> the desktop app I run all my agents from. Claude Code, Codex and OpenCode sit side by side in one window, each in its own pane, with each agent’s tokens, estimated cost and usage limits in one place. Claude Code and Codex run on my two subscriptions. OpenCode is how I reach every other model: I connect it to OpenRouter, one account that gives access to almost any AI model from companies I don’t subscribe to, like DeepSeek, Kimi, MiniMax, Gemini or Muse, paid per use.</li>
+<li><strong>My benchmark app,</strong> built to run tests like the ones in this guide and compare the films side by side. You’ll see it in part 7.</li>
+</ul>
+<p>I didn’t write the code for either one. I directed it.</p>
+<p>Every level up, and every build, burns tokens. So before we cast anyone, here’s what you’re paying for.</p>
+<p><strong>PART 4 OF 11</strong></p>
+<h2 id="Six-words-that-decide-what-AI-costs-you-even-on-a-subscription"><a href="#Six-words-that-decide-what-AI-costs-you-even-on-a-subscription" class="headerlink" title="Six words that decide what AI costs you (even on a subscription)"></a>Six words that decide what AI costs you (even on a subscription)</h2><p><strong>1. Tokens.</strong> Chunks of text. You pay for what you send, what the model writes and its hidden thinking, which Anthropic, OpenAI and Google bill as output: the second, pricier number in a price like “$4 &#x2F; $20”. On a subscription, tokens drain your limit instead: Anthropic says how fast you hit it “depends on the model you use, how long your chats are, and how large your files are.”</p>
+<p><strong>From my runs:</strong> a 20-second rotor animation took Claude Opus 5.5 about 20.8 million tokens. Only 1.1% were output, yet output was about 41% of the bill.</p>
+<p><strong>2. Context window.</strong> The model’s working memory for one session: about 1M tokens for current Claude and GPT-6 models in the API, often less in chat apps. Bigger isn’t better: accuracy drops as it fills (Anthropic calls it “context rot”), and every turn resends the whole conversation. Fix: a fresh chat per task.</p>
+<p><strong>3. Effort.</strong> How hard the model thinks before answering. The dial runs low, medium, high, Extra High (xhigh) and max. In Claude Code you change it by typing &#x2F;effort; in other apps, look next to the model picker. On SWE-bench Pro, a public set of real-world bug fixes, Anthropic reported that Opus 5.5 solved 87.4% of tasks at low effort for $0.11 each, and 96.7% at Extra High for $0.74. Each step up buys less. Opus defaults to medium; Anthropic pairs Extra High with agent jobs over 30 minutes and low with sub-agents (helper agents, covered in “Run a team”), but says to test on your own work. My Claude and OpenAI runs mostly used Extra High, one step below max. And not just my tests: everything I build, my apps, my SaaS tools, everything I use, runs on Extra High. For me, it’s the best overall for quality, cost and time.</p>
+<p><strong>From my runs:</strong> one film, four effort settings. My post on it drew 280K+ views, because everyone wants to know if effort matters.</p>
+<p><strong>Same model. Same prompt. $26 at High. $682 at Ultra.</strong></p>
+<p><video controls preload="metadata" poster="/images/2120248653067739136-poster.jpg" src="/videos/2120248653067739136.mp4"></video></p>
+<p>Cathedral of Ice, same prompt: Claude Opus 5.5 at High, Extra High (xhigh), Max and Ultra</p>
+<p>High: $26.01 · 2h 17m. Extra High: $45.97 · 3h 11m. Max: $84.93 · 3h 38m. Ultra: $681.91 · 10h 48m. Ultra cost 26 times High and 8 times Max, for one 25-second film. Ultra here means max effort plus ultracode, a Claude Code mode that puts whole teams of agents on the build and the review, not the Ultra plan.</p>
+<p>My take: “Ultra looked best to me, but the improvement didn’t justify the extra cost and time.” Extra High is my sweet spot for quality, time and money, so it’s what I pick. GPT-6 Astra showed the same climb at a smaller scale on my Alpine Gold film: $8.99 at High, $59.75 at Ultra.</p>
+<p>One caveat: the Extra High film ran on Oct 29. High, Max and Ultra ran together on Nov 3 and shared one Mac’s graphics chip, which slowed their renders.</p>
+<p><strong>4. Cached input.</strong> Because every turn resends the whole conversation (see #2), most of what an agent reads is a repeat. Makers keep a copy, the cache, and charge a steep discount for re-reading it: $0.20 per million tokens on Opus instead of $4. In my runs it was 97 to 99% of what the model read. Without the cache discount, the same tokens on that rotor run would cost about $87 instead of roughly $11.70.</p>
+<p><img src="/images/HWyjBCvawAAqO0o.jpg" alt="HWyjBCvawAAqO0o"></p>
+<p><strong>5. Subscription vs API.</strong> A flat monthly plan vs paying per token. My figures are the API version: “I was running my sub! But you still get the rundown for what the API would have cost.”</p>
+<p><strong>6. Harness.</strong> The program wrapped around the model, like Claude Code or Codex. An analysis by Epoch AI, an independent research group, found the harness has “the single biggest impact” on benchmark scores. It also decides how much gets sent each turn, so the same model can cost differently in different apps. That’s why my results are a model plus its app.</p>
+<p>Now for the number that fools almost everyone.</p>
+<h3 id="Price-the-finished-job-not-the-token"><a href="#Price-the-finished-job-not-the-token" class="headerlink" title="Price the finished job, not the token"></a>Price the finished job, not the token</h3><p>Anthropic’s own cost guide: “Compare models on cost per completed task, not per token, because you pay for completed tasks.”</p>
+<p><strong>From my runs:</strong> GPT-6 Astra’s tokens cost 2.5x Opus 5.5’s, and 5x on cached reads, which are most of what an agent reads. Yet on the six clean head-to-head briefs in my October table, Astra was cheaper and faster every time. Opus made the better film every time.</p>
+<p><img src="/images/HWyjEbgbMAAlMMs.jpg" alt="HWyjEbgbMAAlMMs"></p>
+<p>Why? Appetite. On a four-stroke engine brief, Opus read 14 times as many cached tokens as Astra and wrote 6 times as many. Artificial Analysis sees the same pattern: about 173K output tokens per task for Opus and 52K for Astra, both at max effort.</p>
+<p>Same inside one company. GPT-6.1 Terra’s tokens cost half of GPT-6.1 Sol’s, yet on Alpine Gold Terra came to $4.90 and Sol to $3.62. Terra pushed 46.1M tokens to Sol’s 17.7M, and 82 of its requests (each call the app makes to the model) ran past 272K tokens, where OpenAI charges more per token.</p>
+<p><video controls preload="metadata" poster="/images/2120248884069122048-poster.jpg" src="/videos/2120248884069122048.mp4"></video></p>
+<p>Alpine Gold, same prompt: GPT-6.1 Sol vs Claude Opus 5.5 vs GPT-6.1 Terra</p>
+<p>Against Opus, Terra was still far cheaper. Against Sol, it wasn’t.</p>
+<p><strong>Watch out:</strong> Claude Haiku 5.5’s $0.10 &#x2F; $0.50 price holds only under 100K tokens per request; above that it’s $0.50 &#x2F; $2.50. On my Alpine Gold run, 227 of its 230 requests went past that line: $6.93 instead of $1.41.</p>
+<p>My rule for when a pricier model only adds the last 20% of quality: “Depends what’s in that last 20%. If it’s extra visual polish, I can live without it. If it’s hours of fixes before shipping, I’ll pay more upfront.”</p>
+<p>The flip side: when a cheap model is good enough, run several and keep the best. “At roughly 50 cents a run, you can easily run several at the same time.”</p>
+<p>Which raises the question most people actually have: what should I pay for?</p>
+<p><strong>PART 5 OF 11</strong></p>
+<h2 id="What-to-pay-for"><a href="#What-to-pay-for" class="headerlink" title="What to pay for"></a>What to pay for</h2><p><img src="/images/HWyjRjSa8AEmdWz.jpg" alt="HWyjRjSa8AEmdWz"></p>
+<p><strong>$0 to start.</strong> Free Claude gives you Sonnet and Haiku, not Opus. Free ChatGPT runs GPT-6 Luna. Free Gemini runs Flash-Lite. Fine for drafts. For facts, double-check: on Artificial Analysis’s test, when Luna didn’t know an answer, it guessed 79% of the time.</p>
+<p><strong>About $20 a month: one plan, matched to your main job.</strong></p>
+<ul>
+<li>Design and UI (user interface: the screens and buttons people use) → Claude Pro ($20). Adds Opus 5.5 and Claude Code.</li>
+<li>Code → ChatGPT Plus ($20). Codex with GPT-6.1 Sol, Terra and Luna. Astra is capped at an estimated 5 to 45 messages every 5 hours, so Sol is the everyday model.</li>
+<li>You live in Google’s apps → Google AI Pro ($19.99, @GoogleAI). Gemini 4 Argon.</li>
+</ul>
+<p>Most plans have usage limits that refill every few hours and every week, and some models get their own share.</p>
+<p><strong>$100 to $200, only when you hit limits every day.</strong> Claude Max ($100) and Ultra ($200) now include the same amount in monthly API credits, and Ultra drops the 5-hour limit for verified accounts, keeping only a weekly one. ChatGPT Pro ($100, $200 or $500) drops the 5-hour cap. Google AI Ultra starts at $99.99, and it’s the plan that gets Gemini 4 Carbon in the Gemini app.</p>
+<p><strong>A team?</strong> Claude Team is $25 a seat ($20 billed annually) and doesn’t train on your content by default. ChatGPT Business is $25 a user ($20 billed annually).</p>
+<p><strong>The API</strong> is for building a model into your own product or running bulk jobs: route each job to the cheapest model that passes it. Batch jobs, the ones that don’t need an answer right away, are half price at Anthropic, OpenAI and Google.</p>
+<h3 id="My-own-split-Claude-for-design-Codex-for-code-mostly-on-subscriptions"><a href="#My-own-split-Claude-for-design-Codex-for-code-mostly-on-subscriptions" class="headerlink" title="My own split: Claude for design, Codex for code, mostly on subscriptions."></a>My own split: Claude for design, Codex for code, mostly on subscriptions.</h3><h3 id="“I-don’t-have-that-kind-of-money”"><a href="#“I-don’t-have-that-kind-of-money”" class="headerlink" title="“I don’t have that kind of money”"></a>“I don’t have that kind of money”</h3><p>I read this in my comments every day, so let’s be clear. The dollar figures in this masterclass are API estimates: what each run would cost if you paid per token with API credits. That’s not what I pay.</p>
+<p>I run my work through my subscriptions. Anyone on Claude Max ($100 a month) or Ultra ($200 a month) has more than enough to create anything they want. I’m on Ultra, and with Opus 5.5 I’ve never run out of usage, never even come close. Fable 5.2 is another story, and you’ll see why in the final test.</p>
+<p>Today, one Claude subscription and one ChatGPT subscription for Codex cover everything I do. At one point, I was paying for three top-tier Claude subscriptions plus Codex. Using AI keeps getting cheaper.</p>
+<p>Is $100 or $200 a month a lot? Compare it with what you can build: apps, tools, films, a whole business, and the money they can make you. And your plans go further when you match models to jobs, as you’ll see next. In Codex, for example, GPT-6 Astra brings the big ideas, and GPT-6.1 Sol runs an army of agents that gets the work done. For me, it’s well worth it. Start with one $20 plan, and move up when you hit the limits every day.</p>
+<p>So who gets which job? Here’s how I cast them.</p>
+<p><strong>PART 6 OF 11</strong></p>
+<h2 id="A-pick-for-every-job-and-what-to-skip"><a href="#A-pick-for-every-job-and-what-to-skip" class="headerlink" title="A pick for every job, and what to skip"></a>A pick for every job, and what to skip</h2><p>Each job gets a pick, a cheaper pick and what to skip, from my runs where I have them and independent leaderboards where I don’t (leaderboards as of Oct 30, before Fable 5.2 and Gemini 4 Carbon’s full release).</p>
+<h3 id="Design-and-UI-pay-for-the-lead-when-the-look-is-the-product"><a href="#Design-and-UI-pay-for-the-lead-when-the-look-is-the-product" class="headerlink" title="Design and UI: pay for the lead when the look is the product"></a>Design and UI: pay for the lead when the look is the product</h3><p>Whenever people will judge the work with their eyes, I cast Claude Opus 5.5. “That’s why we use Opus 5.5. Great at design!”</p>
+<p><strong>From my runs:</strong> here’s the Lighthouse brief. Same prompt, four top AI models.</p>
+<p><video controls preload="metadata" poster="/images/2120249111538786304-poster.jpg" src="/videos/2120249111538786304.mp4"></video></p>
+<p>The Lighthouse brief, same prompt, four frontier models side by side: Gemini 4 Argon, Claude Sonnet 5.5, Claude Opus 5.5, GPT-6 Astra</p>
+<p>The best film, my call, came from Opus: $53.57. Gemini 4 Argon (@GoogleDeepMind) made a good one for $6.30, about 8.5x less. Even after Argon’s introductory price doubles on Dec 1, Opus would still cost about 4x more.</p>
+<p>That bill was the outlier: most single-session Opus scenic films (one agent working alone) cost $18 to $32 and took about 1.5 to 3 hours. So why pay for Opus? In those six head-to-heads with GPT-6 Astra from part 4, it made the better film every time, and for visual work the better film is the job. “Opus is so good I wouldn’t mind paying double.”</p>
+<p>The boards agree: #1 on @arena’s WebDev board, where people vote blind, and on Artificial Analysis’s Code2Video.</p>
+<p><strong>Use it like this:</strong> without direction, Anthropic says, Opus “falls back on a few default styles,” so name the exact patterns you don’t want. Claude Design comes with every Claude plan, Free included.</p>
+<p>Sonnet 5.5 ties Opus on Artificial Analysis’s 3D board but isn’t reliably cheaper per job. Gemini 4 Argon is: a fraction of Opus per film in my runs, and still cheaper per task on Artificial Analysis at its full December price. As I put it in one reply: “Opus gets my vote for the scenery. Argon gets my wallet’s vote.”</p>
+<p><strong>Pick:</strong> Claude Opus 5.5 · <strong>Cheaper:</strong> Gemini 4 Argon · <strong>Skip:</strong> Haiku 5.5 for open-ended visuals</p>
+<h3 id="Coding-and-debugging-a-GPT-coder-and-a-different-model-to-check-it"><a href="#Coding-and-debugging-a-GPT-coder-and-a-different-model-to-check-it" class="headerlink" title="Coding and debugging: a GPT coder, and a different model to check it"></a>Coding and debugging: a GPT coder, and a different model to check it</h3><p>My split: “Claude mostly for UI and design, and Codex&#x2F;GPT for coding and debugging.” And the cross-check: “I’ve been using GPT to review Opus’s work lately, and it keeps catching issues.” Is that the Opus “nerf” people talk about, a model quietly made worse? More on that in part 7.</p>
+<p><video controls preload="metadata" poster="/images/2120249205851836416-poster.jpg" src="/videos/2120249205851836416.mp4"></video></p>
+<p>A working four-stroke engine cutaway, same prompt: Claude Opus 5.5, GPT-6.1 Terra, GPT-6 Astra, DeepSeek V4.1 Flash 1017</p>
+<p>Opus $21.81 in 2h 00m · Astra $7.33 in 55m · Terra $0.43 in 9m · DeepSeek ran on OpenCode’s free version of V4.1 Flash: $0.36 to $0.51 at API rates, 1h 54m of build time.</p>
+<p>When I posted it, I said DeepSeek embarrassed everyone, and on price it did. On the engine itself: “Opus got it right.” On precise mechanical work, being right is what you pay for.</p>
+<p>Both camps are strong; my split is a preference. Claude Code with Opus 5.5 tops Artificial Analysis’s Coding Agent Index. In Codex, Sol nearly matches Astra there for about a fifth of the cost.</p>
+<p><strong>Use it like this:</strong> ask for the command the agent ran and its output. Claude Code’s docs warn that “‘All tests pass’ on its own tells you very little.” A reviewer prompt is in “Run a team.”</p>
+<p><strong>Pick:</strong> Codex with GPT-6.1 Sol, or Astra for the hardest jobs; Claude Code with Opus 5.5 if you live in Claude · <strong>Cheaper:</strong> DeepSeek V4.1 Flash 1017 · <strong>Skip:</strong> letting the coder be its own only reviewer</p>
+<h3 id="Writing-test-two-models-on-your-own-draft"><a href="#Writing-test-two-models-on-your-own-draft" class="headerlink" title="Writing: test two models on your own draft"></a>Writing: test two models on your own draft</h3><p>My films can’t test writing. Anthropic says Opus 5.5 “communicates more naturally”; OpenAI pitches Terra for “clear, natural writing.” On Arena’s text board, where people vote blind on chat answers, Gemini 4 Carbon (preliminary), Gemini 4 Argon and Opus 5.5 lead. Terra isn’t rated there yet. Give both models your draft, your reader and your goal, ask them to tighten it in your voice and list every claim to double-check, then keep the better one.</p>
+<p><strong>Pick:</strong> Opus 5.5, or Terra (Codex, ChatGPT Work and the API, not regular ChatGPT chat), whichever wins on your draft · <strong>Cheaper:</strong> Terra · <strong>Skip:</strong> picking a writer off a coding leaderboard</p>
+<h3 id="Research-some-top-models-bluff-half-the-time"><a href="#Research-some-top-models-bluff-half-the-time" class="headerlink" title="Research: some top models bluff half the time"></a>Research: some top models bluff half the time</h3><p>Opus 5.5 tops Artificial Analysis’s GDPval rating, which tests real office work (narrowly ahead of Kimi K3.1 Pro), and all six of its domain scores, from finance to healthcare.</p>
+<p><strong>Watch out:</strong> smart isn’t careful. Artificial Analysis’s Omniscience test counts how often a model guesses when it doesn’t know. On current data, Gemini 4 Argon guesses about 4% of the time; Opus 5.5 and GPT-6 Astra, about 50%.</p>
+<p><strong>Pick:</strong> Opus 5.5 to reason over sources you hand it · <strong>Cheaper per task:</strong> Gemini 4 Argon, which guesses least from memory · <strong>Skip:</strong> GPT-6 Luna for facts you can’t check</p>
+<h3 id="Data-upload-the-file-Pasted-it-scored-7-of-25"><a href="#Data-upload-the-file-Pasted-it-scored-7-of-25" class="headerlink" title="Data: upload the file. Pasted, it scored 7 of 25."></a>Data: upload the file. Pasted, it scored 7 of 25.</h3><p>In Anthropic’s test on an earlier Sonnet, a 1,862-row spreadsheet pasted into the prompt got 7 of 25 answers right for $5.01. Uploaded and queried with code: 25 of 25 for $0.40. In a chat app, upload the file and ask it to use code; free Claude can.</p>
+<p><strong>Pick:</strong> an app or agent that runs code on your file · <strong>Skip:</strong> pasting the spreadsheet</p>
+<h3 id="Cheap-models-7x-cheaper-can-mean-7x-slower"><a href="#Cheap-models-7x-cheaper-can-mean-7x-slower" class="headerlink" title="Cheap models: 7x cheaper can mean 7x slower"></a>Cheap models: 7x cheaper can mean 7x slower</h3><p>Sorting, extraction, routing, summaries: Claude Haiku 5.5 and GPT-6 Luna are built for that (mind Haiku’s 100K-token line).</p>
+<p><strong>From my runs:</strong> wrong job, wrong result. Haiku came last on Alpine and Eiffel, both open-ended scenes, at Extra High.</p>
+<p>On my helicopter-rotor brief, DeepSeek V4.1 Flash 1017 took 55m for $0.48. Astra: 55m, $7.52. Opus: 57m, $11.70. DeepSeek came last on looks, but it wasn’t slower.</p>
+<p>On its big scenery films, though, it took 2h 40m to 4h 38m. Space Train cost $2.08: about 7x cheaper than Astra, and about 7x slower. Whether that’s a bargain depends on what an hour of waiting is worth to you. For me, at that price, it’s amazing: a full 3D film for about two dollars is insane. And “free” isn’t free: four of MiniMax M3.1 Flash’s five films on its free version took about five hours each.</p>
+<p><strong>Pick:</strong> Haiku 5.5 or GPT-6 Luna for short jobs, DeepSeek V4.1 Flash 1017 if you can wait · <strong>Cheaper:</strong> the Batch API, half price · <strong>Skip:</strong> small models for open-ended creative work</p>
+<h3 id="Private-and-local-run-open-weights-on-your-own-machine"><a href="#Private-and-local-run-open-weights-on-your-own-machine" class="headerlink" title="Private and local: run open weights on your own machine"></a>Private and local: run open weights on your own machine</h3><p>“Local” means the AI runs on your own computer. No internet needed, and nothing you type ever leaves your machine. That’s what you want for private documents, client data, or working on a plane. “Open weights” means the maker lets anyone download the model, so you can run it yourself. People often call it “open source,” but that’s not quite the same: you get the finished model, not the recipe and data used to train it.</p>
+<p>Ollama (@ollama) and LM Studio run open-weight models on your own computer for free. Running open weights yourself, or on a host you trust, is the only way to keep prompts entirely off a model maker’s servers. Laptop-class options include Google’s Gemma 4, Qwen3.8-27B and Meta’s Muse Glimmer 30B (fits a Mac with 32GB of memory; the B is the model’s size, in billions).</p>
+<p>The price of privacy: as of Oct 30, the best open-weight models score 32 on Artificial Analysis’s index, against 59 for the leader, and they need a server. Laptop-sized ones score lower (Qwen3.8-27B: 20).</p>
+<p>For scale: Opus and GPT run on racks of specialized AI chips in giant data centers. Running something like them at home would take a room full of servers, a bigger power line and a very understanding electricity bill. Your laptop runs the small cousins. They’re good for private drafts, summaries and simple code, not for building your next app.</p>
+<p><strong>Pick:</strong> Gemma 4 or Qwen3.8-27B via Ollama or LM Studio · <strong>Skip:</strong> expecting flagship quality offline</p>
+<h3 id="Images-and-video-generate-it-or-code-it"><a href="#Images-and-video-generate-it-or-code-it" class="headerlink" title="Images and video: generate it, or code it"></a>Images and video: generate it, or code it</h3><p><strong>Generated</strong> means words straight to pixels: fast, photoreal, less control. <strong>Coded</strong> means the model writes the scene and renders it frame by frame, like my benchmarks: “Everything is generated by the LLM. Everything is coding.” (LLM: large language model, the kind of AI behind ChatGPT and Claude.)</p>
+<p>For generated video, the top of Artificial Analysis’s board (Nov 7) is a near tie: Alibaba’s Wan 3.0 is first, and ByteDance’s Seedance 2.5, the better-known name, is in the same top group. Seedance is also the priciest of them, about $34 a minute against $12 for Wan. For images (Oct 30), OpenAI’s GPT Image models lead; Google’s Nano Banana 2.1 costs about a sixth as much.</p>
+<p><strong>Watch out:</strong> say which method is allowed. On my still-image brief, Astra called its built-in image generator instead of building the scene (81 seconds, $0.79 in agent tokens plus the image tool’s fee). Grok 4.7 was asked for Three.js and answered in Blender, a separate 3D app.</p>
+<p><strong>Pick:</strong> coded with Opus 5.5 for control (mine); Seedance 2.5 or Wan 3.0 for photoreal clips · <strong>Cheaper:</strong> HeyGen Video 1 or FLUX 3 Max, also in the top six, at $2.40 and $4.35 a minute; Nano Banana 2.1 for images · <strong>Skip:</strong> letting the model pick the method</p>
+<p>Every pick above assumes a model stays the same from month to month. Two of my most-viewed posts asked whether Opus 5.5 did.</p>
+<p><strong>PART 7 OF 11</strong></p>
+<h2 id="Did-Opus-5-5-get-nerfed-What-I-saw-and-what-my-logs-show"><a href="#Did-Opus-5-5-get-nerfed-What-I-saw-and-what-my-logs-show" class="headerlink" title="Did Opus 5.5 get nerfed? What I saw, and what my logs show"></a>Did Opus 5.5 get nerfed? What I saw, and what my logs show</h2><p>Those two posts asked whether Opus 5.5 had been “nerfed”: quietly made worse after launch. Opus 5.5 came out Sep 22; my “launch films” are from that week. They drew 364K and 264K views. My position today: “We thought it had been nerfed a little bit.”</p>
+<p><video controls preload="metadata" poster="/images/2120249321606336512-poster.jpg" src="/videos/2120249321606336512.mp4"></video></p>
+<p>Eiffel Tower, Claude Opus 5.5: Oct 3 on top (my 1.8 KB brief) vs the launch film (built from a 10.9 KB brief Opus wrote itself)</p>
+<h3 id="What-I-saw"><a href="#What-I-saw" class="headerlink" title="What I saw"></a>What I saw</h3><p>I preferred the launch films, on the Eiffel Tower and the Night Train. On the train, it was the locomotive detail, the warm window lighting, the headlight beams and the night atmosphere. Other people may reasonably prefer the newer forest or geometry. That part is taste. My post also said it burns tokens faster.</p>
+<h3 id="What-my-logs-show"><a href="#What-my-logs-show" class="headerlink" title="What my logs show"></a>What my logs show</h3><ol>
+<li><strong>A different brief at launch.</strong> For the Eiffel launch run, Opus worked from a 10.9 KB brief it wrote itself. Every later run used my 1.8 KB one. Not the same test.</li>
+<li><strong>Same brief, very different films.</strong> On the identical Eiffel brief, the Oct 21 film placed 1st of the 11 Eiffel films in my October ranking, across all models, and the Oct 3 film 7th, at $20.77 vs $17.97. Same model, same brief, 1st and 7th.</li>
+<li><strong>Both flagships got pricier.</strong> On the Night Train, same prompt both times, Opus went from $5.53 at launch to $21.80 on Oct 3, with one revision I asked for. The launch figure is from my notes; that log, and its effort setting, are gone. GPT-6 Astra went from $5.18 to $20.50 on Oct 5, also with one revision. Both about 4x.</li>
+<li><strong>The tool changed too.</strong> Claude Code updates often (Opus 5.5 needs version 2.1.280 or later), and my Oct 21 run used 2.1.306.</li>
+</ol>
+<p>Astra’s rerun also cost about 4x more, and there my eye went the other way:</p>
+<p><video controls preload="metadata" poster="/images/2120249411267915776-poster.jpg" src="/videos/2120249411267915776.mp4"></video></p>
+<p>GPT-6 Astra’s Night Train: the Oct 5 rerun (top) vs the launch film, both from the Night Train prompt shared below</p>
+<p>“Honestly? I don’t see a nerf here. If anything, Astra looks much better.”</p>
+<p>Different briefs, one sample per date, revisions, tool updates, and two makers’ costs rising together. My data can’t prove a nerf, and it can’t rule one out.</p>
+<p><img src="/images/HWyjrogagAAe4Od.jpg" alt="HWyjrogagAAe4Od"></p>
+<h3 id="What-others-found"><a href="#What-others-found" class="headerlink" title="What others found"></a>What others found</h3><ul>
+<li><strong>An independent daily test</strong> of Opus 5.5 through a frozen version of Claude Code (78 fixed reasoning and math questions a day since Sep 24) has shown no measurable change in its first two 10-day windows. But it only catches drops of about 6.6 points or more, and in validation it couldn’t tell Opus 5 from Opus 5.5.</li>
+<li><strong>Real slumps happen.</strong> OpenAI reportedly traced GPT-6 Astra’s September dip to three bugs, not a weaker model, and fixed them by Sep 12.</li>
+<li><strong>Anthropic’s standing line,</strong> from a September 2025 postmortem on earlier bugs: it never reduces model quality “due to demand, time of day, or server load.” No statement specific to Opus 5.5 has surfaced.</li>
+<li><strong>By design,</strong> Opus 5.5 hands most cybersecurity tasks to the older Claude Opus 4.8 (routine bug-fixing excepted), which can feel like a change.</li>
+</ul>
+<p>Opus is still my personal favorite. When someone replied that no one can beat Opus 5.5, my answer was: “That’s not the point. The point is to keep it at the best of its capabilities.”</p>
+<h3 id="Test-it-yourself"><a href="#Test-it-yourself" class="headerlink" title="Test it yourself"></a>Test it yourself</h3><ol>
+<li><strong>Freeze the brief.</strong> Keep the exact file.</li>
+<li><strong>A fresh, empty folder</strong> for every run.</li>
+<li><strong>Same tool version, same effort.</strong> Write both down.</li>
+<li><strong>Three or more runs per date.</strong> Log cost, tokens and time.</li>
+<li><strong>Judge blind.</strong> Hide the model and the date; let other people rank.</li>
+</ol>
+<p>I built my benchmark app to handle most of this for me. I pick a saved prompt, the models and their effort, and every model gets its own fresh, empty folder, with the prompt kept exactly as written. When the films are done, it plays them side by side, in sync, so I can compare them down to a single frame.</p>
+<p><img src="/images/HWyjvTXagAApE_n.jpg" alt="HWyjvTXagAApE_n"></p>
+<p>Step one is a frozen brief. Here’s the one I share.</p>
+<p><strong>PART 8 OF 11</strong></p>
+<h2 id="The-one-benchmark-prompt-I-share-and-how-I-brief-a-model"><a href="#The-one-benchmark-prompt-I-share-and-how-I-brief-a-model" class="headerlink" title="The one benchmark prompt I share, and how I brief a model"></a>The one benchmark prompt I share, and how I brief a model</h2><p>This brief started from my first night-train film, made by Muse Spark 1.3. I gave that film to a model as the reference, the model wrote the brief below, and I froze it.</p>
+<p>The idea is the same text for every model. Later briefs add “critical” sections aimed at failures I’d already seen.</p>
+<p>My other benchmark briefs are private, and far longer and more detailed: exact physics, camera rules, timed beat sheets. The Space Train brief alone runs about 10,000 characters.</p>
+<p><strong>Where to paste it:</strong> a coding agent (Claude Code, Codex or OpenCode) opened in an empty folder, so it can build the scene, render the frames and save the MP4.</p>
+<p><strong>What to expect:</strong> GPT-6 Astra built its launch film from this exact text in about 20 minutes, for $5.18 in API-equivalent tokens. On a subscription, it comes out of your usage limit instead.</p>
+<p>No reference video? Delete “based on the attached night-train reference”; the rest stands on its own.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">Create a cinematic Three.js animation based on the attached</span><br><span class="line">night-train reference. Deliver a finished MP4 exactly 25 seconds</span><br><span class="line">long, at 3840 × 2160, 30 fps.</span><br><span class="line"></span><br><span class="line">Preserve the scene&#x27;s atmosphere: a passenger train with warm</span><br><span class="line">illuminated windows crossing a curved stone viaduct through a</span><br><span class="line">mountainous pine forest at night. Keep the stylized, faceted</span><br><span class="line">aesthetic, with richer geometry and clearly visible details.</span><br><span class="line"></span><br><span class="line">VISIBILITY AND LIGHTING</span><br><span class="line">Use cool blue moonlight, gentle ambient fill, and soft shadows.</span><br><span class="line">Keep detail visible in the train body, trees, bridge arches, and</span><br><span class="line">mountains. Avoid crushed blacks. Add subtle rim lighting to</span><br><span class="line">separate overlapping silhouettes. Balance the warm windows and</span><br><span class="line">headlight so their glow does not obscure nearby surfaces. Use</span><br><span class="line">restrained haze primarily in the distance.</span><br><span class="line"></span><br><span class="line">TREES</span><br><span class="line">Build recognizable pine trees with visible trunks, layered</span><br><span class="line">branches, irregular foliage clusters, and varied heights.</span><br><span class="line">Arrange them in natural groups with gaps and depth. Nearby trees</span><br><span class="line">should have enough geometry to reveal their structure.</span><br><span class="line"></span><br><span class="line">RAILS AND BRIDGE</span><br><span class="line">Clearly model both steel rails, wooden sleepers, fasteners, and</span><br><span class="line">gravel ballast. Add subtle moonlit reflections along the</span><br><span class="line">railheads. Show stone blocks, joints, parapets, and</span><br><span class="line">architectural depth in the viaduct. Keep the rails visible from</span><br><span class="line">the camera angle.</span><br><span class="line"></span><br><span class="line">MOUNTAINS</span><br><span class="line">Create distinct ridgelines, rock faces, ledges, and crevices.</span><br><span class="line">Use varied rock colors and directional lighting to reveal their</span><br><span class="line">shape. Separate foreground, middle-distance, and distant</span><br><span class="line">mountains with progressively softer contrast.</span><br><span class="line"></span><br><span class="line">TRAIN</span><br><span class="line">Model a recognizable locomotive and passenger carriages with</span><br><span class="line">visible wheels, bogies, couplings, doors, window frames, roof</span><br><span class="line">details, and subtle panel seams. Each carriage must follow the</span><br><span class="line">curved track naturally, with wheels aligned to the rails and</span><br><span class="line">consistent spacing.</span><br><span class="line"></span><br><span class="line">CAMERA — ONE CONTINUOUS SHOT</span><br><span class="line">0–6 seconds: elevated three-quarter view establishing the train,</span><br><span class="line">curved viaduct, forest, and mountains.</span><br><span class="line">6–19 seconds: smoothly move closer and track alongside the</span><br><span class="line">train, keeping rails, carriage details, and nearby trees</span><br><span class="line">readable.</span><br><span class="line">19–25 seconds: gently widen to reveal the bridge arches and</span><br><span class="line">mountain backdrop while retaining the train as the focal point.</span><br><span class="line"></span><br><span class="line">Use slow, steady motion, crisp antialiasing, minimal motion</span><br><span class="line">blur, and deep enough focus to appreciate the environment. Avoid</span><br><span class="line">abrupt transitions, excessive bloom, heavy fog, and distracting</span><br><span class="line">camera movement.</span><br><span class="line"></span><br><span class="line">Render the actual Three.js scene using deterministic</span><br><span class="line">frame-by-frame animation. Export all 750 frames and encode a</span><br><span class="line">high-quality H.264 MP4. Provide the runnable source project and</span><br><span class="line">finished video. No text, logos, or watermarks.</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/HWyjyvubkAAIVow.jpg" alt="HWyjyvubkAAIVow"></p>
+<h3 id="Why-each-part-works"><a href="#Why-each-part-works" class="headerlink" title="Why each part works"></a>Why each part works</h3><ul>
+<li><strong>Deliverable first</strong> (25 seconds, 3840 × 2160, 30 fps): a done condition the model can check.</li>
+<li><strong>One sentence of atmosphere</strong> that every later choice must protect.</li>
+<li><strong>Lighting plus an avoid list.</strong> “Avoid crushed blacks” names the failure before it happens.</li>
+<li><strong>One section per object,</strong> full of nouns you can check frame by frame.</li>
+<li><strong>Timestamped camera beats.</strong> Structure beats adjectives.</li>
+<li><strong>“Render the actual Three.js scene”</strong> names the method, so a shortcut like Astra’s image generator is plainly off-limits. No guarantee: Grok once answered a Three.js brief in Blender anyway.</li>
+<li><strong>Negatives last,</strong> short and absolute.</li>
+</ul>
+<p>No “think hard” needed: in Claude Code, Anthropic’s docs call that “ordinary prompt text.” The effort setting is the real control (plus one keyword Claude Code does recognize: typing “ultrathink” raises the effort for that one message).</p>
+<p>Build your own the same way. Copy these seven lines and fill in each one:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">What I want: [the exact result: a 25-second video, a web page,</span><br><span class="line">an app screen]</span><br><span class="line">It&#x27;s done when: [how anyone can check it: it plays, it loads,</span><br><span class="line">the button works]</span><br><span class="line">Most important: [the one thing every choice must protect: the</span><br><span class="line">mood, the speed, the simplicity]</span><br><span class="line">The parts: [each part, and the details it must show]</span><br><span class="line">The order: [what comes first, next and last]</span><br><span class="line">Avoid: [the mistakes you expect]</span><br><span class="line">How to build it: [the method to use, and the shortcuts that</span><br><span class="line">aren&#x27;t allowed]</span><br></pre></td></tr></table></figure>
+
+<p>Here it is filled in for a simple website:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">What I want: a one-page website for my dog-walking business.</span><br><span class="line">It&#x27;s done when: it opens on my phone and the &quot;Book a walk&quot;</span><br><span class="line">button sends me an email.</span><br><span class="line">Most important: it feels friendly and trustworthy.</span><br><span class="line">The parts: my name and photo at the top, prices for 30 and 60</span><br><span class="line">minutes, three reviews, a booking form.</span><br><span class="line">The order: photo and name first, then prices, then reviews, with</span><br><span class="line">the form at the bottom.</span><br><span class="line">Avoid: a stock-photo look, tiny text on phones, made-up reviews.</span><br><span class="line">How to build it: plain HTML and CSS, a free form service for the</span><br><span class="line">bookings, no website builder, no paid plugins.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Let-an-AI-write-the-prompt-for-you"><a href="#Let-an-AI-write-the-prompt-for-you" class="headerlink" title="Let an AI write the prompt for you"></a>Let an AI write the prompt for you</h3><p>Remember the tip at the start? You don’t have to write a brief like this yourself. The Night Train prompt above is the proof: I didn’t write it either. I gave a model my first night-train film as the reference, the model wrote the brief, and I froze it. That’s exactly what my prompt-writing agent does for me.</p>
+<p>Here’s how to do it:</p>
+<ol>
+<li><strong>Start with what you have.</strong> Your idea, said out loud, or a reference: a screenshot, a video, a site you like.</li>
+<li><strong>Ask for the brief, not the build.</strong> Hand the AI the seven lines above and let it fill them in.</li>
+<li><strong>Read it before you use it.</strong> Fix anything that’s wrong or vague. It’s your brief now.</li>
+<li><strong>Freeze it.</strong> Save the file. If the result disappoints, change the brief, not just the chat.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Here&#x27;s my idea: [say it out loud, or attach a screenshot or</span><br><span class="line">video].</span><br><span class="line">Write a brief a coding agent can build from, using these seven</span><br><span class="line">lines:</span><br><span class="line">[paste the seven lines above]</span><br><span class="line">Ask me anything you need first. Don&#x27;t build anything yet.</span><br></pre></td></tr></table></figure>
+
+<p>It works for any job, not just films. My own prompt agent is a skill I built: I say my goal in my own words, and it hands back a prompt ready to paste. Here’s a real one. After an agent reviewed my app and listed what to fix, I told my prompt agent:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Okay, great. Great job! I want you now to implement all your</span><br><span class="line">findings, in the order of your choice, and make sure that</span><br><span class="line">everything is implemented accordingly without messing with the</span><br><span class="line">functional code. Make sure everything works properly and</span><br><span class="line">perfectly.</span><br></pre></td></tr></table></figure>
+
+<p>What came back:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Okay, great work. I want you to now implement all the findings</span><br><span class="line">from your previous review, without breaking existing</span><br><span class="line">functionality. Note that you have approval to proceed. Choose</span><br><span class="line">the safest order based on dependencies and risk, and keep a</span><br><span class="line">checklist so nothing gets missed.</span><br><span class="line"></span><br><span class="line">Review the affected code before each change. Make the smallest</span><br><span class="line">safe fix, preserve working business logic, and avoid unrelated</span><br><span class="line">refactors. If a finding requires changing intended behavior,</span><br><span class="line">flag that specific item before proceeding with it.</span><br><span class="line"></span><br><span class="line">Launch two verification agents: one to check implementation</span><br><span class="line">against every finding, and one to independently check for</span><br><span class="line">regressions in existing workflows. Run the relevant tests and</span><br><span class="line">verify the affected functionality after each fix. Resolve any</span><br><span class="line">regressions before moving on.</span><br><span class="line"></span><br><span class="line">Come back to me with a table showing each finding, the files</span><br><span class="line">changed, verification results, and anything still unresolved. Do</span><br><span class="line">not claim something works unless you actually verified it.</span><br></pre></td></tr></table></figure>
+
+<p>Same goal. But now the agent knows the order, the limits, how to check its own work and exactly what to report. That last line is a rule you’ll see again in “Run a team”: ask for evidence, not “done.”</p>
+<h3 id="Build-your-own-prompt-agent"><a href="#Build-your-own-prompt-agent" class="headerlink" title="Build your own prompt agent"></a>Build your own prompt agent</h3><p>Mine isn’t public, but you don’t need it. You build one the same way you build anything in this masterclass: by talking to your agent.</p>
+<ol>
+<li><strong>Collect your best prompts.</strong> Five to ten that got great results, yours or ones you’ve seen work. They’re the base: the agent learns from them.</li>
+<li><strong>Ask your agent to build it.</strong> Paste them in with something like this:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">I want a prompt agent. When I describe a goal in my own words,</span><br><span class="line">it hands me back one ready-to-paste prompt for a coding agent.</span><br><span class="line">Here are [5] prompts that worked well for me: [paste them]</span><br><span class="line">Study what makes them work: the context, the limits, how the</span><br><span class="line">work gets checked and what gets reported back.</span><br><span class="line">Turn that into a skill I can trigger by saying &quot;give me a</span><br><span class="line">prompt.&quot; Ask me anything you need first.</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>Test it on a real goal.</strong> Then say what to change, in plain words: “Too long.” “Always add a line about not breaking working code.”</li>
+<li><strong>Keep feeding it.</strong> Every time a prompt works really well, add it to the examples. The agent keeps getting better.</li>
+</ol>
+<h3 id="How-to-talk-to-your-agent"><a href="#How-to-talk-to-your-agent" class="headerlink" title="How to talk to your agent"></a>How to talk to your agent</h3><p>That’s the real skill behind all of this. Talk to your agent like a smart new teammate, not a search box:</p>
+<ul>
+<li><strong>Say the goal and why,</strong> not every step. Let it propose the how.</li>
+<li><strong>Give it the context:</strong> what exists, what you’ve tried, what must not break.</li>
+<li><strong>Ask it to ask you.</strong> “Ask me anything you need first” saves hours.</li>
+<li><strong>Correct it in plain words.</strong> “You changed code I didn’t ask you to change.” It adjusts.</li>
+<li><strong>Make it build its own tools.</strong> When something works, say “save this as a skill,” and it’s there next time.</li>
+</ul>
+<p>One brief, one model: that’s Level 3. Level 5 is a team.</p>
+<p><strong>PART 9 OF 11</strong></p>
+<h2 id="Run-a-team-one-lead-cheap-hands-a-fresh-pair-of-eyes"><a href="#Run-a-team-one-lead-cheap-hands-a-fresh-pair-of-eyes" class="headerlink" title="Run a team: one lead, cheap hands, a fresh pair of eyes"></a>Run a team: one lead, cheap hands, a fresh pair of eyes</h2><p>My crew, side by side in my agent workspace: Opus 5.5 leads and owns the design, Codex with GPT codes and reviews, Sol and Astra take small sub-agent jobs, and my last step is a review by 16 agents. You don’t need 16. You need one that didn’t build it.</p>
+<h3 id="Sol-Terra-or-Astra-half-the-token-price-isn’t-half-the-bill"><a href="#Sol-Terra-or-Astra-half-the-token-price-isn’t-half-the-bill" class="headerlink" title="Sol, Terra or Astra: half the token price isn’t half the bill"></a>Sol, Terra or Astra: half the token price isn’t half the bill</h3><p><strong>From my runs:</strong> GPT-6.1 Sol held steady: seven briefs, every film a few dollars at API prices, 22 to 55 minutes.</p>
+<p>GPT-6.1 Terra sprints on tight jobs: a piston cutaway for $0.20 in 2m 17s. Against Sol, it came in cheaper on most briefs and pricier on Alpine Gold. On Space Train, Terra was 20 minutes faster, but I think Sol made it much better.</p>
+<p><video controls preload="metadata" poster="/images/2120249703757705216-poster.jpg" src="/videos/2120249703757705216.mp4"></video></p>
+<p>Space Train, same prompt: GPT-6 Astra vs GPT-6.1 Sol vs GPT-6.1 Terra</p>
+<p>Independent leaderboards mostly agree: at max effort, Terra is only about 15–25% cheaper per task than Sol on four of them, and Sol scores higher. Arena’s web-dev board is the exception, with Terra at about a third of Sol’s cost.</p>
+<p><img src="/images/HWykA4lbgAAPiVc.jpg" alt="HWykA4lbgAAPiVc"></p>
+<p><strong>Rule of thumb:</strong> I hand small sub-agent jobs to Sol and Astra: cheap and efficient next to Opus. The boards suggest a finer split: medium, multi-step jobs to Sol, tiny and tightly scoped ones to Terra, the hardest problems to Astra.</p>
+<p><strong>Use it like this:</strong> in Codex, a sub-agent “inherits the parent agent’s model and reasoning effort” unless you set one, so give workers their own model in a custom agent file. In Claude Code, sub-agents can be routed “to faster, lower-cost models like Haiku.” One catch: caches are per model, so a mixed team gives up some cache reuse.</p>
+<h3 id="Sub-agents-cost-more-Here’s-when-they-pay-off"><a href="#Sub-agents-cost-more-Here’s-when-they-pay-off" class="headerlink" title="Sub-agents cost more. Here’s when they pay off."></a>Sub-agents cost more. Here’s when they pay off.</h3><p>Sub-agents burn more tokens: Anthropic’s multi-agent research tool used about 15x the tokens of a normal chat. In Anthropic’s tests on earlier models, delegating saved money only on routine work where a few jobs run very long, or jobs too big for one context window. Claude Code’s docs: “Handing the same task to a subagent doesn’t make the answer any better. A fresh reviewer does help.”</p>
+<p><strong>From my runs:</strong> parallel agents trade money for time. On my biggest Opus films, the builder agents working in parallel were 32–59% of the bill; on a baseball-stadium film, five of them fit 3h 01m of work into 2h 36m.</p>
+<p>An open prompt also lets the lead grow the job. On a kart racer, with five sub-agents each, Opus ran $154.83 over 9h 52m and built a much bigger game. Astra built one island circuit for $29.91 in 47m.</p>
+<p><strong>Rule of thumb:</strong> bound the scope (levels, features, a done condition), or the lead decides it for you.</p>
+<h3 id="The-rules-and-two-briefs-to-copy"><a href="#The-rules-and-two-briefs-to-copy" class="headerlink" title="The rules, and two briefs to copy"></a>The rules, and two briefs to copy</h3><p>One lead plans and reviews. Every worker gets a full brief: goal, format, tools, limits. Cap how many workers it spawns. A different model reviews, as your continuity check. Ask for evidence, not “done.”</p>
+<p><img src="/images/HWykEMwakAAR7IO.jpg" alt="HWykEMwakAAR7IO"></p>
+<p>For each worker:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">You&#x27;re one worker on a bigger job.</span><br><span class="line">Task: [one sentence]. Inputs: [files, links].</span><br><span class="line">Deliver: [format, file path]. Tools: [list]. Off limits:</span><br><span class="line">[everything else].</span><br><span class="line">Done when: [a check that passes].</span><br><span class="line">Report what you did, what you skipped, what you&#x27;re unsure of,</span><br><span class="line">and the time and tokens used if shown.</span><br></pre></td></tr></table></figure>
+
+<p>For the reviewer:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">You didn&#x27;t build this. Check [files] against [the brief].</span><br><span class="line">List every miss or likely break, worst first, with the exact</span><br><span class="line">line or timestamp.</span><br><span class="line">Fix nothing yet. Mark anything you couldn&#x27;t verify.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Two-reviews-before-anything-ships"><a href="#Two-reviews-before-anything-ships" class="headerlink" title="Two reviews before anything ships"></a>Two reviews before anything ships</h3><p>For my apps and SaaS tools, every build goes through two reviews. This is level 5 at its most advanced, but the idea is simple.</p>
+<ul>
+<li><strong>The deep review hunts for bugs.</strong> Claude Code and Codex review the app and check each other’s findings. Bugs get fixed, then they check again, round after round, until both agree nothing is left.</li>
+<li><strong>The completeness review hunts for what’s missing.</strong> A bug hunt can’t find a bug in something that doesn’t exist. So this review goes back to what the app is supposed to do and checks that every step a user needs is really there and works. Whatever is missing gets built.</li>
+</ul>
+<p>Deep review first, then completeness. Together, they take an app from “it runs” to “it’s done.”</p>
+<p>That’s the whole method. Here it is as seven habits.</p>
+<p><strong>PART 10 OF 11</strong></p>
+<h2 id="Seven-habits-that-prevent-the-costliest-mistakes"><a href="#Seven-habits-that-prevent-the-costliest-mistakes" class="headerlink" title="Seven habits that prevent the costliest mistakes"></a>Seven habits that prevent the costliest mistakes</h2><ul>
+<li><strong>The right model for the job,</strong> priced per finished job, not per token.</li>
+<li><strong>One task per chat.</strong></li>
+<li><strong>A done check the model can run:</strong> a test, a build, a screenshot.</li>
+<li><strong>Effort matched to the job,</strong> not maxed.</li>
+<li><strong>Scope bounded:</strong> levels, features, a finish line.</li>
+<li><strong>A different model reviews the work.</strong></li>
+<li><strong>Anything that matters, tested twice.</strong></li>
+</ul>
+<p>And every pick, on one page.</p>
+<h3 id="The-cheat-sheet"><a href="#The-cheat-sheet" class="headerlink" title="The cheat sheet"></a>The cheat sheet</h3><p>“Mine” marks picks from my own runs or daily use; the rest comes from the evidence above.</p>
+<p><img src="/images/HWykJvuaIAAVrwS.jpg" alt="HWykJvuaIAAVrwS"></p>
+<ul>
+<li><strong>Design, UI, coded 3D:</strong> Opus 5.5 (mine; $18–$32 a scenic film); also strong: Sonnet 5.5; cheaper per job: Gemini 4 Argon</li>
+<li><strong>Coding:</strong> Codex with GPT, checked by a different model (mine); by the boards, Sol for everyday, Astra for the hardest, or Claude Code with Opus 5.5; cheaper: DeepSeek V4.1 Flash 1017</li>
+<li><strong>Writing:</strong> test Opus 5.5 and Terra on your own draft</li>
+<li><strong>Research:</strong> Opus 5.5; cheaper per task: Argon (guesses least)</li>
+<li><strong>Data:</strong> any model that runs code on your file</li>
+<li><strong>Small parallel sub-agent tasks:</strong> Sol or Astra (mine); tiny jobs: Terra</li>
+<li><strong>High-volume, short jobs:</strong> Haiku 5.5 (under 100K-token prompts) or Luna</li>
+<li><strong>Big job, tiny budget, can wait:</strong> DeepSeek V4.1 Flash 1017 (mine; $0.48–$2.08 a film, and hours)</li>
+<li><strong>Private or offline:</strong> Gemma 4 or Qwen3.8-27B via Ollama or LM Studio</li>
+<li><strong>What to pay for:</strong> one $20 plan matched to your main job; upgrade only when you hit limits every day</li>
+<li><strong>Video:</strong> coded, Opus 5.5 (mine); generated, Seedance 2.5 or Wan 3.0; cheaper: HeyGen Video 1, FLUX 3 Max. <strong>Images:</strong> GPT Image 2.5; cheaper: Nano Banana 2.1</li>
+</ul>
+<h3 id="How-to-keep-up-when-the-names-change-every-month"><a href="#How-to-keep-up-when-the-names-change-every-month" class="headerlink" title="How to keep up when the names change every month"></a>How to keep up when the names change every month</h3><p>Names expire. The rules in this guide don’t. Before switching to a new model, rerun three frozen tasks from your own work.</p>
+<p>Read leaderboards for what they measure, and how. Artificial Analysis moved to version 5 of its index on Oct 27, so never compare scores across versions. Kimi K3.1 Pro shows why: 4th on the old index with 55, now 46. It was hyped as Opus’s equal, and in my runs it never finished above 5th on any film.</p>
+<p>Next on my list: Gemini 4 Carbon, which opened up today and is already running (more in the final test), then GPT-6.2 Astra, Opus 5.6 and GPT-6.2 Sol, if and when they land.</p>
+<p>Anthropic’s newest arrived yesterday. Time for the final test.</p>
+<p><strong>PART 11 OF 11</strong></p>
+<h2 id="Final-test-Fable-5-2-against-everything-in-this-guide"><a href="#Final-test-Fable-5-2-against-everything-in-this-guide" class="headerlink" title="Final test: Fable 5.2 against everything in this guide"></a>Final test: Fable 5.2 against everything in this guide</h2><p>For 48 days after Opus 5.5 on Sep 22, neither OpenAI nor Anthropic shipped a new flagship. That’s a lifetime in AI.</p>
+<p>Both had said they want to slow down. In July, both companies endorsed a statement called “Pacing the Frontier” (the frontier: the most capable AI). In September, Anthropic’s CEO Dario Amodei wrote, “We must slow the pace at which we improve the capabilities of AI models,” and Sam Altman (@sama) answered, “I agree with Dario that we need to pace the frontier.”</p>
+<p>Then, yesterday, Nov 9, Anthropic released Fable 5.2. I ran it the same day. Results first.</p>
+<p><img src="/images/HWykM7IbQAAXx5U.jpg" alt="HWykM7IbQAAXx5U"></p>
+<h3 id="My-first-four-Fable-5-2-films"><a href="#My-first-four-Fable-5-2-films" class="headerlink" title="My first four Fable 5.2 films"></a>My first four Fable 5.2 films</h3><p>Same briefs I gave Opus 5.5, one shot each, at Extra High, my usual setting, priced at Fable’s list price.</p>
+<p><video controls preload="metadata" poster="/images/2120250120327540736-poster.jpg" src="/videos/2120250120327540736.mp4"></video></p>
+<p>Cathedral of Ice, same prompt: Claude Fable 5.2 (top) vs Claude Opus 5.5</p>
+<p>My post of this film has already drawn 300K+ views.</p>
+<ul>
+<li><strong>Cathedral of Ice:</strong> Fable $81.10 in 1h 56m 52s. Opus $45.97 in 3h 11m 26s. Fable cost 1.8x as much and finished 1h 15m sooner.</li>
+<li><strong>Eiffel Tower:</strong> Fable $59.97 in 1h 25m 43s. Opus $17.97 in 2h 07m 17s (Oct 3 run, the only Opus film of this brief I still have). Fable cost 3.3x as much and finished 42 minutes sooner.</li>
+<li><strong>Alpine Gold:</strong> Fable $209.50 in 3h 02m 54s. Opus $31.85 in 2h 45m 42s. Fable cost 6.6x as much and finished 17 minutes later.</li>
+<li><strong>Ruby Ascent:</strong> Fable $81.32 in 2h 14m 25s. Opus $49.07 in 2h 33m 33s. Fable cost 1.7x as much and finished 19 minutes sooner.</li>
+</ul>
+<p><strong>My verdict:</strong> Fable made the better film on all four, and not by a little.</p>
+<p><img src="/images/HWykX3yaIAAYH6w.jpg" alt="HWykX3yaIAAYH6w"></p>
+<p>Better films, at three times the bill. <strong>That doesn’t change my everyday choice: for regular, all-day work, I use Opus 5.5 at Extra High.</strong> For me, it’s still the best for quality, time and cost. Fable 5.2 is for the very special job, and you’ll see why below.</p>
+<p>Now, what Anthropic promised, and what held up.</p>
+<h3 id="What-Anthropic-says"><a href="#What-Anthropic-says" class="headerlink" title="What Anthropic says"></a>What Anthropic says</h3><ul>
+<li><strong>Price:</strong> $8 &#x2F; $40 per million tokens, down from $10 &#x2F; $50 for Fable 5.1. That’s still twice Opus 5.5’s price for fresh input and output. Re-reads from the cache cost the same $0.20 as Opus. A fast mode costs double again, $16 &#x2F; $80.</li>
+<li><strong>Speed:</strong> up to 30% faster than Fable 5.1.</li>
+<li><strong>Benchmarks:</strong> on Anthropic’s own table, it leads Opus 5.5 and GPT-6 Astra on almost every row. On the Remote Labor Index, which tests real remote-work projects, it scored 41.3%, almost double Opus 5.5’s 21.3%.</li>
+<li><strong>The showcase:</strong> a team of 1,000 Fable 5.2 agents formalized Fermat’s Last Theorem in 30 hours, rewriting the proof in a language a computer can check step by step. With the same setup, Opus 5.5 stalled at 27%.</li>
+<li><strong>Access:</strong> every paid plan and the API. Its sibling, Mythos 5.2, goes only to vetted organizations.</li>
+<li><strong>The claim to test:</strong> on FrontierCode 2.0, a much harder coding test, Fable 5.2 at High effort scored about level with Opus 5.5 at Max “for roughly half the cost per task.”</li>
+</ul>
+<h3 id="The-rules-of-this-guide-checked-against-Anthropic’s-own-numbers"><a href="#The-rules-of-this-guide-checked-against-Anthropic’s-own-numbers" class="headerlink" title="The rules of this guide, checked against Anthropic’s own numbers"></a>The rules of this guide, checked against Anthropic’s own numbers</h3><ul>
+<li><strong>The best model is rarely the right one.</strong> Even on Anthropic’s own table, Fable 5.2 doesn’t win every row. Opus 5.5 keeps the top rating for knowledge work (an Elo score, a chess-style rating from head-to-head votes: 1800 vs 1785), and Gemini 4 Carbon wins business workflows (53.9% vs 51.4%).</li>
+<li><strong>Price the finished job, not the token.</strong> Per token, Fable 5.2 costs twice as much as Opus 5.5. Anthropic’s answer is the half-price-per-task claim above. Only your own finished jobs can settle it.</li>
+<li><strong>Each effort step up buys less.</strong> On FrontierCode 2.0, Fable 5.2 scored 49.1% at Extra High and 45.3% at High.</li>
+<li><strong>Level 5 is a team.</strong> Anthropic’s biggest demo is the top level of this guide: a thousand agents working in parallel, with a computer checking every step.</li>
+<li><strong>What to pay for.</strong> You don’t need a new plan to try it. Fable 5.2 is on every paid plan, including the $20 Pro plan. Fable gets its own allowance, up to half of your weekly limit, and it counts toward the week too.</li>
+</ul>
+<p>That’s Anthropic’s side. Now my runs, rule by rule.</p>
+<h3 id="The-rules-of-this-guide-checked-against-my-runs"><a href="#The-rules-of-this-guide-checked-against-my-runs" class="headerlink" title="The rules of this guide, checked against my runs"></a>The rules of this guide, checked against my runs</h3><ul>
+<li><strong>Price the finished job, not the token.</strong> Twice the token price became 1.7x, 1.8x, 3.3x and 6.6x the bill. Same model, same setting, four different answers. Did Fable make up for its price on the finished job? On my Cathedral run, no: it read fewer tokens than Opus but wrote 59% more output, the expensive kind. At Opus’s prices, Fable’s tokens would have cost $48.92, about the same as Opus’s $45.97. The gap was the price.</li>
+<li><strong>Sub-agents cost more.</strong> On Alpine Gold, Fable split the job across seven helper agents. They ran up $154 of the $209.50, and the film still finished after Opus’s. That’s why the guide says to cap how many workers the lead spawns.</li>
+<li><strong>What’s your hour worth?</strong> On Cathedral, Fable charged about $28 for each hour it saved me. On the Eiffel Tower, about $61, and on Ruby Ascent, about $101. If your hour is worth more than that, Fable pays for itself. On Alpine Gold, it saved no time at all.</li>
+<li><strong>The half-price claim.</strong> Anthropic’s claim was about Fable at High. I ran it at Extra High, one step up. On Cathedral, that cost about the same as Opus at Max, $81.10 vs $84.93, and finished 1h 41m sooner.</li>
+<li><strong>Test twice.</strong> On the same Eiffel brief, Opus’s Oct 21 run placed 1st in my October ranking and its Oct 3 run 7th. One run can flatter, or sink, any model, Fable included.</li>
+<li><strong>Watch your plan’s limit.</strong> I’m on Claude’s top plan, Ultra. With Opus 5.5, I’ve never come close to my limit. Fable came out yesterday, and by evening my Fable runs had used 89% of my Fable allowance, and my whole week stood at 92%. Claude’s warning: “At this pace you’ll run out tonight, before Friday’s reset.” For the launch, my plan came with three free Fable resets, and I used one: it gave back the Fable part of my week. Those resets are a launch extra, not part of the plan. Even after using one, Claude says I’ll run out Thursday morning.</li>
+</ul>
+<p><img src="/images/HWyka2RacAAUtwR.jpg" alt="HWyka2RacAAUtwR"></p>
+<h3 id="Where-Fable-5-2-fits"><a href="#Where-Fable-5-2-fits" class="headerlink" title="Where Fable 5.2 fits"></a>Where Fable 5.2 fits</h3><p>Fable 5.2 made better films than Opus on all four prompts. It also cost more on all four: $431.89 for the four films, against $144.86 on Opus.</p>
+<p>And it eats your plan. In one day, Fable used 89% of its allowance on Claude’s top plan. Opus has never come close.</p>
+<p>So Opus 5.5 at Extra High is still my main model, even more so now. Fable 5.2 is for the very special, complicated job, where I need more from the model and don’t mind spending a lot more tokens and money. For everything else, Opus is my go-to.</p>
+<p>The best model, then. Not always the right one.</p>
+<h3 id="And-today-Gemini-4-Carbon"><a href="#And-today-Gemini-4-Carbon" class="headerlink" title="And today: Gemini 4 Carbon"></a>And today: Gemini 4 Carbon</h3><p>About two hours before I posted this, Google released Gemini 4 Carbon, which it calls its strongest model. On Oct 28 it went only to a small group of cyber defenders; today it opened up in the API and, for Google AI Ultra subscribers, in the Gemini app. Its launch price is the same as Argon’s, $2 &#x2F; $10 per million tokens, a quarter of Fable 5.2’s. From Dec 1, it’s $4 &#x2F; $20, the same as Opus.</p>
+<p>It’s already running through my benchmark, with the same prompts and rules as Fable and Opus. I’ll post the results as soon as they’re in, quoted under this guide.</p>
+<h3 id="What’s-still-coming"><a href="#What’s-still-coming" class="headerlink" title="What’s still coming"></a>What’s still coming</h3><p>Nothing else is confirmed. The one real sign: on Nov 1, some Codex users saw “gpt-6.2-astra” in their usage stats while the model picker still said GPT-6 Astra. Opus 5.6 and GPT-6.2 Sol are my guesses, not announcements.</p>
+<p>When they land, they go through the same prompts. The names will change. The rules in this guide won’t.</p>
+<p>The best model wins the leaderboard. The right model finishes your job.</p>
+<p><strong>Tonight:</strong> paste the Night Train prompt into a coding agent (two, if you have them, to compare), or take step 1 of your own build. Reply with what you got.</p>
+<p><strong>Your first week:</strong> day 1, set up one coding agent and build the to-do page from “Your first 10 minutes.” Days 2 and 3, pick one small, real problem and write its seven-line brief. Days 4 and 5, build it one piece at a time, saving every working step. Day 6, have a fresh session review it. Day 7, put it online and show one real person.</p>
+<p><strong>Questions?</strong> Ask anything in the comments. I answer every single one.</p>
+<p>My workspace app and my benchmark app are next. I’m making them so beginners can do all of this too. More on that soon.</p>
+<p>It’s a very exciting time to be alive, and to build.</p>
+<p>Follow for the next benchmark and the next build. I’ll quote this guide under every one.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/11/EnvolDev-2120258474831704390/">https://yaoav.github.io/2026/11/11/EnvolDev-2120258474831704390/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/EnvolDev/">@EnvolDev</a></div><div class="post-share"><div class="social-share" data-image="/images/2120258474831704390-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/11/ai_edisonZ-2120305885457313794/" title="万字长文｜DeepSeek Harness 完全指南，打造你的专属工作台"><img class="cover" src="/images/2120305885457313794-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">万字长文｜DeepSeek Harness 完全指南，打造你的专属工作台</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ai_edisonZ（edisonZ） 的长文，原文链接，版权归原作者所有。  今天就一件事：把你的 DeepSeek 彻底打造成专属工作台。 装上官方开源底座 DeepSeek Harness（简称 DSH），输入框能秒变自媒体排版台、UI 原型画布、游戏工坊或本地文献库。 复制名字就能装好现成神器，如果找不到满意的工具，还能用一句话让它当场为你手搓一个。 纯小白零门槛指南，避开所有踩坑点，直接抄作业：👇  01 &#x2F; 准备工作：3 分钟搞定 DSH 桌面端DSH 到底是什么？ DeepSeek Harness（官方口号：「一切皆插件」）是 DeepSeek 官方开源的 Agent 运行时底座。你可以把它理解成一个“操作系统”，本身只提供基础能力，装上插件后威力才会真正爆发。  官方入口：DeepSeek Harness 官网 ｜ GitHub 开源仓库 当前版本处于官方预览测试阶段，功能迭代较快，但核心操作逻辑已经稳定。  下载与安装 统一前往：DeepSeek 官方下载中心  ⚠️ 新手防踩坑提醒：  下载页面中同时放着 DeepSeek...</div></div></div></a><a class="pagination-related" href="/2026/11/11/Suhail-2120231806314406137/" title="Introducing AgentRun: Run smarter agents. Use fewer tokens."><img class="cover" src="/images/2120231806314406137-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Introducing AgentRun: Run smarter agents. Use fewer tokens.</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Suhail（Suhail） 的长文，原文链接，版权归原作者所有。  Agents are great at figuring things out. The problem is they figure out the same things over and over. Give an agent a job it has done a hundred times and it will rediscover the same API, reread the same docs and rebuild the same plan, and you pay for every token of it. AgentRun fixes that. It’s an open-source platform that supercharges your agents. It adds self-improvement, durable execution and a control plane on top of your favorite agent har...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">457</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">221</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you%E2%80%99ll-learn-in-order"><span class="toc-number">1.</span> <span class="toc-text">What you’ll learn, in order</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-read-my-numbers"><span class="toc-number">2.</span> <span class="toc-text">How to read my numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Before-we-start-talk-to-your-AI-don%E2%80%99t-type"><span class="toc-number">3.</span> <span class="toc-text">Before we start: talk to your AI, don’t type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Who-makes-what-in-30-seconds"><span class="toc-number">4.</span> <span class="toc-text">Who makes what, in 30 seconds</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Five-levels-start-where-you-are-then-climb-step-by-step"><span class="toc-number">5.</span> <span class="toc-text">Five levels: start where you are, then climb step by step</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Level-1-Ask-well"><span class="toc-number">5.1.</span> <span class="toc-text">Level 1: Ask well</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Level-2-Give-it-memory"><span class="toc-number">5.2.</span> <span class="toc-text">Level 2: Give it memory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Level-3-Hand-an-agent-a-brief"><span class="toc-number">5.3.</span> <span class="toc-text">Level 3: Hand an agent a brief</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Level-4-Cast-each-job"><span class="toc-number">5.4.</span> <span class="toc-text">Level 4: Cast each job</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Level-5-Run-a-team"><span class="toc-number">5.5.</span> <span class="toc-text">Level 5: Run a team</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Build-something-real-vibe-coding-step-by-step"><span class="toc-number">6.</span> <span class="toc-text">Build something real: vibe coding, step by step</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-to-build-four-ways-to-use-AI"><span class="toc-number">6.1.</span> <span class="toc-text">Where to build: four ways to use AI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Your-first-10-minutes"><span class="toc-number">6.2.</span> <span class="toc-text">Your first 10 minutes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Seven-steps-from-idea-to-shipped"><span class="toc-number">6.3.</span> <span class="toc-text">Seven steps from idea to shipped</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Six-words-that-decide-what-AI-costs-you-even-on-a-subscription"><span class="toc-number">7.</span> <span class="toc-text">Six words that decide what AI costs you (even on a subscription)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Price-the-finished-job-not-the-token"><span class="toc-number">7.1.</span> <span class="toc-text">Price the finished job, not the token</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-to-pay-for"><span class="toc-number">8.</span> <span class="toc-text">What to pay for</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#My-own-split-Claude-for-design-Codex-for-code-mostly-on-subscriptions"><span class="toc-number">8.1.</span> <span class="toc-text">My own split: Claude for design, Codex for code, mostly on subscriptions.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9CI-don%E2%80%99t-have-that-kind-of-money%E2%80%9D"><span class="toc-number">8.2.</span> <span class="toc-text">“I don’t have that kind of money”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-pick-for-every-job-and-what-to-skip"><span class="toc-number">9.</span> <span class="toc-text">A pick for every job, and what to skip</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Design-and-UI-pay-for-the-lead-when-the-look-is-the-product"><span class="toc-number">9.1.</span> <span class="toc-text">Design and UI: pay for the lead when the look is the product</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Coding-and-debugging-a-GPT-coder-and-a-different-model-to-check-it"><span class="toc-number">9.2.</span> <span class="toc-text">Coding and debugging: a GPT coder, and a different model to check it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing-test-two-models-on-your-own-draft"><span class="toc-number">9.3.</span> <span class="toc-text">Writing: test two models on your own draft</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Research-some-top-models-bluff-half-the-time"><span class="toc-number">9.4.</span> <span class="toc-text">Research: some top models bluff half the time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-upload-the-file-Pasted-it-scored-7-of-25"><span class="toc-number">9.5.</span> <span class="toc-text">Data: upload the file. Pasted, it scored 7 of 25.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cheap-models-7x-cheaper-can-mean-7x-slower"><span class="toc-number">9.6.</span> <span class="toc-text">Cheap models: 7x cheaper can mean 7x slower</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Private-and-local-run-open-weights-on-your-own-machine"><span class="toc-number">9.7.</span> <span class="toc-text">Private and local: run open weights on your own machine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Images-and-video-generate-it-or-code-it"><span class="toc-number">9.8.</span> <span class="toc-text">Images and video: generate it, or code it</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Did-Opus-5-5-get-nerfed-What-I-saw-and-what-my-logs-show"><span class="toc-number">10.</span> <span class="toc-text">Did Opus 5.5 get nerfed? What I saw, and what my logs show</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-I-saw"><span class="toc-number">10.1.</span> <span class="toc-text">What I saw</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-my-logs-show"><span class="toc-number">10.2.</span> <span class="toc-text">What my logs show</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-others-found"><span class="toc-number">10.3.</span> <span class="toc-text">What others found</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-it-yourself"><span class="toc-number">10.4.</span> <span class="toc-text">Test it yourself</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-one-benchmark-prompt-I-share-and-how-I-brief-a-model"><span class="toc-number">11.</span> <span class="toc-text">The one benchmark prompt I share, and how I brief a model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-each-part-works"><span class="toc-number">11.1.</span> <span class="toc-text">Why each part works</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Let-an-AI-write-the-prompt-for-you"><span class="toc-number">11.2.</span> <span class="toc-text">Let an AI write the prompt for you</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build-your-own-prompt-agent"><span class="toc-number">11.3.</span> <span class="toc-text">Build your own prompt agent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-talk-to-your-agent"><span class="toc-number">11.4.</span> <span class="toc-text">How to talk to your agent</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Run-a-team-one-lead-cheap-hands-a-fresh-pair-of-eyes"><span class="toc-number">12.</span> <span class="toc-text">Run a team: one lead, cheap hands, a fresh pair of eyes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sol-Terra-or-Astra-half-the-token-price-isn%E2%80%99t-half-the-bill"><span class="toc-number">12.1.</span> <span class="toc-text">Sol, Terra or Astra: half the token price isn’t half the bill</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sub-agents-cost-more-Here%E2%80%99s-when-they-pay-off"><span class="toc-number">12.2.</span> <span class="toc-text">Sub-agents cost more. Here’s when they pay off.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-rules-and-two-briefs-to-copy"><span class="toc-number">12.3.</span> <span class="toc-text">The rules, and two briefs to copy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Two-reviews-before-anything-ships"><span class="toc-number">12.4.</span> <span class="toc-text">Two reviews before anything ships</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Seven-habits-that-prevent-the-costliest-mistakes"><span class="toc-number">13.</span> <span class="toc-text">Seven habits that prevent the costliest mistakes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-cheat-sheet"><span class="toc-number">13.1.</span> <span class="toc-text">The cheat sheet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#How-to-keep-up-when-the-names-change-every-month"><span class="toc-number">13.2.</span> <span class="toc-text">How to keep up when the names change every month</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-test-Fable-5-2-against-everything-in-this-guide"><span class="toc-number">14.</span> <span class="toc-text">Final test: Fable 5.2 against everything in this guide</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#My-first-four-Fable-5-2-films"><span class="toc-number">14.1.</span> <span class="toc-text">My first four Fable 5.2 films</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-Anthropic-says"><span class="toc-number">14.2.</span> <span class="toc-text">What Anthropic says</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-rules-of-this-guide-checked-against-Anthropic%E2%80%99s-own-numbers"><span class="toc-number">14.3.</span> <span class="toc-text">The rules of this guide, checked against Anthropic’s own numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-rules-of-this-guide-checked-against-my-runs"><span class="toc-number">14.4.</span> <span class="toc-text">The rules of this guide, checked against my runs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-Fable-5-2-fits"><span class="toc-number">14.5.</span> <span class="toc-text">Where Fable 5.2 fits</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#And-today-Gemini-4-Carbon"><span class="toc-number">14.6.</span> <span class="toc-text">And today: Gemini 4 Carbon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What%E2%80%99s-still-coming"><span class="toc-number">14.7.</span> <span class="toc-text">What’s still coming</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/KinhVujhfi-2124356611733106721/" title="黎曼猜想真的被AI证明了吗？"><img src="/images/2124356611733106721-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黎曼猜想真的被AI证明了吗？"/></a><div class="content"><a class="title" href="/2026/11/22/KinhVujhfi-2124356611733106721/" title="黎曼猜想真的被AI证明了吗？">黎曼猜想真的被AI证明了吗？</a><time datetime="2026-11-22T12:17:39.000Z" title="发表于 2026-11-22 12:17:39">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/momo_peggy-2124351881422184789/" title="第二届GEO大会Day1全程听完，Web出海人应该关注什么？"><img src="/images/2124351881422184789-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二届GEO大会Day1全程听完，Web出海人应该关注什么？"/></a><div class="content"><a class="title" href="/2026/11/22/momo_peggy-2124351881422184789/" title="第二届GEO大会Day1全程听完，Web出海人应该关注什么？">第二届GEO大会Day1全程听完，Web出海人应该关注什么？</a><time datetime="2026-11-22T11:58:51.000Z" title="发表于 2026-11-22 11:58:51">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/xueyu1125-2124350908263723508/" title="400元的Google AI  20X会员优惠领取教程，再不上车就没了！iPhone 代理、证书和 Reqable 重写一步步配"><img src="/images/2124350908263723508-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="400元的Google AI  20X会员优惠领取教程，再不上车就没了！iPhone 代理、证书和 Reqable 重写一步步配"/></a><div class="content"><a class="title" href="/2026/11/22/xueyu1125-2124350908263723508/" title="400元的Google AI  20X会员优惠领取教程，再不上车就没了！iPhone 代理、证书和 Reqable 重写一步步配">400元的Google AI  20X会员优惠领取教程，再不上车就没了！iPhone 代理、证书和 Reqable 重写一步步配</a><time datetime="2026-11-22T11:54:59.000Z" title="发表于 2026-11-22 11:54:59">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Shenjingape-2124338463088742484/" title="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤"><img src="/images/2124338463088742484-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤"/></a><div class="content"><a class="title" href="/2026/11/22/Shenjingape-2124338463088742484/" title="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤">说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤</a><time datetime="2026-11-22T11:05:32.000Z" title="发表于 2026-11-22 11:05:32">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/DrRabbitAI-2124331058523205930/" title="学术小白：科研入门常识"><img src="/images/2124331058523205930-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学术小白：科研入门常识"/></a><div class="content"><a class="title" href="/2026/11/22/DrRabbitAI-2124331058523205930/" title="学术小白：科研入门常识">学术小白：科研入门常识</a><time datetime="2026-11-22T10:36:07.000Z" title="发表于 2026-11-22 10:36:07">2026-11-22</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
