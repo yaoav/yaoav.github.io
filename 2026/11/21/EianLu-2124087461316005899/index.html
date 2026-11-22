@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="先看一张图，这是我的小游戏「蚂蚁搬画」11 月 13 日到 19 日的广告收入：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/21/EianLu-2124087461316005899/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="先看一张图，这是我的小游戏「蚂蚁搬画」11 月 13 日到 19 日的广告收入：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124087461316005899-cover.jpg">
+<meta property="article:published_time" content="2026-11-21T18:28:09.000Z">
+<meta property="article:modified_time" content="2026-11-22T10:20:51.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@EianLu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124087461316005899-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚",
+  "url": "https://yaoav.github.io/2026/11/21/EianLu-2124087461316005899/",
+  "image": "https://yaoav.github.io/images/2124087461316005899-cover.jpg",
+  "datePublished": "2026-11-21T18:28:09.000Z",
+  "dateModified": "2026-11-22T10:20:51.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/21/EianLu-2124087461316005899/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">446</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124087461316005899-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-21T18:28:09.000Z" title="发表于 2026-11-21 18:28:09">2026-11-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@EianLu（Eian）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124087461316005899">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>先看一张图，这是我的小游戏「蚂蚁搬画」11 月 13 日到 19 日的广告收入：</p>
+<p><img src="/images/HXo7lqdbUAAu6u0.jpg" alt="HXo7lqdbUAAu6u0"></p>
+<p>流量主后台截图：近 7 日 16,090.34 元，开广告以来累计 16,909.79 元</p>
+<p>这 7 天每天的收入是：</p>
+<p><strong>日期 · 广告收入</strong></p>
+<ul>
+<li>11 月 13 日 · 2002 元</li>
+<li>11 月 14 日 · 2386 元</li>
+<li>11 月 15 日 · 2733 元</li>
+<li>11 月 16 日 · 3016 元</li>
+<li>11 月 17 日 · 2185 元</li>
+<li>11 月 18 日 · 1891 元</li>
+<li>11 月 19 日 · 1873 元</li>
+</ul>
+<p>一个月前它刚开广告，第一天收入 3 块 6 毛 5。</p>
+<p>还是那几句话：个人身份注册，没开公司，没花钱买量，代码全是 Claude Code 写的。</p>
+<p>上周我写了一篇《从注册到开广告赚钱，七步讲清楚》，发出去以后，X 上每天几百条评论，问题一个接一个。我每天早上发一条收入，再把评论区的问题整理成「增补」帖，一周下来攒了一大堆。</p>
+<p>这篇把它们全部收在一起，还是按那七步的顺序：</p>
+<ol>
+<li><strong>能不能做</strong>：备案多久、更新要不要再备案、认证和备案的区别、一个人能注册几个</li>
+<li><strong>注册</strong>：邮箱不够用怎么办</li>
+<li><strong>做游戏</strong>：用什么做、排行榜、数据后台、背景音乐、关卡太难怎么办</li>
+<li><strong>备案和提审</strong>：长表单和截图都交给 AI</li>
+<li><strong>开通流量主</strong>：游戏圈这条路更好走</li>
+<li><strong>广告</strong>：多少人玩能赚多少、插屏的一个小细节</li>
+<li><strong>流量</strong>：投流了吗、新游种子什么时候开、收入为什么会回落</li>
+</ol>
+<h3 id="第一步：能不能做"><a href="#第一步：能不能做" class="headerlink" title="第一步：能不能做"></a>第一步：能不能做</h3><p>1.备案要多久？</p>
+<p>两个备案（小游戏备案、小程序备案）前前后后，我大概花了十几二十天。</p>
+<p>但<strong>纯单机、不联网的小游戏，备案没走完也能发布上线</strong>。我就是备案之前先上的。评论区有人问「两个备案都还在审，能上架吗」，答案是能，只要是纯本地的。</p>
+<ol start="2">
+<li>更新版本要重新备案吗？</li>
+</ol>
+<p>不用。我提审时签了一份单机声明，之后可以一直发新版本。</p>
+<p>另外，单机小游戏加新关卡、新场景，就是发一个新版本，没有别的办法同步，玩家更新后就能玩到。</p>
+<ol start="3">
+<li>认证和备案是一回事吗？</li>
+</ol>
+<p>不是一回事，很多人搞混：</p>
+<ul>
+<li><strong>微信认证</strong>：给微信交认证费，个人一年 30 元，开广告之前要做。交完以后会有第三方审核机构打电话来核实，平时不接陌生电话的，这几天要留意接听。</li>
+<li><strong>备案</strong>：向管理部门登记，要做人脸核验，分小游戏和小程序两项。</li>
+</ul>
+<ol start="4">
+<li>一个人能注册几个？</li>
+</ol>
+<p>个人主体能注册的小程序数量有上限，是 5 个，小游戏也算在里面。我自己的额度早就用完了。想做很多款游戏的话，这是要提前考虑的事。</p>
+<ol start="5">
+<li>广告收入算营收还是利润？</li>
+</ol>
+<p>营收。到现在还没投流，成本只有每年 30 元认证费和 Claude Code 的订阅费，所以和利润差不多。</p>
+<h3 id="第二步：注册"><a href="#第二步：注册" class="headerlink" title="第二步：注册"></a>第二步：注册</h3><p>邮箱不够用怎么办？</p>
+<p>微信平台每注册一个公众号、小程序或小游戏，都要一个新邮箱。</p>
+<p>我的办法是用自己的域名：</p>
+<ol>
+<li>买一个域名，几十块一年，接到 Cloudflare；</li>
+<li>在「电子邮件 → 电子邮件路由」里开启，加一个目标地址，比如你的 Gmail；</li>
+<li>打开「全部转发」（Catch-all）。</li>
+</ol>
+<p>之后发到「任何前缀@你的域名」的信，都会转到你的 Gmail。folkgame@、minigame@、douyin@……不用提前创建，想用哪个直接填。</p>
+<p>前缀按平台起名，以后一看收件人就知道是哪个号的信；哪个地址开始收垃圾邮件，就知道是哪个平台泄露的。</p>
+<p>评论区还补充了两个更简单的办法：Gmail 地址里加点或者加「+后缀」，也能当成不同的邮箱用；有域名的话，阿里企业邮箱免费给 50 个地址。</p>
+<p><img src="/images/HXo7rWYbcAA0C5B.jpg" alt="HXo7rWYbcAA0C5B"></p>
+<p>我 10 月发过的帖子：Grok Bot 的邮箱也支持「+后缀」别名，一个邮箱能当一堆用</p>
+<h3 id="第三步：做游戏"><a href="#第三步：做游戏" class="headerlink" title="第三步：做游戏"></a>第三步：做游戏</h3><p>1.用什么引擎？</p>
+<p>没用引擎。我的游戏是纯 Canvas 画的，原来是网页版，后来让 Claude Code 搬进微信。像素风格的游戏最适合新手，美术难度直接降一档。</p>
+<ol start="2">
+<li>用什么 AI？</li>
+</ol>
+<p>我用 Claude Code。评论区有人用别的工具做了一晚上，说可玩性很差，打算放弃。</p>
+<p>我的体会是：代码 AI 都能写出来，<strong>可玩性要你自己盯</strong>。我现在已经做到 380 关，每一关都要能说出它的「顿悟点」，说不出来的关就要重做。上一篇讲过我的关卡标准，这里不重复了。</p>
+<p>还有一个小经验：我有一台 MacBook Air 和一台 Mac mini。渲染视频、跑测试这种费电脑的活，我让 Claude Code 通过 SSH 派给 Mac mini 去干。Mac mini 风扇一响，我就知道 Air 给它派活了。</p>
+<ol start="3">
+<li>关卡太难，玩家卡住怎么办？</li>
+</ol>
+<p>有玩家问第 60 到 63 关怎么过。</p>
+<p>难的关一般都有一个顿悟点，盒子的排布是固定的，一条路走不通，下次换一条。我的游戏也故意留了一个设计：觉得这局没戏了，随便点几下输掉，就能马上重来。</p>
+<p>卡住的时候，正是玩家最愿意看激励视频的时候，第六步再讲。</p>
+<ol start="4">
+<li>排行榜怎么做？</li>
+</ol>
+<p>排行榜能把一件很普通的事变得上头。前段时间微信那个「家乡话收集」小程序，本身没啥意思，但有排行榜，我硬是录了 1119 句，录到了我们地区第一。</p>
+<p>所以我也给「蚂蚁搬画」加了排行榜。最爽的一点：<strong>好友榜和群排行不需要自己的服务器</strong>。</p>
+<p>游戏用 wx.setUserCloudStorage 把「打到第几关」存到微信那边。好友的数据只能在「开放数据域」里用 getFriendCloudStorage 读，画在一块共享画布上，游戏本体拿不到好友数据，只能把那块画布贴到屏幕上。全服排行榜才需要自己的服务器，我没做。</p>
+<p>上线前有四道门槛：</p>
+<ol>
+<li>小程序备案要先过。没备案只能是「单机」，隐私指引锁死在「不处理任何用户信息」；</li>
+<li>提审时网络类型从单机改成联网；</li>
+<li>隐私保护指引里声明「微信朋友关系」；</li>
+<li>后台打开「隐私授权弹窗」。第 4 步我漏了，真机报错。</li>
+</ol>
+<p>两个小坑：好友名字的字段是 nickname，不是 nickName，写错了上线后榜上一排全是「好友」两个字；后台开关改完要过几分钟才在手机上生效，别急着怀疑代码。一定要真机测。</p>
+<p>游戏里我放了这几处：主菜单顶部的好友榜；通关卡片上「再过 21 关追上某某」；失败卡片上「好友里 3 人过了这关」；「发到群里比一比」，群友点开卡片就能看到这个群的排名。</p>
+<p><img src="/images/HXo8BI5boAAzW4G.jpg" alt="HXo8BI5boAAzW4G"></p>
+<p>左：通关卡片上的「再过 21 关追上某某」；右：主菜单里的好友榜（开发者工具里的测试数据）</p>
+<p>两条原则：分享没有任何奖励，微信本来也不让诱导分享；不同意授权也完全不影响玩。</p>
+<ol start="5">
+<li>数据后台怎么做？</li>
+</ol>
+<p>我的游戏有网页版和微信小游戏两个版本，数据也是两套。</p>
+<p><strong>网页版：自己搭的后台。</strong> 数据发到我自己的服务器，用的是 Cloudflare Worker 加 D1 数据库，玩家不用登录，只用一个随机的匿名 ID。</p>
+<p>每一局的每一次点击都记下来：点了哪一列、哪下点了没拿动、为什么没拿动、用了什么道具。再让电脑把输掉的局回放一遍，找出「从哪一步开始，后面怎么走都赢不了了」。大家都输在同一步，说明那里有个关键选择没人看出来，这一关就要改。</p>
+<p>每一关我看这几个数：多少人玩、通关率、第一次通关平均试几次、在第几步输的，还有玩家点了却拿不动的次数。同一种点不动特别多，说明这条规则没讲清楚，要改说明卡。</p>
+<p><strong>小游戏：用微信的 We分析。</strong> 小游戏的联网请求只能发到备案过的域名，所以这边我用的是微信自带的 We分析。它可以自定义事件，先在后台把事件名和字段建好，代码里一行就能上报。我只建了 4 个事件：关卡、广告、救援、从哪进来，细节靠字段区分。留存、渠道、每个渠道带来多少广告收入，微信后台本来就有。</p>
+<p><strong>这里有一个我写完增补帖才发现的坑</strong>：We分析免费版每天只收 5,000 条上报，也没有漏斗分析。我的小游戏一天要报几十万条，绝大部分都被丢掉了，算出来的通关率不能用。专业版要付费，额度也有限。</p>
+<p>我打算用抽样解决：只让一小部分玩家上报，按玩家固定抽，同一个人要么全报、要么全不报。通关率是比例，抽样一样准。</p>
+<p>所以我更推荐<strong>先做一个网页版</strong>：不用注册、备案、审核，做好就能发出来给人玩；自己的数据库没有额度限制，每一局都能完整记下来；网页上再放一个小程序码，还能给小游戏引流。</p>
+<p>两套埋点和后台的代码，全是 Claude Code 写的，我只说想看什么。<strong>上线第一天就埋点</strong>，没数据的那几天，以后补不回来。</p>
+<ol start="6">
+<li>背景音乐从哪来？</li>
+</ol>
+<p>也是 Claude Code 做的。我用了 Felix Rieseberg 那篇《How to be more ambitious》里的提示词，让它自己设计、自己评估、自己改，前后大概花了三个小时。</p>
+<p><img src="/images/HXo7wfjbMAAbh5C.png" alt="HXo7wfjbMAAbh5C"></p>
+<p>Claude Code 把自己交上来的一版配乐退回返工：偏忧伤、太小声、挤占了顶栏，还列了这次要达到的标准</p>
+<h3 id="第四步：备案和提审"><a href="#第四步：备案和提审" class="headerlink" title="第四步：备案和提审"></a>第四步：备案和提审</h3><p>备案表单太长、截图太烦怎么办？</p>
+<p>小游戏备案要填的内容又多又烦，<strong>可以直接让 Claude Code 操作浏览器去填</strong>。它会根据你的游戏代码和备案要求，自己生成内容、完成填写并提交。我下完命令就去干别的了。</p>
+<p>截图也让它自己截：Claude Code 可以直接操作微信开发者工具。我第一次是自己填、自己截的，折磨了好久。</p>
+<p>注意一点：<strong>微信公众号平台不允许 AI 操作页面，小程序平台可以</strong>。</p>
+<h3 id="第五步：开通流量主"><a href="#第五步：开通流量主" class="headerlink" title="第五步：开通流量主"></a>第五步：开通流量主</h3><p>上一篇讲过，开通条件有三种，满足任意一种就行：</p>
+<p><img src="/images/HXo8G1KbwAA4dQu.jpg" alt="HXo8G1KbwAA4dQu"></p>
+<p>流量主后台的开通条件</p>
+<p>这一周我的体会是：<strong>游戏圈这条路，比攒 100 个独立访客更好走。</strong></p>
+<p>建议开发的时候就把游戏圈带上，先发满 5 篇官方帖子。你还在攒 100 个访客的时候，游戏圈这条大概率已经先达成了。</p>
+<p>评论区还有人补充了一个细节，我很认同：<strong>游戏圈的入口要加到游戏代码里</strong>，让玩家从游戏里的按钮进，不要指望玩家自己去右上角「···」里找。</p>
+<p><img src="/images/HXo727YaYAALYlw.jpg" alt="HXo727YaYAALYlw"></p>
+<p>我的主菜单顶部：每日一关、游戏圈、好友榜，玩家点一下就能进游戏圈</p>
+<h3 id="第六步：广告"><a href="#第六步：广告" class="headerlink" title="第六步：广告"></a>第六步：广告</h3><p>多少人玩，能赚多少？</p>
+<p>被问得最多的就是这个，直接给数：</p>
+<ul>
+<li>平时每天活跃玩家六千左右，一天收入两千左右；</li>
+<li>收入最高的 3016 元那天，活跃玩家大概九千；</li>
+<li>平均下来，<strong>一个玩家一天大概能赚 3 毛</strong>。</li>
+</ul>
+<p>我以前对游戏也不了解，没想到 6000 个人一天能赚 2000 块。</p>
+<p>钱主要从哪来？</p>
+<p>主要是激励视频，上一篇讲过，占九成左右。插屏收入很少，我基本当它没用。</p>
+<p><img src="/images/HXo8JxWa8AAR19q.jpg" alt="HXo8JxWa8AAR19q"></p>
+<p>流量主后台，11 月 16 日（收入最高的那天）：激励广告 2818.59 元，插屏只有 21.84 元</p>
+<p><img src="/images/HXo75-ZaYAEfYUp.jpg" alt="HXo75-ZaYAEfYUp"></p>
+<p>卡死时的失败页：带 ▶ 的按钮都是激励视频，玩家自己选</p>
+<p>插屏的一个小细节</p>
+<p>有时候玩家一边玩游戏一边干别的，游戏就挂在那里忘了。</p>
+<p>所以我加了一个设定：游戏停在当前界面、超过两分钟没有任何操作，就弹一个插屏。这时候玩家不在玩，不会觉得被打扰，不放白不放。</p>
+<h3 id="第七步：流量"><a href="#第七步：流量" class="headerlink" title="第七步：流量"></a>第七步：流量</h3><p>1.投流了吗？</p>
+<p>还没投。一开始我算过，买一个新用户要一块钱左右，一个玩家一天只赚三毛，还会流失，觉得回不了本。后来按后台数据重新算了一遍，如果只买益智类的核心玩家，有可能回本。我准备拿一小笔钱试一下，有结果了再跟大家说。</p>
+<ol start="2">
+<li>新游种子什么时候开？</li>
+</ol>
+<p>新游种子是微信给新游戏的一次推荐机会，只有一次。我的建议是：<strong>先开通广告，再把留存打磨好，最后再开</strong>。有了广告，推荐来的人才能变成收入；留存好了，推荐带来的人才留得住。</p>
+<p>至于游戏要不要打磨好再上架：我是一边上架一边打磨的。</p>
+<ol start="3">
+<li>收入为什么会回落？</li>
+</ol>
+<p>从截图能看出来，11 月 16 日是高点，之后每天回到了一千九左右。这背后是一笔很简单的账：</p>
+<ul>
+<li><strong>收入 ≈ 活跃玩家 × 每人收入</strong>。每人一天 3 毛左右，基本是稳的，所以收入跟着活跃玩家走；</li>
+<li><strong>活跃玩家 &#x3D; 留下的老玩家 + 新来的玩家</strong>。我现在活跃玩家的日留存在 46% 左右，也就是说，每天都有一半多的人要靠新玩家补上；</li>
+<li><strong>新玩家主要来自平台推荐</strong>。推荐量一回落，补进来的人少了，活跃玩家就跟着回落。</li>
+</ul>
+<p>所以要让收入稳住，办法只有两个：让更多人留下来，或者找到更多新玩家。</p>
+<p>评论区有人建议做长线的东西，比如把打完的画做成收集图鉴，再用收集解锁头像、称号。我觉得很有道理，正在让 AI 做。</p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>这一周最开心的，除了收入，是看到很多人照着那七步动手了：有人两天做完第一版在等审核，有人上线两天赚了 19 块，有人把小游戏和家里的农家乐结合起来引流。我发了一条帖子，让大家把自己做的小游戏贴在评论区，一下子收到了几十个：挖掘机拆房子、种地、坦克大战、倒水和茶文化……都挺好玩。</p>
+<p>用户画像里九成以上是女生，所以我下一步打算多往小红书发一发。</p>
+<p>在微信里搜「<strong>蚂蚁搬画</strong>」就能玩，上面说的排行榜、游戏圈、救法都能在游戏里看到。</p>
+<p>也可以用微信扫一扫下面这张图，直接打开。</p>
+<p><img src="/images/HXo88x8b0AAVRvL.jpg" alt="HXo88x8b0AAVRvL"></p>
+<p>没有微信的话，浏览器打开 <a target="_blank" rel="noopener" href="https://ants.pomodiary.com/">https://ants.pomodiary.com</a> 也能玩网页版。</p>
+<p>你也在做小游戏吗？做到哪一步了？欢迎在留言区告诉我。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/21/EianLu-2124087461316005899/">https://yaoav.github.io/2026/11/21/EianLu-2124087461316005899/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/EianLu/">@EianLu</a></div><div class="post-share"><div class="social-share" data-image="/images/2124087461316005899-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/21/momo_peggy-2124087819035365725/" title="FDE 到底苦不苦，赚不赚钱？"><img class="cover" src="/images/2124087819035365725-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">FDE 到底苦不苦，赚不赚钱？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @momo_peggy（夏林果的出海日记） 的长文，原文链接，版权归原作者所有。  最近总有人问我：FDE 苦不苦？赚钱容不容易？ 我的回答是：FDE 一定是个苦差事，但赚钱是真的赚，但是要考虑赚钱的方式。 下面分四件事讲清楚：FDE 和外包的区别、它到底苦在哪、钱是怎么赚的、以及什么样的 FDE 才能赚到大钱。 一、先分清：FDE 和外包的区别过去的外包，是派一群人去客户现场驻场，一个软件、一个系统，动辄要开发好几个月。 这不叫 FDE。 判断标准很简单：如果一个二三十万的项目，你要交付好几个月，那你做的还是传统外包，不是 FDE。 二、FDE 苦不苦？很苦，也很累苦，苦在必须驻场！不要指望在线上开开腾讯会议、录录屏，再用 Copilot、Claude code、codex之类的 AI 工具写点代码、做个 demo，就能直接交付。这不现实。 FDE 要解决的，是企业生产流程里最痛的那些问题。而这些痛点，往往老板讲不清楚，一线员工也讲不清楚。 所以你必须到现场，去沟通、去梳理，把一堆模糊的抱怨，整理成一个可以落地的方案。 至于这个方案最后是用 AI 解决、...</div></div></div></a><a class="pagination-related" href="/2026/11/21/criscxuan-2124080190787662037/" title="再见了 Coze，我找到了最佳开源平替"><img class="cover" src="/images/2124080190787662037-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">再见了 Coze，我找到了最佳开源平替</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  Coze 在 10 月 29 日发布了一份产品整合升级公告，给现有企业套餐列出了下线时间表。  图源：扣子官方公告。 看到这份公告，还是挺感慨的。 扣子之前有多火？我说个实际的例子，我在二线，当时我们隔壁公司调查企业级部署就用的 Coze 。 这也能理解，毕竟当时 Coze 把知识库、插件工作流全都放在了一个界面，你拖几个节点就能搭建 AI 应用了，很多人第一次接触 Agent、第一次跑通工作流，用的就是它。 所以这次 Coze 的官方声明，我看了还是挺感慨的，这就意味已经把业务放上去的企业来说，确实的重新考虑一下了。 而且好像 dify 也没啥声音了。 我觉得企业选 Agent 平台，得看能不能长期掌握自己的知识、流程和部署环境，放到更靠前的位置。 这也是我这次在想着看看有没有开源项目的原因。 这次我找到了一个项目：  项目 repo：https://github.com/dataelement/bisheng ，目前已经有 1.2w star 了，从 Issue、PR 和 Co...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/18/EianLu-2123042530866372711/" title="How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k&#x2F;month With It)"><img class="cover" src="/images/2123042530866372711-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">How to build animation pages getting 100M+ views with Fable 5.2 (And How To Make $20k&#x2F;month With It)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  Animation pages are the single best way to get millions of views and build a personal brand but for some reason nobody is paying attention to them. The clearest example is an Instagram account called @⁠neuronvisuals, it got 228 million views from 3 videos in one week in October and every single video is a stick figure animation of about 10 seconds on a black background. The guy behind it sells a course on how to make them and charges companies $20...</div></div></div></a><a class="pagination-related" href="/2026/11/17/EianLu-2122676987420623080/" title="How I got 3M views with AI slideshows and Fable 5.2"><img class="cover" src="/images/2122676987420623080-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">How I got 3M views with AI slideshows and Fable 5.2</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  By the end of this guide you will have one finished 6-slide AI UGC slideshow, five variations of it and a full week of posts scheduled. It is a method you can repeat on any app or product, on any platform that supports slideshows. What you get is a repeatable way to make good slideshows fast. The slideshow comes out of one simple loop and the loop is what this article is about:  Find a slideshow format that is already working for someone else.  Ha...</div></div></div></a><a class="pagination-related" href="/2026/11/17/EianLu-2122653224997937307/" title="本地大模型：数字人案例实测教程"><img class="cover" src="/images/2122653224997937307-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">本地大模型：数字人案例实测教程</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  你一定有这样的烦恼： 想拍口播，觉得自己人也不好看，声音也不好听，鼓起勇气去化妆、打光、半天整了一条视频出去0 个赞。 于是就想偷懒用数字人： 视频是出来了，发现一条视频花了几十块，效果差强人意，重试一下又是几十块，发出去还没流量。 有没有低成本效果又逼真的方法？ 不知道，试试就知道了。 本地显卡实测： 先看结论 案例一：只有一张照片，能让它开口吗？ 能。 给它一张我的半身照、一段 10 秒的配音，它会从零开始把整段视频画出来，人会眨眼、点头、比手势，嘴跟着声音动。 在Dgx Spark 上，10 秒的视频大约等 8 分半钟。 第一次跑出来效果还行，但很快就翻车了：人物动不动把两只大手怼到镜头前，挡住半个画面。 问题出在提示词：我写了”近距离自拍、双手做各种自然手势”，AI 就真的把手往镜头上举。 改成”镜头不动、保持照片原来的距离、手放低”以后，这个问题就没了。 下图是同一张照片、同一句话，旧描述和新描述的对比：  这里有个小白很容易忽略的点： AI 很听话，你写什么它就放大什么。 我还...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">446</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%83%BD%E4%B8%8D%E8%83%BD%E5%81%9A"><span class="toc-number">1.</span> <span class="toc-text">第一步：能不能做</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%B3%A8%E5%86%8C"><span class="toc-number">2.</span> <span class="toc-text">第二步：注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%81%9A%E6%B8%B8%E6%88%8F"><span class="toc-number">3.</span> <span class="toc-text">第三步：做游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%A4%87%E6%A1%88%E5%92%8C%E6%8F%90%E5%AE%A1"><span class="toc-number">4.</span> <span class="toc-text">第四步：备案和提审</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%BC%80%E9%80%9A%E6%B5%81%E9%87%8F%E4%B8%BB"><span class="toc-number">5.</span> <span class="toc-text">第五步：开通流量主</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E5%B9%BF%E5%91%8A"><span class="toc-number">6.</span> <span class="toc-text">第六步：广告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E6%AD%A5%EF%BC%9A%E6%B5%81%E9%87%8F"><span class="toc-number">7.</span> <span class="toc-text">第七步：流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">8.</span> <span class="toc-text">最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/likka_ailive-2124198818593825090/" title="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？"><img src="/images/2124198818593825090-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？"/></a><div class="content"><a class="title" href="/2026/11/22/likka_ailive-2124198818593825090/" title="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？">如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？</a><time datetime="2026-11-22T01:50:38.000Z" title="发表于 2026-11-22 01:50:38">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/momo_peggy-2124172045252780039/" title="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）"><img src="/images/2124172045252780039-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）"/></a><div class="content"><a class="title" href="/2026/11/22/momo_peggy-2124172045252780039/" title="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）">第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）</a><time datetime="2026-11-22T00:04:15.000Z" title="发表于 2026-11-22 00:04:15">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

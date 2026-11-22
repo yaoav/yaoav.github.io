@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>再见了 Coze，我找到了最佳开源平替 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Coze 在 10 月 29 日发布了一份产品整合升级公告，给现有企业套餐列出了下线时间表。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="再见了 Coze，我找到了最佳开源平替">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/21/criscxuan-2124080190787662037/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Coze 在 10 月 29 日发布了一份产品整合升级公告，给现有企业套餐列出了下线时间表。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124080190787662037-cover.jpg">
+<meta property="article:published_time" content="2026-11-21T17:59:15.000Z">
+<meta property="article:modified_time" content="2026-11-22T10:20:59.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@criscxuan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124080190787662037-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "再见了 Coze，我找到了最佳开源平替",
+  "url": "https://yaoav.github.io/2026/11/21/criscxuan-2124080190787662037/",
+  "image": "https://yaoav.github.io/images/2124080190787662037-cover.jpg",
+  "datePublished": "2026-11-21T17:59:15.000Z",
+  "dateModified": "2026-11-22T10:20:59.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/21/criscxuan-2124080190787662037/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '再见了 Coze，我找到了最佳开源平替',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">446</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124080190787662037-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">再见了 Coze，我找到了最佳开源平替</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">再见了 Coze，我找到了最佳开源平替</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-21T17:59:15.000Z" title="发表于 2026-11-21 17:59:15">2026-11-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@criscxuan（cxuan）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124080190787662037">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Coze 在 10 月 29 日发布了一份产品整合升级公告，给现有企业套餐列出了下线时间表。</p>
+<p><img src="/images/HXo9qG-agAAj4ng.jpg" alt="HXo9qG-agAAj4ng"></p>
+<p>图源：扣子官方公告。</p>
+<p>看到这份公告，还是挺感慨的。</p>
+<p>扣子之前有多火？我说个实际的例子，我在二线，当时我们隔壁公司调查企业级部署就用的 Coze 。</p>
+<p>这也能理解，毕竟当时 Coze 把知识库、插件工作流全都放在了一个界面，你拖几个节点就能搭建 AI 应用了，很多人第一次接触 Agent、第一次跑通工作流，用的就是它。</p>
+<p>所以这次 Coze 的官方声明，我看了还是挺感慨的，这就意味已经把业务放上去的企业来说，确实的重新考虑一下了。</p>
+<p>而且好像 dify 也没啥声音了。</p>
+<p><strong>我觉得企业选 Agent 平台，得看能不能长期掌握自己的知识、流程和部署环境，放到更靠前的位置。</strong></p>
+<p>这也是我这次在想着看看有没有开源项目的原因。</p>
+<p>这次我找到了一个项目：</p>
+<p><img src="/images/HXo9tAba4AA0TIx.jpg" alt="HXo9tAba4AA0TIx"></p>
+<p>项目 repo：<a target="_blank" rel="noopener" href="https://github.com/dataelement/bisheng">https://github.com/dataelement/bisheng</a> ，目前已经有 1.2w star 了，从 Issue、PR 和 Contributors 上来看，很活跃。</p>
+<p><img src="/images/HXo9vn3acAAFpBo.jpg" alt="HXo9vn3acAAFpBo"></p>
+<p>这是 BISHENG 团队做的开源项目。</p>
+<p><strong>这是一个可以私有化部署的开源企业级 Agent 平台。</strong> 模型、知识库、工作流，可以放到企业自己管理的环境里，再围绕实际业务搭建 AI 应用。</p>
+<p>同时它也是一个开源 AgentOps，专攻办公效率场景，能帮助公司或团队搭建一个 Agent 平台，模型、知识、工具和使用权限。</p>
+<p>我之前在 DeepSeek Harness 官方桌面端发布之前，曾介绍过一款第三方客户端——DSH Desktop，这个也是他们做的。</p>
+<p>重新看了一下 DSH Desktop ，这次有 93w + 的下载量了，之前我写文章的时候，才 23w+ ，这才过了俩月。。增速真离谱。</p>
+<p><img src="/images/HXo9ycQboAABHN5.jpg" alt="HXo9ycQboAABHN5"></p>
+<p>而这个 BISHENG 的桌面端，就是围绕 DSH Desktop 做了改造。</p>
+<p><strong>可以把它理解为一个开源的 WorkBuddy 或者豆包工作，让企业把 AI 能力掌握在自己手中。</strong></p>
+<h3 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h3><p>下面我就实操部署跑一下这个 BISHENG 的开源项目，看看到底咋样。</p>
+<p>我这次用的是 Mac + OrbStack，部署版本固定在 v3.0.0。平台通过 Docker Compose 运行，我把检查环境、调整镜像和启动服务这些操作交给了本机 AI。</p>
+<p>手动部署也有现成的脚本。准备好 Docker 和 Docker Compose 后，下面是下载固定版本、运行官方安装脚本的基础流程：</p>
+<p>git clone –branch v3.0.0 –depth 1 <a target="_blank" rel="noopener" href="https://github.com/dataelement/bisheng.git">https://github.com/dataelement/bisheng.git</a><br>cd bisheng<br>bash docker&#x2F;install.sh</p>
+<p>脚本会准备配置、拉取镜像并启动服务。</p>
+<p>如果你也想交给 AI 来装，可以直接用这段：</p>
+<p>帮我在本机部署 BISHENG v3.0.0：<a target="_blank" rel="noopener" href="https://github.com/dataelement/bisheng%E3%80%82">https://github.com/dataelement/bisheng。</a><br>按官方 Docker Compose 方式安装，先检查系统架构、内存和端口占用，选择兼容镜像，保留已有 Docker 服务。<br>完成后检查服务健康状态，给我访问地址和启动、停止方法。以浏览器能打开注册页为完成标准。</p>
+<p>所以手动安装和 AI 辅助安装，底下跑的都是这套 Docker 服务。</p>
+<p>本机部署完成后，打开 <a target="_blank" rel="noopener" href="http://127.0.0.1:3001/%EF%BC%8C%E5%85%88%E6%B3%A8%E5%86%8C%E8%B4%A6%E5%8F%B7%E3%80%82%E9%BB%98%E8%AE%A4%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B3%A8%E5%86%8C%E7%94%A8%E6%88%B7%E4%BC%9A%E6%88%90%E4%B8%BA%E7%AE%A1%E7%90%86%E5%91%98%E3%80%82">http://127.0.0.1:3001/，先注册账号。默认第一个注册用户会成为管理员。</a></p>
+<p><img src="/images/HXo91z1b0AAqJTL.jpg" alt="HXo91z1b0AAqJTL"></p>
+<p>登录后先看到统计看板。刚装完还没有创建应用和知识库，显示 0 或暂无数据很正常。</p>
+<p><img src="/images/HXo95pwbAAAbrQd.jpg" alt="HXo95pwbAAAbrQd"></p>
+<h3 id="企业级-DSH-内核"><a href="#企业级-DSH-内核" class="headerlink" title="企业级 DSH 内核"></a>企业级 DSH 内核</h3><p>由于这种方式是直接启动了一个 webui 版本，如果你想要桌面端的话，需要从这里下载。</p>
+<p><img src="/images/HXo98TJbAAAq79S.jpg" alt="HXo98TJbAAAq79S"></p>
+<p>这里两个产品的关系要捋一下：DSH Desktop 是桌面 Agent 的基础，BISHENG 客户端在这个基础上连接企业平台。网页平台负责搭建和管理，桌面端让员工调用平台资源、处理日常工作。</p>
+<p>所以可以看出，这次 DSH Desktop 是和 BISHENG 桌面端打通了。</p>
+<p>我先在桌面端的设置 → 模型里配置了 DeepSeek，填入自己的 API Key。</p>
+<p><img src="/images/HXo9-yma4AA4FA5.jpg" alt="HXo9-yma4AA4FA5"></p>
+<p>由于我本机是用的是 OrbStack ，部署上面的企业端之后，OrbStack 会给 BISHENG 容器提供一个 <strong>HTTPS 地址</strong>，把这个地址配置到企业账号企业平台地址就能登录了。</p>
+<p><img src="/images/HXo-Cb_bwAAe-bi.jpg" alt="HXo-Cb_bwAAe-bi"></p>
+<p>如果大家不会配置，可以直接让 AI 来配置。</p>
+<p>帮我把 BISHENG 桌面端连接到已经部署的 BISHENG WebUI，做到能成功登录即可。<br>检查平台的 HTTPS 地址，启用服务端桌面接入，处理本地证书信任，然后发起浏览器登录。<br>密码和验证码由我填写。以桌面端实际显示我的账号为成功标准，并告诉我下次如何启动。</p>
+<p>上面的 webui 形式是企业端，它像 Coze 一样会包含很多企业级的模块，比如文档知识库、测评、标注、权限和模型额度分配、审计等。</p>
+<h3 id="Chat-Work-双模式切换"><a href="#Chat-Work-双模式切换" class="headerlink" title="Chat&#x2F;Work 双模式切换"></a>Chat&#x2F;Work 双模式切换</h3><p>BISHENG 桌面端模式分为两种</p>
+<p>**Chat模式：**适用于简单问答，快速响应。网页端、桌面端、手机端三端数据同步。</p>
+<p>**Work模式：**适用于复杂任务，基于电脑本地文件持续工作。内置了 Office 三件套的模板能力。</p>
+<p><img src="/images/HXo-hQJawAAeKFL.jpg" alt="HXo-hQJawAAeKFL"></p>
+<p>我基于 2024 - 2025 年蔚小理的车辆销售情况，然后搭配这个 Blue Professional 模板做了一个 PPT 给大家看下效果，我觉得这达到了企业汇报的效果，因为我们公司每年的年终述职做的还没这个视觉好。</p>
+<h3 id="搭一个-workflow"><a href="#搭一个-workflow" class="headerlink" title="搭一个 workflow"></a>搭一个 workflow</h3><p>回到企业版中。</p>
+<p>我们重点讲一下这个构建，也就是 AI 圈俗称的 build ，后续我们也要用 build 来称谓，没啥就是装个 B 。</p>
+<p>ok ，我们看一下有哪些东西需要 build 。</p>
+<p>BISHENG 内置了一些应用模板可以 build ，我们选择一个研究下，这次就选这个文章助手看看。</p>
+<p><img src="/images/HXo-kFDbQAAyfq4.jpg" alt="HXo-kFDbQAAyfq4"></p>
+<p>ok ，可以看到有非常多的节点啊，这每个节点都可以自定义。</p>
+<p><img src="/images/HXo-mtrb0AAdiRE.jpg" alt="HXo-mtrb0AAdiRE"></p>
+<p>比如我就用一些工具节点来自己绘制了一个 workflow。</p>
+<p><img src="/images/HXo-pGvbkAAhWHc.jpg" alt="HXo-pGvbkAAhWHc"></p>
+<p>点击右上侧的运行，可以实际跑一下这个 workflow 。</p>
+<p>比如我就用这个 workflow 研读了一下 DeepSeek-V4.1-Flash 的论文。</p>
+<p><img src="/images/HXo-rtYbMAAZdxa.jpg" alt="HXo-rtYbMAAZdxa"></p>
+<h3 id="托管-Vibe-应用"><a href="#托管-Vibe-应用" class="headerlink" title="托管 Vibe 应用"></a>托管 Vibe 应用</h3><p>还有一个玩法是，我们现在不是一般都 Vibe 很多 app 出来么，现在 BISHENG 这个企业端可以一键托管你的 app ，供员工使用和访问，也方便企业统一管理。</p>
+<p>我觉得很多企业应该会喜欢这个功能。</p>
+<p>桌面端 Agent 帮助员工完成个人任务，<strong>团队还会不断产生新的需要团队协作的应用需求</strong>：一张培训报名表、一个项目台账、一套部门数据看板。并非所有需求都适合对话或工作流，有些工作，或许更需要一个专门的应用来承载。</p>
+<p>用户可以继续使用熟悉的开发工具，也可以借助 Coding Agent，在本地完成页面设计与业务逻辑开发。</p>
+<p>在 build 的首页，可以看到我们刚刚创建的 app 。</p>
+<p><img src="/images/HXo-uqYbQAA-x1k.jpg" alt="HXo-uqYbQAA-x1k"></p>
+<p>开发完成后，提交到 BISHENG 平台，应用会依次经过<strong>预检、密钥扫描、构建与发布审批</strong>。审批通过后会让你的 Vibe 应用成为团队共享的业务工具。</p>
+<p>比如下面这张图就是 BISHENG 团队非研发团队开发的部分业务应用：</p>
+<p><img src="/images/HXo-x23bcAAOxJN.jpg" alt="HXo-x23bcAAOxJN"></p>
+<h3 id="模型、用量和权限，企业统一管理"><a href="#模型、用量和权限，企业统一管理" class="headerlink" title="模型、用量和权限，企业统一管理"></a>模型、用量和权限，企业统一管理</h3><p>在客户端 -&gt; 模型权限这块，可以按部门和角色分配模型。</p>
+<p><img src="/images/HXo-0iCb0AEjIHu.jpg" alt="HXo-0iCb0AEjIHu"></p>
+<p>在用量这块，可以看到按部门和角色的用量信息。</p>
+<p><img src="/images/HXo-3B2aEAA09IW.jpg" alt="HXo-3B2aEAA09IW"></p>
+<p>在左侧的积分设置可以按照部门和角色分配积分，保证积分限额情况，比如我刚给自己分配了 1w 积分，我太开心了。</p>
+<p><img src="/images/HXo-5dTagAAZnfF.jpg" alt="HXo-5dTagAAZnfF"></p>
+<p>然后下面就是审计、审批和组织架构这块了，企业可按自身管理规则，自动审查员工在客户端调用模型时发送的内容、AI 返回的结果，以及相关工具调用中传入的敏感或涉密信息。</p>
+<p><img src="/images/HXo-7oXaQAA_2VB.jpg" alt="HXo-7oXaQAA_2VB"></p>
+<p>同样还支持自建知识库、根据知识库创建数据集、同时也可以做模型微调等。</p>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>这次从安装、连接桌面端，到做 PPT、搭 workflow 跑下来。</p>
+<p>我觉得这个 BISHENG 的开源项目价值挺明确：<strong>让员工把 AI 用进日常工作，也让企业便于管理。</strong></p>
+<p>员工可以在桌面端围绕文件做任务，企业统一管理模型、知识、工具和使用权限。</p>
+<p>个人可以直接下载开源的 DSH Desktop 个人版客户端，自己配好模型就能用。</p>
+<p>公司则可以部署开源的 BISHENG 平台，然后按自己的需求配置模型、知识库、工具等内容，再让员工通过 BISHENG 桌面端登录使用。</p>
+<p>对企业来说，应该比较在意的还是长期使用这件事，恰好 BISHENG 团队在一直维护。</p>
+<p>虽然工具会变，但已经积累的知识和业务流程，最好掌握在自己手里。</p>
+<p>相关链接：</p>
+<p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/dataelement/bisheng">https://github.com/dataelement/bisheng</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.bisheng.ai/">https://www.bisheng.ai/</a></p>
+<p>DSH Desktop：<a target="_blank" rel="noopener" href="https://dshdesktop.com/">https://dshdesktop.com/</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/21/criscxuan-2124080190787662037/">https://yaoav.github.io/2026/11/21/criscxuan-2124080190787662037/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/criscxuan/">@criscxuan</a></div><div class="post-share"><div class="social-share" data-image="/images/2124080190787662037-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/21/EianLu-2124087461316005899/" title="我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚"><img class="cover" src="/images/2124087461316005899-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">我一个人用 Claude Code 做微信小游戏，一周广告赚了 1.6 万：评论区问得最多的问题，一次讲清楚</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @EianLu（Eian） 的长文，原文链接，版权归原作者所有。  先看一张图，这是我的小游戏「蚂蚁搬画」11 月 13 日到 19 日的广告收入：  流量主后台截图：近 7 日 16,090.34 元，开广告以来累计 16,909.79 元 这 7 天每天的收入是： 日期 · 广告收入  11 月 13 日 · 2002 元 11 月 14 日 · 2386 元 11 月 15 日 · 2733 元 11 月 16 日 · 3016 元 11 月 17 日 · 2185 元 11 月 18 日 · 1891 元 11 月 19 日 · 1873 元  一个月前它刚开广告，第一天收入 3 块 6 毛 5。 还是那几句话：个人身份注册，没开公司，没花钱买量，代码全是 Claude Code 写的。 上周我写了一篇《从注册到开广告赚钱，七步讲清楚》，发出去以后，X 上每天几百条评论，问题一个接一个。我每天早上发一条收入，再把评论区的问题整理成「增补」帖，一周下来攒了一大堆。 这篇把它们全部收在一起，还是按那七步的顺序：  能不能做：备案多久、更新要不要再备案、...</div></div></div></a><a class="pagination-related" href="/2026/11/21/Leviwoyun-2124042711019966903/" title="不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频"><img class="cover" src="/images/2124042711019966903-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  很多朋友想入局跨境电商，但光是一道语言门槛就劝退了大半——既做不了外语直播，也拍不了外语带货视频，最后只能靠图文硬撑，转化率自然高不起来。 不过，现在有了 AI 工具，玩法完全不一样了。用手机随手拍的一条带货视频，直接放进 APP 里就能“一键复刻”成英语、日语等多种语言版本，既不用自己苦哈哈地剪辑，也不用额外找人配音，生成完直接就能发到海外平台。 最近我一直在用 Renoise，简直圆了我**“精通八国语言”**的梦。只需要上传一张自己的照片，就能稳定生成专属数字人。 想要什么语种直接跟它说，而且在正式出片前，Agent 还会反复跟你确认细节，不满意就一直改，直到你点头为止。 我自己实测生成了中文、英文、日语、法语、西语五个版本的数字人口播，无论是音色、形象的一致性，还是口型、动作和发音准确度，表现都很稳，几乎看不出违和感。  光说不练假把式，接下来我就拿网上找的一段带货视频当案例，手把手带你用自己的数字人复刻，并做成外语带货视频。不想看教程想快速体验的也可以直接上手 Ren...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/21/criscxuan-2124094168117191119/" title="自从吸上了 T3 Code ，爽感堪比 GTA-6 "><img class="cover" src="/images/2124094168117191119-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-21</div><div class="info-item-2">自从吸上了 T3 Code ，爽感堪比 GTA-6 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 Coding Agent 这么久了，估计很多小伙伴都遇到过这种问题，平常开发或者办公会用到很多 Coding Agent ，不同 Agent 中的模型不一样，虽然你可以通过开源网关把许多模型接入到一个 Agent 中，但你也会遇到不同 Agent Harness + 模型适配度问题。 给大家看一下我日常用的 Agent 。。。  我就经常想切 ZCode 结果切成 OpenCode 去了。。。难顶 而且一言以蔽之：自家模型还是用自家的 Harness 最好，至少。。。可能不会遇到稀奇古怪的问题。 既然自家模型配自家官方 Harness 最稳，那桌面上就不可避免会装十来个客户端和 CLI，来回切换窗口、分别导入项目、找回历史会话都很割裂。 于是就会衍生出来一个问题，那就是有没有办法保留各家原厂 Harness 的执行能力，只在最外层用一个统一入口把它们收编管理起来？ 这就是今天我想说的 T3 Code。 T3 是什么T3 Code 是由 Ping Labs（Theo Browne...</div></div></div></a><a class="pagination-related" href="/2026/11/19/criscxuan-2123382890058953088/" title="用 Super-agent 的理念，拆解 Octop 团队模式"><img class="cover" src="/images/2123382890058953088-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">用 Super-agent 的理念，拆解 Octop 团队模式</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。   DeepSeek 近日发布长文，系统阐述了其 Super-Agent 设计理念——打破 AI「单次仅能处理单一任务」的旧范式，以调度员（Router）加执行单元（Worker）的双层架构实现任务并行与后台运行，解放用户等待时间。无独有偶，在工程实践的另一条路径上，Octop 于 1.0.2 版本便已上线「团队模式」，由主持人 Agent 统筹分解任务、多名专家 Agent 并行执行。两者核心思路的殊途同归，恰好形成了一次跨越产品与时间的对照印证。本文即以 DeepSeek 的 Super-Agent 框架为参照，解析 Octop 团队模式的具体实现路径——两者如何在工程层面分别落地「多任务并行」这一共同目标。  DeepSeek 近日发布了一篇长文，系统阐述了 Super-Agent 的设计理念。其核心主张是：AI 不应被束缚在「单次仅处理单一任务」的旧范式中。Super-Agent 采用双层架构——前端由调度员（Router）负责接收请求与任务分配，后端由多个执行单元（Work...</div></div></div></a><a class="pagination-related" href="/2026/11/18/criscxuan-2122930382471655838/" title="REA 靠边站，逆向圈又一新王诞生了 "><img class="cover" src="/images/2122930382471655838-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-18</div><div class="info-item-2">REA 靠边站，逆向圈又一新王诞生了 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  最近逆向工程和 AI 编程圈又迎来了一个极其亮眼的开源新项目，这个 GitHub 项目就是 craft-anything。 它的定位非常硬核：帮工程师彻底搞懂手头任何网站、应用或软件的底层结构与运行逻辑，然后直接基于理解，重新构建出一套属于自己的原生版本。 你只需要把目标交给它，定好想要的技术栈。 然后，你就等着就行了。  还记得前段时间全网刷屏的 REA（逆向一切）吗？如果说 REA 开启了全民逆向的风潮，那 craft-anything 就像是它的纯 Rust 工程化进化版。 项目一开源热度就直接拉满了，GitHub Star 短短时间内就冲破了 35K star，而且整个引擎用纯 Rust 编写，内存占用极低，跨平台跑起来非常丝滑。  这篇就跟大家聊一聊 craft-anything，以及它到底强在哪里、该怎么上手玩起来。 它和传统逆向工具到底有什么不一样？提起逆向，很多人第一反应就是打开 Ghidra 或者 IDA Pro，对着满屏的汇编指令和反编译伪代码硬啃几天。 cra...</div></div></div></a><a class="pagination-related" href="/2026/11/15/criscxuan-2121958702924312671/" title="腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了"><img class="cover" src="/images/2121958702924312671-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-15</div><div class="info-item-2">腾讯上线「鹅次元」私人游戏陪伴式 Agent，太会玩儿了</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  前两天在 x 上分享的鹅次元没想到爆了，看来大家兴趣很高，于是我今天实测了一下。 这是腾讯 QQ 出的首款专属 AI 游戏陪伴 Agent。 面向端游玩家，提供拟人化 AI 陪伴和实时语音互动。  可以实现在 PC&#x2F;QQ 内部进行聊天。  还可以作为桌宠、一键换装、嘴替变声等有趣玩法。  最下面会有不同女生的介绍，而且每个女生性格不同，有 ENFP、INTP、INFJ 和 ESTP ，这个大家最好实际体验下哈哈哈。 目前只能使用 QQ 登录，而且只支持 Windows 版本，Mac 不支持。 猛的一看好像有点违和感，现在还有啥 Agent 能不支持 Mac ？但你细想一下好像也没错，你会用 Mac 来玩游戏吗？ 于是我就拿出来我那个积灰已久的 Windows 本了，终于有了用武之地。  客户端下载完了。 鹅次元我来了，哈哈哈。  我倒要看看你怎么懂我。 不过问题来了，为啥上面 QQ 登录之后 ，下载完成后又提供了两种登录方式，什么鬼？？？ 闹了半天我才明白，上面的 QQ ...</div></div></div></a><a class="pagination-related" href="/2026/11/02/criscxuan-2117139890957861046/" title="通了个宵，终于把 Super-Agent 架构玩明白了 "><img class="cover" src="/images/2117139890957861046-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-02</div><div class="info-item-2">通了个宵，终于把 Super-Agent 架构玩明白了 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  昨天，DeepSeek Harness 团队发了一篇新文章，《Super-agent 设计探索：迈向更自主的 Agent 系统》。 现在跟大家聊聊，应该还不算晚吧？ 主要是我把这篇文章仔细读了一遍，时间理解消化输出都是成本，于是今天才写出来。 而且我确实觉得此类文章要好好消化一下，不过我看到很多大号在官方发布之后半个小时甚至 1 个小时就把文章发出来了，emmm 这也许就是大佬吧 ：） DeepSeek Harness 团队（以下统称为 DSH 团队）首先解释了一下，这种解释和我们的预想是一样的：近一年里随着模型能力的增强，以及多 Agent 能力的提高，人类越来越少的参与底层中的执行，进而参与顶层的决策和验收工作了。 同样的随着模型能力的增强，今年早期的 OpenClaw 这类工具演变成了现在新的业态：Personal Agent。 我看到 DeepSeek 团队一直没有做 dsh bot ，目前流传出来的 bot 都是社区开发的，比如这个。  Personal Agent 我之...</div></div></div></a><a class="pagination-related" href="/2026/11/13/criscxuan-2121150349209948636/" title="讲真，智能路由这事儿，还得基元律动出手。"><img class="cover" src="/images/2121150349209948636-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-13</div><div class="info-item-2">讲真，智能路由这事儿，还得基元律动出手。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 AI 这么久了，我突然意识到一个问题。 那就是 AI 厂商太多了，不管是大厂小厂都在发新模型，而且大多数模型发布都很集中，往往 DeepSeek 发完了，GLM 发，GLM 发了还没测，Qwen、Kimi 又杀出来了，几乎每个月都有新版本发布，每家都说自己代码能力又上了一个台阶。 但具体哪个模型干活好、哪个模型价格低，靠自己一个个去测的话根本测不过来。 最理想的状态当然是：简单的活交给便宜模型，难的活交给强模型，每个任务都用刚好够用的那个。但这个刚好够用如何判断、每个档位该配哪个模型，一般来说很难自己搞清楚。 我发现了一个 GitHub 项目，就专门干这事儿的。  这个 GitHub 的思路就是：不用你自己挑模型，他们每月把主流模型测一遍，把当月最合适的配置直接下发到你的客户端。 先简单说一下 OpenSquilla 是什么。它是基元律动开源的 Agent 框架，日常用起来和常见的 Agent 平台差不多：给它一个任务，它帮你拆解、调用工具、把活干完。 区别在背后的智能路由。一...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">446</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2"><span class="toc-number">1.</span> <span class="toc-text">安装部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E7%BA%A7-DSH-%E5%86%85%E6%A0%B8"><span class="toc-number">2.</span> <span class="toc-text">企业级 DSH 内核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chat-Work-%E5%8F%8C%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">Chat&#x2F;Work 双模式切换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E4%B8%80%E4%B8%AA-workflow"><span class="toc-number">4.</span> <span class="toc-text">搭一个 workflow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%98%E7%AE%A1-Vibe-%E5%BA%94%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">托管 Vibe 应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E3%80%81%E7%94%A8%E9%87%8F%E5%92%8C%E6%9D%83%E9%99%90%EF%BC%8C%E4%BC%81%E4%B8%9A%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">模型、用量和权限，企业统一管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">7.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/likka_ailive-2124198818593825090/" title="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？"><img src="/images/2124198818593825090-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？"/></a><div class="content"><a class="title" href="/2026/11/22/likka_ailive-2124198818593825090/" title="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？">如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？</a><time datetime="2026-11-22T01:50:38.000Z" title="发表于 2026-11-22 01:50:38">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/momo_peggy-2124172045252780039/" title="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）"><img src="/images/2124172045252780039-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）"/></a><div class="content"><a class="title" href="/2026/11/22/momo_peggy-2124172045252780039/" title="第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）">第二届 GEO 大会 Day 1 全嘉宾实战精华（附 15 位讲者避坑与实操清单）</a><time datetime="2026-11-22T00:04:15.000Z" title="发表于 2026-11-22 00:04:15">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
