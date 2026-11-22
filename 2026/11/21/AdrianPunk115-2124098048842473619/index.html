@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Fable 5.2 上市一段时间了，𝕏 上的时间线涌现出了越来越多用代码做的视频。比起刚开始 Opus 5.5 出来那会儿，大家还停留在做一些酷炫的网页动效、像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/21/AdrianPunk115-2124098048842473619/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="Fable 5.2 上市一段时间了，𝕏 上的时间线涌现出了越来越多用代码做的视频。比起刚开始 Opus 5.5 出来那会儿，大家还停留在做一些酷炫的网页动效、像">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124098048842473619-cover.jpg">
+<meta property="article:published_time" content="2026-11-21T19:10:13.000Z">
+<meta property="article:modified_time" content="2026-11-22T08:33:26.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@AdrianPunk115">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124098048842473619-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词",
+  "url": "https://yaoav.github.io/2026/11/21/AdrianPunk115-2124098048842473619/",
+  "image": "https://yaoav.github.io/images/2124098048842473619-cover.jpg",
+  "datePublished": "2026-11-21T19:10:13.000Z",
+  "dateModified": "2026-11-22T08:33:26.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/21/AdrianPunk115-2124098048842473619/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">441</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">217</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124098048842473619-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">零基础用Fable5.2做视频：从代码原理到电影感拆解，附完整提示词</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-21T19:10:13.000Z" title="发表于 2026-11-21 19:10:13">2026-11-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@AdrianPunk115（Adrian Punk）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124098048842473619">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>Fable 5.2 上市一段时间了，𝕏 上的时间线涌现出了越来越多用代码做的视频。比起刚开始 Opus 5.5 出来那会儿，大家还停留在做一些酷炫的网页动效、像素小动画，到了 Fable 5.2 这波，时间线上已经能刷到越来越多连贯、有光影变化，甚至带点电影感的叙事小短片了。</p>
+<p>每天刷推啧啧赞叹之余，我也开始琢磨：这玩意儿到底是怎么实现的？</p>
+<p>既然底层逻辑都是让大模型写代码来出片，我自己也第一时间用 <strong>Claude Code</strong> 折腾了起来。结果一上手我就踩了个大坑：<strong>别人做出来的是电影感短片，我捣鼓半天导出来的，简直就是一份会自动翻页的高级 PPT。</strong></p>
+<p>同样是让 AI 写代码，差距到底出在哪？为了搞明白这件事，我把这几天刷到的热门案例全扒了一遍，顺带把前端图形库、三维渲染和音视频合成的原理都摸了一遍。今天这篇教程，就把我研究出来的这套方法论和完整提示词分享给你——哪怕你一行代码没写过，看完也能直接指挥 Claude Code 帮你出片。</p>
+<h3 id="一、Claude-Code-写代码做视频，和-Sora、Seedance-有什么区别？"><a href="#一、Claude-Code-写代码做视频，和-Sora、Seedance-有什么区别？" class="headerlink" title="一、Claude Code 写代码做视频，和 Sora、Seedance 有什么区别？"></a>一、Claude Code 写代码做视频，和 Sora、Seedance 有什么区别？</h3><p>先解决一个大家最常问的问题：用 Claude Code 做视频，和 Seedance、Sora 这些视频模型到底有啥不一样？</p>
+<p>同样输入一段提示词去描述一个场景，这两条路干的完全是两码事。</p>
+<h3 id="视频模型：靠“猜像素”预测画面"><a href="#视频模型：靠“猜像素”预测画面" class="headerlink" title="视频模型：靠“猜像素”预测画面"></a>视频模型：靠“猜像素”预测画面</h3><p>Seedance 这类视频模型，是根据海量训练数据里学到的物理规律和视觉特征，直接去“预测”下一秒每个像素该长什么样。你让它画一个人开灯，不用告诉它灯罩的坐标和光线角度，它自己就能脑补出来。</p>
+<p>这特别适合拍写实人物、复杂自然风景。但做长视频时，有个绕不开的痛点：穿帮了怎么修？前后镜头都已经满意了，偏偏中间某一秒道具变形，或者人物动作接不上。</p>
+<p><strong>Seedance 2.5 已经支持片段修改，但底层依然是局部重新“抽卡”。</strong> 对于缺少这类编辑能力的模型，往往只能改提示词全部重抽；或者保留满意的首尾，靠首尾帧约束把中间那段重新抽出来，最后再用传统剪辑软件拼起来。</p>
+<h3 id="Claude-Code-路线：在电脑里搭个“数字片场”"><a href="#Claude-Code-路线：在电脑里搭个“数字片场”" class="headerlink" title="Claude Code 路线：在电脑里搭个“数字片场”"></a>Claude Code 路线：在电脑里搭个“数字片场”</h3><p>Claude Code 本身是个纯文本编程工具，它不会直接给你吐出一个 .<strong>mp4</strong> 文件。它干的活，更像是<strong>在你的电脑上充当“编剧 + 美术 + 摄影师 + 剪辑师”</strong>。</p>
+<p>以网页动画这条路线为例，整个流程大概长这样（Blender 等三维软件则有自己独立的渲染方式）：</p>
+<ol>
+<li><strong>写剧本与布景</strong>：它在你本地新建一个代码项目，用数学坐标精确定义画面里有什么（比如一张桌子、三张卡片、一盏灯），并规定好“第几秒谁动起来”。</li>
+<li><strong>后台架摄影机</strong>：代码写好后，Claude Code 会在后台启动一个<strong>无头浏览器（比如 Playwright）</strong>——你可以把它当成一个没有显示器的隐形 Chrome，默默打开网页按时间轴播放动画。</li>
+<li><strong>高速连拍截图</strong>：无头浏览器一边播，一边像高速相机一样，按每秒 30 张或 60 张（30fps &#x2F; 60fps）的速度，把每一瞬间的画面截成高清 PNG 图片存进文件夹。10 秒视频就是 300 张剧照。</li>
+<li><strong>剪辑压制出片</strong>：最后，Claude Code 调用命令行神器 <strong>FFmpeg</strong>，把这几百张截图按顺序压成 MP4，再把音效混进去，交出一份成片。</li>
+</ol>
+<p><img src="/images/HXomoZKbIAEsZh9.jpg" alt="HXomoZKbIAEsZh9"></p>
+<p>这两条路其实还能混着走：用视频模型生成一段真人特写镜头，再交给 Claude Code 用代码叠加上精准的数据图表和品牌包装，两边的好处全占。</p>
+<h3 id="二、从“PPT-感”教程，到真正能看的演示视频"><a href="#二、从“PPT-感”教程，到真正能看的演示视频" class="headerlink" title="二、从“PPT 感”教程，到真正能看的演示视频"></a>二、从“PPT 感”教程，到真正能看的演示视频</h3><p>弄懂区别后，回到咱们的重点：怎么用 Claude Code 做出不像 PPT 的视频？</p>
+<p>我刚上手那会儿，想把自己的长文做成教程视频，里面讲到了各种视频运镜。当时我只会跟 AI 说：“根据教程里提到的运镜，模拟演示一下。”结果跑出来的成品让我哭笑不得——全是一张张知识卡片淡入、淡出。讲到“镜头推进”，弹出一张写着“推进”的卡片；讲到“环绕”，再换一张卡片。知识点是全了，可镜头到底怎么动，观众还是两眼一抹黑。</p>
+<p>后来我才反应过来，问题出在我自己的表达上。脑子里有画面，但嘴上说不出专业词，也不知道该用什么技术去实现，只会笼统地说“模拟演示”，AI 自然只能按最省事的“翻页卡片”来交差。</p>
+<p>随着我把要求越说越具体，视频才慢慢有了我想要的样子，也逐渐沉淀出了固定风格（这时候就可以顺手写一份自己的 <strong>design.md</strong>，让 AI 以后都按这套审美来）。当然，模型本身的能力差距也很明显。拿我自己的体验来说，同一篇内容，交给 Codex 和在 Claude Code 里用 Opus 5.5 做，出来的观感差了一大截。跟 Claude 沟通，我更容易把“感觉”说清楚，它给的排版、配色和动效也更合我胃口。</p>
+<p>这里面其实藏着三个拉开差距的环节：</p>
+<ul>
+<li><strong>理解需求</strong>：同样一句“做得更有画面感”，有的模型只理解为加个炫酷转场，有的则能展开成具体的场景、动作和镜头调度。</li>
+<li><strong>补齐细节</strong>：字号、留白、配色、构图、动作快慢，这些你没明说的东西，全靠模型自己做审美判断。</li>
+<li><strong>落地与迭代</strong>：能不能把想法稳稳写成代码，并且在看完预览后发现穿帮、继续微调。</li>
+</ul>
+<p>就在我刚摆脱 PPT 感、开始用 Opus 5.5 尝试各种特效的时候，<strong>Fable 5.2 出来了。我一刷时间线，好家伙，大家居然已经开始用代码做电影级别的动画短片了。</strong></p>
+<p><img src="/images/HXomoZOa0AA7shO.jpg" alt="HXomoZOa0AA7shO"></p>
+<p>同样是让 AI 写代码，那些画面到底是怎么拼出来的？为了以后能精准指挥 AI，我把提示词里最常出现的 22 个技术名词全理了一遍。你完全不用先学写代码，只要知道“想做什么效果时，该点谁的名”就够了。</p>
+<h3 id="三、小白也能看懂的技术词典：想做啥效果，该点谁的名？"><a href="#三、小白也能看懂的技术词典：想做啥效果，该点谁的名？" class="headerlink" title="三、小白也能看懂的技术词典：想做啥效果，该点谁的名？"></a>三、小白也能看懂的技术词典：想做啥效果，该点谁的名？</h3><p>下面这 22 个词经常在教程和提示词里扎堆出现，看着唬人，其实分工特别明确。我按用途把它们分成了四组，你按需查阅就行。</p>
+<h3 id="第一组：搭架子、做排版（适合文字、卡片和界面动效）"><a href="#第一组：搭架子、做排版（适合文字、卡片和界面动效）" class="headerlink" title="第一组：搭架子、做排版（适合文字、卡片和界面动效）"></a>第一组：搭架子、做排版（适合文字、卡片和界面动效）</h3><h3 id="1-HTML：告诉电脑，画面里要放什么"><a href="#1-HTML：告诉电脑，画面里要放什么" class="headerlink" title="1. HTML：告诉电脑，画面里要放什么"></a>1. HTML：告诉电脑，画面里要放什么</h3><p>做一张知识卡片，你得先告诉电脑：上面放标题，下面放解释，旁边放图片。HTML 就是干这个的，它负责把内容摆出来、分好组。至于文字多大、卡片什么颜色，那是 CSS 的活。</p>
+<p><img src="/images/HXomoZPbwAAvENy.jpg" alt="HXomoZPbwAAvENy"></p>
+<h3 id="2-CSS：决定这些东西长什么样、怎么动"><a href="#2-CSS：决定这些东西长什么样、怎么动" class="headerlink" title="2. CSS：决定这些东西长什么样、怎么动"></a>2. CSS：决定这些东西长什么样、怎么动</h3><p>同样一句标题，换个字体、颜色和行距，高级感立马不一样。CSS 管的就是外观和排版，顺带还能做平移、缩放、旋转、淡入淡出。我最初做的卡片动效基本靠它。它很适合精致的文字和界面动画，但要搭一个有灯光、人物和运镜的 3D 房间，就得换工具了。</p>
+<p><img src="/images/HXomoZTbsAALuFM.jpg" alt="HXomoZTbsAALuFM"></p>
+<h3 id="3-JavaScript（JS）：告诉画面，接下来发生什么"><a href="#3-JavaScript（JS）：告诉画面，接下来发生什么" class="headerlink" title="3. JavaScript（JS）：告诉画面，接下来发生什么"></a>3. JavaScript（JS）：告诉画面，接下来发生什么</h3><p>HTML 放内容，CSS 管颜值，JavaScript 则负责按时间算动作：比如到了第 3 秒，卡片该移到哪，摄像机该往前走几步。它也是后面 Three.js 等工具的底层语言。</p>
+<p><img src="/images/HXompk6bEAEg1vY.jpg" alt="HXompk6bEAEg1vY"></p>
+<h3 id="4-React：同一种卡片，不用重复搭十遍"><a href="#4-React：同一种卡片，不用重复搭十遍" class="headerlink" title="4. React：同一种卡片，不用重复搭十遍"></a>4. React：同一种卡片，不用重复搭十遍</h3><p>如果视频里有十张长得一样的知识卡片，只是字不一样，React 可以先做一个“卡片模板”（程序员叫组件），再往里填不同内容。它擅长管理复杂界面，但不会自动帮你设计镜头。后面要讲的 Remotion 就是基于它来编排视频的。</p>
+<h3 id="5-GSAP：把一堆动作排好先后顺序"><a href="#5-GSAP：把一堆动作排好先后顺序" class="headerlink" title="5. GSAP：把一堆动作排好先后顺序"></a>5. GSAP：把一堆动作排好先后顺序</h3><p>画面里经常要同时发生好几件事：卡片先移开，图片再出现，箭头最后指向重点。GSAP 就是专门管动作排期和节奏的动画库。它能轻松做出“先快后慢”的自然停顿，比死板的匀速滑动顺眼得多。</p>
+<p><img src="/images/HXompk8bAAELttv.jpg" alt="HXompk8bAAELttv"></p>
+<h3 id="6-SVG：画怎么放大都不糊的图标和箭头"><a href="#6-SVG：画怎么放大都不糊的图标和箭头" class="headerlink" title="6. SVG：画怎么放大都不糊的图标和箭头"></a>6. SVG：画怎么放大都不糊的图标和箭头</h3><p>普通图片是由一个个像素点拼的，放大就糊；SVG 记录的是“这里画个圆、那里拉条曲线”，所以特别适合画示意图、流程图和镜头轨迹。不过导出成视频后，清晰度还是受视频分辨率限制，线条太细一样会看不清。</p>
+<p><img src="/images/HXompwZbsAAgt6L.jpg" alt="HXompwZbsAAgt6L"></p>
+<h3 id="第二组：画平面、玩创意（适合粒子、线条和手绘感）"><a href="#第二组：画平面、玩创意（适合粒子、线条和手绘感）" class="headerlink" title="第二组：画平面、玩创意（适合粒子、线条和手绘感）"></a>第二组：画平面、玩创意（适合粒子、线条和手绘感）</h3><h3 id="7-Canvas：网页里的一块空白画布"><a href="#7-Canvas：网页里的一块空白画布" class="headerlink" title="7. Canvas：网页里的一块空白画布"></a>7. Canvas：网页里的一块空白画布</h3><p>Canvas 就是网页里划出来专门用来画画的区域。星空、波浪、像素小人，甚至 3D 场景，最后都要画在这块布上。注意它的实际像素尺寸要跟导出视频对齐，千万别画一块小画布再硬拉大，不然全糊了。</p>
+<h3 id="8-Canvas-2D：在画布上直接画平面图形"><a href="#8-Canvas-2D：在画布上直接画平面图形" class="headerlink" title="8. Canvas 2D：在画布上直接画平面图形"></a>8. Canvas 2D：在画布上直接画平面图形</h3><p>它是在 Canvas 上画二维图形的常用方法。每一帧重新画一遍、稍微挪动一下位置，就成了动画。很适合做粒子、声波、星空、像素画这类效果。</p>
+<p><img src="/images/HXomp07a4AA3pU_.jpg" alt="HXomp07a4AA3pU_"></p>
+<h3 id="9-p5-js：让代码画画更省心的创意工具"><a href="#9-p5-js：让代码画画更省心的创意工具" class="headerlink" title="9. p5.js：让代码画画更省心的创意工具"></a>9. p5.js：让代码画画更省心的创意工具</h3><p>p5.js 把很多绘图和规律随机的方法打包好了，不用每次从头写。特别适合做生长的线条、动态图案和艺术化演示。不过画面好不好看，核心还是看你的配色和构图，不是挂上 p5.js 的名字就自动变高级。</p>
+<p><img src="/images/HXomqoybAAAlxn8.jpg" alt="HXomqoybAAAlxn8"></p>
+<h3 id="10-p5-brush：给代码加上手绘笔触"><a href="#10-p5-brush：给代码加上手绘笔触" class="headerlink" title="10. p5.brush：给代码加上手绘笔触"></a>10. p5.brush：给代码加上手绘笔触</h3><p>它是配合 p5.js 用的笔刷库，能画出彩铅、水彩和纸张露白的感觉。用它做动画有个大坑要注意：<strong>笔触必须稳定</strong>。如果每一帧都随机重新生成纹理，静态截图看着像手绘，动起来就会像电视雪花一样疯狂闪烁。</p>
+<p><img src="/images/HXomqx8aIAAUdiR.jpg" alt="HXomqx8aIAAUdiR"></p>
+<h3 id="第三组：建-3D、打光影（电影感的真正来源）"><a href="#第三组：建-3D、打光影（电影感的真正来源）" class="headerlink" title="第三组：建 3D、打光影（电影感的真正来源）"></a>第三组：建 3D、打光影（电影感的真正来源）</h3><h3 id="11-Three-js：在网页里搭一个能转着看的-3D-空间"><a href="#11-Three-js：在网页里搭一个能转着看的-3D-空间" class="headerlink" title="11. Three.js：在网页里搭一个能转着看的 3D 空间"></a>11. Three.js：在网页里搭一个能转着看的 3D 空间</h3><p>用它可以在网页里摆地面、墙壁、人物和灯光，再架一台虚拟摄像机。比如做运镜演示时，人物站着不动，让摄像机绕着他转半圈，画面的透视和遮挡会实时变化，观众一眼就能看懂“环绕运镜”是什么意思。想展示精细物体时，直接加载现成的 3D 模型就行，没必要逼着 AI 用几个方块硬拼。</p>
+<p><img src="/images/HXomq0ya8AA8JO_.jpg" alt="HXomq0ya8AA8JO_"></p>
+<h3 id="12-WebGL：让浏览器把画图交给显卡干"><a href="#12-WebGL：让浏览器把画图交给显卡干" class="headerlink" title="12. WebGL：让浏览器把画图交给显卡干"></a>12. WebGL：让浏览器把画图交给显卡干</h3><p>显卡最擅长同时算大量图形，WebGL 就是浏览器连接显卡的通道。平时用 Three.js，底层默认走的就是 WebGL，你不用自己从头写一套。</p>
+<p><img src="/images/HXomq07bEAAOXEx.jpg" alt="HXomq07bEAAOXEx"></p>
+<h3 id="13-WebGPU：更新一代的显卡通道"><a href="#13-WebGPU：更新一代的显卡通道" class="headerlink" title="13. WebGPU：更新一代的显卡通道"></a>13. WebGPU：更新一代的显卡通道</h3><p>和 WebGL 类似，但设计更新，除了画图还能做更通用的计算。小白知道有这么个东西就行，用不用得看浏览器和设备支持情况，它本身不会让丑模型自动变好看。</p>
+<h3 id="14-Shader（着色器）：决定表面材质和特效怎么画"><a href="#14-Shader（着色器）：决定表面材质和特效怎么画" class="headerlink" title="14. Shader（着色器）：决定表面材质和特效怎么画"></a>14. Shader（着色器）：决定表面材质和特效怎么画</h3><p>它是在显卡上运行的小程序，能管水面起伏、二次元色块阴影、发光描边、老电视扫描线等等。同一套 3D 模型，换个 Shader，观感天差地别。不过要注意，镜头动起来时，笔触和纹理得跟着物体表面走，不能像贴在屏幕上的玻璃纸一样飘着。</p>
+<p><img src="/images/HXomrdEboAAr7zN.jpg" alt="HXomrdEboAAr7zN"></p>
+<h3 id="15-Blender：电脑里的专业-3D-摄影棚"><a href="#15-Blender：电脑里的专业-3D-摄影棚" class="headerlink" title="15. Blender：电脑里的专业 3D 摄影棚"></a>15. Blender：电脑里的专业 3D 摄影棚</h3><p>它是一套完整的免费三维动画软件，建模、布景、打光、做动作、架机位一条龙全包。比如拍一个房间从黄昏到深夜的变化，你可以一直在同一个房间里调窗外光线、开台灯、换机位，不用像视频模型那样每次换角度都重抽。</p>
+<p><img src="/images/HXomrq5akAAnMON.jpg" alt="HXomrq5akAAnMON"></p>
+<h3 id="16-Python：用代码遥控-Blender-干活"><a href="#16-Python：用代码遥控-Blender-干活" class="headerlink" title="16. Python：用代码遥控 Blender 干活"></a>16. Python：用代码遥控 Blender 干活</h3><p>在 Blender 这条路线里，Claude Code 就是靠写 Python 脚本来指挥它的——“窗边放张桌子，桌上放盏灯，第 5 秒亮起来”。Python 负责发号施令，Blender 负责把画面算出来。</p>
+<h3 id="17-NumPy：一次算好成千上万个物体怎么动"><a href="#17-NumPy：一次算好成千上万个物体怎么动" class="headerlink" title="17. NumPy：一次算好成千上万个物体怎么动"></a>17. NumPy：一次算好成千上万个物体怎么动</h3><p>NumPy 是 Python 里专门批量处理数字的工具。比如画面里有一万颗火星，每颗都有自己的位置、速度和亮度。如果逐个安排，会很麻烦；NumPy 可以把这些数据放在一起，按写好的规则成批计算。</p>
+<p>做偏电影感的特效时，它能帮上不少忙：算烟花粒子向四周飞散的轨迹，算海面不同位置的波浪高度，或者给大片草地生成有规律的摆动。算好的数据再交给 Blender 等工具，变成看得见的形状和动画。改一组参数，就能一起调整飞散速度、波浪起伏或摆动幅度。</p>
+<p><strong>它负责把大量细节算出来。</strong> 最后火星有没有发光、海面反射什么、镜头怎么拍，还要配合材质、灯光和渲染来完成。这也是代码做复杂场景的一种办法：先写出变化规则，再批量生成细节，不用把每个物体逐一摆好。</p>
+<p><img src="/images/HXomrrKbUAA47mz.jpg" alt="HXomrrKbUAA47mz"></p>
+<h3 id="第四组：排时间、出成片（把画面变成-MP4-的流水线）"><a href="#第四组：排时间、出成片（把画面变成-MP4-的流水线）" class="headerlink" title="第四组：排时间、出成片（把画面变成 MP4 的流水线）"></a>第四组：排时间、出成片（把画面变成 MP4 的流水线）</h3><h3 id="18-Manim：把数学公式和推导做成丝滑动画"><a href="#18-Manim：把数学公式和推导做成丝滑动画" class="headerlink" title="18. Manim：把数学公式和推导做成丝滑动画"></a>18. Manim：把数学公式和推导做成丝滑动画</h3><p>大名鼎鼎的 3Blue1Brown 同款工具，特别适合讲公式、几何和硬核知识。点沿曲线动、图形变形、公式一步步展开，逻辑清清楚楚。</p>
+<p><img src="/images/HXomrrea0AAFm2L.jpg" alt="HXomrrea0AAFm2L"></p>
+<h3 id="19-Remotion：用-React-精确控制视频的每一帧"><a href="#19-Remotion：用-React-精确控制视频的每一帧" class="headerlink" title="19. Remotion：用 React 精确控制视频的每一帧"></a>19. Remotion：用 React 精确控制视频的每一帧</h3><p>它能让你像写网页一样写视频，把字幕、声音、卡片和 3D 场景统统绑在同一个时间轴上。30fps 的视频，第 3 秒第几帧该干嘛，分毫不差。</p>
+<p><img src="/images/HXomsMaawAAqi2s.jpg" alt="HXomsMaawAAqi2s"></p>
+<h3 id="20-HyperFrames：把网页画面编排成视频"><a href="#20-HyperFrames：把网页画面编排成视频" class="headerlink" title="20. HyperFrames：把网页画面编排成视频"></a>20. HyperFrames：把网页画面编排成视频</h3><p>同样是围绕网页技术做视频编排的工具，能把 HTML 卡片、已有视频和 3D 画布统一塞进时间轴里导出。它负责管同步和组织，画面本身好不好看，还是取决于你往里放了什么内容。</p>
+<p><img src="/images/HXomsZWaUAAKSIv.jpg" alt="HXomsZWaUAAKSIv"></p>
+<h3 id="21-Playwright：帮你自动打开网页、逐帧截图"><a href="#21-Playwright：帮你自动打开网页、逐帧截图" class="headerlink" title="21. Playwright：帮你自动打开网页、逐帧截图"></a>21. Playwright：帮你自动打开网页、逐帧截图</h3><p>它是个浏览器自动化工具。在网页出片流程里，它负责把动画定格到精确的某一帧、等字体和图片加载完、咔嚓截图、再切下一帧，完全不受你电脑实时播放卡不卡顿的影响。</p>
+<p><img src="/images/HXomsZ_awAAVmyk.jpg" alt="HXomsZ_awAAVmyk"></p>
+<h3 id="22-FFmpeg：音视频处理的终极命令行神器"><a href="#22-FFmpeg：音视频处理的终极命令行神器" class="headerlink" title="22. FFmpeg：音视频处理的终极命令行神器"></a>22. FFmpeg：音视频处理的终极命令行神器</h3><p>把几百张 PNG 压成 MP4、混入旁白和配乐、裁剪压缩，全靠它收尾。帧率别设错（不然视频会变快放或慢放），码率也别压太狠，免得文字边缘发虚。</p>
+<p><img src="/images/HXomsc9bcAAhlP2.jpg" alt="HXomsc9bcAAhlP2"></p>
+<p><strong>记住一个原则：先想清楚你要呈现什么画面，再挑趁手的工具。</strong> 千万别在提示词里把这 22 个词全堆上去。</p>
+<h3 id="四、工具选型速查表：想拍什么片，怎么点菜？"><a href="#四、工具选型速查表：想拍什么片，怎么点菜？" class="headerlink" title="四、工具选型速查表：想拍什么片，怎么点菜？"></a>四、工具选型速查表：想拍什么片，怎么点菜？</h3><p>每次打开终端让 Claude Code 干活前，对照下面这张表选好技术组合，基本就不会出现 AI 瞎选路线的尴尬了：</p>
+<p><img src="/images/HXoms5nbgAAsqj5.jpg" alt="HXoms5nbgAAsqj5"></p>
+<h3 id="五、拆解真实案例：从画面效果，反推制作方案和提示词"><a href="#五、拆解真实案例：从画面效果，反推制作方案和提示词" class="headerlink" title="五、拆解真实案例：从画面效果，反推制作方案和提示词"></a>五、拆解真实案例：从画面效果，反推制作方案和提示词</h3><p>前面认识了工具，现在通过在x看到的优秀案例，来解读一下目前可以实现的某些风格及技术手段。有些案例作者已经给了完整提示词，方便大家拆解学习～</p>
+<h3 id="案例-1：悬崖城堡与电影感光影"><a href="#案例-1：悬崖城堡与电影感光影" class="headerlink" title="案例 1：悬崖城堡与电影感光影"></a>案例 1：悬崖城堡与电影感光影</h3><p>作者先提供两张参考图，再让 Claude 写 Blender Python，生成城堡、地形、材质和相机。成片通过远景、沿瀑布上升、建筑近景与塔楼环绕，让观众逐渐进入同一个三维空间。参考图负责确定外观，建筑的体积、遮挡和光影仍由三维场景计算。</p>
+<p>原提示词没有逐秒规定这七个镜头，而是给了画面目标、制作时间和资源限制，之后继续要求增加细节、压低过亮的灯光。两张参考图未随工程公开；照着尝试时，需要另备建筑与环境参考图。配乐和音效使用外部素材。</p>
+<p><strong>作者给的提示词）</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">根据附上的参考图片，使用Blender或Three.js搭建细节丰富的三维世界，制作一条约45秒、有电影感的视频，重点放在建筑外观与环境细节。</span><br><span class="line"></span><br><span class="line">可以长时间迭代，但要留意CPU、GPU、内存和模型使用额度，避免电脑崩溃或工作丢失。在约定的次日晚间截止时间前完成渲染。</span><br><span class="line"></span><br><span class="line">允许使用Fable 5.2或Opus 5.5子智能体协作，合理安排资源。音乐和音效从网上寻找免费、专业的素材，不要自行合成声音。</span><br><span class="line"></span><br><span class="line">持续改善画面、材质、灯光和细节，自主完成制作。</span><br><span class="line"></span><br><span class="line">作者后续补充的主要要求：</span><br><span class="line">继续工作，注意电脑同时还有其他任务；山体与城堡的细节还不够，需要加强；部分灯光过亮，需要降低亮度。</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例-2：1930年代老卡通"><a href="#案例-2：1930年代老卡通" class="headerlink" title="案例 2：1930年代老卡通"></a>案例 2：1930年代老卡通</h3><p>作者说明，原片由一个 JavaScript 文件和一个 Python 文件制作，没有图片生成器和现成素材，钢琴也由代码合成。这里可以选择 <strong>Canvas 2D</strong> 来绘制：头和帽子是形状，弯曲四肢是曲线，表情和背景逐帧重画。这是我选用的路线，原帖没有公开具体绘图库，如有不对，欢迎视频大佬批评指正！</p>
+<p>要让人物表演，必须把“整个人朝右移动”和“腿怎么迈步”分开控制。脚踩地时暂时停在地面上，身体继续向前；看见小狗后，视线先转过去，再停步、弯腰。胶片划痕和米黄色调只负责外观，这些动作衔接才决定故事能不能成立。</p>
+<p>**准备什么：**这个版本不需要图片或人物模型。若要还原自己的角色，可以补充人物与小狗的正面、侧面参考图，让 Claude 重新绘制成可活动的部件；一张完整人物图片直接左右平移，做不出下面这些动作。提示词把原片的相遇情节改编为32秒。</p>
+<p><strong>参考提示词（根据画面与已披露技术整理，非作者原词）</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">用JavaScript、Canvas 2D和Python制作32秒的1930年代卡通，1920×1080、24fps。故事是一位旅人遇见小狗，走开后后悔，返回带它一起旅行。输出网页预览、源码和MP4。</span><br><span class="line"></span><br><span class="line">绘制与动画方案</span><br><span class="line">不用外部图片。用Canvas路径画戴圆帽、背小包的旅人，以及坐在纸箱里的小狗。头、躯干、帽子、上下臂、手、腿、鞋和小狗耳朵、尾巴分别绘制，以关节位置连接；四肢用可弯曲的曲线，脸上眼睛、眉毛和嘴可以独立改变。</span><br><span class="line">采用黑色轮廓、米黄色底、少量灰阶。远山、房屋、路牌、前景草丛分层绘制，位移速度由远到近增加。胶片颗粒、轻微亮度波动和少量划痕最后叠加，人物轮廓始终清楚。</span><br><span class="line">动作按“行走、注意、停步、离开、返回、蹲下、抱起、同行”组织。行走区分脚踩地与抬脚，脚掌接触地面时锁定落点，减少滑步；背包和帽子稍晚跟随身体。让每帧画面都由render(t)决定，随机纹理使用固定种子。</span><br><span class="line"></span><br><span class="line">分镜</span><br><span class="line">0–3秒，片名卡：边框与手写风片名“同行”出现，2.5秒开始收暗。字幕用真实字体绘制。</span><br><span class="line">3–8秒，侧面全景：旅人从左向右走，保持在画面左侧三分之一处，相机平移跟随，环境向左移动。人物步幅与地面移动速度对应，7秒时右侧出现纸箱。</span><br><span class="line">8–12秒，双人中景：硬切到旅人与箱子都能看清的位置。8–9秒旅人先转眼再转头；9–10秒减速并站稳；10–11秒弯腰，小狗抬头；11–12秒两者对视。人物与箱子的距离保持一臂左右。</span><br><span class="line">12–16秒，侧面远景：硬切，小狗留在左侧，旅人朝右走开。13.5秒回头一次，随后继续走；乌云进入，雨从稀变密，画面逐渐变暗。镜头不跟着旅人离开，保留越来越远的两者。</span><br><span class="line">16–19秒，字幕卡：直接切“我应该回去。”，停留让人读完，最后0.3秒淡出。</span><br><span class="line">19–24秒，同地点中景：旅人从右向左返回，19–21秒走近箱子；21–22秒蹲下、双手伸到小狗身侧；22–23秒托住后抱起，狗的位置在接触后才跟随双手；23–24秒脸靠近小狗，尾巴摇动。</span><br><span class="line">24–29秒，侧面全景：硬切，旅人蹲下把小狗放到地面，待四脚接地再松手；25.5秒起两者向右同行，云散开、雨停止。小狗步频快一些，始终走在旅人旁边。</span><br><span class="line">29–32秒，收尾远景：切到略远的机位，人物沿向远处延伸的道路走小，30.5秒出现“旅程才刚开始”，最后0.5秒渐暗。</span><br><span class="line"></span><br><span class="line">先按上述内容保存分镜脚本，并从同一套绘制函数输出角色设定图和每镜头一张分镜图；再完成动画，不用另一套图片生成器代替人物表演。</span><br><span class="line">Python用音符频率、谐波和衰减包络合成一条简短的钢琴风伴奏；离开段减少音符、降低音量，返回时恢复主题。定位为合成音色，避免声称是真实钢琴录音。</span><br><span class="line">以t=帧号/24逐帧导出768张画面，检查停步、抱起和放下的连接，使用FFmpeg合成音画并保留工程。</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例-3：毛毡与纸板定格"><a href="#案例-3：毛毡与纸板定格" class="headerlink" title="案例 3：毛毡与纸板定格"></a>案例 3：毛毡与纸板定格</h3><p>作者明确说人物、纸板小镇、毛发、毛毡和吹胡须的动作由 <strong>Python 驱动 Blender</strong> 完成，也说明自己参与了导演和多次提示。</p>
+<p>要做出相近效果，可以让 Blender 先生成有体积的玩偶，再在表面添加短纤维曲线，长胡须单独做成可变形的曲线束。纸板要建出厚度，切口处露出夹层；胶带有微弱反光，毛毡则偏哑光。帽子单独建模、单独设置动画，才能在身体落地后继续运动。近景能看见这些材料和动作细节，比给光滑模型套一层“毛毡色”有效。</p>
+<p>**准备什么：**建议给一张牛仔全身图、一张面部或毛毡细节图、一张纸板布景图，统一造型和材料。它们是建议提供的参考。下面选用程序化玩偶，简单的分部件关节即可完成动作，不依赖外部动作库。</p>
+<p><strong>参考提示词（根据画面与已披露技术整理，非作者原词）</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">用Blender Python制作10.5秒的手工毛毡牛仔短片，1920×1080、24fps。按我提供的全身、材料和布景参考图统一外观；没有参考图时使用下列设计。输出场景、脚本和MP4。</span><br><span class="line"></span><br><span class="line">资产与材料</span><br><span class="line">角色是约20厘米高的圆胖牛仔玩偶：大帽檐、圆鼻子、黑色纽扣眼睛、蓬松胡须、红色领巾、棕色短靴。背景是桌面纸板西部街道，门窗用不均匀的彩色线条绘制，墙体切口露出瓦楞夹层，局部用半透明胶带连接。</span><br><span class="line">身体、头、帽子、双臂、双腿和眼睑分别建模，给肩、髋、膝与头部设置转动中心，脚底作为站立基准。胡须分左右两束曲线，每束有根部、中部、末端控制点；帽子保留独立变换，不固定死在头上。</span><br><span class="line">衣服用粗糙布料材质和短纤维曲线。纤维贴着身体方向散布，有少量长短变化；近景可见短毛，远景减少数量。胡须使用更长、更稀的曲线束。纸板是真正有厚度的模型，外层纸与夹层分开，胶带有轻微褶皱和反光。</span><br><span class="line">用大面积柔光照明和弱侧逆光照出纤维轮廓。背景比人物暗一点，人物脚底有接触阴影。浅景深的焦点跟随眼睛或身体，不能把整张脸都虚掉。</span><br><span class="line"></span><br><span class="line">三个镜头与动作</span><br><span class="line">0–3.67秒，全身跟拍，约50mm：相机位于玩偶腰部高度，人物从街道后方朝前走两三步，相机缓慢后退。摆腿、落脚、身体起伏彼此对应，落脚瞬间停顿，手臂以较小幅度摆动。纸板房屋产生真实的前后视差。</span><br><span class="line">3.67–6.25秒，面部特写，约85mm：硬切到相同朝向的脸部，保留帽檐和胡须。3.8–4.2秒眼睛向侧面转；4.2秒眨眼；4.7秒嘴部做吹气准备，5秒吹动胡须。胡须根部基本不动，中段先抬起、末端随后扬起，再有一次幅度减小的回摆，6.1秒回稳。</span><br><span class="line">6.25–10.5秒，全身固定机位，约50mm：硬切回原场景。</span><br><span class="line">6.25–7.3秒站稳、抬臂；7.3–8.5秒膝部弯曲，身体下沉约身高的10%，最后短暂停住。</span><br><span class="line">8.5–9秒发力起跳，身体升高约身高的15%，手臂向外展开。身体达到最高点前帽子开始离头，保持同一竖直方向。</span><br><span class="line">9–9.6秒身体先落地，膝盖弯曲吸收冲击，随后帽子落回头顶并轻轻弹一下；不要让帽子穿过头。</span><br><span class="line">9.6–10.5秒恢复站姿，头先转向相机，身体随后转少许，停住收尾。</span><br><span class="line"></span><br><span class="line">把这些动作写入统一时间表。身体、帽子、胡须分别用关键帧和衰减曲线控制；身体可以每两帧保持一次姿态，模拟手工定格节奏，相机保持平稳，帽子与胡须不要与身体同相摆动。</span><br><span class="line">先渲染全身和面部两张样图，检查比例、纤维与景深，再做三个镜头的动态预览。修好落脚、胡须变形和帽子接触后，渲染252帧并用FFmpeg输出MP4。提供音效时对齐脚步与落地，未提供则交付无声版。</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例-4：热气球穿越童话世界"><a href="#案例-4：热气球穿越童话世界" class="headerlink" title="案例 4：热气球穿越童话世界"></a>案例 4：热气球穿越童话世界</h3><p>这条短片用同一个男孩和热气球串起8个世界。作者的提示词把人物造型、材质、灯光、环境和动作都写了进去，还规定每个世界安排两个镜头：先展示环境规模，再靠近人物或换一个角度。这些要求一起决定了画面的丰富程度和叙事节奏。</p>
+<p>作者用 Three.js 制作，没有图片模型、视频模型和外部素材。模型、纹理与动画都需要代码实现，再逐帧导出。</p>
+<p><strong>作者给的提示词</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">制作一条约100秒的童话风三维动画，使用Three.js，交付实时播放网页和1920×1080、30fps的逐帧渲染MP4。画面与声音由代码制作，不使用图片模型、视频模型、外部资产或音频采样。</span><br><span class="line"></span><br><span class="line">固定主角与载具：红发小男孩穿复古宇航服、戴透明头盔，携带望远镜，乘坐拼布热气球。吊篮、绳索和配件需要细节；燃烧器的暖光贯穿全片。</span><br><span class="line"></span><br><span class="line">旅程依次经过云海、风筝峡谷、天灯小镇、雷暴、月下浮岛、极光冰峡湾、星河与清晨。每个世界约两个六秒镜头，先用远景表现环境，再切近景或对比角度；世界之间短暂淡入黑场。结尾出现其他热气球，男孩挥手。</span><br><span class="line"></span><br><span class="line">角色保持统一造型，能观察、举望远镜和挥手，吊篮的摆动稍晚于气球。用程序化几何与纹理表现布料、藤编、岩石等材料；场景有前中后景，远处逐渐融入雾中。</span><br><span class="line"></span><br><span class="line">每个世界确定主色和主要光源，加入分层粒子、景深、柔和泛光与轻微胶片质感。镜头缓慢移动，云、水、飘带和灯光持续变化；所有动画由时间计算，能够准确重现任意一帧。</span><br><span class="line"></span><br><span class="line">代码合成配乐与环境音，情绪由温暖出发，经过风暴低谷，回到清晨的明亮。音效对齐画面，结尾和弦配合挥手。</span><br><span class="line"></span><br><span class="line">完成前渲染静帧检查，继续修改造型、构图、光线和材质问题，再输出成片。</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例-5：Riley-的《The-Edge》"><a href="#案例-5：Riley-的《The-Edge》" class="headerlink" title="案例 5：Riley 的《The Edge》"></a>案例 5：Riley 的《The Edge》</h3><p>这条片子把几种工具接在了一起：HTML&#x2F;CSS 制作电脑界面，Three.js 绘制界面里的浮岛，网页逐帧输出图片后，再贴到 Blender 的笔记本屏幕上。房间、电脑和 Clawd 都在三维空间里，相机靠近、环绕时，屏幕内容也能保持正确的透视。</p>
+<p><img src="/images/HXomtGNbMAE6Pn0.jpg" alt="HXomtGNbMAE6Pn0"></p>
+<p>运镜围绕“启动任务—等待—完成”展开：全景交代房间，键盘与屏幕特写交代操作，再用焦点从角色移到屏幕的变化引导视线。字符出现、按键下压和键盘声共用时间数据；黄昏到清晨的光线变化压缩了等待过程。配乐由 ElevenLabs 制作，渲染交给 RunPod。</p>
+<p><img src="/images/HXomtKmakAAkoez.jpg" alt="HXomtKmakAAkoez"></p>
+<p>作者最初的要求很短，并提到了此前一起做过的 Blender 视频。制作手记里的13个镜头、网页贴屏和同步方案，是执行过程中展开的设计，没有写在这条初始要求里。</p>
+<p><strong>作者给的提示词（中文要点整理，完整原文见制作手记的“The request”）</strong></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">延续之前制作Blender视频的方式，做一条展示Fable 5.2能力的短片。</span><br><span class="line"></span><br><span class="line">场景是一间放有笔记本电脑的房间，电脑展示复杂作品的搭建、视频剪辑等任务。整体具有鼓舞人心的广告质感，参考Anthropic广告的视觉方向。</span><br><span class="line"></span><br><span class="line">安排不同角度的切换与打字特写，让Clawd多次出镜，充分打磨画面，使用RunPod完成渲染。</span><br></pre></td></tr></table></figure>
+
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>折腾了这么多天，我最大的感受是：<strong>用 Claude Code 做视频，最容易掉进的坑就是“沉迷技术名词”</strong>，总觉得只要把 Three.js、WebGL、Shader 全堆上去，视频自然就高级了。</p>
+<p>其实代码只负责把画面画出来，真正让观众看进去的，是你在分镜里安排的“变化”。下次开始做视频的时候，最好先在脑海里有一个大概的画面方向，构思好：<strong>“画面里的主角遇到了什么状态，做了什么动作，带来了什么改变？”</strong> 把这件事交代明白，Claude Code 写出来的每一行代码，才会真正变成一条让人看得进去的好片子。</p>
+<p><strong>关于作者</strong></p>
+<p><strong>Punk</strong>｜中科大管理学硕士｜AI提示词、AI小白教程｜Punk系列Skills作者｜3个月赚了8位数｜Learn in Public｜FDE文章浏览量240w｜@AdrianPunk115</p>
+<p><img src="/images/HXomtNcbsAAyUoN.jpg" alt="HXomtNcbsAAyUoN"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/21/AdrianPunk115-2124098048842473619/">https://yaoav.github.io/2026/11/21/AdrianPunk115-2124098048842473619/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AdrianPunk115/">@AdrianPunk115</a></div><div class="post-share"><div class="social-share" data-image="/images/2124098048842473619-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招"><img class="cover" src="/images/2124101014575878535-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">面了十几个想转 FDE 的程序员，一个都没招</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @ama_huangama（黄啊码） 的长文，原文链接，版权归原作者所有。  最近面了十几个想转 FDE 的程序员，一个都没招。 不是技术不行，好几个是大厂出来的，八九年经验，系统设计讲得比我好。 最近团队交付比较吃紧，所以在招聘网挂上了 FDE 的招聘，但发现，我认为技术转型的 FDE 是最合适的想法也是最大的错误，给你们打个比方： 我问：客户想把 AI 接进他们的报销审批，但具体要什么说不清楚，你进场第一周干什么？ 最常见的回答是：先跟客户把需求对清楚，出份文档，确认范围，再排期开发。 这在以前是标准答案，现在做 FDE，这么干基本就输了。 先说背景。 写代码的岗位在减少，大家都感觉到了，Anthropic 公布过一个数据：初级技术岗在他们新招聘里的占比，从 27% 掉到了 9%。他们内部 Agent 干活的时长，是员工的 6 倍。 可做 AI 落地的公司，FDE 一直招不满。 照理说，失业的程序员和缺人的 FDE 应该能对上，实际却对不上。我这几个月的感受是，卡住大家的不是沟通能力，而是做程序员时养成的几个习惯。 1、 等别人把问题定义好 程序员的舒...</div></div></div></a><a class="pagination-related" href="/2026/11/21/criscxuan-2124094168117191119/" title="自从吸上了 T3 Code ，爽感堪比 GTA-6 "><img class="cover" src="/images/2124094168117191119-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">自从吸上了 T3 Code ，爽感堪比 GTA-6 </div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @criscxuan（cxuan） 的长文，原文链接，版权归原作者所有。  用 Coding Agent 这么久了，估计很多小伙伴都遇到过这种问题，平常开发或者办公会用到很多 Coding Agent ，不同 Agent 中的模型不一样，虽然你可以通过开源网关把许多模型接入到一个 Agent 中，但你也会遇到不同 Agent Harness + 模型适配度问题。 给大家看一下我日常用的 Agent 。。。  我就经常想切 ZCode 结果切成 OpenCode 去了。。。难顶 而且一言以蔽之：自家模型还是用自家的 Harness 最好，至少。。。可能不会遇到稀奇古怪的问题。 既然自家模型配自家官方 Harness 最稳，那桌面上就不可避免会装十来个客户端和 CLI，来回切换窗口、分别导入项目、找回历史会话都很割裂。 于是就会衍生出来一个问题，那就是有没有办法保留各家原厂 Harness 的执行能力，只在最外层用一个统一入口把它们收编管理起来？ 这就是今天我想说的 T3 Code。 T3 是什么T3 Code 是由 Ping Labs（Theo Browne...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">441</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">217</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Claude-Code-%E5%86%99%E4%BB%A3%E7%A0%81%E5%81%9A%E8%A7%86%E9%A2%91%EF%BC%8C%E5%92%8C-Sora%E3%80%81Seedance-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一、Claude Code 写代码做视频，和 Sora、Seedance 有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E6%A8%A1%E5%9E%8B%EF%BC%9A%E9%9D%A0%E2%80%9C%E7%8C%9C%E5%83%8F%E7%B4%A0%E2%80%9D%E9%A2%84%E6%B5%8B%E7%94%BB%E9%9D%A2"><span class="toc-number">2.</span> <span class="toc-text">视频模型：靠“猜像素”预测画面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Claude-Code-%E8%B7%AF%E7%BA%BF%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91%E9%87%8C%E6%90%AD%E4%B8%AA%E2%80%9C%E6%95%B0%E5%AD%97%E7%89%87%E5%9C%BA%E2%80%9D"><span class="toc-number">3.</span> <span class="toc-text">Claude Code 路线：在电脑里搭个“数字片场”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BB%8E%E2%80%9CPPT-%E6%84%9F%E2%80%9D%E6%95%99%E7%A8%8B%EF%BC%8C%E5%88%B0%E7%9C%9F%E6%AD%A3%E8%83%BD%E7%9C%8B%E7%9A%84%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91"><span class="toc-number">4.</span> <span class="toc-text">二、从“PPT 感”教程，到真正能看的演示视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B0%8F%E7%99%BD%E4%B9%9F%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84%E6%8A%80%E6%9C%AF%E8%AF%8D%E5%85%B8%EF%BC%9A%E6%83%B3%E5%81%9A%E5%95%A5%E6%95%88%E6%9E%9C%EF%BC%8C%E8%AF%A5%E7%82%B9%E8%B0%81%E7%9A%84%E5%90%8D%EF%BC%9F"><span class="toc-number">5.</span> <span class="toc-text">三、小白也能看懂的技术词典：想做啥效果，该点谁的名？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BB%84%EF%BC%9A%E6%90%AD%E6%9E%B6%E5%AD%90%E3%80%81%E5%81%9A%E6%8E%92%E7%89%88%EF%BC%88%E9%80%82%E5%90%88%E6%96%87%E5%AD%97%E3%80%81%E5%8D%A1%E7%89%87%E5%92%8C%E7%95%8C%E9%9D%A2%E5%8A%A8%E6%95%88%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">第一组：搭架子、做排版（适合文字、卡片和界面动效）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-HTML%EF%BC%9A%E5%91%8A%E8%AF%89%E7%94%B5%E8%84%91%EF%BC%8C%E7%94%BB%E9%9D%A2%E9%87%8C%E8%A6%81%E6%94%BE%E4%BB%80%E4%B9%88"><span class="toc-number">7.</span> <span class="toc-text">1. HTML：告诉电脑，画面里要放什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-CSS%EF%BC%9A%E5%86%B3%E5%AE%9A%E8%BF%99%E4%BA%9B%E4%B8%9C%E8%A5%BF%E9%95%BF%E4%BB%80%E4%B9%88%E6%A0%B7%E3%80%81%E6%80%8E%E4%B9%88%E5%8A%A8"><span class="toc-number">8.</span> <span class="toc-text">2. CSS：决定这些东西长什么样、怎么动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-JavaScript%EF%BC%88JS%EF%BC%89%EF%BC%9A%E5%91%8A%E8%AF%89%E7%94%BB%E9%9D%A2%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88"><span class="toc-number">9.</span> <span class="toc-text">3. JavaScript（JS）：告诉画面，接下来发生什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-React%EF%BC%9A%E5%90%8C%E4%B8%80%E7%A7%8D%E5%8D%A1%E7%89%87%EF%BC%8C%E4%B8%8D%E7%94%A8%E9%87%8D%E5%A4%8D%E6%90%AD%E5%8D%81%E9%81%8D"><span class="toc-number">10.</span> <span class="toc-text">4. React：同一种卡片，不用重复搭十遍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-GSAP%EF%BC%9A%E6%8A%8A%E4%B8%80%E5%A0%86%E5%8A%A8%E4%BD%9C%E6%8E%92%E5%A5%BD%E5%85%88%E5%90%8E%E9%A1%BA%E5%BA%8F"><span class="toc-number">11.</span> <span class="toc-text">5. GSAP：把一堆动作排好先后顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-SVG%EF%BC%9A%E7%94%BB%E6%80%8E%E4%B9%88%E6%94%BE%E5%A4%A7%E9%83%BD%E4%B8%8D%E7%B3%8A%E7%9A%84%E5%9B%BE%E6%A0%87%E5%92%8C%E7%AE%AD%E5%A4%B4"><span class="toc-number">12.</span> <span class="toc-text">6. SVG：画怎么放大都不糊的图标和箭头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%BB%84%EF%BC%9A%E7%94%BB%E5%B9%B3%E9%9D%A2%E3%80%81%E7%8E%A9%E5%88%9B%E6%84%8F%EF%BC%88%E9%80%82%E5%90%88%E7%B2%92%E5%AD%90%E3%80%81%E7%BA%BF%E6%9D%A1%E5%92%8C%E6%89%8B%E7%BB%98%E6%84%9F%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">第二组：画平面、玩创意（适合粒子、线条和手绘感）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Canvas%EF%BC%9A%E7%BD%91%E9%A1%B5%E9%87%8C%E7%9A%84%E4%B8%80%E5%9D%97%E7%A9%BA%E7%99%BD%E7%94%BB%E5%B8%83"><span class="toc-number">14.</span> <span class="toc-text">7. Canvas：网页里的一块空白画布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Canvas-2D%EF%BC%9A%E5%9C%A8%E7%94%BB%E5%B8%83%E4%B8%8A%E7%9B%B4%E6%8E%A5%E7%94%BB%E5%B9%B3%E9%9D%A2%E5%9B%BE%E5%BD%A2"><span class="toc-number">15.</span> <span class="toc-text">8. Canvas 2D：在画布上直接画平面图形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-p5-js%EF%BC%9A%E8%AE%A9%E4%BB%A3%E7%A0%81%E7%94%BB%E7%94%BB%E6%9B%B4%E7%9C%81%E5%BF%83%E7%9A%84%E5%88%9B%E6%84%8F%E5%B7%A5%E5%85%B7"><span class="toc-number">16.</span> <span class="toc-text">9. p5.js：让代码画画更省心的创意工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-p5-brush%EF%BC%9A%E7%BB%99%E4%BB%A3%E7%A0%81%E5%8A%A0%E4%B8%8A%E6%89%8B%E7%BB%98%E7%AC%94%E8%A7%A6"><span class="toc-number">17.</span> <span class="toc-text">10. p5.brush：给代码加上手绘笔触</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%BB%84%EF%BC%9A%E5%BB%BA-3D%E3%80%81%E6%89%93%E5%85%89%E5%BD%B1%EF%BC%88%E7%94%B5%E5%BD%B1%E6%84%9F%E7%9A%84%E7%9C%9F%E6%AD%A3%E6%9D%A5%E6%BA%90%EF%BC%89"><span class="toc-number">18.</span> <span class="toc-text">第三组：建 3D、打光影（电影感的真正来源）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Three-js%EF%BC%9A%E5%9C%A8%E7%BD%91%E9%A1%B5%E9%87%8C%E6%90%AD%E4%B8%80%E4%B8%AA%E8%83%BD%E8%BD%AC%E7%9D%80%E7%9C%8B%E7%9A%84-3D-%E7%A9%BA%E9%97%B4"><span class="toc-number">19.</span> <span class="toc-text">11. Three.js：在网页里搭一个能转着看的 3D 空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-WebGL%EF%BC%9A%E8%AE%A9%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8A%8A%E7%94%BB%E5%9B%BE%E4%BA%A4%E7%BB%99%E6%98%BE%E5%8D%A1%E5%B9%B2"><span class="toc-number">20.</span> <span class="toc-text">12. WebGL：让浏览器把画图交给显卡干</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-WebGPU%EF%BC%9A%E6%9B%B4%E6%96%B0%E4%B8%80%E4%BB%A3%E7%9A%84%E6%98%BE%E5%8D%A1%E9%80%9A%E9%81%93"><span class="toc-number">21.</span> <span class="toc-text">13. WebGPU：更新一代的显卡通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Shader%EF%BC%88%E7%9D%80%E8%89%B2%E5%99%A8%EF%BC%89%EF%BC%9A%E5%86%B3%E5%AE%9A%E8%A1%A8%E9%9D%A2%E6%9D%90%E8%B4%A8%E5%92%8C%E7%89%B9%E6%95%88%E6%80%8E%E4%B9%88%E7%94%BB"><span class="toc-number">22.</span> <span class="toc-text">14. Shader（着色器）：决定表面材质和特效怎么画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-Blender%EF%BC%9A%E7%94%B5%E8%84%91%E9%87%8C%E7%9A%84%E4%B8%93%E4%B8%9A-3D-%E6%91%84%E5%BD%B1%E6%A3%9A"><span class="toc-number">23.</span> <span class="toc-text">15. Blender：电脑里的专业 3D 摄影棚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-Python%EF%BC%9A%E7%94%A8%E4%BB%A3%E7%A0%81%E9%81%A5%E6%8E%A7-Blender-%E5%B9%B2%E6%B4%BB"><span class="toc-number">24.</span> <span class="toc-text">16. Python：用代码遥控 Blender 干活</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-NumPy%EF%BC%9A%E4%B8%80%E6%AC%A1%E7%AE%97%E5%A5%BD%E6%88%90%E5%8D%83%E4%B8%8A%E4%B8%87%E4%B8%AA%E7%89%A9%E4%BD%93%E6%80%8E%E4%B9%88%E5%8A%A8"><span class="toc-number">25.</span> <span class="toc-text">17. NumPy：一次算好成千上万个物体怎么动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%BB%84%EF%BC%9A%E6%8E%92%E6%97%B6%E9%97%B4%E3%80%81%E5%87%BA%E6%88%90%E7%89%87%EF%BC%88%E6%8A%8A%E7%94%BB%E9%9D%A2%E5%8F%98%E6%88%90-MP4-%E7%9A%84%E6%B5%81%E6%B0%B4%E7%BA%BF%EF%BC%89"><span class="toc-number">26.</span> <span class="toc-text">第四组：排时间、出成片（把画面变成 MP4 的流水线）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-Manim%EF%BC%9A%E6%8A%8A%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%92%8C%E6%8E%A8%E5%AF%BC%E5%81%9A%E6%88%90%E4%B8%9D%E6%BB%91%E5%8A%A8%E7%94%BB"><span class="toc-number">27.</span> <span class="toc-text">18. Manim：把数学公式和推导做成丝滑动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-Remotion%EF%BC%9A%E7%94%A8-React-%E7%B2%BE%E7%A1%AE%E6%8E%A7%E5%88%B6%E8%A7%86%E9%A2%91%E7%9A%84%E6%AF%8F%E4%B8%80%E5%B8%A7"><span class="toc-number">28.</span> <span class="toc-text">19. Remotion：用 React 精确控制视频的每一帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-HyperFrames%EF%BC%9A%E6%8A%8A%E7%BD%91%E9%A1%B5%E7%94%BB%E9%9D%A2%E7%BC%96%E6%8E%92%E6%88%90%E8%A7%86%E9%A2%91"><span class="toc-number">29.</span> <span class="toc-text">20. HyperFrames：把网页画面编排成视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-Playwright%EF%BC%9A%E5%B8%AE%E4%BD%A0%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E7%BD%91%E9%A1%B5%E3%80%81%E9%80%90%E5%B8%A7%E6%88%AA%E5%9B%BE"><span class="toc-number">30.</span> <span class="toc-text">21. Playwright：帮你自动打开网页、逐帧截图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-FFmpeg%EF%BC%9A%E9%9F%B3%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E7%9A%84%E7%BB%88%E6%9E%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A5%9E%E5%99%A8"><span class="toc-number">31.</span> <span class="toc-text">22. FFmpeg：音视频处理的终极命令行神器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B7%A5%E5%85%B7%E9%80%89%E5%9E%8B%E9%80%9F%E6%9F%A5%E8%A1%A8%EF%BC%9A%E6%83%B3%E6%8B%8D%E4%BB%80%E4%B9%88%E7%89%87%EF%BC%8C%E6%80%8E%E4%B9%88%E7%82%B9%E8%8F%9C%EF%BC%9F"><span class="toc-number">32.</span> <span class="toc-text">四、工具选型速查表：想拍什么片，怎么点菜？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%8B%86%E8%A7%A3%E7%9C%9F%E5%AE%9E%E6%A1%88%E4%BE%8B%EF%BC%9A%E4%BB%8E%E7%94%BB%E9%9D%A2%E6%95%88%E6%9E%9C%EF%BC%8C%E5%8F%8D%E6%8E%A8%E5%88%B6%E4%BD%9C%E6%96%B9%E6%A1%88%E5%92%8C%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">33.</span> <span class="toc-text">五、拆解真实案例：从画面效果，反推制作方案和提示词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-1%EF%BC%9A%E6%82%AC%E5%B4%96%E5%9F%8E%E5%A0%A1%E4%B8%8E%E7%94%B5%E5%BD%B1%E6%84%9F%E5%85%89%E5%BD%B1"><span class="toc-number">34.</span> <span class="toc-text">案例 1：悬崖城堡与电影感光影</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-2%EF%BC%9A1930%E5%B9%B4%E4%BB%A3%E8%80%81%E5%8D%A1%E9%80%9A"><span class="toc-number">35.</span> <span class="toc-text">案例 2：1930年代老卡通</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-3%EF%BC%9A%E6%AF%9B%E6%AF%A1%E4%B8%8E%E7%BA%B8%E6%9D%BF%E5%AE%9A%E6%A0%BC"><span class="toc-number">36.</span> <span class="toc-text">案例 3：毛毡与纸板定格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-4%EF%BC%9A%E7%83%AD%E6%B0%94%E7%90%83%E7%A9%BF%E8%B6%8A%E7%AB%A5%E8%AF%9D%E4%B8%96%E7%95%8C"><span class="toc-number">37.</span> <span class="toc-text">案例 4：热气球穿越童话世界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B-5%EF%BC%9ARiley-%E7%9A%84%E3%80%8AThe-Edge%E3%80%8B"><span class="toc-number">38.</span> <span class="toc-text">案例 5：Riley 的《The Edge》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">39.</span> <span class="toc-text">写在最后</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"><img src="/images/2124190545404694758-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)"/></a><div class="content"><a class="title" href="/2026/11/22/LuTrujilloAR-2124190545404694758/" title="The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)">The ONLY REAL guide on how to increase LinkedIn Acceptance rate to +50% (based on 44,396 invites)</a><time datetime="2026-11-22T01:17:46.000Z" title="发表于 2026-11-22 01:17:46">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "><img src="/images/2124183673465344406-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews "/></a><div class="content"><a class="title" href="/2026/11/22/k2sbhai-2124183673465344406/" title="&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews ">&quot;Next Time We'll Pay&quot; Usually Means Never: @k2sbhai on AI, Brand Deals and Honest Reviews </a><time datetime="2026-11-22T00:50:27.000Z" title="发表于 2026-11-22 00:50:27">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT"><img src="/images/2124165469553009117-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BTC 5 分钟  双模型GPT Grok BOT"/></a><div class="content"><a class="title" href="/2026/11/21/chenke20266-2124165469553009117/" title="BTC 5 分钟  双模型GPT Grok BOT">BTC 5 分钟  双模型GPT Grok BOT</a><time datetime="2026-11-21T23:38:07.000Z" title="发表于 2026-11-21 23:38:07">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍"><img src="/images/2124153985007509726-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="豆包工作全方位教程，让你工作效率翻倍"/></a><div class="content"><a class="title" href="/2026/11/21/KinhVujhfi-2124153985007509726/" title="豆包工作全方位教程，让你工作效率翻倍">豆包工作全方位教程，让你工作效率翻倍</a><time datetime="2026-11-21T22:52:29.000Z" title="发表于 2026-11-21 22:52:29">2026-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招"><img src="/images/2124101014575878535-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="面了十几个想转 FDE 的程序员，一个都没招"/></a><div class="content"><a class="title" href="/2026/11/21/ama_huangama-2124101014575878535/" title="面了十几个想转 FDE 的程序员，一个都没招">面了十几个想转 FDE 的程序员，一个都没招</a><time datetime="2026-11-21T19:22:00.000Z" title="发表于 2026-11-21 19:22:00">2026-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
