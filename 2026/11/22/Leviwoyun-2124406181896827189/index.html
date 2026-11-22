@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Antigravity 11 篇教程合集，从入门到多 Agent 实战 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="gemini 最近更新太猛了，谷歌又频出 BUG 订阅，不少朋友都已上车 gemini，却又头疼 Antigravity，不知道正确的使用方式。 所以我把几位大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Antigravity 11 篇教程合集，从入门到多 Agent 实战">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/22/Leviwoyun-2124406181896827189/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="gemini 最近更新太猛了，谷歌又频出 BUG 订阅，不少朋友都已上车 gemini，却又头疼 Antigravity，不知道正确的使用方式。 所以我把几位大">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124406181896827189-cover.jpg">
+<meta property="article:published_time" content="2026-11-22T15:34:37.000Z">
+<meta property="article:modified_time" content="2026-11-22T15:57:53.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@Leviwoyun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124406181896827189-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Antigravity 11 篇教程合集，从入门到多 Agent 实战",
+  "url": "https://yaoav.github.io/2026/11/22/Leviwoyun-2124406181896827189/",
+  "image": "https://yaoav.github.io/images/2124406181896827189-cover.jpg",
+  "datePublished": "2026-11-22T15:34:37.000Z",
+  "dateModified": "2026-11-22T15:57:53.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/22/Leviwoyun-2124406181896827189/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Antigravity 11 篇教程合集，从入门到多 Agent 实战',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">462</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">221</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124406181896827189-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Antigravity 11 篇教程合集，从入门到多 Agent 实战</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Antigravity 11 篇教程合集，从入门到多 Agent 实战</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-22T15:34:37.000Z" title="发表于 2026-11-22 15:34:37">2026-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@Leviwoyun（Levi 卧云）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124406181896827189">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>gemini 最近更新太猛了，谷歌又频出 BUG 订阅，不少朋友都已上车 gemini，却又头疼 Antigravity，不知道正确的使用方式。  </p>
+<p>所以我把几位大佬写过的优质中文教程好好理了一遍：从安装、汉化、避坑，到偷懒指令和多 Agent 实战。不用一口气读完，找到你踩坑的地方，翻对应的那篇就行。（本文由 bot 与 Antigravity 参与整理编写）</p>
+<h3 id="一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇"><a href="#一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇" class="headerlink" title="一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇"></a>一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇</h3><h3 id="二、会员开了，Antigravity-还是登不上？看看这篇"><a href="#二、会员开了，Antigravity-还是登不上？看看这篇" class="headerlink" title="二、会员开了，Antigravity 还是登不上？看看这篇"></a>二、会员开了，Antigravity 还是登不上？看看这篇</h3><p>开通了 Google AI Pro，节点也换了，还是提示地区不支持，先别反复折腾网络</p>
+<p>会员额度和地区限制：登不上，是和 Google 账号关联地区有关，不只是当前网络的问题。Antigravity 本身有免费档，想测试反重力能不能登上，可以先用免费账号去练手。文中给出了账号地区的查询方式、官方更正入口，以及后续网络设置的排查过程。</p>
+<h3 id="三、从下载安装到第一次跑通-刚接触反重力，看-Chasen-这篇"><a href="#三、从下载安装到第一次跑通-刚接触反重力，看-Chasen-这篇" class="headerlink" title="三、从下载安装到第一次跑通  刚接触反重力，看 Chasen 这篇"></a>三、从下载安装到第一次跑通  刚接触反重力，看 Chasen 这篇</h3><p>客户端、命令行、IDE 插件怎么选？工作目录怎么设？MCP 怎么连？远程怎么控？这篇全都有。<br>先建立全局概念，省得后面遇到一个新词就得退出来搜半天。 新手第一步的目标极简单：能打开、能下指令、知道去哪看结果</p>
+<h3 id="四、订阅、插件、模型、排错看这里"><a href="#四、订阅、插件、模型、排错看这里" class="headerlink" title="四、订阅、插件、模型、排错看这里"></a>四、订阅、插件、模型、排错看这里</h3><p>登录转圈、资格校验不过、明明网页端掏了钱客户端却依然显示免费额度……这类问题，雪瑜这篇都总结了，重点翻翻安装、模型选择、插件，以及各种登录&#x2F;额度识别的排错招数。</p>
+<h3 id="五、四种反重力汉化包"><a href="#五、四种反重力汉化包" class="headerlink" title="五、四种反重力汉化包"></a>五、四种反重力汉化包</h3><p>Chasen 整理了 4 个主流开源汉化方案，各个方案的安装门槛和汉化深度不太一样，有的还支持一键切回英文。 装一个就行</p>
+<h3 id="六、额度、重置监控看板插件"><a href="#六、额度、重置监控看板插件" class="headerlink" title="六、额度、重置监控看板插件"></a>六、额度、重置监控看板插件</h3><p>3 个很贴心的小插件：额度看板、汉化、多账号切换。 最推荐先把额度看板加上。</p>
+<h3 id="七、命令行合集"><a href="#七、命令行合集" class="headerlink" title="七、命令行合集"></a>七、命令行合集</h3><p>需求一团乱麻想先理理思路？改代码前想让它先交个方案？主任务正跑着突然想顺嘴插问一句？想回退任务？ 这些高频场景，根本不需要你苦哈哈写小作文教它做人。用上这些指令👇</p>
+<h3 id="八，命令知道是一回事，怎么用得丝滑又省钱？"><a href="#八，命令知道是一回事，怎么用得丝滑又省钱？" class="headerlink" title="八，命令知道是一回事，怎么用得丝滑又省钱？"></a>八，命令知道是一回事，怎么用得丝滑又省钱？</h3><p> 大动干戈前先对齐需求定计划；临时加塞问题走专线别搅乱主干；眼看跑偏了赶紧回滚；一段活干完麻利做记忆压缩（&#x2F;compact）。以及 CLI 无头挂机跑法。实用性拉满。</p>
+<h3 id="九、别为了炫技硬上多-Agent，先想好怎么分工"><a href="#九、别为了炫技硬上多-Agent，先想好怎么分工" class="headerlink" title="九、别为了炫技硬上多 Agent，先想好怎么分工"></a>九、别为了炫技硬上多 Agent，先想好怎么分工</h3><p>多 Agent 绝不是“一口气多开几个会话窗口”就能自动提效的。 切片、写码、质检、收尾，做好分工。这篇把 Orchestrator（指挥官）、Swarm（蜂群）以及开源的 dsh-crew 分析的透透的，还给了实战提示词模板。👇</p>
+<h3 id="十、想搞全自动做视频？看高手怎么把一串工具链打通"><a href="#十、想搞全自动做视频？看高手怎么把一串工具链打通" class="headerlink" title="十、想搞全自动做视频？看高手怎么把一串工具链打通"></a>十、想搞全自动做视频？看高手怎么把一串工具链打通</h3><p>Antigravity 自身不会生成视频，但它是一个极其强悍的“工头”，能把前后各个工具按工序串起来。 Leaf 这篇展示了一条完整的 AI 出片流水线：拆解对标片、人物定妆、打磨提示词、提交生图生视频、自动拉回本地、拼原声、再抽帧质检。文章里还附了现成的 Agent 指令</p>
+<h3 id="十一、稳定的自动化内容产线"><a href="#十一、稳定的自动化内容产线" class="headerlink" title="十一、稳定的自动化内容产线"></a>十一、稳定的自动化内容产线</h3><p>批量复制输出内容，个人“内容流水线”：Antigravity 稳坐中控台管大纲、写分镜、派活发单，生成工具老实干苦力，后面再挂审片、局部返工重做与自动归档。 工程化思路：复用 Skill、对齐时间戳打标签、只返工翻车的那几个片段、严设最大重试次数。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/22/Leviwoyun-2124406181896827189/">https://yaoav.github.io/2026/11/22/Leviwoyun-2124406181896827189/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Leviwoyun/">@Leviwoyun</a></div><div class="post-share"><div class="social-share" data-image="/images/2124406181896827189-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/11/22/StratusResultsX-2124398008657904102/" title="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉"><img class="cover" src="/images/2124398008657904102-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @StratusResultsX（Stratus Results | 层云结果） 的长文，原文链接，版权归原作者所有。  你的 AI 视频为什么像一张会动的 PPT？用 AI 做视频最常见的一种翻车，是成片看着像精修海报加了点动效：画面亮堂堂的，人物也会眨眼，光影也不算差，可主体死死站在中间，背景轻轻晃两下，整条片子看着就像一张会动的 PPT。 好多人第一反应是模型不行，于是换工具、切版本，顺手往句尾接着叠「电影感」「高级质感」「大片氛围」。问题在于「电影感」压根不算一条指令，机位从哪起脚、往哪走、跟着谁、最后停在哪儿全没交代，模型只能蹲在原地靠猜。 今天说说怎么把脑子里的镜头画面，翻译成模型听得懂的运镜提示词。 现在的视频模型其实挺能干，推拉摇移、跟拍环绕全接得住，偏偏到了自己手里，镜头就爱在原地罚站。 你把「电影感」三个字丢给模型，就跟半夜一点钟钻进出租车后座，往椅背上一靠，只跟司机说一句「师傅，往高级的地方开」差不多。 师傅攥着方向盘，既不知道你在国贸加班还是回天通苑睡觉，也不敢瞎拐弯，最后绕着环岛转两圈把你放回原地，计价器还跳了三十块钱。模型也一样...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/20/Leviwoyun-2123754998467264624/" title="涨粉百万，单条视频报价8w！最吸金的“AI+萌宠”赛道现在一个skill就能搞定"><img class="cover" src="/images/2123754998467264624-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">涨粉百万，单条视频报价8w！最吸金的“AI+萌宠”赛道现在一个skill就能搞定</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  先藏后看：为什么想做 AI 视频起号变现的人都该收藏这篇指南？ 1、**赛道已被真实数据跑通：**下面直接拿 3 个同赛道抖音 3D 萌宠 AI 动画账号说话——有的 仅发 83 条作品就干到 23.5 万粉、单条合集 82.1 万赞，头部账号 39.1 万粉、213.6 万获赞，已经把商品橱窗、专属会员、实体玩偶和官方商单全吃上了。 2、**直击普通人起号最大的拦路虎：**看别人赚钱眼红，真轮到自己动手，90% 的人都会卡死在「角色跨镜头变脸」「手脚穿模重抽」「分镜&#x2F;配音&#x2F;配乐&#x2F;剪辑来回切软件」上，手搓一整天出不了一条片，根本扛不住日更。 3、**一套可照抄的 6 步工作流 + 独家防穿模经验：**本文把实测跑通的 1 个 Skill 6 步直出 15 秒有声 3D 动画全流程、局部精修防废片操作 以及 短手萌宠避坑实测经验 全部拆开讲透，文末还留了一个「一张图 + 一个声音做数字人」的下期王炸彩蛋。建议先点个「收藏 Bookmarks」备用！ ...</div></div></div></a><a class="pagination-related" href="/2026/11/22/Leviwoyun-2124316801756794977/" title="100 Standout Website Footers (Organized by Style)"><img class="cover" src="/images/2124316801756794977-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-22</div><div class="info-item-2">100 Standout Website Footers (Organized by Style)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  Most footers are an afterthought—just a dump of links at the bottom of the page. These 100 design references show how a page can close with personality, clarity, or a strong call to action. You’ll find a mix of live websites and concept explorations below, each credited with a link to its original post. Contents: Illustrated Storytelling (20) · Oversized Wordmarks (20) · Minimal Layouts (8) · Information Architecture (12) · Conversion-Focuse...</div></div></div></a><a class="pagination-related" href="/2026/11/20/Leviwoyun-2123733191752315182/" title="《自媒体、产品推广，懒人一键式数字人：一部手机就能做！》"><img class="cover" src="/images/2123733191752315182-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">《自媒体、产品推广，懒人一键式数字人：一部手机就能做！》</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  不用再对着镜头录口播了！不用在复杂的视频工作流上花时间了！我在手机上与 Agent 对话做了一条自己的数字人视频！ 以往做数字人，需要剪映等视频工具，在各个工具间来回切换，写稿、字幕、配音、剪辑、重录，工作流十分复杂，素材导来导去，给手机都存都挤满了，也消耗了自己大量时间。 @renoiseai 的优势，是把中间的这些环节全部放进了同一个工作流：你跟 AI 讲需求，它负责搭积木，出稿，脚本，生视频，剪辑，修改，导出，一条龙服务。 这是我用 Renoise App 跟 Agent 对话，拿自己的形象，把写稿、生成口播、剪辑包装串起来，做出的数字人视频👇，四轮修改一共消耗了 500 积分  Renoise 下载链接👉：https://renoise.onelink.me/Gxyb?pid=xcom&amp;c=leviwoyun-chen-202611&amp;afwebdp=https%3A%2F%2Frenoise.ai%2F%3Futmmedium%3Dxcom%26ut...</div></div></div></a><a class="pagination-related" href="/2026/11/21/Leviwoyun-2124042711019966903/" title="不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频"><img class="cover" src="/images/2124042711019966903-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-21</div><div class="info-item-2">不会外语和剪辑？让数字人开口说出五国语言，一部手机就能做跨境带货视频</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  很多朋友想入局跨境电商，但光是一道语言门槛就劝退了大半——既做不了外语直播，也拍不了外语带货视频，最后只能靠图文硬撑，转化率自然高不起来。 不过，现在有了 AI 工具，玩法完全不一样了。用手机随手拍的一条带货视频，直接放进 APP 里就能“一键复刻”成英语、日语等多种语言版本，既不用自己苦哈哈地剪辑，也不用额外找人配音，生成完直接就能发到海外平台。 最近我一直在用 Renoise，简直圆了我**“精通八国语言”**的梦。只需要上传一张自己的照片，就能稳定生成专属数字人。 想要什么语种直接跟它说，而且在正式出片前，Agent 还会反复跟你确认细节，不满意就一直改，直到你点头为止。 我自己实测生成了中文、英文、日语、法语、西语五个版本的数字人口播，无论是音色、形象的一致性，还是口型、动作和发音准确度，表现都很稳，几乎看不出违和感。  光说不练假把式，接下来我就拿网上找的一段带货视频当案例，手把手带你用自己的数字人复刻，并做成外语带货视频。不想看教程想快速体验的也可以直接上手 Ren...</div></div></div></a><a class="pagination-related" href="/2026/11/19/Leviwoyun-2123366162205716852/" title="我开源的 Skill 被挂闲鱼卖了？年前红包封面变现，小红书 + 闲鱼两条搞钱路子手把手讲清楚，全套免费开源！"><img class="cover" src="/images/2123366162205716852-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">我开源的 Skill 被挂闲鱼卖了？年前红包封面变现，小红书 + 闲鱼两条搞钱路子手把手讲清楚，全套免费开源！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  我靠！！！ 我前两天刚开源的红包封面 Skill 已经有人挂到闲鱼上卖了？？？ 我第一反应是：啊？这不是免费的吗哈哈哈 第二反应是：没毛病，这人是懂信息差的 你想啊 同样一个东西 我放在 GitHub 上免费，有人搬到闲鱼上，就能卖钱 这说明啥？ 不是东西值钱 是**「会用」和「不会用」**之间的那道坎值钱  上一篇我手把手教了怎么用 Skill 做封面、怎么传到微信 好多人看完问我：能不能拿它赚点钱？ 能！！！ 年底新的变现机会，直接上架小红书、咸鱼 所以这篇专门讲这个：  闲鱼上已经有人在卖我的 Skill，这事给了我们什么启发 低客单价玩法：把 Skill 包装成资源或代安装服务 高客单价玩法：用 Skill 接私人定制，头像、宠物、公司、情侣全家福 定价怎么定：我在闲鱼上看到这类定制大概 30 到 150 块，不同画风价格不一样 小红书引流、闲鱼成交，从接单到交付的完整流程 哪些坑千万别踩  下面是我琢磨的路子 你可以照着试，我自己也打算试 先码住！！！ 先聊聊：有人卖...</div></div></div></a><a class="pagination-related" href="/2026/11/20/Leviwoyun-2123781487103508731/" title="不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款"><img class="cover" src="/images/2123781487103508731-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">不露脸，1个月，涨粉6.37万！我用AI复刻了YouTube黑马账号的470万播放爆款</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  一篇给新手小白的 AI 动画复刻实战教程 一个不露脸的动画频道，没有真人出镜，没有复杂的拍摄设备 仅仅用动画讲述各种脑洞大开的 What If 故事 起号约1个月，发布39条视频，涨粉63,700，累计播放突破980万 其中一条视频播放量超过470万 这就是我最近拆解的 YouTube 频道：Ifverse（@IfverseTales） 它的内容形式很有意思： 如果你的反应速度快10倍，会发生什么？ 如果你的智商达到500，会发生什么？ 如果一秒钟感觉像十年，会发生什么？ 它把这些普通人都能理解的假设，变成有视觉冲击力、有故事情节的动画  我研究了一下，发现这类频道有一个值得借鉴的内容公式： What If + 极端能力&#x2F;条件 + 具体场景 + 意想不到的结果 这种内容不需要真人出镜，也不需要复杂的三维动画制作 那么，能不能借助AI，把类似的动画视频制作出来？ 我决定亲自使用 Renoise App，从爆款拆解、角色设计、分镜、视频生成，到配音、音效、剪辑和最终导出，...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">462</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">221</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%87%8D%E4%B8%AD%E4%B9%8B%E9%87%8D%EF%BC%8C%E5%A6%82%E6%9E%9C%E4%BD%A0%E6%83%B3%E4%BD%8E%E4%BB%B7%E4%B8%8A%E8%BD%A6gemini%EF%BC%8C%E9%82%A3%E4%B9%88%E6%88%91%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90%E4%BD%A0%E7%9C%8B%E7%A3%8A%E5%93%A5%E8%BF%99%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%EF%BC%8C%E6%88%91%E8%87%AA%E5%B7%B1%E4%B9%9F%E5%AE%9E%E6%B5%8B%E6%88%90%E5%8A%9F%F0%9F%91%87"><span class="toc-number">1.</span> <span class="toc-text">一、重中之重，如果你想低价上车gemini，那么我强烈推荐你看磊哥这一篇文章，我自己也实测成功👇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BC%9A%E5%91%98%E5%BC%80%E4%BA%86%EF%BC%8CAntigravity-%E8%BF%98%E6%98%AF%E7%99%BB%E4%B8%8D%E4%B8%8A%EF%BC%9F%E7%9C%8B%E7%9C%8B%E8%BF%99%E7%AF%87"><span class="toc-number">2.</span> <span class="toc-text">二、会员开了，Antigravity 还是登不上？看看这篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BB%8E%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%88%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%B7%91%E9%80%9A-%E5%88%9A%E6%8E%A5%E8%A7%A6%E5%8F%8D%E9%87%8D%E5%8A%9B%EF%BC%8C%E7%9C%8B-Chasen-%E8%BF%99%E7%AF%87"><span class="toc-number">3.</span> <span class="toc-text">三、从下载安装到第一次跑通  刚接触反重力，看 Chasen 这篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%AE%A2%E9%98%85%E3%80%81%E6%8F%92%E4%BB%B6%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E6%8E%92%E9%94%99%E7%9C%8B%E8%BF%99%E9%87%8C"><span class="toc-number">4.</span> <span class="toc-text">四、订阅、插件、模型、排错看这里</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%9B%9B%E7%A7%8D%E5%8F%8D%E9%87%8D%E5%8A%9B%E6%B1%89%E5%8C%96%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">五、四种反重力汉化包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E9%A2%9D%E5%BA%A6%E3%80%81%E9%87%8D%E7%BD%AE%E7%9B%91%E6%8E%A7%E7%9C%8B%E6%9D%BF%E6%8F%92%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">六、额度、重置监控看板插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%88%E9%9B%86"><span class="toc-number">7.</span> <span class="toc-text">七、命令行合集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AB%EF%BC%8C%E5%91%BD%E4%BB%A4%E7%9F%A5%E9%81%93%E6%98%AF%E4%B8%80%E5%9B%9E%E4%BA%8B%EF%BC%8C%E6%80%8E%E4%B9%88%E7%94%A8%E5%BE%97%E4%B8%9D%E6%BB%91%E5%8F%88%E7%9C%81%E9%92%B1%EF%BC%9F"><span class="toc-number">8.</span> <span class="toc-text">八，命令知道是一回事，怎么用得丝滑又省钱？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%88%AB%E4%B8%BA%E4%BA%86%E7%82%AB%E6%8A%80%E7%A1%AC%E4%B8%8A%E5%A4%9A-Agent%EF%BC%8C%E5%85%88%E6%83%B3%E5%A5%BD%E6%80%8E%E4%B9%88%E5%88%86%E5%B7%A5"><span class="toc-number">9.</span> <span class="toc-text">九、别为了炫技硬上多 Agent，先想好怎么分工</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%83%B3%E6%90%9E%E5%85%A8%E8%87%AA%E5%8A%A8%E5%81%9A%E8%A7%86%E9%A2%91%EF%BC%9F%E7%9C%8B%E9%AB%98%E6%89%8B%E6%80%8E%E4%B9%88%E6%8A%8A%E4%B8%80%E4%B8%B2%E5%B7%A5%E5%85%B7%E9%93%BE%E6%89%93%E9%80%9A"><span class="toc-number">10.</span> <span class="toc-text">十、想搞全自动做视频？看高手怎么把一串工具链打通</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%A8%B3%E5%AE%9A%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%86%85%E5%AE%B9%E4%BA%A7%E7%BA%BF"><span class="toc-number">11.</span> <span class="toc-text">十一、稳定的自动化内容产线</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Leviwoyun-2124406181896827189/" title="Antigravity 11 篇教程合集，从入门到多 Agent 实战"><img src="/images/2124406181896827189-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Antigravity 11 篇教程合集，从入门到多 Agent 实战"/></a><div class="content"><a class="title" href="/2026/11/22/Leviwoyun-2124406181896827189/" title="Antigravity 11 篇教程合集，从入门到多 Agent 实战">Antigravity 11 篇教程合集，从入门到多 Agent 实战</a><time datetime="2026-11-22T15:34:37.000Z" title="发表于 2026-11-22 15:34:37">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/StratusResultsX-2124398008657904102/" title="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉"><img src="/images/2124398008657904102-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉"/></a><div class="content"><a class="title" href="/2026/11/22/StratusResultsX-2124398008657904102/" title="花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉">花积分生成的视频总像会动的 PPT？先把「电影感」从运镜框里删掉</a><time datetime="2026-11-22T15:02:09.000Z" title="发表于 2026-11-22 15:02:09">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/PengP66810-2124388499667501397/" title="黄仁勋刚走，国产芯片交出了三年成绩单"><img src="/images/2124388499667501397-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黄仁勋刚走，国产芯片交出了三年成绩单"/></a><div class="content"><a class="title" href="/2026/11/22/PengP66810-2124388499667501397/" title="黄仁勋刚走，国产芯片交出了三年成绩单">黄仁勋刚走，国产芯片交出了三年成绩单</a><time datetime="2026-11-22T14:24:22.000Z" title="发表于 2026-11-22 14:24:22">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/rwayne-2124364747017695394/" title="Can AI Data Centres Make Australia Great Again?"><img src="/images/2124364747017695394-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Can AI Data Centres Make Australia Great Again?"/></a><div class="content"><a class="title" href="/2026/11/22/rwayne-2124364747017695394/" title="Can AI Data Centres Make Australia Great Again?">Can AI Data Centres Make Australia Great Again?</a><time datetime="2026-11-22T12:49:59.000Z" title="发表于 2026-11-22 12:49:59">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/KinhVujhfi-2124356611733106721/" title="黎曼猜想真的被AI证明了吗？"><img src="/images/2124356611733106721-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黎曼猜想真的被AI证明了吗？"/></a><div class="content"><a class="title" href="/2026/11/22/KinhVujhfi-2124356611733106721/" title="黎曼猜想真的被AI证明了吗？">黎曼猜想真的被AI证明了吗？</a><time datetime="2026-11-22T12:17:39.000Z" title="发表于 2026-11-22 12:17:39">2026-11-22</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
