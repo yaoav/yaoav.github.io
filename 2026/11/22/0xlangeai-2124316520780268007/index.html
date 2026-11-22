@@ -1,0 +1,456 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Cursor 发展史｜四个程序员，如何重做写软件这件事 | 币海拾遗 · 爆款提纯</title><meta name="author" content="Yaoav"><meta name="copyright" content="Yaoav"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="哈喽，大家好。我是 Mai Yang, Cursor Ambassador (现更名为 Build Ambassador, SpaceXSI Community">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cursor 发展史｜四个程序员，如何重做写软件这件事">
+<meta property="og:url" content="https://yaoav.github.io/2026/11/22/0xlangeai-2124316520780268007/index.html">
+<meta property="og:site_name" content="币海拾遗 · 爆款提纯">
+<meta property="og:description" content="哈喽，大家好。我是 Mai Yang, Cursor Ambassador (现更名为 Build Ambassador, SpaceXSI Community">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yaoav.github.io/images/2124316520780268007-cover.jpg">
+<meta property="article:published_time" content="2026-11-22T09:38:21.000Z">
+<meta property="article:modified_time" content="2026-11-22T12:08:42.000Z">
+<meta property="article:author" content="Yaoav">
+<meta property="article:tag" content="@0xlangeai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yaoav.github.io/images/2124316520780268007-cover.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cursor 发展史｜四个程序员，如何重做写软件这件事",
+  "url": "https://yaoav.github.io/2026/11/22/0xlangeai-2124316520780268007/",
+  "image": "https://yaoav.github.io/images/2124316520780268007-cover.jpg",
+  "datePublished": "2026-11-22T09:38:21.000Z",
+  "dateModified": "2026-11-22T12:08:42.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yaoav",
+      "url": "https://yaoav.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yaoav.github.io/2026/11/22/0xlangeai-2124316520780268007/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const start = 6
+              const end = 18
+              const isNight =
+                start < end
+                    ? hour < start || hour >= end
+                    : hour >= start || hour < end
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Cursor 发展史｜四个程序员，如何重做写软件这件事',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="币海拾遗 · 爆款提纯" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">451</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/images/2124316520780268007-cover.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">币海拾遗 · 爆款提纯</span></a><a class="nav-page-title" href="/"><span class="site-name">Cursor 发展史｜四个程序员，如何重做写软件这件事</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/latest/"><i class="fa-fw fas fa-clock"></i><span> 最新</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Cursor 发展史｜四个程序员，如何重做写软件这件事</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2026-11-22T09:38:21.000Z" title="发表于 2026-11-22 09:38:21">2026-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/">行业观察</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
+<p>本文转载自 X 博主 <strong>@0xlangeai（蓝哥AI）</strong> 的长文，<a target="_blank" rel="noopener" href="https://x.com/i/article/2124316520780268007">原文链接</a>，版权归原作者所有。</p>
+</blockquote>
+<p>哈喽，大家好。我是 Mai Yang, Cursor Ambassador (现更名为 Build Ambassador, SpaceXSI Community)。</p>
+<p>趁着 Cursor 现在还叫这个名字，结合我自己的经历，斗胆将 Cursor 的发展史，或者我眼中和记忆中的一些点滴整理分享给大家。</p>
+<p><strong>Enjoy!</strong></p>
+<p>Cursor 的第一版，连编辑器都想自己写。四个创始人补语言支持、代码跳转、错误提示、终端和远程连接，忙了大约五周，终于可以关掉原来的工具，整天在自己写的编辑器里工作。</p>
+<p>他们先让自己用得下去，再交给外面的人试。反馈很快把他们推向另一个决定，放弃从头维护编辑器，改用 VS Code 的底座。Michael Truell 后来在访谈中回忆，正是第一批用户的反馈，促成了这次改变。今天看起来理所当然的 Cursor，从一开始就经历过取舍。要理解它为什么能不断变形，得从这四个人怎样判断“哪些值得自己做”说起。</p>
+<p><img src="/images/HXsQlhKXoAAjUKI.jpg" alt="HXsQlhKXoAAjUKI"></p>
+<h2 id="2021-至-2022-年，先被-Copilot-打动，又绕开了编程"><a href="#2021-至-2022-年，先被-Copilot-打动，又绕开了编程" class="headerlink" title="2021 至 2022 年，先被 Copilot 打动，又绕开了编程"></a>2021 至 2022 年，先被 Copilot 打动，又绕开了编程</h2><p>四位联合创始人是 Michael Truell、Sualeh Asif、Arvid Lunnemark 和 Aman Sanger。他们在 MIT 期间走到一起，后来共同创办 Anysphere，也就是 Cursor 背后的公司。</p>
+<p>Michael 与三维制作的交集，比这家公司更早。2016 年还在读高中时，他和 Joshua Gruenstein 做过一个叫 Fido 的机器人控制系统，希望让非专业用户通过反馈来训练不同的机器人。他们的论文记录了三种硬件，其中轮式机器人用了 3D 打印外壳，机械臂的机身用半透明 PLA 打印。Joshua 在项目说明中写，</p>
+<p>自己更多做硬件，Michael 更多做软件。这是高中生二人项目，做的是机器人控制，3D 打印用于制作机身；它与后来四人的 CAD 创业探索，要分开看。</p>
+<p><img src="/images/HXsQ23IXwAAxOsU.jpg" alt="HXsQ23IXwAAxOsU"></p>
+<p>图 01｜2016 年 Fido 论文中的 Thing One，3D 打印外壳包住控制与驱动部件。Michael 与 Joshua 的高中二人项目，非 Cursor 四人创业产品。 来源。</p>
+<p>这家公司开始于一个相当宽泛的判断。语言模型会持续进步，许多知识工作的工具都要重做。他们当时还没有找到最适合自己的那一项工作。</p>
+<p>2021 年 6 月，GitHub 发布 Copilot 技术预览。对这群已经写了多年代码、也做过机器学习的人来说，这个产品给了抽象的模型进步一个具体形状。光标停下来，工具就能继续写；建议有时会错，但错了也不必召开会议，继续敲一个字符，下一次建议就可能对了。</p>
+<p>Aman 在 Lex Fridman 的访谈里讲，他原来用纯 Vim 和终端，为了体验 Copilot，转到了 VS Code。一个好到足以改变工作习惯的 AI 功能，真的能让程序员换编辑器。这段亲身经历，后来成了他们判断 Cursor 能否成立的重要依据。</p>
+<p>不过，最早的他们恰恰躲开了这个市场。Microsoft 已经进来了，创业公司很多，模型实验室也很强。四个年轻程序员觉得，编程也许轮不到自己。</p>
+<p>在找到方向之前，Michael 已经在找人谈工作流程。Jing Conan Wang 后来公开的联系截图里，2022 年 1 月，Michael 在领英自我介绍是 MIT 学生，正在做一个大幅减少机器学习训练时间的创业项目，想约十五分钟，了解对方训练模型的实际过程。对方答应了，他随后回复已经约好时间。这时谈的还不是 Cursor 编辑器，但可以看出他早期找需求的一种做法，主动联系一个具体的人，先问清楚对方每天怎样工作。</p>
+<p>他们转去探索机械工程和 CAD，也就是计算机辅助设计。在 Notion 的访谈中，Michael 讲得很具体，团队训练过 3D 自动补全模型，希望预测工程师正在设计的零件；他们也尝试把 CAD 操作表示为一串文本中的方法调用，让模型继续补全。</p>
+<p>这条路有实际的研究和开发，并非随口想过一个点子。但他们遇到两个困难。首先，四个人都不是机械工程师，与用户聊工作流程时，常常缺乏判断轻重的直觉。其次，CAD 数据远少于代码数据，当时的通用文本模型也不能顺手解决三维建模问题。模型和数据都得从更低的起点补起。</p>
+<p>他们并非完全接触不到机械工程师。Michael 在 Lenny 的节目里说，身边就有做这行的朋友；困难是，四个人对这份工作的理解仍然很间接。一个零件为什么要这样建模，哪次操作真正耽误时间，哪些建议只适合演示，团队缺少自己每天亲手做这份工作的判断力。与此同时，三维模型、零件以及建模步骤的数据很少，向数据持有者取得这些材料，也并不容易。用户理解与训练材料，都难以像代码那样反复取得和验证。</p>
+<p>团队花了几个月认真尝试，最后承认，自己既不够理解这份工作，也不愿把往后很多年都花在这里。回到编程以后，四个人至少每天都能先当自己的用户。这种反馈来源的变化，比换到一个更热门的市场更重要。</p>
+<p>他们选择回到编程。竞争仍然激烈，但至少在这个领域，他们知道一个工具到底好不好用。</p>
+<h2 id="2022-年底至-2023-年，选编辑器，也是在选公司的边界"><a href="#2022-年底至-2023-年，选编辑器，也是在选公司的边界" class="headerlink" title="2022 年底至 2023 年，选编辑器，也是在选公司的边界"></a>2022 年底至 2023 年，选编辑器，也是在选公司的边界</h2><p>2022 年底，团队提前接触到 GPT-4。Michael 回忆，那次能力跃升让他意识到，AI 能做的事情，已经超出了给某个细分岗位加一个小功能。他们此前试过服务金融工作者的 Jupyter Notebook 工具，也探索过用模型做静态分析。现在，他们想改造整个编程环境。</p>
+<p>团队在独立编辑器上作了两次选择。先自己搭原型，随后转向 VS Code 的分支。在这两次选择背后，还有一个始终绕不开的问题，为什么要做编辑器，不把 AI 做成现有编辑器里的插件？</p>
+<p>做插件有明显的好处。用户不必迁移，团队也不用承担一个编辑器的维护工作。代价是，编辑区怎样展示修改、怎样切换文件、怎样组织新的交互，都受宿主编辑器提供的能力限制。</p>
+<p>Michael 在 Lex 的节目里解释，他们预期模型能力会不断改变开发方式，不愿过早被插件接口锁住。所以，他们要控制编辑器本身。</p>
+<p>但控制界面，也有不同的成本。最初从头写，意味着语言服务、远程开发和大量基础体验都要自己补。采用 VS Code，则能保留程序员已经熟悉的工作环境，把更稀缺的精力花在 AI 如何参与开发上。</p>
+<p>这是 Cursor 很早就作出的一次重要取舍。团队坚持自己掌握产品交互，同时接受成熟开源软件作为底座。用户需要迁移的东西少了一些，公司能改动的东西仍然足够多。</p>
+<p>2023 年 3 月 24 日，Michael 在 Hacker News 发布 Cursor，介绍它是为 AI 编程而建的代码编辑器。这条原始记录也提醒我们，Cursor 的公开起点是一件可以下载、可以被挑毛病的工具。</p>
+<p>把原型交给外部用户后，团队很快发现，仅仅自己用得顺还不够。Michael 在与 Lenny 的对谈里说，原本以为很长时间都只会服务几百人，实际发布后很快收到了许多兴趣与反馈。改用 VS Code，就是他们对这些反馈作出的回应。语言支持、现成扩展和熟悉的工作环境，不能因为 AI 演示足够新鲜就被省略。</p>
+<p>第一批用户也留下了自己的记忆。Frank Lyonnet 在 2025 年的回顾中说，他看到 Cursor 在推文里寻找早期体验者，回复后与 Michael 交流，成为最初二十名用户之一。他当时提出，想要一个按钮，直接搭出完整的项目骨架。这是用户自己的回忆，既能看见招募的入口，也能看见需求怎样从“帮我写一点”伸向“帮我做一件完整的事”。</p>
+<p>不过，最初的增长，在当事人眼里并不惊人。Michael 在 2025 年向 Lenny 回顾，起初基数很小，看起来相当慢；后来回看，月度增长却颇为持续，发布新功能时又会加速。这与事后只记得一次爆发的故事不同。创始人先把自己愿意整天使用的工具拿出去，让外部用户指出缺口，再用后续版本把人留下来。</p>
+<p>早期资金里，还有一笔后来才从法律文件中显现的记录。FTX 破产案 2023 年 5 月提交的出售报告附件列明，Clifton Bay Investments LLC 持有 Anysphere 的一份 20 万美元 SAFE，2023 年 4 月 3 日以 20 万美元售回 Anysphere。另一份法庭文件确认，这个实体原名 Alameda Research Ventures LLC。文件能确认早期投资关系和退出，不能据此补出投资当天的估值，也不能把 SAFE 金额当成某个确定持股比例。</p>
+<p>2023 年 10 月，Anysphere 对外披露了一轮 800 万美元种子融资。同期对 Michael 和 Aman 的邮件访谈记录，OpenAI Startup Fund 领投，Nat Friedman、Arash Ferdowsi 等参投。报道中，Aman 说，当时团队关注的是自动补全之后的事情，包括查错、改错和理解代码库。后来让 Cursor 出名的 Tab，还没有成为他们全部的产品答案。</p>
+<h2 id="四位创始人的共同判断，落在不同的工作里"><a href="#四位创始人的共同判断，落在不同的工作里" class="headerlink" title="四位创始人的共同判断，落在不同的工作里"></a>四位创始人的共同判断，落在不同的工作里</h2><p>四个人对产品的理解，可以在各自反复追问的问题里看出来。</p>
+<p><img src="/images/HXsRZ4PWgAAKhfe.jpg" alt="HXsRZ4PWgAAKhfe"></p>
+<p>图 02｜Lex Fridman 第 447 期的官方节目封面，四位 Cursor 联合创始人的肖像拼图，2024 年 10 月发布。 来源。</p>
+<p>Michael 作为 CEO，持续对外解释公司的方向、取舍和行业变化。沿着他的几场访谈，可以看见叙述逐渐具体，从模型会改变知识工作，到为什么需要控制编辑器，再到人怎样指挥更多自主工作的 Agent。他也并未把模型研究和产品体验当成两家公司的工作。</p>
+<p>Sualeh 的表达，经常从程序员眼前的摩擦出发。2023 年他署名的《Our problems》，从上下文选择写到修改已有代码。文章还设想让 Agent 在执行途中向人询问，并讨论了代码库同步的速度。在共同访谈里，他举的例子也很小，既然模型知道下一处修改在 18 行以下，为什么还要人自己跳过去？</p>
+<p>Aman 的公开工作则能看到研究和系统的一面。快速应用代码修改、下一步动作预测，都出现在他的署名技术文章中。他在 Lex 的访谈里还谈到缓存怎样降低补全延迟、模型进步怎样不断打开新的产品可能。他希望一年后的 Cursor 能让当年的版本显得过时。</p>
+<p>Arvid 很在意人和模型怎样相处。他写过提示设计，在共同访谈里解释过代码修改应该怎样展示，以及界面和模型为什么必须一起设计。他认为，工具好不好玩，与快不快有很大关系。团队做过一些实验，试用后觉得不好玩，就放弃了。</p>
+<blockquote>
+<p>“And so a big part of being fun is being fast a lot of the time. Fast is fun.”所以，很多时候，好玩很大程度上来自速度。快，就是好玩。</p>
+</blockquote>
+<p>这句话来自 Arvid 在 2024 年访谈中的原话，听起来轻巧，后面却是一整套延迟、界面和模型的工程工作。</p>
+<p>这些可以勾勒四个人公开可见的侧重，却不能据此画一张各管一摊、从未变化的组织图。那次访谈中，Sualeh 说做界面的人和训练模型的人坐得很近；Aman 接着补充，有时候根本就是同一个人。跨过界面与模型之间的分工，是他们刻意保留的优势。</p>
+<p>人员也会变化。Arvid 在 2025 年 10 月公开宣布离开 Cursor。他在告别信中感谢团队，表示接下来想探索新的想法。四人共同创立公司的历史，与后来每个阶段的实际团队，应该分开看。</p>
+<h2 id="2023-至-2024-年，从“接着写”走向“接着改”"><a href="#2023-至-2024-年，从“接着写”走向“接着改”" class="headerlink" title="2023 至 2024 年，从“接着写”走向“接着改”"></a>2023 至 2024 年，从“接着写”走向“接着改”</h2><p>Copilot 让人看见了自动续写的价值。Cursor 继续追问，程序员的一天，究竟有多少时间在写全新的代码？</p>
+<p>更多时候，人是在已有代码里改一个名字、调整一个条件、补一处调用，然后跳到下一处把关联修改做完。已经知道要怎么改，手却还得完成选择、删除、输入和导航。</p>
+<p>2023 年 10 月，Sualeh 已经在《Our problems》里提出要做一个“用于修改的 Copilot”。原文同时承认，提示词不够，成本、延迟和模型能力都要改，界面也得能不打扰地展示修改建议。</p>
+<p>到 2024 年 3 月，Cursor 上线了自己的稀疏语言模型，专门预测编辑动作。它早期叫 Copilot++，后来改称 Cursor Tab。名称变化背后，任务也在扩展，既能新增内容，也能修改光标周围的已有代码，进一步预测人下一步会去哪里。</p>
+<p>多行编辑在这里有两种不同含义。Tab 能建议一段连续修改，用户仍然紧贴每一步；后来 Composer 可以接收较完整的指令，协调更大范围、甚至跨文件的修改。把这两件事混在一起，会错过 Cursor 在交互上的两条探索。</p>
+<p>2024 年 5 月，Aman 写下下一步动作预测的方向，模型除了接着改代码，还应该知道下一处位置、下一个文件，乃至接下来可能要运行的终端命令。文章中的演示，连续接受建议就能走完一串修改。但它把许多能力明确列为研究方向，没有宣称当时都已交付。</p>
+<p>这种产品要求，迫使团队做自己的模型。普通聊天模型可以等几秒，随每次输入出现的建议却不能如此。建议慢了，程序员早已写到了下一行；建议太积极，又会变成不断打断人的噪音。</p>
+<p>团队随后公布的 Fusion 模型很好地展示了进步发生在哪里。2025 年 1 月的官方对照表中，从最早一版到 Fusion，服务端中位延迟从 475 毫秒降到 260 毫秒，上下文从 5,500 tokens 扩到 13,000 tokens，同时加入更及时的光标跳转。这些数字属于官方当时的特定对照，不能等同于所有用户端到端的等待时间，但它们说明，Tab 的进化远不止换一个模型名字。</p>
+<p>另一条工作是把“大模型想出的修改”真正放进文件。2024 年 5 月的 Fast Apply 技术文章将这个过程拆开，较强的模型规划要怎么改，专门训练的模型负责快速应用。团队利用现有代码中大段不变的内容，加速生成修改后的文件。</p>
+<p>模型提供建议，系统处理编辑，界面让人看清变化。三者要同时工作，才会有</p>
+<p>按下 Tab 那一刻的顺手。</p>
+<p><img src="/images/HXsRhCbXMAAiIOw.jpg" alt="HXsRhCbXMAAiIOw"></p>
+<p>图 03｜Cursor 官方在 2024 年 12 月发布的 Tab 演示，修改建议以差异形式出现在已有代码旁。取自原视频约 4.5 秒，非当前版本回拍。 来源。</p>
+<h2 id="2024-年夏天，Composer-把问题从一处代码扩大到一组文件"><a href="#2024-年夏天，Composer-把问题从一处代码扩大到一组文件" class="headerlink" title="2024 年夏天，Composer 把问题从一处代码扩大到一组文件"></a>2024 年夏天，Composer 把问题从一处代码扩大到一组文件</h2><p>2024 年 7 月的官方更新日志已经记录了 Composer 的文件选择、模型切换等改进。8 月 22 日，0.40 版本对 Pro 和 Business 用户默认开放 Composer。</p>
+<p>早期的 Composer 还很粗糙。2024 年 8 月，用户在官方论坛的反馈里，一面高兴于跨文件修改，一面担心无法撤回、文件上下文不稳定、界面操作不一致。Aman 在帖子中回复，Composer 远未到最终形态。另一位用户公开的录屏则展示，生成的代码有时只留在 Composer 里，没有成为可应用的文件修</p>
+<p>改。把多文件生成做出来，与把它做成程序员敢放心使用的功能，中间还隔着这些细节。</p>
+<p><img src="/images/HXsRmUJXYAABIO0.jpg" alt="HXsRmUJXYAABIO0"></p>
+<p>图 04｜用户 rileym 在 2024 年 8 月官方论坛反馈中附的 Composer 录屏，界面仍是早期的浮动工作区。取自公开缩略动画末帧，录制日未另标。 来源。</p>
+<p>过去，你可以选中一段代码，让 AI 修改。现在，一个需求可以牵涉几份文件。用户不必把答案从聊天框里逐段复制回编辑器，但要看懂更大范围的变化，也要告诉工具哪些文件与任务有关。</p>
+<p>模型条件也在变化。2024 年 7 月 23 日，Cursor 将 Claude 3.5 Sonnet 设为默认模型。这个时间点很重要，后来 Agent 处理复杂任务的能力，不能倒过来解释 Cursor 2022 年的选择。不同阶段能做多大一件事，始终受当时模型能力约束。</p>
+<p>同年 8 月，Cursor 宣布 6,000 万美元 A 轮融资，公开列出 Andreessen Horowitz、Thrive Capital、OpenAI、Jeff Dean、Noam Brown，以及 Stripe、GitHub、Ramp、Perplexity 和 OpenAI 的创始人等投资者。公司同时披露，客户已超过 4 万。</p>
+<p>这时，产品、研究和商业开始相互支撑。愿意换编辑器、愿意付费的人多了，公司才能承受推理、检索和研究的持续投入；这些投入又必须让产品继续领先，才能留住随时可以回去使用别的工具的程序员。</p>
+<p>对手的优势很清楚。Microsoft 有现成的编辑器、Copilot 和企业渠道。Cursor 要求用户换工具，承受维护 VS Code 分支的成本，还得不断解释，为什么一个独立产品值得多付一笔钱。</p>
+<p>它选择用更快的实验换时间。这个优势也很脆弱，一项功能只领先几个月，后面就需要下一次改进。</p>
+<h2 id="2024-年末，Agent-开始自己找材料、调用终端"><a href="#2024-年末，Agent-开始自己找材料、调用终端" class="headerlink" title="2024 年末，Agent 开始自己找材料、调用终端"></a>2024 年末，Agent 开始自己找材料、调用终端</h2><p>2024 年 11 月 12 日，Supermaven 宣布加入 Cursor。创始人 Jacob Jackson 此前做过 Tabnine，也在 OpenAI 工作过。他在自己的公告里，把双方走到一起的原因讲得很清楚。Supermaven 从更快、更懂上下文的补全出发，增加删除、跳转等能力后，同样发现扩展接口限制了下一步交互，于是也开始做编辑器。两队人碰到了相近的问题。</p>
+<p>这次整合带来的东西有明确去向。Jacob 说，Supermaven 的长上下文技术会进入 Cursor Tab；原有 VS Code、JetBrains 和 Neovim 插件继续维护，主要精力则转到 Cursor。随后 Fusion 的官方文章由 Phillip Kravtsov 与 Jacob 共同署名，并说明仍在整合 Supermaven 技术。Cursor 的模型积累，开始包含别的团队多年做工具的经验。</p>
+<p>这个方向，已经有别的团队在抢。2024 年 11 月 13 日，Codeium 发布 Windsurf Editor，用 Cascade 将代码库知识、工具调用和对开发者操作的理解放进同一个工作过程。编辑器里的 AI，开始从随问随答走向可以继续行动的协作者。对于 Cursor，怎样把人的控制与 Agent 的独立执行放在一起，既是产品难题，也是眼前的竞争。</p>
+<p>2024 年 11 月 24 日，0.43 版本出现了 Composer 中的早期 Agent。官方描述相当克制，它可以自己选择上下文，也可以使用终端。</p>
+<p>这一步改变了用户需要承担的工作。过去，人常常得先找好文件，再把材料交给模型。Agent 开始参与寻找材料，执行命令，根据结果继续工作。12 月的 0.44 版本又补上读取终端退出码、后台运行命令、根据 linter 错误修复问题等能力。</p>
+<p>所谓自主性，就这样通过一些具体的小能力增加。知道命令失败，才能决定重试；能读到错误，才有机会修复；会保存检查点，人才能更放心地让它继续。</p>
+<p>但自主性也会放大错误。工具能运行命令、修改多处文件，用户就更需要看清它做过什么、在哪一步介入，以及怎样回退。</p>
+<p>到 2025 年 2 月的 0.46 版本，官方已经用“Agent is ready”作为发布标题，Agent 成为默认体验中的重要部分。用户熟悉的 Cursor，正在从预测下一次编辑，扩展到接受一项任务后主动执行。</p>
+<h2 id="2025-年，增长带来了钱，也带来了更难回避的账"><a href="#2025-年，增长带来了钱，也带来了更难回避的账" class="headerlink" title="2025 年，增长带来了钱，也带来了更难回避的账"></a>2025 年，增长带来了钱，也带来了更难回避的账</h2><p>2025 年 1 月，Cursor 宣布 1.05 亿美元 B 轮融资，披露投资方包括 Thrive Capital、Andreessen Horowitz、Benchmark 及原有投资者。公司称，经常性收入已经超过 1 亿美元。</p>
+<p>收入在增长，团队需要的能力也变了。2025 年 4 月，Sualeh 介绍早期团队时，已经列出 Lukas Möller、Jeremy Stribling 和 Aman Karmani 等人。Lukas 用两周搭出了公司内部的高性能推理引擎；Jeremy 此前做过 Keybase 的分布式文件系统和 Zoom 安全；Aman Karmani 则做过 GitHub 基础设施负责人。这里的 Aman Karmani 与联合创始人 Aman Sanger 是两个人。补全需要极低延迟，代码库需要可靠检索，企业需要安全和协作，这些要求正在把一个编辑器团队变成更完整的软件与模型组织。</p>
+<p>6 月，C 轮融资 9 亿美元，估值 99 亿美元，公告列出 Thrive、Accel、Andreessen Horowitz 和 DST。同期披露的 ARR 已超过 5 亿美元。</p>
+<p>这些数字来自公司当时的公告，各自对应不同时间，也有不同口径。ARR 是对经常性收入的年化衡量，不能写成已经收进账的全年现金，更不能替代利润。</p>
+<p>增长让 Cursor 有能力继续扩张，也把一个早期看起来很舒服的商业模式推到了难处。按月收订阅费，用户原来发一次请求，和后来交给 Agent 一项长任务，背后的算力消耗可能差得很远。一次调用越来越不能代表一次成本。</p>
+<p>2025 年 6 月，Cursor 调整个体订阅计费。7 月 4 日，Michael 公开道歉，承认新方案没有解释清楚，伤害了用户信任，并承诺退还相应时段内的意外用量收费。公告解释了从请求次数转向用量额度的原因，长任务消耗更多 tokens，困难请求的成本可能比简单请求高一个数量级。</p>
+<p>这件事值得和增长曲线放在一起。Agent 越有用，用户越愿意把更长的工作交出去；工作越长，成本和预算就越难用一句“无限使用”解释。产品、模型和价格必须一起调整，沟通失误也会直接伤害前两者积累的信任。</p>
+<p>2025 年的办公室里，还有一个很容易被记住的细节，进门脱鞋。Ben Lang 在 7 月 24 日的个人通讯中确认，自己当年加入 Cursor，并写到办公室不穿鞋。</p>
+<p>配图里，运动鞋、靴子和拖鞋集中放在入口的木地板上。这张照片记录的是当时办公室的一种日常习惯，解释不了公司的增长，更不能代替对工作强度的了解。</p>
+<p><img src="/images/HXsRrZEWsAArGV9.jpg" alt="HXsRrZEWsAArGV9"></p>
+<p>图 05｜Ben Lang 2025 年 7 月 24 日个人通讯中的办公室配图，鞋集中放在入口。照片拍摄日未披露。 来源。</p>
+<p>与此同时，竞争结构变了。Anthropic 在 2025 年 2 月发布 Claude Code 研究预览，OpenAI 在 5 月发布云端 Codex 研究预览。模型提供方开始直接提供开发工具。</p>
+<p>Cursor 可以选择不同厂商的模型，用户也可以直接选择厂商的工具。它需要持续证明，模型接入之后的检索、编辑、执行、审查和交互，能给开发者带来足够多的价值。只做一个方便切换模型的入口，很难承受这样的竞争。</p>
+<p>企业市场也改变了人才组合。2025 年 9 月 25 日，Koala 创始团队正式说明，Koala 已被 Cursor 收购，他们在当年 6 月决定转向这份新工作。Tido Carriero 与 Netto Farah、Matthew Shwery、Michael Potteiger 一起加入，投入 Cursor 的企业业务。Tido 在本人公告中逐一提到了这些同事。</p>
+<p>Koala 做过企业数据与销售工作流，创始人在告别原产品后，把接下来的工作放在企业采用上。创始人给出的新任务，是企业就绪、安全合规、细粒度权限、审计、销售与客户成功。一个开发者愿意自行安装 Cursor，和一位 CIO 愿意让全公司采用，问的是不同的问题。Koala 团队带进来的，正是把前一种喜爱转成后一种采购和部署所需的经验。</p>
+<h2 id="Michael-所说的品味，包含软件该怎样工作"><a href="#Michael-所说的品味，包含软件该怎样工作" class="headerlink" title="Michael 所说的品味，包含软件该怎样工作"></a>Michael 所说的品味，包含软件该怎样工作</h2><p>看 Michael 在不同时间的表达，能看到一个很稳定的关切，人应当保留对软件的控制，只是表达意图的方式会变。</p>
+<p>2024 年，在四位创始人的共同访谈中，他说编程里繁琐的文本劳动会减少，人的品味和创意会被放大。</p>
+<blockquote>
+<p>“I think that people’s taste and creative ideas will be magnified.”我认为，人的品味和创造性想法会被放大。</p>
+</blockquote>
+<p>到 2025 年 5 月与 Lenny 的对谈，他把 taste 解释得更细。它包括视觉，也包括软件内部的逻辑，什么情形下允许一个动作，哪些状态应当成立，整个产品该怎样工作。程序员的工作会更多地接近逻辑设计，把意图说明白，并反复检查实现是否符合意图。</p>
+<p>如果把这段话理解成会审美就不用懂技术，就漏掉了他的限制条件。他在同一场访谈里明确承认，当时离“可以少一点谨慎”还很远，盲目信任 AI 已经造成了许多功能缺陷。面向未来的判断，与当时工具的可靠程度，有清楚的距离。</p>
+<p>2025 年 8 月，他在 Decoder 节目里又谈到，专业软件需要极细的控制，人应当能指向某个界面元素，也能钻进逻辑的细节。一个聊天框很强大，但他并不认为它足以成为终点。</p>
+<p>因此，Cursor 追求的自动化，长期带着一个界面难题。让人少做机械劳动的同时，还要让人能表达具体要求、理解结果、改掉不满意的部分。</p>
+<h2 id="Ryo-Lu-加入后，设计开始更直接地碰到代码"><a href="#Ryo-Lu-加入后，设计开始更直接地碰到代码" class="headerlink" title="Ryo Lu 加入后，设计开始更直接地碰到代码"></a>Ryo Lu 加入后，设计开始更直接地碰到代码</h2><p>2025 年，曾在 Notion 工作的 Ryo Lu 已经担任 Cursor 的设计负责人。Sualeh 当年介绍早期团队的文章专门提到了他。他参与的是公司发展到新阶段后的产品设计，并非四位联合创始人之一。</p>
+<p>Ryo 的价值，很适合放在这个时刻理解。Cursor 已经有补全、聊天、Composer 和 Agent，一项项功能都能成立，用户却需要知道它们之间是什么关系，什么时候该用哪一个，怎样在自动执行和亲手修改之间切换。</p>
+<p>在 2025 年 12 月的 Dialectic 访谈里，他反复从共同的基本结构看产品，Agent、模型、上下文、编辑器怎样组成一个整体，设计怎样在抽象概念与一个具体按钮之间来回移动。</p>
+<p>他并不坚持一种设计交付物。与喜欢静态图稿的工程师合作，他就做细致的 Figma 图；讨论模糊想法时，可以用简短文字；多月项目需要写长文档；另一些时候，他直接做出代码原型，拿给同事试。</p>
+<p>这让设计更早碰到真实材料。一个静态画面看起来合理，实际操作时可能找不到状态、看不清修改，也可能在切换任务时让人迷路。代码原型能把这些问题提前暴露出来。</p>
+<p>Ryo 对 AI 生成内容的态度也很明确，第一版只是起点，不能把模型给出的默认视觉当成结束。要继续看、继续做，再一点点改到自己真正认同。</p>
+<blockquote>
+<p>“You have to keep making things and keep looking at things.”你得不断动手做，也不断去看。</p>
+</blockquote>
+<p>这与 Michael 所说的品味形成了呼应。判断来自人对结果的持续介入。工具越容易生成一个看似完整的版本，团队越要知道哪些细节还不能接受。</p>
+<p>Ryo 也没有把高速协作讲成一个已经解决的组织奇迹。被问到几百人的团队怎样扩张时，他承认这仍然是问题，如何让每个人保持主动，又知道别人正在做什么，需要继续探索。</p>
+<h2 id="2025-年下半年，模型开始学习怎样不打扰人"><a href="#2025-年下半年，模型开始学习怎样不打扰人" class="headerlink" title="2025 年下半年，模型开始学习怎样不打扰人"></a>2025 年下半年，模型开始学习怎样不打扰人</h2><p>Tab 的成长，也让 Cursor 积累了一个直接的反馈信号，用户接受了哪条建议，又拒绝了哪条。</p>
+<p>2025 年 9 月，团队公布 Tab 的在线强化学习方法。文章解释，好的补全需要知道什么时候开口，什么时候什么都不建议。有时输入信息不够，即使模型再聪明，也猜不出用户下一步要干什么。</p>
+<p>这个判断影响训练目标。只奖励“有建议被接受”，容易让产品变得过于积极；把不该出现的建议也计入代价，模型才可能学会克制。团队会在一天内多次发布新模型，利用新反馈继续训练。</p>
+<p>这种速度需要数据使用边界。它不能被概括成所有人的私有代码都拿去训练。用户的隐私设置、企业约定和数据权限，始终是另外一层必须成立的条件。</p>
+<p>10 月 29 日，Cursor 2.0 与 Composer 模型一起发布。这里的 Composer 需要区分，2024 年的 Composer 首先是多文件编辑的产品界面；2025 年同名发布的，则是 Cursor 自己训练的 Agent 编程模型。</p>
+<p>技术文章说明，新模型是经过强化学习的混合专家模型，在接近实际工作的环境里使用搜索、编辑和终端等工具。它追求较强编程能力与交互速度的结合。官方所称相对同等能力模型快四倍，来自特定评测，并不意味着在所有指标上超过当时最强的 GPT-5 和 Sonnet 4.5，文章脚注还明确承认后二者更强。</p>
+<p>与模型一起变的，是界面重心。Cursor 2.0 开始围绕多个 Agent 组织任务，利</p>
+<p>用独立工作树或远程机器隔离工作，再让人审查结果。模型能做更多以后，阅读变化、测试和验证，又成为下一轮要处理的困难。</p>
+<p><img src="/images/HXsRwaPXgAAGG_K.jpg" alt="HXsRwaPXgAAGG_K"></p>
+<p>图 06｜2025 年 10 月 Cursor 2.0 官方发布图，多个 Agent 任务与代码审查出现在同一工作区。2024 年的 Composer 是产品编辑界面，此图中的 Composer 则是当年发布的模型。 来源。</p>
+<p>11 月，Cursor 宣布 23 亿美元 D 轮融资，投后估值 293 亿美元。Accel 确认共同领投，公司公告列出原有投资者 Accel、Thrive、Andreessen Horowitz，以及新加入的 Coatue、NVIDIA 和 Google。它还披露，团队超过 300 人，年化收入超过 10 亿美元。</p>
+<p>Cursor 到这时要同时负担产品开发和模型研究。最初选哪些事情自己做的问题，又回到了团队面前，只是每项决定都要投入更多人和算力。</p>
+<p>安全人才也是这次扩张的一部分。到 2025 年 12 月的本人访谈，Resourcely 创始人 Travis McPeak 已经在 Cursor 负责安全与企业就绪。</p>
+<p>到了 12 月，另一项整合瞄准了代码写完之后的工作。Cursor 宣布已签署收购 Graphite 的确定协议。Graphite 做的是代码审查、合并和工程协作。公告把问题讲得很直接，写代码变快以后，审查、可靠合并与协作越来越容易成为瓶颈。</p>
+<p>这次安排与把人才吸收进现有产品不同。双方当时明确，Graphite 保留原有团队和产品，继续独立运营；更紧的本地开发与拉取请求衔接、更懂上下文的审查，是接下来数月探索的方向。协议公告不等于所有整合都已完成，但它解释了 Cursor 为什么开始关心编辑器外面的整个开发过程。</p>
+<h2 id="2026-年，上下文治理成为一项看不见的产品工作"><a href="#2026-年，上下文治理成为一项看不见的产品工作" class="headerlink" title="2026 年，上下文治理成为一项看不见的产品工作"></a>2026 年，上下文治理成为一项看不见的产品工作</h2><p>要理解 Cursor 的模型为何能在真实项目里工作，不能只看模型名称。</p>
+<p>一个代码库可能远超上下文窗口，模型又需要日志、文档、终端输出和过去的讨论。全部放进去，很贵，也可能让真正重要的信息变得难找。只截一段，又可能把决定答案的部分切掉。</p>
+<p>Cursor 很早就在处理这个问题。2023 年的《Our problems》已经写过，从不同来源收集大量候选信息，再训练重排序模型挑出最相关的一部分。当时提出的 50 万 tokens 选到 8,000 tokens，是那一阶段的方案，不能冒充今天固定不变的机制。</p>
+<p>到 2025 年 11 月的检索文章，团队已经说明了自训的代码嵌入模型怎样帮助 Agent 找材料，利用任务过程中的搜索、打开文件等轨迹，学习哪些内容原本就应该更早被找到。同时，他们继续使用 grep 这样的文本搜索，二者互补。</p>
+<p>2026 年 1 月的动态上下文发现，进一步减少一开始就塞给模型的信息。长工具输出先写成文件，需要时再读取；对话压缩后，保留可搜索的历史；Skills 和 MCP 工具先给少量目录信息，真正用到时再加载详情。文章同时说明，这些改进会在随后几周向所有用户上线。</p>
+<p>它背后有一个实际取舍。少放信息，可以降低无关内容的干扰，但模型必须善于寻找；摘要可以腾出空间，却会丢失细节，因此还得给它回查的路径。更大的上下文窗口并不能自动替代这些工作。</p>
+<p>同月的安全索引文章解释了另一层工程。Cursor 用 Merkle tree 找出代码库哪些部分变化了，再对有变化的代码块更新索引。团队内可以复用相近项目的索引，但搜索结果还要验证用户本地确实拥有相应文件，不能因为共用索引就越过访问边界。</p>
+<p>这些机制大多没有一个醒目的聊天按钮，却决定了企业项目第一次打开要等多久、模型能否找到正确文件，以及数据权限能不能被遵守。</p>
+<h2 id="从自动补全，到能独立工作更久的-Agent"><a href="#从自动补全，到能独立工作更久的-Agent" class="headerlink" title="从自动补全，到能独立工作更久的 Agent"></a>从自动补全，到能独立工作更久的 Agent</h2><p>2026 年 2 月，Composer 1.5 发布，在原有预训练模型上扩大强化学习，并把自我摘要纳入训练。处理容易的问题时少想一点，困难任务时投入更多推理，接近上下文限制时生成摘要，再继续工作。</p>
+<p>2026 年 3 月，Travis McPeak 署名介绍的安全 Agent，把代码审查、旧漏洞排查、依赖修复与安全属性检查做成持续运行的自动化。这些工作补的是让 Agent 长期参与真实代码库所需的保护。</p>
+<p>3 月，Composer 2加入持续预训练。随后发布的技术报告把基础讲清楚，它从开放的 Kimi K2.5 基座继续训练，再进行大规模强化学习。这一阶段的“自研”，包含数据、训练方法、系统和任务环境，并不等于从零预训练了全部基础模型。</p>
+<p>同在 3 月，另一支团队也准备把生产系统的经验带进来。Streamfold 在 3 月 24 日宣布达成加入 Cursor 的协议。联合创始人 Mike Heffner 在本人说明中提到，他会与 Ray Jenkins 继续这段工作。他们此前做的 Rotel，专注低资源开销、高性能的 OpenTelemetry 数据处理。公告明确，Rotel 仍免费开源，迁到独立的 rotel-dev 组织，继续接受社区贡献。团队加入与开源项目停止，是两件需要分开看的事。</p>
+<p>5 月，Composer 2.5继续改善长任务、复杂指令和协作行为。官方特别提到，沟通方式、投入多少努力等维度，未必能被现有基准充分衡量，但会影响真实使用。</p>
+<p>另一边，Michael 对产品转型的解释也变了。2026 年 2 月的《The third era of AI software development》，把 AI 编程分成三个阶段，Tab 补全、同步指挥 Agent，以及让 Agent 更长时间独立工作。</p>
+<p>按他当时披露的数据，2025 年 3 月，Tab 用户大约是 Agent 用户的 2.5 倍；到文章发表时，Agent 用户已经是 Tab 用户的两倍。这是公司内部口径下的用户结构变化，足以说明团队为什么要把注意力从每次输入，逐渐移向任务、环境和结果审查。</p>
+<p>2026 年 4 月，Cursor 公布与 SpaceX 的模型训练合作，明确说算力已经成为继续扩大训练的限制。7 月，双方联合发布 Grok 4.5，将任务范围从编程扩展到更多知识工作；8 月推出 Grok 4.6；9 月的官方公告记录了 Grok 4.7。这些联合训练模型，与接入外部厂商的模型、早期自训 Tab，以及基于开放基座训练的 Composer，应当分开看。</p>
+<p>2026 年 8 月 14 日，Cursor 公告确认已被 SpaceX 收购。这是一项已经发生的公司所有权变化，不能计作新一轮融资。公告把更大算力、更强模型和更低运行成本列为结合后的目标，未在这篇公告中披露交易对价。</p>
+<p>模型更强，系统里的困难也会转移。2026 年 8 月的 builds 功能，开始在后台预先准备好开发环境，让新任务不用每次都重新安装依赖；某次更新弄坏了环境，就继续使用上一次成功构建的版本。Agent 能独立工作以后，公司又得把独立工作所需要的环境维护起来。</p>
+<p>生产环境又带来了另一项整合。2026 年 8 月 13 日，Cursor 宣布 Firetiger 团队加入。Rustam Lalkaka 和 Achille Roussel 于 2024 年创办 Firetiger，两人带来的经验涉及 Cloudflare、Twitch、Segment 和 Twilio 等大规模系统。Firetiger 的 Agent 监视发布、发现回归、调查故障，再把发现交还给编码 Agent。对 Cursor 来说，任务开始从“代码是否写对”，延长到“上线之后是否仍然正常”。Change Monitors 当时还在预告中，目标是持续观察已部署的修改并提示问题。</p>
+<p>截至 2026 年 11 月，Continue 官网也确认已被 Cursor 收购，并说明开源代码继续可用。这与 Graphite 保留独立产品、Streamfold 保留开源项目，以及 Firetiger 公告中的团队加入，各有不同的承诺范围。把这些事都缩成买下几个竞争者，会漏掉 Cursor 正在补齐什么，也会误解原有用户还能依赖什么。</p>
+<h2 id="社区把“工具能做什么”变成了别人学得会的经验"><a href="#社区把“工具能做什么”变成了别人学得会的经验" class="headerlink" title="社区把“工具能做什么”变成了别人学得会的经验"></a>社区把“工具能做什么”变成了别人学得会的经验</h2><p>早期，创始人自己就是最密集的用户。产品扩大以后，他们自己的使用方式，已经不可能覆盖所有人。社区开始有专门的人来维护。2025 年 1 月，Michael 在官方论坛招聘 Community Developer，工作是每天在网上与用户交流、管理论坛，并确保问题得到解决；如果候选人技术足够深入，也可以直接改代码。用户交流与产品改进，被放进同一份工作里。</p>
+<p>当年加入的 Ben Lang 此前在 Notion 做过社区。按照他在 Luma 的本人访谈中的回忆，最初团队发了一张开放式表单，问喜欢 Cursor 的人还想要什么，大约收到 1,500 份回应，线下活动是其中的强烈需求。这个数字属于他回顾时的估计，反映的是主动来表达意愿的人，不能当成新增付费客户。</p>
+<p>Ambassador Community 让这种意愿有了持续参与的位置。到 2025 年 8 月的官方论坛记录，工作人员已经会把想组织伦敦聚会的用户引向大使计划。截至截稿的公开招募规则要求申请人年满十八岁、接受行为准则，并愿意持续做新用户引导、论坛维护、聚会、黑客松或工作坊。名额有限，官方每周审申请，通常争取两到三周回复；不要求英语流利。它招募的是能组织和帮助别人的使用者。</p>
+<p>分工也很具体。组织者找本地场地、召集参与者、分享自己摸索出的用法，把</p>
+<p>问题反馈给团队；官方提供活动费用支持、贴纸、产品额度、早期版本，以及能直接联系团队的 Slack 群。大使还可以获得论坛管理权限。活动、日常答疑与产品反馈，因此有了彼此相连的渠道，而非每次发布后重新找一批转发者。</p>
+<p><img src="/images/HXsR5TBW4AAHQhp.jpg" alt="HXsR5TBW4AAHQhp"></p>
+<p>图 07｜Cursor 官方 Ambassadors 页面公开的 Florence 社区活动照。页面未标注拍摄日期及参与者个人姓名。 来源。</p>
+<p><img src="/images/HXsWDiiaUAAdtm2.jpg" alt="HXsWDiiaUAAdtm2"></p>
+<p>Cafe Cursor 把这套协作变得更轻。Ben 回忆，旧金山办公室与一家咖啡馆只隔一道门，他想干脆把咖啡馆租一天，邀请用户来工作、喝咖啡、见团队、提反馈。外地用户随后问，自己的城市能不能也办。团队整理操作手册、录制 Loom 视频，更多场次交给大使和本地主办者。他在这场访谈中给出的阶段数字，是不到一年办了 176 场，覆盖至少 120 个城市，大多数并非官方团队亲自承办。访谈页面没有标出发布日期，这组数只能作为当时回顾的规模，不是截至截稿的累计总数。</p>
+<p>Ben 也谈到它怎样扩散，一场 Cafe Cursor 会让更多人想成为大使，大使又愿意把活动带到自己的城市。这里有本人明确描述的传播路径，仍然不能把全部收入增长归给社区。产品先让人愿意来，组织者再把体验和知识带到更多地方。与大型发布会相比，这些活动允许参与者带着电脑做自己的事，也允许只喝杯咖啡便离开。品牌露出保持克制，各地可以保留自己的风格。</p>
+<p>我作为中国区首位 Cursor Ambassador，创建了 Cursor Insider，也是 WayToBot 联合发起人，组织过多场社区活动。把这段经历放进 Cursor 的发展史里，我更在意的是，公司的更新日志与用户真正学会使用之间，隔着大量解释、示范和交流。社区组织者做的，正是其中一部分工作。</p>
+<p>Ben 在访谈中被问到无鞋办公室等文化是否会延伸到活动。他没有把各地办成同一种办公室的复制品，强调的是好场地、具体细节、低调的品牌露出，以及本地主办者各自的想法。这也让“社区”有了与公司内部不同的空间。</p>
+<p>也需要区分关系。社区活动里出现的人，不自动是投资者；企业在采购 Cursor，也不代表公司向它投资；第三方提供模型或基础设施，更不能据此计入股东名单。围绕 Cursor 形成的网络，比融资公告大得多。</p>
+<h2 id="跑得快，仍然要对每一次后果负责"><a href="#跑得快，仍然要对每一次后果负责" class="headerlink" title="跑得快，仍然要对每一次后果负责"></a>跑得快，仍然要对每一次后果负责</h2><p>Cursor 很早就公开强调高人才密度、自己使用自己的工具，以及持续实验。2023 年的招聘文章已经写到，每天长时间使用产品，让团队能不断产生新想法，也不断调整优先级。</p>
+<p>Michael 在 2025 年与 Lenny 的访谈里，讲过两天的实际工作试用，以及对好奇心、坦率和稳定判断的重视。他还承认，团队早期可能招人太慢。公司实际做过的选择，与事后被总结成的成功方法，之间仍然需要保留这些自我修正。</p>
+<p>人员也会继续流动。2026 年 11 月，Travis 在本人告别说明中宣布结束在 Cursor 的十七个月，前往 Anthropic 负责网络安全产品。它提醒我们，人才积累并不意味着人会永久留下；工具公司与模型提供方争取的，有时正是同一批懂真实工程问题的人。</p>
+<p>快速迭代也会带来代价。更新日志里大量内容是修崩溃、修内存、修远程连接、修修改没有正确应用。这些工作不如新模型显眼，却直接决定用户能否继续信任工具。</p>
+<p>到 2026 年 11 月，官方披露的一次安全事件调查，又把责任推到了更严肃的层面。按 Cursor 当时的调查，第三方供应商暴露的访问密钥导致部分历史 Agent 轨迹等数据被访问，少量未清除的凭证进一步扩大了影响，攻击者还在其扩展市场缓存中放入过恶意的 Claude Code 扩展副本。</p>
+<p>同一份公告明确区分，受影响的是特定历史数据和系统，Privacy Mode 下的提示与代码、客户代码仓库，以及 Cursor 正式应用和更新未受影响；公司称相信事件已被控制。这些都是公司调查结论，不能扩写成独立审计的保证，也不能笼统写成所有客户代码泄露。</p>
+<p>把这件事写进发展史，是因为 Cursor 已经承担了与早期完全不同的责任。它接触的上下文更多，能执行的动作更多，用户交给它的工作也更重要。人才密度和产品速度仍然有价值，但权限、供应链、数据保留与安全工程，都必须跟上。</p>
+<p>回看这条路，我最在意的，是团队怎样一次次重新分配自己的精力。CAD 数据和用户理解跟不上，就回到熟悉的编程；从头写编辑器负担太重，就接受 VS Code 的底座；通用模型解决不好高频编辑，就训练专用模型；Agent 开始做长任务，又继续补上下文、环境、审查和模型训练。</p>
+<p>四位创始人当年并不知道今天的 Cursor 会长成这样。他们押注模型会变强，也持续检查，眼前这个版本是否真的帮人把软件写得更好。Cursor 的发展史，值得看的正是这些具体选择，以及每一次选择之后，仍然要继续解决的问题。</p>
+<h2 id="接下来，Cursor-会接过多少工作"><a href="#接下来，Cursor-会接过多少工作" class="headerlink" title="接下来，Cursor 会接过多少工作"></a>接下来，Cursor 会接过多少工作</h2><p>回看这些选择，我更关心 Cursor 下一步会让人交出去什么。从接受几行补全，到让 Agent 改一组文件，再到把一个持续数月的项目交给它，用户需要做的判断已经很不一样。</p>
+<p>这条路已有具体产品。2026 年 9 月 10 日发布的 Projects，把功能开发、迁移和长期维护放进一个持续存在的项目。用户与协调 Agent 沟通，由它分派任务；研究、约定和测试方法以共享文件留下，后续 Agent 可以继续使用。项目默认在云端电脑上运行，需要时再调用本地 Agent。关上笔记本，工作仍可以继续。它以 beta 发布，开始逐步向所有用户开放。</p>
+<p>11 月 10 日，Projects 又加入多人协作。同事各自保留与 Agent 的对话，项目另有共享的需求、设计、记忆和任务看板。官方举了值班交接的例子，接班人的协调 Agent 可以接着了解尚未完成的工作、待处理事件和需要关注的渠道。这些是公司描述的产品能力与内部用法，还不能保证每家公司的复杂项目都能同样顺利。</p>
+<p>我觉得，这比一个聊天框能同时指挥多少 Agent 更值得看。一个团队能少花多少时间重新解释背景，某个人离开之后，工作还能不能继续，可能更接近企业愿意长期付钱的理由。上下文治理到这里，开始影响团队怎样分工和交接。</p>
+<p>品牌上，也出现了值得留意的新线索。北京时间 11 月 21 日，XFreeze 发帖，讨论 Cursor CLI 与 Grok Build 可能整合，附上登录界面和标为 nightly 的桌面版本截图。他引用的 blankspeaker 帖子，又指向同一作者更早的演示。它们属于同一条传播链，不能算几方独立确认。</p>
+<p><img src="/images/HXsWYF5b0AAiCZk.png" alt="HXsWYF5b0AAiCZk"></p>
+<p>还有一处更具体的一手线索。11 月 22 日核对时，Cursor 的公开安装脚本里，已能看到处理 <code>grok-switch.json</code> 记录文件的逻辑，以及提到 Grok agent host 的提示。相关处理已经出现在公开安装器中，仍然不能据此确定正式产品会怎样命名、什么时候上线，或桌面版和 CLI 是否采取完全相同的安排。预发布截图也没有解决这些问题。截稿时，全面更名仍待官方确认。</p>
+<p>假如 Grok Build 最终成为统一品牌，我会把它理解为 Cursor 在收购之后，可能进一步与 Grok 的模型、账号和产品体系整合。模型与算力的结合已经发生，品牌与入口的结合则还要等正式安排。一个新名字可以表达新的产品范围，无法替它证明长期任务已经可靠，也无法回答用户会不会继续愿意选择它。</p>
+<p>机会在于，把过去分散的工作接起来。发现一个生产问题后，Agent 如果能带着日志、当初的设计决定和测试方法，找到代码、提出修改，再交给合适的人审查，开发者就少做许多搬运背景的工作。Projects 的发布、Graphite 收购协议和生产监测团队的加入，让这种可能性有了具体来处。把这些部分真正接好，仍是接下来的产品工作。</p>
+<p>困难也会变得更具体。一个 Agent 记错要求，可能改坏几个文件；共享上下文里的错误若被后续任务反复沿用，影响就会扩大。并行任务越多，越需要解释谁做了什么、用了哪些资料、花了多少成本，哪些修改经过测试，谁有权批准上线。省下来的编码时间，可能又花在重复执行和审查上。接触更多企业系统以后，权限与数据保留也必须经得起检查。</p>
+<p>模型厂商已经亲自提供编程 Agent，Cursor 还要继续回答，自己的工作方式为什么值得用户留下。更强的模型会让许多演示变得容易，也会让不同工具看起来更像。一个项目能否在换人之后继续推进，出了问题能否追查和退回，往往要经过很长时间才能看清。</p>
+<p>Michael 说过，人的品味和创意会被放大。工作交得越多，这句话就越需要落到具体决定上。软件应该怎样工作，什么结果算合格，哪些动作必须由人点头，都要有人负责。我期待 Cursor 接下来能让人更从容地做这些判断，也让人随时看懂进展、接回工作。这会比它最后叫什么，更能决定下一段发展史。</p>
+<h2 id="附录｜截至截稿公开披露、可核实的融资与投资者"><a href="#附录｜截至截稿公开披露、可核实的融资与投资者" class="headerlink" title="附录｜截至截稿公开披露、可核实的融资与投资者"></a>附录｜截至截稿公开披露、可核实的融资与投资者</h2><p>以下按历史阶段及对外披露时间排列，金额均为美元。估值未说明投前或投后</p>
+<p>的，不自行补口径；公开材料只披露群体身份的，保留原样。名单有公开披露的边界，不代表未披露的完整股东名册。</p>
+<ul>
+<li>| 阶段及公告时间 | 融资金额 | 估值口径 | 公开披露的投资者与依据 |</li>
+<li>| — | — | — | — |</li>
+<li>| 最早投资，具体日期未在本人说明中披露 | 未披露 | 未披露 | Michael Fertik 在<a target="_blank" rel="noopener" href="https://www.michaelfertik.com/faq">个人官网</a>确认自己是 Anysphere 第一位投资者；该说明不足以还原整轮条款。 |</li>
+<li>| 早期 SAFE，投资日期未在所获法律文件披露；2023 年 4 月 3 日退出 | 20 万 SAFE，非整轮金额 | 未披露 | <a target="_blank" rel="noopener" href="https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.1473.1.pdf">FTX 破产案出售报告附件，第 1 页</a>确认 Clifton Bay Investments LLC 持有该 SAFE，并以 20 万售回 Anysphere；<a target="_blank" rel="noopener" href="https://storage.courtlistener.com/recap/gov.uscourts.deb.188450/gov.uscourts.deb.188450.1679.0.pdf">同案文件</a>确认其原名 Alameda Research Ventures LLC。未据此命名一轮融资。 |</li>
+<li>| 种子轮，2023 年 10 月 | 800 万 | 未披露 | 同期<a target="_blank" rel="noopener" href="https://techcrunch.com/2023/10/11/anysphere-raises-8m-from-openai-to-build-an-ai-powered-ide/">创始人邮件访谈及融资报道</a>披露 OpenAI Startup Fund 领投，Nat Friedman、Arash Ferdowsi 及未具名天使参投。完整天使名单未具名。 |</li>
+<li>| A 轮，2024 年 8 月 22 日 | 6,000 万 | 公司公告未披露 | <a target="_blank" rel="noopener" href="https://cursor.com/blog/series-a">公司公告</a>列 Andreessen Horowitz、Thrive Capital、OpenAI、Jeff Dean、Noam Brown，以及 Stripe、GitHub、Ramp、Perplexity、OpenAI 的创始人等；未逐一写出后面各组人名。 |</li>
+<li>| B 轮，2025 年 1 月 16 日 | 1.05 亿 | 公司公告未披露 | <a target="_blank" rel="noopener" href="https://cursor.com/blog/series-b">公司公告</a>列 Thrive Capital、Andreessen Horowitz、Benchmark 及原有投资者；未逐一披露完整名单及领投身份。 |</li>
+<li>| C 轮，2025 年 6 月 6 日 | 9 亿 | 99 亿，公告未说明投前或投后 | <a target="_blank" rel="noopener" href="https://cursor.com/blog/series-c">公司公告</a>列 Thrive、Accel、Andreessen Horowitz、DST；公告未标明领投。 |</li>
+<li>| D 轮，2025 年 11 月 13 日 | 23 亿 | 293 亿，明确为投后 | <a target="_blank" rel="noopener" href="https://cursor.com/blog/series-d">公司公告</a>列 Accel、Thrive、Andreessen Horowitz、Coatue、NVIDIA、Google；<a target="_blank" rel="noopener" href="https://www.accel.com/news/our-series-d-in-cursor-pushing-the-frontier-of-ai-forward">Accel 公告</a>确认自身共同领投，未在这份材料中指明另一位共同领投者。 |</li>
+</ul>
+<p>跨轮去重后，上表可核实的具名投资者包括 Michael Fertik、Clifton Bay Investments LLC（原 Alameda Research Ventures LLC）、OpenAI Startup Fund、Nat Friedman、Arash Ferdowsi、Andreessen Horowitz、Thrive Capital、OpenAI、Jeff Dean、Noam Brown、Benchmark、Accel、DST、Coatue、NVIDIA、Google。OpenAI 与 OpenAI Startup Fund 在各轮原文中写法不同，这里保留披露名称。</p>
+<p>2026 年的 SpaceX 模型合作与收购单列在正文，未混入融资额。网上关于更早投资及少数持股机构的名单，如缺少原始投资公告或可核验法律文件，也未擅自补进这张表。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>Projects 发布与多人协作更新，委派项目与团队共享上下文的已发布方向。</li>
+<li>XFreeze 原帖、所引 nightly 帖及更早演示帖，同一传播链中的未官宣整合与更名线索；公开安装器另有 Grok 切换相关代码，均不等于全面更名正式公告。</li>
+<li>Ben 加入 Cursor 的本人通讯与Luma 对 Ben 的社区访谈，无鞋办公室、社区起步、大使分工和 Cafe Cursor 扩散。</li>
+<li>Supermaven 创始人公告、Koala 创始人公告、Graphite 协议公告、Streamfold 团队说明、Continue 官网与Firetiger 加入公告，不同整合方式和承诺。</li>
+<li>Travis 的安全 Agent 技术文与本人告别说明，个人工作及人员变化。</li>
+<li>Fido 2016 年论文与合作者项目说明，Michael 少年时的机器人、3D 打印机身与两人分工。</li>
+<li>早期客户访谈联系截图与早期用户 Frank Lyonnet 的回顾，分别对应创业探索与编辑器用户招募，不能混为一次活动。</li>
+<li>FTX 案出售附件及实体前称文件，早期 SAFE 与退出记录。</li>
+<li>Cursor 团队与 Lex Fridman 的完整访谈，四位创始人共同讲述产品、模型、编辑器选择和编程的未来。</li>
+<li>Michael Truell 做客 Lenny’s Podcast，CAD 转向、手写编辑器原型、品味、招聘和市场判断。</li>
+<li>Notion First Block 对谈，机械工程探索和早期组织选择。</li>
+<li>Our problems 与 More problems，团队在当时真正面对的问题，含目标与未完成方向。</li>
+<li>Cursor 历史更新日志与后续记录，Composer、Agent 与模型接入的原始发布顺序。</li>
+<li>A new Tab model、Fast Apply、Tab 在线强化学习，专用模型与速度背后的工作。</li>
+<li>Michael 接受 Decoder 采访，专业软件的控制与交互。</li>
+<li>Ryo Lu 与 Dialectic 对谈，产品结构、代码原型、品味及团队协作。</li>
+<li>语义检索、动态上下文发现、安全索引，上下文的选择、恢复与权限。</li>
+<li>Composer 技术说明与Composer 2 技术报告介绍，不同模型训练阶段的边界。</li>
+<li>The third era of AI software development，Michael 在 2026 年对转型的解释。</li>
+<li>2025 年计费澄清与2026 年安全事件调查，增长过程中不能略去的问题。</li>
+<li>官方社区及大使计划，社区参与和反馈的正式路径。</li>
+</ul>
+<p>Cursor 发展史主体资料核对至 2026 年 11 月 21 日；末节产品方向与品牌线索补核至 2026 年 11 月 22 日，北京时间。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://yaoav.github.io">Yaoav</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://yaoav.github.io/2026/11/22/0xlangeai-2124316520780268007/">https://yaoav.github.io/2026/11/22/0xlangeai-2124316520780268007/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://yaoav.github.io/" target="_blank">版权归原博主所有，本站仅作归档</a> 许可协议。转载请注明来源 <a href="https://yaoav.github.io" target="_blank">币海拾遗 · 爆款提纯</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/0xlangeai/">@0xlangeai</a></div><div class="post-share"><div class="social-share" data-image="/images/2124316520780268007-cover.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/11/22/Leviwoyun-2124316801756794977/" title="100 Standout Website Footers (Organized by Style)"><img class="cover" src="/images/2124316801756794977-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">100 Standout Website Footers (Organized by Style)</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @Leviwoyun（Levi 卧云） 的长文，原文链接，版权归原作者所有。  Most footers are an afterthought—just a dump of links at the bottom of the page. These 100 design references show how a page can close with personality, clarity, or a strong call to action. You’ll find a mix of live websites and concept explorations below, each credited with a link to its original post. Contents: Illustrated Storytelling (20) · Oversized Wordmarks (20) · Minimal Layouts (8) · Information Architecture (12) · Conversion-Focuse...</div></div></div></a><a class="pagination-related" href="/2026/11/22/likka_ailive-2124198818593825090/" title="如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？"><img class="cover" src="/images/2124198818593825090-cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">如果 Anthropic 解开了黎曼猜想：人类将迎来怎样的科技核爆？</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @likka_ailive（Likka） 的长文，原文链接，版权归原作者所有。  刚刚，Lean FRO 与 Mathlib Initiative 发布联合声明，正式确认 Anthropic 提交的黎曼猜想证明无误。 当形式化数学界最具权威的两大机构共同背书，确认机器验证逻辑无懈可击的那一刻，整个科学界都将陷入短暂的失语。因为这不仅是一份技术通告，它宣告着 1859 年德国数学家波恩哈德·黎曼在那篇不到 10 页的论文里随手写下的素数猜想，在悬置了 160 多年后，终于被 AI 彻底攻克。 过去一个半世纪里，这颗“数学界皇冠上的明珠”一直是人类智力的终极试金石。从希尔伯特、哈代到陶哲轩，几代最顶尖的数学天才倾尽毕生心血，连它的边缘都没能彻底撼动。 面对这样一场核爆级别的突破，绝大多数人的第一反应可能是：“完了，银行密码和比特币要崩了。”或者“数学家要失业了。” 但最反直觉的真相是：这件事最大的核爆点，甚至不在“黎曼猜想被证明”这个结果本身，而在于“AI 独立创造了新数学”这个过程。 它标志着人类维持了数千年的科学发现范式，将迎来彻底的底层重构。 从 AI ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/11/20/0xlangeai-2123597186122621165/" title="Muse进阶实战：从脚本到成片，全自动视频号工作流拆解"><img class="cover" src="/images/2123597186122621165-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">Muse进阶实战：从脚本到成片，全自动视频号工作流拆解</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  很多人做视频号，卡死在三件事上：每天找选题找的头痛、剪辑配音耗掉两三个小时、好不容易做完还要守着电脑传后台。坚持不到两周就断更了。 最近社区里跑通了一套很野的玩法：把 Meta Muse 当「云端包工头」，串起 Gemini、Google Flow、豆包语音和 Hark，把「对标拆解 → 写脚本 → 生视频 → 配音剪辑 → 传草稿箱」整条链路交给云端自动跑。原方案单条最高播放跑到 1W+，转化率做到 1%，而且核心额度靠每天刷新的免费点数就能撑住。 我自己按这套思路完整实操跑了一遍：拿 YouTube AI 博主 Matt Wolfe (@mreflow) 的 Shorts 做对标，全程没开剪映、没自己配音，直接跑出了一条 21 秒的竖屏成片《GPT-6.2跑分第一却翻车》。实测 3 段电影感画面一共只扣了 60 个 Flow 点数，还意外测出了 Muse 自己抽帧修字幕、以及云浏览器卡在视频号二维码的真实边界。  这篇文章把整套架构、实测跑通的中文提示词、通用视频制作 Skill...</div></div></div></a><a class="pagination-related" href="/2026/11/21/0xlangeai-2123988913375350921/" title="Matt Palmer 和 Eric Zakariasson 的 Grok Bot 直播问答，41 个问题，从旅行、会议、电话讲到 Directory"><img class="cover" src="/images/2123988913375350921-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-21</div><div class="info-item-2">Matt Palmer 和 Eric Zakariasson 的 Grok Bot 直播问答，41 个问题，从旅行、会议、电话讲到 Directory</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  这场是 Matt Palmer（@mattyp）和 Eric Zakariasson（@ericzakariasson）的 Grok Bot Q&amp;A - Travel, 1.0, meetings &amp; more!，2026 年 11 月 20 日的 X 直播，回放在 https://x.com/i/broadcasts/2aWQllRAKjNOBd 下面整理了这场直播里的 41 个问题。 一、这场直播是怎么搭起来的 问：这套直播是怎么做的？（3:45）答：Matt 说直播跑在他 MacBook 上的 Meld Studio 里。Meld 和 OBS 一类工具类似，用来配置画面布局，再推到 X。他点名感谢了 Meld Studio 团队和 X 直播团队。  叠加层是 HTML。他当时给大家看的，是一个载入网站的浏览器叠加层，用了 tldraw，并点名感谢 Steve。姓名条、模糊和淡入淡出都是 HTML。Matt 说自己用本地机器上的 Grok Build 终端，把这些...</div></div></div></a><a class="pagination-related" href="/2026/09/25/0xlangeai-2103300004966478284/" title="Muse 上手保姆级教程：从登录到完成第一个任务"><img class="cover" src="/images/2103300004966478284-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-25</div><div class="info-item-2">Muse 上手保姆级教程：从登录到完成第一个任务</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  Muse 是 Meta 的个人 AI Agent，可以浏览网页、生成文件，部分任务在关闭 App 后仍能继续。 第一次用，先让它把几个链接整理成资料表：下任务、打开文件、核对来源，再改一版。 这不是功能清单。按顺序做完，就能让 Muse 在你看得见的范围内把一件事做完。 连接器、记忆和长期目标，用到再加。  1. 从哪里开始？先登录，再看可用范围打开 muse.ai，按页面提示登录 也可以从 muse 桌面端登陆 还可以从 muse 手机应用登陆 开始前知道这几件事就够了：  官方 9 月 8 日的公告宣布首发面向美国，支持 iOS、Android 和网页端。你的账号当前能否使用，以注册页面为准。 官方提供免费使用与付费订阅，具体额度和价格看账号内的说明。先试一个任务，再决定是否订阅。 本文用 Muse 桌面端做示范，先选一个设备跟着做即可。  如果进不去，先看页面具体提示。地区未开放、账号不符合条件和网络连接失败，需要分别处理。 2. 登录后，先告诉它怎么和你合作按引导完成命名等初...</div></div></div></a><a class="pagination-related" href="/2026/11/19/0xlangeai-2123390731142524948/" title="为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法"><img class="cover" src="/images/2123390731142524948-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-19</div><div class="info-item-2">为什么我们成立了 WayToBot 社区 ？首场 Space 回归：工具横评、省钱实操与一线玩家的真实用法</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  周二晚，WayToBot 社区举办了成立后的首场 X Space。 说实话，最开始我们只是想开个语音局，跟大家聊聊“为什么要做这个社区”，顺便回答几个群里高频问到的问题。结果没想到，大家的参与热情远超预期，开麦席位一直满着，硬生生聊了 **2 小时 13 分钟 、 790 多人收听、 最高在线 200 多人 ** 在复盘 Space 的干货之前，我们想先认真回答第一个问题——这也是这场 Space 最核心的主题：我们为什么要成立 WayToBot 社区？ 一、为什么我们要成立 WayToBot 社区？这件事的起因其实很自然。 从今年 8 月 Grok Bot 发布，到 9 月 Muse 上线，再到 OpenAI Dots 接连出来，Personal Agent（个人智能体）这个赛道在短短几个月里突然井喷了。每天时间线上都有新产品、新教程刷屏。但我们发现一个很现实的问题：产品太多、信息太杂，普通人根本没精力把每个工具都测一遍，很容易踩坑，甚至被各种噪音带偏。 Kin @KinGao47...</div></div></div></a><a class="pagination-related" href="/2026/11/17/0xlangeai-2122708521959706960/" title="点一下即领 gemini ultra 20x 白嫖一个月！手慢无！"><img class="cover" src="/images/2122708521959706960-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-17</div><div class="info-item-2">点一下即领 gemini ultra 20x 白嫖一个月！手慢无！</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  领取链接：https://tokenized.play.google.com/eacquire/multiline?authuser=0&amp;ear=%5Bnull%2Cnull%2C%5Bnull%2Cnull%2C%22%2Fplans%3Fg1_last_touchpoint%3D37%26g1_landing_page%3D1%26otzr%3D1%22%5D%2Cnull%2C%5B%22W1tudWxsLG51bGwsbnVsbCxbbnVsbCxbIlJzMi4wLjY6OjpzMTEsMiwyNmI1ZTE5LDAsNzY5LGEwNjNlYmU5LDAsNGEyLGVkZDk4YmFjLDAsMTgsNDg2M2ZkMzUsMCw3NjksY2IyZDVjNmYsMCw0N2UsNmFkNDdjNmMsMCw1M2UsN2JkYjQ5ZjYsMCw0MjgsYjY1NDAyMDAsMCw3NjksZWVhODIwYjYsMCw0N2UsMWFhNDMzMSwwL...</div></div></div></a><a class="pagination-related" href="/2026/11/20/0xlangeai-2123627885730951241/" title="DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。"><img class="cover" src="/images/2123627885730951241-cover.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-11-20</div><div class="info-item-2">DeepSeek Harness发布100天了，想跟你分享这13个好用的插件玩法。</div></div><div class="info-2"><div class="info-item-1"> 本文转载自 X 博主 @0xlangeai（蓝哥AI） 的长文，原文链接，版权归原作者所有。  很多人之前都跟我说，能不能分享一些DeepSeek Harness的好用的用法和插件，正好，前几天，DeepSeek限额冲上了热搜。  因为Deepseek大砍APP和网页版的额度，导致很多人直接失恋。 虽然可以在手机网页上接API接着聊，但很多朋友不会弄或者嫌麻烦。 所以，很多人又开始关注上了DSH。 官方也及时出了对应的插件，方便大家把DeepSeek上的会话导入到DSH里面接着用。 而且非常巧的是，今天正好是DeepSeek Harness发布的，第100天诞辰。 截止到我写下这段话的时候，GitHub上的星标数已经到了28.4万。 官方统计的第三方插件在11月4号已经有3.5万个左右了。 很多朋友，是真的把插件玩出了花。 比如，有人直接把页面爆改成了同花顺。  把里面的对话变成可拖拽的分支地图。  之前我也说了DSH是个二极管，喜欢的人会喜欢得不得了，不喜欢的人会觉得它毫无用户体验。 但现在我觉得，体验这玩意不一定需要DSH官方来做啊。 这100天，从大学生到极客，有一大堆人...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yaoav</div><div class="author-info-description">提炼加密、AI、资本市场博主的爆款观点，注明出处</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">451</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">218</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/Yaoav"><i class="fab fa-x-twitter"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://x.com/Yaoav" target="_blank" title="X"><i class="fab fa-x-twitter" style="color: #141414;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-%E8%87%B3-2022-%E5%B9%B4%EF%BC%8C%E5%85%88%E8%A2%AB-Copilot-%E6%89%93%E5%8A%A8%EF%BC%8C%E5%8F%88%E7%BB%95%E5%BC%80%E4%BA%86%E7%BC%96%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">2021 至 2022 年，先被 Copilot 打动，又绕开了编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-%E5%B9%B4%E5%BA%95%E8%87%B3-2023-%E5%B9%B4%EF%BC%8C%E9%80%89%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%8C%E4%B9%9F%E6%98%AF%E5%9C%A8%E9%80%89%E5%85%AC%E5%8F%B8%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-number">2.</span> <span class="toc-text">2022 年底至 2023 年，选编辑器，也是在选公司的边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E4%BD%8D%E5%88%9B%E5%A7%8B%E4%BA%BA%E7%9A%84%E5%85%B1%E5%90%8C%E5%88%A4%E6%96%AD%EF%BC%8C%E8%90%BD%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%87%8C"><span class="toc-number">3.</span> <span class="toc-text">四位创始人的共同判断，落在不同的工作里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2023-%E8%87%B3-2024-%E5%B9%B4%EF%BC%8C%E4%BB%8E%E2%80%9C%E6%8E%A5%E7%9D%80%E5%86%99%E2%80%9D%E8%B5%B0%E5%90%91%E2%80%9C%E6%8E%A5%E7%9D%80%E6%94%B9%E2%80%9D"><span class="toc-number">4.</span> <span class="toc-text">2023 至 2024 年，从“接着写”走向“接着改”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2024-%E5%B9%B4%E5%A4%8F%E5%A4%A9%EF%BC%8CComposer-%E6%8A%8A%E9%97%AE%E9%A2%98%E4%BB%8E%E4%B8%80%E5%A4%84%E4%BB%A3%E7%A0%81%E6%89%A9%E5%A4%A7%E5%88%B0%E4%B8%80%E7%BB%84%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">2024 年夏天，Composer 把问题从一处代码扩大到一组文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2024-%E5%B9%B4%E6%9C%AB%EF%BC%8CAgent-%E5%BC%80%E5%A7%8B%E8%87%AA%E5%B7%B1%E6%89%BE%E6%9D%90%E6%96%99%E3%80%81%E8%B0%83%E7%94%A8%E7%BB%88%E7%AB%AF"><span class="toc-number">6.</span> <span class="toc-text">2024 年末，Agent 开始自己找材料、调用终端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-%E5%B9%B4%EF%BC%8C%E5%A2%9E%E9%95%BF%E5%B8%A6%E6%9D%A5%E4%BA%86%E9%92%B1%EF%BC%8C%E4%B9%9F%E5%B8%A6%E6%9D%A5%E4%BA%86%E6%9B%B4%E9%9A%BE%E5%9B%9E%E9%81%BF%E7%9A%84%E8%B4%A6"><span class="toc-number">7.</span> <span class="toc-text">2025 年，增长带来了钱，也带来了更难回避的账</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Michael-%E6%89%80%E8%AF%B4%E7%9A%84%E5%93%81%E5%91%B3%EF%BC%8C%E5%8C%85%E5%90%AB%E8%BD%AF%E4%BB%B6%E8%AF%A5%E6%80%8E%E6%A0%B7%E5%B7%A5%E4%BD%9C"><span class="toc-number">8.</span> <span class="toc-text">Michael 所说的品味，包含软件该怎样工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ryo-Lu-%E5%8A%A0%E5%85%A5%E5%90%8E%EF%BC%8C%E8%AE%BE%E8%AE%A1%E5%BC%80%E5%A7%8B%E6%9B%B4%E7%9B%B4%E6%8E%A5%E5%9C%B0%E7%A2%B0%E5%88%B0%E4%BB%A3%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">Ryo Lu 加入后，设计开始更直接地碰到代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2025-%E5%B9%B4%E4%B8%8B%E5%8D%8A%E5%B9%B4%EF%BC%8C%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0%E6%80%8E%E6%A0%B7%E4%B8%8D%E6%89%93%E6%89%B0%E4%BA%BA"><span class="toc-number">10.</span> <span class="toc-text">2025 年下半年，模型开始学习怎样不打扰人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2026-%E5%B9%B4%EF%BC%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E6%B2%BB%E7%90%86%E6%88%90%E4%B8%BA%E4%B8%80%E9%A1%B9%E7%9C%8B%E4%B8%8D%E8%A7%81%E7%9A%84%E4%BA%A7%E5%93%81%E5%B7%A5%E4%BD%9C"><span class="toc-number">11.</span> <span class="toc-text">2026 年，上下文治理成为一项看不见的产品工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%EF%BC%8C%E5%88%B0%E8%83%BD%E7%8B%AC%E7%AB%8B%E5%B7%A5%E4%BD%9C%E6%9B%B4%E4%B9%85%E7%9A%84-Agent"><span class="toc-number">12.</span> <span class="toc-text">从自动补全，到能独立工作更久的 Agent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BE%E5%8C%BA%E6%8A%8A%E2%80%9C%E5%B7%A5%E5%85%B7%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%E2%80%9D%E5%8F%98%E6%88%90%E4%BA%86%E5%88%AB%E4%BA%BA%E5%AD%A6%E5%BE%97%E4%BC%9A%E7%9A%84%E7%BB%8F%E9%AA%8C"><span class="toc-number">13.</span> <span class="toc-text">社区把“工具能做什么”变成了别人学得会的经验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%91%E5%BE%97%E5%BF%AB%EF%BC%8C%E4%BB%8D%E7%84%B6%E8%A6%81%E5%AF%B9%E6%AF%8F%E4%B8%80%E6%AC%A1%E5%90%8E%E6%9E%9C%E8%B4%9F%E8%B4%A3"><span class="toc-number">14.</span> <span class="toc-text">跑得快，仍然要对每一次后果负责</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%EF%BC%8CCursor-%E4%BC%9A%E6%8E%A5%E8%BF%87%E5%A4%9A%E5%B0%91%E5%B7%A5%E4%BD%9C"><span class="toc-number">15.</span> <span class="toc-text">接下来，Cursor 会接过多少工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95%EF%BD%9C%E6%88%AA%E8%87%B3%E6%88%AA%E7%A8%BF%E5%85%AC%E5%BC%80%E6%8A%AB%E9%9C%B2%E3%80%81%E5%8F%AF%E6%A0%B8%E5%AE%9E%E7%9A%84%E8%9E%8D%E8%B5%84%E4%B8%8E%E6%8A%95%E8%B5%84%E8%80%85"><span class="toc-number">16.</span> <span class="toc-text">附录｜截至截稿公开披露、可核实的融资与投资者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">17.</span> <span class="toc-text">参考资料</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Shenjingape-2124338463088742484/" title="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤"><img src="/images/2124338463088742484-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤"/></a><div class="content"><a class="title" href="/2026/11/22/Shenjingape-2124338463088742484/" title="说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤">说好的“铁幕封锁”呢？商务部的手批了 87.9 万颗 AI 芯片！美众院公开清单撕开芯片禁令底裤</a><time datetime="2026-11-22T11:05:32.000Z" title="发表于 2026-11-22 11:05:32">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/DrRabbitAI-2124331058523205930/" title="学术小白：科研入门常识"><img src="/images/2124331058523205930-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学术小白：科研入门常识"/></a><div class="content"><a class="title" href="/2026/11/22/DrRabbitAI-2124331058523205930/" title="学术小白：科研入门常识">学术小白：科研入门常识</a><time datetime="2026-11-22T10:36:07.000Z" title="发表于 2026-11-22 10:36:07">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/KinhVujhfi-2124326439231410434/" title="本周Github涨星前10的神级项目"><img src="/images/2124326439231410434-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="本周Github涨星前10的神级项目"/></a><div class="content"><a class="title" href="/2026/11/22/KinhVujhfi-2124326439231410434/" title="本周Github涨星前10的神级项目">本周Github涨星前10的神级项目</a><time datetime="2026-11-22T10:17:45.000Z" title="发表于 2026-11-22 10:17:45">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/Leviwoyun-2124316801756794977/" title="100 Standout Website Footers (Organized by Style)"><img src="/images/2124316801756794977-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="100 Standout Website Footers (Organized by Style)"/></a><div class="content"><a class="title" href="/2026/11/22/Leviwoyun-2124316801756794977/" title="100 Standout Website Footers (Organized by Style)">100 Standout Website Footers (Organized by Style)</a><time datetime="2026-11-22T09:39:28.000Z" title="发表于 2026-11-22 09:39:28">2026-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/11/22/0xlangeai-2124316520780268007/" title="Cursor 发展史｜四个程序员，如何重做写软件这件事"><img src="/images/2124316520780268007-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cursor 发展史｜四个程序员，如何重做写软件这件事"/></a><div class="content"><a class="title" href="/2026/11/22/0xlangeai-2124316520780268007/" title="Cursor 发展史｜四个程序员，如何重做写软件这件事">Cursor 发展史｜四个程序员，如何重做写软件这件事</a><time datetime="2026-11-22T09:38:21.000Z" title="发表于 2026-11-22 09:38:21">2026-11-22</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yaoav</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
